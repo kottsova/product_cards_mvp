@@ -15,7 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import storage
+from . import jobs, storage
 from .importer import MAX_COLUMNS, MAX_FILE_BYTES, MAX_ROWS, ImportPreview, preview_xlsx
 
 
@@ -91,7 +91,7 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
     uploads = root / "uploads"
     uploads.mkdir(parents=True, exist_ok=True)
     database = root / "batches.sqlite3"
-    storage.initialize(database)
+    jobs.initialize(database)
     templates = Jinja2Templates(directory=str(PACKAGE_DIR / "templates"))
 
     app = FastAPI(title="Product Cards MVP", docs_url=None, redoc_url=None)
@@ -286,4 +286,44 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
             groups.setdefault(category, []).append(product)
         return render(request, "batch.html", batch=batch, groups=groups)
 
+
+    def product_page(
+        request: Request, product_id: int, *, message: str = "", status_code: int = 200
+    ) -> HTMLResponse:
+        product = jobs.get_product(database, product_id)
+        if product is None:
+            return error_page(request, "Товар не найден.", 404)
+        history = jobs.list_jobs(database, product_id)
+        latest = history[0] if history else None
+        return render(
+            request, "product.html", status_code,
+            product=product,
+            result=jobs.get_result(database, product_id),
+            latest=latest,
+            events=jobs.list_events(database, latest["id"]) if latest else [],
+            stages=jobs.STAGE_NAMES,
+            message=message,
+            active=bool(latest and latest["status"] in jobs.ACTIVE),
+        )
+
+    @app.get("/products/{product_id}", response_class=HTMLResponse)
+    def show_product(request: Request, product_id: int) -> HTMLResponse:
+        return product_page(request, product_id)
+
+    @app.post("/products/{product_id}/search", response_class=HTMLResponse)
+    async def start_product_search(request: Request, product_id: int) -> HTMLResponse:
+        if jobs.get_product(database, product_id) is None:
+            return error_page(request, "Товар не найден.", 404)
+        form = await request.form()
+        try:
+            selected = [int(value) for value in form.getlist("stages")]
+        except (TypeError, ValueError):
+            return product_page(
+                request, product_id, message="Выберите этапы 1–4.", status_code=400
+            )
+        try:
+            jobs.enqueue(database, product_id, selected)
+        except ValueError as exc:
+            return product_page(request, product_id, message=str(exc), status_code=400)
+        return RedirectResponse(f"/products/{product_id}", status_code=303)
     return app

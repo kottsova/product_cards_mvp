@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}Товар LG · Карточки товаров{% endblock %}
+{% block head %}{% if active %}<meta http-equiv="refresh" content="5">{% endif %}{% endblock %}
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Подтверждённый товар · строка {{ product.row_number }}</p>
+      <h1>{{ product.name or product.search_code }}</h1>
+      <p class="lead">{{ product.brand }} · {{ product.search_code }}{% if product.alternate_code %} · запасная модель {{ product.alternate_code }}{% endif %}</p>
+    </div>
+    <a class="quiet-link" href="/batches/{{ product.batch_id }}">← К партии</a>
+  </div>
+
+  {% if message %}<div class="alert" role="alert">{{ message }}</div>{% endif %}
+
+  <section class="panel">
+    <h2>Запустить поиск LG</h2>
+    <p>Выберите этапы для этого товара. Если нужна страница модели, worker сначала найдёт и проверит её автоматически.</p>
+    <form action="/products/{{ product.id }}/search" method="post">
+      <div class="stage-grid">
+        {% for number, label in stages.items() %}
+          <label class="stage-option">
+            <input type="checkbox" name="stages" value="{{ number }}" {% if number == 1 %}checked{% endif %} {% if active %}disabled{% endif %}>
+            <span><strong>{{ number }} — {{ label }}</strong></span>
+          </label>
+        {% endfor %}
+      </div>
+      <div class="form-actions">
+        <button class="button primary" type="submit" {% if active %}disabled{% endif %}>Поставить в очередь</button>
+        <span class="hint">Обработка выполняется отдельным worker. Во время работы страница обновляется каждые 5 секунд.</span>
+      </div>
+    </form>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><h2>Состояние</h2></div>
+    {% if latest %}
+      <div class="status-card">
+        {% if latest.status == 'queued' %}<span class="badge warning">В очереди</span>
+        {% elif latest.status == 'running' %}<span class="badge warning">Обрабатывается</span>
+        {% elif latest.status == 'done' %}<span class="badge ready">Готово</span>
+        {% elif latest.status == 'needs_review' %}<span class="badge warning">Нужна проверка</span>
+        {% elif latest.status == 'not_found' %}<span class="badge warning">Не найдено</span>
+        {% else %}<span class="badge danger">Ошибка</span>{% endif %}
+        <p>{{ latest.message }}</p>
+        <small>Выбранные этапы: {{ latest.stages|join(', ') }}{% if latest.current_stage %} · текущий этап {{ latest.current_stage }}{% endif %}</small>
+      </div>
+      <h3>Ход работы</h3>
+      <ol class="event-list">
+        {% for event in events %}
+          <li>
+            <span class="event-time">{{ event.created_at }}</span>
+            <span>{{ event.message }}</span>
+            {% if event.source_url %}<a href="{{ event.source_url }}" target="_blank" rel="noopener noreferrer">Источник LG</a>{% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <p class="empty">Поиск для этого товара ещё не запускался.</p>
+    {% endif %}
+  </section>
+
+  {% if result.page_url or result.candidate_urls %}
+    <section class="section">
+      <div class="section-heading"><h2>Страница модели</h2></div>
+      {% if result.page_url %}
+        <p><a href="{{ result.page_url }}" target="_blank" rel="noopener noreferrer">{{ result.page_url }}</a></p>
+      {% endif %}
+      {% if result.match_status == 'needs_review' %}
+        <p class="alert">Полный артикул не подтверждён текущим поиском. Сверьте кандидатов вручную перед использованием результата.</p>
+      {% endif %}
+      {% if result.candidate_urls and result.match_status == 'needs_review' %}
+        <ul>{% for url in result.candidate_urls %}<li><a href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ url }}</a></li>{% endfor %}</ul>
+      {% endif %}
+    </section>
+  {% endif %}
+
+  {% if result.description %}
+    <section class="section result-panel">
+      <div class="section-heading"><h2>Описание</h2></div>
+      <p class="source">Источник: <a href="{{ result.sources.description }}" target="_blank" rel="noopener noreferrer">официальная страница LG</a></p>
+      <div class="description">{{ result.description }}</div>
+    </section>
+  {% endif %}
+
+  {% if result.attributes %}
+    <section class="section result-panel">
+      <div class="section-heading"><h2>Характеристики</h2><span class="count">{{ result.attributes|length }}</span></div>
+      <p class="source">Источник: <a href="{{ result.sources.attributes }}" target="_blank" rel="noopener noreferrer">официальная страница LG</a></p>
+      <div class="table-wrap">
+        <table class="attributes-table">
+          <tbody>{% for name, value in result.attributes.items() %}<tr><th scope="row">{{ name }}</th><td>{{ value }}</td></tr>{% endfor %}</tbody>
+        </table>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if result.photos %}
+    <section class="section result-panel">
+      <div class="section-heading"><h2>Фото</h2><span class="count">{{ result.photos|length }}</span></div>
+      <p class="source">Источник: <a href="{{ result.sources.photos }}" target="_blank" rel="noopener noreferrer">официальная страница LG</a></p>
+      <div class="photo-grid">
+        {% for url in result.photos %}
+          <a href="{{ url }}" target="_blank" rel="noopener noreferrer"><img src="{{ url }}" alt="Фото LG {{ product.search_code }}" loading="lazy"><span>Открыть фото {{ loop.index }}</span></a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

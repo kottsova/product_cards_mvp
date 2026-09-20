@@ -1,0 +1,1 @@
+"""Brand-specific product source adapters."""

@@ -33,7 +33,7 @@
             {% for product in products %}
               <tr>
                 <td class="row-number">{{ product.row_number }}</td>
-                <td class="product-name">{{ product.name or '—' }}</td>
+                <td class="product-name"><a href="/products/{{ product.id }}">{{ product.name or product.search_code }}</a></td>
                 <td>{{ product.brand }}</td>
                 <td>{{ product.search_code }}</td>
                 <td>{{ product.alternate_code or '—' }}</td>
