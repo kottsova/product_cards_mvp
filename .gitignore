@@ -1,0 +1,51 @@
+# Local environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage*
+
+# Secrets and local configuration
+.env
+.env.*
+credentials.json
+credentials*.json
+service-account*.json
+*secret*.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Imported products, exports, and local state
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+*.ods
+*.csv
+*.tsv
+data/
+uploads/
+outputs/
+exports/
+downloads/
+artifacts/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.log
+~$*
+.DS_Store
+Thumbs.db
