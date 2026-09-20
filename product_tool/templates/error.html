@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Ошибка · Карточки товаров{% endblock %}
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Не удалось выполнить действие</p>
+      <h1>Проверьте запрос</h1>
+    </div>
+  </div>
+  <div class="alert" role="alert">{{ message }}</div>
+  <a class="button secondary" href="/">Вернуться к партиям</a>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Загрузка Excel · Карточки товаров{% endblock %}
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Шаг 1 · Загрузка</p>
+      <h1>Новая партия товаров</h1>
+      <p class="lead">Загрузите Excel, проверьте найденные колонки и исправьте товары до подтверждения.</p>
+    </div>
+  </div>
+
+  {% if message %}<div class="alert" role="alert">{{ message }}</div>{% endif %}
+
+  <section class="panel upload-panel">
+    <h2>Выберите файл</h2>
+    <p>Формат .xlsx, до 10 МБ. Файл останется на этом компьютере.</p>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+      <label for="file">Excel с товарами</label>
+      <input id="file" name="file" type="file" accept=".xlsx" required>
+      <button class="button primary" type="submit">Загрузить и посмотреть</button>
+    </form>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <h2>Подтверждённые партии</h2>
+      <span class="count">{{ batches|length }}</span>
+    </div>
+    {% if batches %}
+      <div class="batch-list">
+        {% for batch in batches %}
+          <a class="batch-link" href="/batches/{{ batch.id }}">
+            <span>
+              <strong>{{ batch.filename }}</strong>
+              <small>Лист «{{ batch.sheet_name }}» · {{ batch.confirmed_at }}</small>
+            </span>
+            <span class="batch-count">{{ batch.product_count }} товаров →</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty">Пока нет подтверждённых партий.</p>
+    {% endif %}
+  </section>
+{% endblock %}

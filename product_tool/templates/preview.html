@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Предпросмотр Excel · Карточки товаров{% endblock %}
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Шаг 2 · Предпросмотр</p>
+      <h1>Проверьте импорт</h1>
+      <p class="lead"><strong>{{ draft.filename }}</strong>{% if preview %} · {{ preview.products|length }} товаров{% endif %}</p>
+    </div>
+    <a class="quiet-link" href="/">← К партиям</a>
+  </div>
+
+  {% if message %}<div class="alert" role="alert">{{ message }}</div>{% endif %}
+
+  <section class="panel">
+    <div class="section-heading">
+      <div>
+        <h2>Соответствие колонок</h2>
+        <p>Номера начинаются с 1. Оставьте поле пустым, если такой колонки нет.</p>
+      </div>
+    </div>
+    <form action="/drafts/{{ draft.id }}/mapping" method="post">
+      <div class="mapping-grid">
+        <label>Лист Excel
+          <select name="sheet_name">
+            {% for sheet in sheets %}
+              <option value="{{ sheet }}" {% if sheet == selected_sheet %}selected{% endif %}>{{ sheet }}</option>
+            {% endfor %}
+          </select>
+        </label>
+        <label>Строка заголовков
+          <input name="header_row" type="number" min="0" max="5000" value="{{ mapping.header_row if mapping.header_row is not none else '' }}" required>
+        </label>
+        {% for field in column_fields %}
+          <label>{{ column_labels[field] }}
+            <input name="{{ field }}" type="number" min="1" max="100" value="{{ mapping[field] or '' }}">
+          </label>
+        {% endfor %}
+      </div>
+      <div class="form-actions">
+        <button class="button secondary" type="submit">Обновить предпросмотр</button>
+        <span class="hint">Сначала настройте колонки, затем исправьте строки ниже.</span>
+      </div>
+    </form>
+  </section>
+
+  {% if preview %}
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Товары перед подтверждением</h2>
+          <p>Бренд и основной артикул обязательны. Исправления сохранятся после подтверждения партии.</p>
+        </div>
+      </div>
+      <form action="/drafts/{{ draft.id }}/confirm" method="post">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Строка</th>
+                <th scope="col">Название</th>
+                <th scope="col">Бренд</th>
+                <th scope="col">Основной артикул</th>
+                <th scope="col">Запасная модель</th>
+                <th scope="col">Категория</th>
+                <th scope="col">Проверка</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for product in preview.products %}
+                {% set edit = edits.get(product.row_number, {}) %}
+                <tr>
+                  <td class="row-number">{{ product.row_number }}</td>
+                  <td class="product-name">{{ product.name or '—' }}</td>
+                  <td><input name="brand_{{ product.row_number }}" aria-label="Бренд, строка {{ product.row_number }}" value="{{ edit.get('brand', product.brand) }}" maxlength="500"></td>
+                  <td><input name="search_code_{{ product.row_number }}" aria-label="Основной артикул, строка {{ product.row_number }}" value="{{ edit.get('search_code', product.search_code) }}" maxlength="500"></td>
+                  <td><input name="alternate_code_{{ product.row_number }}" aria-label="Запасная модель, строка {{ product.row_number }}" value="{{ edit.get('alternate_code', product.alternate_code) }}" maxlength="500"></td>
+                  <td><input name="category_{{ product.row_number }}" aria-label="Категория, строка {{ product.row_number }}" value="{{ edit.get('category', product.category) }}" maxlength="500"></td>
+                  <td>
+                    {% if product.needs_confirmation %}
+                      <span class="badge warning">Нужно проверить</span>
+                      {% if product.issues %}<small class="issue">{{ product.issues|join('; ') }}</small>{% endif %}
+                    {% else %}
+                      <span class="badge ready">Определено</span>
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="form-actions confirm-actions">
+          <button class="button primary" type="submit">Подтвердить партию</button>
+          <span class="hint">Исходный Excel и его строки сохраняются для последующей проверки.</span>
+        </div>
+      </form>
+    </section>
+  {% else %}
+    <p class="empty">После настройки колонок здесь появится таблица товаров.</p>
+  {% endif %}
+{% endblock %}

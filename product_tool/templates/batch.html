@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Партия товаров · Карточки товаров{% endblock %}
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Шаг 3 · Партия сохранена</p>
+      <h1>{{ batch.filename }}</h1>
+      <p class="lead">Лист «{{ batch.sheet_name }}» · {{ batch.products|length }} товаров · {{ batch.confirmed_at }}</p>
+    </div>
+    <a class="quiet-link" href="/">← К партиям</a>
+  </div>
+  <div class="success" role="status">Партия подтверждена и сохранена на этом компьютере. Она останется доступной после перезапуска приложения.</div>
+
+  {% for category, products in groups.items() %}
+    <section class="section">
+      <div class="section-heading">
+        <h2>{{ category }}</h2>
+        <span class="count">{{ products|length }}</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Строка</th>
+              <th scope="col">Название</th>
+              <th scope="col">Бренд</th>
+              <th scope="col">Основной артикул</th>
+              <th scope="col">Запасная модель</th>
+              <th scope="col">Проверка при импорте</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for product in products %}
+              <tr>
+                <td class="row-number">{{ product.row_number }}</td>
+                <td class="product-name">{{ product.name or '—' }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.search_code }}</td>
+                <td>{{ product.alternate_code or '—' }}</td>
+                <td>
+                  {% if product.needs_confirmation %}
+                    <span class="badge warning">Требовало проверки</span>
+                  {% else %}
+                    <span class="badge ready">Определено</span>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  {% endfor %}
+{% endblock %}
