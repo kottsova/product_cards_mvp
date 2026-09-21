@@ -20,6 +20,9 @@ class NormalizedFact:
 
 
 NAME_RULES = (
+    (re.compile(r"drip\s*tray", re.I), "drip_tray_qty"),
+    (re.compile(r"pants\s*hanger", re.I), "pants_hanger_qty"),
+    (re.compile(r"shelf", re.I), "shelf_qty"),
     (re.compile(r"вес.*упаков|масса.*упаков", re.I), "package_weight"),
     (re.compile(r"вес|масса", re.I), "product_weight"),
     (re.compile(r"размер.*упаков|габарит.*упаков", re.I), "package_dimensions"),
@@ -124,9 +127,11 @@ def normalize_value(name: str, value: str) -> tuple[str, str]:
         weight = _normalize_weight(name, cleaned)
         if weight:
             return weight
+    if folded.startswith(("●", "•")):
+        return "true", "bool"
     if folded in TRUE_VALUES:
         return "true", "bool"
-    if folded in FALSE_VALUES:
+    if folded in FALSE_VALUES and (folded != "-" or canonical_name in {"true_steam", "smart_diagnosis"} or re.search(r"налич|функц|поддерж", name, re.I)):
         return "false", "bool"
     if canonical_name == "max_rpm":
         rpm = re.search(r"\d+(?:[.,]\d+)?", folded)

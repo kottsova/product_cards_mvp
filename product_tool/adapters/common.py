@@ -1,5 +1,4 @@
 """Shared source adapter primitives with bounded HTTP retries."""
-
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -10,10 +9,10 @@ from typing import Callable
 from bs4 import BeautifulSoup
 import requests
 
-
 REQUEST_TIMEOUT = 10
 MAX_RETRIES = 1
 TRANSIENT = (requests.Timeout, requests.ConnectionError)
+TRANSIENT_STATUS = {429, 500, 502, 503, 504}
 
 
 def utc_now() -> str:
@@ -24,6 +23,30 @@ def utc_now() -> str:
 class RawAttribute:
     name: str
     value: str
+
+
+@dataclass(frozen=True)
+class PhotoCandidate:
+    url: str
+    asset_key: str
+    kind: str = "product_gallery"
+    width: int | None = None
+    height: int | None = None
+    excluded_reason: str = ""
+
+
+@dataclass(frozen=True)
+class ProductDocument:
+    title: str
+    language: str
+    document_date: str
+    size: str
+    direct_url: str
+    source_url: str
+    product_model: str
+    support_model: str
+    relation_url: str
+    primary: bool = False
 
 
 @dataclass
@@ -39,6 +62,7 @@ class SourceDocument:
     attributes: list[RawAttribute] = field(default_factory=list)
     description: str = ""
     photos: list[str] = field(default_factory=list)
+    photo_candidates: list[PhotoCandidate] = field(default_factory=list)
     html: str = ""
 
 
@@ -50,15 +74,7 @@ class BudgetExceeded(SourceError):
     pass
 
 
-def fetch_with_retry(
-    session: requests.Session,
-    url: str,
-    *,
-    deadline: float,
-    clock: Callable[[], float] = time.monotonic,
-    timeout: float = REQUEST_TIMEOUT,
-) -> requests.Response:
-    """At most two attempts; each request is capped at ten seconds."""
+def fetch_with_retry(session, url: str, *, deadline: float, clock: Callable[[], float] = time.monotonic, timeout: float = REQUEST_TIMEOUT):
     last_error: Exception | None = None
     for attempt in range(MAX_RETRIES + 1):
         remaining = deadline - clock()
@@ -67,6 +83,9 @@ def fetch_with_retry(
         request_timeout = min(timeout, remaining, REQUEST_TIMEOUT)
         try:
             response = session.get(url, timeout=request_timeout)
+            if response.status_code in TRANSIENT_STATUS and attempt < MAX_RETRIES:
+                last_error = requests.HTTPError(f"HTTP {response.status_code}")
+                continue
             response.raise_for_status()
             return response
         except TRANSIENT as exc:

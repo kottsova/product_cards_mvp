@@ -303,6 +303,9 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
             result=jobs.get_result(database, product_id),
             sources=sources,
             comparison=jobs.comparison_rows(database, product_id),
+            counts=jobs.result_counts(database, product_id),
+            documents=jobs.get_documents(database, product_id),
+            photos=jobs.get_photo_candidates(database, product_id),
             identification_status=jobs.identification_status(sources),
             base_model=lg_base_model(product["search_code"]) if product["brand"].strip().upper() == "LG" else "",
             latest=latest,
@@ -333,9 +336,9 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
             return product_page(request, product_id, message=str(exc), status_code=400)
         return RedirectResponse(f"/products/{product_id}", status_code=303)
 
-    @app.post("/products/{product_id}/attributes/{normalized_name}/decision", response_class=HTMLResponse)
+    @app.post("/products/{product_id}/attributes/{attribute_ref}/decision", response_class=HTMLResponse)
     async def save_attribute_decision(
-        request: Request, product_id: int, normalized_name: str
+        request: Request, product_id: int, attribute_ref: str
     ) -> HTMLResponse:
         if jobs.get_product(database, product_id) is None:
             return error_page(request, "Товар не найден.", 404)
@@ -347,7 +350,10 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
             return product_page(
                 request, product_id, message="Укажите итоговое значение.", status_code=400
             )
-        jobs.save_manual_decision(database, product_id, normalized_name, value, unit, reason)
+        resolved = next((item for item in jobs.get_resolved(database, product_id) if str(item["id"]) == attribute_ref or item["normalized_name"] == attribute_ref), None)
+        if resolved is None:
+            return product_page(request, product_id, message="Характеристика не найдена.", status_code=404)
+        jobs.save_manual_decision(database, product_id, resolved["normalized_name"], value, unit, reason)
         return RedirectResponse(f"/products/{product_id}#comparison", status_code=303)
 
     @app.get("/batches/{batch_id}/export.xlsx")
@@ -362,4 +368,19 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
             headers={"Content-Disposition": f'attachment; filename="batch-{batch_id}.xlsx"'},
         )
 
+    @app.post("/products/{product_id}/photos", response_class=HTMLResponse)
+    async def save_photo_selection(request: Request, product_id: int) -> HTMLResponse:
+        if jobs.get_product(database, product_id) is None:
+            return error_page(request, "Товар не найден.", 404)
+        form = await request.form()
+        action = str(form.get("action", "exact"))
+        if action == "official":
+            jobs.set_photo_selection(database, product_id, [], mode="official")
+        elif action == "none":
+            jobs.set_photo_selection(database, product_id, [], mode="none")
+        elif action.startswith("source:"):
+            jobs.set_photo_selection(database, product_id, [], mode="source", source_key=action.split(":", 1)[1])
+        else:
+            jobs.set_photo_selection(database, product_id, [str(x) for x in form.getlist("asset_keys")])
+        return RedirectResponse(f"/products/{product_id}#photos", status_code=303)
     return app

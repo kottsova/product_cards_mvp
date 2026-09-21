@@ -9,13 +9,14 @@ from typing import Any
 from uuid import uuid4
 
 from . import storage
-from .adapters.common import SourceDocument
+from .adapters.common import PhotoCandidate, ProductDocument, SourceDocument
+from .display import display_name_ru, display_source, display_status, display_value
 from .normalization import normalize_facts
 from .resolution import resolve_attributes
 
 
 ACTIVE = ("queued", "running")
-STAGE_NAMES = {1: "Источники", 2: "Описание", 3: "Характеристики", 4: "Фото"}
+STAGE_NAMES = {1: "Источники и модель", 2: "Описание", 3: "Характеристики", 4: "Фотографии", 6: "Инструкции"}
 
 
 def initialize(path: Path) -> None:
@@ -117,8 +118,47 @@ def initialize(path: Path) -> None:
                 updated_at TEXT NOT NULL,
                 UNIQUE(product_id, normalized_name)
             );
-        """)
 
+            CREATE TABLE IF NOT EXISTS product_documents (
+                id INTEGER PRIMARY KEY,
+                product_id INTEGER NOT NULL REFERENCES products(id) ON DELETE CASCADE,
+                source_page_id INTEGER REFERENCES source_pages(id) ON DELETE CASCADE,
+                source_key TEXT NOT NULL,
+                title TEXT NOT NULL,
+                language TEXT NOT NULL,
+                document_date TEXT NOT NULL DEFAULT '',
+                size TEXT NOT NULL DEFAULT '',
+                direct_url TEXT NOT NULL,
+                source_url TEXT NOT NULL,
+                product_model TEXT NOT NULL,
+                support_model TEXT NOT NULL,
+                relation_url TEXT NOT NULL,
+                is_primary INTEGER NOT NULL DEFAULT 0,
+                fetched_at TEXT NOT NULL,
+                UNIQUE(product_id, direct_url)
+            );
+            CREATE TABLE IF NOT EXISTS photo_candidates (
+                id INTEGER PRIMARY KEY,
+                product_id INTEGER NOT NULL REFERENCES products(id) ON DELETE CASCADE,
+                source_page_id INTEGER NOT NULL REFERENCES source_pages(id) ON DELETE CASCADE,
+                source_key TEXT NOT NULL,
+                url TEXT NOT NULL,
+                asset_key TEXT NOT NULL,
+                kind TEXT NOT NULL,
+                width INTEGER,
+                height INTEGER,
+                selected INTEGER NOT NULL DEFAULT 0,
+                excluded_reason TEXT NOT NULL DEFAULT '',
+                fetched_at TEXT NOT NULL,
+                UNIQUE(product_id, source_key, asset_key)
+            );        """)
+        columns = {row["name"] for row in connection.execute("PRAGMA table_info(resolved_attributes)")}
+        if "full_sku_confirmed" not in columns:
+            connection.execute("ALTER TABLE resolved_attributes ADD COLUMN full_sku_confirmed INTEGER NOT NULL DEFAULT 0")
+        connection.execute("UPDATE source_pages SET source_key='lg_kz', site_name='LG Казахстан' WHERE source_key='lg' AND NOT EXISTS (SELECT 1 FROM source_pages newer WHERE newer.product_id=source_pages.product_id AND newer.source_key='lg_kz')")
+        connection.execute("UPDATE extracted_attribute_facts SET source_page_id=(SELECT newer.id FROM source_pages old JOIN source_pages newer ON newer.product_id=old.product_id AND newer.source_key='lg_kz' WHERE old.id=extracted_attribute_facts.source_page_id) WHERE source_page_id IN (SELECT old.id FROM source_pages old WHERE old.source_key='lg' AND EXISTS (SELECT 1 FROM source_pages newer WHERE newer.product_id=old.product_id AND newer.source_key='lg_kz'))")
+        connection.execute("DELETE FROM source_pages WHERE source_key='lg' AND EXISTS (SELECT 1 FROM source_pages newer WHERE newer.product_id=source_pages.product_id AND newer.source_key='lg_kz')")
+        connection.execute("UPDATE extracted_attribute_facts SET source_key='lg_kz', site_name='LG Казахстан' WHERE source_key='lg'")
 
 def get_product(path: Path, product_id: int) -> dict[str, Any] | None:
     with storage._connection(path) as connection:
@@ -315,12 +355,15 @@ def save_source_document(
                     for fact in normalized
                 ],
             )
+    if update_photos:
+        save_photo_candidates(path, product_id, document.source_key, document.photo_candidates or [PhotoCandidate(url, url, "product_gallery") for url in document.photos])
+
 
 def get_source_pages(path: Path, product_id: int) -> list[dict[str, Any]]:
     with storage._connection(path) as connection:
         rows = connection.execute(
             "SELECT * FROM source_pages WHERE product_id=? "
-            "ORDER BY CASE source_key WHEN 'lg' THEN 1 WHEN 'sulpak' THEN 2 ELSE 3 END",
+            "ORDER BY CASE source_key WHEN 'lg_kz' THEN 1 WHEN 'lg_ru' THEN 2 WHEN 'sulpak' THEN 3 WHEN 'mechta' THEN 4 ELSE 5 END",
             (product_id,),
         ).fetchall()
     result = []
@@ -360,11 +403,12 @@ def resolve_product(path: Path, product_id: int) -> None:
         connection.executemany(
             "INSERT INTO resolved_attributes "
             "(product_id, normalized_name, selected_value, selected_unit, status, reason, "
-            "selected_source, conflict, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "selected_source, conflict, full_sku_confirmed, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             [
                 (
                     product_id, item.normalized_name, item.selected_value, item.selected_unit,
-                    item.status, item.reason, item.selected_source, int(item.conflict), now,
+                    item.status, item.reason, item.selected_source, int(item.conflict),
+                    int(item.full_sku_confirmed), now,
                 )
                 for item in resolved
             ],
@@ -402,19 +446,34 @@ def comparison_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     resolved = {row["normalized_name"]: row for row in get_resolved(path, product_id)}
     grouped: dict[str, dict[str, Any]] = {}
     for fact in facts:
-        row = grouped.setdefault(fact["normalized_name"], {
-            "normalized_name": fact["normalized_name"], "sources": {},
-        })
+        row = grouped.setdefault(fact["normalized_name"], {"normalized_name": fact["normalized_name"], "sources": {}, "raw_names": []})
         row["sources"].setdefault(fact["source_key"], fact)
+        row["raw_names"].append(fact["raw_name"])
     for name in sorted(set(grouped) | set(resolved)):
-        row = grouped.setdefault(name, {"normalized_name": name, "sources": {}})
-        row["resolved"] = resolved.get(name)
-    return [grouped[name] for name in sorted(grouped)]
+        row = grouped.setdefault(name, {"normalized_name": name, "sources": {}, "raw_names": []})
+        row["display_name"] = display_name_ru(name, row["raw_names"])
+        for fact in row["sources"].values():
+            fact["display_value"] = display_value(fact["normalized_value"], fact["unit"])
+            fact["display_source"] = display_source(fact["source_key"], fact["site_name"])
+        item = resolved.get(name)
+        if item:
+            item["display_value"] = display_value(item["selected_value"], item["selected_unit"]) if item["selected_value"] else ""
+            item["display_status"] = display_status(item["status"])
+            item["display_source"] = display_source(item["selected_source"])
+        row["resolved"] = item
+    return [grouped[name] for name in sorted(grouped, key=lambda x: grouped[x]["display_name"])]
 
 
+def result_counts(path: Path, product_id: int) -> dict[str, int]:
+    rows=get_resolved(path,product_id)
+    return {
+        "conflicts": sum(bool(x["conflict"]) for x in rows),
+        "official_base_only": sum(x["status"]=="official_base_only" for x in rows),
+        "supplier_confirmed": sum(bool(x.get("full_sku_confirmed")) and x["status"]!="manual" for x in rows),
+    }
 def identification_status(source_pages: list[dict[str, Any]]) -> str:
     by_key = {page["source_key"]: page for page in source_pages}
-    lg = by_key.get("lg", {})
+    official = [by_key.get(key, {}) for key in ("lg_kz", "lg_ru", "lg")]
     confirmed = [
         key for key in ("sulpak", "mechta")
         if by_key.get(key, {}).get("match_level") == "full_sku"
@@ -427,9 +486,9 @@ def identification_status(source_pages: list[dict[str, Any]]) -> str:
         return "Полный артикул подтверждён Mechta"
     if any(page.get("match_level") == "mismatch" for page in source_pages):
         return "Найдено несоответствие артикула"
-    if lg.get("match_level") == "full_sku":
+    if any(page.get("match_level") == "full_sku" for page in official):
         return "Полный артикул найден на LG"
-    if lg.get("match_level") == "base_model":
+    if any(page.get("match_level") == "base_model" for page in official):
         return "Найдена только базовая модель, требуется подтверждение артикула"
     return "Источники не найдены за отведённое время"
 
@@ -437,7 +496,7 @@ def identification_status(source_pages: list[dict[str, Any]]) -> str:
 def get_result(path: Path, product_id: int) -> dict[str, Any]:
     """Compatibility view for existing templates/tests."""
     sources = get_source_pages(path, product_id)
-    lg = next((page for page in sources if page["source_key"] == "lg"), None)
+    lg = next((page for page in sources if page["source_key"] in {"lg_kz", "lg_ru", "lg"}), None)
     return {
         "page_url": lg["url"] if lg else "",
         "match_status": lg["match_level"] if lg else "none",
@@ -450,3 +509,46 @@ def get_result(path: Path, product_id: int) -> dict[str, Any]:
         "photos": lg["photos"] if lg else [],
         "sources": {"link": lg["url"]} if lg and lg["url"] else {},
     }
+
+def save_photo_candidates(path: Path, product_id: int, source_key: str, candidates: list[PhotoCandidate]) -> None:
+    now=storage._now()
+    with storage._connection(path) as connection:
+        page=connection.execute("SELECT id FROM source_pages WHERE product_id=? AND source_key=?",(product_id,source_key)).fetchone()
+        if not page: return
+        previous={row["asset_key"]:row["selected"] for row in connection.execute("SELECT asset_key,selected FROM photo_candidates WHERE product_id=? AND source_key=?",(product_id,source_key))}
+        connection.execute("DELETE FROM photo_candidates WHERE product_id=? AND source_key=?",(product_id,source_key))
+        for item in candidates:
+            selected=previous.get(item.asset_key, int(source_key in {"lg_kz","lg_ru"} and item.kind=="product_gallery" and not item.excluded_reason))
+            connection.execute("INSERT INTO photo_candidates (product_id,source_page_id,source_key,url,asset_key,kind,width,height,selected,excluded_reason,fetched_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",(product_id,page["id"],source_key,item.url,item.asset_key,item.kind,item.width,item.height,selected,item.excluded_reason,now))
+
+
+def get_photo_candidates(path: Path, product_id: int, *, include_excluded: bool=True) -> list[dict[str,Any]]:
+    query="SELECT pc.*,sp.site_name FROM photo_candidates pc JOIN source_pages sp ON sp.id=pc.source_page_id WHERE pc.product_id=?"
+    if not include_excluded: query += " AND pc.kind!='excluded'"
+    query += " ORDER BY pc.source_key, pc.kind, pc.id"
+    with storage._connection(path) as connection: rows=connection.execute(query,(product_id,)).fetchall()
+    return [dict(x) for x in rows]
+
+
+def set_photo_selection(path: Path, product_id: int, asset_keys: list[str], *, mode: str="exact", source_key: str="") -> None:
+    with storage._connection(path) as connection:
+        if mode=="none": connection.execute("UPDATE photo_candidates SET selected=0 WHERE product_id=?",(product_id,))
+        elif mode=="official": connection.execute("UPDATE photo_candidates SET selected=CASE WHEN source_key IN ('lg_kz','lg_ru') AND kind='product_gallery' THEN 1 ELSE 0 END WHERE product_id=?",(product_id,))
+        elif mode=="source": connection.execute("UPDATE photo_candidates SET selected=1 WHERE product_id=? AND source_key=? AND kind='product_gallery'",(product_id,source_key))
+        else:
+            connection.execute("UPDATE photo_candidates SET selected=0 WHERE product_id=?",(product_id,))
+            connection.executemany("UPDATE photo_candidates SET selected=1 WHERE product_id=? AND asset_key=?",[(product_id,key) for key in asset_keys])
+
+
+def save_documents(path: Path, product_id: int, source_key: str, documents: list[ProductDocument]) -> None:
+    now=storage._now()
+    with storage._connection(path) as connection:
+        page=connection.execute("SELECT id FROM source_pages WHERE product_id=? AND source_key=?",(product_id,source_key)).fetchone()
+        connection.execute("DELETE FROM product_documents WHERE product_id=? AND source_key=?",(product_id,source_key))
+        if page:
+            connection.executemany("INSERT INTO product_documents (product_id,source_page_id,source_key,title,language,document_date,size,direct_url,source_url,product_model,support_model,relation_url,is_primary,fetched_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",[(product_id,page["id"],source_key,d.title,d.language,d.document_date,d.size,d.direct_url,d.source_url,d.product_model,d.support_model,d.relation_url,int(d.primary),now) for d in documents])
+
+
+def get_documents(path: Path, product_id: int) -> list[dict[str,Any]]:
+    with storage._connection(path) as connection: rows=connection.execute("SELECT * FROM product_documents WHERE product_id=? ORDER BY is_primary DESC, document_date DESC,id",(product_id,)).fetchall()
+    return [dict(x) for x in rows]

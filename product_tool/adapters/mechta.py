@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import requests
 
 from .common import SourceDocument, SourceError, fetch_with_retry, meta_description
-from .supplier import extract_photos, extract_table_attributes, find_full_sku, visible_text
+from .supplier import extract_photo_candidates, extract_table_attributes, find_full_sku, visible_text
 
 
 KNOWN_LG_URLS = {
@@ -47,13 +47,15 @@ class MechtaAdapter:
             text = visible_text(soup)
             found, evidence = find_full_sku(text, normalized)
             level = "full_sku" if found else ("mismatch" if text else "unknown")
+            photos = extract_photo_candidates(soup, response.url, source_key=self.source_key)
             return SourceDocument(
                 self.source_key, self.site_name, response.url,
                 found_model=found, match_level=level,
                 evidence=evidence or "Полный артикул не найден в видимом тексте страницы.",
                 attributes=extract_table_attributes(soup),
                 description=meta_description(soup),
-                photos=extract_photos(soup, response.url),
+                photos=[item.url for item in photos if item.kind != "excluded"],
+                photo_candidates=photos,
             )
         except SourceError as exc:
             return SourceDocument(
