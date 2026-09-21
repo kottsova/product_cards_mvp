@@ -10,12 +10,13 @@ from typing import Any
 from uuid import uuid4
 
 from fastapi import FastAPI, File, Request, UploadFile
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import jobs, storage
+from . import exporter, jobs, storage
+from .adapters.lg import lg_base_model
 from .importer import MAX_COLUMNS, MAX_FILE_BYTES, MAX_ROWS, ImportPreview, preview_xlsx
 
 
@@ -295,10 +296,15 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
             return error_page(request, "Товар не найден.", 404)
         history = jobs.list_jobs(database, product_id)
         latest = history[0] if history else None
+        sources = jobs.get_source_pages(database, product_id)
         return render(
             request, "product.html", status_code,
             product=product,
             result=jobs.get_result(database, product_id),
+            sources=sources,
+            comparison=jobs.comparison_rows(database, product_id),
+            identification_status=jobs.identification_status(sources),
+            base_model=lg_base_model(product["search_code"]) if product["brand"].strip().upper() == "LG" else "",
             latest=latest,
             events=jobs.list_events(database, latest["id"]) if latest else [],
             stages=jobs.STAGE_NAMES,
@@ -326,4 +332,34 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
         except ValueError as exc:
             return product_page(request, product_id, message=str(exc), status_code=400)
         return RedirectResponse(f"/products/{product_id}", status_code=303)
+
+    @app.post("/products/{product_id}/attributes/{normalized_name}/decision", response_class=HTMLResponse)
+    async def save_attribute_decision(
+        request: Request, product_id: int, normalized_name: str
+    ) -> HTMLResponse:
+        if jobs.get_product(database, product_id) is None:
+            return error_page(request, "Товар не найден.", 404)
+        form = await request.form()
+        value = str(form.get("value", "")).strip()
+        unit = str(form.get("unit", "")).strip()
+        reason = str(form.get("reason", "")).strip()
+        if not value:
+            return product_page(
+                request, product_id, message="Укажите итоговое значение.", status_code=400
+            )
+        jobs.save_manual_decision(database, product_id, normalized_name, value, unit, reason)
+        return RedirectResponse(f"/products/{product_id}#comparison", status_code=303)
+
+    @app.get("/batches/{batch_id}/export.xlsx")
+    def export_batch(batch_id: str) -> Response:
+        batch = storage.get_batch(database, batch_id)
+        if batch is None:
+            return Response("Партия не найдена.", status_code=404, media_type="text/plain; charset=utf-8")
+        content = exporter.export_batch(database, batch_id)
+        return Response(
+            content,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            headers={"Content-Disposition": f'attachment; filename="batch-{batch_id}.xlsx"'},
+        )
+
     return app

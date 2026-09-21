@@ -1,39 +1,42 @@
-"""LG Kazakhstan adapter, adapted from the original parser's modes 6–9.
-
-The sitemap lookup, page validation, and extraction selectors come from the
-working LG routines. This module has no spreadsheet or credential dependency.
-"""
+"""LG Kazakhstan official adapter with LG-specific SKU normalization."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 import re
+import time
+from typing import Callable
 from urllib.parse import unquote, urljoin, urlparse
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
 import requests
 
+from .common import (
+    BudgetExceeded, RawAttribute, SourceDocument, SourceError, clean_text,
+    fetch_with_retry, meta_description,
+)
+
 
 LG_KZ_SITEMAP = "https://www.lg.com/kz/sitemap.xml"
-PRODUCT_TIMEOUT = 25
-SITEMAP_TIMEOUT = 30
+OFFICIAL_BUDGET_SECONDS = 20
+MAX_CANDIDATES = 3
 
 
-class LGSourceError(RuntimeError):
-    """The official source could not be read reliably."""
+class LGSourceError(SourceError):
+    pass
 
 
 @dataclass(frozen=True)
 class ProductPage:
     url: str
     soup: BeautifulSoup
-    sku: str
+    sku: str = ""
 
 
 @dataclass(frozen=True)
 class LookupResult:
-    status: str  # exact, needs_review, not_found
+    status: str
     page_url: str
     candidate_urls: tuple[str, ...]
     message: str
@@ -48,93 +51,89 @@ def lg_session() -> requests.Session:
     return http
 
 
+def normalize_lg_sku(value: str) -> str:
+    """LG-only normalization. Other brands must define their own rules."""
+    return re.sub(r"\s+", "", str(value or "")).upper()
+
+
+def lg_base_model(full_sku: str) -> str:
+    normalized = normalize_lg_sku(full_sku)
+    base, dot, suffix = normalized.rpartition(".")
+    if dot and base and re.fullmatch(r"[A-Z]{5,}", suffix):
+        return base
+    return normalized
+
+
+def lg_article_key(article: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", normalize_lg_sku(article).lower())
+
+
+def lg_article_lookup_keys(article: str) -> list[str]:
+    full = lg_article_key(article)
+    base = lg_article_key(lg_base_model(article))
+    return list(dict.fromkeys(key for key in (full, base) if key))
+
+
 def lg_is_product_url(url: str) -> bool:
     parsed = urlparse(url)
     parts = [part for part in parsed.path.lower().split("/") if part]
     return (
-        parsed.scheme == "https"
-        and parsed.netloc.lower() == "www.lg.com"
-        and len(parts) >= 4
-        and parts[0] == "kz"
+        parsed.scheme == "https" and parsed.netloc.lower() == "www.lg.com"
+        and len(parts) >= 4 and parts[0] == "kz"
         and not any(part in {"support", "lg-magazine", "search", "sitemap"} for part in parts)
     )
-
-
-def lg_article_key(article: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", str(article).lower())
-
-
-def lg_article_lookup_keys(article: str) -> list[str]:
-    keys = [lg_article_key(article)]
-    # Regional sales suffixes can be absent from a public product URL.
-    # Keep the full code for page-SKU verification before accepting a fallback.
-    base, dot, suffix = str(article).rpartition(".")
-    if dot and re.fullmatch(r"[A-Za-z]{5,}", suffix):
-        keys.append(lg_article_key(base))
-    return [key for key in dict.fromkeys(keys) if key]
-
-
-def lg_url_matches_article(url: str, article: str) -> bool:
-    """Original candidate rule; a base-only match still needs SKU verification."""
-    if not lg_is_product_url(url):
-        return False
-    slug = unquote(urlparse(url).path.rstrip("/").split("/")[-1])
-    return lg_article_key(slug) in lg_article_lookup_keys(article)
 
 
 def _slug_key(url: str) -> str:
     return lg_article_key(unquote(urlparse(url).path.rstrip("/").split("/")[-1]))
 
 
-def _primary_sku(html: str) -> str:
-    # The current LG PDP embeds its own sales SKU in an inline script. The
-    # first unescaped sku entry belongs to the page, before Next.js duplicates.
-    match = re.search(r'"sku"\s*:\s*[\x60"\']([A-Za-z0-9._-]+)', html, re.I)
-    return match.group(1) if match else ""
+def lg_url_matches_article(url: str, article: str) -> bool:
+    return lg_is_product_url(url) and _slug_key(url) in lg_article_lookup_keys(article)
 
 
-def _sku_matches(article: str, sku: str) -> bool:
-    wanted = article.strip().upper()
-    actual = sku.strip().upper()
-    if not wanted or not actual.startswith(wanted):
-        return False
-    return len(actual) == len(wanted) or actual[len(wanted)] in ".-_"
+def _visible_text(soup: BeautifulSoup) -> str:
+    copy = BeautifulSoup(str(soup), "html.parser")
+    for tag in copy.select("script, style, template, noscript"):
+        tag.decompose()
+    return clean_text(copy.get_text(" ", strip=True))
 
 
-def match_kind(page: ProductPage, article: str) -> str:
-    """Return exact, base_only, or mismatch without confusing related models."""
-    slug = _slug_key(page.url)
-    keys = lg_article_lookup_keys(article)
-    if not keys or slug not in keys:
-        return "mismatch"
-    if page.sku and not _sku_matches(article, page.sku):
-        return "base_only" if slug == keys[-1] and len(keys) > 1 else "mismatch"
-    if slug == keys[0]:
-        return "exact"
-    return "exact" if _sku_matches(article, page.sku) else "base_only"
+def _designation(text: str, full_sku: str, base_model: str) -> tuple[str, str, str]:
+    full_pattern = re.compile(rf"(?<![\w]){re.escape(full_sku)}(?![\w])", re.I)
+    base_pattern = re.compile(rf"(?<![\w]){re.escape(base_model)}(?![\w])", re.I)
+    full = full_pattern.search(text)
+    if full:
+        excerpt = text[max(0, full.start() - 90):min(len(text), full.end() + 90)]
+        return full_sku, "full_sku", clean_text(excerpt)
+    base = base_pattern.search(text)
+    if base:
+        excerpt = text[max(0, base.start() - 90):min(len(text), base.end() + 90)]
+        return base_model, "base_model", clean_text(excerpt)
+    return "", "unknown", "Обозначение модели не найдено в видимом тексте страницы."
 
 
-def extract_lg_attributes(soup: BeautifulSoup) -> dict[str, str]:
-    attributes: dict[str, str] = {}
-    # The full specification panel is in HTML even when visually collapsed.
+def extract_lg_attributes(soup: BeautifulSoup) -> list[RawAttribute]:
+    attributes: list[RawAttribute] = []
+    seen: set[tuple[str, str]] = set()
     for item in soup.select("#pdp-specs-section .c-compare-selling--all .c-compare-selling__item"):
         name_tag = item.select_one(".c-compare-selling__spec-name")
         value_tag = item.select_one(".c-compare-selling__spec-desc")
         if not name_tag or not value_tag:
             continue
-        name = re.sub(r"\s+", " ", name_tag.get_text(" ", strip=True)).strip()
-        value = re.sub(r"\s+", " ", value_tag.get_text(" ", strip=True)).strip()
-        if not name or not value or re.search(r"(?<!\w)нет(?!\w)", value, re.I):
+        name = clean_text(name_tag.get_text(" ", strip=True))
+        value = clean_text(value_tag.get_text(" ", strip=True))
+        if not name or not value:
             continue
-        if name in attributes:
-            if attributes[name] == value:
-                continue
+        if name in {fact.name for fact in attributes}:
             table = item.find_parent(class_="c-compare-selling__table")
             group = table.select_one(".c-compare-selling__table-head") if table else None
             if group:
-                name = f"{name} ({group.get_text(' ', strip=True)})"
-        if name not in attributes:
-            attributes[name] = value
+                name = f"{name} ({clean_text(group.get_text(' ', strip=True))})"
+        key = (name, value)
+        if key not in seen:
+            seen.add(key)
+            attributes.append(RawAttribute(name, value))
     return attributes
 
 
@@ -144,17 +143,16 @@ def extract_lg_description(soup: BeautifulSoup) -> str:
         content = BeautifulSoup(str(overview), "html.parser")
         for tag in content.select("script, style, template, nav, button"):
             tag.decompose()
-        lines = [re.sub(r"\s+", " ", text).strip() for text in content.stripped_strings]
-        description = "\n".join(line for line in lines if line)
+        description = "\n".join(
+            clean_text(text) for text in content.stripped_strings if clean_text(text)
+        )
         if description:
             return description
-    meta = soup.select_one('meta[property="og:description"], meta[name="description"]')
-    return (meta.get("content") or "").strip() if meta else ""
+    return meta_description(soup)
 
 
 def extract_lg_photos(soup: BeautifulSoup, page_url: str) -> list[str]:
     photos: list[str] = []
-    seen: set[str] = set()
     selectors = (
         "#popSummaryGallery #tabpanel-image .c-gallery__display img",
         ".c-summary-gallery #tabpanel-image .c-gallery__display img",
@@ -163,10 +161,8 @@ def extract_lg_photos(soup: BeautifulSoup, page_url: str) -> list[str]:
         for img in soup.select(selector):
             raw = img.get("src") or img.get("data-src") or ""
             url = urljoin(page_url, raw).split("?", 1)[0]
-            if not raw or not url.startswith("https://www.lg.com/content/dam/") or url in seen:
-                continue
-            seen.add(url)
-            photos.append(url)
+            if raw and url.startswith("https://www.lg.com/content/dam/") and url not in photos:
+                photos.append(url)
         if photos:
             break
     if not photos:
@@ -179,34 +175,46 @@ def extract_lg_photos(soup: BeautifulSoup, page_url: str) -> list[str]:
 
 
 class LGAdapter:
-    def __init__(self, http: requests.Session | None = None):
-        self.http = http or lg_session()
+    source_key = "lg"
+    site_name = "LG Казахстан"
 
-    def sitemap_product_urls(self) -> list[str]:
+    def __init__(
+        self,
+        http: requests.Session | None = None,
+        *,
+        clock: Callable[[], float] = time.monotonic,
+    ):
+        self.http = http or lg_session()
+        self.clock = clock
+        self.request_count = 0
+
+    def _get(self, url: str, deadline: float) -> requests.Response:
+        self.request_count += 1
         try:
-            response = self.http.get(LG_KZ_SITEMAP, timeout=SITEMAP_TIMEOUT)
-            response.raise_for_status()
+            return fetch_with_retry(self.http, url, deadline=deadline, clock=self.clock)
+        except (SourceError, BudgetExceeded) as exc:
+            raise LGSourceError(str(exc)) from exc
+
+    def sitemap_product_urls(self, deadline: float) -> list[str]:
+        response = self._get(LG_KZ_SITEMAP, deadline)
+        try:
             root = ET.fromstring(response.content)
-        except (requests.RequestException, ET.ParseError) as exc:
-            raise LGSourceError(f"LG sitemap недоступен: {exc}") from exc
-        urls = []
-        for node in root.iter():
-            if node.tag.endswith("}loc") or node.tag == "loc":
-                url = (node.text or "").strip()
-                if lg_is_product_url(url):
-                    urls.append(url)
+        except ET.ParseError as exc:
+            raise LGSourceError(f"Некорректный LG sitemap: {exc}") from exc
+        urls = [
+            (node.text or "").strip() for node in root.iter()
+            if (node.tag.endswith("}loc") or node.tag == "loc")
+            and lg_is_product_url((node.text or "").strip())
+        ]
         if not urls:
             raise LGSourceError("LG sitemap не содержит товарных страниц.")
         return urls
 
-    def fetch_page(self, url: str) -> ProductPage:
+    def fetch_page(self, url: str, deadline: float | None = None) -> ProductPage:
         if not lg_is_product_url(url):
             raise LGSourceError("Адрес не является товарной страницей LG Казахстан.")
-        try:
-            response = self.http.get(url, timeout=PRODUCT_TIMEOUT)
-            response.raise_for_status()
-        except requests.RequestException as exc:
-            raise LGSourceError(f"Страница LG недоступна: {exc}") from exc
+        deadline = deadline if deadline is not None else self.clock() + 10
+        response = self._get(url, deadline)
         if not lg_is_product_url(response.url):
             raise LGSourceError("LG перенаправил запрос вне товарной страницы Казахстана.")
         soup = BeautifulSoup(response.text, "html.parser")
@@ -214,61 +222,66 @@ class LGAdapter:
             "#pdp-specs-section, #pdp-overview-section"
         ):
             raise LGSourceError("LG не вернул ожидаемую карточку товара.")
-        return ProductPage(response.url, soup, _primary_sku(response.text))
+        return ProductPage(response.url, soup)
+
+    def _document(self, page: ProductPage, full_sku: str, base_model: str) -> SourceDocument:
+        found, level, evidence = _designation(_visible_text(page.soup), full_sku, base_model)
+        return SourceDocument(
+            self.source_key, self.site_name, page.url,
+            found_model=found, match_level=level, evidence=evidence,
+            attributes=extract_lg_attributes(page.soup),
+            description=extract_lg_description(page.soup),
+            photos=extract_lg_photos(page.soup, page.url),
+        )
+
+    def find_source(self, full_sku: str, *, deadline: float) -> SourceDocument:
+        start = self.clock()
+        official_deadline = min(deadline, start + OFFICIAL_BUDGET_SECONDS)
+        normalized = normalize_lg_sku(full_sku)
+        base = lg_base_model(normalized)
+        try:
+            urls = self.sitemap_product_urls(official_deadline)
+            # Exact public slug first. Stop immediately on a confirmed page.
+            exact_key = lg_article_key(normalized)
+            exact_urls = [url for url in urls if _slug_key(url) == exact_key][:MAX_CANDIDATES]
+            for url in exact_urls:
+                document = self._document(self.fetch_page(url, official_deadline), normalized, base)
+                if document.match_level == "full_sku":
+                    return document
+            # Then the LG-specific base model. Stop after the first valid base page.
+            base_key = lg_article_key(base)
+            base_urls = [url for url in urls if _slug_key(url) == base_key][:MAX_CANDIDATES]
+            for url in base_urls:
+                document = self._document(self.fetch_page(url, official_deadline), normalized, base)
+                if document.match_level in {"full_sku", "base_model"}:
+                    return document
+            return SourceDocument(
+                self.source_key, self.site_name, "",
+                match_level="mismatch",
+                evidence="В LG sitemap не найдена страница полного артикула или базовой модели.",
+            )
+        except LGSourceError as exc:
+            return SourceDocument(
+                self.source_key, self.site_name, "",
+                match_level="unknown", evidence="", error=str(exc),
+            )
+
+    # Compatibility for the previous worker API.
+    def find_page(self, article: str) -> LookupResult:
+        document = self.find_source(article, deadline=self.clock() + OFFICIAL_BUDGET_SECONDS)
+        if document.match_level == "full_sku":
+            return LookupResult("exact", document.url, (document.url,), "Полный артикул найден на LG.")
+        if document.match_level == "base_model":
+            return LookupResult("needs_review", document.url, (document.url,), "На LG найдена базовая модель.")
+        if document.error:
+            raise LGSourceError(document.error)
+        return LookupResult("not_found", "", (), "Источники LG не найдены за отведённое время.")
 
     def extract_description(self, soup: BeautifulSoup) -> str:
         return extract_lg_description(soup)
 
-    def extract_attributes(self, soup: BeautifulSoup) -> dict[str, str]:
+    def extract_attributes(self, soup: BeautifulSoup) -> list[RawAttribute]:
         return extract_lg_attributes(soup)
 
     def extract_photos(self, soup: BeautifulSoup, page_url: str) -> list[str]:
         return extract_lg_photos(soup, page_url)
-    def find_page(self, article: str) -> LookupResult:
-        keys = lg_article_lookup_keys(article)
-        if not keys:
-            return LookupResult("not_found", "", (), "Артикул товара пустой.")
-        urls = self.sitemap_product_urls()
-        candidates = [
-            url for key in keys
-            for url in urls
-            if _slug_key(url) == key
-        ]
-        candidates = list(dict.fromkeys(candidates))
-        if not candidates:
-            return LookupResult(
-                "not_found", "", (), "В официальном каталоге LG нет страницы с этим артикулом."
-            )
-
-        exact: list[str] = []
-        uncertain: list[str] = []
-        failures: list[str] = []
-        for url in candidates:
-            try:
-                page = self.fetch_page(url)
-            except LGSourceError as exc:
-                failures.append(str(exc))
-                continue
-            kind = match_kind(page, article)
-            if kind == "exact":
-                exact.append(page.url)
-            elif kind == "base_only":
-                uncertain.append(page.url)
-        if len(exact) == 1:
-            return LookupResult("exact", exact[0], tuple(candidates), "Точная карточка LG подтверждена.")
-        if len(exact) > 1:
-            return LookupResult(
-                "needs_review", "", tuple(exact),
-                "Найдено несколько точных страниц LG; выберите карточку вручную."
-            )
-        if uncertain:
-            return LookupResult(
-                "needs_review", "", tuple(uncertain),
-                "Найдена базовая модель, но полный артикул на странице не подтверждён."
-            )
-        if failures:
-            raise LGSourceError("Кандидаты найдены, но LG не дал проверить карточку: " + failures[0])
-        return LookupResult(
-            "not_found", "", tuple(candidates),
-            "Кандидаты LG не совпали с полным артикулом."
-        )

@@ -7,6 +7,7 @@
       <h1>{{ batch.filename }}</h1>
       <p class="lead">Лист «{{ batch.sheet_name }}» · {{ batch.products|length }} товаров · {{ batch.confirmed_at }}</p>
     </div>
+    <a class="button" href="/batches/{{ batch.id }}/export.xlsx">Скачать Excel с результатами</a>
     <a class="quiet-link" href="/">← К партиям</a>
   </div>
   <div class="success" role="status">Партия подтверждена и сохранена на этом компьютере. Она останется доступной после перезапуска приложения.</div>

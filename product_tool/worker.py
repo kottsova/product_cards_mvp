@@ -1,4 +1,4 @@
-"""Separate worker for queued product searches. Run with python -m product_tool.worker."""
+"""Separate bounded worker for LG official and trusted fallback sources."""
 
 from __future__ import annotations
 
@@ -10,120 +10,132 @@ import time
 from typing import Callable
 
 from . import jobs
-from .adapters.lg import LGAdapter, LGSourceError, match_kind
+from .adapters.common import SourceDocument
+from .adapters.lg import LGAdapter, lg_base_model, normalize_lg_sku
+from .adapters.mechta import MechtaAdapter
+from .adapters.sulpak import SulpakAdapter
 
 
 LOGGER = logging.getLogger(__name__)
 PROJECT_DIR = Path(__file__).resolve().parents[1]
-STAGE_START = {
-    1: "Ищем точную страницу LG.",
-    2: "Читаем описание с официальной страницы.",
-    3: "Читаем характеристики с официальной страницы.",
-    4: "Читаем фото с официальной страницы.",
-}
+TOTAL_BUDGET_SECONDS = 60
+FALLBACK_BUDGET_SECONDS = 30
 
 
-def run_once(database: Path, adapter_factory: Callable[[], LGAdapter] = LGAdapter) -> bool:
-    """Process one queued job; return False when the queue is empty."""
+def run_once(
+    database: Path,
+    adapter_factory: Callable[[], tuple[LGAdapter, SulpakAdapter, MechtaAdapter]] | None = None,
+    *,
+    clock: Callable[[], float] = time.monotonic,
+) -> bool:
+    """Process one job. No fallback adapters are created for non-LG products."""
     job = jobs.claim_next(database)
     if job is None:
         return False
-    job_id = job["id"]
-    product_id = job["product_id"]
+    job_id, product_id = job["id"], job["product_id"]
     try:
         product = jobs.get_product(database, product_id)
         if product is None:
             jobs.finish(database, job_id, "error", "Подтверждённый товар не найден.")
             return True
-        article = product["search_code"]
-        adapter = adapter_factory()
-        existing = jobs.get_result(database, product_id)
-        url = existing["page_url"]
-        needs_link = 1 in job["stages"] or existing["match_status"] != "exact" or not url
-        if needs_link:
-            jobs.progress(database, job_id, 1, STAGE_START[1])
-            found = adapter.find_page(article)
-            if found.status == "needs_review":
-                jobs.save_review(database, product_id, found.candidate_urls)
-                jobs.progress(
-                    database, job_id, 1, found.message, level="warning",
-                    source_url=found.candidate_urls[0] if found.candidate_urls else "",
+        if product["brand"].strip().casefold() not in {"lg", "lg electronics", "лджи", "элджи"}:
+            jobs.finish(database, job_id, "error", "Fallback Mechta и Sulpak разрешён только для LG.")
+            return True
+
+        start = clock()
+        total_deadline = start + TOTAL_BUDGET_SECONDS
+        full_sku = normalize_lg_sku(product["search_code"])
+        base_model = lg_base_model(full_sku)
+        jobs.progress(
+            database, job_id, 1,
+            f"LG: ищем полный артикул {full_sku}, затем базовую модель {base_model}.",
+        )
+        adapters = adapter_factory() if adapter_factory else (
+            LGAdapter(clock=clock), SulpakAdapter(clock=clock), MechtaAdapter(clock=clock)
+        )
+        lg, sulpak, mechta = adapters
+
+        official = lg.find_source(full_sku, deadline=total_deadline)
+        jobs.save_source_document(
+            database, product_id, official,
+            update_description=2 in job["stages"],
+            update_attributes=3 in job["stages"],
+            update_photos=4 in job["stages"],
+        )
+        jobs.progress(
+            database, job_id, 1,
+            f"{official.site_name}: {official.match_level}. "
+            f"{official.error or official.evidence}",
+            level="warning" if official.error or official.match_level in {"mismatch", "unknown"} else "info",
+            source_url=official.url,
+        )
+
+        # LG-specific fallback. Suppliers always receive the original full SKU.
+        fallback_start = clock()
+        fallback_deadline = min(total_deadline, fallback_start + FALLBACK_BUDGET_SECONDS)
+        for adapter in (sulpak, mechta):
+            if clock() >= fallback_deadline:
+                document = SourceDocument(
+                    adapter.source_key, adapter.site_name, "",
+                    match_level="unknown",
+                    error="Источник не проверен: исчерпан 30-секундный бюджет fallback.",
                 )
-                jobs.finish(database, job_id, "needs_review", found.message)
-                return True
-            if found.status == "not_found":
-                jobs.finish(database, job_id, "not_found", found.message)
-                return True
-            if found.status != "exact" or not found.page_url:
-                raise LGSourceError("LG не подтвердил точную страницу модели.")
-            url = found.page_url
-            jobs.save_link(database, product_id, url, found.candidate_urls)
-            jobs.progress(database, job_id, 1, found.message, source_url=url)
-
-        data_stages = [stage for stage in job["stages"] if stage in (2, 3, 4)]
-        if not data_stages:
-            jobs.finish(database, job_id, "done", "Ссылка на точную карточку LG сохранена.")
-            return True
-
-        page = adapter.fetch_page(url)
-        if match_kind(page, article) != "exact":
-            jobs.save_review(database, product_id, (url,))
-            jobs.finish(
-                database, job_id, "needs_review",
-                "Сохранённая страница больше не подтверждает полный артикул. Нужна проверка.",
-            )
-            return True
-
-        incomplete = False
-        for stage in data_stages:
-            jobs.progress(database, job_id, stage, STAGE_START[stage], source_url=url)
-            if stage == 2:
-                field, value = "description", adapter.extract_description(page.soup)
-            elif stage == 3:
-                field, value = "attributes", adapter.extract_attributes(page.soup)
             else:
-                field, value = "photos", adapter.extract_photos(page.soup, url)
-            if not value:
-                incomplete = True
-                jobs.progress(
-                    database, job_id, stage,
-                    f"{jobs.STAGE_NAMES[stage]}: на странице LG данных не найдено.",
-                    level="warning", source_url=url,
-                )
-                continue
-            jobs.save_field(database, product_id, field, value, url)
+                document = adapter.find_source(full_sku, deadline=fallback_deadline)
+            jobs.save_source_document(
+                database, product_id, document,
+                update_description=2 in job["stages"],
+                update_attributes=3 in job["stages"],
+                update_photos=4 in job["stages"],
+            )
             jobs.progress(
-                database, job_id, stage,
-                f"{jobs.STAGE_NAMES[stage]} сохранены ({len(value)}).",
-                source_url=url,
+                database, job_id, 1,
+                f"{document.site_name}: {document.match_level}. "
+                f"{document.error or document.evidence}",
+                level="warning" if document.error or document.match_level != "full_sku" else "info",
+                source_url=document.url,
             )
-        if incomplete:
-            jobs.finish(
-                database, job_id, "needs_review",
-                "Точная страница найдена, но часть выбранных данных отсутствует. Нужна проверка.",
-            )
+
+        if 3 in job["stages"]:
+            jobs.progress(database, job_id, 3, "Нормализуем и сравниваем характеристики.")
+            jobs.resolve_product(database, product_id)
+
+        sources = jobs.get_source_pages(database, product_id)
+        identity = jobs.identification_status(sources)
+        conflicts = [row for row in jobs.get_resolved(database, product_id) if row["conflict"]]
+        full_confirmed = any(
+            page["source_key"] in {"sulpak", "mechta"} and page["match_level"] == "full_sku"
+            for page in sources
+        )
+        all_errors = sources and all(page["error"] for page in sources)
+        if all_errors:
+            jobs.finish(database, job_id, "error", "Все источники недоступны. " + identity)
+        elif conflicts or not full_confirmed:
+            suffix = f" Конфликтов характеристик: {len(conflicts)}." if conflicts else ""
+            jobs.finish(database, job_id, "needs_review", identity + "." + suffix)
         else:
-            jobs.finish(database, job_id, "done", "Выбранные этапы LG завершены.")
-    except LGSourceError as exc:
-        jobs.finish(database, job_id, "error", str(exc))
+            jobs.finish(database, job_id, "done", identity + ". Сравнение завершено.")
     except Exception:
-        LOGGER.exception("Unexpected LG worker failure for job %s", job_id)
+        LOGGER.exception("Unexpected source comparison failure for job %s", job_id)
         jobs.finish(
             database, job_id, "error",
-            "Ошибка обработки LG. Подробности смотрите в консоли worker.",
+            "Ошибка сравнения источников. Подробности смотрите в консоли worker.",
         )
     return True
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Worker поиска товаров LG")
+    parser = argparse.ArgumentParser(description="Worker сравнения источников LG")
     parser.add_argument("--data-dir", type=Path, help="Папка с batches.sqlite3")
-    parser.add_argument("--poll-interval", type=float, default=3.0, help="Ожидание между проверками очереди")
-    parser.add_argument("--once", action="store_true", help="Обработать одно задание и завершить работу")
+    parser.add_argument("--poll-interval", type=float, default=3.0)
+    parser.add_argument("--once", action="store_true")
     args = parser.parse_args()
     if args.poll_interval <= 0:
         parser.error("--poll-interval должен быть больше нуля")
-    root = (args.data_dir or Path(os.environ.get("PRODUCT_CARDS_DATA_DIR") or PROJECT_DIR / "data")).resolve()
+    root = (
+        args.data_dir
+        or Path(os.environ.get("PRODUCT_CARDS_DATA_DIR") or PROJECT_DIR / "data")
+    ).resolve()
     database = root / "batches.sqlite3"
     jobs.initialize(database)
     recovered = jobs.recover_interrupted(database)
