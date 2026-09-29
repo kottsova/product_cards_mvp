@@ -11,7 +11,9 @@ def visible_text(soup):
     return clean_text(clone.get_text(" ",strip=True))
 
 def find_full_sku(text, full_sku):
-    match=re.search(rf"(?<![\w]){re.escape(full_sku)}(?![\w])",text,re.I)
+    parts=[part.strip() for part in full_sku.split("+")]
+    pattern=r"\s*\+\s*".join(re.escape(part) for part in parts)
+    match=re.search(rf"(?<![A-Za-z0-9._/-]){pattern}(?![A-Za-z0-9._/-])",text,re.I)
     return (full_sku.upper(),clean_text(text[max(0,match.start()-90):match.end()+90])) if match else ("","")
 
 def extract_table_attributes(soup):

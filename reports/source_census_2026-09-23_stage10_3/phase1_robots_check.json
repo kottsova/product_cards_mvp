@@ -1,0 +1,47 @@
+{
+  "phase": "robots_check",
+  "robots_by_host": {
+    "cms-assets.xboxservices.com": {
+      "http_status": 404,
+      "access_status": "unavailable",
+      "bytes": 0,
+      "text_snippet": ""
+    },
+    "assets.xboxservices.com": {
+      "http_status": 404,
+      "access_status": "unavailable",
+      "bytes": 0,
+      "text_snippet": ""
+    }
+  },
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://cms-assets.xboxservices.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "unavailable",
+      "http_status": 404,
+      "final_url": "https://cms-assets.xboxservices.com/robots.txt",
+      "redirect_chain": [
+        "https://cms-assets.xboxservices.com/robots.txt"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 404"
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://assets.xboxservices.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "unavailable",
+      "http_status": 404,
+      "final_url": "https://assets.xboxservices.com/robots.txt",
+      "redirect_chain": [
+        "https://assets.xboxservices.com/robots.txt"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 404"
+    }
+  ]
+}

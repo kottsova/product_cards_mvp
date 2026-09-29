@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "product-cards-source-candidates-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidates"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id", "brands", "category_groups", "category_patterns", "market",
+          "market_scope", "source_country", "source_locale", "source_languages", "source_role",
+          "candidate_url", "page_hosts", "support_hosts", "asset_document_hosts",
+          "official_status", "access_status", "fingerprint_status", "adapter_status", "enabled",
+          "last_checked_at", "evidence", "next_operation"
+        ],
+        "properties": {
+          "candidate_id": {"type": "string", "minLength": 1},
+          "brands": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "category_groups": {"type": "array", "items": {"type": "string"}},
+          "category_patterns": {"type": "array", "items": {"type": "string"}},
+          "market": {"type": "string"},
+          "market_scope": {"enum": ["unknown", "global", "regional", "country", "local"]},
+          "source_country": {"type": "string"},
+          "source_locale": {"type": "string"},
+          "source_languages": {"type": "array", "items": {"type": "string"}},
+          "source_role": {"enum": ["manufacturer", "support", "dealer", "retailer"]},
+          "candidate_url": {"type": "string", "minLength": 1},
+          "page_hosts": {"type": "array", "items": {"type": "string"}},
+          "support_hosts": {"type": "array", "items": {"type": "string"}},
+          "asset_document_hosts": {"type": "array", "items": {"type": "string"}},
+          "official_status": {"enum": ["research_pending", "candidate", "official_verified", "third_party_confirmed", "not_allowed", "rejected"]},
+          "access_status": {"enum": ["not_checked", "direct_access", "structured_api", "javascript_required", "browser_assisted", "search_only", "rate_limited", "captcha_or_blocked", "regional_redirect", "support_only", "legacy_missing", "unavailable"]},
+          "fingerprint_status": {"enum": ["not_checked", "insufficient", "probable", "confirmed", "conflict"]},
+          "adapter_status": {"type": "string"},
+          "enabled": {"const": false},
+          "last_checked_at": {"type": "string"},
+          "evidence": {"type": "array", "items": {"type": "object"}},
+          "next_operation": {"type": "string"}
+          ,"probe_targets": {"type": "array", "items": {"type": "object"}}
+          ,"endpoints": {"type": "array", "items": {"type": "object"}}
+          ,"fingerprint_layers": {"type": "array", "items": {"type": "object"}}
+          ,"presumed_engine": {"type": "string"}
+          ,"confidence": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    }
+  }
+}

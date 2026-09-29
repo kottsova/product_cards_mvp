@@ -1,0 +1,77 @@
+{
+  "variant_selector_markup": {
+    "copies_found": [
+      {
+        "position": 485281,
+        "inside_html_comment": true
+      },
+      {
+        "position": 487841,
+        "inside_html_comment": false
+      }
+    ],
+    "conclusion": "Two near-identical <select> variant pickers exist on the page. One (the first, inside the legacy in-page-navigation menu) is wrapped in an HTML comment (<!--...-->) and is dead markup, not rendered. The second, later in the page, is live and uncommented, with a functional aria-label (\"...This also changes the images in the gallery near the top of the page.\") and matching, also-uncommented \"CTAdiv option s-new/s-standard/s-special\" purchase buttons. Stage 10.1's evidence is confirmed sourced from live markup; the dead copy is noted but not relied upon."
+  },
+  "js_hash_routing": {
+    "found": true,
+    "position": 248089,
+    "inside_html_comment": false,
+    "quote": "case '#black1tb': case '#purchaseblack1tb': theOption = 's-new'; break;",
+    "conclusion": "Live JS maps the URL anchors #black1tb / #purchaseblack1tb to the s-new (Carbon Black 1TB) option -- independent corroboration this is a real, addressable SKU, not template placeholder text."
+  },
+  "carbon_aware_images_correction": {
+    "stage10_1_claim": "Stage 10.1 card.json listed 3 images whose filenames contain \"Carbon-Aware\" (e.g. Xbox-Series-S_Multi-Feature-1084_Carbon-Aware_1040x990_01.jpg) as evidence for the Carbon Black color variant.",
+    "tab_label_context": "\"Carbon aware\" is a tab inside a \"Peace of mind\" pivot section, sibling to a \"Safer gaming\" (parental controls) tab, aria-label=\"Purchase Restrictions\".",
+    "actual_panel_text_found": "id=\"newRTBItemContent2\" role=\"tabpanel\" aria-hidden=\"true\"> XBOX Series S is our first XBOX console ever to contain Post-Consumer Recycled (PCR) plastics, while energy-saving power modes fine-tune your console when it’s on or off. <div itemscope=\"\" itemtype=\"https://schema.org/ItemList\"",
+    "correction": "INCORRECT in Stage 10.1. \"Carbon aware\" here refers to Xbox's environmental/sustainability messaging (post-consumer-recycled plastics and energy-saving power modes), not the \"Carbon Black\" color. The image alt text (\"XBOX Series S surrounded by leaves and plants\") is a nature/lifestyle illustration of this feature, applies to the whole Series S line regardless of color, and depicts no specific SKU. These 3 images are RETRACTED as color-variant evidence in this stage's card."
+  },
+  "genuine_color_specific_image_search": {
+    "total_image_video_assets_on_page": 75,
+    "assets_with_color_words_in_filename": [],
+    "conclusion": "No image or video asset filename references \"Black\", \"White\", or \"Robot\" (the official color names). The gallery-swap behavior implied by the selector's own aria-label is handled client-side (JS/CSS class toggling of hidden elements) and no per-option image URL is present in static markup. No official image can be confirmed this stage as specifically depicting the Carbon Black 1TB unit."
+  },
+  "storage_reverification": {
+    "position": 570057,
+    "inside_html_comment": false,
+    "quote": "XBOX Series S Robot White: 512GB Custom NVME SSD / XBOX Series S Carbon Black: 1TB Custom NVME SSD / XBOX Series S Robot White: 1TB Custom NVME SSD",
+    "classification": "variant_specific",
+    "conclusion": "Confirmed live, uncommented. Storage is the one spec explicitly and separately stated per color+capacity combination -- correctly variant-specific in Stage 10.1, reconfirmed here."
+  },
+  "dimensions_and_weight_reverification": {
+    "dimensions": {
+      "value": "6.5cm x 15.1cm x 27.5cm",
+      "position": 577852,
+      "inside_html_comment": false
+    },
+    "weight": {
+      "value": "4.25 lbs.",
+      "position": 578016,
+      "inside_html_comment": false
+    },
+    "classification": "line_wide_not_variant_specific",
+    "conclusion": "Both appear exactly once on the page, in the shared TECH SPECS drawer, with no per-option repetition (unlike storage, which repeats three times, once per color+capacity combination). These describe the Series S form factor generically. Not demonstrated to differ between color/capacity SKUs, but also not demonstrated to be identical by the page itself -- treated as line-wide evidence, applied to the Carbon Black 1TB unit only by physical-design inference, not by an explicit per-SKU statement. Consistent with Stage 10.1's own caveat, now confirmed via live-markup check."
+  },
+  "other_specs_classification": {
+    "fields": [
+      "CPU",
+      "GPU",
+      "Memory",
+      "Memory Bandwidth",
+      "I/O Throughput",
+      "Expandable Storage",
+      "Gaming Resolution",
+      "Performance Target",
+      "HDMI Features",
+      "Sound formats",
+      "Ports",
+      "Wireless"
+    ],
+    "classification": "line_wide_not_variant_specific",
+    "reason": "None of these are restated per color/capacity option anywhere on the page (only \"Internal Storage\" is). They describe the Xbox Series S platform as a whole and apply equally to the Carbon Black 1TB unit as to the two white SKUs."
+  },
+  "seller_article_handling": {
+    "seller_article": "XXU-00015",
+    "rule_applied": "Kept as the catalog identifier only. Not searched for on the official page, and its absence there (confirmed absent in Stage 10.1 and rechecked here -- zero occurrences of \"XXU-00015\" or any manufacturer/region code in the saved page text) is not treated as evidence of anything, per instructions.",
+    "confirmed_absent_from_page": true
+  }
+}

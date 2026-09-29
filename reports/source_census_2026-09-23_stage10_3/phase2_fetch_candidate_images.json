@@ -1,0 +1,48 @@
+{
+  "phase": "fetch_candidate_images",
+  "results": {
+    "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg": {
+      "alt_text": "XBOX Series S next to a space ship on a Starfield planet",
+      "completeness": "complete",
+      "reason": "assembled_size_matches_declared_total",
+      "declared_total_bytes": 575457,
+      "content_type": "image/jpeg",
+      "saved_as": null,
+      "note": "Bytes were assembled and visually inspected (Read tool) in-session, then discarded -- not committed into the repository, consistent with this project's no-raw-content rule (Stage 8.6)."
+    },
+    "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg": {
+      "alt_text": "Back of the XBOX Series S",
+      "completeness": "complete",
+      "reason": "assembled_size_matches_declared_total",
+      "declared_total_bytes": 376996,
+      "content_type": "image/jpeg",
+      "saved_as": null,
+      "note": "Bytes were assembled and visually inspected (Read tool) in-session, then discarded -- not committed into the repository, consistent with this project's no-raw-content rule (Stage 8.6)."
+    }
+  },
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+      "range": "0-2999999",
+      "http_status": 206,
+      "content_range": "bytes 0-575456/575457",
+      "content_type": "image/jpeg",
+      "bytes_read": 575457,
+      "final_url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+      "error": ""
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+      "range": "0-2999999",
+      "http_status": 206,
+      "content_range": "bytes 0-376995/376996",
+      "content_type": "image/jpeg",
+      "bytes_read": 376996,
+      "final_url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+      "error": ""
+    }
+  ],
+  "total_requests": 2
+}

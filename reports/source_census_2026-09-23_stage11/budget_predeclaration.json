@@ -1,0 +1,54 @@
+{
+  "declared_at": "2026-09-23",
+  "declared_before_any_request": true,
+  "scope": "One catalog-first cycle for HyperX QuadCast 2S Black (catalog row 6985, seller article 9A273AA). No Xbox, Samsung, PlayStation, or Kingston work; no general HyperX/brand census.",
+  "why_a_fresh_request_is_needed_despite_offline_replay_first": "Stage 8.1's fixture for this exact URL is a sanitized structural CONTRACT (JSON-LD paths, DOM-semantic markers, signatures) by this project's 'no raw HTML persisted' rule -- it proves WHICH fields exist and that their shape is stable, but never stores the field VALUES (actual name/spec/image text). Building an exportable card requires the values, which requires one bounded, allowlisted re-fetch of the same already-confirmed URL -- not a new discovery.",
+  "allowed_hosts": ["hyperx.com"],
+  "allowed_hosts_reason": "The exact host already confirmed official and live-fetched in Stage 8.1 (fixture 1dd3897450ff08ae7bde27d72cc20a93e140ee61652f79dd96799d271d331099.json, is_product_page=true).",
+  "seed_url_already_known_not_guessed": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+  "possible_support_document_host": {
+    "note": "hyperx.com's own confirmed navigation links (from the same Stage 8.1 fixture) include https://hyperx.com/pages/support and https://supportcenter.hyperx.com. If either is fetched and itself links to a PDF, that PDF's host will get its own explicit budget line (Stage 8.6 bounded-document convention) before any request to it -- not predeclared speculatively now.",
+    "candidate_support_urls_already_known": [
+      "https://hyperx.com/pages/support",
+      "https://supportcenter.hyperx.com"
+    ]
+  },
+  "limits": {
+    "max_requests_total": 6,
+    "max_requests_per_host": 6,
+    "max_hosts": 2,
+    "max_response_bytes_per_request": 900000,
+    "min_interval_seconds_between_requests": 2.0,
+    "timeout_seconds_per_request": 10.0
+  },
+  "extraction_contract_reused_from_stage8_1": {
+    "identity_json_paths": [".gtin12", ".name", ".productID", ".sku"],
+    "identity_model_semantics": "unverified_sku_meaning -- confirms field SHAPE only; identity/variant match to the catalog row is verified separately by descriptive consistency, not assumed from the extractor firing",
+    "specifications_json_paths": [".additionalProperty", ".additionalProperty[].@type", ".additionalProperty[].name", ".additionalProperty[].value"],
+    "specifications_dom_fallback": ["accordion:details+summary", "dl:dt+dd"],
+    "media_json_paths": [".image", ".image.@type", ".image.height", ".image.url", ".image.width", ".offers.image"],
+    "media_dom_semantics": ["responsive_srcset"],
+    "media_resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets.",
+    "documents_contract": "support_navigation true; model_linkage unverified: require model-specific support association; a PDF link alone is insufficient; language_contract unknown_do_not_infer_from_locale",
+    "applicability_check_before_use": "Each of these contract paths is only applied to THIS stage's own freshly-fetched page after independently confirming its CMS fingerprint (generic_json_ld_product + shopify) matches Stage 8.1's signature -- the contract is not assumed to transfer without that check."
+  },
+  "robots_txt_policy": "hyperx.com/robots.txt fetched first, before the product page, honoring any Disallow rules under User-agent: *.",
+  "pdf_budget_if_discovered": {
+    "note": "Not predeclared with a specific host/size, because no PDF URL is known yet. If discovered via an already-fetched hyperx.com/support page, a separate explicit budget reusing Stage 8.6's Range-aware, completeness-classified fetch will be declared before any request to it."
+  },
+  "stop_conditions": [
+    "max_requests_total or max_requests_per_host reached",
+    "HTTP 403/429/challenge_confirmed on hyperx.com -> stop that host, record the gap (challenge_suspected alone, per Stage 8.1's own precedent, does not stop -- only a confirmed block does)",
+    "redirect off the allowed host(s) -> aborted, not followed",
+    "robots.txt disallows the exact product/support path -> skip, record why"
+  ],
+  "explicit_non_goals": [
+    "No Chromium / browser automation",
+    "No search engines",
+    "No dealer/reseller sources",
+    "No brute-forcing of URLs, model codes, or PDF filenames",
+    "No invented endpoints",
+    "No wide HyperX/brand census beyond this one catalog row",
+    "No Xbox/Samsung/PlayStation/Kingston network activity this stage"
+  ]
+}

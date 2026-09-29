@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+from contextlib import asynccontextmanager
 from dataclasses import asdict
 import logging
 import os
 from pathlib import Path
+from threading import Event, Thread
 from typing import Any
 from uuid import uuid4
 
@@ -15,8 +17,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import exporter, jobs, storage
+from . import attribute_projection, bosch_readiness, exporter, jobs, lg_batch, storage
 from .adapters.lg import lg_base_model
+from .lg_identity import document_tied_to_article, photo_tied_to_article
 from .importer import MAX_COLUMNS, MAX_FILE_BYTES, MAX_ROWS, ImportPreview, preview_xlsx
 
 
@@ -85,7 +88,7 @@ def _preview(path: Path, draft: dict[str, Any]) -> ImportPreview:
     )
 
 
-def create_app(data_dir: str | Path | None = None) -> FastAPI:
+def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None = None) -> FastAPI:
     """Create an app with its own data directory, including for isolated tests."""
     root = Path(data_dir or os.environ.get("PRODUCT_CARDS_DATA_DIR") or PROJECT_DIR / "data")
     root = root.resolve()
@@ -93,9 +96,52 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
     uploads.mkdir(parents=True, exist_ok=True)
     database = root / "batches.sqlite3"
     jobs.initialize(database)
+    lg_batch.initialize(database)
     templates = Jinja2Templates(directory=str(PACKAGE_DIR / "templates"))
 
-    app = FastAPI(title="Product Cards MVP", docs_url=None, redoc_url=None)
+    # The ordinary one-command launch processes queued jobs as well as serving pages.
+    # Isolated test apps keep their explicit data directory and opt in separately.
+    if start_worker is None:
+        start_worker = data_dir is None
+    stop_worker = Event()
+
+    def process_queue() -> None:
+        from . import worker
+
+        while not stop_worker.is_set():
+            try:
+                with worker.single_worker(root):
+                    jobs.recover_interrupted(database)
+                    while not stop_worker.is_set():
+                        try:
+                            processed = worker.run_once(database)
+                        except Exception:
+                            LOGGER.exception("Background job failed; worker will retry")
+                            stop_worker.wait(3)
+                        else:
+                            if not processed:
+                                stop_worker.wait(1)
+            except RuntimeError:
+                # A separately launched worker already owns this data directory.
+                stop_worker.wait(3)
+            except Exception:
+                LOGGER.exception("Could not start background processing")
+                stop_worker.wait(3)
+
+    @asynccontextmanager
+    async def lifespan(_app: FastAPI):
+        thread = None
+        if start_worker:
+            thread = Thread(target=process_queue, name="product-card-worker", daemon=True)
+            thread.start()
+        try:
+            yield
+        finally:
+            stop_worker.set()
+            if thread is not None:
+                thread.join(timeout=5)
+
+    app = FastAPI(title="Product Cards MVP", docs_url=None, redoc_url=None, lifespan=lifespan)
     app.mount("/static", StaticFiles(directory=str(PACKAGE_DIR / "static")), name="static")
 
     def render(request: Request, name: str, status_code: int = 200, **context: Any) -> HTMLResponse:
@@ -285,7 +331,31 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
         for product in batch["products"]:
             category = product["category"] or "Категория не определена"
             groups.setdefault(category, []).append(product)
-        return render(request, "batch.html", batch=batch, groups=groups)
+        selected = lg_batch.selected_ids(database, batch_id)
+        if not selected:
+            selected = lg_batch.default_ids(batch["products"])
+        lg_rows, lg_counts = lg_batch.batch_rows(database, batch["products"], selected)
+        return render(request, "batch.html", batch=batch, groups=groups,
+                      lg_rows=lg_rows, lg_selected=selected, lg_counts=lg_counts,
+                      lg_products=[p for p in batch["products"] if lg_batch.is_lg(p)],
+                      stages=jobs.STAGE_NAMES, batch_message=request.query_params.get("message", ""))
+
+    @app.post("/batches/{batch_id}/lg-search", response_class=HTMLResponse)
+    async def start_lg_batch(request: Request, batch_id: str) -> HTMLResponse:
+        batch = storage.get_batch(database, batch_id)
+        if batch is None:
+            return error_page(request, "Партия не найдена.", 404)
+        form = await request.form()
+        try:
+            product_ids = [int(value) for value in form.getlist("product_ids")]
+            stages = [int(value) for value in form.getlist("stages")]
+            result = lg_batch.queue_selected(database, batch_id, product_ids, stages)
+        except (TypeError, ValueError) as exc:
+            return error_page(request, str(exc), 400)
+        from urllib.parse import quote
+        message = (f"LG: выбрано {result['selected']}; новых заданий {result['new_jobs']}; "
+                   f"уже в очереди или выполняются {result['already_active']}.")
+        return RedirectResponse(f"/batches/{batch_id}?message={quote(message)}", status_code=303)
 
 
     def product_page(
@@ -297,15 +367,29 @@ def create_app(data_dir: str | Path | None = None) -> FastAPI:
         history = jobs.list_jobs(database, product_id)
         latest = history[0] if history else None
         sources = jobs.get_source_pages(database, product_id)
+        documents = jobs.get_documents(database, product_id)
+        photos = jobs.get_photo_candidates(database, product_id)
+        if lg_batch.is_lg(product):
+            for document in documents:
+                document["identity_confirmed"] = document_tied_to_article(product["search_code"], document, sources)
+            for photo in photos:
+                photo["identity_confirmed"] = photo_tied_to_article(photo, sources)
+        else:
+            for document in documents:
+                document["identity_confirmed"] = True
+            for photo in photos:
+                photo["identity_confirmed"] = True
         return render(
             request, "product.html", status_code,
             product=product,
             result=jobs.get_result(database, product_id),
             sources=sources,
-            comparison=jobs.comparison_rows(database, product_id),
+            bosch_card=bosch_readiness.card_readiness(database, product_id) if any(src["source_key"] == "bosch_home" for src in sources) else None,
+            lg_card=lg_batch.card_summary(database, product_id, latest) if lg_batch.is_lg(product) else None,
+            comparison=attribute_projection.final_attribute_rows(database, product_id),
             counts=jobs.result_counts(database, product_id),
-            documents=jobs.get_documents(database, product_id),
-            photos=jobs.get_photo_candidates(database, product_id),
+            documents=documents,
+            photos=photos,
             identification_status=jobs.identification_status(sources),
             base_model=lg_base_model(product["search_code"]) if product["brand"].strip().upper() == "LG" else "",
             latest=latest,

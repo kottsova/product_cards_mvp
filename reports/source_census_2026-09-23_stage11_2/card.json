@@ -1,0 +1,311 @@
+{
+  "stage": "11.2",
+  "scope": "HyperX QuadCast 2S (9A273AA) only: gallery completeness fix, video+cover evidence, text sections.",
+  "gallery_root_cause_and_fix": {
+    "previous_result": "9 of 14 (Stage 11)",
+    "root_cause": "Five of the 14 gallery images are annotated marketing/feature callouts (filenames containing \"annotated_1_future_en\", \"annotated_2_dynamic_en\", \"annotated_3_tap_en\", \"annotated_4_versatile_en\", \"annotated_5_redesigned_en\") -- none contains the SKU string \"9a273aa\", so Stage 11's substring filter silently excluded them even though they belong to the same gallery, same data-fancybox group, same product template.",
+    "fix": "The page's own lightbox gallery groups images by data-fancybox=\"images\" inside containers carrying a shared numeric data-media-id, under the same product-view template. Filename pattern is irrelevant to this grouping.",
+    "items_missed_before": [
+      {
+        "media_id": "33969182507165",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_s_2_annotated_1_future_en.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182539933",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_2_dynamic_en_9a497f0f-27f3-4c7d-84aa-c8d556c1177e.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182572701",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_3_tap_en.jpg?v=1787066288"
+      },
+      {
+        "media_id": "33969182605469",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_4_versatile_en.jpg?v=1787066288"
+      },
+      {
+        "media_id": "33969182638237",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_5_redesigned_en.jpg?v=1787066289"
+      }
+    ]
+  },
+  "gallery_completeness_check": {
+    "fresh_fetch_this_stage": {
+      "label": "fresh_fetch_this_stage",
+      "expected": 14,
+      "found": 14,
+      "complete": true,
+      "method": "DOM data-media-id groups paired with their data-fancybox=\"images\" href, not a filename/SKU substring filter"
+    },
+    "stage11_snapshot_reread": {
+      "label": "stage11_saved_snapshot_reread",
+      "expected": 14,
+      "found": 14,
+      "complete": true,
+      "method": "DOM data-media-id groups paired with their data-fancybox=\"images\" href, not a filename/SKU substring filter"
+    },
+    "fresh_vs_saved_image_set_identical": true
+  },
+  "gallery_14_items": [
+    {
+      "media_id": "33969182474397",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_main_1.jpg",
+      "kind": "main_product_photo"
+    },
+    {
+      "media_id": "33969182507165",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_s_2_annotated_1_future_en.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_s_2_annotated_1_future_en.jpg",
+      "kind": "annotated_feature_callout"
+    },
+    {
+      "media_id": "33969182539933",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_2_dynamic_en_9a497f0f-27f3-4c7d-84aa-c8d556c1177e.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_annotated_2_dynamic_en_9a497f0f-27f3-4c7d-84aa-c8d556c1177e.jpg",
+      "kind": "annotated_feature_callout"
+    },
+    {
+      "media_id": "33969182572701",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_3_tap_en.jpg?v=1787066288",
+      "filename": "hyperx_quadcast_2_s_annotated_3_tap_en.jpg",
+      "kind": "annotated_feature_callout"
+    },
+    {
+      "media_id": "33969182605469",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_4_versatile_en.jpg?v=1787066288",
+      "filename": "hyperx_quadcast_2_s_annotated_4_versatile_en.jpg",
+      "kind": "annotated_feature_callout"
+    },
+    {
+      "media_id": "33969182638237",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_5_redesigned_en.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_annotated_5_redesigned_en.jpg",
+      "kind": "annotated_feature_callout"
+    },
+    {
+      "media_id": "33969182671005",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_2.jpg",
+      "kind": "angle_photo"
+    },
+    {
+      "media_id": "33969182703773",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_3.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_3.jpg",
+      "kind": "angle_photo"
+    },
+    {
+      "media_id": "33969182736541",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_4.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_4.jpg",
+      "kind": "angle_photo"
+    },
+    {
+      "media_id": "33969182769309",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_5.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_5.jpg",
+      "kind": "angle_photo"
+    },
+    {
+      "media_id": "33969182802077",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_6.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_6.jpg",
+      "kind": "angle_photo"
+    },
+    {
+      "media_id": "33969182834845",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_7.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_7.jpg",
+      "kind": "angle_photo"
+    },
+    {
+      "media_id": "33969182867613",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_8.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_8.jpg",
+      "kind": "angle_photo"
+    },
+    {
+      "media_id": "33969182900381",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_9.jpg?v=1787066289",
+      "filename": "hyperx_quadcast_2_s_9a273aa_angle_9.jpg",
+      "kind": "angle_photo"
+    }
+  ],
+  "video_evidence": {
+    "user_provided_url": "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4",
+    "dom_linkage_to_this_exact_page": "The video is embedded directly inside THIS product's own page markup, under the same Shopify section template id family as the 14-image gallery, with its own product-specific poster image (filename itself says \"HX-QUADCAST-2-S...\"). This is first-party DOM evidence of belonging to this exact product, not an inference from sharing a generic Shopify CDN domain.",
+    "shares_page_template_id_with_gallery": true,
+    "type_and_availability_check": {
+      "method": "bounded Range GET, first 64KB only -- not a full download",
+      "http_status": 206,
+      "content_type": "video/mp4",
+      "is_valid_mp4_container_signature": true,
+      "declared_total_bytes": 571852430
+    },
+    "not_attributed_to_another_product_because": "The video is embedded via a literal <video><source> tag inside a <deferred-media> block whose data-media-id and enclosing <section id=\"shopify-section-...\"> share the exact same Shopify section-template id family as the confirmed 14-image gallery on THIS page. The shared cdn.shopify.com hostname alone was NOT used as evidence -- the DOM containment was."
+  },
+  "cover_image_evidence_separate_from_video": {
+    "url": "https://hyperx.com/cdn/shop/files/HX-QUADCAST-2-S-YouTube-tn-1080p_1920x.jpg?v=1789488039",
+    "byte_integrity": "complete",
+    "sha256": "c61530131aea148650f09f197c80bdb8254d26f98203beafbccc7c9f25f179d1",
+    "bytes": 163180,
+    "visual_content_confirmed": "Yes -- the cover image explicitly reads \"HYPERX QUADCAST 2 S\" and \"GLOW UP.\" in large text, showing the same RGB-lit microphone, on a desk with a keyboard/mouse/headset, with the HyperX logo -- unambiguous product-specific marketing artwork, not a generic placeholder."
+  },
+  "specifications_table_unchanged_from_stage11": [
+    {
+      "field": "Бренд",
+      "value": "HyperX",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "JSON-LD Product.brand.name"
+    },
+    {
+      "field": "Модель",
+      "value": "HyperX QuadCast 2 S – USB Microphone",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "JSON-LD Product.name"
+    },
+    {
+      "field": "Цвет/вариант",
+      "value": "Black",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "JSON-LD Product.offers.name (\"...– USB Microphone - Black\")"
+    },
+    {
+      "field": "GTIN-12",
+      "value": "197961186741",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "JSON-LD Product.gtin12 and Product.offers.gtin12 (identical)"
+    },
+    {
+      "field": "Element (капсюли)",
+      "value": "Three 14 mm electret condenser capsules",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "Official \"Microphone Specifications\" table (DOM), read directly from the fetched page -- JSON-LD additionalProperty values were empty strings on this page, so this field was NOT sourced from the generic additionalProperty reader"
+    },
+    {
+      "field": "Polar Pattern",
+      "value": "Cardioid; Omnidirectional; Bidirectional; Stereo",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table"
+    },
+    {
+      "field": "Frequency Response",
+      "value": "20Hz - 20kHz",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table"
+    },
+    {
+      "field": "Sensitivity",
+      "value": "'-8 dBFS±4dB (94 dBSPL at1kHz, default volume)",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table",
+      "caveat": "Quoted byte-for-byte as published; the leading apostrophe-like character appears in the official source itself and was not corrected or guessed."
+    },
+    {
+      "field": "Self-noise (RMS)",
+      "value": "<-80dBV (A-weighted)",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table"
+    },
+    {
+      "field": "SNR",
+      "value": "≥ 90dB (at 1kHz/0dBFS, A-weighted)",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table"
+    },
+    {
+      "field": "Connection Type",
+      "value": "USB-C; 3.5mm headphone output",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table"
+    },
+    {
+      "field": "Weight",
+      "value": "Microphone 0.76 lb; Shock mount and stand 0.31 lb; Microphone stand 0.59 lb; Total weight 1.84 lb (with USB cable)",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table, \"Physical Specifications\" section"
+    },
+    {
+      "field": "What's In The Box",
+      "value": "HyperX QuadCast 2 S USB Microphone, 3m USB-C to USB-C cable, USB-C to USB-A adapter, Quick Start Guide",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table -- confirms a Quick Start Guide is physically included, see manual_search below"
+    },
+    {
+      "field": "Warranty",
+      "value": "2 years",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "same official spec table"
+    },
+    {
+      "field": "Изображение (главное)",
+      "value": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "JSON-LD Product.offers.image + og:image meta tag, both declaring 4000x4000 -- the largest explicitly advertised size, per the media_resolution_rule; filename itself embeds the exact SKU \"9a273aa\""
+    },
+    {
+      "field": "Изображения (доп. ракурсы)",
+      "value": 8,
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "evidence": "angle_2 through angle_9, each filename embedding the same SKU \"9a273aa\", found via DOM srcset attributes on the confirmed page"
+    }
+  ],
+  "text_sections": [
+    {
+      "heading": "Glow up.",
+      "text": "HyperX QuadCast 2 S is a full-featured microphone designed with creators in mind. In addition to iconic features of our QuadCast line, like the tap-to-mute sensor, four selectable polar patterns, and included shock mount/stand, we’ve enhanced the QuadCast 2 S with improved functionalities to elevate our users’ experience. The 32-bit/192kHz advanced audio capability, enables the mic to deliver unmatched clarity and precision while maintaining exceptional audio fidelity. The QuadCast 2 S is the world's most customizable USB Gaming Microphone, with over 100 aRGB LEDs. The aRGB LEDs enable users to customize a stunning visual that blends sound fidelity with an energetic style. We’ve also enhanced the QuadCast 2 S to effectively address the various challenges highlighted by our community. Users are now able to quickly adjust microphone and headphone levels, like mic gain and monitor mix with a single, multifunction knob. We’ve also redesigned our shock mount with an innovative, spring-loaded pin system to easily mount onto a mic arm. HyperX listened and we’ve delivered a microphone that is truly customized for our community.",
+      "likely_gallery_image": null
+    },
+    {
+      "heading": "Dynamic Lighting Display",
+      "text": "QuadCast 2 S has over 100+ individually customizable aRGB LEDs allowing users to display over 16M+ color options to complement their streams and creations.",
+      "likely_gallery_image": "annotated_2_dynamic_en (also referenced by the overview bullet list)"
+    },
+    {
+      "heading": "Tap-to-Mute Sensor",
+      "text": "The Tap-to-Mute sensor allows users to quickly mute/unmute the mic to manage what is heard.",
+      "likely_gallery_image": "annotated_3_tap_en"
+    },
+    {
+      "heading": "Versatile Multifunction Knob",
+      "text": "The multifunction knob allows users to easily select and adjust microphone gain, headphone volume, monitor mix, and the desired polar pattern.",
+      "likely_gallery_image": "annotated_4_versatile_en"
+    },
+    {
+      "heading": "Redesigned Detachable Shock Mount",
+      "text": "The pre-attached vibration-dampening shock mount is easily detachable thanks to the spring-loaded pins. The shock mount joint is also compatible with 3/8in and 5/8in threading, for easy setups.",
+      "likely_gallery_image": "annotated_5_redesigned_en"
+    },
+    {
+      "heading": "Four Selectable Polar Patterns",
+      "text": "QuadCast 2 S offers four polar patterns (cardioid, omnidirectional, bi-directional, or stereo) to fit a wide variety of recording needs.",
+      "likely_gallery_image": "annotated_1_future_en (overview slide; \"Future Ready Audio\" bullet covers polar patterns + audio capability)"
+    },
+    {
+      "heading": "Mic Status LED Indicators",
+      "text": "The QuadCast 2 S is equipped with an LED VU meter and a variety of indicators informing the user of the mic’s control mode, mute status, polar pattern, and volume levels.",
+      "likely_gallery_image": null
+    },
+    {
+      "heading": "HyperX NGENUITY Software",
+      "text": "Fine-tune your microphone to achieve your perfect sound. .one-column-table {list-style-type: none; /* Remove bullet points */padding: 0; /* Remove padding */margin: 0; /* Remove margin */width: 100%; /* Optional: Set a fixed width for the column */border-collapse: collapse; /* Collapse borders if used with other tables */}.one-column-table li {padding: 10px; /* Add padding for spacing */border-bottom: 1px solid #ccc; /* Add bottom border */}.one-column-table li:last-child {border-bottom: none; /* Remove border from the last item */}",
+      "likely_gallery_image": null
+    }
+  ],
+  "text_sections_note": "The data-description block also repeats the spec table and adds a \"Shipping and Returns\" section (standard commerce boilerplate, not product-specific) -- excluded here since the spec table is already reported once, not duplicated.",
+  "open_gaps": [
+    "Manual (Quick Start Guide): confirmed physically included in the box (spec table, unchanged since Stage 11); no online PDF/document URL or its language confirmed anywhere on hyperx.com (product page, /pages/support, or this stage's re-check) -- unresolved, not claimed absent. User confirmed (2026-09-23) to leave this open rather than continue searching.",
+    "7 of the 9 originally-checked images (angle_3 through angle_9) remain filename-matched/DOM-grouped but not individually byte-fetched+visually verified (only main_1 and angle_2 were, in Stage 11.1); the 5 annotated images are newly identified this stage but not yet individually fetched+visually verified either."
+  ],
+  "field_needing_user_or_dealer_input": {
+    "exact_product": "HyperX QuadCast 2 S – USB Microphone, color Black, catalog seller article 9A273AA",
+    "missing_field": "Online/downloadable Quick Start Guide (instruction manual) document and its confirmed language",
+    "official_pages_checked": [
+      "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone (full page, gallery, spec table, text sections, video -- no PDF/manual link anywhere)",
+      "https://hyperx.com/pages/support (Stage 11 -- no PDF, no model-specific mention)"
+    ],
+    "what_is_specifically_needed": "Either (a) a direct URL to an official or dealer-hosted PDF/web version of the QuadCast 2S Quick Start Guide, with its language, or (b) explicit confirmation to leave this field open (not searched further) rather than pursued indefinitely, or (c) if a dealer source is to be used, the exact dealer domain and confirmation that it is allowed for this brand/category -- note that the current allowlist (Sulpak) only covers a fixed LG home-appliance category set and does not cover HyperX or microphones, so no dealer fallback applies here without a new, explicit decision.",
+    "user_decision": "User confirmed (2026-09-23): leave this field open, do not search further on this product. The manual status stands as: physically confirmed included in the box; online document and language not confirmed; not claimed absent."
+  },
+  "dealer_fallback_status": "Not invoked this stage. No specific dealer domain has been determined for HyperX peripherals, and Sulpak's existing allowlist is scoped exclusively to LG home appliances (washers/dryers, refrigerators, vacuums, microwaves) -- it does not apply to this brand or category. Mechta remains excluded per standing instructions. No new dealer was added to the production registry."
+}

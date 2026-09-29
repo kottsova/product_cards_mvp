@@ -1,0 +1,106 @@
+{
+  "schema_version": "stage9_1_offline_row_analysis.v1",
+  "method": "openpyxl read_only=True, data_only=True on data/catalog_2026-09-21_filtered.xlsx, sheet \"Товары\" -- 0 network requests",
+  "catalog_schema_full": {
+    "total_columns": 8,
+    "column_names": [
+      "Бренд",
+      "Категория",
+      "Артикул продавца",
+      "Артикулы WB",
+      "Наименование",
+      "Альтернативные наименования",
+      "ТНВЭД",
+      "Повторов в выгрузках"
+    ],
+    "dedicated_manufacturer_or_region_code_field_exists": false,
+    "schema_note": "The catalog has exactly 8 columns: Бренд, Категория, Артикул продавца, Артикулы WB, Наименование, Альтернативные наименования, ТНВЭД, Повторов в выгрузках. There is no column named or semantically dedicated to a manufacturer/factory code, region code, or product-variant code. \"Артикул продавца\" (seller article) is a free-text field the SELLER fills in -- it is not sourced from or verified against any manufacturer registry by catalog construction."
+  },
+  "row_CFI-ZCT1J_02": {
+    "Бренд": "Playstation",
+    "Категория": "Геймпады",
+    "Артикул продавца": "CFI-ZCT1J 02",
+    "Артикулы WB": "366727052",
+    "Наименование": "Геймпад DualSense для PS5 Cosmic Red",
+    "Альтернативные наименования": null,
+    "ТНВЭД": null,
+    "Повторов в выгрузках": 1
+  },
+  "row_CFI-ZCT1W_cosmic_red": {
+    "Бренд": "Playstation",
+    "Категория": "Геймпады",
+    "Артикул продавца": "CFI-ZCT1W_cosmic_red",
+    "Артикулы WB": "1055973578; 1137034269",
+    "Наименование": "Беспроводной геймпад DualSense Cosmic Red",
+    "Альтернативные наименования": null,
+    "ТНВЭД": "9504500009",
+    "Повторов в выгрузках": 2
+  },
+  "field_by_field_comparison": [
+    {
+      "field": "Бренд",
+      "row_j": "Playstation",
+      "row_w": "Playstation",
+      "differs": false,
+      "is_variant_evidence": false,
+      "reasoning": "Identical (\"Playstation\") -- not a source of distinction."
+    },
+    {
+      "field": "Категория",
+      "row_j": "Геймпады",
+      "row_w": "Геймпады",
+      "differs": false,
+      "is_variant_evidence": false,
+      "reasoning": "Identical (\"Геймпады\") -- not a source of distinction."
+    },
+    {
+      "field": "Наименование",
+      "row_j": "Геймпад DualSense для PS5 Cosmic Red",
+      "row_w": "Беспроводной геймпад DualSense Cosmic Red",
+      "differs": true,
+      "is_variant_evidence": false,
+      "reasoning": "Text differs (\"Геймпад DualSense для PS5 Cosmic Red\" vs \"Беспроводной геймпад DualSense Cosmic Red\"), but both name the identical product line (DualSense) and the identical color (Cosmic Red); the difference is phrasing/emphasis (\"for PS5\" vs \"wireless\"), not a distinct descriptor (no memory size, no region, no edition, no bundle content mentioned in either). Both descriptions are consistent with the SAME confirmed official variant."
+    },
+    {
+      "field": "Артикул продавца (seller article)",
+      "row_j": "CFI-ZCT1J 02",
+      "row_w": "CFI-ZCT1W_cosmic_red",
+      "differs": true,
+      "is_variant_evidence": "unverified",
+      "reasoning": "Strings differ (CFI-ZCT1J 02 vs CFI-ZCT1W_cosmic_red). This LOOKS like it could follow Sony's own CFI-ZCT1x code pattern, but per explicit instruction this difference alone must NOT be treated as proof of a genuine factory/regional variant distinction -- it is a seller-entered field, not verified against any manufacturer registry in the catalog itself, and no official PlayStation source checked in this or prior stages displays either code (see known_routes_review.json). Status: unverified, neither confirmed same nor confirmed different."
+    },
+    {
+      "field": "Артикулы WB (Wildberries marketplace listing numbers)",
+      "row_j": "366727052",
+      "row_w": "1055973578; 1137034269",
+      "differs": true,
+      "is_variant_evidence": false,
+      "reasoning": "Different WB listing numbers are EXPECTED for any two independent marketplace listings regardless of whether the underlying physical product is identical or different -- this is a marketplace-listing-instance identifier (directly analogous to Stage 9's finding that the official page's own microdata `sku` (1000050734) was PS Direct's internal webstore ID, not a manufacturer code). Not usable as product-identity evidence."
+    },
+    {
+      "field": "ТНВЭД (customs HS code)",
+      "row_j": null,
+      "row_w": "9504500009",
+      "differs": true,
+      "is_variant_evidence": false,
+      "reasoning": "Row J is null (not filled in), row W is \"9504500009\". This is presence-vs-absence, not two conflicting values for the same classification -- the simplest explanation is an incomplete seller data entry for row J, not a genuine customs-classification conflict. A customs HS code also classifies a broad product category (game controllers), not a specific factory/regional SKU, so even a populated value would not by itself prove a manufacturing-variant difference."
+    },
+    {
+      "field": "Повторов в выгрузках (repeat count in scrape exports)",
+      "row_j": 1,
+      "row_w": 2,
+      "differs": true,
+      "is_variant_evidence": false,
+      "reasoning": "Scrape/export bookkeeping metadata, unrelated to product identity."
+    },
+    {
+      "field": "Альтернативные наименования",
+      "row_j": null,
+      "row_w": null,
+      "differs": false,
+      "is_variant_evidence": false,
+      "reasoning": "Both null -- no additional naming evidence available."
+    }
+  ],
+  "conclusion": "No catalog field constitutes verified manufacturer/regional-variant evidence. The only field that differs in a way that COULD plausibly reflect a genuine factory/regional distinction is the seller-assigned article code -- and per explicit instruction, that difference cannot be used alone to conclude the rows describe different variants. Every other differing field (WB numbers, TNVED presence, repeat count) is marketplace-listing metadata, not manufacturer-level identification. Both rows' own descriptive names are consistent with the identical confirmed product (DualSense Wireless Controller, Cosmic Red). No rows were merged or deleted; both are carried forward as separate catalog records with their own evidence."
+}

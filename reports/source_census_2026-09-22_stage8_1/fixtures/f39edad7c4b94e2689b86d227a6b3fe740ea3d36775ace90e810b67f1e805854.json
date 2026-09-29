@@ -1,0 +1,91 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "product"
+      ],
+      "pagination": [],
+      "locale_contract": "host_or_undeclared"
+    },
+    "identity": {
+      "json_paths": [
+        ".gtin13",
+        ".name",
+        ".sku"
+      ],
+      "microdata_properties": [],
+      "code_fields": [
+        "gtin13",
+        "sku"
+      ],
+      "variant_fields": [],
+      "model_semantics": "unverified_sku_meaning"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [
+        ".image"
+      ],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": false,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "3cf40a6a1b440ba5954325d0168cde7c43612673a79014110ca1555cad663d44",
+    "identity": "132b1f226c09f6d2fb7ee83850f96cf6bea550f0c1dd6d84f61fbe7ec2799cdc",
+    "specifications": "5d5da77dbad6032eb18f25eb5785f0b984eda2a297e796ebb0949f1be5a1dce9",
+    "media": "905d99d2ecffa757990c6beb5f8c3761e506c1141b3992fdbaca0999af4da8d5",
+    "documents": "60f963e8a84277eea51f529ff07f2c10fcd1887daf1d686f734dc9d1e0ea6c0a"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "generic_json_ld_product",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "json_ld",
+          "signal": "@graph contains Product",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "engine": "shopify",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "cdn\\.shopify\\.com|Shopify\\.theme|shopify-section",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "f39edad7c4b94e2689b86d227a6b3fe740ea3d36775ace90e810b67f1e805854",
+  "fixture_version": 2
+}

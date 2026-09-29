@@ -1,0 +1,184 @@
+{
+  "stage": "11.1",
+  "budget_declared_before_requests": {
+    "declared_at": "2026-09-23",
+    "declared_before_any_request": true,
+    "scope": "Two things only: (1) verify a small number of the 9A273AA product images (official source + integrity + actual visual content), (2) check whether up to 2 additional HYPERX catalog rows, in different peripheral categories where possible, have a real confirmed Product page -- using already-known category/navigation links first, with bounded discovery only if needed. No other brand, no Kingston, no HIPER, no wide HyperX census.",
+    "allowed_hosts": [
+      "hyperx.com"
+    ],
+    "allowed_hosts_reason": "The only host confirmed official for this brand family (Stage 8/8.1/11). Product images are served from hyperx.com/cdn/shop/files/... on the same host, not a separate CDN subdomain.",
+    "seed_urls_already_known_not_guessed": [
+      "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "https://hyperx.com/collections/gaming-keyboards",
+      "https://hyperx.com/collections/gaming-mice",
+      "https://hyperx.com/collections/gaming-headsets",
+      "https://hyperx.com/collections/microphones",
+      "https://hyperx.com/collections/all"
+    ],
+    "seed_urls_note": "All 5 collection URLs and the product URL were already found as first-party navigation links on the Stage 8.1/Stage 11-confirmed QuadCast 2S product page fixture -- none is guessed. Category pages are used only to look for real product links; individual product page URLs are only fetched once actually found in a category page's own links, never assembled from a guessed slug pattern.",
+    "image_verification_targets": [
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289"
+    ],
+    "image_verification_note": "2 of the 9 already-known image URLs from Stage 11 (the main photo and one angle photo) -- a small number, not all 9 -- fetched with a byte-preserving, completeness-classified mechanism (reused from Stage 10.1/10.3's adaptation of Stage 8.6) and visually inspected.",
+    "limits": {
+      "max_requests_total": 12,
+      "max_requests_per_host": 12,
+      "max_hosts": 1,
+      "max_response_bytes_per_request_pages": 900000,
+      "max_response_bytes_per_request_images": 3000000,
+      "min_interval_seconds_between_requests": 2.0,
+      "timeout_seconds_per_request": 10.0,
+      "max_category_pages_to_check": 3,
+      "max_candidate_product_pages_to_verify": 2
+    },
+    "robots_txt_policy": "hyperx.com/robots.txt fetched first (fresh this stage, not assumed from Stage 11), honoring any Disallow rules under User-agent: *.",
+    "stop_conditions": [
+      "max_requests_total or max_category_pages_to_check or max_candidate_product_pages_to_verify reached",
+      "HTTP 403/429/challenge_confirmed on hyperx.com -> stop the host, record the gap (challenge_suspected alone does not stop, per Stage 8.1/11 precedent)",
+      "redirect off hyperx.com -> aborted, not followed",
+      "a category page yields no real product-page link matching the candidate model name -> record as not found, do not substitute a similar model",
+      "robots.txt disallows a candidate path -> skip, record why"
+    ],
+    "explicit_non_goals": [
+      "No Chromium / browser automation",
+      "No search engines",
+      "No dealer/reseller sources",
+      "No brute-forcing of URLs, model codes, or slugs",
+      "No invented endpoints",
+      "No wide HyperX census beyond the up-to-2 additional rows this stage picks",
+      "No Kingston, HIPER, or any other brand network activity",
+      "No renewed manual/document search for 9A273AA this stage"
+    ]
+  },
+  "total_requests_made": 7,
+  "requests_by_host": {
+    "hyperx.com": 7
+  },
+  "requests_budget_max_total": 12,
+  "request_log_full": [
+    {
+      "seq": 1,
+      "requested_url": "https://hyperx.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/robots.txt",
+      "redirect_chain": [
+        "https://hyperx.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=utf-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 3608,
+      "note": "",
+      "phase_file": "phase1_robots_and_images.json (page)",
+      "aggregate_seq": 1
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+      "range": "0-2999999",
+      "http_status": 206,
+      "content_range": "bytes 0-530087/530088",
+      "content_type": "image/jpeg",
+      "bytes_read": 530088,
+      "final_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+      "error": "",
+      "aggregate_seq": 2,
+      "phase_file": "phase1_robots_and_images.json (image range)"
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289",
+      "range": "0-2999999",
+      "http_status": 206,
+      "content_range": "bytes 0-578351/578352",
+      "content_type": "image/jpeg",
+      "bytes_read": 578352,
+      "final_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289",
+      "error": "",
+      "aggregate_seq": 3,
+      "phase_file": "phase1_robots_and_images.json (image range)"
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://hyperx.com/collections/gaming-keyboards",
+      "capability": "category_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/collections/gaming-keyboards",
+      "redirect_chain": [
+        "https://hyperx.com/collections/gaming-keyboards"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "challenge_suspected",
+      "error": "",
+      "bytes_read": 865892,
+      "note": "already-known nav link from the product page fixture, not guessed",
+      "phase_file": "phase2_category_discovery.json",
+      "aggregate_seq": 4
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://hyperx.com/collections/gaming-mice",
+      "capability": "category_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/collections/gaming-mice",
+      "redirect_chain": [
+        "https://hyperx.com/collections/gaming-mice"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "challenge_suspected",
+      "error": "",
+      "bytes_read": 834239,
+      "note": "already-known nav link from the product page fixture, not guessed",
+      "phase_file": "phase2_category_discovery.json",
+      "aggregate_seq": 5
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard",
+      "capability": "product_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard",
+      "redirect_chain": [
+        "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "challenge_suspected",
+      "error": "",
+      "bytes_read": 648337,
+      "note": "found via category page in phase 2, not guessed",
+      "phase_file": "phase3_candidate_product_pages_fetch.json",
+      "aggregate_seq": 6
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse",
+      "capability": "product_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse",
+      "redirect_chain": [
+        "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "challenge_suspected",
+      "error": "",
+      "bytes_read": 619314,
+      "note": "found via category page in phase 2, not guessed",
+      "phase_file": "phase3_candidate_product_pages_fetch.json",
+      "aggregate_seq": 7
+    }
+  ],
+  "stop_events": {
+    "403_429_confirmed_challenge_seen": false
+  },
+  "category_pages_checked": 2,
+  "candidate_product_pages_verified": 2,
+  "status": "complete_within_budget"
+}

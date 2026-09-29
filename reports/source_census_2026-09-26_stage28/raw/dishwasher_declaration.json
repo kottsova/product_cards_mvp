@@ -1,0 +1,33 @@
+{
+  "declared_at": "2026-09-26T08:39:31+00:00",
+  "stage": "28 / dishwasher candidate Russian instruction",
+  "brand": "Samsung",
+  "article": "DW60M5050BB/WT",
+  "candidate": {
+    "href": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=DW60M5050BB&CttFileID=10696196&CDCttType=UM&VPath=UM%2F202507%2F20250724101125641%2FDW5500M_DD81-02615G-06_RU_UK_KK_UZ_R.pdf",
+    "file_name": "DW5500M_DD81-02615G-06_RU_UK_KK_UZ_R.pdf",
+    "why_a_candidate": "the file name of the link the official product page prints says RU_UK_KK_UZ; a name proves nothing about the text, so it is only a CANDIDATE until its text is read",
+    "stage27_outcome": "the download reached the 40 MB cap: not a complete PDF, nothing read"
+  },
+  "budget": {
+    "max_real_http_requests": 2,
+    "intended": 1,
+    "why_two": "fetch_with_retry repeats a request once after a network error or a 429/5xx answer; a third request is refused by the budget before it is made",
+    "document_ceiling_bytes": 60000000,
+    "pacing_seconds": 1.5,
+    "hosts": [
+      "org.downloadcenter.samsung.com",
+      "downloadcenter.samsung.com (the redirect target)"
+    ],
+    "product_page_requests": 0,
+    "other_files": 0,
+    "images": 0
+  },
+  "protection": "PolicyAwareSession: allowed hosts, redirect-chain check, persisted stop log <workdir>/samsung_fetch_log.json, RequestBudget(max_total=2); a 401/403/429 or a confirmed challenge stops the host and ends the attempt",
+  "url_construction": "none: the link is the one the official page printed in Stage 27",
+  "outcomes_and_statuses": {
+    "file complete and readable": "assessed by its own text (language, tie to the page, model named) with the Stage 27 owner rules; saved as a document",
+    "file over the ceiling, an error, a stop, or unreadable text": "status 'кандидат на русскую инструкцию не проверен' -- never 'русской инструкции нет'; the English file of Stage 27 does not stand in for it"
+  },
+  "not_done": "no other file, no other product, no page request"
+}

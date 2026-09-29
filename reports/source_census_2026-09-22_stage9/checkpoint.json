@@ -1,0 +1,80 @@
+{
+  "schema_version": "stage9_checkpoint.v1",
+  "budget_declared_before_first_request": {
+    "schema_version": "stage9_budget_predeclaration.v1",
+    "declared_before_any_request": true,
+    "target_url": "https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller-cosmic-red-for-ps5-pc-mac-mobile",
+    "target_url_provenance": "Already verified official Product page from Stage 8.2 -- not new discovery.",
+    "ordinary_page_load_limit": {
+      "bytes": 1500000,
+      "note": "Unchanged existing limit for HTML page fetches."
+    },
+    "document_assembly_limits": {
+      "max_document_total_bytes": 8000000,
+      "document_chunk_bytes_per_request": 1500000,
+      "note": "Generic pre-declared ceiling in case a manual/PDF is found on or linked from the product page; reuses Stage 8.6's bounded Range-assembly capability unchanged. If a found document's declared size exceeds this, no further bytes are fetched for it and the manual stays unconfirmed -- same discipline as Stage 8.6."
+    },
+    "request_limits": {
+      "max_total_requests": 6,
+      "max_requests_per_host": 4,
+      "max_hosts": 2
+    },
+    "pre_declared_allowed_hosts": [
+      "direct.playstation.com",
+      "www.playstation.com",
+      "support.playstation.com"
+    ],
+    "allowed_hosts_provenance": "direct.playstation.com is the already-verified product-page host. www.playstation.com and support.playstation.com were already observed as first-party navigation links on PS Direct pages in Stage 8.2's own evidence -- pre-declared as available, not guaranteed to be used.",
+    "stop_conditions": [
+      "403 or 429 response on any host -- that host is paused for the remainder of the run.",
+      "A redirect to a host outside the pre-declared allow-list.",
+      "Content-Range total size, ETag or Last-Modified disagrees between parts of a document assembly.",
+      "A found document's declared total size exceeds max_document_total_bytes.",
+      "Total or per-host request budget exhausted."
+    ],
+    "no_chromium_no_search_engines_no_dealers_no_invented_urls_no_broad_brand_search": true,
+    "samsung_not_investigated_this_stage": true
+  },
+  "budget_actual": {
+    "total_requests": 1,
+    "by_host": {
+      "direct.playstation.com": 1
+    },
+    "hosts_contacted": [
+      "direct.playstation.com"
+    ],
+    "within_plan": true
+  },
+  "rejected_attempts": [],
+  "request_log": [
+    {
+      "seq": 1,
+      "url": "https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller-cosmic-red-for-ps5-pc-mac-mobile",
+      "kind": "product",
+      "http_status": 200,
+      "protection_status": "challenge_suspected",
+      "final_url": "https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller-cosmic-red-for-ps5-pc-mac-mobile",
+      "total_after": 1,
+      "host_after": {
+        "direct.playstation.com": 1
+      }
+    }
+  ],
+  "hosts_paused_this_run": [],
+  "pre_declared_but_unused_hosts": {
+    "hosts": [
+      "www.playstation.com",
+      "support.playstation.com"
+    ],
+    "reason": "Pre-declared as available in case a manual/support link on the verified page pointed there. No such link was found (all /support/ links on the page are generic e-commerce policy pages), so neither host was ever contacted -- no invented navigation, no broad brand search."
+  },
+  "document_capability_reused": "Stage 8.6's fetch_document_bounded() was carried over unchanged and was available for use, but was never invoked -- no PDF/document link was found on the verified product page to apply it to.",
+  "counter_persistence": "Continues Stage 8.3-8.6's fix unchanged: total and per-host counts are always recomputed from this stage's own run_state.json.",
+  "offline_reuse_before_any_request": [
+    "data/catalog_2026-09-21_filtered.xlsx (read-only) -- source of the 2 candidate catalog rows, 0 requests.",
+    "reports/source_census_2026-09-22_stage8_2/product_page_fixtures.json -- source of the already-verified product page URL, 0 requests.",
+    "Checked for existing sqlite snapshots and Stage 8 structural_cache.json entries for this URL -- none found (the page was originally fetched fresh in Stage 8.2 and never snapshotted), confirming a new request was genuinely necessary to extract real field values."
+  ],
+  "stop_reason": "All identifiable gaps for this item (identity, specs, image, manual) were checked within 1 request. No further requests were made once the catalog-row ambiguity was established as unresolvable from this page's own evidence -- per instructions, this was not treated as license to search further afield.",
+  "samsung_investigated_this_stage": false
+}

@@ -1,0 +1,130 @@
+{
+  "proposed_at": "2026-09-26T08:46:07+00:00",
+  "status": "PROPOSAL -- nothing has been requested",
+  "rule": "one product per category; the smallest SHA-256 of the article among rows with an exact page listed in an observed sitemap",
+  "recommended_order": [
+    "5A (memory storage)",
+    "5B (accessories and wearables)"
+  ],
+  "groups": {
+    "5A (memory storage)": {
+      "products": {
+        "Внутренние SSD-накопители": {
+          "article": "MZ-77E500BW",
+          "title": "SSD диск Samsung 870 EVO / 500Гб/2.5\"/Sata III [MZ-77E500BW]",
+          "catalog_row": 11997,
+          "page_url": "https://www.samsung.com/kz_ru/memory-storage/sata-ssd/870-evo-512gb-sata-3-2-5-ssd-mz-77e500bw/",
+          "sitemap": "memory-sitemap.xml",
+          "route_in_adapter": [
+            "memory-sitemap.xml",
+            "im-sitemap.xml"
+          ]
+        },
+        "Flash-накопители": {
+          "article": "MUF-64BE3/APC",
+          "title": "Флеш-накопитель 64 ГБ BAR Plus, USB 3.2 Gen 1 (MUF-64BE3/APC)",
+          "catalog_row": 11962,
+          "page_url": "https://www.samsung.com/kz_ru/memory-storage/usb-flash-drive/samsung-usb-flash-drive-bar-plus-64gb-silver-muf-64be3-apc/",
+          "sitemap": "memory-sitemap.xml",
+          "route_in_adapter": [
+            "memory-sitemap.xml",
+            "im-sitemap.xml"
+          ]
+        },
+        "Внешние SSD-накопители": {
+          "article": "MU-PC1T0H/WW",
+          "title": "Внешний SSD T7 (MU-PC1T0H/WW)",
+          "catalog_row": 11974,
+          "page_url": "https://www.samsung.com/kz_ru/memory-storage/portable-ssd/portable-ssd-t7-mu-pc1t0h-ww/",
+          "sitemap": "memory-sitemap.xml",
+          "route_in_adapter": [
+            "memory-sitemap.xml",
+            "im-sitemap.xml"
+          ]
+        },
+        "Карты памяти": {
+          "article": "MB-MC64HARU",
+          "title": "Карта памяти Samsung microSDXC 64 Гб [MB-MC64HARU]",
+          "catalog_row": 12051,
+          "page_url": "https://www.samsung.com/kz_ru/memory-storage/memory-card/evo-plus-microsd-card-64gb-mb-mc64ha-ru/",
+          "sitemap": "memory-sitemap.xml",
+          "route_in_adapter": [
+            "memory-sitemap.xml",
+            "im-sitemap.xml"
+          ]
+        }
+      },
+      "request_budget": {
+        "sitemaps": "1 (memory-sitemap.xml): read once for the group",
+        "product_pages": 4,
+        "instruction_files": "at most 8",
+        "per_row_cap": 7,
+        "total_cap": 13,
+        "pacing_seconds": 1.5,
+        "document_cap_mb": 40
+      },
+      "stop_rules": "401/403/429 or a confirmed challenge stops the host and ends the group; no page or file is asked for except one a sitemap lists / a page prints",
+      "dealer_requests": 0,
+      "known_risk": "the page templates of these sections have not been read yet: if a page has no specification table or gallery in the static HTML, the card reports the gap (nothing is guessed) and the group stops being 'ready' for that category"
+    },
+    "5B (accessories and wearables)": {
+      "products": {
+        "Кабели": {
+          "article": "EP-DA705BBRGRU",
+          "title": "Кабель USB Type-C - USB Type-C (3 A, 1 м)",
+          "catalog_row": 12037,
+          "page_url": "https://www.samsung.com/kz_ru/mobile-accessories/usb-type-c-to-type-c-cable-black-ep-da705bbrgru/",
+          "sitemap": "im-sitemap.xml",
+          "route_in_adapter": [
+            "im-sitemap.xml",
+            "assorted-sitemap.xml"
+          ]
+        },
+        "Смарт-часы": {
+          "article": "SM-L300NZEACIS",
+          "title": "Galaxy Watch7 40mm",
+          "catalog_row": 12289,
+          "page_url": "https://www.samsung.com/kz_ru/watches/galaxy-watch/galaxy-watch7-40mm-cream-bt-sm-l300nzeacis/",
+          "sitemap": "im-sitemap.xml",
+          "route_in_adapter": [
+            "im-sitemap.xml",
+            "assorted-sitemap.xml"
+          ]
+        },
+        "Фитнес-браслеты": {
+          "article": "SM-R390NZSACIS",
+          "title": "Galaxy Fit 3",
+          "catalog_row": 13117,
+          "page_url": "https://www.samsung.com/kz_ru/watches/galaxy-fit/galaxy-fit3-silver-bt-sm-r390nzsacis/",
+          "sitemap": "im-sitemap.xml",
+          "route_in_adapter": [
+            "im-sitemap.xml",
+            "assorted-sitemap.xml"
+          ]
+        }
+      },
+      "request_budget": {
+        "sitemaps": "1 (im-sitemap.xml): read once for the group",
+        "product_pages": 3,
+        "instruction_files": "at most 6",
+        "per_row_cap": 7,
+        "total_cap": 10,
+        "pacing_seconds": 1.5,
+        "document_cap_mb": 40
+      },
+      "stop_rules": "401/403/429 or a confirmed challenge stops the host and ends the group; no page or file is asked for except one a sitemap lists / a page prints",
+      "dealer_requests": 0,
+      "known_risk": "the page templates of these sections have not been read yet: if a page has no specification table or gallery in the static HTML, the card reports the gap (nothing is guessed) and the group stops being 'ready' for that category"
+    }
+  },
+  "categories_still_without_a_route": {
+    "Зарядные устройства": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)",
+    "Оперативная память": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)",
+    "Гарнитуры": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)",
+    "GPS-трекеры": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)",
+    "Наушники беспроводные": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)",
+    "МФУ": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)",
+    "Музыкальные проигрыватели": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)",
+    "Проекторы": "no catalog article of this category has a page listed in any sitemap of the observed route (b2c index: memory, im, assorted, vd, da)"
+  }
+}

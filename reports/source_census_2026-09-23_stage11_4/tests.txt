@@ -1,0 +1,129 @@
+A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+A:\work\dev\product_cards_mvp\tests\test_source_census_v2.py:187: DeprecationWarning: validate_product_candidate is legacy text evidence and cannot establish identity
+  identity = validate_product_candidate(html + " M1", expected_models=("M1",))
+Rejected unreadable xlsx upload
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_1.Stage81ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_1.py", line 31, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_2.Stage82ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_2.py", line 34, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_2_1.Stage821ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_2_1.py", line 30, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_2_2.Stage822ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_2_2.py", line 34, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_3.Stage83ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_3.py", line 33, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_4.Stage84ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_4.py", line 29, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_5.Stage85ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_5.py", line 27, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v8_6.Stage86ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_6.py", line 59, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v9.Stage9ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v9.py", line 28, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical (test_structural_census_v9_1.Stage9_1ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v9_1.py", line 28, in test_stage2_to_8_files_byte_identical
+    self.assertEqual(actual, expected, f'protected file changed: {path}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda' != '98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c'
+- f6b9a8c7a0eb972a63d896350c2277071d797bdfbd3adf6d74c3f05bbbb71eda
++ 98bed5393f2247ed0c2f937e7ff27a0a77f271981cd14ffe9ae9c221896ddc3c
+ : protected file changed: product_tool/display.py
+
+----------------------------------------------------------------------
+Ran 742 tests in 22.068s
+
+FAILED (failures=10)

@@ -1,0 +1,61 @@
+{
+  "reconciliation": {
+    "stage10_3_images_rejected_count_field": 17,
+    "category_counts": {
+      "rejected_confirmed_white_by_alt_text_or_shared_bundle_id": 14,
+      "rejected_environmental_illustration_not_color_evidence": 1,
+      "rejected_different_product_refurbished_listing": 1,
+      "excluded_schematic_diagram_not_a_product_photo": 1,
+      "excluded_no_console_visible_screenshot_of_tv": 2,
+      "candidates_for_visual_check_console_visible_color_unstated": 2
+    },
+    "total_elements_classified_across_all_6_categories": 21,
+    "breakdown": {
+      "counted_in_the_17_rejected_figure": {
+        "categories": [
+          "rejected_confirmed_white_by_alt_text_or_shared_bundle_id",
+          "rejected_environmental_illustration_not_color_evidence",
+          "candidates_for_visual_check_console_visible_color_unstated"
+        ],
+        "sum": 17,
+        "note": "The card.json \"images_rejected_count\": 17 equals 14 (white bundle) + 1 (Carbon-Aware) + 2 (the 2 visually-checked candidates, both rejected after inspection) = 17. This matches len(images_rejected_with_evidence) in card.json exactly."
+      },
+      "NOT_counted_in_the_17_kept_as_a_separate_excluded_list": {
+        "categories": [
+          "rejected_different_product_refurbished_listing",
+          "excluded_schematic_diagram_not_a_product_photo",
+          "excluded_no_console_visible_screenshot_of_tv"
+        ],
+        "sum": 4,
+        "note": "card.json keeps these 4 elements in a separate field (\"images_excluded_not_treated_as_evidence_either_way\") precisely because they were never fetched or evaluated as color evidence one way or the other (a different product listing, a technical schematic, and 2 TV-screenshot elements with no console visible). They were deliberately NOT added to the rejected-with-evidence count, to avoid inflating a \"rejected\" tally with items that were never candidates for confirmation in the first place."
+      }
+    },
+    "reconciliation_result": "17 (rejected) + 4 (excluded, not evidence either way) = 21 total live <img> elements classified from the two known Xbox asset CDN hosts. No overlap between the two buckets -- every element appears in exactly one category. Stage 10.3's report.md correctly used \"17\" for the rejected-with-evidence count and separately listed the 4 excluded elements; this addendum makes the arithmetic explicit for anyone auditing the count.",
+    "stage10_3_conclusion_unchanged": true,
+    "stage10_3_conclusion_unchanged_reason": "This is a bookkeeping clarification only. No new evidence was gathered about any image's color or relevance -- Stage 10.3's verdict (0 images accepted for the Carbon Black 1TB variant) stands exactly as recorded."
+  },
+  "visually_checked_candidates_hashed": [
+    {
+      "url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+      "alt_text": "XBOX Series S next to a space ship on a Starfield planet",
+      "byte_count": 575457,
+      "sha256": "92deb97ad7e3d7c56c2fd7fab369c38444ad7e960e9987284fe590529bf8e644",
+      "declared_total_bytes_at_fetch_time": 575457,
+      "byte_count_matches_declared_total": true,
+      "rejection_reason": "visually_confirmed_white_not_carbon_black",
+      "rejection_evidence": "Fetched official CDN URL, byte-verified complete (complete, 575457 bytes, Content-Type image/jpeg), and visually inspected: shows a white-cased console and a white controller. No Carbon Black casing visible; not tied to the Carbon Black option via DOM either.",
+      "bytes_source": "session scratch dir copy from Stage 10.3's original fetch; no new network request this stage"
+    },
+    {
+      "url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+      "alt_text": "Back of the XBOX Series S",
+      "byte_count": 376996,
+      "sha256": "ecb049bdc3f783d2f9a23c31d732eaf651e7428481d2be52eae0201bec3b91e7",
+      "declared_total_bytes_at_fetch_time": 376996,
+      "byte_count_matches_declared_total": true,
+      "rejection_reason": "visually_confirmed_white_not_carbon_black",
+      "rejection_evidence": "Fetched official CDN URL, byte-verified complete (complete, 376996 bytes, Content-Type image/jpeg), and visually inspected: shows a white-cased console. No Carbon Black casing visible; not tied to the Carbon Black option via DOM either.",
+      "bytes_source": "session scratch dir copy from Stage 10.3's original fetch; no new network request this stage"
+    }
+  ]
+}

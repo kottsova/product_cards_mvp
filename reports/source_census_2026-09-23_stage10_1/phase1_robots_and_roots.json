@@ -1,0 +1,114 @@
+{
+  "phase": "robots_and_roots",
+  "robots_by_host": {
+    "www.xbox.com": {
+      "fetched": true,
+      "http_status": 200,
+      "seen_user_agent_star_block": true,
+      "disallow_rules": [
+        "/error",
+        "/*Search?q*",
+        "/*search?q*",
+        "/*results?k*",
+        "/*Results?k*",
+        "/_layouts/",
+        "/_vti_bin/",
+        "/*/contact-us?isChatCallAvailable=false",
+        "/*/play/user/*"
+      ],
+      "raw_bytes": 289
+    },
+    "support.xbox.com": {
+      "fetched": true,
+      "http_status": 200,
+      "seen_user_agent_star_block": true,
+      "disallow_rules": [],
+      "raw_bytes": 72
+    }
+  },
+  "root_fetch_results": {
+    "www.xbox.com": {
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/ka-GE/",
+      "bytes_read": 167952,
+      "diagnostic_text_len": 164286
+    },
+    "support.xbox.com": {
+      "access_status": "javascript_required",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/",
+      "bytes_read": 2897,
+      "diagnostic_text_len": 2897
+    }
+  },
+  "stopped_hosts": [],
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://www.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://www.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=UTF-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 289,
+      "note": ""
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://support.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://support.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 72,
+      "note": ""
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://www.xbox.com/",
+      "capability": "homepage",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/ka-GE/",
+      "redirect_chain": [
+        "https://www.xbox.com/",
+        "https://www.xbox.com/ka-GE/"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 167952,
+      "note": ""
+    },
+    {
+      "seq": 4,
+      "requested_url": "https://support.xbox.com/",
+      "capability": "homepage",
+      "access_status": "javascript_required",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/",
+      "redirect_chain": [
+        "https://support.xbox.com/"
+      ],
+      "content_type": "text/html",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 2897,
+      "note": ""
+    }
+  ],
+  "skipped": []
+}

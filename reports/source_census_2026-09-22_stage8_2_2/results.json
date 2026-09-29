@@ -1,0 +1,36 @@
+{
+  "schema_version": "stage8_2_2_results.v1",
+  "scope": "Samsung support-first discovery for exactly 2 catalog smartphones (Galaxy S20 FE, Galaxy Z Fold3), www.samsung.com only.",
+  "official_support_host_confirmed": "www.samsung.com (region-path pattern: /kz_ru/support/, /us/support/, /sec/support/) -- support.samsung.com was never assumed or contacted.",
+  "models": {
+    "Galaxy S20 FE": {
+      "catalog_article": "488776SM-G780GZRDSKZ",
+      "product_page_or_support_page_found": false,
+      "status": "official_support_client_rendered",
+      "catalog_identity_result": "insufficient",
+      "documents_found": 0
+    },
+    "Galaxy Z Fold3": {
+      "catalog_article": "491953SM-F926BZGGSKZ",
+      "product_page_or_support_page_found": false,
+      "status": "official_support_client_rendered",
+      "catalog_identity_result": "insufficient",
+      "documents_found": 0
+    }
+  },
+  "routes_tried": [
+    "support_root",
+    "GET search (searchvalue param)",
+    "user-manuals-and-guide hub",
+    "mobile/find-your-galaxy model finder",
+    "one support-content article leaf page"
+  ],
+  "new_http_requests": 6,
+  "hosts_contacted": 1,
+  "regional_fallback_recommended": true,
+  "smartphone_flow_status": "unresolved -- moved to a separate flow, does not block the TV/audio pilot",
+  "categories_ready_for_pilot": [
+    "tvs",
+    "audio-sound (Galaxy Buds / mobile-accessories)"
+  ]
+}

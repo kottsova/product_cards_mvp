@@ -1,0 +1,14 @@
+{
+  "schema_version": "stage8_2_1_next_queue.v1",
+  "note": "This file is a plan only; nothing here was executed.",
+  "entries": [
+    {
+      "source_family": "samsung",
+      "profile_id": "samsung_kz_02d9e6",
+      "category": "smartphones",
+      "route_result_status": "mobile_sitemap_no_product_urls",
+      "next_method": "support_first",
+      "detail": "The b2c-sitemap.xml consumer catalog (the only proven sitemap branch) contains zero smartphone URLs across all 5 of its children. A real /smartphones/ site section exists via first-party navigation but requires client-side rendering to verify any specific product -- the same architectural gap already found for LG in Stage 8.2. Per instructions, this is NOT recorded as official_exact_product_not_found for any catalog product. Recommended next method: support_first -- Samsung's support.samsung.com portal (already a known support_hosts entry in the samsung_kz_02d9e6 profile) frequently exposes model-code-indexed device pages for warranty/manual lookup that are more likely to expose static identity data than the marketing/configurator smartphones/ section; this was not attempted here (out of this stage's strict same-domain-path scope: only www.samsung.com/kz_ru/ was permitted)."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "attempts": [
+    {
+      "url": "https://www.samsung.com/kz_ru/support/",
+      "kind": "support",
+      "reason": "first-party link discovered offline (0 requests) on the already-known kz_ru homepage snapshot; registry support_hosts for samsung_kz/samsung_kz_02d9e6 both declare www.samsung.com, and Stage 8s own samsung_kr profile already used the same-domain /support/ pattern (samsung.com/sec/support/)",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://www.samsung.com/kz_ru/support/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/support/"
+      ],
+      "checked_at": "2026-09-22T19:00:41+00:00"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/search/?searchvalue=Galaxy%20S20%20FE",
+      "kind": "category",
+      "reason": "confirmed GET search endpoint (searchvalue param) observed directly on the already-fetched kz_ru/support/ page -- query text taken verbatim from the catalog base_model field",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://www.samsung.com/kz_ru/aisearch/?searchvalue=Galaxy%20S20%20FE",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/search/?searchvalue=Galaxy%20S20%20FE",
+        "https://www.samsung.com/kz_ru/aisearch/?searchvalue=Galaxy%20S20%20FE"
+      ],
+      "checked_at": "2026-09-22T19:01:06+00:00"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/search/?searchvalue=Galaxy%20Z%20Fold3",
+      "kind": "category",
+      "reason": "confirmed GET search endpoint (searchvalue param) observed directly on the already-fetched kz_ru/support/ page -- query text taken verbatim from the catalog base_model field",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://www.samsung.com/kz_ru/aisearch/?searchvalue=Galaxy%20Z%20Fold3",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/search/?searchvalue=Galaxy%20Z%20Fold3",
+        "https://www.samsung.com/kz_ru/aisearch/?searchvalue=Galaxy%20Z%20Fold3"
+      ],
+      "checked_at": "2026-09-22T19:01:07+00:00"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/support/user-manuals-and-guide/",
+      "kind": "support",
+      "reason": "first-party link discovered on the already-fetched kz_ru/support/ page",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://www.samsung.com/kz_ru/support/user-manuals-and-guide/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/support/user-manuals-and-guide/"
+      ],
+      "checked_at": "2026-09-22T19:01:27+00:00"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/mobile/find-your-galaxy/",
+      "kind": "category",
+      "reason": "first-party link discovered on the already-fetched kz_ru/support/ page",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://www.samsung.com/kz_ru/mobile/find-your-galaxy/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/mobile/find-your-galaxy/"
+      ],
+      "checked_at": "2026-09-22T19:01:29+00:00"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/support/mobile-devices/check-out-the-new-camera-functions-of-galaxy-s20-plus-s20-ultra/",
+      "kind": "support",
+      "reason": "architectural probe: confirmed first-party support-content link from kz_ru/support/ -- checking whether support CONTENT/article leaf pages render statically, unlike the hub/search pages already found client-rendered. Not the targeted S20 FE/Z Fold3 model (this is an S20 Plus/Ultra camera-feature article) -- used only to test the page-type behavior.",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://www.samsung.com/kz_ru/support/mobile-devices/check-out-the-new-camera-functions-of-galaxy-s20-plus-s20-ultra/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/support/mobile-devices/check-out-the-new-camera-functions-of-galaxy-s20-plus-s20-ultra/"
+      ],
+      "checked_at": "2026-09-22T19:02:06+00:00"
+    }
+  ],
+  "blocked_hosts": []
+}

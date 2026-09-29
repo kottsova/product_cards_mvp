@@ -1,0 +1,42 @@
+<!--
+SYNTHETIC fixture, Stage 14 -- the deliberate NEGATIVE case. This page's
+own JSON-LD sku is 7G7A4AA#ABA (a different regional keyboard-layout
+variant), while the catalog row under test is 7G7A4AA#ACB. Base code
+matches; region suffix does not. This must resolve to "base_code_confirmed"
+-- never "exact_variant" -- exactly the same base-vs-suffix distinction
+already used for Razer (Stage 12: catalog M1 vs page U1).
+-->
+<html>
+<head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "HyperX Alloy Rise 75 (US Layout)",
+  "sku": "7G7A4AA#ABA",
+  "productID": "7G7A4AA#ABA",
+  "image": [{"@type": "ImageObject", "url": "https://hyperx.com/cdn/shop/products/alloy-rise-75-us-hero.jpg", "width": 1200, "height": 1200}],
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Switch type", "value": "HyperX Red Linear"},
+    {"@type": "PropertyValue", "name": "Layout", "value": "US ANSI"}
+  ]
+}
+</script>
+<meta name="description" content="HyperX Alloy Rise 75 -- US layout mechanical keyboard.">
+</head>
+<body>
+<main>
+  <h1>HyperX Alloy Rise 75 (US Layout)</h1>
+  <div class="product-gallery">
+    <a href="https://hyperx.com/cdn/shop/products/alloy-rise-75-us-front.jpg" data-fancybox="gallery" data-media-id="9001">
+      <img src="https://hyperx.com/cdn/shop/products/alloy-rise-75-us-front_small.jpg" data-media-id="9001">
+    </a>
+  </div>
+  <section class="specifications">
+    <dl>
+      <dt>Layout</dt><dd>US ANSI</dd>
+    </dl>
+  </section>
+</main>
+</body>
+</html>

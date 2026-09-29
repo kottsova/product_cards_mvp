@@ -1,0 +1,70 @@
+{
+  "registries_checked": [
+    "product_tool/config/official_domains.v1.json (17 domains total; production-adjacent research registry with page/support/document host roles)",
+    "product_tool/config/source_research.v1.json (per-family research status, incl. support.microsoft.com)",
+    "product_tool/config/source_catalog.v2.json (executable production registry)",
+    "product_tool/config/source_candidates.v1.json (confirmed-but-non-executable domain candidates)"
+  ],
+  "official_domains_v1_has_microsoft_or_xbox_entry": false,
+  "source_catalog_v2_has_microsoft_or_xbox_entry": false,
+  "source_candidates_v1_has_microsoft_or_xbox_entry": false,
+  "source_research_v1_microsoft_family_record": {
+    "source_family_id": "microsoft",
+    "canonical_brand": "Microsoft",
+    "source_labels": [
+      "Microsoft"
+    ],
+    "priority_rank": 19,
+    "unique_products": 45,
+    "research_status": "official_verified",
+    "official_status": "official_verified",
+    "source_role": "support",
+    "market": "global",
+    "candidate_url": "https://support.microsoft.com/en-us/all-products",
+    "page_hosts": [
+      "support.microsoft.com"
+    ],
+    "support_hosts": [
+      "support.microsoft.com"
+    ],
+    "asset_document_hosts": [],
+    "evidence": [
+      {
+        "type": "first_party_page",
+        "url": "https://support.microsoft.com/en-us/all-products",
+        "claim": "First-party product, corporate, or support page identifies the brand/source family.",
+        "checked_at": "2026-09-22T00:00:00Z"
+      }
+    ],
+    "checked_variants": [
+      "Microsoft",
+      "Microsoft"
+    ],
+    "no_result_reason": "",
+    "probe_targets": [
+      {
+        "url": "https://support.microsoft.com/en-us/all-products",
+        "capability": "support_page",
+        "sample_type": "support"
+      },
+      {
+        "url": "https://support.microsoft.com/robots.txt",
+        "capability": "robots_txt",
+        "sample_type": "robots"
+      },
+      {
+        "url": "https://support.microsoft.com/sitemap.xml",
+        "capability": "sitemap",
+        "sample_type": "sitemap"
+      }
+    ],
+    "endpoint_results": [],
+    "checkpoint": {
+      "status": "pending",
+      "last_checked_at": "",
+      "stop_reason": ""
+    }
+  },
+  "finding": "No entry for Microsoft/Xbox exists in official_domains.v1.json at all (0 of 17 entries), and the production source_catalog.v2.json has no Microsoft/Xbox entry either. The only confirmed official route on file anywhere is support.microsoft.com, from source_research.v1.json, where it is the sole host listed under both page_hosts and support_hosts (asset_document_hosts is empty) with source_role=\"support\" and official_status=\"official_verified\" — but checkpoint.status=\"pending\" (never actually probed) and endpoint_results=[] (empty) before this stage. There is no host anywhere in this project's registries whose role is \"manufacturer\" or \"retailer\" for this brand family, i.e. no host confirmed to carry commercial product-page content — only this one support-role domain, which this stage is the first to actually probe. Its 3 declared probe_targets (all already known, none invented this stage) are: https://support.microsoft.com/en-us/all-products (support_page), https://support.microsoft.com/robots.txt (robots_txt), https://support.microsoft.com/sitemap.xml (sitemap).",
+  "implication_for_this_stage": "Per instructions, new discovery may only use confirmed official sitemap/catalog feed/internal HTTP search within a pre-declared bounded budget, and must not guess URLs or endpoints. The only host with any official-verification evidence on file is support.microsoft.com. This stage therefore restricts allowed_hosts to exactly that one host for any bounded check, using only the 3 already-declared probe_targets above. No www.xbox.com, www.microsoft.com/store, or any other Microsoft-owned domain is assumed, guessed, or added to the allowlist mid-run, even if referenced by text on a fetched page — a link to such a host would fail AccessProbe's redirect/host allowlist check by design and is treated as an out-of-scope discovery lead for a future stage, not followed."
+}

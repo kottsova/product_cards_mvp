@@ -49,7 +49,7 @@ def seed(db: Path):
     finally: con.close()
 
 def doc(key,facts,match="base_model",photos=None):
-    names={"lg_kz":"LG Казахстан","lg_ru":"LG Россия","sulpak":"Sulpak","mechta":"Mechta"}
+    names={"lg_kz":"LG Казахстан","lg_ru":"LG Россия","sulpak":"Sulpak"}
     return SourceDocument(key,names[key],f"https://example.test/{key}",found_model="S3WER",match_level=match,evidence="fixture",attributes=[RawAttribute(*x) for x in facts],photo_candidates=photos or [])
 
 class ClassificationTests(unittest.TestCase):
@@ -139,7 +139,11 @@ class PhotoAndExportTests(unittest.TestCase):
         try:
             self.assertIn("Инструкции",book.sheetnames); self.assertIn("Фотографии",book.sheetnames)
             headers=[c.value for c in next(book["Паровые шкафы"].iter_rows())]; self.assertIn("Количество поддонов для сбора воды",headers); self.assertNotIn("drip_tray_qty",headers)
-            photo_rows=list(book["Фотографии"].iter_rows(values_only=True)); self.assertEqual(len(photo_rows),2)
+            photo_rows=list(book["Фотографии"].iter_rows(values_only=True)); self.assertEqual(len(photo_rows),1)
+            candidate_rows=list(book["Фото-кандидаты"].iter_rows(values_only=True)); self.assertEqual(len(candidate_rows),2)
+            self.assertEqual(candidate_rows[1][-1],"Связь с артикулом не подтверждена")
+            product_rows=list(book["Паровые шкафы"].iter_rows(values_only=True))
+            self.assertTrue(all(value is None for value in product_rows[1][5:]))
         finally: book.close()
 
 if __name__=="__main__": unittest.main()

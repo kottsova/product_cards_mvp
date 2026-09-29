@@ -1,0 +1,79 @@
+{
+  "moves": [
+    {
+      "from": "identity_conflict",
+      "to": "host_blocked",
+      "units": 3
+    },
+    {
+      "from": "identity_conflict",
+      "to": "manual_review",
+      "units": 9
+    },
+    {
+      "from": "identity_conflict",
+      "to": "needs_product_page_fixture",
+      "units": 56
+    },
+    {
+      "from": "official_route_no_adapter",
+      "to": "needs_product_page_fixture",
+      "units": 1877
+    }
+  ],
+  "moves_by_cause": {
+    "evidence_scope_corrected": {
+      "moves": [
+        {
+          "from": "official_route_no_adapter",
+          "to": "needs_product_page_fixture",
+          "units": 1877
+        }
+      ],
+      "units": 1877
+    },
+    "identity_rule_corrected": {
+      "moves": [
+        {
+          "from": "identity_conflict",
+          "to": "host_blocked",
+          "units": 3
+        },
+        {
+          "from": "identity_conflict",
+          "to": "manual_review",
+          "units": 9
+        },
+        {
+          "from": "identity_conflict",
+          "to": "needs_product_page_fixture",
+          "units": 56
+        }
+      ],
+      "units": 68
+    }
+  },
+  "only_after": 0,
+  "only_before": 0,
+  "ready_to_run_gain": 0,
+  "status_counts_after": {
+    "adapter_url_missing": 38,
+    "host_blocked": 1957,
+    "identity_conflict": 1,
+    "manual_review": 2261,
+    "needs_product_page_fixture": 11965,
+    "official_route_no_adapter": 86,
+    "ready_to_run": 580
+  },
+  "status_counts_before": {
+    "adapter_url_missing": 38,
+    "host_blocked": 1954,
+    "identity_conflict": 69,
+    "manual_review": 2252,
+    "needs_product_page_fixture": 10032,
+    "official_route_no_adapter": 1963,
+    "ready_to_run": 580
+  },
+  "units_after": 16888,
+  "units_before": 16888
+}

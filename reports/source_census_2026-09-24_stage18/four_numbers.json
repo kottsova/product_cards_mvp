@@ -1,0 +1,65 @@
+{
+  "1_status_changed_because_evidence_was_overstated": {
+    "measured": "Stage 17 queue -> queue_a_evidence_scope (same URL map)",
+    "moves": [
+      {
+        "from": "official_route_no_adapter",
+        "to": "needs_product_page_fixture",
+        "units": 1877
+      }
+    ],
+    "plus_units_changed_by_the_identity_rule_fix": {
+      "moves": [
+        {
+          "from": "identity_conflict",
+          "to": "host_blocked",
+          "units": 3
+        },
+        {
+          "from": "identity_conflict",
+          "to": "manual_review",
+          "units": 9
+        },
+        {
+          "from": "identity_conflict",
+          "to": "needs_product_page_fixture",
+          "units": 56
+        }
+      ],
+      "units": 68
+    },
+    "units": 1877
+  },
+  "2_units_that_got_a_really_confirmed_url": {
+    "by_basis": {
+      "live_page_wave_stage18": 10,
+      "saved_official_snapshot": 1
+    },
+    "measured": "queue_a_evidence_scope -> final queue (moves_by_cause.exact_url_confirmed)",
+    "rows_examined_by_the_wave_without_a_url": 27,
+    "units": 11
+  },
+  "3_units_that_can_be_launched_now": {
+    "by_url_basis": {
+      "adapter_discovery": 578,
+      "known_url_map": 13
+    },
+    "gain_vs_stage17": 11,
+    "meaning": "may be passed to worker.run_once(); says nothing about whether a card will come out",
+    "partially_ready_pairs": 3,
+    "ready_pairs": 12,
+    "ready_to_run_units": 591,
+    "stage17_ready_to_run_units": 580
+  },
+  "4_cards_actually_obtained": {
+    "cards": 6,
+    "for_review": 5,
+    "from_the_11_new_rows": {
+      "card": 6,
+      "review": 5
+    },
+    "how": "worker.run_once() through the coverage executor on the saved official pages (offline replay); no live worker run was made",
+    "not_counted": "the Stage 17 control cards (9A273AA, A1KY6AA, one LG row) are Stage 17 results"
+  },
+  "note": "Four different quantities; none is derived from another."
+}

@@ -1,0 +1,80 @@
+{
+  "declared_at": "2026-09-25T11:51:57+00:00",
+  "stage": "24 / batch 1",
+  "brand": "Samsung",
+  "market": "kz_ru",
+  "candidates_in_order": {
+    "Телевизоры": [
+      "QE48S85HAEXCE",
+      "QE55QN70HAUXCE",
+      "QE50QN70HAUXCE"
+    ],
+    "Смартфоны": [
+      "SM-A366EZKDSKZ",
+      "SM-A366ELVDSKZ",
+      "SM-A266BLGDSKZ"
+    ],
+    "Планшеты": [
+      "SM-X826BZARSKZ",
+      "SM-X826BZSRSKZ"
+    ],
+    "Пылесосы": [
+      "VC18M2150SG/EV",
+      "VC18M21D0VG/EV",
+      "VC18M31B0HN/EV",
+      "VC18M21C0VN/EV"
+    ],
+    "Стиральные машины": [
+      "WD10T754CBX/LD",
+      "WW90DG6U94LBLD",
+      "WW65AG4S21CXLD",
+      "WD90DG5G34BBLP"
+    ],
+    "Микроволновые печи": [
+      "MS23K3614AK/BW"
+    ]
+  },
+  "no_request_for": {
+    "Микроволновые печи": "MS23K3614AK/BW: the saved evidence of Stages 8.4-8.6 is used unchanged"
+  },
+  "budget": {
+    "max_real_requests_total": 30,
+    "max_real_requests_per_category": 10,
+    "pacing_seconds": 1.5,
+    "hosts": [
+      "www.samsung.com and *.samsung.com subdomains (a document link printed on an official page)"
+    ],
+    "not_fetched": "images (their URLs are recorded, no image is downloaded); support.samsung.com search (client-rendered, Stage 8.2.2); any URL not printed by an official page or listed in an official sitemap",
+    "shared_requests": "the two sitemaps and the hub pages are charged to the total and to the first category that needs them"
+  },
+  "routes_observed_before": {
+    "vd_sitemap": "https://www.samsung.com/kz_ru/vd-sitemap.xml",
+    "da_sitemap": "https://www.samsung.com/kz_ru/da-sitemap.xml",
+    "tv_hub_2026": "https://www.samsung.com/kz_ru/tvs/best-2026/",
+    "phone_hubs": [
+      "https://www.samsung.com/kz_ru/smartphones/all-smartphones/",
+      "https://www.samsung.com/kz_ru/smartphones/galaxy-a/"
+    ],
+    "tablet_hub": "https://www.samsung.com/kz_ru/tablets/all-tablets/",
+    "origin": "links in the Samsung link indexes of Stages 8.2 / 8.2.1 and the b2c-sitemap branches of Stage 8.2.1"
+  },
+  "steps": {
+    "shared": "GET vd-sitemap.xml and da-sitemap.xml (2). A candidate's page = the sitemap URL whose alphanumeric slug contains the alphanumeric article (the part before '/' is the fallback key); nothing is built.",
+    "Телевизоры": "GET the 2026 hub (1). Currency = the hub links to the candidate's page or names its series (e.g. s85h). The first candidate (in order) that has a sitemap page is fetched (1). Currency is reported separately; a card without confirmed currency does not count as a NEW electronics card.",
+    "Смартфоны": "GET all-smartphones and galaxy-a hubs (2). Model tokens in order: a36, a56, a26, s25. The first model with a link on a hub is the page fetched (1). Currency = that link. No such link -> no eligible current model, category stays queued.",
+    "Планшеты": "GET the all-tablets hub (1). The candidate's model code (sm-x826) or series (tab s10) must be linked; then that page is fetched (1). Otherwise: the current lineup does not contain the catalog tablet -> no eligible novelty, category stays queued.",
+    "Пылесосы / Стиральные машины": "The first candidate (in order) with a page in da-sitemap.xml is fetched (1 each); old models are allowed. No candidate in the sitemap -> outcome recorded, nothing else requested.",
+    "documents": "On each fetched product page: the first anchor that looks like a manual (href has .pdf or CDCttType=UM, not a delivery/terms/energy-label file) on a *.samsung.com host is fetched once as a complete PDF (cap 25 MB). Nothing else is fetched. State per file: candidate link -> reachable file -> instruction confirmed by content (text, language by chunk, model named), as in Stage 22."
+  },
+  "measured_per_product": [
+    "exact official page found (sitemap/hub url; sku on the page equals the catalog article: exact_article / base_code / none)",
+    "identity fields the GENERIC extractor (structured_page.py) returns",
+    "specification rows: generic dom table rows vs spec text only Samsung-specific logic can read",
+    "photo URLs: generic gallery extractor vs Samsung-specific image rule",
+    "document: link / file / content-confirmed, language, model",
+    "currency evidence for electronics"
+  ],
+  "stop_rule": "401/403/429 or a confirmed challenge on any Samsung host stops that host in batch1/workdir/samsung_fetch_log.json and ends the batch; the remaining categories are recorded as not run",
+  "url_construction": "none",
+  "not_done": "any bulk processing of catalog rows; queued categories; new pilots of other brands"
+}

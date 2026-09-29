@@ -1,0 +1,76 @@
+{
+  "schema_version": "stage8_2_1_checkpoint.v1",
+  "budget": {
+    "max_total": 6,
+    "max_per_host": 6,
+    "used": 5,
+    "remaining_unused": 1
+  },
+  "requests": [
+    {
+      "url": "https://www.samsung.com/kz_ru/da-sitemap.xml",
+      "kind": "sitemap",
+      "http_status": 200,
+      "protection_status": "ordinary_page",
+      "reason": "completing the already-known b2c-sitemap.xml branch set (5 declared sub-sitemaps; vd/im/assorted already checked in Stage 8.2) to give a definitive answer, not a partial one"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+      "kind": "sitemap",
+      "http_status": 200,
+      "protection_status": "ordinary_page",
+      "reason": "completing the already-known b2c-sitemap.xml branch set (5 declared sub-sitemaps; vd/im/assorted already checked in Stage 8.2) to give a definitive answer, not a partial one"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/smartphones/all-smartphones/",
+      "kind": "category",
+      "http_status": 200,
+      "protection_status": "ordinary_page",
+      "reason": "first-party navigation link discovered offline (0 new requests) on the already-known kz_ru homepage snapshot -- /smartphones/ is a real top-level path not covered by the b2c-sitemap.xml branches already checked"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/smartphones/galaxy-s25-ultra/",
+      "kind": "product",
+      "http_status": 200,
+      "protection_status": "ordinary_page",
+      "reason": "first-party link from the already-fetched smartphones/all-smartphones category page"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/smartphones/galaxy-s26-ultra/buy/",
+      "kind": "product",
+      "http_status": 200,
+      "protection_status": "ordinary_page",
+      "reason": "first-party link from the already-fetched smartphones/all-smartphones category page"
+    }
+  ],
+  "offline_reuse_before_any_request": [
+    "robots.txt (samsung_kz snapshot, Stage 7 sqlite) -- confirmed no mobile-specific Sitemap: declaration",
+    "kz_ru/sitemap.xml index (Stage 8.2 offline reprocess) -- confirmed 5 branches, only b2c-sitemap.xml is consumer-catalog-shaped",
+    "vd-sitemap.xml / im-sitemap.xml / assorted-sitemap.xml (Stage 8.2 fixtures + link_index) -- already fully checked, 0 smartphone URLs, reused without re-fetching",
+    "kz_ru homepage (Stage 7 sqlite snapshot, samsung_kz) reprocessed offline for the FIRST time with a full (non-truncated) link list -- this is what found the /smartphones/ site section, at zero network cost"
+  ],
+  "stop_reason": "Route exhausted, not budget-forced: the only proven consumer-catalog sitemap branch set (b2c-sitemap.xml's 5 children) was fully checked (0 phones), and the alternate first-party /smartphones/ route was checked as far as instructed (2 product-shaped pages), both returning candidate-only (unverifiable) results. 1 of 6 budgeted requests was left unused deliberately rather than trying a third smartphone URL for a likely-identical result.",
+  "hosts_paused_this_run": [],
+  "requests_not_made": [
+    {
+      "url": "https://www.samsung.com/kz_ru/top_sitemap.xml",
+      "reason": "No naming evidence connecting it to smartphones; not opened, per instructions to only follow proven branches."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/business/top-sitemap.xml",
+      "reason": "B2B/business by name."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/business/b2b-sitemap.xml",
+      "reason": "B2B by name."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/support/sitemap.xml",
+      "reason": "Support/documents by name, not product catalog."
+    },
+    {
+      "url": "a 3rd /smartphones/ product-shaped page (e.g. galaxy-z-fold8/buy/)",
+      "reason": "Not fetched: the first 2 already gave a consistent, repeatable negative structural result; spending the remaining budget on a near-certain repeat was judged not worthwhile. Left in the budget reserve instead."
+    }
+  ]
+}

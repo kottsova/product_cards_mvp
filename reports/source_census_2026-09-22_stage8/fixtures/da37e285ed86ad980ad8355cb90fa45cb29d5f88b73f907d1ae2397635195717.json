@@ -1,0 +1,75 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [
+        "GET:q:html_search_form"
+      ],
+      "navigation": [
+        "category",
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "host_or_undeclared"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": [
+        "accordion:details+summary"
+      ]
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "3633fec943d06b9874c382296adcb5d0fd11ee651dc30c93c080b2cf7fa6082a",
+    "identity": "b05d43a97e49e85483f42d29e604315d6eb1da1c3aba0c1fe30c2858ee4be583",
+    "specifications": "23c645af9bdd430591b1441ce1e5f0a1d3d20bac8353ce63d2aea72925eb5399",
+    "media": "808d29b2eee31041d96fc9add04d06bb402b100fd2595f36eba4366165da2014",
+    "documents": "a74ad2762fa55b65e7c95c57e40699f18023c9dbacbfad324501d95f6969f62b"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": true,
+    "media": false,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "shopify",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "cdn\\.shopify\\.com|Shopify\\.theme|shopify-section",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": true,
+  "content_sha256": "da37e285ed86ad980ad8355cb90fa45cb29d5f88b73f907d1ae2397635195717",
+  "fixture_version": 2
+}

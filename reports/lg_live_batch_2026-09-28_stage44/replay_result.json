@@ -1,0 +1,37 @@
+{
+  "existing_product_id": 4,
+  "products_in_batch": 12,
+  "replayed_job_id": "98f409693f0449e3a1d0c6be2e2ffeca",
+  "job_status": "needs_review",
+  "job_message": "Официальная страница поддержки LG найдена как кандидат; содержимое пока не подтверждает полный артикул комплекта. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+  "support_http_calls": 1,
+  "support_source": {
+    "product_id": 4,
+    "source_key": "lg_kz_support",
+    "site_name": "LG Казахстан — поддержка",
+    "url": "https://www.lg.com/kz/support/product-support/cs-P12ED.USAR/",
+    "found_model": "",
+    "match_level": "support_candidate",
+    "evidence": "Официальная страница поддержки открыта. Поля с кодом товара: нет; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+    "fetched_at": "2026-09-28T20:16:59+00:00",
+    "error": "",
+    "description": "",
+    "photos": []
+  },
+  "documents": [],
+  "export_hits": {
+    "сплит-система": [
+      "2 | LG | P12ED.NSAR + P12ED.USAR | P12ED"
+    ],
+    "Источники": [
+      "P12ED.NSAR + P12ED.USAR | lg_kz | Несоответствие | Existing product-page search result replayed offline. | 2026-09-28T20:16:59+00:00",
+      "P12ED.NSAR + P12ED.USAR | lg_ru | Несоответствие | Existing product-page search result replayed offline. | 2026-09-28T20:16:59+00:00",
+      "P12ED.NSAR + P12ED.USAR | Sulpak | Не проверено | Host stop was caused by another Sulpak page; this candidate was not fetched. | 2026-09-28T20:16:59+00:00 | policy_host_stopped | https://www.sulpak.kz/g/kondicioneriy_split_sistemiy_lg_p12ednsar___p12edusar",
+      "P12ED.NSAR + P12ED.USAR | DNS | dealer_url_needed | 2026-09-28T20:16:59+00:00",
+      "P12ED.NSAR + P12ED.USAR | LG Казахстан — поддержка | support_candidate | Официальная страница поддержки открыта. Поля с кодом товара: нет; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки. | 2026-09-28T20:16:59+00:00 | https://www.lg.com/kz/support/product-support/cs-P12ED.USAR/"
+    ],
+    "Готовность LG": [
+      "P12ED.NSAR + P12ED.USAR | Нужна проверка (needs_review) | Не готова (not_ready) | Источники и модель, Описание, Характеристики, Фотографии, Инструкции | Нет официальной страницы с полным артикулом каталога. Характеристики с официальной страницы не получены. Фото с точной официальной страницы не подтверждено. Русская инструкция не подтверждена. Host stop was caused by another Sulpak page; this candidate was not fetched. | Дилерская сверка отсутствует; она справочная."
+    ]
+  }
+}

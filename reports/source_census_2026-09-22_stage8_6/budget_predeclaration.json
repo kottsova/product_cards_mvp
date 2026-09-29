@@ -1,0 +1,34 @@
+{
+  "schema_version": "stage8_6_budget_predeclaration.v1",
+  "declared_before_any_request": true,
+  "ordinary_page_load_limit_unchanged": {
+    "bytes": 1500000,
+    "note": "Left exactly as in every prior stage; governs fetch() for HTML pages only, not used here."
+  },
+  "document_assembly_limits": {
+    "max_document_total_bytes": 6000000,
+    "document_chunk_bytes_per_request": 1500000,
+    "note": "If a document's server-declared total size (via Content-Range or Content-Length) exceeds max_document_total_bytes, no further bytes are fetched for it -- this is a hard stop, not a soft preference."
+  },
+  "request_limits": {
+    "max_total_requests": 8,
+    "max_requests_per_host": 6,
+    "max_hosts": 2
+  },
+  "pre_declared_allowed_hosts": [
+    "org.downloadcenter.samsung.com",
+    "downloadcenter.samsung.com"
+  ],
+  "stop_conditions": [
+    "403 or 429 response on any host -- that host is paused for the remainder of the run, per ProbePolicy.",
+    "A redirect to a host outside the pre-declared allow-list.",
+    "Content-Range total size disagrees between two parts of the same assembly (possible different document version) -- assembly aborted.",
+    "ETag or Last-Modified disagrees between two parts -- assembly aborted.",
+    "Server-declared total size exceeds max_document_total_bytes -- no further fetch for that document.",
+    "Range not honored by the server AND Content-Length is missing or exceeds the cap -- no unbounded fallback download is attempted.",
+    "Total or per-host request budget exhausted."
+  ],
+  "no_chromium_no_search_engines_no_dealers_no_invented_urls": true,
+  "target_url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+  "target_url_provenance": "The exact same URL already established in Stage 8.4/8.5 -- not a new discovery, not invented."
+}

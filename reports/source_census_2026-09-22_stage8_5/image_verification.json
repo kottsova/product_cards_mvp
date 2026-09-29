@@ -1,0 +1,16 @@
+{
+  "schema_version": "stage8_5_image_verification.v1",
+  "image_url": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+  "belongs_to_this_model": {
+    "status": "confirmed",
+    "evidence": [
+      "The URL was advertised via the product page's own responsive srcset (Stage 8.4), not guessed or invented.",
+      "The URL's own filename encodes the exact model code twice ('ms23k3614akbw' and 'ms23k3614ak-bw') and the confirmed color ('frontblack') -- on-page-linked, not an isolated/unrelated asset URL."
+    ]
+  },
+  "fit_for_card_use": {
+    "status": "confirmed",
+    "evidence": "Live fetch this stage: HTTP 200, Content-Type: image/png, magic bytes 89 50 4E 47 0D 0A 1A 0A (valid PNG header), 491,012 bytes read, NOT truncated (well under the 1.5MB cap) -- a genuine, complete, undamaged image file, not a broken link or placeholder."
+  },
+  "resolution_selected": "1164x776 PNG, the larger of two explicitly advertised srcset widths (624x468 and 1164x776 of the same asset id 190178091) -- per the project's existing 'largest advertised candidate' rule."
+}

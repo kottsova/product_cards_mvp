@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "clusters": [
+    {
+      "layer": "product_data",
+      "engine": "generic_json_ld_product",
+      "sources": [
+        "apple_kz",
+        "bosch_home",
+        "lenovo_kz",
+        "xiaomi_global"
+      ],
+      "independent_hosts": [
+        "apple.com",
+        "bosch-home.com",
+        "lenovo.com",
+        "mi.com",
+        "pcsupport.lenovo.com",
+        "support.apple.com"
+      ],
+      "sample_types": [
+        "product_page"
+      ],
+      "catalog_products": 3921,
+      "single_source_candidate": false,
+      "multi_site_cluster": true,
+      "adapter_candidate": true,
+      "structure_compatibility_validated": true
+    },
+    {
+      "layer": "site_cms",
+      "engine": "adobe_experience_manager",
+      "sources": [
+        "huawei_kz",
+        "samsung_kz"
+      ],
+      "independent_hosts": [
+        "consumer.huawei.com",
+        "samsung.com"
+      ],
+      "sample_types": [
+        "category_page",
+        "homepage",
+        "product_page",
+        "support_page"
+      ],
+      "catalog_products": 1538,
+      "single_source_candidate": false,
+      "multi_site_cluster": true,
+      "adapter_candidate": false,
+      "structure_compatibility_validated": false
+    },
+    {
+      "layer": "site_cms",
+      "engine": "next_js",
+      "sources": [
+        "bosch_home"
+      ],
+      "independent_hosts": [
+        "bosch-home.com"
+      ],
+      "sample_types": [
+        "product_page",
+        "support_page"
+      ],
+      "catalog_products": 682,
+      "single_source_candidate": true,
+      "multi_site_cluster": false,
+      "adapter_candidate": false,
+      "structure_compatibility_validated": false
+    }
+  ]
+}

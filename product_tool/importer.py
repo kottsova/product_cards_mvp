@@ -173,8 +173,17 @@ def category_from_name(name: str) -> str:
     lowered = name.casefold()
     rules = (
         (r"стиральн\w*\s+машин\w*\s+с\s+сушк", "Стирально-сушильная машина"),
+        (r"стирально[-\s]сушильн\w*\s+машин", "Стирально-сушильная машина"),
         (r"стиральн\w*\s+машин", "Стиральная машина"),
         (r"паровой\s+шкаф", "Паровой шкаф"),
+        (r"сплит[-\s]систем|кондиционер", "Сплит-система"),
+        (r"микроволнов\w*\s+печ", "Микроволновая печь"),
+        (r"холодильник", "Холодильник"),
+        (r"пылесос", "Пылесос"),
+        (r"аудиосистем", "Аудиосистема"),
+        (r"саундбар", "Саундбар"),
+        (r"музыкальн\w*\s+центр", "Музыкальный центр"),
+        (r"микросистем", "Микросистема"),
         (r"смартфон", "Смартфон"),
         (r"ноутбук", "Ноутбук"),
         (r"телевизор", "Телевизор"),
@@ -189,10 +198,19 @@ def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping) -
     explicit_code = value_at(raw, mapping.search_code)
     fallback_code = value_at(raw, mapping.fallback_code)
     explicit_category = value_at(raw, mapping.category)
+    descriptive_model_column = bool(
+        not explicit_name and fallback_code
+        and len(fallback_code.split()) >= 2
+        and re.search(r"[А-Яа-яЁё]", fallback_code)
+    )
+    if descriptive_model_column:
+        explicit_name, fallback_code = fallback_code, ""
     if not any((explicit_name, explicit_brand, explicit_code, fallback_code, explicit_category)):
         return None
 
     issues: list[str] = []
+    if descriptive_model_column:
+        issues.append("Колонка «Модель» содержит название товара; используем как название, не как запасной артикул")
     brand = explicit_brand or brand_from_name(explicit_name)
     brand_source = "column" if explicit_brand else "name" if brand else "missing"
     candidates = code_candidates(explicit_name) if not (explicit_code or fallback_code) else []

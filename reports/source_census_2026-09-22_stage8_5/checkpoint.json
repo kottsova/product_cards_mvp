@@ -1,0 +1,89 @@
+{
+  "schema_version": "stage8_5_checkpoint.v1",
+  "budget_declared_before_first_request": {
+    "max_total": 5,
+    "max_per_host": 3,
+    "max_hosts": 3,
+    "pre_declared_allowed_hosts": [
+      "www.samsung.com",
+      "org.downloadcenter.samsung.com",
+      "downloadcenter.samsung.com",
+      "images.samsung.com"
+    ],
+    "note": "The PDF-serving Samsung domain (org.downloadcenter.samsung.com, redirecting to downloadcenter.samsung.com -- both observed in Stage 8.4's own redirect chain, not invented) was pre-declared in this allow-list before any request was made this stage, per instructions."
+  },
+  "budget_actual": {
+    "total_requests": 3,
+    "by_host": {
+      "org.downloadcenter.samsung.com": 1,
+      "www.samsung.com": 1,
+      "images.samsung.com": 1
+    },
+    "hosts_contacted": [
+      "images.samsung.com",
+      "org.downloadcenter.samsung.com",
+      "www.samsung.com"
+    ],
+    "within_plan": true
+  },
+  "rejected_attempts": [],
+  "rejected_attempts_note": "Kept in a separate list from executed HTTP requests, per instructions -- empty this stage, since every planned fetch stayed within the pre-declared budget and no gate rejected any call.",
+  "request_log": [
+    {
+      "seq": 1,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_binary",
+      "reason": "binary-safe fetch of the manual PDF to extract real text/metadata -- Stage 8.4 only confirmed magic bytes via the lossy text-decoding probe.probe() path and did not persist bytes; this stage needs the actual content, not just reachability",
+      "http_status": 200,
+      "protection_status": "ordinary_page",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "bytes_read": 1500000,
+      "truncated": true,
+      "total_after": 1,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 1
+      }
+    },
+    {
+      "seq": 2,
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "kind": "product",
+      "reason": "re-fetch of the SAME already-confirmed product page (Stage 8.4) with a broader specification text search -- Stage 8.4 only regex-matched a narrow keyword set (volume/power/grill/convection) and may have missed other characteristic rows; this closes the specific unclosed field \"which characteristics remain unknown\"",
+      "http_status": 200,
+      "protection_status": "challenge_suspected",
+      "final_url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "bytes_read": null,
+      "truncated": null,
+      "total_after": 2,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 1,
+        "www.samsung.com": 1
+      }
+    },
+    {
+      "seq": 3,
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "kind": "document_binary",
+      "reason": "verify the card-selected official image actually resolves and is real image content (not a broken/placeholder link) -- closes the specific \"is the image fit for the card\" check",
+      "http_status": 200,
+      "protection_status": "ordinary_page",
+      "final_url": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "bytes_read": 491012,
+      "truncated": false,
+      "total_after": 3,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 1,
+        "www.samsung.com": 1,
+        "images.samsung.com": 1
+      }
+    }
+  ],
+  "hosts_paused_this_run": [],
+  "counter_persistence": "Continues Stage 8.3/8.4's fix unchanged: total and per-host counts are always recomputed from this stage's own run_state.json, never from an in-process value that could reset across script invocations.",
+  "offline_reuse_before_any_request": [
+    "Stage 8.4's evidence.json and card_summary.json -- source of the independent-evidence separation (evidence_separation.json), 0 requests.",
+    "Stage 8.4's manual_reachability_retry.json -- established the manual link's redirect chain, reused to pre-declare downloadcenter.samsung.com as an allowed host before any Stage 8.5 request."
+  ],
+  "new_tooling_added_this_stage": "pypdf 6.19.0, installed into the local, gitignored .venv only -- no tracked project file changed. Used exclusively for the PDF content-extraction attempt described in pdf_content_verification.json.",
+  "stop_reason": "All three planned checks (PDF content, broader spec scan, image reachability) were completed within 3 of the 5 planned requests. No further gaps remained open that a network request could close within this stage's declared scope."
+}

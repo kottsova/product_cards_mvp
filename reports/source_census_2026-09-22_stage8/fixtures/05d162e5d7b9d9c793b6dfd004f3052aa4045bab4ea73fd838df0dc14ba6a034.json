@@ -1,0 +1,83 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "category",
+        "navigation",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "88cab5f3f93ee8a66c2727716ec5e4bed9f9986ea691283638ec4697f7bf3361",
+    "identity": "e77b02eb91e224f663db0c672eb46e0001b363b923929e0d8b996778f99050ef",
+    "specifications": "5b73690f1e545bf793139dd5e7ca68d674e5a19ac38e3c99a296cb58e0b2b410",
+    "media": "2b90ff5beb9428e5b92fb886a9a0954004338f181841a665a04eeb0b36fac3ee",
+    "documents": "2abc35ca49719944e6f8f6f0ec1004480d1f7d0dd2dbcff5eff015109ae19280"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": false,
+    "media": false,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "next_js",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "__NEXT_DATA__|/_next/static/",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "engine": "adobe_experience_manager",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": true,
+  "content_sha256": "05d162e5d7b9d9c793b6dfd004f3052aa4045bab4ea73fd838df0dc14ba6a034",
+  "fixture_version": 2
+}

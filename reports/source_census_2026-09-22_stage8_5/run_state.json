@@ -1,0 +1,52 @@
+{
+  "attempts": [
+    {
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_binary",
+      "reason": "binary-safe fetch of the manual PDF to extract real text/metadata -- Stage 8.4 only confirmed magic bytes via the lossy text-decoding probe.probe() path and did not persist bytes; this stage needs the actual content, not just reachability",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "redirect_chain": [
+        "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+        "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf"
+      ],
+      "checked_at": null,
+      "bytes_read": 1500000,
+      "content_type": "application/pdf",
+      "truncated": true
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "kind": "product",
+      "reason": "re-fetch of the SAME already-confirmed product page (Stage 8.4) with a broader specification text search -- Stage 8.4 only regex-matched a narrow keyword set (volume/power/grill/convection) and may have missed other characteristic rows; this closes the specific unclosed field \"which characteristics remain unknown\"",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "challenge_suspected",
+      "final_url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/"
+      ],
+      "checked_at": "2026-09-22T19:41:39+00:00"
+    },
+    {
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "kind": "document_binary",
+      "reason": "verify the card-selected official image actually resolves and is real image content (not a broken/placeholder link) -- closes the specific \"is the image fit for the card\" check",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "redirect_chain": [
+        "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$"
+      ],
+      "checked_at": null,
+      "bytes_read": 491012,
+      "content_type": "image/png",
+      "truncated": false
+    }
+  ],
+  "rejected_attempts": [],
+  "blocked_hosts": []
+}

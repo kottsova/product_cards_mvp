@@ -1,0 +1,40 @@
+{
+  "declared_at": "2026-09-23",
+  "declared_before_any_request": true,
+  "scope": "Microsoft/Xbox brand family only, single selected catalog row (XXU-00015, Xbox Series S Carbon 1TB). No Samsung, no PlayStation, no Asus ROG Xbox Ally.",
+  "allowed_hosts": [
+    "support.microsoft.com"
+  ],
+  "allowed_hosts_reason": "Only host with any official-verification evidence on file for this brand family (source_research.v1.json, official_status=official_verified, source_role=support). No product-page-role domain is registered; none is added mid-run.",
+  "allowed_urls_exact": [
+    "https://support.microsoft.com/en-us/all-products",
+    "https://support.microsoft.com/robots.txt",
+    "https://support.microsoft.com/sitemap.xml"
+  ],
+  "allowed_urls_reason": "These are the 3 probe_targets already recorded in source_research.v1.json for the microsoft family; none is newly invented this stage.",
+  "limits": {
+    "max_requests_total": 6,
+    "max_requests_per_host": 6,
+    "max_hosts": 1,
+    "max_response_bytes_per_request": 512000,
+    "min_interval_seconds_between_requests": 2.0,
+    "timeout_seconds_per_request": 10.0,
+    "max_sitemap_child_documents_to_open": 2,
+    "max_candidate_links_followed_from_support_page": 3
+  },
+  "mechanism": "product_tool.census.probe.AccessProbe with ProbePolicy defaults (max_bytes=512000, min_interval=2s, timeout=10s), allowed_hosts restricted to the single host above. Redirect chains are validated per-hop against allowed_hosts; a redirect off-host aborts that request with access_status=REGIONAL_REDIRECT rather than following it.",
+  "stop_conditions": [
+    "max_requests_total reached",
+    "any 403 / 429 / confirmed challenge on support.microsoft.com (stops that host for the remainder of this run, per project AccessProbe behavior)",
+    "a redirect or discovered link points off the single allowed host (recorded as out-of-scope, not followed, does not itself burn a redirect-following request)",
+    "no further in-scope (same-host) candidate links remain after the support page and sitemap are read"
+  ],
+  "explicit_non_goals": [
+    "No Chromium / browser automation",
+    "No search engines",
+    "No dealer/reseller sources",
+    "No brute-forcing of model codes or SKU patterns",
+    "No invented endpoints or guessed URLs",
+    "No widening beyond the single selected catalog row"
+  ]
+}

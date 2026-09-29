@@ -1,0 +1,50 @@
+{
+  "declared_at": "2026-09-23",
+  "declared_before_any_request": true,
+  "scope": "Two things only: (1) verify a small number of the 9A273AA product images (official source + integrity + actual visual content), (2) check whether up to 2 additional HYPERX catalog rows, in different peripheral categories where possible, have a real confirmed Product page -- using already-known category/navigation links first, with bounded discovery only if needed. No other brand, no Kingston, no HIPER, no wide HyperX census.",
+  "allowed_hosts": ["hyperx.com"],
+  "allowed_hosts_reason": "The only host confirmed official for this brand family (Stage 8/8.1/11). Product images are served from hyperx.com/cdn/shop/files/... on the same host, not a separate CDN subdomain.",
+  "seed_urls_already_known_not_guessed": [
+    "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+    "https://hyperx.com/collections/gaming-keyboards",
+    "https://hyperx.com/collections/gaming-mice",
+    "https://hyperx.com/collections/gaming-headsets",
+    "https://hyperx.com/collections/microphones",
+    "https://hyperx.com/collections/all"
+  ],
+  "seed_urls_note": "All 5 collection URLs and the product URL were already found as first-party navigation links on the Stage 8.1/Stage 11-confirmed QuadCast 2S product page fixture -- none is guessed. Category pages are used only to look for real product links; individual product page URLs are only fetched once actually found in a category page's own links, never assembled from a guessed slug pattern.",
+  "image_verification_targets": [
+    "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+    "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289"
+  ],
+  "image_verification_note": "2 of the 9 already-known image URLs from Stage 11 (the main photo and one angle photo) -- a small number, not all 9 -- fetched with a byte-preserving, completeness-classified mechanism (reused from Stage 10.1/10.3's adaptation of Stage 8.6) and visually inspected.",
+  "limits": {
+    "max_requests_total": 12,
+    "max_requests_per_host": 12,
+    "max_hosts": 1,
+    "max_response_bytes_per_request_pages": 900000,
+    "max_response_bytes_per_request_images": 3000000,
+    "min_interval_seconds_between_requests": 2.0,
+    "timeout_seconds_per_request": 10.0,
+    "max_category_pages_to_check": 3,
+    "max_candidate_product_pages_to_verify": 2
+  },
+  "robots_txt_policy": "hyperx.com/robots.txt fetched first (fresh this stage, not assumed from Stage 11), honoring any Disallow rules under User-agent: *.",
+  "stop_conditions": [
+    "max_requests_total or max_category_pages_to_check or max_candidate_product_pages_to_verify reached",
+    "HTTP 403/429/challenge_confirmed on hyperx.com -> stop the host, record the gap (challenge_suspected alone does not stop, per Stage 8.1/11 precedent)",
+    "redirect off hyperx.com -> aborted, not followed",
+    "a category page yields no real product-page link matching the candidate model name -> record as not found, do not substitute a similar model",
+    "robots.txt disallows a candidate path -> skip, record why"
+  ],
+  "explicit_non_goals": [
+    "No Chromium / browser automation",
+    "No search engines",
+    "No dealer/reseller sources",
+    "No brute-forcing of URLs, model codes, or slugs",
+    "No invented endpoints",
+    "No wide HyperX census beyond the up-to-2 additional rows this stage picks",
+    "No Kingston, HIPER, or any other brand network activity",
+    "No renewed manual/document search for 9A273AA this stage"
+  ]
+}

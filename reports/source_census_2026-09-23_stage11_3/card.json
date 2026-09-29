@@ -1,0 +1,54 @@
+{
+  "stage": "11.3",
+  "scope": "HyperX QuadCast 2S (9A273AA) only: DNS page + linked PDF checked as a manual candidate; DNS dealer-fallback rule formalized and tested on this one row.",
+  "dns_page_check": {
+    "url": "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/",
+    "http_status": 401,
+    "access_status": "unavailable",
+    "result": "BLOCKED (HTTP 401) -- page content could not be read this stage. No workaround (header spoofing, browser automation) was attempted, per policy.",
+    "identity_confirmed_via_page": false,
+    "note": "Because the page itself did not load, model/SKU linkage could not be checked from the page. The PDF was still fetched directly (different host, user-provided URL) and checked independently on its own content."
+  },
+  "pdf_fetch_and_integrity": {
+    "url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+    "completeness": "complete",
+    "reason": "assembled_size_matches_declared_total",
+    "declared_total_bytes": 4978169,
+    "bytes_assembled": 4978169,
+    "byte_integrity_confirmed": true
+  },
+  "pdf_content_verdict": {
+    "page_count": 241,
+    "document_no_found_throughout": "480HX-MICQC.A01 (single value, consistent across all 241 pages)",
+    "part_number_found_throughout": "HX-MICQC / HX-MICQC-BK (the ORIGINAL HyperX QuadCast, first generation)",
+    "model_name_QuadCast_2S_mentions_in_full_text": 0,
+    "manufacturer_code_9A273AA_mentions_in_full_text": 0,
+    "specs_found_in_document_vs_official_9A273AA_page": {
+      "document_specs": "Sample/bit rate: 48kHz/16-bit; Sensitivity: -36dB (1V/Pa at 1kHz); Weight: mic 254g + shock mount/stand 364g, total 710g with cable",
+      "official_9A273AA_specs_stage11": "32-bit/192kHz sampling (per official page marketing copy); Sensitivity: '-8 dBFS±4dB; Weight: mic 0.76lb + shock mount/stand 0.31lb + stand 0.59lb, total 1.84lb with cable",
+      "conclusion": "These are two different products by their own official specification sheets -- not a rounding or unit-conversion discrepancy."
+    },
+    "languages_present": [
+      "en",
+      "ru"
+    ],
+    "languages_present_caveat": "Detected on the (wrong-model) document actually assembled -- reported for completeness, not attributed to QuadCast 2S.",
+    "is_manufacturer_produced": true,
+    "manufacturer_produced_evidence": "Cover page and page headers consistently read \"HyperX QuadCast(TM) Microphone\" / \"Document No. 480HX-MICQC.A01\" -- HyperX's own document-numbering convention, not a dealer-authored text.",
+    "verdict": "CONTENT-VERIFIED MISMATCH. This PDF is a genuine HyperX manufacturer document (multi-language installation guide, ~15 languages x 16 pages), but it is the manual for the ORIGINAL HyperX QuadCast microphone (part number HX-MICQC-BK), NOT for QuadCast 2S (9A273AA). Zero mentions of \"QuadCast 2 S,\" \"2S,\" or \"9A273AA\" anywhere across all 241 pages; the specification values inside the document do not match the official 9A273AA page's own specs. DNS's filename (\"hyperx-quadcast-2-s_instrukcia\") does not match the document's actual content. Per instructions, a similar-sounding filename/title is not accepted as identity confirmation -- this document is REJECTED as evidence for catalog row 9A273AA.",
+    "type_classification_if_it_had_matched": "Not applicable -- this document does not qualify as manufacturer_manual_dealer_hosted for 9A273AA specifically, since it is not this model's manual. It would correctly carry that type label for HX-MICQC-BK (the original QuadCast) if that row existed in the catalog and needed a manual -- that is a separate, unopened question this stage does not pursue.",
+    "declarations_certificates_note": "Not searched for and not considered, per instructions."
+  },
+  "manual_status_for_9A273AA": {
+    "status": "still_not_confirmed_online_not_declared_absent",
+    "explicit_statement": "The Quick Start Guide remains confirmed only as a physical box-content item (Stage 11). The DNS lead investigated this stage (page + PDF) has been checked and REJECTED on content grounds -- it is the wrong model's manual, not merely an unconfirmed one. No online document for QuadCast 2S / 9A273AA specifically has yet been found on any source checked (official hyperx.com pages, or this DNS page/PDF). This is not a statement that no such document exists."
+  },
+  "dns_dealer_fallback_rule": {
+    "authorized_by": "explicit user instruction, this stage",
+    "rule_text": "dns-shop.ru (www.dns-shop.ru product pages; drv.dns-shop.ru manuals/drivers) may be used as a FALLBACK source for any catalog row when official characteristics, photos, or instructions are insufficient. The official source always has priority over DNS on any field. Every DNS-sourced field must carry its own URL, its own provenance record, and its own exact model+variant verification -- a dealer product card is never imported wholesale, and identity is never confirmed by a similar title alone. On any conflict between an official value and a DNS value for the same field, the field goes to human review; the official value is kept, the DNS value is not silently substituted.",
+    "tested_this_stage_on": "9A273AA only. No other catalog row was touched. No DNS crawl beyond the two user-provided URLs (one product page, one PDF).",
+    "test_outcome": "The rule worked as designed: the DNS-linked PDF was checked on its own content (not accepted on filename similarity) and correctly rejected as a mismatch for this row. No field was imported from DNS this stage, because none passed verification.",
+    "sulpak_mechta_unchanged": "Sulpak remains scoped to its exact existing LG household-appliance allowlist (washing machines, dryers, refrigerators, vacuums, microwaves) -- untouched this stage, no network activity. Mechta remains excluded (official_status=not_allowed, enabled=false) -- untouched, not used.",
+    "production_registry_status": "This rule is recorded here as a research/policy artifact only. product_tool/config/source_catalog.v2.json (the executable production registry) was NOT modified -- dns-shop.ru is not an enabled production source. Promoting it into the executable registry is a separate, explicit, out-of-band decision, not performed automatically by this stage."
+  }
+}

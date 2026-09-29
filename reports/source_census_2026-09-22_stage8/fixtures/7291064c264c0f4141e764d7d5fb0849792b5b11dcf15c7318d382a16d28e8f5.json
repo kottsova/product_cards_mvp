@@ -1,0 +1,67 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "host_or_undeclared"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": [
+        "table:tr:th+td"
+      ]
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [
+        "a[href:pdf]"
+      ],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "a1341df0793bafe15786a2a7d564e11a4f5a51f235bef797429cb9b0e739037e",
+    "identity": "b05d43a97e49e85483f42d29e604315d6eb1da1c3aba0c1fe30c2858ee4be583",
+    "specifications": "098ab480481a6f066835f5accdcd9fbc701e58a86e48941f0fcfe49fec5b8370",
+    "media": "808d29b2eee31041d96fc9add04d06bb402b100fd2595f36eba4366165da2014",
+    "documents": "9c97792c23f5e84e2f677e6ea2f2aeb6878df48032c8f0b70cb14a710bcf2c75"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": true,
+    "media": false,
+    "documents": true
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "custom_unknown",
+      "status": "insufficient",
+      "confidence": 0.0,
+      "evidence": []
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "7291064c264c0f4141e764d7d5fb0849792b5b11dcf15c7318d382a16d28e8f5",
+  "fixture_version": 1
+}

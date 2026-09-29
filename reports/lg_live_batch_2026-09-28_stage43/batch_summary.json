@@ -1,0 +1,470 @@
+[
+  {
+    "id": 4,
+    "search_code": "P12ED.NSAR + P12ED.USAR",
+    "category": "сплит-система",
+    "job_status": "needs_review",
+    "job_message": "Источники не найдены за отведённое время. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+    "readiness_verdict": "not_ready",
+    "readiness_text": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "dealer_url_needed",
+        "url": "",
+        "evidence": "Нет проверенного дилерского URL для «LG Кондиционер сплит-система P12ED» (артикул P12ED.NSAR+P12ED.USAR). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "mismatch",
+        "url": "",
+        "evidence": "Страница артикула или базовой модели не найдена в LG sitemap. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "mismatch",
+        "url": "",
+        "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. Поиск LG (ru) нашёл «P12ED.NSAR» в результатах, но открытая страница поддержки показывает другой код: P12EP.NSJ (https://www.lg.com/ru/support/product/lg-P12EP); артикул этим источником не подтверждён. Поиск LG (ru) нашёл «P12ED.NSAR» в результатах, но открытая страница поддержки показывает другой код: P12EP1.NSJ (https://www.lg.com/ru/support/product/lg-P12EP1); артикул этим источником не подтверждён. Поиск LG (ru) нашёл «P12ED.USAR» в результатах, но открытая страница поддержки показывает другой код: P12EP.NSJ (https://www.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "https://www.sulpak.kz/g/kondicioneriy_split_sistemiy_lg_p12ednsar___p12edusar",
+        "evidence": "2026-09-26: другая страница Sulpak (S3WER.ALWPCOM) https://www.sulpak.kz/g/parovoj_shkaf_lg_styler_s3wer_alwpcom вернула HTTP 200 со страницей проверки; после этого автоматические запросы к Sulpak остановлены. Запрос к кандидату https://www.sulpak.kz/g/kondicioneriy_split_sistemiy_lg_p12ednsar___p12edusar не отправлялся. Его адрес и текст поисковой выдачи не подтверждают состав товара.",
+        "error": "policy_host_stopped: candidate page not requested"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "search_code": "S3WER.ALWPCOM",
+    "category": "Паровой шкаф",
+    "job_status": "done",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 33; подтверждено поставщиком: 10. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "dealer_url_needed",
+        "url": "",
+        "evidence": "Нет проверенного дилерского URL для «LG Паровой шкаф LG Styler S3WER» (артикул S3WER.ALWPCOM). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/laundry/styler/s3wer/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: S3WER.ALWPCOM.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "base_model",
+        "url": "https://www.lg.com/ru/laundry/lg-S3WER",
+        "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Ошибка браузера при поиске «S3WER.ALWPCOM»: browser_javascript_error.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "https://www.sulpak.kz/g/parovoj_shkaf_lg_styler_s3wer_alwpcom",
+        "evidence": "2026-09-26: эта страница Sulpak https://www.sulpak.kz/g/parovoj_shkaf_lg_styler_s3wer_alwpcom вернула HTTP 200 со страницей проверки; после этого автоматические запросы к Sulpak остановлены. Запрос к кандидату https://www.sulpak.kz/g/parovoj_shkaf_lg_styler_s3wer_alwpcom не отправлялся. Его адрес и текст поисковой выдачи не подтверждают состав товара.",
+        "error": "policy_host_stopped: candidate page not requested"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "search_code": "MS2082F",
+    "category": "Микроволновая печь",
+    "job_status": "needs_review",
+    "job_message": "Источники не найдены за отведённое время. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+    "readiness_verdict": "not_ready",
+    "readiness_text": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "dealer_url_needed",
+        "url": "",
+        "evidence": "Нет проверенного дилерского URL для «LG Микроволновая печь LG MS 2082 F» (артикул MS2082F). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "mismatch",
+        "url": "",
+        "evidence": "Страница артикула или базовой модели не найдена в LG sitemap. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "mismatch",
+        "url": "",
+        "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. Поиск LG (ru) нашёл «MS2082F» в результатах, но открытая страница поддержки показывает другой код: MS2044V.BS2QUZB (https://www.lg.com/ru/support/product/lg-MS2044V); артикул этим источником не подтверждён.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "search_code": "TW4V7EB1W",
+    "category": "Стиральная машина",
+    "job_status": "needs_review",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 5; только базовая модель LG: 0; подтверждено поставщиком: 101. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "dealer_url_needed",
+        "url": "",
+        "evidence": "Нет проверенного дилерского URL для «LG Стиральная машина 11 кг, TW4V7EB1W» (артикул TW4V7EB1W). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/laundry/washing-machines/tw4v7eb1w/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: TW4V7EB1W.ABWPCOM.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "mismatch",
+        "url": "",
+        "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. Поиск LG (ru) нашёл «TW4V7EB1W» в результатах, но открытая страница поддержки показывает другой код: TW4V9RD9E.ABWPCOM (https://www.lg.com/ru/support/product/lg-TW4V9RD9E); артикул этим источником не подтверждён. Поиск LG (ru) нашёл «TW4V7EB1W» в результатах, но открытая страница поддержки показывает другой код: TW4V3RS6W.ABWPCOM (https://www.lg.com/ru/support/product/lg-TW4V3RS6W); артикул этим источником не подтверждён. Поиск LG (ru) нашёл «TW4V7EB1W» в результатах, но открытая страница поддержки показывает другой код: TW4V",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "search_code": "GC-B459MLWM.ADSQCIS",
+    "category": "Холодильник",
+    "job_status": "needs_review",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 5; только базовая модель LG: 0; подтверждено поставщиком: 46. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "dealer_url_needed",
+        "url": "",
+        "evidence": "Нет проверенного дилерского URL для «LG Холодильник двухкамерный 374 л, No Frost, GC-B459MLWM» (артикул GC-B459MLWM.ADSQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/refrigerators/bottom-freezer/gc-b459mlwm/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: GC-B459MLWM.ADSQCIS.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/ru/refrigerators/lg-gc-b459mlwm",
+        "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: GC-B459MLWM.ADSQCIS.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "search_code": "VK89309H",
+    "category": "Пылесос",
+    "job_status": "needs_review",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 0; подтверждено поставщиком: 32. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "dealer_url_needed",
+        "url": "",
+        "evidence": "Нет проверенного дилерского URL для «LG Пылесос VK89309H» (артикул VK89309H). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/vacuum-cleaners/kompressor-vacuum-cleaners/vk89309h/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: VK89309H.AKSQCIS.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/ru/vacuum-cleaners/lg-VK89309H",
+        "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: VK89309H.AKSQCIS.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "search_code": "W4W8LVPKZHM.APBPCOM",
+    "category": "Стирально-сушильная машина",
+    "job_status": "needs_review",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 8; только базовая модель LG: 62; подтверждено поставщиком: 90. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "not_needed",
+        "url": "",
+        "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/laundry/objet-collection-washtower/w4w8lvpkzhm/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: W4W8LVPKZHM.APBPCOM.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "base_model",
+        "url": "https://www.lg.com/ru/laundry/lg-w4w8lvpkzhm",
+        "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Поиск LG (ru) подтвердил артикул «W4W8LVPKZHM.APBPCOM» на официальной странице поддержки: https://www.lg.com/ru/support/product/lg-W4W8LVPKZHM. Поиск LG (ru) нашёл «W4W8LVPKZHM.APBPCOM» в результатах, но открытая страница поддержки показывает другой код: W4W8LVPKWHM.ABWPCOM (https://www.lg.com/ru/support/product/lg-W4W8LVPKWHM); артикул этим источником не подтверждён.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "search_code": "86NANO81A6A",
+    "category": "Телевизор",
+    "job_status": "needs_review",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 0; подтверждено поставщиком: 106. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "not_needed",
+        "url": "",
+        "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/tvs-soundbars/nanocell/86nano81a6a/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: 86NANO81A6A.ADKG.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/ru/televisions/lg-86nano81a6a",
+        "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: 86NANO81A6A.ARUG.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "search_code": "RNC9.DRUSLLK",
+    "category": "Аудиосистема",
+    "job_status": "needs_review",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 0; подтверждено поставщиком: 127. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "not_needed",
+        "url": "",
+        "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/speakers/party-speakers/rnc9/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: RNC9.DRUSLLK.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/ru/audio/lg-rnc9",
+        "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: RNC9.DRUSLLK.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "search_code": "S40T",
+    "category": "Саундбар",
+    "job_status": "done",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 33. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "not_needed",
+        "url": "",
+        "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/speakers/soundbars/s40t/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: S40T.DRUSLLK.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/ru/soundbars/lg-s40t",
+        "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: S40T.DRUSLLK.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "search_code": "ON66",
+    "category": "Музыкальный центр",
+    "job_status": "needs_review",
+    "job_message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 0; подтверждено поставщиком: 101. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "readiness_verdict": "export_ready_with_gaps",
+    "readiness_text": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "not_needed",
+        "url": "",
+        "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/kz/speakers/xboom/on66/",
+        "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: ON66.DCISLLK.EEAK.KZ.C.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "full_sku",
+        "url": "https://www.lg.com/ru/audio/lg-on66",
+        "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: ON66.DRUSLLK.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "search_code": "ON77DKDRUSLLK",
+    "category": "Микросистема",
+    "job_status": "needs_review",
+    "job_message": "Найдена только базовая модель, требуется подтверждение артикула. Реальных конфликтов: 0; только базовая модель LG: 121; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing.",
+    "readiness_verdict": "not_ready",
+    "readiness_text": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing.",
+    "sources": [
+      {
+        "source_key": "dns",
+        "match_level": "not_needed",
+        "url": "",
+        "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_kz",
+        "match_level": "base_model",
+        "url": "https://www.lg.com/kz/speakers/xboom/on77dk/",
+        "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+        "error": ""
+      },
+      {
+        "source_key": "lg_ru",
+        "match_level": "base_model",
+        "url": "https://www.lg.com/ru/audio/lg-on77dk",
+        "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Поиск LG (ru) нашёл «ON77DKDRUSLLK» в результатах, но открытая страница поддержки показывает другой код: ON77DK.DLVALLK (https://www.lg.com/ru/support/product/lg-ON77DK); артикул этим источником не подтверждён. Поиск LG (ru) нашёл «ON77DKDRUSLLK» в результатах, но открытая страница поддержки показывает другой код: ON66.DCISLLK (https://www.lg.com/ru/support/product/lg-ON66); артикул этим источником не подтверждён.",
+        "error": ""
+      },
+      {
+        "source_key": "sulpak",
+        "match_level": "unknown",
+        "url": "",
+        "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+        "error": ""
+      }
+    ]
+  }
+]

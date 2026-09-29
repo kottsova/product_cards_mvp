@@ -1,0 +1,88 @@
+[
+  {
+    "category": "Телевизоры",
+    "card": "QE48S85HAEXCE",
+    "official_page": "https://www.samsung.com/kz_ru/tvs/oled-tv/48s85h-48-inch-4k-smart-tv-qe48s85haexce/",
+    "exact_page": "да: код в адресе карты сайта, заголовке и тексте; sku в JSON-LD нет",
+    "currency": "да: заголовок «(2026)»; серия s85h названа на tvs/best-2026/",
+    "specs": "структурных нет; отрывочные значения в тексте: 5",
+    "photos": {
+      "assets": 3,
+      "three_d_models": 2,
+      "photo_assets": 1
+    },
+    "instruction": "русское руководство пользователя, 330 стр., подтверждено по содержимому; модель в тексте не названа (общее для линейки), связь — ссылка на официальной странице (ModelName=QE48S85HAE)",
+    "requests": 4
+  },
+  {
+    "category": "Смартфоны",
+    "card": "Galaxy A37 (строки каталога SM-A376E…INS)",
+    "official_page": "https://www.samsung.com/kz_ru/smartphones/galaxy-a/galaxy-a37-5g-awesome-graygreen-256gb-sm-a376edggskz/",
+    "exact_page": "только базовая модель: страница KZ — SM-A376EDGGSKZ (256 ГБ, зелёный), в каталоге строки с кодом INS",
+    "currency": "да: страница есть на официальном хабе galaxy-a, серия A37 новее A36/A56/A26 из каталога (на том же хабе A17, A27, A37, A57)",
+    "specs": "JSON-LD: 1 свойство; отрывочные значения в тексте: 6; таблицы нет",
+    "photos": {
+      "assets": 1,
+      "three_d_models": 0,
+      "photo_assets": 1
+    },
+    "instruction": "ссылки на инструкцию на странице нет (поддержка Samsung отрисовывается на клиенте)",
+    "requests": 6,
+    "note": "по заявленному правилу сначала взята семейная страница Galaxy S25 Ultra (прошлое поколение, без sku и без JSON-LD Product, без ссылок на документы); вторая карточка в категории — исправление, оговорено заранее"
+  },
+  {
+    "category": "Планшеты",
+    "card": "нет подходящей новинки",
+    "official_page": "",
+    "exact_page": "нет",
+    "currency": "нет: на официальном списке планшетов A11, A11+, S10 Lite, S11 Ultra; строк каталога (Tab S10+/Ultra, SM-X826/X926) там нет",
+    "specs": "—",
+    "photos": "—",
+    "instruction": "—",
+    "requests": 2,
+    "note": "заявленное правило «серия tab s10» совпало с Galaxy Tab S10 Lite (SM-X406), а это другая модель; следующий запрос ушёл на адрес картинки из встроенного JSON хаба и вернул 404 (1 зря потраченный запрос). Вывод правильный: каталожных планшетов на текущем списке нет, категория остаётся в очереди."
+  },
+  {
+    "category": "Пылесосы",
+    "card": "VC18M21D0VG/EV",
+    "official_page": "https://www.samsung.com/kz_ru/vacuum-cleaners/canister/canister-2100v-vc18m21d0vg-ev/",
+    "exact_page": "да: карта сайта + JSON-LD sku = артикул каталога",
+    "currency": "не требуется (бытовая техника)",
+    "specs": "JSON-LD: только имя/sku/описание; отрывочные значения в тексте: 8",
+    "photos": {
+      "assets": 2,
+      "three_d_models": 0,
+      "photo_assets": 2
+    },
+    "instruction": "русская инструкция, 20 стр., подтверждена по содержимому; модель названа кодом SC18M21D0VG — так Samsung называет документ (ModelName на ссылке), а не VC18M21D0VG; казахская версия тоже есть на странице",
+    "requests": 3,
+    "note": "первый кандидат VC18M2150SG/EV в карте сайта не найден — по заявленному порядку взят следующий; из двух ссылок сначала попала казахская, русская загружена отдельным объявленным шагом 1b"
+  },
+  {
+    "category": "Стиральные машины",
+    "card": "WD10T754CBX/LD",
+    "official_page": "https://www.samsung.com/kz_ru/washers-and-dryers/washer-dryer-combo/wd7500t-front-loading-eco-bubble-quickdrive-ai-control-10-5kg-platinum-silver-wd10t754cbx-ld/",
+    "exact_page": "да: карта сайта + JSON-LD sku = артикул каталога",
+    "currency": "не требуется (бытовая техника)",
+    "specs": "JSON-LD: только имя/sku/описание; отрывочные значения в тексте: 11",
+    "photos": {
+      "assets": 2,
+      "three_d_models": 0,
+      "photo_assets": 2
+    },
+    "instruction": "единственная ссылка — файл 28 МБ с «UZ» в имени; он больше лимита 25 МБ и не проверен — инструкция не подтверждена",
+    "requests": 2
+  },
+  {
+    "category": "Микроволновые печи",
+    "card": "MS23K3614AK/BW",
+    "official_page": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+    "exact_page": "да (этап 8.4): JSON-LD sku = артикул, цвет на странице",
+    "currency": "не требуется (бытовая техника)",
+    "specs": "мощность потребления 1150 Вт, выходная 800 Вт, объём 23 л (текст); остальное — на клиенте",
+    "photos": "1 (1164×776 PNG, проверено)",
+    "instruction": "80 стр., подтверждена по содержимому (этап 8.6): RU/UK/KK/UZ, модель названа полным кодом с цветом",
+    "requests": 0,
+    "note": "прежние доказательства, новых запросов нет"
+  }
+]

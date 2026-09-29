@@ -1,0 +1,31 @@
+{
+  "attempts": [
+    {
+      "url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+      "kind": "product",
+      "reason": "re-fetch of the SAME URL already confirmed as a verified Product page in Stage 8.2 -- not new discovery. Needed because the Stage 8.2 structural census fixture deliberately records field NAMES/PATHS only (.name, .sku), never actual field VALUES, so no real product-card content (actual name text, color, specs, image URL, manual link) exists in any offline evidence for this page.",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "challenge_suspected",
+      "final_url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/"
+      ],
+      "checked_at": "2026-09-22T19:14:34+00:00"
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+      "kind": "product",
+      "reason": "second, final targeted pass on the same already-confirmed product page: the first pass captured JSON-LD (name/sku/image) but not color/spec/embedded-state evidence, which requires a full-text/DOM search performed within the same fetch (raw HTML is not persisted between requests, so this could not be done from the first pass after the fact)",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "challenge_suspected",
+      "final_url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/"
+      ],
+      "checked_at": "2026-09-22T19:15:40+00:00"
+    }
+  ],
+  "blocked_hosts": []
+}

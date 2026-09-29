@@ -1,0 +1,5546 @@
+{
+  "schema_version": 1,
+  "candidates": [
+    {
+      "candidate_id": "asus_global_candidate",
+      "brands": [
+        "Asus",
+        "ASUS"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.asus.com/us/store/",
+      "page_hosts": [
+        "asus.com"
+      ],
+      "support_hosts": [
+        "asus.com"
+      ],
+      "asset_document_hosts": [
+        "asus.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "probable",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:31:29+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.asus.com/us/store/",
+          "observation": "ASUS-branded product catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.asus.com/us/store/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.asus.com/supportonly/search-result/",
+          "capability": "internal_search",
+          "sample_type": "internal_search"
+        },
+        {
+          "url": "https://www.asus.com/support/",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.asus.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.asus.com/us/store/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.asus.com/us/store/"
+          ],
+          "final_url": "https://www.asus.com/us/store/",
+          "content_type": "text/html;charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [
+            "application_json"
+          ],
+          "discovery_evidence": [
+            {
+              "type": "search_path",
+              "url": "https://www.asus.com/us/searchresult?searchType=products&amp;searchKey=PG27UCWM+%EF%BC%86+PG32UCWM&amp;page=1"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.asus.com/us/searchresult?searchType=products&amp;searchKey=PN55%EF%BC%86PN54&amp;page=1"
+            }
+          ],
+          "checked_at": "2026-09-21T22:31:23+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.asus.com/supportonly/search-result/",
+          "capability": "internal_search",
+          "sample_type": "internal_search",
+          "access_status": "unavailable",
+          "http_status": 404,
+          "redirect_chain": [
+            "https://www.asus.com/supportonly/search-result/"
+          ],
+          "final_url": "https://www.asus.com/supportonly/search-result/",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:25+00:00",
+          "error": "HTTP 404"
+        },
+        {
+          "url": "https://www.asus.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.asus.com/robots.txt"
+          ],
+          "final_url": "https://www.asus.com/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:29+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.asus.com/support/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.asus.com/support/"
+          ],
+          "final_url": "https://www.asus.com/support/",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:27+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "nuxt",
+          "layer": "site_cms",
+          "status": "probable",
+          "confidence": 0.69,
+          "sample_types": [
+            "homepage"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "__NUXT__|/_nuxt/|__nuxt",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "nuxt",
+      "confidence": 0.69
+    },
+    {
+      "candidate_id": "biryusa_ru_candidate",
+      "brands": [
+        "БИРЮСА",
+        "Бирюса"
+      ],
+      "category_groups": [
+        "major_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "RU",
+      "market_scope": "country",
+      "source_country": "RU",
+      "source_locale": "ru-RU",
+      "source_languages": [
+        "ru"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://biryusa.ru/",
+      "page_hosts": [
+        "biryusa.ru"
+      ],
+      "support_hosts": [
+        "biryusa.ru"
+      ],
+      "asset_document_hosts": [
+        "biryusa.ru"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:31:39+00:00",
+      "evidence": [
+        {
+          "type": "official_manufacturer_site",
+          "url": "https://biryusa.ru/",
+          "observation": "Manufacturer catalog and service contacts"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://biryusa.ru/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://biryusa.ru/catalog/",
+          "capability": "category_page",
+          "sample_type": "category_page"
+        },
+        {
+          "url": "https://biryusa.ru/up/import/docs/rukovodstvo-polzovatelya-wm-n.pdf",
+          "capability": "document_endpoint",
+          "sample_type": "document_endpoint",
+          "expected_models": [
+            "WM-HB610/10"
+          ]
+        },
+        {
+          "url": "https://biryusa.ru/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://biryusa.ru/catalog/",
+          "capability": "category_page",
+          "sample_type": "category_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://biryusa.ru/catalog/",
+            "https://biryusa.ru/catalog"
+          ],
+          "final_url": "https://biryusa.ru/catalog",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:34+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://biryusa.ru/up/import/docs/rukovodstvo-polzovatelya-wm-n.pdf",
+          "capability": "document_endpoint",
+          "sample_type": "document_endpoint",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://biryusa.ru/up/import/docs/rukovodstvo-polzovatelya-wm-n.pdf"
+          ],
+          "final_url": "https://biryusa.ru/up/import/docs/rukovodstvo-polzovatelya-wm-n.pdf",
+          "content_type": "application/pdf",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:38+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://biryusa.ru/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://biryusa.ru/"
+          ],
+          "final_url": "https://biryusa.ru/",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:32+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://biryusa.ru/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://biryusa.ru/robots.txt"
+          ],
+          "final_url": "https://biryusa.ru/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:39+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "custom_unknown",
+          "layer": "unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "sample_types": [
+            "category_page",
+            "document_endpoint",
+            "homepage",
+            "robots_txt"
+          ],
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "msi_global_candidate",
+      "brands": [
+        "MSI"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.msi.com/",
+      "page_hosts": [
+        "msi.com"
+      ],
+      "support_hosts": [
+        "msi.com"
+      ],
+      "asset_document_hosts": [
+        "msi.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:31:50+00:00",
+      "evidence": [
+        {
+          "type": "official_corporate_product_site",
+          "url": "https://www.msi.com/about",
+          "observation": "MSI corporate profile and product portfolio"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.msi.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.msi.com/search/B560-A-PRO",
+          "capability": "internal_search",
+          "sample_type": "internal_search"
+        },
+        {
+          "url": "https://www.msi.com/Motherboard/B560-A-PRO",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "B560-A PRO",
+            "B560-A_PRO"
+          ]
+        },
+        {
+          "url": "https://www.msi.com/Motherboard/B560-A-PRO/Specification",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "expected_models": [
+            "B560-A PRO"
+          ]
+        },
+        {
+          "url": "https://www.msi.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.msi.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.msi.com/"
+          ],
+          "final_url": "https://www.msi.com/",
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:41+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.msi.com/search/B560-A-PRO",
+          "capability": "internal_search",
+          "sample_type": "internal_search",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.msi.com/search/B560-A-PRO"
+          ],
+          "final_url": "https://www.msi.com/search/B560-A-PRO",
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:43+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.msi.com/Motherboard/B560-A-PRO",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.msi.com/Motherboard/B560-A-PRO"
+          ],
+          "final_url": "https://www.msi.com/Motherboard/B560-A-PRO",
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:46+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.msi.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.msi.com/robots.txt"
+          ],
+          "final_url": "https://www.msi.com/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:50+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.msi.com/Motherboard/B560-A-PRO/Specification",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.msi.com/Motherboard/B560-A-PRO/Specification"
+          ],
+          "final_url": "https://www.msi.com/Motherboard/B560-A-PRO/Specification",
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:31:48+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "custom_unknown",
+          "layer": "unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "sample_types": [
+            "homepage",
+            "internal_search",
+            "product_page",
+            "robots_txt",
+            "support_page"
+          ],
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "acer_global_candidate",
+      "brands": [
+        "Acer",
+        "ACER"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.acer.com/us-en/",
+      "page_hosts": [
+        "acer.com"
+      ],
+      "support_hosts": [
+        "acer.com"
+      ],
+      "asset_document_hosts": [
+        "acer.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "captcha_or_blocked",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:32:23+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.acer.com/us-en/laptops",
+          "observation": "Acer product catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.acer.com/us-en/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.acer.com/de-de/monitors/business/cb3/pdp/UM.QB3EE.006",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "CB243Ybemipruzxv",
+            "UM.QB3EE.006"
+          ]
+        },
+        {
+          "url": "https://www.acer.com/us-en/support",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.acer.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.acer.com/us-en/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "unavailable",
+          "http_status": null,
+          "redirect_chain": [
+            "https://www.acer.com/us-en/"
+          ],
+          "final_url": "https://www.acer.com/us-en/",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:03+00:00",
+          "error": "HTTPSConnectionPool(host='www.acer.com', port=443): Read timed out. (read timeout=10.0)"
+        },
+        {
+          "url": "https://www.acer.com/de-de/monitors/business/cb3/pdp/UM.QB3EE.006",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "unavailable",
+          "http_status": null,
+          "redirect_chain": [
+            "https://www.acer.com/de-de/monitors/business/cb3/pdp/UM.QB3EE.006"
+          ],
+          "final_url": "https://www.acer.com/de-de/monitors/business/cb3/pdp/UM.QB3EE.006",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:13+00:00",
+          "error": "HTTPSConnectionPool(host='www.acer.com', port=443): Read timed out. (read timeout=10.0)"
+        },
+        {
+          "url": "https://www.acer.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "captcha_or_blocked",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.acer.com/robots.txt"
+          ],
+          "final_url": "https://www.acer.com/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "challenge_confirmed",
+          "protection_evidence": [
+            {
+              "type": "waf_cookie",
+              "names": [
+                "ak_bmsc"
+              ],
+              "strength": "strong"
+            },
+            {
+              "type": "missing_ordinary_content",
+              "visible_characters": 154,
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:23+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.acer.com/us-en/support",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "unavailable",
+          "http_status": null,
+          "redirect_chain": [
+            "https://www.acer.com/us-en/support"
+          ],
+          "final_url": "https://www.acer.com/us-en/support",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:23+00:00",
+          "error": "HTTPSConnectionPool(host='www.acer.com', port=443): Read timed out. (read timeout=10.0)"
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "custom_unknown",
+          "layer": "unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "sample_types": [
+            "homepage",
+            "product_page",
+            "robots_txt",
+            "support_page"
+          ],
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "tplink_global_candidate",
+      "brands": [
+        "TP-link",
+        "TP-Link"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.tp-link.com/",
+      "page_hosts": [
+        "tp-link.com"
+      ],
+      "support_hosts": [
+        "tp-link.com"
+      ],
+      "asset_document_hosts": [
+        "tp-link.com",
+        "static.tp-link.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:32:33+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.tp-link.com/us/home-networking/wifi-routers/",
+          "observation": "TP-Link brand ownership and product catalog"
+        },
+        {
+          "type": "product_identity_check",
+          "url": "https://www.tp-link.com/uk/home-networking/wifi-router/archer-ax53/",
+          "final_url": "https://www.tp-link.com/uk/home-networking/wifi-router/archer-ax53/",
+          "observation": {
+            "model": "Archer AX53",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "Archer AX53"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "support_identity_check",
+          "url": "https://www.tp-link.com/uk/support/download/archer-ax53/v1/",
+          "final_url": "https://www.tp-link.com/uk/support/download/archer-ax53/v1/",
+          "observation": {
+            "model": "Archer AX53",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "Archer AX53"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.tp-link.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.tp-link.com/uk/home-networking/wifi-router/archer-ax53/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "Archer AX53"
+          ]
+        },
+        {
+          "url": "https://www.tp-link.com/uk/support/download/archer-ax53/v1/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "expected_models": [
+            "Archer AX53"
+          ]
+        },
+        {
+          "url": "https://www.tp-link.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.tp-link.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.tp-link.com/",
+            "https://www.tp-link.com/en/"
+          ],
+          "final_url": "https://www.tp-link.com/en/",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://www.tp-link.com/en/search/"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.tp-link.com/en/search/"
+            }
+          ],
+          "checked_at": "2026-09-21T22:32:26+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.tp-link.com/uk/home-networking/wifi-router/archer-ax53/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.tp-link.com/uk/home-networking/wifi-router/archer-ax53/"
+          ],
+          "final_url": "https://www.tp-link.com/uk/home-networking/wifi-router/archer-ax53/",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://www.tp-link.com/uk/search/"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.tp-link.com/uk/search/"
+            }
+          ],
+          "checked_at": "2026-09-21T22:32:28+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.tp-link.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.tp-link.com/robots.txt"
+          ],
+          "final_url": "https://www.tp-link.com/robots.txt",
+          "content_type": "text/plain; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:33+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.tp-link.com/uk/support/download/archer-ax53/v1/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.tp-link.com/uk/support/download/archer-ax53/v1/"
+          ],
+          "final_url": "https://www.tp-link.com/uk/support/download/archer-ax53/v1/",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://www.tp-link.com/uk/search/"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.tp-link.com/uk/search/"
+            }
+          ],
+          "checked_at": "2026-09-21T22:32:31+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "custom_unknown",
+          "layer": "unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "sample_types": [
+            "homepage",
+            "product_page",
+            "robots_txt",
+            "support_page"
+          ],
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "hp_global_candidate",
+      "brands": [
+        "HP"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.hp.com/",
+      "page_hosts": [
+        "hp.com"
+      ],
+      "support_hosts": [
+        "support.hp.com"
+      ],
+      "asset_document_hosts": [
+        "hp.com",
+        "hpcloud.hp.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:32:44+00:00",
+      "evidence": [
+        {
+          "type": "official_product_store",
+          "url": "https://www.hp.com/us-en/shop/sct/laptops",
+          "observation": "HP Official Store product catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.hp.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://support.hp.com/us-en/products",
+          "capability": "internal_search",
+          "sample_type": "internal_search"
+        },
+        {
+          "url": "https://support.hp.com/us-en",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.hp.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.hp.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.hp.com/",
+            "https://www-redirect.ext.hp.com",
+            "https://www8.hp.com/us/en/home.html",
+            "https://www.hp.com/us-en/home.html"
+          ],
+          "final_url": "https://www.hp.com/us-en/home.html",
+          "content_type": "text/html;charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_cookie",
+              "names": [
+                "ak_bmsc",
+                "bm_sz"
+              ],
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:38+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://support.hp.com/us-en/products",
+          "capability": "internal_search",
+          "sample_type": "internal_search",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://support.hp.com/us-en/products"
+          ],
+          "final_url": "https://support.hp.com/us-en/products",
+          "content_type": "text/html",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:40+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.hp.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.hp.com/robots.txt"
+          ],
+          "final_url": "https://www.hp.com/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:44+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://support.hp.com/us-en",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://support.hp.com/us-en"
+          ],
+          "final_url": "https://support.hp.com/us-en",
+          "content_type": "text/html",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:42+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "adobe_experience_manager",
+          "layer": "site_cms",
+          "status": "confirmed",
+          "confidence": 1.0,
+          "sample_types": [
+            "homepage",
+            "internal_search",
+            "support_page"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            },
+            {
+              "sample_type": "homepage",
+              "source": "headers",
+              "signal": "x-aem|dispatcher",
+              "strength": "weak",
+              "weight": 0.35
+            },
+            {
+              "sample_type": "internal_search",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            },
+            {
+              "sample_type": "support_page",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "adobe_experience_manager",
+      "confidence": 1.0
+    },
+    {
+      "candidate_id": "honor_global_candidate",
+      "brands": [
+        "HONOR",
+        "Honor"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.honor.com/global/",
+      "page_hosts": [
+        "honor.com"
+      ],
+      "support_hosts": [
+        "honor.com"
+      ],
+      "asset_document_hosts": [
+        "honor.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:32:54+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.honor.com/global/phones/",
+          "observation": "HONOR global phone catalog"
+        },
+        {
+          "type": "product_identity_check",
+          "url": "https://www.honor.com/fr/phones/honor-200/spec/",
+          "final_url": "https://www.honor.com/fr/phones/honor-200/spec/",
+          "observation": {
+            "model": "HONOR 200",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "HONOR 200"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "support_identity_check",
+          "url": "https://www.honor.com/mx/support/phones/honor-200/",
+          "final_url": "https://www.honor.com/mx/support/phones/honor-200/",
+          "observation": {
+            "model": "HONOR 200",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "HONOR 200"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.honor.com/global/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.honor.com/fr/phones/honor-200/spec/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "HONOR 200",
+            "53010TSA"
+          ]
+        },
+        {
+          "url": "https://www.honor.com/mx/support/phones/honor-200/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "expected_models": [
+            "HONOR 200"
+          ]
+        },
+        {
+          "url": "https://www.honor.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.honor.com/global/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.honor.com/global/"
+          ],
+          "final_url": "https://www.honor.com/global/",
+          "content_type": "text/html",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:47+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.honor.com/fr/phones/honor-200/spec/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.honor.com/fr/phones/honor-200/spec/"
+          ],
+          "final_url": "https://www.honor.com/fr/phones/honor-200/spec/",
+          "content_type": "text/html",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:50+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.honor.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.honor.com/robots.txt"
+          ],
+          "final_url": "https://www.honor.com/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:54+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.honor.com/mx/support/phones/honor-200/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.honor.com/mx/support/phones/honor-200/"
+          ],
+          "final_url": "https://www.honor.com/mx/support/phones/honor-200/",
+          "content_type": "text/html",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:52+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "adobe_experience_manager",
+          "layer": "site_cms",
+          "status": "confirmed",
+          "confidence": 0.75,
+          "sample_types": [
+            "homepage",
+            "product_page",
+            "robots_txt",
+            "support_page"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            },
+            {
+              "sample_type": "product_page",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            },
+            {
+              "sample_type": "support_page",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            },
+            {
+              "sample_type": "robots_txt",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "adobe_experience_manager",
+      "confidence": 0.75
+    },
+    {
+      "candidate_id": "thermalright_global_candidate",
+      "brands": [
+        "THERMALRIGHT",
+        "Thermalright"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.thermalright.com/",
+      "page_hosts": [
+        "thermalright.com"
+      ],
+      "support_hosts": [
+        "thermalright.com"
+      ],
+      "asset_document_hosts": [
+        "thermalright.com",
+        "download.thermalright.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:33:06+00:00",
+      "evidence": [
+        {
+          "type": "official_manufacturer_site",
+          "url": "https://www.thermalright.com/",
+          "observation": "Manufacturer product categories and support"
+        },
+        {
+          "type": "product_identity_check",
+          "url": "https://www.thermalright.com/product/assassin-king-120-se/",
+          "final_url": "https://www.thermalright.com/product/assassin-king-120-se/",
+          "observation": {
+            "model": "Assassin King 120 SE",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "Assassin King 120 SE"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.thermalright.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.thermalright.com/product/assassin-king-120-se/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "Assassin King 120 SE"
+          ]
+        },
+        {
+          "url": "https://download.thermalright.com/manuals/ASSASSINKING120SE.pdf",
+          "capability": "document_endpoint",
+          "sample_type": "document_endpoint",
+          "expected_models": [
+            "ASSASSIN KING 120 SE"
+          ]
+        },
+        {
+          "url": "https://www.thermalright.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://download.thermalright.com/manuals/ASSASSINKING120SE.pdf",
+          "capability": "document_endpoint",
+          "sample_type": "document_endpoint",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://download.thermalright.com/manuals/ASSASSINKING120SE.pdf"
+          ],
+          "final_url": "https://download.thermalright.com/manuals/ASSASSINKING120SE.pdf",
+          "content_type": "application/pdf",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:03+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.thermalright.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.thermalright.com/"
+          ],
+          "final_url": "https://www.thermalright.com/",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_path",
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:32:57+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.thermalright.com/product/assassin-king-120-se/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.thermalright.com/product/assassin-king-120-se/"
+          ],
+          "final_url": "https://www.thermalright.com/product/assassin-king-120-se/",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_path",
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:01+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.thermalright.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.thermalright.com/robots.txt"
+          ],
+          "final_url": "https://www.thermalright.com/robots.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:06+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "woocommerce",
+          "layer": "commerce_search",
+          "status": "confirmed",
+          "confidence": 1.0,
+          "sample_types": [
+            "homepage",
+            "product_page",
+            "robots_txt"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "wp-content/plugins/woocommerce|wc-ajax=|woocommerce_params",
+              "strength": "strong",
+              "weight": 0.8
+            },
+            {
+              "sample_type": "homepage",
+              "source": "cookies",
+              "signal": "woocommerce_|wp_woocommerce",
+              "strength": "weak",
+              "weight": 0.4
+            },
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "/wp-content/",
+              "strength": "weak",
+              "weight": 0.25
+            },
+            {
+              "sample_type": "product_page",
+              "source": "html",
+              "signal": "wp-content/plugins/woocommerce|wc-ajax=|woocommerce_params",
+              "strength": "strong",
+              "weight": 0.8
+            },
+            {
+              "sample_type": "product_page",
+              "source": "cookies",
+              "signal": "woocommerce_|wp_woocommerce",
+              "strength": "weak",
+              "weight": 0.4
+            },
+            {
+              "sample_type": "product_page",
+              "source": "html",
+              "signal": "/wp-content/",
+              "strength": "weak",
+              "weight": 0.25
+            },
+            {
+              "sample_type": "robots_txt",
+              "source": "cookies",
+              "signal": "woocommerce_|wp_woocommerce",
+              "strength": "weak",
+              "weight": 0.4
+            },
+            {
+              "sample_type": "robots_txt",
+              "source": "html",
+              "signal": "/wp-content/",
+              "strength": "weak",
+              "weight": 0.25
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "woocommerce",
+      "confidence": 1.0
+    },
+    {
+      "candidate_id": "rombica_ru_candidate",
+      "brands": [
+        "Rombica",
+        "ROMBICA"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "RU",
+      "market_scope": "country",
+      "source_country": "RU",
+      "source_locale": "ru-RU",
+      "source_languages": [
+        "ru"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://rombica.ru/",
+      "page_hosts": [
+        "rombica.ru"
+      ],
+      "support_hosts": [
+        "rombica.ru"
+      ],
+      "asset_document_hosts": [
+        "rombica.ru"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:33:12+00:00",
+      "evidence": [
+        {
+          "type": "official_brand_site",
+          "url": "https://rombica.ru/",
+          "observation": "Rombica branded consumer-electronics site"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://rombica.ru/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://rombica.ru/product",
+          "capability": "category_page",
+          "sample_type": "category_page"
+        },
+        {
+          "url": "https://rombica.ru/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://rombica.ru/product",
+          "capability": "category_page",
+          "sample_type": "category_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://rombica.ru/product"
+          ],
+          "final_url": "https://rombica.ru/product",
+          "content_type": "text/html",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:10+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://rombica.ru/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://rombica.ru/"
+          ],
+          "final_url": "https://rombica.ru/",
+          "content_type": "text/html",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:08+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://rombica.ru/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://rombica.ru/robots.txt"
+          ],
+          "final_url": "https://rombica.ru/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:12+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "custom_unknown",
+          "layer": "unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "sample_types": [
+            "category_page",
+            "homepage",
+            "robots_txt"
+          ],
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "silicon_power_global_candidate",
+      "brands": [
+        "Silicon Power"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.silicon-power.com/",
+      "page_hosts": [
+        "silicon-power.com"
+      ],
+      "support_hosts": [
+        "silicon-power.com"
+      ],
+      "asset_document_hosts": [
+        "silicon-power.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:33:26+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.silicon-power.com/web/E-Catalogue",
+          "observation": "Silicon Power corporate product catalogue"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.silicon-power.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.silicon-power.com/web/E-Catalogue",
+          "capability": "category_page",
+          "sample_type": "category_page"
+        },
+        {
+          "url": "https://www.silicon-power.com/web/search",
+          "capability": "internal_search",
+          "sample_type": "internal_search"
+        },
+        {
+          "url": "https://www.silicon-power.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.silicon-power.com/web/E-Catalogue",
+          "capability": "category_page",
+          "sample_type": "category_page",
+          "access_status": "unavailable",
+          "http_status": 404,
+          "redirect_chain": [
+            "https://www.silicon-power.com/web/E-Catalogue",
+            "https://www.silicon-power.com/web/E-Catalogue/"
+          ],
+          "final_url": "https://www.silicon-power.com/web/E-Catalogue/",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:19+00:00",
+          "error": "HTTP 404"
+        },
+        {
+          "url": "https://www.silicon-power.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.silicon-power.com/"
+          ],
+          "final_url": "https://www.silicon-power.com/",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:16+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.silicon-power.com/web/search",
+          "capability": "internal_search",
+          "sample_type": "internal_search",
+          "access_status": "unavailable",
+          "http_status": 404,
+          "redirect_chain": [
+            "https://www.silicon-power.com/web/search",
+            "https://www.silicon-power.com/web/search/"
+          ],
+          "final_url": "https://www.silicon-power.com/web/search/",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:22+00:00",
+          "error": "HTTP 404"
+        },
+        {
+          "url": "https://www.silicon-power.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "unavailable",
+          "http_status": 404,
+          "redirect_chain": [
+            "https://www.silicon-power.com/robots.txt",
+            "https://www.silicon-power.com/robots.txt/"
+          ],
+          "final_url": "https://www.silicon-power.com/robots.txt/",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:26+00:00",
+          "error": "HTTP 404"
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "custom_unknown",
+          "layer": "unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "sample_types": [
+            "category_page",
+            "homepage",
+            "internal_search",
+            "robots_txt"
+          ],
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "karcher_global_candidate",
+      "brands": [
+        "Karcher",
+        "Kärcher"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-GB",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.kaercher.com/gb/en/",
+      "page_hosts": [
+        "kaercher.com"
+      ],
+      "support_hosts": [
+        "kaercher.com"
+      ],
+      "asset_document_hosts": [
+        "kaercher.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:33:35+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.kaercher.com/gb/en/",
+          "observation": "Kärcher products and product registration"
+        },
+        {
+          "type": "product_identity_check",
+          "url": "https://www.kaercher.com/int/home-garden/floor-cleaner/fc-7-cordless-10557010.html",
+          "final_url": "https://www.kaercher.com/int/home-garden/floor-cleaner/fc-7-cordless-10557010.html",
+          "observation": {
+            "model": "1.055-701.0",
+            "sku": "1.055-701.0",
+            "mpn": "1.055-701.0",
+            "product_name": "FC 7 Cordless",
+            "variant": "1.055-701.0",
+            "regional_product_code": "",
+            "confidence": 0.95,
+            "evidence": [
+              {
+                "type": "json_ld_product",
+                "fields": [
+                  "mpn",
+                  "name",
+                  "sku"
+                ]
+              },
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "1.055-701.0",
+                  "10557010",
+                  "FC 7"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.kaercher.com/gb/en/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.kaercher.com/int/home-garden/floor-cleaner/fc-7-cordless-10557010.html",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "1.055-701.0",
+            "10557010",
+            "FC 7"
+          ]
+        },
+        {
+          "url": "https://www.kaercher.com/int/services/support.html",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.kaercher.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.kaercher.com/gb/en/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.kaercher.com/gb/en/"
+          ],
+          "final_url": "https://www.kaercher.com/gb/en/",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:29+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.kaercher.com/int/home-garden/floor-cleaner/fc-7-cordless-10557010.html",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.kaercher.com/int/home-garden/floor-cleaner/fc-7-cordless-10557010.html"
+          ],
+          "final_url": "https://www.kaercher.com/int/home-garden/floor-cleaner/fc-7-cordless-10557010.html",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 1,
+          "json_ld_field_coverage": {
+            "name": true,
+            "sku": true,
+            "mpn": true,
+            "model": false,
+            "gtin": false,
+            "brand": true,
+            "image": true,
+            "description": true,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [
+            "application_json"
+          ],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://www.kaercher.com/int/search-result.html"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.kaercher.com/int/search-result.html"
+            }
+          ],
+          "checked_at": "2026-09-21T22:33:31+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.kaercher.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.kaercher.com/robots.txt"
+          ],
+          "final_url": "https://www.kaercher.com/robots.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:35+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.kaercher.com/int/services/support.html",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "unavailable",
+          "http_status": 404,
+          "redirect_chain": [
+            "https://www.kaercher.com/int/services/support.html"
+          ],
+          "final_url": "https://www.kaercher.com/int/services/support.html",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:33+00:00",
+          "error": "HTTP 404"
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "generic_json_ld_product",
+          "layer": "product_data",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "sample_types": [
+            "product_page"
+          ],
+          "evidence": [
+            {
+              "sample_type": "product_page",
+              "source": "json_ld",
+              "signal": "@type=Product",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        },
+        {
+          "engine": "next_js",
+          "layer": "site_cms",
+          "status": "probable",
+          "confidence": 0.69,
+          "sample_types": [
+            "homepage"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "__NEXT_DATA__|/_next/static/",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "generic_json_ld_product",
+      "confidence": 0.8
+    },
+    {
+      "candidate_id": "infinix_global_candidate",
+      "brands": [
+        "Infinix",
+        "INFINIX"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.infinixmobility.com/",
+      "page_hosts": [
+        "infinixmobility.com"
+      ],
+      "support_hosts": [
+        "infinixmobility.com"
+      ],
+      "asset_document_hosts": [
+        "infinixmobility.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:33:45+00:00",
+      "evidence": [
+        {
+          "type": "official_global_site",
+          "url": "https://www.infinixmobility.com/",
+          "observation": "Infinix global brand site and legal pages"
+        },
+        {
+          "type": "product_identity_check",
+          "url": "https://www.infinixmobility.com/HOT-50",
+          "final_url": "https://www.infinixmobility.com/HOT-50",
+          "observation": {
+            "model": "HOT 50",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "HOT 50"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.infinixmobility.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.infinixmobility.com/HOT-50",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "HOT 50"
+          ]
+        },
+        {
+          "url": "https://www.infinixmobility.com/care/support",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.infinixmobility.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.infinixmobility.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.infinixmobility.com/"
+          ],
+          "final_url": "https://www.infinixmobility.com/",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:38+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.infinixmobility.com/HOT-50",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.infinixmobility.com/HOT-50"
+          ],
+          "final_url": "https://www.infinixmobility.com/HOT-50",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:40+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.infinixmobility.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.infinixmobility.com/robots.txt"
+          ],
+          "final_url": "https://www.infinixmobility.com/robots.txt",
+          "content_type": "text/plain; charset=UTF-8",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:45+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.infinixmobility.com/care/support",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "unavailable",
+          "http_status": 404,
+          "redirect_chain": [
+            "https://www.infinixmobility.com/care/support"
+          ],
+          "final_url": "https://www.infinixmobility.com/care/support",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:43+00:00",
+          "error": "HTTP 404"
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "nuxt",
+          "layer": "site_cms",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "sample_types": [
+            "homepage",
+            "product_page"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "__NUXT__|/_nuxt/|__nuxt",
+              "strength": "strong",
+              "weight": 0.8
+            },
+            {
+              "sample_type": "product_page",
+              "source": "html",
+              "signal": "__NUXT__|/_nuxt/|__nuxt",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "nuxt",
+      "confidence": 0.8
+    },
+    {
+      "candidate_id": "jbl_global_candidate",
+      "brands": [
+        "JBL"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.jbl.com/",
+      "page_hosts": [
+        "jbl.com"
+      ],
+      "support_hosts": [
+        "support.jbl.com"
+      ],
+      "asset_document_hosts": [
+        "jbl.com",
+        "support.jbl.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "probable",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:33:54+00:00",
+      "evidence": [
+        {
+          "type": "official_product_store",
+          "url": "https://www.jbl.com/home",
+          "observation": "Official JBL store and product catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.jbl.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://de.jbl.com/JBLCHARGE5BLK.html",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "JBLCHARGE5BLK",
+            "CHARGE 5"
+          ]
+        },
+        {
+          "url": "https://support.jbl.com/",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.jbl.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.jbl.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.jbl.com/",
+            "https://www.jbl.com/country-selector?geoip=false"
+          ],
+          "final_url": "https://www.jbl.com/country-selector?geoip=false",
+          "content_type": "",
+          "protection_status": "challenge_confirmed",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            },
+            {
+              "type": "waf_cookie",
+              "names": [
+                "datadome"
+              ],
+              "strength": "strong"
+            },
+            {
+              "type": "missing_ordinary_content",
+              "visible_characters": 0,
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:48+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://de.jbl.com/JBLCHARGE5BLK.html",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://de.jbl.com/JBLCHARGE5BLK.html"
+          ],
+          "final_url": "https://de.jbl.com/JBLCHARGE5BLK.html",
+          "content_type": "",
+          "protection_status": "challenge_confirmed",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            },
+            {
+              "type": "waf_cookie",
+              "names": [
+                "datadome"
+              ],
+              "strength": "strong"
+            },
+            {
+              "type": "missing_ordinary_content",
+              "visible_characters": 0,
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:50+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.jbl.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.jbl.com/robots.txt"
+          ],
+          "final_url": "https://www.jbl.com/robots.txt",
+          "content_type": "text/plain;charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:54+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://support.jbl.com/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://support.jbl.com/"
+          ],
+          "final_url": "https://support.jbl.com/",
+          "content_type": "",
+          "protection_status": "challenge_confirmed",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            },
+            {
+              "type": "waf_cookie",
+              "names": [
+                "datadome"
+              ],
+              "strength": "strong"
+            },
+            {
+              "type": "missing_ordinary_content",
+              "visible_characters": 0,
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:33:52+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "salesforce_commerce_cloud",
+          "layer": "commerce_search",
+          "status": "probable",
+          "confidence": 0.69,
+          "sample_types": [
+            "robots_txt"
+          ],
+          "evidence": [
+            {
+              "sample_type": "robots_txt",
+              "source": "html",
+              "signal": "/on/demandware\\.store/|dwcont=|Demandware",
+              "strength": "strong",
+              "weight": 0.85
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "salesforce_commerce_cloud",
+      "confidence": 0.69
+    },
+    {
+      "candidate_id": "bequiet_global_candidate",
+      "brands": [
+        "be quiet!",
+        "Be Quiet!"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.bequiet.com/en",
+      "page_hosts": [
+        "bequiet.com"
+      ],
+      "support_hosts": [
+        "bequiet.com"
+      ],
+      "asset_document_hosts": [
+        "bequiet.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:34:04+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.bequiet.com/en",
+          "observation": "be quiet! product catalog and comparison"
+        },
+        {
+          "type": "product_identity_check",
+          "url": "https://www.bequiet.com/en/casefans/618",
+          "final_url": "https://www.bequiet.com/en/casefans/618",
+          "observation": {
+            "model": "BL038",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "BL038"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.bequiet.com/en",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.bequiet.com/en/casefans/618",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "BL038"
+          ]
+        },
+        {
+          "url": "https://www.bequiet.com/en/contact/service",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.bequiet.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.bequiet.com/en",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bequiet.com/en"
+          ],
+          "final_url": "https://www.bequiet.com/en",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_path",
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://www.bequiet.com/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.bequiet.com/wheretobuy/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.bequiet.com/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.bequiet.com/en/wheretobuy/search"
+            }
+          ],
+          "checked_at": "2026-09-21T22:33:57+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bequiet.com/en/casefans/618",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bequiet.com/en/casefans/618"
+          ],
+          "final_url": "https://www.bequiet.com/en/casefans/618",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_path",
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://www.bequiet.com/en/casefans/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.bequiet.com/en/casefans/wheretobuy/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.bequiet.com/en/casefans/search"
+            }
+          ],
+          "checked_at": "2026-09-21T22:33:59+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bequiet.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bequiet.com/robots.txt"
+          ],
+          "final_url": "https://www.bequiet.com/robots.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:34:04+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bequiet.com/en/contact/service",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bequiet.com/en/contact/service"
+          ],
+          "final_url": "https://www.bequiet.com/en/contact/service",
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_path",
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://www.bequiet.com/en/contact/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.bequiet.com/en/contact/wheretobuy/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://www.bequiet.com/en/contact/search"
+            }
+          ],
+          "checked_at": "2026-09-21T22:34:01+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "custom_unknown",
+          "layer": "unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "sample_types": [
+            "homepage",
+            "product_page",
+            "robots_txt",
+            "support_page"
+          ],
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "patriot_memory_global_candidate",
+      "brands": [
+        "Patriot Memory",
+        "Patriot"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.patriotmemory.com/",
+      "page_hosts": [
+        "patriotmemory.com"
+      ],
+      "support_hosts": [
+        "patriotmemory.com"
+      ],
+      "asset_document_hosts": [
+        "patriotmemory.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:34:13+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.patriotmemory.com/archived-products",
+          "observation": "Patriot product information and downloads"
+        },
+        {
+          "type": "product_identity_check",
+          "url": "https://www.patriotmemory.com/products/p210-sata-iii-2-5-ssd",
+          "final_url": "https://www.patriotmemory.com/products/p210-sata-iii-2-5-ssd",
+          "observation": {
+            "model": "P210S128G25",
+            "sku": "",
+            "mpn": "",
+            "product_name": "",
+            "variant": "",
+            "regional_product_code": "",
+            "confidence": 0.5,
+            "evidence": [
+              {
+                "type": "expected_model_match",
+                "models": [
+                  "P210S128G25"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.patriotmemory.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.patriotmemory.com/products/p210-sata-iii-2-5-ssd",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "P210S128G25"
+          ]
+        },
+        {
+          "url": "https://www.patriotmemory.com/pages/support",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.patriotmemory.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.patriotmemory.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.patriotmemory.com/"
+          ],
+          "final_url": "https://www.patriotmemory.com/",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:34:06+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.patriotmemory.com/products/p210-sata-iii-2-5-ssd",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.patriotmemory.com/products/p210-sata-iii-2-5-ssd"
+          ],
+          "final_url": "https://www.patriotmemory.com/products/p210-sata-iii-2-5-ssd",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:34:09+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.patriotmemory.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.patriotmemory.com/robots.txt"
+          ],
+          "final_url": "https://www.patriotmemory.com/robots.txt",
+          "content_type": "text/plain",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:34:13+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.patriotmemory.com/pages/support",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "unavailable",
+          "http_status": 404,
+          "redirect_chain": [
+            "https://www.patriotmemory.com/pages/support"
+          ],
+          "final_url": "https://www.patriotmemory.com/pages/support",
+          "content_type": "",
+          "protection_status": "inconclusive",
+          "protection_evidence": [],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:34:11+00:00",
+          "error": "HTTP 404"
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "next_js",
+          "layer": "site_cms",
+          "status": "confirmed",
+          "confidence": 1.0,
+          "sample_types": [
+            "homepage",
+            "product_page"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "__NEXT_DATA__|/_next/static/",
+              "strength": "strong",
+              "weight": 0.8
+            },
+            {
+              "sample_type": "homepage",
+              "source": "headers",
+              "signal": "x-powered-by\\s*[:=]?\\s*next\\.js",
+              "strength": "strong",
+              "weight": 0.8
+            },
+            {
+              "sample_type": "product_page",
+              "source": "html",
+              "signal": "__NEXT_DATA__|/_next/static/",
+              "strength": "strong",
+              "weight": 0.8
+            },
+            {
+              "sample_type": "product_page",
+              "source": "headers",
+              "signal": "x-powered-by\\s*[:=]?\\s*next\\.js",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "next_js",
+      "confidence": 1.0
+    },
+    {
+      "candidate_id": "logitech_global_candidate",
+      "brands": [
+        "LOGITECH",
+        "Logitech"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.logitech.com/",
+      "page_hosts": [
+        "logitech.com"
+      ],
+      "support_hosts": [
+        "logitech.com",
+        "logi.com"
+      ],
+      "asset_document_hosts": [
+        "logitech.com",
+        "logi.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T22:34:23+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.logitech.com/en-us/shop/play",
+          "observation": "Logitech product catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [
+        {
+          "url": "https://www.logitech.com/",
+          "capability": "homepage",
+          "sample_type": "homepage"
+        },
+        {
+          "url": "https://www.logitech.com/en-ae/products/mice/m235-wireless-mouse.910-002201.html",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "expected_models": [
+            "910-002201",
+            "M235"
+          ]
+        },
+        {
+          "url": "https://support.logi.com/",
+          "capability": "support_page",
+          "sample_type": "support_page"
+        },
+        {
+          "url": "https://www.logitech.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt"
+        }
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.logitech.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.logitech.com/",
+            "https://www.logitech.com/en-us/change-location"
+          ],
+          "final_url": "https://www.logitech.com/en-us/change-location",
+          "content_type": "text/html",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_path",
+              "url": "https://www.logitech.com/_app/immutable/assets/SearchBar.BJaPuJf4.css"
+            }
+          ],
+          "checked_at": "2026-09-21T22:34:16+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.logitech.com/en-ae/products/mice/m235-wireless-mouse.910-002201.html",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.logitech.com/en-ae/products/mice/m235-wireless-mouse.910-002201.html"
+          ],
+          "final_url": "https://www.logitech.com/en-ae/products/mice/m235-wireless-mouse.910-002201.html",
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:34:18+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.logitech.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.logitech.com/robots.txt"
+          ],
+          "final_url": "https://www.logitech.com/robots.txt",
+          "content_type": "text/plain; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [],
+          "checked_at": "2026-09-21T22:34:23+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://support.logi.com/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://support.logi.com/",
+            "https://support.logi.com/hc",
+            "https://support.logi.com/hc/en-001"
+          ],
+          "final_url": "https://support.logi.com/hc/en-001",
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "json_ld_product_count": 0,
+          "json_ld_field_coverage": {
+            "name": false,
+            "sku": false,
+            "mpn": false,
+            "model": false,
+            "gtin": false,
+            "brand": false,
+            "image": false,
+            "description": false,
+            "characteristics": false,
+            "documents": false,
+            "variant_data": false
+          },
+          "embedded_state_kinds": [],
+          "discovery_evidence": [
+            {
+              "type": "search_form",
+              "action": "https://support.logi.com/hc/en-001/search"
+            },
+            {
+              "type": "search_path",
+              "url": "https://cdn.yellowmessenger.com/plugin/search/latest/dist/assets/index.css"
+            },
+            {
+              "type": "search_path",
+              "url": "https://support.logi.com/hc/en-001/search"
+            }
+          ],
+          "checked_at": "2026-09-21T22:34:21+00:00",
+          "error": ""
+        }
+      ],
+      "fingerprint_layers": [
+        {
+          "engine": "adobe_experience_manager",
+          "layer": "site_cms",
+          "status": "confirmed",
+          "confidence": 1.0,
+          "sample_types": [
+            "homepage",
+            "robots_txt"
+          ],
+          "evidence": [
+            {
+              "sample_type": "homepage",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            },
+            {
+              "sample_type": "robots_txt",
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            },
+            {
+              "sample_type": "robots_txt",
+              "source": "headers",
+              "signal": "x-aem|dispatcher",
+              "strength": "weak",
+              "weight": 0.35
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "adobe_experience_manager",
+      "confidence": 1.0
+    },
+    {
+      "candidate_id": "formula_v_global_candidate",
+      "brands": [
+        "Formula V"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.formulav-line.com/",
+      "page_hosts": [
+        "formulav-line.com"
+      ],
+      "support_hosts": [
+        "formulav-line.com"
+      ],
+      "asset_document_hosts": [
+        "formulav-line.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_manufacturer_site",
+          "url": "https://www.formulav-line.com/product-news/",
+          "observation": "Formula V Technology product categories, support and headquarters"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "pozis_ru_candidate",
+      "brands": [
+        "Pozis",
+        "POZIS"
+      ],
+      "category_groups": [
+        "major_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "RU",
+      "market_scope": "country",
+      "source_country": "RU",
+      "source_locale": "ru-RU",
+      "source_languages": [
+        "ru"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://wwwpozis.ru/",
+      "page_hosts": [
+        "wwwpozis.ru"
+      ],
+      "support_hosts": [
+        "wwwpozis.ru"
+      ],
+      "asset_document_hosts": [
+        "wwwpozis.ru"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_manufacturer_site",
+          "url": "https://wwwpozis.ru/",
+          "observation": "POZIS manufacturer catalog and company identity"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "philips_global_candidate",
+      "brands": [
+        "Philips",
+        "PHILIPS"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.philips.com/global",
+      "page_hosts": [
+        "philips.com"
+      ],
+      "support_hosts": [
+        "philips.com"
+      ],
+      "asset_document_hosts": [
+        "philips.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_global_site",
+          "url": "https://www.philips.com/global",
+          "observation": "Philips corporate global product and country selector"
+        }
+      ],
+      "next_operation": "map_independent_product_sites",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "amd_global_candidate",
+      "brands": [
+        "AMD"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.amd.com/en/products.html",
+      "page_hosts": [
+        "amd.com"
+      ],
+      "support_hosts": [
+        "amd.com"
+      ],
+      "asset_document_hosts": [
+        "amd.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.amd.com/en/products.html",
+          "observation": "AMD processors, graphics and accelerator product catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "deepcool_global_candidate",
+      "brands": [
+        "Deepcool",
+        "DeepCool"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.deepcool.com/",
+      "page_hosts": [
+        "deepcool.com"
+      ],
+      "support_hosts": [
+        "deepcool.com"
+      ],
+      "asset_document_hosts": [
+        "deepcool.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.deepcool.com/products/",
+          "observation": "DeepCool product and support navigation"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "lianli_global_candidate",
+      "brands": [
+        "LIAN-LI",
+        "Lian Li",
+        "LIAN LI"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://lian-li.com/product/",
+      "page_hosts": [
+        "lian-li.com"
+      ],
+      "support_hosts": [
+        "lian-li.com"
+      ],
+      "asset_document_hosts": [
+        "lian-li.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://lian-li.com/product/",
+          "observation": "LIAN LI manufacturer product catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "electrolux_uk_candidate",
+      "brands": [
+        "Electrolux",
+        "ELECTROLUX"
+      ],
+      "category_groups": [
+        "major_home_appliances",
+        "small_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "GB",
+      "market_scope": "country",
+      "source_country": "GB",
+      "source_locale": "en-GB",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.electrolux.co.uk/",
+      "page_hosts": [
+        "electrolux.co.uk"
+      ],
+      "support_hosts": [
+        "electrolux.co.uk"
+      ],
+      "asset_document_hosts": [
+        "electrolux.co.uk"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_regional_product_site",
+          "url": "https://www.electrolux.co.uk/",
+          "observation": "Electrolux appliance catalog and support"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "delonghi_global_candidate",
+      "brands": [
+        "DeLonghi",
+        "De'Longhi",
+        "DELONGHI"
+      ],
+      "category_groups": [
+        "small_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.delonghi.com/en-us",
+      "page_hosts": [
+        "delonghi.com"
+      ],
+      "support_hosts": [
+        "delonghi.com"
+      ],
+      "asset_document_hosts": [
+        "delonghi.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.delonghi.com/en-us/c/coffee-e-espresso/coffee-machines",
+          "observation": "DeLonghi product catalog and instruction manuals"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "yeelight_global_candidate",
+      "brands": [
+        "Yeelight",
+        "YEELIGHT"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://en.yeelight.com/home-page/",
+      "page_hosts": [
+        "yeelight.com"
+      ],
+      "support_hosts": [
+        "yeelight.com"
+      ],
+      "asset_document_hosts": [
+        "yeelight.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://en.yeelight.com/home-page/",
+          "observation": "Yeelight global smart-lighting catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "playstation_global_candidate",
+      "brands": [
+        "Playstation",
+        "PlayStation"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.playstation.com/en-us/",
+      "page_hosts": [
+        "playstation.com"
+      ],
+      "support_hosts": [
+        "playstation.com"
+      ],
+      "asset_document_hosts": [
+        "playstation.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.playstation.com/en-us/accessories/",
+          "observation": "Official PlayStation consoles and accessories catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "hiper_global_candidate",
+      "brands": [
+        "HIPER",
+        "Hiper"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en",
+        "ru"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://hiper-power.com/",
+      "page_hosts": [
+        "hiper-power.com"
+      ],
+      "support_hosts": [
+        "hiper-power.com"
+      ],
+      "asset_document_hosts": [
+        "hiper-power.com"
+      ],
+      "official_status": "candidate",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "brand_site_candidate",
+          "url": "https://hiper-power.com/",
+          "observation": "Brand site found; ownership evidence requires manual confirmation"
+        }
+      ],
+      "next_operation": "verify_official_domain",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "redmond_corporate_candidate",
+      "brands": [
+        "REDMOND",
+        "Redmond"
+      ],
+      "category_groups": [
+        "small_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en",
+        "ru"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://redmond.company/",
+      "page_hosts": [
+        "redmond.company"
+      ],
+      "support_hosts": [
+        "redmond.company"
+      ],
+      "asset_document_hosts": [
+        "redmond.company"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "manufacturer_document",
+          "url": "https://object.pscloud.io/cms/cms/Uploads/file_0_344_101_0.pdf",
+          "observation": "Manufacturer document identifies redmond.company"
+        }
+      ],
+      "next_operation": "map_official_product_portals",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "braun_personal_care_candidate",
+      "brands": [
+        "Braun",
+        "BRAUN"
+      ],
+      "category_groups": [
+        "small_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "US",
+      "market_scope": "country",
+      "source_country": "US",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://us.braun.com/en-us",
+      "page_hosts": [
+        "braun.com"
+      ],
+      "support_hosts": [
+        "braun.com"
+      ],
+      "asset_document_hosts": [
+        "braun.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://us.braun.com/en-us",
+          "observation": "Braun personal-care catalog and help center"
+        }
+      ],
+      "next_operation": "map_independent_product_sites",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "braun_household_global_candidate",
+      "brands": [
+        "Braun",
+        "BRAUN"
+      ],
+      "category_groups": [
+        "small_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.braunhousehold.com/en",
+      "page_hosts": [
+        "braunhousehold.com"
+      ],
+      "support_hosts": [
+        "braunhousehold.com"
+      ],
+      "asset_document_hosts": [
+        "braunhousehold.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.braunhousehold.com/en",
+          "observation": "Independent Braun household catalog and manuals"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "yandex_devices_candidate",
+      "brands": [
+        "Яндекс",
+        "Yandex"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "ru",
+      "source_languages": [
+        "ru"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://alice.yandex.ru/smart-home/devices",
+      "page_hosts": [
+        "yandex.ru"
+      ],
+      "support_hosts": [
+        "yandex.com"
+      ],
+      "asset_document_hosts": [
+        "yandex.ru",
+        "yandex.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://alice.yandex.ru/smart-home/devices",
+          "observation": "Yandex Alice official smart-device catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "adata_global_candidate",
+      "brands": [
+        "ADATA"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.adata.com/",
+      "page_hosts": [
+        "adata.com"
+      ],
+      "support_hosts": [
+        "adata.com"
+      ],
+      "asset_document_hosts": [
+        "adata.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.adata.com/",
+          "observation": "ADATA catalog with part-number compatibility search"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "razer_global_candidate",
+      "brands": [
+        "Razer",
+        "RAZER"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.razer.com/",
+      "page_hosts": [
+        "razer.com"
+      ],
+      "support_hosts": [
+        "razer.com"
+      ],
+      "asset_document_hosts": [
+        "razer.com",
+        "razerzone.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_brand_site",
+          "url": "https://www.razer.com/",
+          "observation": "Razer official product store and support"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "kingston_global_candidate",
+      "brands": [
+        "Kingston",
+        "KINGSTON"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.kingston.com/en/landing",
+      "page_hosts": [
+        "kingston.com"
+      ],
+      "support_hosts": [
+        "kingston.com"
+      ],
+      "asset_document_hosts": [
+        "kingston.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.kingston.com/en/landing",
+          "observation": "Kingston product catalog, memory finder and support"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "intel_global_candidate",
+      "brands": [
+        "Intel",
+        "INTEL"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.intel.com/content/www/us/en/ark.html",
+      "page_hosts": [
+        "intel.com"
+      ],
+      "support_hosts": [
+        "intel.com"
+      ],
+      "asset_document_hosts": [
+        "intel.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_database",
+          "url": "https://www.intel.com/content/www/us/en/ark.html",
+          "observation": "Intel ARK product specification database"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "chieftec_eu_candidate",
+      "brands": [
+        "Chieftec",
+        "CHIEFTEC"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "EU",
+      "market_scope": "regional",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.chieftec.eu/",
+      "page_hosts": [
+        "chieftec.eu"
+      ],
+      "support_hosts": [
+        "chieftec.eu"
+      ],
+      "asset_document_hosts": [
+        "chieftec.eu"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.chieftec.eu/",
+          "observation": "Chieftec product pages, datasheets and manuals"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "canon_global_candidate",
+      "brands": [
+        "CANON",
+        "Canon"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://global.canon/",
+      "page_hosts": [
+        "global.canon"
+      ],
+      "support_hosts": [
+        "global.canon"
+      ],
+      "asset_document_hosts": [
+        "global.canon"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_global_site",
+          "url": "https://global.canon/en/support/",
+          "observation": "Canon Inc. global site routes to official regional product/support sites"
+        }
+      ],
+      "next_operation": "map_official_regional_product_site",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "cudy_global_candidate",
+      "brands": [
+        "Cudy",
+        "CUDY"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.cudy.com/collections/all-products",
+      "page_hosts": [
+        "cudy.com"
+      ],
+      "support_hosts": [
+        "cudy.com"
+      ],
+      "asset_document_hosts": [
+        "cudy.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.cudy.com/en-ca/collections/all-products",
+          "observation": "Cudy manufacturer catalog and compliance documents"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "aoc_global_candidate",
+      "brands": [
+        "AOC"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.aoc.com/us/monitors",
+      "page_hosts": [
+        "aoc.com"
+      ],
+      "support_hosts": [
+        "aoc.com"
+      ],
+      "asset_document_hosts": [
+        "aoc.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://www.aoc.com/us/monitors",
+          "observation": "AOC monitor product catalog and manufacturer declaration"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "inoi_global_candidate",
+      "brands": [
+        "INOI",
+        "Inoi"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://inoi.com/",
+      "page_hosts": [
+        "inoi.com"
+      ],
+      "support_hosts": [
+        "inoi.com"
+      ],
+      "asset_document_hosts": [
+        "inoi.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://inoi.com/",
+          "observation": "INOI smartphones, tablets and feature-phone catalog"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "dyson_global_candidate",
+      "brands": [
+        "Dyson",
+        "DYSON"
+      ],
+      "category_groups": [
+        "small_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en-US",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.dyson.com/",
+      "page_hosts": [
+        "dyson.com"
+      ],
+      "support_hosts": [
+        "dyson.com"
+      ],
+      "asset_document_hosts": [
+        "dyson.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.dyson.com/vacuum-cleaners",
+          "observation": "Dyson official product catalog and direct sales"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "keenetic_global_candidate",
+      "brands": [
+        "KEENETIC",
+        "Keenetic"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "market": "any",
+      "market_scope": "global",
+      "source_country": "",
+      "source_locale": "en",
+      "source_languages": [
+        "en"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://keenetic.com/de/products",
+      "page_hosts": [
+        "keenetic.com"
+      ],
+      "support_hosts": [
+        "support.keenetic.com"
+      ],
+      "asset_document_hosts": [
+        "keenetic.com"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_product_catalog",
+          "url": "https://keenetic.com/de/products",
+          "observation": "Keenetic official router and mesh product selector"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    },
+    {
+      "candidate_id": "atlant_kz_candidate",
+      "brands": [
+        "ATLANT",
+        "Atlant"
+      ],
+      "category_groups": [
+        "major_home_appliances"
+      ],
+      "category_patterns": [],
+      "market": "KZ",
+      "market_scope": "country",
+      "source_country": "KZ",
+      "source_locale": "ru-KZ",
+      "source_languages": [
+        "ru"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://atlant.kz/",
+      "page_hosts": [
+        "atlant.kz"
+      ],
+      "support_hosts": [
+        "atlant.kz"
+      ],
+      "asset_document_hosts": [
+        "atlant.kz"
+      ],
+      "official_status": "official_verified",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "enabled": false,
+      "last_checked_at": "2026-09-22T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_manufacturer_site",
+          "url": "https://atlant.kz/",
+          "observation": "ATLANT manufacturer catalog, support and legal identity"
+        }
+      ],
+      "next_operation": "probe_homepage_and_discovery_endpoints",
+      "probe_targets": [],
+      "endpoints": [],
+      "fingerprint_layers": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0
+    }
+  ]
+}

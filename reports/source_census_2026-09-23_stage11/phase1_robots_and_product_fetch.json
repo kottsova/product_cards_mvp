@@ -1,0 +1,154 @@
+{
+  "phase": "robots_and_product_fetch",
+  "robots_access_status": "direct_access",
+  "robots_http_status": 200,
+  "product_access_status": "direct_access",
+  "product_http_status": 200,
+  "product_final_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+  "product_redirect_chain": [
+    "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+  ],
+  "bytes_read": 614707,
+  "is_product_page_per_inspect_structure": true,
+  "contract_signature_match_vs_stage8_1": {
+    "discovery": true,
+    "identity": true,
+    "specifications": true,
+    "media": true,
+    "documents": true
+  },
+  "contract_signature_match_all": true,
+  "json_ld_product_count": 1,
+  "json_ld_products_raw": [
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "HyperX QuadCast 2 S – USB Microphone",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "sku": "9A273AA",
+      "gtin12": "197961186741",
+      "productID": "8448746061981",
+      "brand": {
+        "@type": "Brand",
+        "name": "HyperX"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Compatibility",
+          "value": ""
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Connectivity",
+          "value": ""
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Polar Pattern",
+          "value": ""
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "RGB",
+          "value": ""
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Software",
+          "value": ""
+        }
+      ],
+      "description": "Future Ready AudioDynamic Lighting DisplayTap-to-Mute SensorVersatile Multifunction KnobRedesigned Detachable Shock MountFour Selectable Polar PatternsMic Status LED IndicatorsHyperX NGENUITY SoftwareGlow up.HyperX QuadCast 2 S is a full-featured microphone designed with creators in mind. In additio...",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1_1024x1024.jpg?v=1787066289",
+        "width": 4000,
+        "height": 4000
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "149.99",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone?variant=45953570504861",
+        "image": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1_4000x.jpg?v=1787066289",
+        "name": "HyperX QuadCast 2 S – USB Microphone - Black",
+        "gtin12": "197961186741",
+        "sku": "9A273AA",
+        "priceValidUntil": "2027-09-22",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "US"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 5,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn",
+          "merchantReturnLink": "https://hyperx.com/pages/returns-policy"
+        }
+      }
+    }
+  ],
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://hyperx.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/robots.txt",
+      "redirect_chain": [
+        "https://hyperx.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=utf-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 3608,
+      "note": ""
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "capability": "product_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "redirect_chain": [
+        "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "challenge_suspected",
+      "error": "",
+      "bytes_read": 614707,
+      "note": "same URL as Stage 8.1 fixture 1dd3897..."
+    }
+  ]
+}

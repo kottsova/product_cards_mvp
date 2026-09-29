@@ -11,8 +11,10 @@ from uuid import uuid4
 from . import storage
 from .adapters.common import PhotoCandidate, ProductDocument, SourceDocument
 from .display import display_name_ru, display_source, display_status, display_value
+from .fetch_history import record_fetch_attempt, save_source_snapshot
+from .migrations import apply_job_migrations
 from .normalization import normalize_facts
-from .resolution import resolve_attributes
+from .resolution import SUPPLIERS, resolve_attributes
 
 
 ACTIVE = ("queued", "running")
@@ -87,6 +89,8 @@ def initialize(path: Path) -> None:
                 site_name TEXT NOT NULL,
                 raw_name TEXT NOT NULL,
                 raw_value TEXT NOT NULL,
+                section TEXT NOT NULL DEFAULT '',
+                value_cell INTEGER,
                 normalized_name TEXT NOT NULL,
                 normalized_value TEXT NOT NULL,
                 unit TEXT NOT NULL DEFAULT ''
@@ -152,13 +156,7 @@ def initialize(path: Path) -> None:
                 fetched_at TEXT NOT NULL,
                 UNIQUE(product_id, source_key, asset_key)
             );        """)
-        columns = {row["name"] for row in connection.execute("PRAGMA table_info(resolved_attributes)")}
-        if "full_sku_confirmed" not in columns:
-            connection.execute("ALTER TABLE resolved_attributes ADD COLUMN full_sku_confirmed INTEGER NOT NULL DEFAULT 0")
-        connection.execute("UPDATE source_pages SET source_key='lg_kz', site_name='LG Казахстан' WHERE source_key='lg' AND NOT EXISTS (SELECT 1 FROM source_pages newer WHERE newer.product_id=source_pages.product_id AND newer.source_key='lg_kz')")
-        connection.execute("UPDATE extracted_attribute_facts SET source_page_id=(SELECT newer.id FROM source_pages old JOIN source_pages newer ON newer.product_id=old.product_id AND newer.source_key='lg_kz' WHERE old.id=extracted_attribute_facts.source_page_id) WHERE source_page_id IN (SELECT old.id FROM source_pages old WHERE old.source_key='lg' AND EXISTS (SELECT 1 FROM source_pages newer WHERE newer.product_id=old.product_id AND newer.source_key='lg_kz'))")
-        connection.execute("DELETE FROM source_pages WHERE source_key='lg' AND EXISTS (SELECT 1 FROM source_pages newer WHERE newer.product_id=source_pages.product_id AND newer.source_key='lg_kz')")
-        connection.execute("UPDATE extracted_attribute_facts SET source_key='lg_kz', site_name='LG Казахстан' WHERE source_key='lg'")
+        apply_job_migrations(connection)
 
 def get_product(path: Path, product_id: int) -> dict[str, Any] | None:
     with storage._connection(path) as connection:
@@ -199,12 +197,18 @@ def enqueue(path: Path, product_id: int, stages: list[int]) -> str:
     job_id, now = uuid4().hex, storage._now()
     with storage._connection(path) as connection:
         product = connection.execute(
-            "SELECT brand FROM products WHERE id = ?", (product_id,)
+            "SELECT brand, category, search_code FROM products WHERE id = ?", (product_id,)
         ).fetchone()
         if product is None:
             raise ValueError("Товар не найден.")
-        if product["brand"].strip().casefold() not in {"lg", "lg electronics", "лджи", "элджи"}:
-            raise ValueError("Fallback Mechta и Sulpak сейчас доступен только для LG.")
+        if product["brand"].strip().casefold() == "bosch":
+            from .bosch_pipeline import is_selected
+            if not is_selected(product["category"], product["search_code"]):
+                raise ValueError("Bosch Home: this catalog row is not one of the two selected products.")
+        # The LG-only supplier fallback (Sulpak) stays LG-only (worker.py
+        # enforces this at dispatch time); DNS dealer fallback (Stage 11.4,
+        # explicit user authorization) is available for any brand/category,
+        # so enqueueing is no longer rejected here for non-LG products.
         try:
             connection.execute(
                 "INSERT INTO search_jobs "
@@ -243,6 +247,8 @@ def claim_next(path: Path) -> dict[str, Any] | None:
     now = storage._now()
     with storage._connection(path) as connection:
         connection.execute("BEGIN IMMEDIATE")
+        if connection.execute("SELECT 1 FROM search_jobs WHERE status='running' LIMIT 1").fetchone():
+            return None
         row = connection.execute(
             "SELECT * FROM search_jobs WHERE status='queued' ORDER BY created_at, rowid LIMIT 1"
         ).fetchone()
@@ -304,6 +310,43 @@ def save_source_document(
     update_photos: bool = True,
 ) -> None:
     """Upsert source evidence while preserving results of unselected stages."""
+    attempt_id = record_fetch_attempt(
+        path, product_id, document.source_key,
+        status="error" if document.error else "success",
+        requested_url=document.url,
+        final_url=document.url,
+        error=document.error,
+    )
+    # A failed or empty refresh is an access/discovery outcome, not new page
+    # evidence. Keep the last content-confirmed page (and its facts/photos)
+    # while recording this attempt separately in fetch history.
+    with storage._connection(path) as connection:
+        previous_evidence = connection.execute(
+            "SELECT url, match_level, error FROM source_pages WHERE product_id=? AND source_key=?",
+            (product_id, document.source_key),
+        ).fetchone()
+    no_new_page = bool(document.error) or not (
+        document.url or document.html or document.attributes or document.photos
+    )
+    if (no_new_page and previous_evidence and previous_evidence["url"]
+            and not previous_evidence["error"]
+            and previous_evidence["match_level"] in {
+                "full_sku", "base_model", "model_and_code_confirmed", "exact_variant",
+                "code_in_page_text", "component_only",
+            }):
+        return
+    if not document.error:
+        save_source_snapshot(
+            path, product_id, document.source_key, attempt_id,
+            source_url=document.url,
+            content=document.html,
+            extracted={
+                "found_model": document.found_model,
+                "match_level": document.match_level,
+                "evidence": document.evidence,
+            },
+            fetched_at=document.fetched_at,
+        )
     normalized = normalize_facts(document.attributes) if update_attributes else []
     with storage._connection(path) as connection:
         previous = connection.execute(
@@ -344,13 +387,14 @@ def save_source_document(
             )
             connection.executemany(
                 "INSERT INTO extracted_attribute_facts "
-                "(product_id, source_page_id, source_key, site_name, raw_name, raw_value, "
-                "normalized_name, normalized_value, unit) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "(product_id, source_page_id, source_key, site_name, raw_name, raw_value, section, value_cell, "
+                "normalized_name, normalized_value, unit) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 [
                     (
                         product_id, page["id"], document.source_key, document.site_name,
-                        fact.raw_name, fact.raw_value, fact.normalized_name,
-                        fact.normalized_value, fact.unit,
+                        fact.raw_name, fact.raw_value, fact.section,
+                        None if fact.value_cell is None else int(fact.value_cell),
+                        fact.normalized_name, fact.normalized_value, fact.unit,
                     )
                     for fact in normalized
                 ],
@@ -363,7 +407,7 @@ def get_source_pages(path: Path, product_id: int) -> list[dict[str, Any]]:
     with storage._connection(path) as connection:
         rows = connection.execute(
             "SELECT * FROM source_pages WHERE product_id=? "
-            "ORDER BY CASE source_key WHEN 'lg_kz' THEN 1 WHEN 'lg_ru' THEN 2 WHEN 'sulpak' THEN 3 WHEN 'mechta' THEN 4 ELSE 5 END",
+            "ORDER BY CASE source_key WHEN 'lg_kz' THEN 1 WHEN 'lg_ru' THEN 2 WHEN 'sulpak' THEN 3 WHEN 'dns' THEN 4 ELSE 5 END",
             (product_id,),
         ).fetchall()
     result = []
@@ -447,7 +491,9 @@ def comparison_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     grouped: dict[str, dict[str, Any]] = {}
     for fact in facts:
         row = grouped.setdefault(fact["normalized_name"], {"normalized_name": fact["normalized_name"], "sources": {}, "raw_names": []})
-        row["sources"].setdefault(fact["source_key"], fact)
+        previous = row["sources"].get(fact["source_key"])
+        if previous is None or (previous["unit"] == "unknown" and fact["unit"] != "unknown"):
+            row["sources"][fact["source_key"]] = fact
         row["raw_names"].append(fact["raw_name"])
     for name in sorted(set(grouped) | set(resolved)):
         row = grouped.setdefault(name, {"normalized_name": name, "sources": {}, "raw_names": []})
@@ -458,7 +504,7 @@ def comparison_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
         item = resolved.get(name)
         if item:
             item["display_value"] = display_value(item["selected_value"], item["selected_unit"]) if item["selected_value"] else ""
-            item["display_status"] = display_status(item["status"])
+            item["display_status"] = display_status(item["status"], item["selected_source"])
             item["display_source"] = display_source(item["selected_source"])
         row["resolved"] = item
     return [grouped[name] for name in sorted(grouped, key=lambda x: grouped[x]["display_name"])]
@@ -474,18 +520,28 @@ def result_counts(path: Path, product_id: int) -> dict[str, int]:
 def identification_status(source_pages: list[dict[str, Any]]) -> str:
     by_key = {page["source_key"]: page for page in source_pages}
     official = [by_key.get(key, {}) for key in ("lg_kz", "lg_ru", "lg")]
+    # Driven entirely by resolution.SUPPLIERS and each page's own recorded
+    # site_name -- never a hardcoded per-supplier branch, so adding or
+    # removing a trusted supplier from SUPPLIERS needs no change here.
     confirmed = [
-        key for key in ("sulpak", "mechta")
+        key for key in sorted(SUPPLIERS)
         if by_key.get(key, {}).get("match_level") == "full_sku"
     ]
-    if len(confirmed) == 2:
-        return "Полный артикул подтверждён двумя поставщиками"
-    if confirmed == ["sulpak"]:
-        return "Полный артикул подтверждён Sulpak"
-    if confirmed == ["mechta"]:
-        return "Полный артикул подтверждён Mechta"
-    if any(page.get("match_level") == "mismatch" for page in source_pages):
+    if len(confirmed) >= 2:
+        return "Полный артикул подтверждён несколькими поставщиками"
+    if len(confirmed) == 1:
+        site_name = by_key[confirmed[0]].get("site_name") or confirmed[0]
+        return f"Полный артикул подтверждён поставщиком {site_name}"
+    if any(page.get("match_level") == "mismatch" and page.get("url") for page in source_pages):
         return "Найдено несоответствие артикула"
+    bosch = by_key.get("bosch_home", {})
+    if bosch.get("url") and not bosch.get("error") and bosch.get("match_level") == "full_sku":
+        return "Bosch Home KZ: catalog model confirmed; E-Nr revision unknown"
+    samsung = by_key.get("samsung", {})
+    if samsung.get("url") and not samsung.get("error"):
+        # Stage 26: Samsung's own evidence levels (the article in the page's markup/title, only in the page's text, or only the base model)
+        return {"full_sku": "Полный артикул найден на Samsung", "code_in_page_text": "Артикул найден только в тексте страницы Samsung, требуется подтверждение",
+                "base_model": "Найдена только базовая модель Samsung, требуется подтверждение артикула"}.get(samsung.get("match_level"), "Страница Samsung найдена, артикул на ней не подтверждён")
     if any(page.get("match_level") == "full_sku" for page in official):
         return "Полный артикул найден на LG"
     if any(page.get("match_level") == "base_model" for page in official):

@@ -1,0 +1,78 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "category",
+        "navigation",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [
+        "name",
+        "sku"
+      ],
+      "code_fields": [
+        "sku"
+      ],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [
+        "responsive_srcset",
+        "semantic_gallery"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "88cab5f3f93ee8a66c2727716ec5e4bed9f9986ea691283638ec4697f7bf3361",
+    "identity": "d7704cb42727b459b906e086b215609bab375bf38e83d105f8f25b06f88a8985",
+    "specifications": "5b73690f1e545bf793139dd5e7ca68d674e5a19ac38e3c99a296cb58e0b2b410",
+    "media": "88380177d60459eede5958197fb4d9ca5d84ed530c9b1cbf0e4dcd79e378eb5a",
+    "documents": "2abc35ca49719944e6f8f6f0ec1004480d1f7d0dd2dbcff5eff015109ae19280"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "adobe_experience_manager",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "f318ea33a34c845b26b656e97e079b7719b4894d014c8c1c8f0572ca8696d4a1",
+  "fixture_version": 2
+}

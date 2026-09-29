@@ -1,0 +1,77 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "host_or_undeclared"
+    },
+    "identity": {
+      "json_paths": [
+        ".name"
+      ],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [
+        ".image"
+      ],
+      "dom_semantics": [
+        "responsive_srcset",
+        "semantic_gallery"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "a1341df0793bafe15786a2a7d564e11a4f5a51f235bef797429cb9b0e739037e",
+    "identity": "3477adef680dab7bcc1870a4baac759cd0b407389361505b03a96e7b4b72fed8",
+    "specifications": "adc26a7fc37d8990cc7bb2f4137ff155d420231c3ed9b2fd6e54d7b9435acef1",
+    "media": "3a999e87158b1a383c3a4405d4e6ed23c28ad247f8af5a7427491f8e299dd2ca",
+    "documents": "a74ad2762fa55b65e7c95c57e40699f18023c9dbacbfad324501d95f6969f62b"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "generic_json_ld_product",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "json_ld",
+          "signal": "@type=Product",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "fac1a5594c7457fcb4e35b9b5eea3e73940738dc28a25c5fe425883b6aff3f08",
+  "fixture_version": 2
+}

@@ -1,0 +1,30 @@
+{
+  "declared_at": "2026-09-24T16:12:14+00:00",
+  "stage": "22c",
+  "budget": {
+    "max_requests": 2,
+    "hosts": [
+      "*.lge.com"
+    ],
+    "pacing_seconds": 1.0
+  },
+  "requests": [
+    {
+      "id": "C1",
+      "sku": "MS2032GAS",
+      "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw",
+      "printed": "Руководства пользователя Русский 15/08/2025 1 638K"
+    },
+    {
+      "id": "C2",
+      "sku": "XL7S",
+      "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg",
+      "printed": "Руководства пользователя Русский 09/08/2024 6 010K"
+    }
+  ],
+  "selection": "printed type text 'Руководства пользователя' (+ label 'Русский' for C2) chooses the link; confirms nothing",
+  "classification": "by content only: complete PDF -> text -> not regulatory, names the model, instruction wording; language chunk-level from text",
+  "stop_rule": "401/403/429 or confirmed challenge: host stopped, run ends",
+  "url_construction": "none",
+  "script": "reports/source_census_2026-09-24_stage22/scripts/03_docs_route_stage22c.py"
+}

@@ -1,0 +1,46 @@
+{
+  "attempts": [
+    {
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "kind": "product",
+      "reason": "da-sitemap.xml microwave-ovens branch already discovered offline in Stage 8.2.1 (0 new requests); this URL slug exactly matches catalog article MS23K3614AK/BW -- first live fetch of this specific URL",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "challenge_suspected",
+      "final_url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/"
+      ],
+      "checked_at": "2026-09-22T19:26:42+00:00"
+    },
+    {
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document",
+      "reason": "reachability/metadata check only (no content parsing) for the user-manual link found directly on the already-fetched MS23K3614AK/BW product page -- first-party Samsung download center domain, model name embedded in the URLs own ModelName= query parameter",
+      "http_status": 200,
+      "access_status": "regional_redirect",
+      "protection_status": "inconclusive",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "redirect_chain": [
+        "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+        "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf"
+      ],
+      "checked_at": "2026-09-22T19:27:22+00:00"
+    },
+    {
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document",
+      "reason": "retry of the manual reachability check with the already-OBSERVED redirect target host (downloadcenter.samsung.com, seen in the prior attempts own redirect_chain) added to allowed_hosts -- not a new/invented domain",
+      "http_status": 200,
+      "access_status": "direct_access",
+      "protection_status": "ordinary_page",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "redirect_chain": [
+        "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+        "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf"
+      ],
+      "checked_at": "2026-09-22T19:28:25+00:00"
+    }
+  ],
+  "blocked_hosts": []
+}

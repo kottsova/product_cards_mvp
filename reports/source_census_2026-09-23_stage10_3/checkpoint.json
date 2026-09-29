@@ -1,0 +1,133 @@
+{
+  "stage": "10.3",
+  "budget_declared_before_requests": {
+    "declared_at": "2026-09-23",
+    "declared_before_any_request": true,
+    "scope": "One final bounded image check for XXU-00015 (Xbox Series S, Carbon Black, 1TB). No manual search, no general Xbox census, no other catalog row.",
+    "allowed_hosts": [
+      "cms-assets.xboxservices.com",
+      "assets.xboxservices.com"
+    ],
+    "allowed_hosts_reason": "Both are official Xbox/Microsoft asset CDN subdomains, referenced directly by <img src>/<source srcset> URLs on the already-confirmed-official www.xbox.com console landing page (Stage 10.1). Neither is guessed; both are read verbatim from the already-saved page.",
+    "candidate_urls_already_known_not_guessed": [
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+        "alt_text": "XBOX Series S next to a space ship on a Starfield planet",
+        "why_candidate": "Live (uncommented), plain-HTML <img> on the confirmed page. Shows an actual console per its own alt text, but color is unstated and it is not tied via DOM to any color option (part of a generic thematic feature carousel, not the per-variant hero-gallery)."
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+        "alt_text": "Back of the XBOX Series S",
+        "why_candidate": "Live (uncommented), plain-HTML <img> on the confirmed page, part of a storage-expansion feature callout. Shows the rear of an actual console; color unstated; not tied to any color option via DOM."
+      }
+    ],
+    "images_explicitly_excluded_from_this_check_and_why": [
+      "3x images with 'Robot White' literally in their alt text (the 512GB and 1TB White bundle photos) -- confirmed White by the page's own text, not fetched",
+      "3x 'Carbon-Aware' images -- confirmed by their own caption text to depict an unrelated sustainability feature, not fetched",
+      "1x 'XBOX Series S Refurbished' image -- a different product listing (certified refurbished), not fetched",
+      "1x dimensions diagram -- a technical schematic, not fetched (unlikely to carry usable color information; excluded as low-value, not as rejected evidence)",
+      "1x TV-screenshot image (Quick Resume) -- alt text confirms no console is visible in the shot, not fetched"
+    ],
+    "limits": {
+      "max_requests_total": 4,
+      "max_requests_per_host": 2,
+      "max_hosts": 2,
+      "max_response_bytes_per_request": 3000000,
+      "min_interval_seconds_between_requests": 2.0,
+      "timeout_seconds_per_request": 10.0
+    },
+    "robots_txt_policy": "robots.txt fetched first for each host before any image request, honoring any Disallow rules under User-agent: *.",
+    "stop_conditions": [
+      "max_requests_total or max_requests_per_host reached",
+      "HTTP 403/429/challenge on either host -> stop that host, record the gap",
+      "redirect off either allowed host -> aborted, not followed",
+      "robots.txt disallows the exact asset path -> skip that image, record why"
+    ],
+    "explicit_non_goals": [
+      "No manual/instruction search this stage",
+      "No general Xbox census",
+      "No other catalog row",
+      "No further requests after this one bounded check, regardless of outcome"
+    ]
+  },
+  "total_requests_made": 4,
+  "requests_by_host": {
+    "cms-assets.xboxservices.com": 2,
+    "assets.xboxservices.com": 2
+  },
+  "requests_budget_max_total": 4,
+  "request_log_full": [
+    {
+      "seq": 1,
+      "requested_url": "https://cms-assets.xboxservices.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "unavailable",
+      "http_status": 404,
+      "final_url": "https://cms-assets.xboxservices.com/robots.txt",
+      "redirect_chain": [
+        "https://cms-assets.xboxservices.com/robots.txt"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 404",
+      "phase_file": "phase1_robots_check.json",
+      "aggregate_seq": 1
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://assets.xboxservices.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "unavailable",
+      "http_status": 404,
+      "final_url": "https://assets.xboxservices.com/robots.txt",
+      "redirect_chain": [
+        "https://assets.xboxservices.com/robots.txt"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 404",
+      "phase_file": "phase1_robots_check.json",
+      "aggregate_seq": 2
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+      "range": "0-2999999",
+      "http_status": 206,
+      "content_range": "bytes 0-575456/575457",
+      "content_type": "image/jpeg",
+      "bytes_read": 575457,
+      "final_url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+      "error": "",
+      "phase_file": "phase2_fetch_candidate_images.json",
+      "aggregate_seq": 3
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+      "range": "0-2999999",
+      "http_status": 206,
+      "content_range": "bytes 0-376995/376996",
+      "content_type": "image/jpeg",
+      "bytes_read": 376996,
+      "final_url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+      "error": "",
+      "phase_file": "phase2_fetch_candidate_images.json",
+      "aggregate_seq": 4
+    }
+  ],
+  "stop_events": {
+    "403_429_or_challenge_seen": false
+  },
+  "images_fetched_and_verified_byte_exact": {
+    "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg": {
+      "completeness": "complete",
+      "declared_total_bytes": 575457
+    },
+    "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg": {
+      "completeness": "complete",
+      "declared_total_bytes": 376996
+    }
+  },
+  "status": "complete_within_budget_stopped_after_one_check_per_instruction"
+}

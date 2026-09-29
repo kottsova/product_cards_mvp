@@ -1,0 +1,18 @@
+{
+  "schema_version": "stage9_1_budget_predeclaration.v1",
+  "declared_before_any_new_request": true,
+  "step_1_offline_check_required_first": true,
+  "step_1_result": "offline_row_analysis.json + known_routes_review.json -- no substantial verified difference between the two catalog rows found offline, and no known official route (of those already discovered in Stage 8.2/Stage 9) remains unchecked that could confirm such a difference.",
+  "conditional_network_check_rule": "Per instruction, a bounded network check is only performed IF offline data shows a substantial difference. It does not.",
+  "request_limits_that_would_have_applied_if_triggered": {
+    "max_total_requests": 3,
+    "max_requests_per_host": 3,
+    "max_hosts": 1,
+    "pre_declared_allowed_hosts": ["direct.playstation.com"],
+    "note": "Scoped to only the routes already identified as known/first-party in known_routes_review.json -- no new host, no invented endpoint, no PDF assembly (no manual link exists to apply Stage 8.6's fetch_document_bounded() to)."
+  },
+  "actual_new_requests_made_this_stage": 0,
+  "reason_zero_requests": "Step 1's offline result did not meet the trigger condition for a network check.",
+  "probe_policy_status": "Unchanged -- no host contacted, so no ProbePolicy event (403/429/challenge) could occur this stage.",
+  "counter_persistence": "N/A this stage (0 attempts) -- Stage 8.3-9's run_state.json-based recomputation fix remains available unchanged for any future stage that does make requests."
+}

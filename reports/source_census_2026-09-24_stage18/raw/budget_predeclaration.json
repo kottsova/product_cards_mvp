@@ -1,0 +1,34 @@
+{
+  "declared_at": "2026-09-24T12:28:57+00:00",
+  "host": "hyperx.com",
+  "max_requests_total": 30,
+  "max_sitemap_requests": 3,
+  "max_product_page_requests": 27,
+  "sitemap_index": "https://hyperx.com/sitemap.xml",
+  "order": [
+    "saved-link candidate pages",
+    "sitemap index",
+    "product sitemaps",
+    "sitemap-candidate pages"
+  ],
+  "url_sources_allowed": [
+    "links saved on official pages (Stage 11 / 11.1)",
+    "<loc> entries of the sitemap index declared in robots.txt"
+  ],
+  "forbidden": [
+    "URL built from a pattern",
+    "site search",
+    "collection paging",
+    "variant id guessing",
+    "any other host"
+  ],
+  "stop_rule": "first 401/403/429/challenge halts the run; hyperx.com stays stopped via data/hyperx_fetch_log.json",
+  "rows_in_scope": 38,
+  "rows_already_confirmed_offline": [
+    "4P5D4AA"
+  ],
+  "rows_skipped_before_any_request": [
+    "00000031048"
+  ],
+  "script": "reports/source_census_2026-09-24_stage18/scripts/03_live_discovery.py"
+}

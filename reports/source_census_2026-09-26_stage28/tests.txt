@@ -1,0 +1,133 @@
+A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+..................................................................................................................................................................Unexpected source comparison failure for job fce738d3ed1745278d3841c12fc37fb2
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\product_tool\worker.py", line 154, in run_once
+    samsung_doc = samsung_pipeline.official_stage(database, job_id, product_id, product, samsung, samsung_code, stages=stages, deadline=min(total_deadline, start+OFFICIAL_BUDGET_SECONDS), clock=clock, budget=samsung_budget, documents_deadline=total_deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\samsung_pipeline.py", line 55, in official_stage
+    document = adapter.find_source(code, deadline=deadline, category=product.get("category", ""), name=product.get("name", ""))
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 191, in find_source
+    page_url = self._locate(article, category, report, deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 167, in _locate
+    response = self._get(self.http, report, "hub" if kind == "hub" else "sitemap", address, deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 149, in _get
+    response = fetch_with_retry(session, url, deadline=deadline, clock=self.clock)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\common.py", line 85, in fetch_with_retry
+    response = session.get(url, timeout=request_timeout)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\policy_session.py", line 179, in get
+    result = self._fetcher.get(url, allowed_hosts=self.allowed_hosts, capability=capability)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\policy_fetch.py", line 109, in get
+    result = self._probe.probe(
+        url, allowed_hosts=allowed_hosts, capability=capability,
+        sample_type="product_page", deadline=deadline,
+    )
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 368, in probe
+    response = self._get(
+        target, timeout=timeout, allow_redirects=request_guard is None,
+        headers={"User-Agent": self.policy.user_agent, "Accept": "text/html,application/xhtml+xml,application/xml,text/xml;q=0.9,*/*;q=0.1"},
+        stream=True,
+    )
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 330, in _get
+    return _REAL_SESSION_GET(self.session, url, **kwargs)
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 105, in _blocked_send
+    raise RealNetworkIOBlocked(
+    ...<5 lines>...
+    )
+product_tool.census.endpoint_probe.RealNetworkIOBlocked: A real HTTP request to 'https://www.samsung.com/kz_ru/vd-sitemap.xml' was attempted while block_all_real_network_io() is active (see tests/__init__.py, which activates this for the whole test process). Ordinary tests must never reach the real network -- inject a fake session/transport instead.
+.Unexpected source comparison failure for job a5da0f8d490a4ebda2b9a7a69a731288
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\product_tool\worker.py", line 154, in run_once
+    samsung_doc = samsung_pipeline.official_stage(database, job_id, product_id, product, samsung, samsung_code, stages=stages, deadline=min(total_deadline, start+OFFICIAL_BUDGET_SECONDS), clock=clock, budget=samsung_budget, documents_deadline=total_deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\samsung_pipeline.py", line 55, in official_stage
+    document = adapter.find_source(code, deadline=deadline, category=product.get("category", ""), name=product.get("name", ""))
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 191, in find_source
+    page_url = self._locate(article, category, report, deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 167, in _locate
+    response = self._get(self.http, report, "hub" if kind == "hub" else "sitemap", address, deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 149, in _get
+    response = fetch_with_retry(session, url, deadline=deadline, clock=self.clock)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\common.py", line 85, in fetch_with_retry
+    response = session.get(url, timeout=request_timeout)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\policy_session.py", line 179, in get
+    result = self._fetcher.get(url, allowed_hosts=self.allowed_hosts, capability=capability)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\policy_fetch.py", line 109, in get
+    result = self._probe.probe(
+        url, allowed_hosts=allowed_hosts, capability=capability,
+        sample_type="product_page", deadline=deadline,
+    )
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 368, in probe
+    response = self._get(
+        target, timeout=timeout, allow_redirects=request_guard is None,
+        headers={"User-Agent": self.policy.user_agent, "Accept": "text/html,application/xhtml+xml,application/xml,text/xml;q=0.9,*/*;q=0.1"},
+        stream=True,
+    )
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 330, in _get
+    return _REAL_SESSION_GET(self.session, url, **kwargs)
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 105, in _blocked_send
+    raise RealNetworkIOBlocked(
+    ...<5 lines>...
+    )
+product_tool.census.endpoint_probe.RealNetworkIOBlocked: A real HTTP request to 'https://www.samsung.com/kz_ru/vd-sitemap.xml' was attempted while block_all_real_network_io() is active (see tests/__init__.py, which activates this for the whole test process). Ordinary tests must never reach the real network -- inject a fake session/transport instead.
+....................................................................................................................................................................Unexpected source comparison failure for job job-Samsung
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\product_tool\worker.py", line 154, in run_once
+    samsung_doc = samsung_pipeline.official_stage(database, job_id, product_id, product, samsung, samsung_code, stages=stages, deadline=min(total_deadline, start+OFFICIAL_BUDGET_SECONDS), clock=clock, budget=samsung_budget, documents_deadline=total_deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\samsung_pipeline.py", line 55, in official_stage
+    document = adapter.find_source(code, deadline=deadline, category=product.get("category", ""), name=product.get("name", ""))
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 191, in find_source
+    page_url = self._locate(article, category, report, deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 167, in _locate
+    response = self._get(self.http, report, "hub" if kind == "hub" else "sitemap", address, deadline)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\samsung_source.py", line 149, in _get
+    response = fetch_with_retry(session, url, deadline=deadline, clock=self.clock)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\common.py", line 85, in fetch_with_retry
+    response = session.get(url, timeout=request_timeout)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\policy_session.py", line 179, in get
+    result = self._fetcher.get(url, allowed_hosts=self.allowed_hosts, capability=capability)
+  File "A:\work\dev\product_cards_mvp\product_tool\adapters\policy_fetch.py", line 109, in get
+    result = self._probe.probe(
+        url, allowed_hosts=allowed_hosts, capability=capability,
+        sample_type="product_page", deadline=deadline,
+    )
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 368, in probe
+    response = self._get(
+        target, timeout=timeout, allow_redirects=request_guard is None,
+        headers={"User-Agent": self.policy.user_agent, "Accept": "text/html,application/xhtml+xml,application/xml,text/xml;q=0.9,*/*;q=0.1"},
+        stream=True,
+    )
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 330, in _get
+    return _REAL_SESSION_GET(self.session, url, **kwargs)
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "A:\work\dev\product_cards_mvp\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "A:\work\dev\product_cards_mvp\product_tool\census\endpoint_probe.py", line 105, in _blocked_send
+    raise RealNetworkIOBlocked(
+    ...<5 lines>...
+    )
+product_tool.census.endpoint_probe.RealNetworkIOBlocked: A real HTTP request to 'https://www.samsung.com/kz_ru/vd-sitemap.xml' was attempted while block_all_real_network_io() is active (see tests/__init__.py, which activates this for the whole test process). Ordinary tests must never reach the real network -- inject a fake session/transport instead.
+..................................................................A:\work\dev\product_cards_mvp\tests\test_source_census_v2.py:189: DeprecationWarning: validate_product_candidate is legacy text evidence and cannot establish identity
+  identity = validate_product_candidate(html + " M1", expected_models=("M1",))
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................Rejected unreadable xlsx upload
+....
+----------------------------------------------------------------------
+Ran 1189 tests in 557.129s
+
+OK

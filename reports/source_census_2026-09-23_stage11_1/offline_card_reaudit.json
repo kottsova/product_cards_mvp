@@ -1,0 +1,21 @@
+{
+  "stage11_claim_reexamined": {
+    "quoted_field": "sku_exact_match",
+    "quoted_value": true,
+    "quoted_conclusion_text": "CONFIRMED by exact code match -- the catalog's seller article value is byte-identical to the official page's own JSON-LD .sku AND .offers.sku fields, not merely non-conflicting. This is a stronger identity tier than descriptive-consistency-only matches used for other brands in this project (e.g. Xbox, PlayStation), because here the exact code itself matches, not just model+variant wording. Per instructions, this does not require the seller SKU to appear on the official site as a precondition -- its presence here is incidental, additional confirmation, not a requirement that was imposed."
+  },
+  "correction": {
+    "issue": "Stage 11's conclusion described the match as confirmed \"by exact code match\" and listed both \".sku\" and \".offers.sku\" as if checking two fields strengthened the claim. Both values were read from ONE JSON-LD <script> block on ONE fetch of ONE URL in ONE request (phase1_robots_and_product_fetch.json, seq 2). offers.sku is schema.org's own required near-duplicate of the parent Product.sku on the same Offer sub-object -- it is not a second, independently-sourced signal (e.g. a second page, a second host, or a structured-data type unrelated to Offers).",
+    "corrected_statement": "The catalog seller article 9A273AA matches ONE extracted value (the page's Product.sku, which schema.org also mirrors onto .offers.sku by convention) from ONE official page fetch. This is still a genuine, strong, exact-code-level match -- far stronger than the descriptive-consistency-only matches used for other brands in this project -- but it is one source, one document, one request, not two independent confirmations. Stage 11's underlying fact (the codes match) is unchanged; only the \"how many independent signals\" framing is corrected.",
+    "does_this_change_the_identity_verdict": false,
+    "why_not": "A single official first-party source stating an exact manufacturer/seller code is still the strongest single-page identity signal used anywhere in this project. The correction narrows the *epistemic weight* claimed (one source, not two) without weakening the underlying fact."
+  },
+  "manual_status_carried_forward_unchanged": {
+    "quick_start_guide_listed_in_box_contents": true,
+    "source": "official spec table, \"What's In The Box\" row, read in Stage 11",
+    "online_document_confirmed": false,
+    "language_confirmed": false,
+    "explicit_statement": "Unchanged from Stage 11: a Quick Start Guide is confirmed, by the official page's own text, to physically ship with this product. No online document or its language has been confirmed. This is not re-examined further this stage -- the task scope is the image-evidence re-audit and the adapter-repeatability question, not a renewed document search."
+  },
+  "image_evidence_gap_identified": "Stage 11 accepted 9 images as evidence using only a filename-substring check (the SKU \"9a273aa\" appears in each CDN URL). It never fetched the bytes, checked integrity, or viewed the actual pixels. That is addressed in 02_image_integrity_check.py, this stage."
+}

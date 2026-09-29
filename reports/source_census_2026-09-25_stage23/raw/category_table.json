@@ -1,0 +1,264 @@
+[
+  {
+    "category": "Колонки",
+    "article": "XL7S",
+    "job": "done",
+    "readiness": "export_ready",
+    "readiness_before_rule_4": "export_ready",
+    "rule_4": false,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 32,
+      "ru": 32
+    },
+    "gallery_from_exact_pages": 42,
+    "instruction_state": "instruction_confirmed_by_content",
+    "saved_languages": [
+      "Русский"
+    ],
+    "conflicts": [],
+    "found_by_rule": "D3: «Вес брутто» и «Вес нетто» получали одно имя (ложный конфликт); маршрут инструкций через страницу поддержки",
+    "not_found": "дилерская сверка (не запрашивалась)"
+  },
+  {
+    "category": "Микроволновые печи",
+    "article": "MS2032GAS",
+    "job": "needs_review",
+    "readiness": "export_ready_with_gaps",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": false,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 63,
+      "ru": 55
+    },
+    "gallery_from_exact_pages": 35,
+    "instruction_state": "instruction_confirmed_by_content",
+    "saved_languages": [
+      "Казахский"
+    ],
+    "conflicts": [
+      "дизайн_стекла_дверцы",
+      "тип_установки"
+    ],
+    "found_by_rule": "D3: цвет дверцы/корпуса/внутри и габариты полости/поворотного стола; язык инструкции по тексту файла, не по метке",
+    "not_found": "русской инструкции нет (файл с меткой «Русский» на казахском); 2 расхождения KZ/RU"
+  },
+  {
+    "category": "Мониторы",
+    "article": "24MR400-B.ARUQ",
+    "job": "needs_review",
+    "readiness": "not_ready",
+    "readiness_before_rule_4": "not_ready",
+    "rule_4": false,
+    "kz": "base_model",
+    "ru": "base_model",
+    "facts": {
+      "kz": 47,
+      "ru": 78
+    },
+    "gallery_from_exact_pages": 0,
+    "instruction_state": "instruction_confirmed_by_content",
+    "saved_languages": [
+      "Русский"
+    ],
+    "conflicts": [],
+    "found_by_rule": "D4: поиск по базовой модели без повышения до точного варианта",
+    "not_found": "полный артикул нигде на странице не показан (обе площадки base_model)"
+  },
+  {
+    "category": "Музыкальные проигрыватели",
+    "article": "CK43",
+    "job": "done",
+    "readiness": "export_ready_with_gaps",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": false,
+    "kz": "full_sku",
+    "ru": "mismatch",
+    "facts": {
+      "kz": 86,
+      "ru": 0
+    },
+    "gallery_from_exact_pages": 6,
+    "instruction_state": "not_attempted",
+    "saved_languages": [],
+    "conflicts": [],
+    "found_by_rule": "D3: размеры сабвуфера/основного модуля/колонок в одном имени",
+    "not_found": "страницы LG Россия нет в карте сайта; инструкции не проверялись"
+  },
+  {
+    "category": "Пылесосы",
+    "article": "A9N-MASTERX",
+    "job": "done",
+    "readiness": "export_ready",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": true,
+    "kz": "mismatch",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 0,
+      "ru": 42
+    },
+    "gallery_from_exact_pages": 15,
+    "instruction_state": "instruction_by_content_model_not_named",
+    "saved_languages": [],
+    "conflicts": [],
+    "found_by_rule": "маршрут страниц LG Россия по карте сайта; фильтр фото RU (0 → 15); решение 4 по инструкции",
+    "not_found": "страницы LG Казахстан нет в карте сайта"
+  },
+  {
+    "category": "Саундбары",
+    "article": "SN4",
+    "job": "needs_review",
+    "readiness": "export_ready_with_gaps",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": false,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 33,
+      "ru": 70
+    },
+    "gallery_from_exact_pages": 39,
+    "instruction_state": "instruction_confirmed_by_content",
+    "saved_languages": [
+      "Русский"
+    ],
+    "conflicts": [
+      "usb"
+    ],
+    "found_by_rule": "сравнение по канонической форме («1шт»/«1 шт.», «3,840»/«3840»); имена «Главный»/«Сабвуфер» получали разные величины",
+    "not_found": "расхождение USB: «1» против «true»"
+  },
+  {
+    "category": "Смарт-часы",
+    "article": "27MD5KL-B.AEU",
+    "job": "needs_review",
+    "readiness": "not_ready",
+    "readiness_before_rule_4": "not_ready",
+    "rule_4": false,
+    "kz": "mismatch",
+    "ru": "base_model",
+    "facts": {
+      "kz": 0,
+      "ru": 58
+    },
+    "gallery_from_exact_pages": 0,
+    "instruction_state": "reachable_not_a_complete_pdf",
+    "saved_languages": [],
+    "conflicts": [],
+    "found_by_rule": "D4 и фото RU при base_model; в каталоге монитор лежит в категории «Смарт-часы»",
+    "not_found": "полный артикул не подтверждён; инструкция — архив, не PDF"
+  },
+  {
+    "category": "Сплит-системы",
+    "article": "AC09BK",
+    "job": "done",
+    "readiness": "export_ready_with_gaps",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": false,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 60,
+      "ru": 28
+    },
+    "gallery_from_exact_pages": 42,
+    "instruction_state": "reachable_not_a_complete_pdf",
+    "saved_languages": [],
+    "conflicts": [],
+    "found_by_rule": "D3: внутренний и наружный блок; лимит 25 МБ на файл",
+    "not_found": "инструкция: файл крупнее лимита / архив — не подтверждена"
+  },
+  {
+    "category": "Стиральные машины",
+    "article": "F2J3WS1W",
+    "job": "done",
+    "readiness": "export_ready",
+    "readiness_before_rule_4": "export_ready",
+    "rule_4": false,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 35,
+      "ru": 61
+    },
+    "gallery_from_exact_pages": 36,
+    "instruction_state": "instruction_confirmed_by_content",
+    "saved_languages": [
+      "Русский"
+    ],
+    "conflicts": [],
+    "found_by_rule": "D3: «Макс. вес белья» и «Масса», ящик и продукт; маска семейства `F2J3WS**` как подтверждение модели в документе",
+    "not_found": "—"
+  },
+  {
+    "category": "Сушильные машины",
+    "article": "DC90V5V9S",
+    "job": "needs_review",
+    "readiness": "export_ready_with_gaps",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": false,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 30,
+      "ru": 58
+    },
+    "gallery_from_exact_pages": 24,
+    "instruction_state": "instruction_confirmed_by_content",
+    "saved_languages": [
+      "Русский"
+    ],
+    "conflicts": [
+      "color__body",
+      "product_dimensions"
+    ],
+    "found_by_rule": "D3: «Макс. вес белья для сушки» и «Масса»; цвет частей",
+    "not_found": "2 расхождения KZ/RU (цвет корпуса, глубина 660/690)"
+  },
+  {
+    "category": "Телевизоры",
+    "article": "50UT91006LA",
+    "job": "needs_review",
+    "readiness": "export_ready_with_gaps",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": true,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 62,
+      "ru": 65
+    },
+    "gallery_from_exact_pages": 25,
+    "instruction_state": "instruction_by_content_model_not_named",
+    "saved_languages": [],
+    "conflicts": [
+      "пульт_magic_remote"
+    ],
+    "found_by_rule": "D3: телевизор с подставкой и без; решение 4 по инструкции (общая краткая инструкция)",
+    "not_found": "расхождение KZ/RU: Magic Remote «в комплекте»/«встроенный»"
+  },
+  {
+    "category": "Холодильники",
+    "article": "GC-B509SEUM",
+    "job": "done",
+    "readiness": "export_ready",
+    "readiness_before_rule_4": "export_ready_with_gaps",
+    "rule_4": true,
+    "kz": "full_sku",
+    "ru": "full_sku",
+    "facts": {
+      "kz": 19,
+      "ru": 6
+    },
+    "gallery_from_exact_pages": 30,
+    "instruction_state": "instruction_by_content_model_not_named",
+    "saved_languages": [],
+    "conflicts": [],
+    "found_by_rule": "чистый проход; решение 4 по инструкции",
+    "not_found": "страница LG Россия бедная: 6 характеристик"
+  }
+]

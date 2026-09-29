@@ -1,0 +1,78 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "category",
+        "navigation"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [
+        ".name",
+        ".sku"
+      ],
+      "microdata_properties": [],
+      "code_fields": [
+        "sku"
+      ],
+      "variant_fields": [],
+      "model_semantics": "unverified_sku_meaning"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [
+        ".image"
+      ],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": false,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "96bb1c5e16e958739c3779b9b3601a8eb8f96caedb252c056ed4f1c6184cb27c",
+    "identity": "ff39fb9a9278bf86a679bbd8c22e7b184277e0e3780e0850e7d75b226467705a",
+    "specifications": "6ebe072b40a520526d0d9af984fbfedd6470bc43b03e2fd46ee127bd21656bb8",
+    "media": "68bee36b30eb4e6d637c9a13afb13ade37c971768edb5f51d551ae99edee1640",
+    "documents": "fdb55aed55ac5500cf5554d4c1bb7fbda9739fd959d08c8e11049a5f0363bbee"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "next_js",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "__NEXT_DATA__|/_next/static/",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "4124c04ad529cf79104148f1c163f854dd09fc28e22637660544ebb6bfea87b4",
+  "fixture_version": 2
+}

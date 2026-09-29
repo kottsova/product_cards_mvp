@@ -1,0 +1,87 @@
+{
+  "pilot": {
+    "rows_run": 12,
+    "requests_total": 33,
+    "max_requests_in_one_row": 3,
+    "host_blocked": false,
+    "official_exact_page_found": 9,
+    "variant_confirmed": 9,
+    "with_specifications": 9,
+    "with_gallery_photos": 9,
+    "instruction_found": 0,
+    "dealer_added_anything": 0,
+    "job_status": {
+      "needs_review": 12
+    },
+    "readiness": {
+      "export_ready_with_gaps": 9,
+      "not_ready": 3
+    },
+    "rows_with_unresolved_conflicts": 8,
+    "failure_codes": {
+      "documents_not_checked": 12,
+      "no_supplier_confirmation_so_not_done": 12,
+      "ru_no_page": 12,
+      "supplier_no_candidate": 12,
+      "kz_no_slug_in_sitemap": 3
+    }
+  },
+  "requests": {
+    "started_at": "2026-09-24T14:49:53+00:00",
+    "finished_at": "2026-09-24T14:51:17+00:00",
+    "max_per_row": 5,
+    "max_total": 60,
+    "requests_total": 33,
+    "per_row": {
+      "XL7S": 3,
+      "MS2032GAS": 3,
+      "24MR400-B.ARUQ": 2,
+      "CK43": 3,
+      "A9N-MASTERX": 2,
+      "SN4": 3,
+      "27MD5KL-B.AEU": 2,
+      "AC09BK": 3,
+      "F2J3WS1W": 3,
+      "DC90V5V9S": 3,
+      "50UT91006LA": 3,
+      "GC-B509SEUM": 3
+    },
+    "max_requests_in_one_row": 3,
+    "halted": "",
+    "rows_not_run": [],
+    "stopped_hosts": []
+  },
+  "estimate_578": {
+    "source": "the LG KZ sitemap saved during the pilot (no request)",
+    "sitemap_product_urls": 3973,
+    "ready_rows": 578,
+    "reachable_by_the_current_rule": 426,
+    "reachable_with_a_3plus_letter_suffix_rule": 465,
+    "gain_of_the_suffix_correction": 39,
+    "not_in_the_kz_sitemap_at_all": 113,
+    "rows_with_a_dot_in_the_article": 86,
+    "suffix_letter_counts_among_dotted": {
+      "3": 1,
+      "4": 52,
+      "7": 32,
+      "10": 1
+    },
+    "note": "'reachable' = a sitemap product URL whose slug equals the article or its base model; whether the page then shows the article (full_sku) is decided on the page.",
+    "pilot_check": {
+      "pilot_rows_reachable_now": 9
+    },
+    "pilot_rows_not_reached": {
+      "24MR400-B.ARUQ": "fixed_by_the_suffix_rule",
+      "A9N-MASTERX": "absent_from_the_kz_sitemap",
+      "27MD5KL-B.AEU": "absent_from_the_kz_sitemap"
+    }
+  },
+  "conflicts": {
+    "note": "Finding made after the run; not in the taxonomy declared before it.",
+    "conflicts": 13,
+    "within_one_source": 13,
+    "between_sources": 0,
+    "rows_with_conflicts": 8,
+    "reading": "The resolver reports 'official_regions_conflict' when one normalized name has different values; NAME_RULES in normalization.py fold different measurements (weight with/without stand, indoor/outdoor unit, gross/net) into one name."
+  }
+}

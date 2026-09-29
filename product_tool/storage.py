@@ -11,6 +11,8 @@ import sqlite3
 from typing import Any, Iterator
 
 from .importer import ImportPreview
+from .identity import ProductIdentity
+from .migrations import apply_migrations
 
 
 def _json(value: Any) -> str:
@@ -70,6 +72,7 @@ def initialize(path: Path) -> None:
             );
             CREATE INDEX IF NOT EXISTS products_by_batch ON products(batch_id, category);
         """)
+        apply_migrations(connection)
 
 
 def create_draft(path: Path, draft_id: str, filename: str) -> None:
@@ -118,8 +121,8 @@ def confirm_draft(
         )
         connection.executemany(
             "INSERT INTO products (batch_id, row_number, name, brand, search_code, "
-            "alternate_code, category, needs_confirmation, issues_json, original_values_json) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "alternate_code, category, needs_confirmation, issues_json, original_values_json, identity_json) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             [
                 (
                     draft_id,
@@ -132,6 +135,7 @@ def confirm_draft(
                     int(product["needs_confirmation"]),
                     _json(product["issues"]),
                     _json(product["original_values"]),
+                    _json(ProductIdentity.from_product(product).to_dict()),
                 )
                 for product in products
             ],

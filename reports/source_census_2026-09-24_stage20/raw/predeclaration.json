@@ -1,0 +1,61 @@
+{
+  "declared_at": "2026-09-24T14:49:16+00:00",
+  "budget": {
+    "max_requests_per_row": 5,
+    "max_requests_total": 60,
+    "rows": 12,
+    "counted": "every real HTTP request of the LG official adapters and Sulpak (retries included); a sitemap answered from the in-process cache is not a request",
+    "refusal": "a request over budget is refused before it is made (marker [policy_budget_exhausted]) and the row records it"
+  },
+  "hosts_allowed": [
+    "www.lg.com",
+    "lg.com",
+    "www.sulpak.kz",
+    "sulpak.kz"
+  ],
+  "stop_rule": "any 401/403/429 or confirmed challenge (any HTTP status) stops that host in the persisted log (workdir/lg_fetch_log.json); the pilot halts before the next row and lists rows not run",
+  "pacing_seconds_between_requests": 1.0,
+  "workflow": "the ordinary worker.run_once(database) with the default adapter factories (LGAdapter, LGRUAdapter, SulpakAdapter through PolicyAwareSession; DNS default), stages 1,2,3,4,6, one job per row",
+  "dealer_check": {
+    "dns_known_urls_for_pilot_rows": [],
+    "sulpak_known_urls_for_pilot_rows": [],
+    "reading": "DNS and Sulpak fetch only URLs listed in their KNOWN_URLS maps; a row not listed there makes no dealer request"
+  },
+  "measured_per_row": [
+    "official exact page found (lg_kz, lg_ru: match level and url)",
+    "variant confirmed (full_sku on the page)",
+    "specification facts per source and resolved statuses",
+    "photos per source and kind (gallery / feature / excluded)",
+    "instructions found and their stated language",
+    "what Sulpak and DNS added (facts, photos, match level)",
+    "final job status and message",
+    "card readiness by the rule below",
+    "failure codes from the taxonomy below",
+    "the requests made (url, status) and the responses saved for offline diagnosis"
+  ],
+  "readiness_rule": {
+    "export_ready": "job status done AND an official page whose article matches the full row article (match_level full_sku, no error) AND >=1 official specification fact AND >=1 official gallery photo (kind product_gallery, not excluded, selected for export) AND >=1 instruction whose language is stated as Russian by the source AND no unresolved conflict",
+    "export_ready_with_gaps": "official full_sku page AND >=1 official specification fact AND >=1 official gallery photo, but at least one of: instruction missing, supplier confirmation missing, job not done, unresolved conflict -- the gaps are listed",
+    "not_ready": "anything else (no official full_sku page, or no official specifications, or no official gallery photo)",
+    "note": "`done` is never read as readiness by itself; the job status is reported next to the rule's verdict."
+  },
+  "failure_taxonomy": {
+    "kz_sitemap_error": "LG Kazakhstan: the sitemap could not be fetched or parsed (error on the sitemap request)",
+    "kz_no_slug_in_sitemap": "LG Kazakhstan: mismatch, 'page not found in the LG sitemap' -- no product URL whose slug equals the article or its base model",
+    "kz_page_unrecognised": "LG Kazakhstan: a page was fetched but lacks the expected product-card markup",
+    "kz_base_model_only": "LG Kazakhstan: page found for the base model, full article not on the page",
+    "kz_page_error": "LG Kazakhstan: HTTP error on a product page",
+    "ru_no_page": "LG Russia: HTTP error on the single URL the adapter builds (https://www.lg.com/ru/laundry/lg-{model})",
+    "ru_page_unrecognised": "LG Russia: a page came back without the expected markup",
+    "ru_base_model_only": "LG Russia: page found, only the base model on it",
+    "documents_no_support_link": "instructions: the RU page was read but no support-model link was extracted (the extraction only recognises one support model name)",
+    "documents_not_checked": "instructions: not attempted because there was no usable LG Russia page",
+    "documents_none_ru": "instructions: support page read, no document labelled Russian",
+    "supplier_no_candidate": "Sulpak: no bounded candidate URL for the article (it only fetches URLs listed in adapters/sulpak.KNOWN_LG_URLS)",
+    "no_supplier_confirmation_so_not_done": "worker rule: without a trusted-supplier full_sku confirmation an LG job finishes needs_review, never done",
+    "budget_exhausted": "the pilot's request budget refused a request",
+    "host_stopped": "a host was stopped by the policy (block) -- the pilot halts"
+  },
+  "export_check": "after the pilot the ordinary Excel export (exporter.export_batch) is produced for the pilot batch and counted per row",
+  "not_done_here": "the full run of the 578 rows"
+}

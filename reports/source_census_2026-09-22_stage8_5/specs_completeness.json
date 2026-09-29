@@ -1,0 +1,82 @@
+{
+  "schema_version": "stage8_5_specs_completeness.v1",
+  "source": "Stage 8.4 evidence.json + this stage's broader re-scan (specs_recheck.json) of the same already-confirmed product page",
+  "confirmed_with_evidence": [
+    {
+      "field": "usable_cavity_volume",
+      "value": "23 л",
+      "evidence": "Label 'Полезный объем рабочей камеры' + value '23 л' found together in body text; independently corroborated by <title>, JSON-LD name, and the catalog row's own alt-name field."
+    },
+    {
+      "field": "power_consumption_microwave",
+      "value": "1150 Вт",
+      "evidence": "Label 'Потребляемая мощность (микроволны)' + value '1150 Вт' found together in body text."
+    },
+    {
+      "field": "output_power_microwave",
+      "value": "800 Вт",
+      "evidence": "Label 'Выходная мощность (микроволны)' + value '800 Вт' found together in body text."
+    },
+    {
+      "field": "color",
+      "value": "Черный (Black)",
+      "evidence": "HTML <title> tag."
+    },
+    {
+      "field": "oven_type",
+      "value": "Соло (Solo, no grill/convection)",
+      "evidence": "<title> tag text '...Микроволновая печь Соло...' and URL category path /microwave-ovens/solo/."
+    }
+  ],
+  "labels_found_but_value_not_confirmed": [
+    {
+      "field": "weight",
+      "label_seen": "Вес / Вес нетто / Вес (в упаковке)",
+      "status": "label_present_value_not_found_in_static_text"
+    },
+    {
+      "field": "product_dimensions",
+      "label_seen": "Размеры изделия (ШxВxГ)",
+      "status": "label_present_value_not_found_in_static_text"
+    },
+    {
+      "field": "turntable_dimensions",
+      "label_seen": "Размеры вращающегося столика",
+      "status": "label_present_value_not_found_in_static_text"
+    },
+    {
+      "field": "control_type",
+      "label_seen": "Тип управления / Интуитивное управление / Функции управления",
+      "status": "label_present_value_not_found_in_static_text"
+    },
+    {
+      "field": "auto_programs",
+      "label_seen": "Автопрограммы",
+      "status": "label_present_value_not_found_in_static_text"
+    },
+    {
+      "field": "power_levels_count",
+      "label_seen": "Кол-во уровней мощности",
+      "status": "label_present_value_not_found_in_static_text"
+    },
+    {
+      "field": "defrost_modes",
+      "label_seen": "Разморозка (авто/быстрая/сенсорная), Авторазморозка (вес)/Разморозка (время)",
+      "status": "label_present_value_not_found_in_static_text"
+    },
+    {
+      "field": "sound_toggle",
+      "label_seen": "Звук Включен/Выключен",
+      "status": "label_present_value_not_found_in_static_text"
+    }
+  ],
+  "interpretation": "A second, broader text scan of the same product page found the LABEL text for 8 additional characteristics (weight, dimensions, turntable size, control type, auto-programs, power levels, defrost modes, sound toggle) but no adjacent value for any of them in the static HTML response. This is consistent with this whole investigation's repeated finding (Buds3 FE in Stage 8.3, this same page in Stage 8.4) that Samsung's full characteristics/specifications panel renders client-side: the label shell appears to be present statically while the populated values are injected by JavaScript. Per instructions, no value is invented for these fields -- they are listed here explicitly as unknown, not silently omitted.",
+  "important_characteristics_still_unknown": [
+    "Physical weight (net and packaged)",
+    "Physical dimensions (width x height x depth)",
+    "Turntable diameter",
+    "Control type / interface (mechanical dial vs. touch/electronic)",
+    "Number of auto-programs and power levels",
+    "Full defrost mode list"
+  ]
+}

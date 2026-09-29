@@ -23,6 +23,8 @@ def utc_now() -> str:
 class RawAttribute:
     name: str
     value: str
+    section: str = ""
+    value_cell: bool | None = None
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,74 @@
+{
+  "schema_version": "stage8_2_1_sitemap_evidence.v1",
+  "host": "www.samsung.com",
+  "scope_path": "kz_ru",
+  "offline_evidence_reused": {
+    "robots_txt": {
+      "source": "reports/source_census_2026-09-22_stage7/source_snapshots.sqlite3 (samsung_kz, https://www.samsung.com/robots.txt)",
+      "new_requests_needed": 0,
+      "finding": "robots.txt declares one Sitemap: line per region (Sitemap:https://www.samsung.com/kz_ru/sitemap.xml among ~90 others). No mobile/phone-specific sitemap is declared in robots.txt itself."
+    },
+    "sitemap_xml_index": {
+      "source": "Stage 8.2 offline reprocessing (reports/source_census_2026-09-22_stage8_2/raw/offline_reprocess.json)",
+      "new_requests_needed": 0,
+      "finding": "kz_ru/sitemap.xml is a sitemap index with 5 branches: b2c-sitemap.xml, top_sitemap.xml, business/top-sitemap.xml, business/b2b-sitemap.xml, support/sitemap.xml. Only b2c-sitemap.xml has consumer-catalog naming; the others are marketing/B2B/support by name and were not opened (no smartphone-related naming evidence)."
+    },
+    "b2c_sitemap_already_checked_in_stage8_2": {
+      "branches": [
+        "vd-sitemap.xml (visual display: TVs/audio/monitors/projectors -- 300 links, 0 smartphones)",
+        "im-sitemap.xml (IT & mobile -- 300 links, but only mobile-accessories(281) and audio-sound(19); 0 smartphones)",
+        "assorted-sitemap.xml (marketing/promo pages -- 300 links, 0 smartphones)"
+      ],
+      "new_requests_needed": 0
+    }
+  },
+  "new_requests_this_stage": [
+    {
+      "url": "https://www.samsung.com/kz_ru/da-sitemap.xml",
+      "reason": "Last unchecked branch of the already-known b2c-sitemap.xml index (digital appliances).",
+      "result": "content = home appliances (air-conditioners, cooking-appliances, dishwashers, home-appliances, microwave-ovens, refrigerators, air-care, home-appliance-accessories). 0 smartphone URLs."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+      "reason": "Last unchecked branch of the already-known b2c-sitemap.xml index (memory/storage).",
+      "result": "content = memory-storage only (90 links, e.g. SSDs). 0 smartphone URLs."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/smartphones/all-smartphones/",
+      "reason": "NOT from the sitemap system -- a first-party navigation link discovered entirely offline on the already-known kz_ru homepage snapshot (0 new requests to find it). The homepage links to /kz_ru/smartphones/... paths that the b2c-sitemap.xml branches never referenced.",
+      "result": "A real, reachable /smartphones/ site section exists (family pages: galaxy-s/, galaxy-z/, galaxy-a/, plus /buy/ configurator links), but this category page itself returned only navigation-shaped links, not a flat product grid with SKU-bearing URLs (unlike tablets/watches links seen on the same page, e.g. .../galaxy-tab-s11-ultra-gray-256gb-sm-x936bzaaskz/buy/, which DO embed color+memory+model code)."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/smartphones/galaxy-s25-ultra/",
+      "reason": "First-party link from the already-fetched smartphones/all-smartphones category page.",
+      "result": "is_product_page=false: zero JSON-LD Product objects, zero microdata Product nodes. Page text does confirm \"Galaxy S25 Ultra\" and \"Samsung\" are present."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/smartphones/galaxy-s26-ultra/buy/",
+      "reason": "First-party /buy/ configurator link from the same category page.",
+      "result": "Same as above: is_product_page=false, zero JSON-LD/microdata Product objects."
+    }
+  ],
+  "branches_deliberately_not_opened": [
+    {
+      "url": "https://www.samsung.com/kz_ru/top_sitemap.xml",
+      "reason": "No naming evidence connecting it to smartphones; opening it would mean loading an unproven branch, against instructions."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/business/top-sitemap.xml",
+      "reason": "B2B/business branch by name, not consumer catalog."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/business/b2b-sitemap.xml",
+      "reason": "B2B branch by name, not consumer catalog."
+    },
+    {
+      "url": "https://www.samsung.com/kz_ru/support/sitemap.xml",
+      "reason": "Support/documents branch by name, not a product catalog."
+    }
+  ],
+  "conclusion": {
+    "sitemap_route_status": "mobile_sitemap_no_product_urls",
+    "detail": "All 5 declared branches of the only proven consumer-catalog sitemap (b2c-sitemap.xml) were checked (3 in Stage 8.2, 2 in this stage) and none contain smartphone product URLs. A real /smartphones/ site section exists and was reached via first-party navigation (not the sitemap system), but its pages do not expose static structured product data, so no Product page fixture could be verified from it either."
+  }
+}

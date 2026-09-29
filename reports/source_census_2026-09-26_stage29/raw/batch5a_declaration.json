@@ -1,0 +1,89 @@
+{
+  "declared_at": "2026-09-26T09:14:34+00:00",
+  "stage": "29 / group 5A",
+  "brand": "Samsung",
+  "market": "kz_ru",
+  "path": "the ordinary path: Excel upload -> confirmed batch -> one search job per product (stages 1, 2, 3, 4, 6) -> worker.run_once() with the default Samsung adapter -> export through the web route",
+  "products": {
+    "Внутренние SSD-накопители": {
+      "article": "MZ-77E500BW",
+      "title": "SSD диск Samsung 870 EVO / 500Гб/2.5\"/Sata III [MZ-77E500BW]",
+      "catalog_row": 11997,
+      "page_url_listed_in_saved_sitemap": "https://www.samsung.com/kz_ru/memory-storage/sata-ssd/870-evo-512gb-sata-3-2-5-ssd-mz-77e500bw/",
+      "route_kind": "sitemap",
+      "route_addresses_in_order": [
+        "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "https://www.samsung.com/kz_ru/im-sitemap.xml"
+      ],
+      "reason": "наименьший SHA-256 артикула среди строк категории с чистым артикулом и точной страницей в сохранённой карте memory-sitemap.xml (правило партий 2 и 4)"
+    },
+    "Flash-накопители": {
+      "article": "MUF-64BE3/APC",
+      "title": "Флеш-накопитель 64 ГБ BAR Plus, USB 3.2 Gen 1 (MUF-64BE3/APC)",
+      "catalog_row": 11962,
+      "page_url_listed_in_saved_sitemap": "https://www.samsung.com/kz_ru/memory-storage/usb-flash-drive/samsung-usb-flash-drive-bar-plus-64gb-silver-muf-64be3-apc/",
+      "route_kind": "sitemap",
+      "route_addresses_in_order": [
+        "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "https://www.samsung.com/kz_ru/im-sitemap.xml"
+      ],
+      "reason": "наименьший SHA-256 артикула среди строк категории с чистым артикулом и точной страницей в сохранённой карте memory-sitemap.xml (правило партий 2 и 4)"
+    },
+    "Внешние SSD-накопители": {
+      "article": "MU-PC1T0H/WW",
+      "title": "Внешний SSD T7 (MU-PC1T0H/WW)",
+      "catalog_row": 11974,
+      "page_url_listed_in_saved_sitemap": "https://www.samsung.com/kz_ru/memory-storage/portable-ssd/portable-ssd-t7-mu-pc1t0h-ww/",
+      "route_kind": "sitemap",
+      "route_addresses_in_order": [
+        "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "https://www.samsung.com/kz_ru/im-sitemap.xml"
+      ],
+      "reason": "наименьший SHA-256 артикула среди строк категории с чистым артикулом и точной страницей в сохранённой карте memory-sitemap.xml (правило партий 2 и 4)"
+    },
+    "Карты памяти": {
+      "article": "MB-MC64HARU",
+      "title": "Карта памяти Samsung microSDXC 64 Гб [MB-MC64HARU]",
+      "catalog_row": 12051,
+      "page_url_listed_in_saved_sitemap": "https://www.samsung.com/kz_ru/memory-storage/memory-card/evo-plus-microsd-card-64gb-mb-mc64ha-ru/",
+      "route_kind": "sitemap",
+      "route_addresses_in_order": [
+        "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "https://www.samsung.com/kz_ru/im-sitemap.xml"
+      ],
+      "reason": "наименьший SHA-256 артикула среди строк категории с чистым артикулом и точной страницей в сохранённой карте memory-sitemap.xml (правило партий 2 и 4)"
+    }
+  },
+  "budget": {
+    "max_real_requests_total": 13,
+    "max_real_requests_per_product": 7,
+    "pacing_seconds": 1.5,
+    "document_cap_mb": 40,
+    "hosts": [
+      "www.samsung.com",
+      "org.downloadcenter.samsung.com",
+      "downloadcenter.samsung.com"
+    ],
+    "plan": {
+      "sitemaps": "1: memory-sitemap.xml (all four rows are looked up there first), read once for the whole batch; im-sitemap.xml only if memory-sitemap.xml has no page",
+      "product_pages": 4,
+      "instruction_files": "at most 2 per product (8): the file whose name says RU first; only files the official page itself prints; nothing else is fetched",
+      "buy_pages": "0 expected (a buy page is asked for only when the page's own markup names one and the page has no gallery; the per-row cap still applies)",
+      "images": 0
+    },
+    "enforced_by": "PolicyAwareSession + RequestBudget (max_total 13, max_per_row 7): a request over the budget is refused before it is made"
+  },
+  "stop_rules": {
+    "statuses": "a 401, 403 or 429, or a confirmed challenge, on any Samsung host stops that host in <workdir>/samsung_fetch_log.json; no further request is made to it, in this run or a later one",
+    "batch": "after every job the batch script re-reads the log; if any host is stopped, no further job is started (the rest stay queued)",
+    "no_retries_elsewhere": "no other host, no changed headers, no guessed address"
+  },
+  "url_construction": "none: a page address comes only from the official sitemap (a code in the address only makes the page a candidate; the exact variant is confirmed from the fetched page's content); a document address only from a link the official page prints",
+  "dealer": {
+    "source": "DNS",
+    "requests": 0,
+    "rule": "no verified exact dealer URL exists for these products, so the dealer adapter makes no request and only writes the ready-to-ask link request for the missing fields"
+  },
+  "recording": "every real response is saved (gzip + index) for offline replay; document bodies are then reduced to their extracted text (docs_extract)",
+  "not_done": "group 5B (watch, band, cable); the eight categories without an observed page; any bulk processing of catalog rows"
+}

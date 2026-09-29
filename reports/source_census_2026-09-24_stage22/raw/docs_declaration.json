@@ -1,0 +1,19 @@
+{
+  "declared_at": "2026-09-24T16:07:30+00:00",
+  "budget": {
+    "max_requests_all_phases": 8,
+    "host": "www.lg.com",
+    "pacing_seconds": 1.0,
+    "phase_a_max": 2
+  },
+  "origin": "reports/source_census_2026-09-24_stage21/verify/responses (manuals page for XL7S.DRUSLLK, <script src> list)",
+  "S1": "https://www.lg.com/lg5-common-gp/js/common-support.min.js",
+  "S2": "https://www.lg.com/lg5-common-gp/js/support/select-product-category.min.js",
+  "S2_condition": "S1 text has none of: data-detail, manual-select, modelDetail, retrieveGp",
+  "phase_b": "GET only; URL literal from the script; parameters named by the script with values only from the product's saved page; <=2 list requests per product; products XL7S then MS2032GAS (only if XL7S returned a list naming its model)",
+  "phase_c": "<=1 file request per product; only a href printed in that product's list response; host lg.com or *.lge.com; complete + %PDF- required",
+  "classification": "candidate link -> reachable file -> instruction confirmed by content; language from extracted text only",
+  "stop_rule": "401/403/429 or confirmed challenge: host stopped in data/lg_fetch_log.json, probe ends; a stop by rule starts a new declared stage",
+  "url_construction": "none",
+  "script": "reports/source_census_2026-09-24_stage22/scripts/01_docs_route_phase_a.py"
+}

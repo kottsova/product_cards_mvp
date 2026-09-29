@@ -1,0 +1,96 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [
+        "GET:search:html_search_form"
+      ],
+      "navigation": [
+        "category",
+        "navigation",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [
+        ".name",
+        ".sku"
+      ],
+      "microdata_properties": [],
+      "code_fields": [
+        "sku"
+      ],
+      "variant_fields": [],
+      "model_semantics": "unverified_sku_meaning"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [
+        ".image"
+      ],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [
+        "a[href:pdf]"
+      ],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "3b4b36a1ac4e88edc18d2dd1d412098bae4abc215ce2aeff0fe7a0e4efaf3b44",
+    "identity": "ff39fb9a9278bf86a679bbd8c22e7b184277e0e3780e0850e7d75b226467705a",
+    "specifications": "6ebe072b40a520526d0d9af984fbfedd6470bc43b03e2fd46ee127bd21656bb8",
+    "media": "68bee36b30eb4e6d637c9a13afb13ade37c971768edb5f51d551ae99edee1640",
+    "documents": "aedea6cd934cf222c4b9f560b26c06e3117031ed4e394e07d6c7a0c4fb2fdb5e"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": true,
+    "documents": true
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "generic_json_ld_product",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "json_ld",
+          "signal": "@type=Product",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "engine": "adobe_experience_manager",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "09193b9cbb4aa8b11349b75ad814343b86ae8126d918301f8ddb43c3f195dd4f",
+  "fixture_version": 2
+}

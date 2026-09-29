@@ -1,0 +1,2646 @@
+{
+  "runs": [
+    {
+      "source_family": "lg_kz",
+      "source_url": "https://www.lg.com/kz",
+      "source_origin": "source_catalog.v2",
+      "catalog_identity": {
+        "brand_raw": "LG",
+        "brand_canonical": "lg",
+        "category_raw": "Телевизоры",
+        "category_canonical": "display",
+        "seller_sku": "27ART10AKPL",
+        "wb_sku": "",
+        "title_raw": "27ART10AKPL",
+        "model_candidates": [
+          "27ART10AKPL"
+        ],
+        "variant_attributes": {},
+        "market": ""
+      },
+      "result": {
+        "strategy": "internal_search",
+        "strategy_evidence": {
+          "routes": [
+            {
+              "action_url": "https://www.lg.com/kz/search",
+              "method": "GET",
+              "query_parameter": "q",
+              "constant_parameters": [],
+              "source": "configured_endpoint",
+              "originating_page": "https://www.lg.com/kz",
+              "allowed_host": "www.lg.com",
+              "confidence": 1.0,
+              "rejection_reason": "",
+              "timestamp": "2026-09-22T14:11:44.321992+00:00",
+              "disposition": "safe_get",
+              "action": "https://www.lg.com/kz/search",
+              "type": "search_path"
+            }
+          ],
+          "queries": [
+            {
+              "query": "27ART10AKPL",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [
+            {
+              "query": "27ART10AKPL",
+              "reason": "exact_seller_manufacturer_model_code",
+              "request_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "timestamp": "2026-09-22T14:11:44.323405+00:00",
+              "outcome": "search_results_found",
+              "final_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "access_status": "direct_access"
+            }
+          ],
+          "events": [
+            "search_results_found",
+            "candidate_product_found",
+            "candidate_product_found",
+            "candidate_product_found"
+          ],
+          "production_ready": false
+        },
+        "source_family": "lg_kz",
+        "candidates": [
+          {
+            "url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+            "final_url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 60,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "product_like_path:+25",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Уход и чистка бытовой техники",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "direct_access",
+            "protection_status": "ordinary_page",
+            "identity_verification": {
+              "level": "insufficient",
+              "evidence": [
+                {
+                  "evidence_type": "model_code",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 1.0,
+                  "state": "missing"
+                },
+                {
+                  "evidence_type": "seller_sku",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 0.8,
+                  "state": "missing"
+                }
+              ],
+              "reason": "There is not enough structured identity evidence."
+            },
+            "rejection_reason": "results_identity_insufficient"
+          },
+          {
+            "url": "https://www.lg.com/kz/support/product-support/manuals-software",
+            "final_url": "https://www.lg.com/kz/support/product-support/manuals-software",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 60,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "product_like_path:+25",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Руководства и загрузки",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "direct_access",
+            "protection_status": "challenge_suspected",
+            "identity_verification": {
+              "level": "insufficient",
+              "evidence": [
+                {
+                  "evidence_type": "model_code",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://www.lg.com/kz/support/product-support/manuals-software",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 1.0,
+                  "state": "missing"
+                },
+                {
+                  "evidence_type": "seller_sku",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://www.lg.com/kz/support/product-support/manuals-software",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 0.8,
+                  "state": "missing"
+                }
+              ],
+              "reason": "There is not enough structured identity evidence."
+            },
+            "rejection_reason": "results_identity_insufficient"
+          },
+          {
+            "url": "https://www.lg.com/kz/support/product-support/product-registration",
+            "final_url": "https://www.lg.com/kz/support/product-support/product-registration",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 60,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "product_like_path:+25",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Зарегистрировать продукт",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "direct_access",
+            "protection_status": "challenge_suspected",
+            "identity_verification": {
+              "level": "insufficient",
+              "evidence": [
+                {
+                  "evidence_type": "model_code",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://www.lg.com/kz/support/product-support/product-registration",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 1.0,
+                  "state": "missing"
+                },
+                {
+                  "evidence_type": "seller_sku",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://www.lg.com/kz/support/product-support/product-registration",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 0.8,
+                  "state": "missing"
+                }
+              ],
+              "reason": "There is not enough structured identity evidence."
+            },
+            "rejection_reason": "results_identity_insufficient"
+          },
+          {
+            "url": "https://www.lg.com/kz/support/product-support/repair-request",
+            "final_url": "",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 60,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "product_like_path:+25",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Заявка на ремонт",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://www.lg.com/kz/support/product-support/troubleshoot",
+            "final_url": "",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 60,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "product_like_path:+25",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Устранение неполадок",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://www.lg.com/kz/my-lg",
+            "final_url": "",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Моя страница LG",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://www.lg.com/kz/support/contact-us",
+            "final_url": "",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Свяжитесь с нами",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://www.lg.com/kz/support/contact-us/web-survey",
+            "final_url": "",
+            "source_family": "lg_kz",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "title": "Поделитесь своим отзывом",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          }
+        ],
+        "budget_used": {
+          "http_requests": 8,
+          "sitemap_documents": 0,
+          "valid_sitemap_documents": 0,
+          "urls_read": 8,
+          "product_pages": 3,
+          "search_queries": 1
+        },
+        "sitemap_feed_urls": [],
+        "redirect_evidence": [
+          {
+            "url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+            "chain": [
+              "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "https://www.lg.com/kz/search?q=27ART10AKPL"
+            ],
+            "final_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+            "allowed": true
+          },
+          {
+            "url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+            "chain": [
+              "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+              "https://www.lg.com/kz/support/product-support/appliances-cleaning"
+            ],
+            "final_url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+            "allowed": true
+          },
+          {
+            "url": "https://www.lg.com/kz/support/product-support/manuals-software",
+            "chain": [
+              "https://www.lg.com/kz/support/product-support/manuals-software",
+              "https://www.lg.com/kz/support/product-support/manuals-software"
+            ],
+            "final_url": "https://www.lg.com/kz/support/product-support/manuals-software",
+            "allowed": true
+          },
+          {
+            "url": "https://www.lg.com/kz/support/product-support/product-registration",
+            "chain": [
+              "https://www.lg.com/kz/support/product-support/product-registration",
+              "https://www.lg.com/kz/support/product-support/product-registration"
+            ],
+            "final_url": "https://www.lg.com/kz/support/product-support/product-registration",
+            "allowed": true
+          }
+        ],
+        "errors": [],
+        "truncated": false,
+        "stop_reason": "results_identity_insufficient",
+        "checkpoint": {
+          "version": 1,
+          "strategy": "internal_search",
+          "identity_key": "8bf91653af42c15c04bc2fb0af33b94b299cc3ee7a8e0fb40b2538f2e8c8aad1",
+          "status": "complete",
+          "routes": [
+            {
+              "action_url": "https://www.lg.com/kz/search",
+              "method": "GET",
+              "query_parameter": "q",
+              "constant_parameters": [],
+              "source": "configured_endpoint",
+              "originating_page": "https://www.lg.com/kz",
+              "allowed_host": "www.lg.com",
+              "confidence": 1.0,
+              "rejection_reason": "",
+              "timestamp": "2026-09-22T14:11:44.321992+00:00",
+              "disposition": "safe_get",
+              "action": "https://www.lg.com/kz/search",
+              "type": "search_path"
+            }
+          ],
+          "route_checked": true,
+          "queries": [
+            {
+              "query": "27ART10AKPL",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [
+            {
+              "query": "27ART10AKPL",
+              "reason": "exact_seller_manufacturer_model_code",
+              "request_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "timestamp": "2026-09-22T14:11:44.323405+00:00",
+              "outcome": "search_results_found",
+              "final_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "access_status": "direct_access"
+            }
+          ],
+          "requests": [
+            {
+              "url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "timestamp": "2026-09-22T14:11:44.323510+00:00"
+            },
+            {
+              "url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "timestamp": "2026-09-22T14:11:45.629957+00:00"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+              "timestamp": "2026-09-22T14:11:47.104636+00:00"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+              "timestamp": "2026-09-22T14:11:48.196002+00:00"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/manuals-software",
+              "timestamp": "2026-09-22T14:11:49.743445+00:00"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/manuals-software",
+              "timestamp": "2026-09-22T14:11:50.823072+00:00"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/product-registration",
+              "timestamp": "2026-09-22T14:11:52.396972+00:00"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/product-registration",
+              "timestamp": "2026-09-22T14:11:53.522480+00:00"
+            }
+          ],
+          "candidates": [
+            {
+              "url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+              "final_url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 60,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "product_like_path:+25",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Уход и чистка бытовой техники",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "direct_access",
+              "protection_status": "ordinary_page",
+              "identity_verification": {
+                "level": "insufficient",
+                "evidence": [
+                  {
+                    "evidence_type": "model_code",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 1.0,
+                    "state": "missing"
+                  },
+                  {
+                    "evidence_type": "seller_sku",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 0.8,
+                    "state": "missing"
+                  }
+                ],
+                "reason": "There is not enough structured identity evidence."
+              },
+              "rejection_reason": "results_identity_insufficient"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/manuals-software",
+              "final_url": "https://www.lg.com/kz/support/product-support/manuals-software",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 60,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "product_like_path:+25",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Руководства и загрузки",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "direct_access",
+              "protection_status": "challenge_suspected",
+              "identity_verification": {
+                "level": "insufficient",
+                "evidence": [
+                  {
+                    "evidence_type": "model_code",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://www.lg.com/kz/support/product-support/manuals-software",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 1.0,
+                    "state": "missing"
+                  },
+                  {
+                    "evidence_type": "seller_sku",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://www.lg.com/kz/support/product-support/manuals-software",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 0.8,
+                    "state": "missing"
+                  }
+                ],
+                "reason": "There is not enough structured identity evidence."
+              },
+              "rejection_reason": "results_identity_insufficient"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/product-registration",
+              "final_url": "https://www.lg.com/kz/support/product-support/product-registration",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 60,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "product_like_path:+25",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Зарегистрировать продукт",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "direct_access",
+              "protection_status": "challenge_suspected",
+              "identity_verification": {
+                "level": "insufficient",
+                "evidence": [
+                  {
+                    "evidence_type": "model_code",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://www.lg.com/kz/support/product-support/product-registration",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 1.0,
+                    "state": "missing"
+                  },
+                  {
+                    "evidence_type": "seller_sku",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://www.lg.com/kz/support/product-support/product-registration",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 0.8,
+                    "state": "missing"
+                  }
+                ],
+                "reason": "There is not enough structured identity evidence."
+              },
+              "rejection_reason": "results_identity_insufficient"
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/repair-request",
+              "final_url": "",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 60,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "product_like_path:+25",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Заявка на ремонт",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/troubleshoot",
+              "final_url": "",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 60,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "product_like_path:+25",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Устранение неполадок",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://www.lg.com/kz/my-lg",
+              "final_url": "",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Моя страница LG",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://www.lg.com/kz/support/contact-us",
+              "final_url": "",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Свяжитесь с нами",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://www.lg.com/kz/support/contact-us/web-survey",
+              "final_url": "",
+              "source_family": "lg_kz",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+                  "title": "Поделитесь своим отзывом",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            }
+          ],
+          "budget_used": {
+            "http_requests": 8,
+            "sitemap_documents": 0,
+            "valid_sitemap_documents": 0,
+            "urls_read": 8,
+            "product_pages": 3,
+            "search_queries": 1
+          },
+          "redirect_evidence": [
+            {
+              "url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "chain": [
+                "https://www.lg.com/kz/search?q=27ART10AKPL",
+                "https://www.lg.com/kz/search?q=27ART10AKPL"
+              ],
+              "final_url": "https://www.lg.com/kz/search?q=27ART10AKPL",
+              "allowed": true
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+              "chain": [
+                "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+                "https://www.lg.com/kz/support/product-support/appliances-cleaning"
+              ],
+              "final_url": "https://www.lg.com/kz/support/product-support/appliances-cleaning",
+              "allowed": true
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/manuals-software",
+              "chain": [
+                "https://www.lg.com/kz/support/product-support/manuals-software",
+                "https://www.lg.com/kz/support/product-support/manuals-software"
+              ],
+              "final_url": "https://www.lg.com/kz/support/product-support/manuals-software",
+              "allowed": true
+            },
+            {
+              "url": "https://www.lg.com/kz/support/product-support/product-registration",
+              "chain": [
+                "https://www.lg.com/kz/support/product-support/product-registration",
+                "https://www.lg.com/kz/support/product-support/product-registration"
+              ],
+              "final_url": "https://www.lg.com/kz/support/product-support/product-registration",
+              "allowed": true
+            }
+          ],
+          "events": [
+            "search_results_found",
+            "candidate_product_found",
+            "candidate_product_found",
+            "candidate_product_found"
+          ],
+          "errors": [],
+          "stop_reason": "results_identity_insufficient",
+          "started_at": "2026-09-22T14:11:44.321143+00:00",
+          "updated_at": "2026-09-22T14:11:54.153508+00:00"
+        },
+        "started_at": "2026-09-22T14:11:44.321143+00:00",
+        "finished_at": "2026-09-22T14:11:54.154311+00:00"
+      },
+      "readiness": {
+        "product_page_found": true,
+        "exact_model_validated": false,
+        "exact_variant_validated": false,
+        "production_ready": false
+      },
+      "resume_verification": {
+        "stop_reason": "checkpoint_complete",
+        "new_http_requests": 0,
+        "checkpoint_unchanged": true
+      }
+    },
+    {
+      "source_family": "bosch_home",
+      "source_url": "https://www.bosch-home.com/",
+      "source_origin": "source_catalog.v2",
+      "catalog_identity": {
+        "brand_raw": "BOSCH",
+        "brand_canonical": "bosch",
+        "category_raw": "Машины посудомоечные",
+        "category_canonical": "bosch_home",
+        "seller_sku": "SBV45FX01R",
+        "wb_sku": "",
+        "title_raw": "SBV45FX01R",
+        "model_candidates": [
+          "SBV45FX01R"
+        ],
+        "variant_attributes": {},
+        "market": ""
+      },
+      "result": {
+        "strategy": "internal_search",
+        "strategy_evidence": {
+          "routes": [],
+          "queries": [
+            {
+              "query": "SBV45FX01R",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [],
+          "events": [],
+          "production_ready": false
+        },
+        "source_family": "bosch_home",
+        "candidates": [],
+        "budget_used": {
+          "http_requests": 1,
+          "sitemap_documents": 0,
+          "valid_sitemap_documents": 0,
+          "urls_read": 0,
+          "product_pages": 0,
+          "search_queries": 0
+        },
+        "sitemap_feed_urls": [],
+        "redirect_evidence": [],
+        "errors": [],
+        "truncated": false,
+        "stop_reason": "search_route_not_found",
+        "checkpoint": {
+          "version": 1,
+          "strategy": "internal_search",
+          "identity_key": "d2cb267d6a9e077adf034b7ec263633f494a40522f38aa6637888bf441fe128c",
+          "status": "complete",
+          "routes": [],
+          "route_checked": true,
+          "queries": [
+            {
+              "query": "SBV45FX01R",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [],
+          "requests": [
+            {
+              "url": "https://www.bosch-home.com/",
+              "timestamp": "2026-09-22T14:11:54.162986+00:00"
+            }
+          ],
+          "candidates": [],
+          "budget_used": {
+            "http_requests": 1,
+            "sitemap_documents": 0,
+            "valid_sitemap_documents": 0,
+            "urls_read": 0,
+            "product_pages": 0,
+            "search_queries": 0
+          },
+          "redirect_evidence": [],
+          "events": [],
+          "errors": [],
+          "stop_reason": "search_route_not_found",
+          "started_at": "2026-09-22T14:11:54.162635+00:00",
+          "updated_at": "2026-09-22T14:11:54.856791+00:00"
+        },
+        "started_at": "2026-09-22T14:11:54.162635+00:00",
+        "finished_at": "2026-09-22T14:11:54.857562+00:00"
+      },
+      "readiness": {
+        "product_page_found": false,
+        "exact_model_validated": false,
+        "exact_variant_validated": false,
+        "production_ready": false
+      },
+      "resume_verification": {
+        "stop_reason": "checkpoint_complete",
+        "new_http_requests": 0,
+        "checkpoint_unchanged": true
+      }
+    },
+    {
+      "source_family": "apple_kz",
+      "source_url": "https://www.apple.com/kz",
+      "source_origin": "source_catalog.v2",
+      "catalog_identity": {
+        "brand_raw": "Apple",
+        "brand_canonical": "apple",
+        "category_raw": "Чехлы для телефонов",
+        "category_canonical": "smartphone",
+        "seller_sku": "MGEX4FE/A",
+        "wb_sku": "",
+        "title_raw": "MGEX4FE/A",
+        "model_candidates": [
+          "MGEX4FE/A"
+        ],
+        "variant_attributes": {},
+        "market": ""
+      },
+      "result": {
+        "strategy": "internal_search",
+        "strategy_evidence": {
+          "routes": [],
+          "queries": [
+            {
+              "query": "MGEX4FE/A",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [],
+          "events": [],
+          "production_ready": false
+        },
+        "source_family": "apple_kz",
+        "candidates": [],
+        "budget_used": {
+          "http_requests": 1,
+          "sitemap_documents": 0,
+          "valid_sitemap_documents": 0,
+          "urls_read": 0,
+          "product_pages": 0,
+          "search_queries": 0
+        },
+        "sitemap_feed_urls": [],
+        "redirect_evidence": [],
+        "errors": [],
+        "truncated": false,
+        "stop_reason": "search_route_not_found",
+        "checkpoint": {
+          "version": 1,
+          "strategy": "internal_search",
+          "identity_key": "d66976b3f44830bcdcdf65f98a67c29e0c7201f6103849e0fbc8fff442063e89",
+          "status": "complete",
+          "routes": [],
+          "route_checked": true,
+          "queries": [
+            {
+              "query": "MGEX4FE/A",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [],
+          "requests": [
+            {
+              "url": "https://www.apple.com/kz",
+              "timestamp": "2026-09-22T14:11:54.866130+00:00"
+            }
+          ],
+          "candidates": [],
+          "budget_used": {
+            "http_requests": 1,
+            "sitemap_documents": 0,
+            "valid_sitemap_documents": 0,
+            "urls_read": 0,
+            "product_pages": 0,
+            "search_queries": 0
+          },
+          "redirect_evidence": [],
+          "events": [],
+          "errors": [],
+          "stop_reason": "search_route_not_found",
+          "started_at": "2026-09-22T14:11:54.865961+00:00",
+          "updated_at": "2026-09-22T14:11:55.274980+00:00"
+        },
+        "started_at": "2026-09-22T14:11:54.865961+00:00",
+        "finished_at": "2026-09-22T14:11:55.275532+00:00"
+      },
+      "readiness": {
+        "product_page_found": false,
+        "exact_model_validated": false,
+        "exact_variant_validated": false,
+        "production_ready": false
+      },
+      "resume_verification": {
+        "stop_reason": "checkpoint_complete",
+        "new_http_requests": 0,
+        "checkpoint_unchanged": true
+      }
+    },
+    {
+      "source_family": "karcher_global",
+      "source_url": "https://www.kaercher.com/gb/en",
+      "source_origin": "source_candidates.v1",
+      "catalog_identity": {
+        "brand_raw": "Karcher",
+        "brand_canonical": "karcher",
+        "category_raw": "Пылесосы",
+        "category_canonical": "generic",
+        "seller_sku": "1.055-701.0",
+        "wb_sku": "",
+        "title_raw": "1.055-701.0",
+        "model_candidates": [
+          "1.055-701.0"
+        ],
+        "variant_attributes": {},
+        "market": ""
+      },
+      "result": {
+        "strategy": "internal_search",
+        "strategy_evidence": {
+          "routes": [
+            {
+              "action_url": "https://www.kaercher.com/gb/en/dealer-search-main",
+              "method": "GET",
+              "query_parameter": "",
+              "constant_parameters": [],
+              "source": "first_party_search_link",
+              "originating_page": "https://www.kaercher.com/gb/en",
+              "allowed_host": "www.kaercher.com",
+              "confidence": 0.8,
+              "rejection_reason": "query_parameter_not_declared",
+              "timestamp": "2026-09-22T14:11:56.038183+00:00",
+              "disposition": "manual_or_future_strategy",
+              "action": "https://www.kaercher.com/gb/en/dealer-search-main",
+              "type": "search_path"
+            }
+          ],
+          "queries": [
+            {
+              "query": "1.055-701.0",
+              "reason": "exact_seller_manufacturer_model_code"
+            },
+            {
+              "query": "1.055701.0",
+              "reason": "remove_spaces_and_hyphens_preserve_revision_and_index"
+            }
+          ],
+          "completed_queries": [],
+          "events": [],
+          "production_ready": false
+        },
+        "source_family": "karcher_global",
+        "candidates": [],
+        "budget_used": {
+          "http_requests": 1,
+          "sitemap_documents": 0,
+          "valid_sitemap_documents": 0,
+          "urls_read": 0,
+          "product_pages": 0,
+          "search_queries": 0
+        },
+        "sitemap_feed_urls": [],
+        "redirect_evidence": [],
+        "errors": [],
+        "truncated": false,
+        "stop_reason": "unsafe_search_route",
+        "checkpoint": {
+          "version": 1,
+          "strategy": "internal_search",
+          "identity_key": "4ab2d4aa832f5558003c9466f234c93f7416c734e672ab80283362ac08144eda",
+          "status": "complete",
+          "routes": [
+            {
+              "action_url": "https://www.kaercher.com/gb/en/dealer-search-main",
+              "method": "GET",
+              "query_parameter": "",
+              "constant_parameters": [],
+              "source": "first_party_search_link",
+              "originating_page": "https://www.kaercher.com/gb/en",
+              "allowed_host": "www.kaercher.com",
+              "confidence": 0.8,
+              "rejection_reason": "query_parameter_not_declared",
+              "timestamp": "2026-09-22T14:11:56.038183+00:00",
+              "disposition": "manual_or_future_strategy",
+              "action": "https://www.kaercher.com/gb/en/dealer-search-main",
+              "type": "search_path"
+            }
+          ],
+          "route_checked": true,
+          "queries": [
+            {
+              "query": "1.055-701.0",
+              "reason": "exact_seller_manufacturer_model_code"
+            },
+            {
+              "query": "1.055701.0",
+              "reason": "remove_spaces_and_hyphens_preserve_revision_and_index"
+            }
+          ],
+          "completed_queries": [],
+          "requests": [
+            {
+              "url": "https://www.kaercher.com/gb/en",
+              "timestamp": "2026-09-22T14:11:55.283740+00:00"
+            }
+          ],
+          "candidates": [],
+          "budget_used": {
+            "http_requests": 1,
+            "sitemap_documents": 0,
+            "valid_sitemap_documents": 0,
+            "urls_read": 0,
+            "product_pages": 0,
+            "search_queries": 0
+          },
+          "redirect_evidence": [],
+          "events": [],
+          "errors": [],
+          "stop_reason": "unsafe_search_route",
+          "started_at": "2026-09-22T14:11:55.283501+00:00",
+          "updated_at": "2026-09-22T14:11:56.039510+00:00"
+        },
+        "started_at": "2026-09-22T14:11:55.283501+00:00",
+        "finished_at": "2026-09-22T14:11:56.040056+00:00"
+      },
+      "readiness": {
+        "product_page_found": false,
+        "exact_model_validated": false,
+        "exact_variant_validated": false,
+        "production_ready": false
+      },
+      "resume_verification": {
+        "stop_reason": "checkpoint_complete",
+        "new_http_requests": 0,
+        "checkpoint_unchanged": true
+      }
+    },
+    {
+      "source_family": "dreame",
+      "source_url": "https://global.dreametech.com/collections/all",
+      "source_origin": "source_research.v1",
+      "catalog_identity": {
+        "brand_raw": "Dreame",
+        "brand_canonical": "dreame",
+        "category_raw": "Пылесосы",
+        "category_canonical": "generic",
+        "seller_sku": "HHR12A",
+        "wb_sku": "",
+        "title_raw": "HHR12A",
+        "model_candidates": [
+          "HHR12A"
+        ],
+        "variant_attributes": {},
+        "market": ""
+      },
+      "result": {
+        "strategy": "internal_search",
+        "strategy_evidence": {
+          "routes": [
+            {
+              "action_url": "https://global.dreametech.com/search",
+              "method": "GET",
+              "query_parameter": "",
+              "constant_parameters": [],
+              "source": "first_party_search_link",
+              "originating_page": "https://global.dreametech.com/collections/all",
+              "allowed_host": "global.dreametech.com",
+              "confidence": 0.8,
+              "rejection_reason": "query_parameter_not_declared",
+              "timestamp": "2026-09-22T14:11:57.290135+00:00",
+              "disposition": "manual_or_future_strategy",
+              "action": "https://global.dreametech.com/search",
+              "type": "search_path"
+            }
+          ],
+          "queries": [
+            {
+              "query": "HHR12A",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [],
+          "events": [],
+          "production_ready": false
+        },
+        "source_family": "dreame",
+        "candidates": [],
+        "budget_used": {
+          "http_requests": 1,
+          "sitemap_documents": 0,
+          "valid_sitemap_documents": 0,
+          "urls_read": 0,
+          "product_pages": 0,
+          "search_queries": 0
+        },
+        "sitemap_feed_urls": [],
+        "redirect_evidence": [],
+        "errors": [],
+        "truncated": false,
+        "stop_reason": "unsafe_search_route",
+        "checkpoint": {
+          "version": 1,
+          "strategy": "internal_search",
+          "identity_key": "6d1da2f1cfe03d1f32ad59b5d90d381f56ccfeede2a1977f0d1b5ab58aab5eb3",
+          "status": "complete",
+          "routes": [
+            {
+              "action_url": "https://global.dreametech.com/search",
+              "method": "GET",
+              "query_parameter": "",
+              "constant_parameters": [],
+              "source": "first_party_search_link",
+              "originating_page": "https://global.dreametech.com/collections/all",
+              "allowed_host": "global.dreametech.com",
+              "confidence": 0.8,
+              "rejection_reason": "query_parameter_not_declared",
+              "timestamp": "2026-09-22T14:11:57.290135+00:00",
+              "disposition": "manual_or_future_strategy",
+              "action": "https://global.dreametech.com/search",
+              "type": "search_path"
+            }
+          ],
+          "route_checked": true,
+          "queries": [
+            {
+              "query": "HHR12A",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [],
+          "requests": [
+            {
+              "url": "https://global.dreametech.com/collections/all",
+              "timestamp": "2026-09-22T14:11:56.049511+00:00"
+            }
+          ],
+          "candidates": [],
+          "budget_used": {
+            "http_requests": 1,
+            "sitemap_documents": 0,
+            "valid_sitemap_documents": 0,
+            "urls_read": 0,
+            "product_pages": 0,
+            "search_queries": 0
+          },
+          "redirect_evidence": [],
+          "events": [],
+          "errors": [],
+          "stop_reason": "unsafe_search_route",
+          "started_at": "2026-09-22T14:11:56.049320+00:00",
+          "updated_at": "2026-09-22T14:11:57.293031+00:00"
+        },
+        "started_at": "2026-09-22T14:11:56.049320+00:00",
+        "finished_at": "2026-09-22T14:11:57.293598+00:00"
+      },
+      "readiness": {
+        "product_page_found": false,
+        "exact_model_validated": false,
+        "exact_variant_validated": false,
+        "production_ready": false
+      },
+      "resume_verification": {
+        "stop_reason": "checkpoint_complete",
+        "new_http_requests": 0,
+        "checkpoint_unchanged": true
+      }
+    },
+    {
+      "source_family": "hyperx",
+      "source_url": "https://hyperx.com/pages/support",
+      "source_origin": "source_research.v1",
+      "catalog_identity": {
+        "brand_raw": "HYPERX",
+        "brand_canonical": "hyperx",
+        "category_raw": "Наушники игровые",
+        "category_canonical": "generic",
+        "seller_sku": "4P5D4AA",
+        "wb_sku": "",
+        "title_raw": "4P5D4AA",
+        "model_candidates": [
+          "4P5D4AA"
+        ],
+        "variant_attributes": {},
+        "market": ""
+      },
+      "result": {
+        "strategy": "internal_search",
+        "strategy_evidence": {
+          "routes": [
+            {
+              "action_url": "https://hyperx.com/search",
+              "method": "GET",
+              "query_parameter": "q",
+              "constant_parameters": [
+                [
+                  "options[prefix]",
+                  "last"
+                ],
+                [
+                  "type",
+                  "product"
+                ]
+              ],
+              "source": "html_search_form",
+              "originating_page": "https://hyperx.com/pages/support",
+              "allowed_host": "hyperx.com",
+              "confidence": 0.8,
+              "rejection_reason": "",
+              "timestamp": "2026-09-22T14:11:57.798218+00:00",
+              "disposition": "safe_get",
+              "action": "https://hyperx.com/search",
+              "type": "search_form"
+            },
+            {
+              "action_url": "https://hyperx.com/search",
+              "method": "GET",
+              "query_parameter": "q",
+              "constant_parameters": [
+                [
+                  "options[prefix]",
+                  "last"
+                ]
+              ],
+              "source": "html_search_form",
+              "originating_page": "https://hyperx.com/pages/support",
+              "allowed_host": "hyperx.com",
+              "confidence": 0.8,
+              "rejection_reason": "",
+              "timestamp": "2026-09-22T14:11:57.798277+00:00",
+              "disposition": "safe_get",
+              "action": "https://hyperx.com/search",
+              "type": "search_form"
+            }
+          ],
+          "queries": [
+            {
+              "query": "4P5D4AA",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [
+            {
+              "query": "4P5D4AA",
+              "reason": "exact_seller_manufacturer_model_code",
+              "request_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+              "timestamp": "2026-09-22T14:11:57.800314+00:00",
+              "outcome": "search_results_found",
+              "final_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+              "access_status": "direct_access"
+            }
+          ],
+          "events": [
+            "search_results_found",
+            "candidate_product_found",
+            "candidate_product_found",
+            "candidate_product_found"
+          ],
+          "production_ready": false
+        },
+        "source_family": "hyperx",
+        "candidates": [
+          {
+            "url": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+            "final_url": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 60,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "product_like_path:+25",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "direct_access",
+            "protection_status": "challenge_suspected",
+            "identity_verification": {
+              "level": "exact_model",
+              "evidence": [
+                {
+                  "evidence_type": "model_code",
+                  "raw_value": "4P5D4AA",
+                  "normalized_value": "4P5D4AA",
+                  "source": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 1.0,
+                  "state": "match"
+                },
+                {
+                  "evidence_type": "seller_sku",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 0.8,
+                  "state": "missing"
+                }
+              ],
+              "reason": "Model matches; significant variant evidence is absent or incomplete."
+            },
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/",
+            "final_url": "https://hyperx.com/",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "direct_access",
+            "protection_status": "challenge_suspected",
+            "identity_verification": {
+              "level": "insufficient",
+              "evidence": [
+                {
+                  "evidence_type": "model_code",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://hyperx.com/",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 1.0,
+                  "state": "missing"
+                },
+                {
+                  "evidence_type": "seller_sku",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://hyperx.com/",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 0.8,
+                  "state": "missing"
+                }
+              ],
+              "reason": "There is not enough structured identity evidence."
+            },
+            "rejection_reason": "results_identity_insufficient"
+          },
+          {
+            "url": "https://hyperx.com/blogs/hyperx-blog",
+            "final_url": "https://hyperx.com/blogs/hyperx-blog",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Blog",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "direct_access",
+            "protection_status": "challenge_suspected",
+            "identity_verification": {
+              "level": "insufficient",
+              "evidence": [
+                {
+                  "evidence_type": "model_code",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://hyperx.com/blogs/hyperx-blog",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 1.0,
+                  "state": "missing"
+                },
+                {
+                  "evidence_type": "seller_sku",
+                  "raw_value": "",
+                  "normalized_value": "",
+                  "source": "https://hyperx.com/blogs/hyperx-blog",
+                  "extraction_method": "json_ld_product",
+                  "confidence": 0.8,
+                  "state": "missing"
+                }
+              ],
+              "reason": "There is not enough structured identity evidence."
+            },
+            "rejection_reason": "results_identity_insufficient"
+          },
+          {
+            "url": "https://hyperx.com/blogs/press",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "content_page:-35",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Press",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/about-hyperx",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "About HyperX",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/data-sharing-opt-out",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Your privacy choices",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/delivery-information",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Shipping Information",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/hp-hyperx-visual-content-terms-of-use",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "HP/HyperX Visual Content Terms of Use",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/hx3d",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "HyperX 3D\n        ",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/limited-warranty-statement",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "\n  Up to 2-year Warranty on all products\n\n  \n  \n  \n  \nUp to 2-year Warranty\n                        ",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/ngenuity",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "NGENUITY",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/omen-gaming-pcs-laptops-overview",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Why OMEN PCs?",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/price-guarantee",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "\n  Price Matching\n\n  \n  \n  \n  \n  \nPrice Matching\n                        ",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/promo-tcs",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Exclusions apply*",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/returns-policy",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Refund Policy",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/reviews",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Customer Reviews",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/social-impact",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Social Impact",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://hyperx.com/pages/support",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Contact Support",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          },
+          {
+            "url": "https://supportcenter.hyperx.com/",
+            "final_url": "",
+            "source_family": "hyperx",
+            "strategy": "internal_search",
+            "ranking_score": 35,
+            "ranking_reasons": [
+              "canonical_first_party_host:+15",
+              "source_family_in_url:+8",
+              "structured_product_result_card:+20"
+            ],
+            "category_hints": [],
+            "model_token_hints": [],
+            "discovery_evidence": [
+              {
+                "type": "anchor",
+                "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                "title": "Support Center",
+                "ranking_only": true
+              }
+            ],
+            "access_status": "not_checked",
+            "protection_status": "inconclusive",
+            "identity_verification": {},
+            "rejection_reason": ""
+          }
+        ],
+        "budget_used": {
+          "http_requests": 5,
+          "sitemap_documents": 0,
+          "valid_sitemap_documents": 0,
+          "urls_read": 19,
+          "product_pages": 3,
+          "search_queries": 1
+        },
+        "sitemap_feed_urls": [],
+        "redirect_evidence": [],
+        "errors": [],
+        "truncated": false,
+        "stop_reason": "exact_model_found",
+        "checkpoint": {
+          "version": 1,
+          "strategy": "internal_search",
+          "identity_key": "905c6d598e6ebd993700ced74dbb6a412e17551326cbf5cfacddc0fbf2a0303c",
+          "status": "complete",
+          "routes": [
+            {
+              "action_url": "https://hyperx.com/search",
+              "method": "GET",
+              "query_parameter": "q",
+              "constant_parameters": [
+                [
+                  "options[prefix]",
+                  "last"
+                ],
+                [
+                  "type",
+                  "product"
+                ]
+              ],
+              "source": "html_search_form",
+              "originating_page": "https://hyperx.com/pages/support",
+              "allowed_host": "hyperx.com",
+              "confidence": 0.8,
+              "rejection_reason": "",
+              "timestamp": "2026-09-22T14:11:57.798218+00:00",
+              "disposition": "safe_get",
+              "action": "https://hyperx.com/search",
+              "type": "search_form"
+            },
+            {
+              "action_url": "https://hyperx.com/search",
+              "method": "GET",
+              "query_parameter": "q",
+              "constant_parameters": [
+                [
+                  "options[prefix]",
+                  "last"
+                ]
+              ],
+              "source": "html_search_form",
+              "originating_page": "https://hyperx.com/pages/support",
+              "allowed_host": "hyperx.com",
+              "confidence": 0.8,
+              "rejection_reason": "",
+              "timestamp": "2026-09-22T14:11:57.798277+00:00",
+              "disposition": "safe_get",
+              "action": "https://hyperx.com/search",
+              "type": "search_form"
+            }
+          ],
+          "route_checked": true,
+          "queries": [
+            {
+              "query": "4P5D4AA",
+              "reason": "exact_seller_manufacturer_model_code"
+            }
+          ],
+          "completed_queries": [
+            {
+              "query": "4P5D4AA",
+              "reason": "exact_seller_manufacturer_model_code",
+              "request_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+              "timestamp": "2026-09-22T14:11:57.800314+00:00",
+              "outcome": "search_results_found",
+              "final_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+              "access_status": "direct_access"
+            }
+          ],
+          "requests": [
+            {
+              "url": "https://hyperx.com/pages/support",
+              "timestamp": "2026-09-22T14:11:57.300219+00:00"
+            },
+            {
+              "url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+              "timestamp": "2026-09-22T14:11:58.637750+00:00"
+            },
+            {
+              "url": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+              "timestamp": "2026-09-22T14:11:59.998527+00:00"
+            },
+            {
+              "url": "https://hyperx.com/",
+              "timestamp": "2026-09-22T14:12:01.445685+00:00"
+            },
+            {
+              "url": "https://hyperx.com/blogs/hyperx-blog",
+              "timestamp": "2026-09-22T14:12:02.640445+00:00"
+            }
+          ],
+          "candidates": [
+            {
+              "url": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+              "final_url": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 60,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "product_like_path:+25",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "direct_access",
+              "protection_status": "challenge_suspected",
+              "identity_verification": {
+                "level": "exact_model",
+                "evidence": [
+                  {
+                    "evidence_type": "model_code",
+                    "raw_value": "4P5D4AA",
+                    "normalized_value": "4P5D4AA",
+                    "source": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 1.0,
+                    "state": "match"
+                  },
+                  {
+                    "evidence_type": "seller_sku",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://hyperx.com/products/hyperx-cloud-alpha-wireless",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 0.8,
+                    "state": "missing"
+                  }
+                ],
+                "reason": "Model matches; significant variant evidence is absent or incomplete."
+              },
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/",
+              "final_url": "https://hyperx.com/",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "direct_access",
+              "protection_status": "challenge_suspected",
+              "identity_verification": {
+                "level": "insufficient",
+                "evidence": [
+                  {
+                    "evidence_type": "model_code",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://hyperx.com/",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 1.0,
+                    "state": "missing"
+                  },
+                  {
+                    "evidence_type": "seller_sku",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://hyperx.com/",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 0.8,
+                    "state": "missing"
+                  }
+                ],
+                "reason": "There is not enough structured identity evidence."
+              },
+              "rejection_reason": "results_identity_insufficient"
+            },
+            {
+              "url": "https://hyperx.com/blogs/hyperx-blog",
+              "final_url": "https://hyperx.com/blogs/hyperx-blog",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Blog",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "direct_access",
+              "protection_status": "challenge_suspected",
+              "identity_verification": {
+                "level": "insufficient",
+                "evidence": [
+                  {
+                    "evidence_type": "model_code",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://hyperx.com/blogs/hyperx-blog",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 1.0,
+                    "state": "missing"
+                  },
+                  {
+                    "evidence_type": "seller_sku",
+                    "raw_value": "",
+                    "normalized_value": "",
+                    "source": "https://hyperx.com/blogs/hyperx-blog",
+                    "extraction_method": "json_ld_product",
+                    "confidence": 0.8,
+                    "state": "missing"
+                  }
+                ],
+                "reason": "There is not enough structured identity evidence."
+              },
+              "rejection_reason": "results_identity_insufficient"
+            },
+            {
+              "url": "https://hyperx.com/blogs/press",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "content_page:-35",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Press",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/about-hyperx",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "About HyperX",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/data-sharing-opt-out",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Your privacy choices",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/delivery-information",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Shipping Information",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/hp-hyperx-visual-content-terms-of-use",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "HP/HyperX Visual Content Terms of Use",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/hx3d",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "HyperX 3D\n        ",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/limited-warranty-statement",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "\n  Up to 2-year Warranty on all products\n\n  \n  \n  \n  \nUp to 2-year Warranty\n                        ",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/ngenuity",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "NGENUITY",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/omen-gaming-pcs-laptops-overview",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Why OMEN PCs?",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/price-guarantee",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "\n  Price Matching\n\n  \n  \n  \n  \n  \nPrice Matching\n                        ",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/promo-tcs",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Exclusions apply*",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/returns-policy",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Refund Policy",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/reviews",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Customer Reviews",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/social-impact",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Social Impact",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://hyperx.com/pages/support",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Contact Support",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            },
+            {
+              "url": "https://supportcenter.hyperx.com/",
+              "final_url": "",
+              "source_family": "hyperx",
+              "strategy": "internal_search",
+              "ranking_score": 35,
+              "ranking_reasons": [
+                "canonical_first_party_host:+15",
+                "source_family_in_url:+8",
+                "structured_product_result_card:+20"
+              ],
+              "category_hints": [],
+              "model_token_hints": [],
+              "discovery_evidence": [
+                {
+                  "type": "anchor",
+                  "response_url": "https://hyperx.com/search?options%5Bprefix%5D=last&q=4P5D4AA&type=product",
+                  "title": "Support Center",
+                  "ranking_only": true
+                }
+              ],
+              "access_status": "not_checked",
+              "protection_status": "inconclusive",
+              "identity_verification": {},
+              "rejection_reason": ""
+            }
+          ],
+          "budget_used": {
+            "http_requests": 5,
+            "sitemap_documents": 0,
+            "valid_sitemap_documents": 0,
+            "urls_read": 19,
+            "product_pages": 3,
+            "search_queries": 1
+          },
+          "redirect_evidence": [],
+          "events": [
+            "search_results_found",
+            "candidate_product_found",
+            "candidate_product_found",
+            "candidate_product_found"
+          ],
+          "errors": [],
+          "stop_reason": "exact_model_found",
+          "started_at": "2026-09-22T14:11:57.300085+00:00",
+          "updated_at": "2026-09-22T14:12:03.055609+00:00"
+        },
+        "started_at": "2026-09-22T14:11:57.300085+00:00",
+        "finished_at": "2026-09-22T14:12:03.056311+00:00"
+      },
+      "readiness": {
+        "product_page_found": true,
+        "exact_model_validated": true,
+        "exact_variant_validated": false,
+        "production_ready": false
+      },
+      "resume_verification": {
+        "stop_reason": "checkpoint_complete",
+        "new_http_requests": 0,
+        "checkpoint_unchanged": true
+      }
+    }
+  ]
+}

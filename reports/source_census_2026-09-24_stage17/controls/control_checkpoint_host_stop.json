@@ -1,0 +1,68 @@
+{
+  "units": {
+    "620b73a1ec5e5b39": {
+      "brand": "HYPERX",
+      "catalog_row": 6988,
+      "category": "Мыши",
+      "network_calls_refused": [],
+      "next_action": "run_once",
+      "outcome": "stopped",
+      "plan_reason": "exact_url_on_record",
+      "plan_status": "ready_to_run",
+      "seller_sku": "A1KY6AA",
+      "stop_code": "host_blocked",
+      "stop_detail": "Host hyperx.com has a recorded 401/403/429 in a persisted fetch log; no request is made.",
+      "stopped_before_run_once": true
+    },
+    "68e7f315927d3032": {
+      "brand": "HYPERX",
+      "card": {
+        "conflicts": 0,
+        "documents": 0,
+        "evidence_urls": [
+          "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+        ],
+        "facts": 0,
+        "gaps": [
+          "attributes",
+          "photos",
+          "documents"
+        ],
+        "identity": "Источники не найдены за отведённое время",
+        "job_message": "Официальная страница HyperX недоступна: HTTP 403 -- access blocked. Not retried. Реальных конфликтов: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+        "job_status": "error",
+        "photos": 0,
+        "resolved_attributes": 0,
+        "sources": [
+          {
+            "error": "",
+            "evidence": "Нет проверенного дилерского кандидата.",
+            "match_level": "unknown",
+            "source_key": "dns",
+            "url": ""
+          },
+          {
+            "error": "HTTP 403 -- access blocked. Not retried.",
+            "evidence": "",
+            "match_level": "blocked",
+            "source_key": "hyperx",
+            "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+          }
+        ]
+      },
+      "catalog_row": 6985,
+      "category": "Микрофоны",
+      "job_status": "error",
+      "network_calls_refused": [],
+      "next_action": "run_once",
+      "outcome": "stopped",
+      "plan_reason": "exact_url_on_record",
+      "plan_status": "ready_to_run",
+      "seller_sku": "9A273AA",
+      "stop_code": "host_blocked",
+      "stop_detail": "Официальная страница HyperX недоступна: HTTP 403 -- access blocked. Not retried. Реальных конфликтов: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+      "stopped_before_run_once": false
+    }
+  },
+  "version": 1
+}

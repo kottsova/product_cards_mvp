@@ -1,0 +1,58 @@
+{
+  "schema_version": "stage8_6_content_verification.v1",
+  "method": "pypdf.PdfReader(strict=False) on the fully-assembled 10,572,005-byte file; per-page extract_text(); the assembled bytes themselves are never persisted into the repo (kept only in the session scratch directory and discarded after analysis), consistent with the project's no-raw-content rule -- only the extracted evidence below is kept.",
+  "file_structure": {
+    "status": "valid_and_fully_parseable",
+    "num_pages": 80,
+    "metadata": {
+      "CreationDate": "2019-04-26 (D:20190426152420+09'00')",
+      "ModDate": "2019-07-23 (D:20190723163657+09'00')",
+      "Creator": "Adobe InDesign CC 2015 (Windows)",
+      "Producer": "Adobe PDF Library 15.0",
+      "Title": "(empty -- not set by the document's author)"
+    },
+    "note": "Unlike Stage 8.5's truncated 1.5MB partial file (which failed with 'Invalid object in /Pages' and an undefined /Info object), the fully-assembled file opens cleanly with no recovery warnings about missing objects."
+  },
+  "is_user_manual": {
+    "status": "confirmed_by_content",
+    "evidence": "Page 1 (cover) literal text: 'Микроволновая печь\\nРуководство пользователя\\nMS23K3614A*' -- 'Microwave oven / User Manual / MS23K3614A*' in the document's own Russian-language title page, not inferred from any URL or filename."
+  },
+  "model_or_family_match": {
+    "status": "confirmed_by_content_exact_code_not_just_family",
+    "evidence": [
+      "Cover page states the wildcard family 'MS23K3614A*' (standard manual practice covering color/finish variants of one base model).",
+      "The EXACT full code 'MS23K3614AK_BW' (matching our catalog article's manufacturer code precisely, including the color suffix) appears literally in an embedded per-page production filename footer 20 times in each of the 4 language sections (80 occurrences total): e.g. 'MS23K3614AK_BW_DE68-04547Q-00_RU.indd', '..._UK.indd', '..._KK.indd', '..._UZ.indd'.",
+      "The document code 'DE68-04547Q-00' embedded in that same footer text matches the manual URL's own filename exactly (MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf) -- content and URL agree, but the content match stands on its own regardless of the URL.",
+      "Page 19 (end of the Russian section) lists 'www.samsung.com/kz_ru/support' for Kazakhstan specifically -- consistent with this being the correct regional document for the kz_ru source profile this whole investigation has used."
+    ],
+    "conclusion": "This is stronger than a family-only match -- the exact catalog model code (including color suffix) is confirmed present in the document's own embedded content, independent of the URL's ModelName parameter or filename."
+  },
+  "languages_actually_present": {
+    "status": "confirmed_by_content_page_by_page",
+    "method": "First line of extracted text was read for all 80 pages; section-header language names were used as boundaries, not assumed from the filename.",
+    "sections": [
+      {
+        "language": "Russian (Русский)",
+        "pages": "1-19 (0-indexed 0-18)",
+        "cover_line": "Микроволновая печь"
+      },
+      {
+        "language": "Ukrainian (Українська)",
+        "pages": "20-39 (0-indexed 19-38)",
+        "cover_line": "Мікрохвильова піч"
+      },
+      {
+        "language": "Kazakh (Қазақ)",
+        "pages": "40-59 (0-indexed 39-58)",
+        "cover_line": "Микротолқынды пеш"
+      },
+      {
+        "language": "Uzbek (O'zbek)",
+        "pages": "60-79 (0-indexed 59-78)",
+        "cover_line": "Mikroto'lqinli pech"
+      }
+    ],
+    "conclusion": "All 4 languages the filename suffix (RU-UK-KK-UZ) claimed are genuinely present as real, readable prose content, in that exact order -- the filename claim is now independently corroborated by content, not merely trusted.",
+    "russian_specifically": "Confirmed: pages 1-19 are a complete Russian-language user manual section (safety instructions, installation, operation, cleaning, troubleshooting, manufacturer/importer contact info)."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "stage8_2_2_identity_evidence.v1",
+  "rule": "The mere presence of the words 'S20 FE' or 'Z Fold3' in arbitrary text, a URL, or a result listing is explicitly NOT treated as sufficient identity confirmation, per instructions.",
+  "models": {
+    "Galaxy S20 FE (catalog article 488776SM-G780GZRDSKZ, 128GB)": {
+      "pages_checked": [
+        "https://www.samsung.com/kz_ru/search/?searchvalue=Galaxy%20S20%20FE",
+        "https://www.samsung.com/kz_ru/support/user-manuals-and-guide/",
+        "https://www.samsung.com/kz_ru/mobile/find-your-galaxy/"
+      ],
+      "identity_fields": {
+        "manufacturer_confirmed": "Samsung (generic brand text present on every page fetched)",
+        "family_name_confirmed": false,
+        "consumer_model_name_confirmed": false,
+        "manufacturer_model_code_confirmed": false,
+        "regional_suffix_confirmed": false,
+        "storage_confirmed": false,
+        "color_confirmed": false,
+        "connectivity_confirmed": false,
+        "other_variant_fields_confirmed": false,
+        "link_to_source_catalog_row": "none -- no page reached exposes any field to compare against the catalog row"
+      },
+      "catalog_identity_result": "insufficient",
+      "reasoning": "None of the 3 pages checked for this model contain the string 'Galaxy S20 FE' or 'S20 FE' anywhere in the rendered static text (identity_term_matches all false), let alone a model code, storage, color, or connectivity field. Every candidate route returned the same generic client-rendered navigation shell. No page can be linked to this catalog row at any confidence level above insufficient."
+    },
+    "Galaxy Z Fold3 5G (catalog article 491953SM-F926BZGGSKZ, 512GB)": {
+      "pages_checked": [
+        "https://www.samsung.com/kz_ru/search/?searchvalue=Galaxy%20Z%20Fold3",
+        "https://www.samsung.com/kz_ru/support/user-manuals-and-guide/",
+        "https://www.samsung.com/kz_ru/mobile/find-your-galaxy/"
+      ],
+      "identity_fields": {
+        "manufacturer_confirmed": "Samsung (generic brand text present on every page fetched)",
+        "family_name_confirmed": false,
+        "consumer_model_name_confirmed": false,
+        "manufacturer_model_code_confirmed": false,
+        "regional_suffix_confirmed": false,
+        "storage_confirmed": false,
+        "color_confirmed": false,
+        "connectivity_confirmed": false,
+        "other_variant_fields_confirmed": false,
+        "link_to_source_catalog_row": "none -- no page reached exposes any field to compare against the catalog row"
+      },
+      "catalog_identity_result": "insufficient",
+      "reasoning": "Same outcome as Galaxy S20 FE: 'Galaxy Z Fold3' / 'Fold3' never appears in the static text of any checked page. No identity field beyond the generic brand word 'Samsung' was confirmed anywhere."
+    }
+  },
+  "note_on_the_near_miss": "One support-content article WAS reached with a mobile-related slug (check-out-the-new-camera-functions-of-galaxy-s20-plus-s20-ultra), but it names Galaxy S20 Plus / S20 Ultra, a DIFFERENT variant from the catalog-targeted Galaxy S20 FE, and per instructions 'family name' matching (S20-series) alone is not treated as evidence for a different specific model -- it was not counted toward either catalog row's identity evidence."
+}

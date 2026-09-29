@@ -1,0 +1,98 @@
+{
+  "phase": "sitemap_check",
+  "sitemap_findings": {
+    "www.xbox.com": {
+      "declared_sitemaps": [
+        "https://www.xbox.com/sitemap.xml"
+      ],
+      "attempts": [
+        {
+          "url": "https://www.xbox.com/sitemap.xml",
+          "http_status": 200,
+          "access_status": "direct_access"
+        }
+      ],
+      "fetched_bytes": 134175
+    },
+    "support.xbox.com": {
+      "declared_sitemaps": [
+        "https://support.xbox.com/sitemap.xml"
+      ],
+      "attempts": [
+        {
+          "url": "https://support.xbox.com/sitemap.xml",
+          "http_status": 200,
+          "access_status": "direct_access"
+        }
+      ],
+      "fetched_bytes": 12710
+    }
+  },
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://www.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://www.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=UTF-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 289,
+      "note": "re-fetch to capture raw text; phase 1 kept only parsed Disallow rules"
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://www.xbox.com/sitemap.xml",
+      "capability": "sitemap",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/sitemap.xml",
+      "redirect_chain": [
+        "https://www.xbox.com/sitemap.xml"
+      ],
+      "content_type": "text/xml",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 134175,
+      "note": ""
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://support.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://support.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 72,
+      "note": "re-fetch to capture raw text; phase 1 kept only parsed Disallow rules"
+    },
+    {
+      "seq": 4,
+      "requested_url": "https://support.xbox.com/sitemap.xml",
+      "capability": "sitemap",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/sitemap.xml",
+      "redirect_chain": [
+        "https://support.xbox.com/sitemap.xml"
+      ],
+      "content_type": "application/octet-stream",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 12710,
+      "note": ""
+    }
+  ],
+  "skipped": []
+}

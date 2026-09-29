@@ -1,0 +1,77 @@
+{
+  "phase": "category_discovery",
+  "results": {
+    "https://hyperx.com/collections/gaming-keyboards": {
+      "access_status": "direct_access",
+      "http_status": 200,
+      "bytes_read": 865892,
+      "product_links_found": [
+        "/products/hyperx-alloy-core-rgb-gaming-keyboard",
+        "/products/hyperx-alloy-origins-60-mechanical-gaming-keyboard",
+        "/products/hyperx-alloy-origins-65",
+        "/products/hyperx-alloy-origins-core-mechanical-gaming-keyboard",
+        "/products/hyperx-alloy-origins-mechanical-gaming-keyboard",
+        "/products/hyperx-alloy-origins-pbt-mechanical-gaming-keyboard",
+        "/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard",
+        "/products/hyperx-alloy-rise-mechanical-gaming-keyboard",
+        "/products/hyperx-eve-1800-gaming-keyboard",
+        "/products/hyperx-origins-2-1800-gaming-keyboard",
+        "/products/hyperx-origins-2-65-gaming-keyboard",
+        "/products/hyperx-origins-2-pro-65-gaming-keyboard"
+      ]
+    },
+    "https://hyperx.com/collections/gaming-mice": {
+      "access_status": "direct_access",
+      "http_status": 200,
+      "bytes_read": 834239,
+      "product_links_found": [
+        "/products/hyperx-pulsefire-fuse-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-2-core-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-2-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-2-mini-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-2-pro-4k-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-2-s-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-2-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-3-pro-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-3-wired-gaming-mouse",
+        "/products/hyperx-pulsefire-haste-3-wireless-gaming-mouse",
+        "/products/hyperx-pulsefire-saga-gaming-mouse",
+        "/products/hyperx-pulsefire-saga-pro-wireless-gaming-mouse"
+      ]
+    }
+  },
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://hyperx.com/collections/gaming-keyboards",
+      "capability": "category_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/collections/gaming-keyboards",
+      "redirect_chain": [
+        "https://hyperx.com/collections/gaming-keyboards"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "challenge_suspected",
+      "error": "",
+      "bytes_read": 865892,
+      "note": "already-known nav link from the product page fixture, not guessed"
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://hyperx.com/collections/gaming-mice",
+      "capability": "category_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/collections/gaming-mice",
+      "redirect_chain": [
+        "https://hyperx.com/collections/gaming-mice"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "challenge_suspected",
+      "error": "",
+      "bytes_read": 834239,
+      "note": "already-known nav link from the product page fixture, not guessed"
+    }
+  ]
+}

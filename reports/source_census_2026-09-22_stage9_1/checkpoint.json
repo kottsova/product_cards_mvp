@@ -1,0 +1,39 @@
+{
+  "schema_version": "stage9_1_checkpoint.v1",
+  "budget_declared_before_first_request": {
+    "schema_version": "stage9_1_budget_predeclaration.v1",
+    "declared_before_any_new_request": true,
+    "step_1_offline_check_required_first": true,
+    "step_1_result": "offline_row_analysis.json + known_routes_review.json -- no substantial verified difference between the two catalog rows found offline, and no known official route (of those already discovered in Stage 8.2/Stage 9) remains unchecked that could confirm such a difference.",
+    "conditional_network_check_rule": "Per instruction, a bounded network check is only performed IF offline data shows a substantial difference. It does not.",
+    "request_limits_that_would_have_applied_if_triggered": {
+      "max_total_requests": 3,
+      "max_requests_per_host": 3,
+      "max_hosts": 1,
+      "pre_declared_allowed_hosts": [
+        "direct.playstation.com"
+      ],
+      "note": "Scoped to only the routes already identified as known/first-party in known_routes_review.json -- no new host, no invented endpoint, no PDF assembly (no manual link exists to apply Stage 8.6's fetch_document_bounded() to)."
+    },
+    "actual_new_requests_made_this_stage": 0,
+    "reason_zero_requests": "Step 1's offline result did not meet the trigger condition for a network check.",
+    "probe_policy_status": "Unchanged -- no host contacted, so no ProbePolicy event (403/429/challenge) could occur this stage.",
+    "counter_persistence": "N/A this stage (0 attempts) -- Stage 8.3-9's run_state.json-based recomputation fix remains available unchanged for any future stage that does make requests."
+  },
+  "budget_actual": {
+    "total_requests": 0,
+    "by_host": {},
+    "hosts_contacted": [],
+    "within_plan": true
+  },
+  "rejected_attempts": [],
+  "request_log": [],
+  "offline_reuse_before_any_decision": [
+    "data/catalog_2026-09-21_filtered.xlsx (read-only) -- full 8-column schema inspection, both candidate rows re-read field-by-field.",
+    "reports/source_census_2026-09-22_stage8_2/link_index/ps_controllers_cat.json -- confirms exactly 1 DualSense Cosmic Red link exists in the entire controllers category (90 links total).",
+    "reports/source_census_2026-09-22_stage9/evidence.json and raw/product_fetch.json -- reused for the already-checked support links and the already-performed CFI- pattern search; no re-fetch needed."
+  ],
+  "stop_reason": "Offline analysis (offline_row_analysis.json) plus a review of every already-known official route (known_routes_review.json) found no substantial difference between the two catalog rows and no unchecked route capable of confirming one, so the conditional trigger for a bounded network check was never met. 0 new HTTP requests were made this stage.",
+  "no_other_products_searched_this_stage": true,
+  "samsung_investigated_this_stage": false
+}

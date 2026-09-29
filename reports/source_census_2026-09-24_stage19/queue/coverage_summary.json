@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "blocked_hosts_from_logs": {
+      "www.razer.com": [
+        "reports/source_census_2026-09-23_stage13/raw/stage12_razer_fetch_log_for_host_stop.json"
+      ]
+    },
+    "catalog": {
+      "path": "data/catalog_2026-09-21_filtered.xlsx",
+      "read_only": true,
+      "sha256": "99789238cde44dd2a5ec776f504944d9d91ab5698770cff8126f353212e107ba"
+    },
+    "dealer_routes": {
+      "dns": {
+        "known_exact_urls": 1,
+        "scope": "any brand, exact known URL only"
+      },
+      "sulpak": {
+        "known_exact_urls": 1,
+        "scope": "LG only, exact known URL only"
+      },
+      "technopark": {
+        "host": "",
+        "role": "preferred_dealer_verification",
+        "state": "adapter_not_implemented",
+        "url_policy": "would need an exact product page; nothing is wired"
+      }
+    },
+    "inputs_sha256": {
+      "product_tool/config/adapter_profiles.v1.json": "e6e4b39a46d8ce0d2a71e0c4499ea5d43dcf2f9bf0a22bc69886aadcc44ee354",
+      "product_tool/config/brand_normalization.v1.json": "492140a0acff4a4c023d2e5f227f37015f76d5d20fd8ed992904f01815ef61ee",
+      "product_tool/config/coverage_planner.v1.json": "99ef4d24a73f828499aa4e0e4139025d72067876459e18023ef109cc8069c68a"
+    },
+    "network": "none: the planner reads files only",
+    "plan_version": "18.0.0",
+    "reconciliation": {
+      "declared": {
+        "brand_category_pairs": 1058,
+        "brands": 289,
+        "categories": 228,
+        "source_rows": 19917,
+        "unique_products": 16888
+      },
+      "observed": {
+        "brand_category_pairs": 1058,
+        "brands": 289,
+        "categories": 228,
+        "source_rows": 19917,
+        "unique_products": 16888
+      },
+      "pair_sheet_matches": true
+    },
+    "working_adapters": [
+      {
+        "adapters": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "dispatch_constant": "worker.LG_BRAND_ALIASES",
+        "family": "lg",
+        "known_exact_urls": 0,
+        "route_id": "lg_official",
+        "url_basis": "adapter_discovery"
+      },
+      {
+        "adapters": [
+          "hyperx"
+        ],
+        "dispatch_constant": "worker.HYPERX_BRAND_ALIASES",
+        "family": "hyperx",
+        "known_exact_urls": 20,
+        "route_id": "hyperx_official",
+        "url_basis": "known_url_map"
+      }
+    ]
+  },
+  "summary": {
+    "brand_category_pairs": 1058,
+    "flags": {
+      "has_alternate_titles": 966,
+      "importer_brand_inferred_from_title": 20,
+      "importer_needs_confirmation": 32,
+      "seller_sku_shared_across_brand": 2,
+      "seller_sku_shared_across_category": 66,
+      "sku_repeated_halves": 233,
+      "title_names_other_manufacturer": 1
+    },
+    "pairs_by_status": {
+      "adapter_url_missing": 6,
+      "host_blocked": 70,
+      "identity_conflict": 0,
+      "manual_review": 382,
+      "needs_product_page_fixture": 586,
+      "official_route_no_adapter": 2,
+      "ready_to_run": 12
+    },
+    "pairs_fully_ready": 12,
+    "pairs_partially_ready": 3,
+    "ready_units_by_url_basis": {
+      "adapter_discovery": 578,
+      "known_url_map": 20
+    },
+    "ready_units_pct": 3.54,
+    "reasons": {
+      "adapter_url_missing": {
+        "no_confirmed_exact_url": 20
+      },
+      "host_blocked": {
+        "every_profile_http_blocked": 1868,
+        "recorded_block_in_evidence": 89
+      },
+      "identity_conflict": {
+        "region_suffix_mismatch_confirmed": 1
+      },
+      "manual_review": {
+        "brand_mapping_unresolved": 7,
+        "brand_missing": 32,
+        "category_routing_ambiguous": 84,
+        "official_route_manual_review_required": 653,
+        "official_source_not_verified": 1481,
+        "seller_sku_not_a_manufacturer_code": 4
+      },
+      "needs_product_page_fixture": {
+        "fixture_market_differs_from_catalog": 132,
+        "no_product_page_evidence": 7494,
+        "no_product_page_evidence_for_category": 1291,
+        "structural_missing_specifications": 3006,
+        "structural_missing_specifications_media": 42
+      },
+      "official_route_no_adapter": {
+        "fixture_full_value_in_scope": 58,
+        "fixture_structural_sufficient_in_scope": 28
+      },
+      "ready_to_run": {
+        "adapter_discovery_route": 578,
+        "exact_url_on_record": 20
+      }
+    },
+    "request_groups": 453,
+    "source_rows": 19917,
+    "unique_products": 16888,
+    "units_by_scope": {
+      "bosch_home_de_kettle": 22,
+      "cudy_com_routers": 28,
+      "microsoft_xbox_us_console": 13,
+      "playstation_direct_us_accessories": 33,
+      "playstation_direct_us_games": 64,
+      "samsung_kz_ru_microwave": 58,
+      "samsung_kz_ru_tv_audio": 454
+    },
+    "units_by_status": {
+      "adapter_url_missing": 20,
+      "host_blocked": 1957,
+      "identity_conflict": 1,
+      "manual_review": 2261,
+      "needs_product_page_fixture": 11965,
+      "official_route_no_adapter": 86,
+      "ready_to_run": 598
+    },
+    "units_by_status_pct": {
+      "adapter_url_missing": 0.12,
+      "host_blocked": 11.59,
+      "identity_conflict": 0.01,
+      "manual_review": 13.39,
+      "needs_product_page_fixture": 70.85,
+      "official_route_no_adapter": 0.51,
+      "ready_to_run": 3.54
+    },
+    "units_needing_a_request_group": 16290,
+    "units_with_dealer_exact_url": 1,
+    "units_with_shared_seller_sku_risk": 68
+  }
+}

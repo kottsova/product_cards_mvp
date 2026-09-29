@@ -6,7 +6,7 @@
 
 ```powershell
 python -m pip install -r .\product_tool\requirements.txt
-python -m unittest discover -s tests -v
+python -m tests -v
 ```
 
 Предпросмотр локального файла:

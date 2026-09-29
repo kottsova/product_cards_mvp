@@ -1,0 +1,44 @@
+{
+  "schema_version": "stage8_3_card_summary.v1",
+  "pilot_scope": "Galaxy Buds3 FE only. TV (UE43N5300AUXCE) excluded per novelty rule -- see tv_selection_check.json. Galaxy S20 FE / Galaxy Z Fold3 (Stage 8.2.2) intentionally not revisited.",
+  "items": [
+    {
+      "item": "Galaxy Buds3 FE",
+      "catalog_identity": "No matching row in data/catalog_2026-09-21_filtered.xlsx (this item was reached via Samsung's own live sitemap, not derived from a specific seller catalog row -- consistent with Stage 8.2's own finding).",
+      "official_url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+      "page_type": "Product page (JSON-LD Product confirmed)",
+      "model_variant_status": "exact_variant",
+      "model_variant_status_reasoning": "Model name (Galaxy Buds3 FE) confirmed via 2 independent on-page sources (JSON-LD + <title>); manufacturer code (SM-R420NZKACIS) confirmed via JSON-LD sku; color (Черный/Black) confirmed via <title> + repeated body text, not URL alone. All three (model, code, variant-defining color) independently confirmed on-page -- satisfies exact_variant, not merely exact_model.",
+      "specifications": "Partial: Bluetooth v5.4, IP54 water/dust resistance, active noise cancellation (qualitative) confirmed via body text. No comprehensive specifications table reached (likely client-rendered).",
+      "images": "1 official image confirmed: 1164x776 PNG, images.samsung.com, largest explicitly advertised srcset candidate.",
+      "instruction_manual": "Not found. Only a non-model-specific delivery-terms PDF was found and explicitly excluded.",
+      "instruction_language": "n/a (no document found)",
+      "evidence_reference": "evidence.json#items[Galaxy Buds3 FE]",
+      "gaps": [
+        "No full specifications table (client-rendered, out of current pipeline's static-HTTP capability)",
+        "No official instruction/manual document",
+        "No corresponding row in the working seller catalog -- this card cannot be linked to a specific customer SKU",
+        "Regional suffix 'KACIS' meaning not independently verified beyond its presence in the sku field"
+      ],
+      "conflicts": [],
+      "card_export_readiness": "partially_ready -- identity, one official image and a partial spec set are export-ready with full evidence; specifications completeness and instructions are open gaps that block a fully complete card."
+    },
+    {
+      "item": "Samsung TV (UE43N5300AUXCE)",
+      "catalog_identity": "n/a -- excluded before identity work began",
+      "official_url": "https://www.samsung.com/kz_ru/tvs/full-hd-tv/n5300-43-inch-full-hd-smart-tv-ue43n5300auxce/",
+      "page_type": "Product page (JSON-LD Product confirmed in Stage 8.2) -- verification not extended in this stage",
+      "model_variant_status": "not_evaluated",
+      "specifications": "not_evaluated",
+      "images": "not_evaluated",
+      "instruction_manual": "not_evaluated",
+      "instruction_language": "not_evaluated",
+      "evidence_reference": "tv_selection_check.json",
+      "gaps": [
+        "excluded from pilot before any card-building work: see tv_selection_check.json for full reasoning"
+      ],
+      "conflicts": [],
+      "card_export_readiness": "excluded_from_pilot"
+    }
+  ]
+}

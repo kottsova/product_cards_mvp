@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "lg_kz",
+      "adapter_id": "lg_kz",
+      "brands": [
+        "LG",
+        "LG Electronics"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.lg.com/kz",
+      "page_hosts": [
+        "lg.com"
+      ],
+      "support_hosts": [
+        "lg.com"
+      ],
+      "asset_document_hosts": [
+        "lg.com",
+        "gscs-b2c.lge.com"
+      ],
+      "capabilities": [
+        "identity",
+        "description",
+        "attributes",
+        "photos"
+      ],
+      "identity_strategy": "lg_model",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "ready",
+      "lifecycle_status": "enabled",
+      "host_verification": "verified",
+      "enabled": true,
+      "last_checked_at": "2026-09-21T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "existing_adapter",
+          "value": "product_tool.adapters.lg.LGAdapter"
+        }
+      ],
+      "http_status": null,
+      "redirect_chain": [],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "none_observed",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [],
+      "adapter_recommendation": "keep_brand_adapter",
+      "fallback_sources": [
+        "sulpak"
+      ]
+    },
+    {
+      "source_id": "lg_ru",
+      "adapter_id": "lg_ru",
+      "brands": [
+        "LG",
+        "LG Electronics"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "RU"
+      ],
+      "source_role": "support",
+      "candidate_url": "https://www.lg.com/ru",
+      "page_hosts": [
+        "lg.com"
+      ],
+      "support_hosts": [
+        "lg.com"
+      ],
+      "asset_document_hosts": [
+        "lg.com",
+        "gscs-b2c.lge.com"
+      ],
+      "capabilities": [
+        "identity",
+        "description",
+        "attributes",
+        "photos",
+        "documents"
+      ],
+      "identity_strategy": "lg_model",
+      "priority": 20,
+      "official_status": "official_verified",
+      "access_status": "support_only",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "ready",
+      "lifecycle_status": "enabled",
+      "host_verification": "verified",
+      "enabled": true,
+      "last_checked_at": "2026-09-21T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "existing_adapter",
+          "value": "product_tool.adapters.lg.LGRUAdapter"
+        }
+      ],
+      "http_status": null,
+      "redirect_chain": [],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "none_observed",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [],
+      "adapter_recommendation": "keep_brand_adapter",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "sulpak",
+      "adapter_id": "sulpak",
+      "brands": [
+        "LG"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "retailer",
+      "candidate_url": "https://www.sulpak.kz/",
+      "page_hosts": [
+        "sulpak.kz"
+      ],
+      "support_hosts": [],
+      "asset_document_hosts": [
+        "sulpak.kz"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "photos"
+      ],
+      "identity_strategy": "seller_sku",
+      "priority": 100,
+      "official_status": "third_party_confirmed",
+      "access_status": "direct_access",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "ready",
+      "lifecycle_status": "enabled",
+      "host_verification": "verified",
+      "enabled": true,
+      "last_checked_at": "2026-09-21T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "existing_adapter",
+          "value": "product_tool.adapters.sulpak.SulpakAdapter"
+        }
+      ],
+      "http_status": null,
+      "redirect_chain": [],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "none_observed",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [],
+      "adapter_recommendation": "keep_retailer_fallback",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "mechta",
+      "adapter_id": "mechta",
+      "brands": [
+        "LG"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "retailer",
+      "candidate_url": "https://www.mechta.kz/",
+      "page_hosts": [
+        "mechta.kz"
+      ],
+      "support_hosts": [],
+      "asset_document_hosts": [
+        "mechta.kz"
+      ],
+      "capabilities": [],
+      "identity_strategy": "legacy_only",
+      "priority": 999,
+      "official_status": "not_allowed",
+      "access_status": "not_checked",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "legacy_compatibility",
+      "lifecycle_status": "disabled",
+      "host_verification": "not_checked",
+      "enabled": false,
+      "last_checked_at": "",
+      "evidence": [
+        {
+          "type": "policy",
+          "value": "Not an allowed production source"
+        }
+      ],
+      "http_status": null,
+      "redirect_chain": [],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "none_observed",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [],
+      "adapter_recommendation": "do_not_use",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "bosch_home",
+      "adapter_id": "bosch_home",
+      "brands": [
+        "BOSCH",
+        "Bosch"
+      ],
+      "category_groups": [
+        "major_home_appliances",
+        "small_home_appliances"
+      ],
+      "category_patterns": [
+        "духов",
+        "варочн",
+        "холодиль",
+        "морозиль",
+        "посудомоеч",
+        "стираль",
+        "сушиль",
+        "вытяжк",
+        "кофемаш"
+      ],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.bosch-home.com/",
+      "page_hosts": [
+        "bosch-home.com"
+      ],
+      "support_hosts": [
+        "bosch-home.com"
+      ],
+      "asset_document_hosts": [
+        "bosch-home.com",
+        "media3.bosch-home.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "bosch_enr_service_index",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "not_started",
+      "lifecycle_status": "fingerprinted",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:12+00:00",
+      "evidence": [
+        {
+          "type": "official_global_site",
+          "url": "https://www.bosch-home.com/"
+        }
+      ],
+      "http_status": 200,
+      "redirect_chain": [
+        "https://www.bosch-home.com/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": false,
+      "protection_status": "none_observed",
+      "product_search_available": false,
+      "platform_fingerprints": [
+        {
+          "engine": "custom_unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [
+        "https://www.bosch-home.com/"
+      ],
+      "adapter_recommendation": "custom_research_required",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "bosch_tools",
+      "adapter_id": "bosch_tools",
+      "brands": [
+        "BOSCH",
+        "Bosch"
+      ],
+      "category_groups": [
+        "tools_garden"
+      ],
+      "category_patterns": [
+        "дрель",
+        "шуруповерт",
+        "перфорат",
+        "шлифов",
+        "лобзик",
+        "пила",
+        "инструмент",
+        "дальномер",
+        "нивелир"
+      ],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.bosch-professional.com/",
+      "page_hosts": [
+        "bosch-professional.com",
+        "bosch-diy.com"
+      ],
+      "support_hosts": [
+        "bosch-professional.com",
+        "bosch-diy.com"
+      ],
+      "asset_document_hosts": [
+        "bosch-professional.com",
+        "bosch-diy.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "bosch_tool_model_revision",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "not_started",
+      "lifecycle_status": "fingerprinted",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:15+00:00",
+      "evidence": [
+        {
+          "type": "official_global_site",
+          "url": "https://www.bosch-professional.com/"
+        }
+      ],
+      "http_status": 200,
+      "redirect_chain": [
+        "https://www.bosch-professional.com/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": false,
+      "protection_status": "none_observed",
+      "product_search_available": true,
+      "platform_fingerprints": [
+        {
+          "engine": "custom_unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [
+        "https://www.bosch-professional.com/"
+      ],
+      "adapter_recommendation": "custom_research_required",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "xiaomi_global",
+      "adapter_id": "research_pending",
+      "brands": [
+        "Xiaomi",
+        "POCO",
+        "Redmi"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.mi.com/global/",
+      "page_hosts": [
+        "mi.com"
+      ],
+      "support_hosts": [
+        "mi.com"
+      ],
+      "asset_document_hosts": [
+        "mi.com",
+        "appmifile.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "model_and_variants",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "javascript_required",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "lifecycle_status": "fingerprinted",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:18+00:00",
+      "evidence": [
+        {
+          "type": "official_product_site",
+          "url": "https://www.mi.com/global/product-list/phone/"
+        }
+      ],
+      "http_status": 200,
+      "redirect_chain": [
+        "https://www.mi.com/global/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": true,
+      "protection_status": "none_observed",
+      "product_search_available": false,
+      "platform_fingerprints": [
+        {
+          "engine": "custom_unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [
+        "https://www.mi.com/global/"
+      ],
+      "adapter_recommendation": "browser_assisted_research",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "samsung_kz",
+      "adapter_id": "research_pending",
+      "brands": [
+        "Samsung"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.samsung.com/kz_ru/",
+      "page_hosts": [
+        "samsung.com"
+      ],
+      "support_hosts": [
+        "samsung.com"
+      ],
+      "asset_document_hosts": [
+        "samsung.com",
+        "samsungcsportal.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "model_and_variants",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "confirmed",
+      "adapter_status": "recommended",
+      "lifecycle_status": "fingerprinted",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:20+00:00",
+      "evidence": [
+        {
+          "type": "official_country_site",
+          "url": "https://www.samsung.com/kz_ru/"
+        }
+      ],
+      "http_status": 200,
+      "redirect_chain": [
+        "https://www.samsung.com/kz_ru/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": false,
+      "protection_status": "none_observed",
+      "product_search_available": true,
+      "platform_fingerprints": [
+        {
+          "engine": "adobe_experience_manager",
+          "status": "confirmed",
+          "confidence": 0.75,
+          "evidence": [
+            {
+              "source": "html",
+              "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+              "strength": "strong",
+              "weight": 0.75
+            }
+          ]
+        }
+      ],
+      "presumed_engine": "adobe_experience_manager",
+      "confidence": 0.75,
+      "sample_urls": [
+        "https://www.samsung.com/kz_ru/"
+      ],
+      "adapter_recommendation": "shared_adobe_experience_manager_discovery_layer",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "apple_kz",
+      "adapter_id": "research_pending",
+      "brands": [
+        "Apple"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.apple.com/kz/",
+      "page_hosts": [
+        "apple.com"
+      ],
+      "support_hosts": [
+        "support.apple.com"
+      ],
+      "asset_document_hosts": [
+        "apple.com",
+        "support.apple.com",
+        "mzstatic.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "part_number_and_configuration",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "direct_access",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "lifecycle_status": "fingerprinted",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:23+00:00",
+      "evidence": [
+        {
+          "type": "official_country_sitemap",
+          "url": "https://www.apple.com/kz/sitemap/"
+        }
+      ],
+      "http_status": 200,
+      "redirect_chain": [
+        "https://www.apple.com/kz/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": false,
+      "protection_status": "none_observed",
+      "product_search_available": false,
+      "platform_fingerprints": [
+        {
+          "engine": "custom_unknown",
+          "status": "insufficient",
+          "confidence": 0.0,
+          "evidence": []
+        }
+      ],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [
+        "https://www.apple.com/kz/"
+      ],
+      "adapter_recommendation": "custom_research_required",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "huawei_kz",
+      "adapter_id": "research_pending",
+      "brands": [
+        "Huawei",
+        "HUAWEI"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://consumer.huawei.com/kz/",
+      "page_hosts": [
+        "consumer.huawei.com"
+      ],
+      "support_hosts": [
+        "consumer.huawei.com"
+      ],
+      "asset_document_hosts": [
+        "consumer.huawei.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "model_and_variants",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "captcha_or_blocked",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "lifecycle_status": "access_checked",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:25+00:00",
+      "evidence": [
+        {
+          "type": "official_country_site",
+          "url": "https://consumer.huawei.com/kz/"
+        }
+      ],
+      "http_status": 200,
+      "redirect_chain": [
+        "https://consumer.huawei.com/kz/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "captcha",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [
+        "https://consumer.huawei.com/kz/"
+      ],
+      "adapter_recommendation": "manual_or_browser_review",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "lenovo_kz",
+      "adapter_id": "research_pending",
+      "brands": [
+        "lenovo",
+        "Lenovo"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.lenovo.com/kz/ru/",
+      "page_hosts": [
+        "lenovo.com"
+      ],
+      "support_hosts": [
+        "support.lenovo.com",
+        "pcsupport.lenovo.com"
+      ],
+      "asset_document_hosts": [
+        "lenovo.com",
+        "support.lenovo.com",
+        "pcsupport.lenovo.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "machine_type_model",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "captcha_or_blocked",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "lifecycle_status": "access_checked",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:28+00:00",
+      "evidence": [
+        {
+          "type": "official_country_site",
+          "url": "https://www.lenovo.com/kz/ru/services-cts/"
+        }
+      ],
+      "http_status": 200,
+      "redirect_chain": [
+        "https://www.lenovo.com/kz/ru/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "captcha",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [
+        "https://www.lenovo.com/kz/ru/"
+      ],
+      "adapter_recommendation": "manual_or_browser_review",
+      "fallback_sources": [
+        "lenovo_support_kz"
+      ]
+    },
+    {
+      "source_id": "lenovo_support_kz",
+      "adapter_id": "research_pending",
+      "brands": [
+        "lenovo",
+        "Lenovo"
+      ],
+      "category_groups": [],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "support",
+      "candidate_url": "https://support.lenovo.com/kz/en/",
+      "page_hosts": [
+        "support.lenovo.com",
+        "pcsupport.lenovo.com"
+      ],
+      "support_hosts": [
+        "support.lenovo.com",
+        "pcsupport.lenovo.com"
+      ],
+      "asset_document_hosts": [
+        "support.lenovo.com",
+        "pcsupport.lenovo.com"
+      ],
+      "capabilities": [
+        "identity",
+        "documents"
+      ],
+      "identity_strategy": "machine_type_model",
+      "priority": 20,
+      "official_status": "official_verified",
+      "access_status": "support_only",
+      "fingerprint_status": "not_checked",
+      "adapter_status": "research_pending",
+      "lifecycle_status": "official_verified",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00",
+      "evidence": [
+        {
+          "type": "official_support_site",
+          "url": "https://support.lenovo.com/kz/en/contact-us"
+        }
+      ],
+      "http_status": null,
+      "redirect_chain": [],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "none_observed",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [],
+      "adapter_recommendation": "support_adapter_candidate",
+      "fallback_sources": []
+    },
+    {
+      "source_id": "gigabyte_global",
+      "adapter_id": "research_pending",
+      "brands": [
+        "Gigabyte",
+        "GIGABYTE"
+      ],
+      "category_groups": [
+        "computers_components"
+      ],
+      "category_patterns": [],
+      "markets": [
+        "KZ"
+      ],
+      "source_role": "manufacturer",
+      "candidate_url": "https://www.gigabyte.com/",
+      "page_hosts": [
+        "gigabyte.com"
+      ],
+      "support_hosts": [
+        "gigabyte.com",
+        "esupport.gigabyte.com"
+      ],
+      "asset_document_hosts": [
+        "gigabyte.com",
+        "download.gigabyte.com"
+      ],
+      "capabilities": [
+        "identity",
+        "attributes",
+        "documents",
+        "photos"
+      ],
+      "identity_strategy": "manufacturer_model_and_revision",
+      "priority": 10,
+      "official_status": "official_verified",
+      "access_status": "captcha_or_blocked",
+      "fingerprint_status": "insufficient",
+      "adapter_status": "research_pending",
+      "lifecycle_status": "access_checked",
+      "host_verification": "verified",
+      "enabled": false,
+      "last_checked_at": "2026-09-21T19:41:30+00:00",
+      "evidence": [
+        {
+          "type": "official_site_map",
+          "url": "https://www.gigabyte.com/Site-Map"
+        }
+      ],
+      "http_status": 403,
+      "redirect_chain": [
+        "https://www.gigabyte.com/"
+      ],
+      "robots_status": "not_checked",
+      "sitemap_status": "not_checked",
+      "javascript_required": null,
+      "protection_status": "403",
+      "product_search_available": null,
+      "platform_fingerprints": [],
+      "presumed_engine": "custom_unknown",
+      "confidence": 0.0,
+      "sample_urls": [
+        "https://www.gigabyte.com/"
+      ],
+      "adapter_recommendation": "manual_or_browser_review",
+      "fallback_sources": []
+    }
+  ]
+}

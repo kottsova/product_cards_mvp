@@ -1,0 +1,68 @@
+{
+  "declared_at": "2026-09-26T08:40:20+00:00",
+  "stage": "28 / route study",
+  "brand": "Samsung",
+  "market": "kz_ru",
+  "observed_route": {
+    "index": "https://www.samsung.com/kz_ru/b2c-sitemap.xml",
+    "listed_sub_sitemaps_in_stage8_2": [
+      "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+      "https://www.samsung.com/kz_ru/im-sitemap.xml",
+      "https://www.samsung.com/kz_ru/assorted-sitemap.xml",
+      "https://www.samsung.com/kz_ru/vd-sitemap.xml",
+      "https://www.samsung.com/kz_ru/da-sitemap.xml"
+    ],
+    "evidence": "reports/source_census_2026-09-22_stage8_2/raw/samsung_step1.json"
+  },
+  "requests": {
+    "planned": [
+      {
+        "n": 1,
+        "url": "https://www.samsung.com/kz_ru/b2c-sitemap.xml",
+        "purpose": "confirm the current list of sub-sitemaps"
+      },
+      {
+        "n": 2,
+        "url": "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "purpose": "read in full; match the queued catalog articles against its <loc> entries"
+      },
+      {
+        "n": 3,
+        "url": "https://www.samsung.com/kz_ru/im-sitemap.xml",
+        "purpose": "read in full; match the queued catalog articles against its <loc> entries"
+      },
+      {
+        "n": 4,
+        "url": "https://www.samsung.com/kz_ru/assorted-sitemap.xml",
+        "purpose": "read in full; match the queued catalog articles against its <loc> entries"
+      }
+    ],
+    "max_real_requests": 4,
+    "pacing_seconds": 1.5,
+    "body_cap_bytes": 25000000,
+    "product_pages": 0,
+    "documents": 0,
+    "images": 0,
+    "a_sub_sitemap_not_listed_by_the_index_today": "not requested"
+  },
+  "stop_rules": "401/403/429 or a confirmed challenge stops the host in <workdir>/samsung_fetch_log.json and ends the study; RequestBudget(max_total=4) refuses a fifth request before it is made",
+  "url_construction": "none",
+  "queued_categories": {
+    "Внутренние SSD-накопители": 35,
+    "Смарт-часы": 18,
+    "Зарядные устройства": 10,
+    "Кабели": 10,
+    "Flash-накопители": 9,
+    "Внешние SSD-накопители": 5,
+    "Карты памяти": 5,
+    "Оперативная память": 5,
+    "Гарнитуры": 4,
+    "GPS-трекеры": 3,
+    "Наушники беспроводные": 3,
+    "Фитнес-браслеты": 2,
+    "МФУ": 1,
+    "Музыкальные проигрыватели": 1,
+    "Проекторы": 1
+  },
+  "after_the_study": "offline only: every queued catalog article is matched against the listed addresses; the batch is PROPOSED (one product per category, small groups), not run"
+}

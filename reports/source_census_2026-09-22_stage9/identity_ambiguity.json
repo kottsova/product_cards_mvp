@@ -1,0 +1,30 @@
+{
+  "schema_version": "stage9_identity_ambiguity.v1",
+  "finding": "Two distinct catalog rows both name the color 'Cosmic Red' for a DualSense controller, with DIFFERENT seller article/manufacturer codes.",
+  "candidates": [
+    {
+      "seller_article": "CFI-ZCT1J 02",
+      "name": "Геймпад DualSense для PS5 Cosmic Red",
+      "note": "The row Stage 8.2 originally targeted for its search."
+    },
+    {
+      "seller_article": "CFI-ZCT1W_cosmic_red",
+      "name": "Беспроводной геймпад DualSense Cosmic Red",
+      "note": "Discovered by this stage's offline re-search; a genuinely different seller article for a same-named color."
+    }
+  ],
+  "official_page_sku_found": "1000050734",
+  "official_page_sku_interpretation": "This is PS Direct's own internal US-webstore product ID (a generic numeric identifier), not a Sony manufacturer/regional part number. It shares no relationship with either candidate's CFI-ZCT1x code.",
+  "manufacturer_code_search_result": {
+    "searched_for": [
+      "CFI-ZCT1J",
+      "CFI-ZCT1W",
+      "any 'CFI-' pattern"
+    ],
+    "found_in_microdata": false,
+    "found_in_visible_body_text": false,
+    "regex_scan_result": "Zero matches for the pattern 'CFI-[A-Z0-9]+' anywhere in the fetched page text."
+  },
+  "consequence": "The official page confirms brand, model name, and color (via a structured 'Color:' field) but exposes no manufacturer/regional code comparable to the catalog's CFI-ZCT1x scheme. This means: (a) neither candidate catalog row can be confirmed over the other from this page's evidence, and (b) per instructions, the two candidates are NOT collapsed into one by assuming they are interchangeable 'similar controllers' -- both are reported, unresolved, with the ambiguity stated plainly rather than picked arbitrarily.",
+  "which_row_this_report_treats_as_primary": "CFI-ZCT1J 02 (continuity with Stage 8.2's original search target), with CFI-ZCT1W_cosmic_red carried alongside as an unresolved alternate -- this is a continuity choice for reporting purposes only, not a confirmed disambiguation."
+}

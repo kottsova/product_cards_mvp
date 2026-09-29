@@ -4,16 +4,17 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import sqlite3
 import unittest
+from unittest.mock import patch
 from xml.sax.saxutils import escape
 
 from bs4 import BeautifulSoup
 from fastapi.testclient import TestClient
 import requests
 
-from product_tool import jobs, worker
+from product_tool import jobs, resolution, worker
 from product_tool.adapters.common import RawAttribute, SourceDocument, fetch_with_retry
 from product_tool.adapters.lg import LGAdapter, lg_base_model, normalize_lg_sku
-from product_tool.adapters.mechta import MechtaAdapter
+from product_tool.adapters.lg_browser_search import BrowserCandidate, BrowserSearchResult
 from product_tool.adapters.sulpak import SulpakAdapter
 from product_tool.exporter import export_batch
 from product_tool.normalization import normalize_fact
@@ -23,7 +24,6 @@ from product_tool.web import create_app
 LG_BASE_URL = "https://www.lg.com/kz/laundry/styler/s3wer/"
 LG_FULL_URL = "https://www.lg.com/kz/laundry/styler/s3wer-alwpcom/"
 SULPAK_URL = "https://www.sulpak.kz/g/parovoj_shkaf_lg_styler_s3wer_alwpcom"
-MECHTA_URL = "https://www.mechta.kz/product/parovoy-shkaf-lg-s3-wer/"
 
 
 def lg_html(model: str, *, color: str = "Белый") -> str:
@@ -91,11 +91,18 @@ class FakeClock:
     def __call__(self) -> float: return self.value
 
 
-def source(key: str, match: str, facts: list[tuple[str, str]], *, error: str = "") -> SourceDocument:
-    names = {"lg": "LG Казахстан", "sulpak": "Sulpak", "mechta": "Mechta"}
-    urls = {"lg": LG_BASE_URL, "sulpak": SULPAK_URL, "mechta": MECHTA_URL}
+def source(key: str, match: str, facts: list[tuple[str, str]], *, error: str = "", site_name: str = "") -> SourceDocument:
+    # "lg"/"sulpak" are the two real, currently-registered source keys and
+    # get their real display name/URL; any other key (used only by the
+    # generic multi-supplier mechanism tests below, which monkeypatch
+    # resolution.SUPPLIERS to exercise N>=2 suppliers agreeing/conflicting
+    # -- a capability the code still supports even though only one real
+    # supplier is registered today) gets a synthetic name/URL.
+    names = {"lg": "LG Казахстан", "sulpak": "Sulpak"}
+    urls = {"lg": LG_BASE_URL, "sulpak": SULPAK_URL}
     return SourceDocument(
-        key, names[key], urls[key], found_model="S3WER" if key == "lg" else "S3WER.ALWPCOM",
+        key, site_name or names.get(key, key), urls.get(key, f"https://example.test/{key}"),
+        found_model="S3WER" if key == "lg" else "S3WER.ALWPCOM",
         match_level=match, evidence="fixture evidence", error=error,
         attributes=[RawAttribute(name, value) for name, value in facts],
     )
@@ -160,6 +167,100 @@ class LGAdapterFixtureTests(unittest.TestCase):
         self.assertLessEqual(session.last_timeout, 10)
 
 
+class FakeBrowserSearch:
+    """Stage 43 test double for adapters.lg_browser_search.LGBrowserSearch: no real browser, just the
+    `.search(region, queries) -> BrowserSearchResult` protocol LGAdapter/LGRUAdapter actually call."""
+
+    def __init__(self, results_by_first_query: dict[str, BrowserSearchResult]):
+        self.results = results_by_first_query
+        self.calls: list[tuple[str, list[str]]] = []
+
+    def search(self, region: str, queries: list[str]) -> BrowserSearchResult:
+        self.calls.append((region, list(queries)))
+        key = queries[0] if queries else ""
+        return self.results.get(key, BrowserSearchResult(region, key, "no_candidates", note=f"no fixture result for {key!r}"))
+
+
+CANDIDATE_URL = "https://www.lg.com/ru/support/product/lg-S3WER.ALWPCOM"
+OTHER_CANDIDATE_URL = "https://www.lg.com/ru/support/product/lg-S3WER.OTHER"
+
+
+class LGBrowserSearchFallbackTests(unittest.TestCase):
+    """Stage 43: the sitemap-miss fallback to LG site search, wired through LGAdapter/LGRUAdapter's
+    optional `browser_search` parameter -- default None means today's sitemap-only behavior, unchanged."""
+
+    def test_default_none_is_byte_for_byte_the_old_sitemap_only_behavior(self) -> None:
+        session = FakeSession({LG_BASE_URL: lg_html("S3WER")})
+        document = LGAdapter(session, clock=lambda: 0).find_source("S3WER.ALWPCOM", deadline=20)
+        self.assertEqual(document.match_level, "base_model")
+        self.assertNotIn("Поиск LG", document.evidence)
+
+    def test_support_page_confirming_the_exact_article_adds_a_positive_note_without_upgrading_match_level(self) -> None:
+        session = FakeSession({
+            LG_BASE_URL: lg_html("S3WER"),
+            CANDIDATE_URL: '<html><body><div data-product-id="S3WER.ALWPCOM">card</div></body></html>',
+        })
+        browser_search = FakeBrowserSearch({
+            "S3WER.ALWPCOM": BrowserSearchResult("kz", "S3WER.ALWPCOM", "candidates_found",
+                                                  (BrowserCandidate(CANDIDATE_URL, "support", "S3WER.ALWPCOM"),)),
+        })
+        adapter = LGAdapter(session, clock=lambda: 0, browser_search=browser_search)
+        document = adapter.find_source("S3WER.ALWPCOM", deadline=20)
+        self.assertEqual(adapter.support_candidate_urls, [CANDIDATE_URL])
+        # A support-page confirmation is evidence, never a silent upgrade: match_level still reflects what
+        # the MAIN official page itself showed (base_model here), exactly like the project's existing
+        # colour/variant rule (Stage 41) -- it is surfaced for a human, not substituted for the real card.
+        self.assertEqual(document.match_level, "base_model")
+        self.assertIn("подтвердил артикул", document.evidence)
+        self.assertIn("S3WER.ALWPCOM", document.evidence)
+        self.assertEqual(browser_search.calls[0][0], "kz")
+
+    def test_support_page_showing_a_different_code_is_reported_not_hidden(self) -> None:
+        session = FakeSession({
+            LG_BASE_URL: lg_html("S3WER"),
+            OTHER_CANDIDATE_URL: '<html><body><div data-product-id="S3WER.OTHER">card</div></body></html>',
+        })
+        browser_search = FakeBrowserSearch({
+            "S3WER.ALWPCOM": BrowserSearchResult("kz", "S3WER.ALWPCOM", "candidates_found",
+                                                  (BrowserCandidate(OTHER_CANDIDATE_URL, "support", "S3WER.OTHER"),)),
+        })
+        adapter = LGAdapter(session, clock=lambda: 0, browser_search=browser_search)
+        document = adapter.find_source("S3WER.ALWPCOM", deadline=20)
+        self.assertEqual(adapter.support_candidate_urls, [])
+        self.assertEqual(document.match_level, "base_model")
+        self.assertIn("другой код", document.evidence)
+        self.assertIn("S3WER.OTHER", document.evidence)
+
+    def test_stop_reason_is_surfaced_when_sitemap_found_nothing_at_all(self) -> None:
+        session = FakeSession({}, sitemap_urls=[])
+        browser_search = FakeBrowserSearch({
+            "MS2082F": BrowserSearchResult("kz", "MS2082F", "challenge_detected",
+                                            note="LG показал проверку браузера при поиске «MS2082F» (kz); поиск через браузер остановлен для этого хоста."),
+        })
+        document = LGAdapter(session, clock=lambda: 0, browser_search=browser_search).find_source("MS2082F", deadline=20)
+        self.assertEqual(document.match_level, "mismatch")
+        self.assertIn("проверку браузера", document.evidence)
+
+    def test_full_sku_from_sitemap_never_triggers_browser_search(self) -> None:
+        session = FakeSession(
+            {LG_FULL_URL: lg_html("S3WER.ALWPCOM"), LG_BASE_URL: lg_html("S3WER")},
+            sitemap_urls=[LG_FULL_URL, LG_BASE_URL],
+        )
+        browser_search = FakeBrowserSearch({})
+        document = LGAdapter(session, clock=lambda: 0, browser_search=browser_search).find_source("S3WER.ALWPCOM", deadline=20)
+        self.assertEqual(document.match_level, "full_sku")
+        self.assertEqual(browser_search.calls, [])
+
+    def test_kit_components_are_searched_individually(self) -> None:
+        session = FakeSession({}, sitemap_urls=[])
+        browser_search = FakeBrowserSearch({})
+        LGAdapter(session, clock=lambda: 0, browser_search=browser_search).find_source(
+            "P12ED.NSAR + P12ED.USAR", deadline=20
+        )
+        queried_first_terms = {call[1][0] for call in browser_search.calls}
+        self.assertEqual(queried_first_terms, {"P12ED.NSAR", "P12ED.USAR"})
+
+
 class NormalizationAndResolutionTests(unittest.TestCase):
     def setUp(self) -> None:
         temporary = TemporaryDirectory()
@@ -176,20 +277,29 @@ class NormalizationAndResolutionTests(unittest.TestCase):
         return next(item for item in jobs.get_resolved(self.database, self.product_id) if item["normalized_name"] == name)
 
     def test_suppliers_match_and_override_base_model(self) -> None:
-        self.save(
-            source("lg", "base_model", [("Цвет", "Белый")]),
-            source("sulpak", "full_sku", [("Цвет", "Серый")]),
-            source("mechta", "full_sku", [("Цвет", " серый ")]),
-        )
-        item = self.resolved("color")
+        # Only "sulpak" is a real, currently-registered supplier -- but the
+        # underlying resolve_attributes() logic for two-or-more agreeing
+        # suppliers is generic, not specific to any one dealer name, and is
+        # still real, load-bearing code. Testing it requires a second
+        # supplier key, so this monkeypatches resolution.SUPPLIERS with a
+        # synthetic second entry for the duration of the test only.
+        with patch.object(resolution, "SUPPLIERS", {"sulpak", "supplier_b"}):
+            self.save(
+                source("lg", "base_model", [("Цвет", "Белый")]),
+                source("sulpak", "full_sku", [("Цвет", "Серый")]),
+                source("supplier_b", "full_sku", [("Цвет", " серый ")]),
+            )
+            item = self.resolved("color")
         self.assertEqual((item["selected_value"], item["status"], item["conflict"]), ("серый", "confirmed_two_suppliers", 0))
+        self.assertEqual(item["selected_source"], "sulpak+supplier_b")
 
     def test_supplier_conflict_requires_review(self) -> None:
-        self.save(
-            source("sulpak", "full_sku", [("Цвет", "Серый")]),
-            source("mechta", "full_sku", [("Цвет", "Белый")]),
-        )
-        item = self.resolved("color")
+        with patch.object(resolution, "SUPPLIERS", {"sulpak", "supplier_b"}):
+            self.save(
+                source("sulpak", "full_sku", [("Цвет", "Серый")]),
+                source("supplier_b", "full_sku", [("Цвет", "Белый")]),
+            )
+            item = self.resolved("color")
         self.assertEqual(item["status"], "needs_review")
         self.assertEqual(item["selected_value"], "")
         self.assertEqual(item["conflict"], 1)
@@ -221,10 +331,7 @@ class NormalizationAndResolutionTests(unittest.TestCase):
         )
         self.assertEqual(len(jobs.get_facts(self.database, self.product_id)), 1)
     def test_manual_decision_survives_rerun_and_reopen(self) -> None:
-        self.save(
-            source("sulpak", "full_sku", [("Цвет", "Серый")]),
-            source("mechta", "full_sku", [("Цвет", "Белый")]),
-        )
+        self.save(source("sulpak", "full_sku", [("Цвет", "Серый")]))
         jobs.save_manual_decision(self.database, self.product_id, "color", "графит", "", "Проверено сотрудником")
         jobs.resolve_product(self.database, self.product_id)
         jobs.initialize(self.database)
@@ -256,25 +363,28 @@ class WorkerBudgetTests(unittest.TestCase):
         jobs.enqueue(self.database, product, [1, 3])
         lg = StaticAdapter(source("lg", "base_model", [("Цвет", "Белый")]))
         sulpak = StaticAdapter(source("sulpak", "full_sku", [("Цвет", "Серый")]))
-        mechta = StaticAdapter(source("mechta", "full_sku", [("Цвет", "Серый")]))
-        self.assertTrue(worker.run_once(self.database, lambda: (lg, sulpak, mechta), clock=lambda: 0))
+        self.assertTrue(worker.run_once(self.database, lambda: (lg, sulpak), clock=lambda: 0))
         self.assertEqual(sulpak.calls[0][0], "S3WER.ALWPCOM")
-        self.assertEqual(mechta.calls[0][0], "S3WER.ALWPCOM")
         self.assertEqual(jobs.list_jobs(self.database, product)[0]["status"], "done")
-        self.assertIn("двумя поставщиками", jobs.identification_status(jobs.get_source_pages(self.database, product)))
+        self.assertIn("поставщиком Sulpak", jobs.identification_status(jobs.get_source_pages(self.database, product)))
 
-    def test_unavailable_source_does_not_exceed_fallback_budget(self) -> None:
+    def test_unavailable_official_source_does_not_leave_time_for_the_fallback_budget(self) -> None:
+        # With only one LG-only supplier (Sulpak) registered, there is no
+        # longer a second fallback-tier adapter to skip mid-loop -- so this
+        # now tests the real remaining budget edge case: if the official LG
+        # stage alone consumes the whole 60s total budget, Sulpak is never
+        # attempted at all, and its page records a budget-exceeded error
+        # rather than silently being skipped without explanation.
         product = seed_product(self.database)
         jobs.enqueue(self.database, product, [1])
         clock = FakeClock()
-        lg = StaticAdapter(source("lg", "base_model", []))
-        sulpak = StaticAdapter(source("sulpak", "unknown", [], error="таймаут"), clock, advance=31)
-        mechta = StaticAdapter(source("mechta", "full_sku", []))
-        worker.run_once(self.database, lambda: (lg, sulpak, mechta), clock=clock)
-        self.assertEqual(len(mechta.calls), 0)
+        lg = StaticAdapter(source("lg", "base_model", []), clock, advance=61)
+        sulpak = StaticAdapter(source("sulpak", "full_sku", []))
+        worker.run_once(self.database, lambda: (lg, sulpak), clock=clock)
+        self.assertEqual(len(sulpak.calls), 0)
         pages = {item["source_key"]: item for item in jobs.get_source_pages(self.database, product)}
-        self.assertIn("бюджет", pages["mechta"]["error"])
-        self.assertLessEqual(clock.value, 60)
+        self.assertIn("бюджет", pages["sulpak"]["error"])
+        self.assertLessEqual(clock.value, 91)
 
     def test_fallback_factory_not_started_for_other_brands(self) -> None:
         for brand in ("Samsung", "Apple"):
@@ -306,29 +416,34 @@ class MultiSourceWebTests(unittest.TestCase):
         root = Path(temporary.name)
         database = root / "batches.sqlite3"
         product = seed_product(database)
-        for document in (
-            source("lg", "base_model", [("Цвет", "Белый")]),
-            source("sulpak", "full_sku", [("Цвет", "Серый")]),
-            source("mechta", "full_sku", [("Цвет", "Белый")]),
-        ):
-            jobs.save_source_document(database, product, document)
-        jobs.resolve_product(database, product)
-        with TestClient(create_app(root)) as client:
-            page = client.get(f"/products/{product}")
-            self.assertEqual(page.status_code, 200)
-            self.assertIn("S3WER.ALWPCOM", page.text)
-            self.assertIn("S3WER", page.text)
-            self.assertIn("Нужна проверка", page.text)
-            self.assertIn(SULPAK_URL, page.text)
-            response = client.post(
-                f"/products/{product}/attributes/color/decision",
-                data={"value": "графит", "unit": "", "reason": "Проверено вручную"},
-                follow_redirects=False,
-            )
-            self.assertEqual(response.status_code, 303)
-            exported = client.get("/batches/b1/export.xlsx")
-            self.assertEqual(exported.status_code, 200)
-            self.assertTrue(exported.content.startswith(b"PK"))
+        # Two disagreeing suppliers is what actually produces "needs_review"
+        # (see resolution.py); only "sulpak" is a real registered supplier
+        # today, so a synthetic second one is monkeypatched in for this
+        # test only, the same as the resolution-level tests above.
+        with patch.object(resolution, "SUPPLIERS", {"sulpak", "supplier_b"}):
+            for document in (
+                source("lg", "base_model", [("Цвет", "Белый")]),
+                source("sulpak", "full_sku", [("Цвет", "Серый")]),
+                source("supplier_b", "full_sku", [("Цвет", "Белый")]),
+            ):
+                jobs.save_source_document(database, product, document)
+            jobs.resolve_product(database, product)
+            with TestClient(create_app(root)) as client:
+                page = client.get(f"/products/{product}")
+                self.assertEqual(page.status_code, 200)
+                self.assertIn("S3WER.ALWPCOM", page.text)
+                self.assertIn("S3WER", page.text)
+                self.assertIn("Нужна проверка", page.text)
+                self.assertIn(SULPAK_URL, page.text)
+                response = client.post(
+                    f"/products/{product}/attributes/color/decision",
+                    data={"value": "графит", "unit": "", "reason": "Проверено вручную"},
+                    follow_redirects=False,
+                )
+                self.assertEqual(response.status_code, 303)
+                exported = client.get("/batches/b1/export.xlsx")
+                self.assertEqual(exported.status_code, 200)
+                self.assertTrue(exported.content.startswith(b"PK"))
         self.assertEqual(jobs.get_manual_decisions(database, product)["color"]["selected_value"], "графит")
 
 if __name__ == "__main__":

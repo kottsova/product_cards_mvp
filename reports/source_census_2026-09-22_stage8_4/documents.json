@@ -1,0 +1,25 @@
+{
+  "schema_version": "stage8_4_documents.v1",
+  "documents_found_and_relevant": [
+    {
+      "item": "Samsung MS23K3614AK/BW",
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "first_party": true,
+      "title": "User Manual (Samsung's own CDCttType=UM code; filename MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf)",
+      "document_type": "User Manual",
+      "language": "RU-UK-KK-UZ per filename (Russian first) -- filename/query-parameter evidence only, PDF internal text not parsed",
+      "model_or_family": "MS23K3614AK/BW (exact -- ModelName query parameter matches the product's own sku)",
+      "date_or_version": "Path segment '201907' in the VPath parameter suggests a July 2019 document version; not independently confirmed beyond this URL path evidence",
+      "discovery_method": "Found directly on the already-verified product page (a[href] matching .pdf pattern)",
+      "evidence_of_model_linkage": "URL query parameter ModelName=MS23K3614AK matches the product's JSON-LD sku exactly"
+    }
+  ],
+  "documents_found_but_excluded": [
+    {
+      "url": "https://images.samsung.com/is/content/samsung/assets/in/info/installation/Delivery-Service-TnC.pdf",
+      "reason_excluded": "Same generic delivery-terms document already seen on the Galaxy Buds3 FE page (Stage 8.3) -- not model-specific, not a manual."
+    }
+  ],
+  "note": "Unlike Stage 8.3 (no manual found for Galaxy Buds3 FE), this item's manual was found, confirmed reachable, and confirmed as real PDF content. Per instructions, 'instruction not found' is never conflated with 'instruction does not exist' -- here an instruction WAS found, so no such caveat applies to this item; it still applies to Galaxy Buds3 FE (Stage 8.3) and is not restated as a new finding here."
+}

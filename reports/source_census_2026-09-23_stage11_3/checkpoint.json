@@ -1,0 +1,176 @@
+{
+  "stage": "11.3",
+  "budget_declared_before_requests": {
+    "declared_at": "2026-09-23",
+    "declared_before_any_request": true,
+    "scope": "HyperX QuadCast 2S (9A273AA) only: verify the user-provided DNS product page and its linked PDF as a manual candidate, then formalize a DNS dealer-fallback rule tested on this single row only. No mass DNS crawl, no other catalog row, no Sulpak/Mechta network activity.",
+    "allowed_hosts": [
+      "www.dns-shop.ru",
+      "drv.dns-shop.ru"
+    ],
+    "host_reasoning": {
+      "www.dns-shop.ru": "The exact product page URL was supplied directly by the user, not discovered or guessed.",
+      "drv.dns-shop.ru": "The exact PDF URL was supplied directly by the user (DNS's own driver/manual subdomain, linked from the product page they gave), not guessed."
+    },
+    "seed_urls_user_provided_not_guessed": [
+      "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/",
+      "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf"
+    ],
+    "limits": {
+      "max_requests_total": 8,
+      "max_requests_per_host": 6,
+      "max_hosts": 2,
+      "max_response_bytes_per_request_page": 900000,
+      "pdf_chunk_bytes": 1500000,
+      "pdf_max_total_bytes": 12000000,
+      "min_interval_seconds_between_requests": 2.0,
+      "timeout_seconds_per_request": 10.0
+    },
+    "pdf_fetch_mechanism": "Stage 8.6's bounded, Range-aware, completeness-classified fetch (complete/partial/unknown_completeness), reused via the same adapted logic as Stage 10.1/10.3/11.1 -- never assumes completeness from a single response.",
+    "robots_txt_policy": "robots.txt fetched first for each host, before any other request to that host, honoring Disallow rules under User-agent: *.",
+    "identity_verification_requirement": "The DNS page and the PDF must each be checked for an explicit statement of model 'QuadCast 2 S' (or equivalent) AND the manufacturer code '9A273AA' before either is treated as evidence for this catalog row. A similar-sounding title alone is not sufficient. Regulatory documents (declarations of conformity, certificates) are not searched for and are not treated as instructions or card material even if encountered incidentally.",
+    "dealer_fallback_rule_being_tested_this_stage": {
+      "rule": "DNS (dns-shop.ru) may be used as a fallback source for ANY catalog row when official characteristics, photos, or instructions are insufficient. The official source always has priority; on conflict, the field goes to review, not to DNS. Every DNS-sourced field must carry its own URL, provenance, and an exact model/variant check -- a dealer card is never imported wholesale, and identity is never confirmed by a similar title alone.",
+      "tested_this_stage_on": "9A273AA only -- no other row, no crawl of DNS beyond the two user-provided URLs.",
+      "existing_restrictions_unchanged": "Sulpak stays scoped to its exact LG household-appliance allowlist (washers/dryers, refrigerators, vacuums, microwaves); Mechta stays excluded (official_status=not_allowed, enabled=false). Neither is touched this stage."
+    },
+    "stop_conditions": [
+      "max_requests_total or max_requests_per_host reached",
+      "HTTP 403/429/challenge_confirmed on either host -> stop that host, record the gap",
+      "redirect off the two allowed hosts -> aborted, not followed",
+      "robots.txt disallows the exact page/PDF path -> skip, record why",
+      "PDF total size exceeds pdf_max_total_bytes -> stop, report unknown_completeness, do not raise the cap without a separate, explicit revision"
+    ],
+    "explicit_non_goals": [
+      "No Chromium / browser automation",
+      "No search engines",
+      "No mass DNS census or crawl",
+      "No invented endpoints",
+      "No search for declarations of conformity / certificates",
+      "No modification of the production registry (source_catalog.v2.json) -- the fallback rule is recorded as a research artifact in this stage's own report directory only",
+      "No Sulpak/Mechta network activity"
+    ]
+  },
+  "total_requests_made": 7,
+  "requests_by_host": {
+    "www.dns-shop.ru": 2,
+    "drv.dns-shop.ru": 5
+  },
+  "requests_budget_max_total": 8,
+  "request_log_full": [
+    {
+      "seq": 1,
+      "requested_url": "https://www.dns-shop.ru/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.dns-shop.ru/robots.txt",
+      "redirect_chain": [
+        "https://www.dns-shop.ru/robots.txt"
+      ],
+      "content_type": "text/plain",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 2182,
+      "note": "",
+      "phase_file": "phase1_robots_and_dns_page.json",
+      "aggregate_seq": 1
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://drv.dns-shop.ru/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "unavailable",
+      "http_status": 404,
+      "final_url": "https://drv.dns-shop.ru/robots.txt",
+      "redirect_chain": [
+        "https://drv.dns-shop.ru/robots.txt"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 404",
+      "bytes_read": 0,
+      "note": "",
+      "phase_file": "phase1_robots_and_dns_page.json",
+      "aggregate_seq": 2
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/",
+      "capability": "product_page",
+      "access_status": "unavailable",
+      "http_status": 401,
+      "final_url": "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/",
+      "redirect_chain": [
+        "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 401",
+      "bytes_read": 0,
+      "note": "exact URL supplied by the user, not guessed",
+      "phase_file": "phase1_robots_and_dns_page.json",
+      "aggregate_seq": 3
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "range": "0-1499999",
+      "http_status": 206,
+      "content_range": "bytes 0-1499999/4978169",
+      "content_type": "application/octet-stream",
+      "bytes_read": 1500000,
+      "final_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "error": "",
+      "phase_file": "phase2_pdf_fetch.json",
+      "aggregate_seq": 4
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "range": "1500000-2999999",
+      "http_status": 206,
+      "content_range": "bytes 1500000-2999999/4978169",
+      "content_type": "application/octet-stream",
+      "bytes_read": 1500000,
+      "final_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "error": "",
+      "phase_file": "phase2_pdf_fetch.json",
+      "aggregate_seq": 5
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "range": "3000000-4499999",
+      "http_status": 206,
+      "content_range": "bytes 3000000-4499999/4978169",
+      "content_type": "application/octet-stream",
+      "bytes_read": 1500000,
+      "final_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "error": "",
+      "phase_file": "phase2_pdf_fetch.json",
+      "aggregate_seq": 6
+    },
+    {
+      "seq": 4,
+      "requested_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "range": "4500000-4978168",
+      "http_status": 206,
+      "content_range": "bytes 4500000-4978168/4978169",
+      "content_type": "application/octet-stream",
+      "bytes_read": 478169,
+      "final_url": "https://drv.dns-shop.ru/drivers/Manuals/H/hyperx-quadcast-2-s_instrukcia_104913_30102025.pdf",
+      "error": "",
+      "phase_file": "phase2_pdf_fetch.json",
+      "aggregate_seq": 7
+    }
+  ],
+  "skipped_requests": [],
+  "stop_events": {
+    "403_429_confirmed_challenge_seen": false,
+    "401_seen_on_dns_page": true,
+    "401_treated_as": "access blocked; not retried with header spoofing or browser automation, per policy"
+  },
+  "sulpak_mechta_contacted_this_stage": false,
+  "status": "complete_within_budget"
+}

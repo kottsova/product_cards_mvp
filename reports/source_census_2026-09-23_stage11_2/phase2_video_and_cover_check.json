@@ -1,0 +1,86 @@
+{
+  "phase": "video_and_cover_check",
+  "robots_http_status": 200,
+  "video_check": {
+    "url": "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4",
+    "requested_range": "0-65535",
+    "succeeded": true,
+    "error": null,
+    "http_status": 206,
+    "content_type": "video/mp4",
+    "content_range_header": "bytes 0-65535/571852430",
+    "accept_ranges_header": "",
+    "bytes_actually_read_this_chunk": 65536,
+    "first_bytes_hex_signature": "00000018667479706d703432",
+    "is_mp4_signature": true,
+    "final_url": "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4",
+    "redirect_chain": [
+      "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4"
+    ],
+    "declared_total_bytes": 571852430
+  },
+  "cover_check": {
+    "url": "https://hyperx.com/cdn/shop/files/HX-QUADCAST-2-S-YouTube-tn-1080p_1920x.jpg?v=1789488039",
+    "succeeded": true,
+    "error": null,
+    "http_status": 206,
+    "content_type": "image/jpeg",
+    "content_range_header": "bytes 0-163179/163180",
+    "bytes_read": 163180,
+    "sha256": "c61530131aea148650f09f197c80bdb8254d26f98203beafbccc7c9f25f179d1",
+    "saved_as": null,
+    "note": "Bytes assembled/hashed/visually inspected in-session, then discarded -- not committed, per the no-raw-content rule.",
+    "declared_total_bytes": 163180,
+    "byte_count_matches_declared_total": true
+  },
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://cdn.shopify.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://cdn.shopify.com/robots.txt",
+      "redirect_chain": [
+        "https://cdn.shopify.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=utf-8",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 80,
+      "note": ""
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4",
+      "capability": "asset_host",
+      "access_status": "direct_access",
+      "http_status": 206,
+      "final_url": "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4",
+      "redirect_chain": [
+        "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4"
+      ],
+      "content_type": "video/mp4",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 65536,
+      "note": "bounded type/availability check only, not a full download"
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://hyperx.com/cdn/shop/files/HX-QUADCAST-2-S-YouTube-tn-1080p_1920x.jpg?v=1789488039",
+      "capability": "asset_host",
+      "access_status": "direct_access",
+      "http_status": 206,
+      "final_url": "https://hyperx.com/cdn/shop/files/HX-QUADCAST-2-S-YouTube-tn-1080p_1920x.jpg?v=1789488039",
+      "redirect_chain": [
+        "https://hyperx.com/cdn/shop/files/HX-QUADCAST-2-S-YouTube-tn-1080p_1920x.jpg?v=1789488039"
+      ],
+      "content_type": "image/jpeg",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 163180,
+      "note": "cover image for the confirmed product video, fetched as separate evidence"
+    }
+  ]
+}

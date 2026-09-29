@@ -1,0 +1,127 @@
+{
+ "samsung_units": 1182,
+ "by_status_and_reason": {
+  "manual_review/not_selected_one_card_per_category": 1141,
+  "manual_review/seller_sku_not_a_manufacturer_code": 26,
+  "ready_to_run/selected_one_per_category": 15
+ },
+ "ready": [
+  {
+   "category": "Варочные панели",
+   "seller_sku": "NZ64T3506AK/WT",
+   "catalog_row": 11971
+  },
+  {
+   "category": "Духовые шкафы",
+   "seller_sku": "NV7B4120ZAS/WT",
+   "catalog_row": 12025
+  },
+  {
+   "category": "Колонки",
+   "seller_sku": "MX-ST50B",
+   "catalog_row": 12053
+  },
+  {
+   "category": "Машины посудомоечные",
+   "seller_sku": "DW60M5050BB/WT",
+   "catalog_row": 12060
+  },
+  {
+   "category": "Микроволновые печи",
+   "seller_sku": "MS23K3614AK/BW",
+   "catalog_row": 12109
+  },
+  {
+   "category": "Мониторы",
+   "seller_sku": "LS24D300GAIXCI",
+   "catalog_row": 12126
+  },
+  {
+   "category": "Пылесосы",
+   "seller_sku": "VC18M21D0VG/EV",
+   "catalog_row": 12213
+  },
+  {
+   "category": "Роботы-пылесосы",
+   "seller_sku": "VR50T95735W/EV",
+   "catalog_row": 12268
+  },
+  {
+   "category": "Саундбары",
+   "seller_sku": "HW-Q800D",
+   "catalog_row": 12281
+  },
+  {
+   "category": "Смартфоны",
+   "seller_sku": "SM-A376EZAGINS",
+   "catalog_row": 12439
+  },
+  {
+   "category": "Сплит-системы",
+   "seller_sku": "AR80F09CABWNER",
+   "catalog_row": 12600
+  },
+  {
+   "category": "Стиральные машины",
+   "seller_sku": "WD10T754CBX/LD",
+   "catalog_row": 12603
+  },
+  {
+   "category": "Сушильные машины",
+   "seller_sku": "DV16DG8600BVLD",
+   "catalog_row": 12660
+  },
+  {
+   "category": "Телевизоры",
+   "seller_sku": "QE48S85HAEXCE",
+   "catalog_row": 12701
+  },
+  {
+   "category": "Холодильники",
+   "seller_sku": "RB31FERNDSA",
+   "catalog_row": 13125
+  }
+ ],
+ "working_adapters": [
+  {
+   "route_id": "lg_official",
+   "family": "lg",
+   "adapters": [
+    "lg_kz",
+    "lg_ru"
+   ],
+   "url_basis": "adapter_discovery",
+   "dispatch_constant": "worker.LG_BRAND_ALIASES",
+   "known_exact_urls": 0
+  },
+  {
+   "route_id": "hyperx_official",
+   "family": "hyperx",
+   "adapters": [
+    "hyperx"
+   ],
+   "url_basis": "known_url_map",
+   "dispatch_constant": "worker.HYPERX_BRAND_ALIASES",
+   "known_exact_urls": 20
+  },
+  {
+   "route_id": "samsung_official",
+   "family": "samsung",
+   "adapters": [
+    "samsung"
+   ],
+   "url_basis": "selected_one_per_category",
+   "dispatch_constant": "worker.SAMSUNG_BRAND_ALIASES",
+   "known_exact_urls": 0
+  }
+ ],
+ "all_units_by_status": {
+  "ready_to_run": 613,
+  "adapter_url_missing": 20,
+  "official_route_no_adapter": 28,
+  "needs_product_page_fixture": 10841,
+  "host_blocked": 1957,
+  "identity_conflict": 1,
+  "manual_review": 3428
+ }
+}

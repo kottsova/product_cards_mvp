@@ -1,0 +1,31 @@
+import json
+from pathlib import Path
+
+OUT = Path(r'A:\work\dev\product_cards_mvp\reports\source_census_2026-09-22_stage9')
+
+budget = {
+    "schema_version": "stage9_budget_predeclaration.v1",
+    "declared_before_any_request": True,
+    "target_url": "https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller-cosmic-red-for-ps5-pc-mac-mobile",
+    "target_url_provenance": "Already verified official Product page from Stage 8.2 -- not new discovery.",
+    "ordinary_page_load_limit": {"bytes": 1_500_000, "note": "Unchanged existing limit for HTML page fetches."},
+    "document_assembly_limits": {
+        "max_document_total_bytes": 8_000_000,
+        "document_chunk_bytes_per_request": 1_500_000,
+        "note": "Generic pre-declared ceiling in case a manual/PDF is found on or linked from the product page; reuses Stage 8.6's bounded Range-assembly capability unchanged. If a found document's declared size exceeds this, no further bytes are fetched for it and the manual stays unconfirmed -- same discipline as Stage 8.6.",
+    },
+    "request_limits": {"max_total_requests": 6, "max_requests_per_host": 4, "max_hosts": 2},
+    "pre_declared_allowed_hosts": ["direct.playstation.com", "www.playstation.com", "support.playstation.com"],
+    "allowed_hosts_provenance": "direct.playstation.com is the already-verified product-page host. www.playstation.com and support.playstation.com were already observed as first-party navigation links on PS Direct pages in Stage 8.2's own evidence -- pre-declared as available, not guaranteed to be used.",
+    "stop_conditions": [
+        "403 or 429 response on any host -- that host is paused for the remainder of the run.",
+        "A redirect to a host outside the pre-declared allow-list.",
+        "Content-Range total size, ETag or Last-Modified disagrees between parts of a document assembly.",
+        "A found document's declared total size exceeds max_document_total_bytes.",
+        "Total or per-host request budget exhausted.",
+    ],
+    "no_chromium_no_search_engines_no_dealers_no_invented_urls_no_broad_brand_search": True,
+    "samsung_not_investigated_this_stage": True,
+}
+json.dump(budget, open(OUT / 'budget_predeclaration.json', 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+print('wrote budget_predeclaration.json')

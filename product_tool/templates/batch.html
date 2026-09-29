@@ -12,6 +12,46 @@
   </div>
   <div class="success" role="status">Партия подтверждена и сохранена на этом компьютере. Она останется доступной после перезапуска приложения.</div>
 
+  {% if batch_message %}<div class="success" role="status">{{ batch_message }}</div>{% endif %}
+  {% if lg_products %}
+  <section class="section" id="lg-batch">
+    <div class="section-heading"><h2>Проверка LG одной кнопкой</h2></div>
+    <p>Товары выбраны из вашего файла: по одному LG-товару на каждую категорию, без списка разрешённых категорий. Выбор можно изменить. Для полного поиска включены описание, характеристики, фото и инструкции. Если загрузку PDF хотите отложить, снимите только «Инструкции» и выполните для них отдельный проход позже.</p>
+    <p><a href="/batches/{{ batch.id }}#lg-batch">Обновить прогресс</a></p>
+    <div class="stage-grid" aria-label="Состояние выбора LG">
+      <div class="status-card"><strong id="lg-selected-count">{{ lg_counts.selected }}</strong><br>Выбрано</div>
+      <div class="status-card"><strong>{{ lg_counts.queued }}</strong><br>В очереди</div>
+      <div class="status-card"><strong>{{ lg_counts.running }}</strong><br>Выполняется</div>
+      <div class="status-card"><strong>{{ lg_counts.completed }}</strong><br>Завершено</div>
+      <div class="status-card"><strong>{{ lg_counts.review }}</strong><br>Требует проверки</div>
+    </div>
+    <form action="/batches/{{ batch.id }}/lg-search" method="post" id="lg-batch-form">
+      <h3>Состав проверки</h3>
+      <div class="stage-grid">
+        {% for number, label in stages.items() %}
+        <label class="stage-option"><input type="checkbox" name="stages" value="{{ number }}" checked><span><strong>{{ label }}</strong></span></label>
+        {% endfor %}
+      </div>
+      <p class="hint">Снятый этап не считается проверенным. Инструкции могут требовать большой загрузки PDF; доступ к сайтам ограничивает действующая политика worker.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Выбор</th><th>Категория</th><th>Товар и артикул</th><th>Статус задания</th><th>Готовность карточки и причины</th></tr></thead>
+        <tbody>{% for product in lg_products %}
+          {% set state = lg_rows[product.id] %}
+          <tr>
+            <td><input type="checkbox" class="lg-product-select" name="product_ids" value="{{ product.id }}" {% if product.id in lg_selected %}checked{% endif %} aria-label="Выбрать {{ product.search_code }}"></td>
+            <td>{{ product.category }}</td>
+            <td><a href="/products/{{ product.id }}">{{ product.name or product.search_code }}</a><br><small>{{ product.search_code }}</small></td>
+            <td>{% if state.job %}{{ state.job_label }} ({{ state.job.status }}){% else %}Не запускалось{% endif %}</td>
+            <td>{% if state.job and state.job.status == 'queued' %}Ожидает обработки; итог карточки появится после проверки.{% elif state.job and state.job.status == 'running' %}Проверяется; итог карточки появится после завершения.{% else %}{{ state.card.label }} ({{ state.card.verdict }}){% if state.card.reasons %}<br><small>{{ state.card.reasons|join(' ') }}</small>{% endif %}{% endif %}</td>
+          </tr>
+        {% endfor %}</tbody>
+      </table></div>
+      <div class="form-actions"><button class="button primary" type="submit">Поставить выбранные LG в очередь</button><span class="hint">Уже ожидающие и выполняющиеся товары повторно не добавляются. Приложение обрабатывает задания по одному.</span></div>
+    </form>
+  </section>
+  <script>document.querySelectorAll('.lg-product-select').forEach(function(box) { box.addEventListener('change', function() { document.getElementById('lg-selected-count').textContent = document.querySelectorAll('.lg-product-select:checked').length; }); });</script>
+  {% endif %}
+
   {% for category, products in groups.items() %}
     <section class="section">
       <div class="section-heading">

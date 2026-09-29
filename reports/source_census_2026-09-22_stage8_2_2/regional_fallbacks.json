@@ -1,0 +1,25 @@
+{
+  "schema_version": "stage8_2_2_regional_fallbacks.v1",
+  "kz_ru_status": "exhausted within this stage's budget -- support root, search, manuals hub, model finder, and one content-article leaf page all confirmed client-rendered with zero model-specific evidence.",
+  "candidate_fallback_regions": [
+    {
+      "region": "samsung_us (https://www.samsung.com/us/)",
+      "ownership_evidence": "Already a registered, official Stage 8 profile (samsung_us, support_hosts=['www.samsung.com']).",
+      "offline_findings_this_stage": [
+        "/us/support/downloads/ -- a real first-party link, a page TYPE not yet tried on kz_ru (kz_ru only exposed /support/user-manuals-and-guide/, already tested and found client-rendered)",
+        "/us/mobile/find-your-galaxy/ -- same tool as kz_ru, already proven client-rendered there; low expectation of a different result",
+        "/us/support/troubleshoot/TSG10001565/ -- an ID-based troubleshoot guide URL pattern, suggesting some support content may be indexed by stable IDs -- not yet explored"
+      ],
+      "not_fetched_this_stage": "Discovered entirely offline (0 cost) but not fetched live -- this stage's budget was intentionally stopped after the kz_ru host-budget overshoot (see support_routes.json) rather than opening a second host under time pressure.",
+      "recommended_as_next_step": true
+    },
+    {
+      "region": "samsung_kr (https://www.samsung.com/sec/)",
+      "ownership_evidence": "Already a registered, official Stage 8 profile with a cached support root fetch (samsung.com/sec/support/, 92 links).",
+      "offline_findings_this_stage": "Only a laptop-specific (Galaxy Books) download center link was found in its cached link list; no mobile-phone-specific manuals/downloads link is evidenced for this region.",
+      "recommended_as_next_step": false,
+      "reason_deprioritized": "Weaker offline evidence for a mobile-specific route than samsung_us; would likely require fresh discovery requests rather than reusing an already-known link, unlike samsung_us's /support/downloads/."
+    }
+  ],
+  "recommendation": "regional_support_fallback_required -- try samsung_us's /us/support/downloads/ (and, if that also proves client-rendered, treat the entire support-first route as architecturally blocked for smartphones and move to manual_review_required) before attempting any further region."
+}

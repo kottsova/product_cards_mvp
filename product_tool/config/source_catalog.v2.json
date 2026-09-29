@@ -1,0 +1,166 @@
+{
+  "schema_version": 2,
+  "sources": [
+    {
+      "source_id": "lg_kz", "adapter_id": "lg_kz", "brands": ["LG", "LG Electronics"],
+      "category_groups": [], "category_patterns": [], "category_review_patterns": [], "category_allowlist": [], "category_deny_patterns": [],
+      "markets": ["KZ"], "source_country": "KZ", "source_locale": "ru-KZ", "source_languages": ["ru", "kk"], "market_scope": "country", "identity_scope": "exact_product",
+      "source_role": "manufacturer", "candidate_url": "https://www.lg.com/kz", "page_hosts": ["lg.com"], "support_hosts": ["lg.com"], "asset_document_hosts": ["lg.com", "gscs-b2c.lge.com"],
+      "capabilities": ["identity", "description", "attributes", "photos"], "identity_strategy": "lg_model", "priority": 10,
+      "official_status": "official_verified", "access_status": "direct_access", "fingerprint_status": "not_checked", "adapter_status": "ready", "lifecycle_status": "enabled", "host_verification": "verified", "enabled": true,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "existing_adapter", "value": "product_tool.adapters.lg.LGAdapter"}],
+      "adapter_recommendation": "keep_brand_adapter", "fallback_sources": ["sulpak"], "probe_targets": [
+        {"url": "https://www.lg.com/kz", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.lg.com/kz/search?q=F2J3HS0W", "capability": "internal_search", "sample_type": "internal_search", "expected_models": ["F2J3HS0W"]},
+        {"url": "https://www.lg.com/uk/tvs/led-tv/32lq63006la/", "capability": "product_page", "sample_type": "product_page", "expected_models": ["32LQ63006LA"]},
+        {"url": "https://www.lg.com/us/support/product/lg-27LX5QKNA.AUS?tab=1", "capability": "support_page", "sample_type": "support_page", "expected_models": ["27LX5QKNA"]},
+        {"url": "https://www.lg.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "lg_ru", "adapter_id": "lg_ru", "brands": ["LG", "LG Electronics"],
+      "category_groups": [], "category_patterns": [], "category_review_patterns": [], "category_allowlist": [], "category_deny_patterns": [],
+      "markets": ["RU"], "source_country": "RU", "source_locale": "ru-RU", "source_languages": ["ru"], "market_scope": "country", "identity_scope": "exact_product",
+      "source_role": "support", "candidate_url": "https://www.lg.com/ru", "page_hosts": ["lg.com"], "support_hosts": ["lg.com"], "asset_document_hosts": ["lg.com", "gscs-b2c.lge.com"],
+      "capabilities": ["identity", "description", "attributes", "photos", "documents"], "identity_strategy": "lg_model", "priority": 20,
+      "official_status": "official_verified", "access_status": "support_only", "fingerprint_status": "not_checked", "adapter_status": "ready", "lifecycle_status": "enabled", "host_verification": "verified", "enabled": true,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "existing_adapter", "value": "product_tool.adapters.lg.LGRUAdapter"}],
+      "adapter_recommendation": "keep_brand_adapter", "fallback_sources": [], "probe_targets": [], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "sulpak", "adapter_id": "sulpak", "brands": ["LG"],
+      "category_groups": [], "category_patterns": [],
+      "category_allowlist": ["Стиральные машины", "Сушильные машины", "Холодильники", "Пылесосы", "Микроволновые печи"],
+      "category_review_patterns": ["сплит-систем"],
+      "category_deny_patterns": ["телевиз", "монитор", "аудио", "ноутбук", "компьютер", "смартфон", "планшет", "проектор", "игров"],
+      "markets": ["KZ"], "source_country": "KZ", "source_locale": "ru-KZ", "source_languages": ["ru", "kk"], "market_scope": "country", "identity_scope": "exact_product",
+      "source_role": "retailer", "candidate_url": "https://www.sulpak.kz/", "page_hosts": ["sulpak.kz"], "support_hosts": [], "asset_document_hosts": ["sulpak.kz"],
+      "capabilities": ["identity", "attributes", "photos"], "identity_strategy": "seller_sku", "priority": 100,
+      "official_status": "third_party_confirmed", "access_status": "direct_access", "fingerprint_status": "not_checked", "adapter_status": "ready", "lifecycle_status": "enabled", "host_verification": "verified", "enabled": true,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "policy_scope", "value": "LG household-appliance allowlist only"}, {"type": "existing_adapter", "value": "product_tool.adapters.sulpak.SulpakAdapter"}],
+      "adapter_recommendation": "keep_retailer_fallback", "fallback_sources": [], "probe_targets": [], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "bosch_home", "adapter_id": "bosch_home", "brands": ["BOSCH", "Bosch"],
+      "category_groups": ["major_home_appliances", "small_home_appliances"], "category_patterns": ["духов", "варочн", "холодиль", "морозиль", "посудомоеч", "стираль", "сушиль", "вытяжк", "кофемаш", "блендер", "аэрогрил"], "category_review_patterns": [],
+      "markets": [], "source_country": "", "source_locale": "en", "source_languages": ["en"], "market_scope": "global", "identity_scope": "exact_product",
+      "source_role": "manufacturer", "candidate_url": "https://www.bosch-home.com/", "page_hosts": ["bosch-home.com"], "support_hosts": ["bosch-home.com"], "asset_document_hosts": ["bosch-home.com", "media3.bosch-home.com"],
+      "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "bosch_enr_service_index", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "not_started", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_global_site", "url": "https://www.bosch-home.com/"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": [],
+      "probe_targets": [
+        {"url": "https://www.bosch-home.com/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.bosch-home.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"},
+        {"url": "https://www.bosch-home.com/mt/en/mkt-product/MMB2111M", "capability": "product_page", "sample_type": "product_page", "expected_models": ["MMB2111M"]},
+        {"url": "https://www.bosch-home.com/us/en/productservice/MAF462B0-01", "capability": "support_page", "sample_type": "support_page", "expected_models": ["MAF462B0"]}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "bosch_tools", "adapter_id": "bosch_tools", "brands": ["BOSCH", "Bosch"],
+      "category_groups": ["tools_garden"], "category_patterns": ["дрель", "шуруповерт", "перфорат", "шлифов", "лобзик", "пила", "инструмент", "биты"], "category_review_patterns": [],
+      "markets": [], "source_country": "", "source_locale": "en", "source_languages": ["en"], "market_scope": "global", "identity_scope": "exact_product",
+      "source_role": "manufacturer", "candidate_url": "https://www.bosch-professional.com/", "page_hosts": ["bosch-professional.com", "bosch-diy.com"], "support_hosts": ["bosch-professional.com", "bosch-diy.com"], "asset_document_hosts": ["bosch-professional.com", "bosch-diy.com"],
+      "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "bosch_tool_model_revision", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "not_started", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_global_site", "url": "https://www.bosch-professional.com/"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": [],
+      "probe_targets": [
+        {"url": "https://www.bosch-professional.com/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.bosch-professional.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"},
+        {"url": "https://www.bosch-professional.com/de/de/extra-hard-schrauberbit-set-gemischt-32-tlg-8574631-ocs-ac/?sku=2607017319", "capability": "product_page", "sample_type": "product_page", "expected_models": ["2607017319"]}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "xiaomi_global", "adapter_id": "research_pending", "brands": ["Xiaomi", "POCO", "Redmi"], "category_groups": [], "category_patterns": [], "category_review_patterns": [],
+      "markets": [], "source_country": "", "source_locale": "en", "source_languages": ["en"], "market_scope": "global", "identity_scope": "exact_product",
+      "source_role": "manufacturer", "candidate_url": "https://www.mi.com/global/", "page_hosts": ["mi.com"], "support_hosts": ["mi.com"], "asset_document_hosts": ["mi.com", "appmifile.com"], "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "model_and_variants", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "research_pending", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_product_site", "url": "https://www.mi.com/global/product-list/phone/"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": [],
+      "probe_targets": [
+        {"url": "https://www.mi.com/global/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.mi.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"},
+        {"url": "https://www.mi.com/global/product-list/phone/", "capability": "category_page", "sample_type": "category_page"},
+        {"url": "https://www.mi.com/es/product/poco-x7/", "capability": "product_page", "sample_type": "product_page", "expected_models": ["POCO X7", "17895"]},
+        {"url": "https://www.mi.com/global/product/poco-x7-pro/", "capability": "product_page", "sample_type": "product_page", "expected_models": ["POCO X7 Pro", "17904"]},
+        {"url": "https://www.mi.com/global/support/", "capability": "support_page", "sample_type": "support_page"}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "samsung_kz", "adapter_id": "research_pending", "brands": ["Samsung"], "category_groups": [], "category_patterns": [], "category_review_patterns": [],
+      "markets": ["KZ"], "source_country": "KZ", "source_locale": "kk-KZ", "source_languages": ["kk", "ru"], "market_scope": "country", "identity_scope": "exact_product",
+      "source_role": "manufacturer", "candidate_url": "https://www.samsung.com/kz_kz/", "page_hosts": ["samsung.com"], "support_hosts": ["samsung.com"], "asset_document_hosts": ["samsung.com", "samsungcsportal.com", "downloadcenter.samsung.com"], "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "model_and_variants", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "research_pending", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_country_product", "url": "https://www.samsung.com/kz_kz/memory-storage/usb-flash-drive/usb-flash-drive-fit-plus-128gb-black-muf-128ab-apc/"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": [],
+      "probe_targets": [
+        {"url": "https://www.samsung.com/kz_kz/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.samsung.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"},
+        {"url": "https://www.samsung.com/kz_kz/tvs/all-tvs/", "capability": "category_page", "sample_type": "category_page"},
+        {"url": "https://www.samsung.com/kz_kz/memory-storage/usb-flash-drive/usb-flash-drive-fit-plus-128gb-black-muf-128ab-apc/", "capability": "product_page", "sample_type": "product_page", "expected_models": ["MUF-128AB/APC"]},
+        {"url": "https://www.samsung.com/nl/support/model/MUF-128AB/APC/", "capability": "support_page", "sample_type": "support_page", "expected_models": ["MUF-128AB/APC"]},
+        {"url": "https://www.samsung.com/kz_ru/support/model.SM-G780GZRMSER/", "capability": "support_page", "sample_type": "support_page", "expected_models": ["SM-G780G"]}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "apple_kz", "adapter_id": "research_pending", "brands": ["Apple"], "category_groups": [], "category_patterns": [], "category_review_patterns": [],
+      "markets": ["KZ"], "source_country": "KZ", "source_locale": "en-KZ", "source_languages": ["en", "kk", "ru"], "market_scope": "country", "identity_scope": "family_only",
+      "source_role": "manufacturer", "candidate_url": "https://www.apple.com/kz/", "page_hosts": ["apple.com", "support.apple.com"], "support_hosts": ["support.apple.com"], "asset_document_hosts": ["apple.com", "support.apple.com", "mzstatic.com", "cdsassets.apple.com"], "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "part_number_and_configuration", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "research_pending", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_country_sitemap", "url": "https://www.apple.com/kz/sitemap/"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": [],
+      "probe_targets": [
+        {"url": "https://www.apple.com/kz/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.apple.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"},
+        {"url": "https://www.apple.com/kz/sitemap/", "capability": "sitemap", "sample_type": "sitemap"},
+        {"url": "https://support.apple.com/en-kg/111961", "capability": "product_page", "sample_type": "product_page", "expected_models": ["iPod touch (7th generation)", "MVHR2RU/A"]},
+        {"url": "https://www.apple.com/kz/macbook-air/specs/", "capability": "product_page", "sample_type": "product_page", "expected_models": ["MacBook Air", "MC654", "MC6T4RU/A"]}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "huawei_kz", "adapter_id": "research_pending", "brands": ["Huawei", "HUAWEI"], "category_groups": [], "category_patterns": [], "category_review_patterns": [],
+      "markets": ["KZ"], "source_country": "KZ", "source_locale": "ru-KZ", "source_languages": ["ru", "kk"], "market_scope": "country", "identity_scope": "exact_product",
+      "source_role": "manufacturer", "candidate_url": "https://consumer.huawei.com/kz/", "page_hosts": ["consumer.huawei.com"], "support_hosts": ["consumer.huawei.com"], "asset_document_hosts": ["consumer.huawei.com"], "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "model_and_variants", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "research_pending", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_country_site", "url": "https://consumer.huawei.com/kz/"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": [],
+      "probe_targets": [
+        {"url": "https://consumer.huawei.com/kz/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://consumer.huawei.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"},
+        {"url": "https://consumer.huawei.com/pl/headphones/freelace/buy/", "capability": "product_page", "sample_type": "product_page", "expected_models": ["CM70-C"]},
+        {"url": "https://consumer.huawei.com/jp/support/content/ja-jp00734161/", "capability": "support_page", "sample_type": "support_page", "expected_models": ["CM70-C"]}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "lenovo_kz", "adapter_id": "research_pending", "brands": ["lenovo", "Lenovo"], "category_groups": [], "category_patterns": [], "category_review_patterns": [],
+      "markets": ["KZ"], "source_country": "KZ", "source_locale": "ru-KZ", "source_languages": ["ru", "en"], "market_scope": "country", "identity_scope": "family_only",
+      "source_role": "manufacturer", "candidate_url": "https://www.lenovo.com/kz/ru/", "page_hosts": ["lenovo.com", "pcsupport.lenovo.com"], "support_hosts": ["support.lenovo.com", "pcsupport.lenovo.com"], "asset_document_hosts": ["lenovo.com", "support.lenovo.com", "pcsupport.lenovo.com", "psrefstuff.lenovo.com"], "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "machine_type_model", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "research_pending", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_country_site", "url": "https://www.lenovo.com/kz/ru/"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": ["lenovo_support_kz"],
+      "probe_targets": [
+        {"url": "https://www.lenovo.com/kz/ru/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.lenovo.com/robots.txt", "capability": "robots_txt", "sample_type": "robots_txt"},
+        {"url": "https://www.lenovo.com/us/en/p/handheld/legion-go-s-powered-by-steamos/83n6000gus", "capability": "product_page", "sample_type": "product_page", "expected_models": ["83N6", "Legion Go S"]},
+        {"url": "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-go-s-8apu1/83n6/83n6000uid", "capability": "support_page", "sample_type": "support_page", "expected_models": ["83N6", "Legion Go S"]},
+        {"url": "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkbook-series/thinkbook-15-g2-itl/20ve/document-userguide", "capability": "support_page", "sample_type": "support_page", "expected_models": ["20VE", "ThinkBook 15 G2 ITL"]}
+      ], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "lenovo_support_kz", "adapter_id": "research_pending", "brands": ["lenovo", "Lenovo"], "category_groups": [], "category_patterns": [], "category_review_patterns": [],
+      "markets": ["KZ"], "source_country": "KZ", "source_locale": "en-KZ", "source_languages": ["en"], "market_scope": "country", "identity_scope": "exact_product",
+      "source_role": "support", "candidate_url": "https://support.lenovo.com/kz/en/", "page_hosts": ["support.lenovo.com", "pcsupport.lenovo.com"], "support_hosts": ["support.lenovo.com", "pcsupport.lenovo.com"], "asset_document_hosts": ["support.lenovo.com", "pcsupport.lenovo.com"], "capabilities": ["identity", "documents"], "identity_strategy": "machine_type_model", "priority": 20,
+      "official_status": "official_verified", "access_status": "support_only", "fingerprint_status": "not_checked", "adapter_status": "research_pending", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_support_site", "url": "https://support.lenovo.com/kz/en/contact-us"}], "adapter_recommendation": "support_adapter_candidate", "fallback_sources": [], "probe_targets": [], "endpoints": [], "fingerprint_layers": []
+    },
+    {
+      "source_id": "gigabyte_global", "adapter_id": "research_pending", "brands": ["Gigabyte", "GIGABYTE"], "category_groups": ["computers_components"], "category_patterns": [], "category_review_patterns": [],
+      "markets": [], "source_country": "", "source_locale": "en", "source_languages": ["en"], "market_scope": "global", "identity_scope": "exact_product",
+      "source_role": "manufacturer", "candidate_url": "https://www.gigabyte.com/", "page_hosts": ["gigabyte.com"], "support_hosts": ["gigabyte.com", "esupport.gigabyte.com"], "asset_document_hosts": ["gigabyte.com", "download.gigabyte.com"], "capabilities": ["identity", "attributes", "documents", "photos"], "identity_strategy": "manufacturer_model_and_revision", "priority": 10,
+      "official_status": "official_verified", "access_status": "not_checked", "fingerprint_status": "not_checked", "adapter_status": "research_pending", "lifecycle_status": "official_verified", "host_verification": "verified", "enabled": false,
+      "last_checked_at": "2026-09-21T00:00:00+00:00", "evidence": [{"type": "official_site_map", "url": "https://www.gigabyte.com/Site-Map"}], "adapter_recommendation": "generic_discovery_first", "fallback_sources": [],
+      "probe_targets": [
+        {"url": "https://www.gigabyte.com/", "capability": "homepage", "sample_type": "homepage"},
+        {"url": "https://www.gigabyte.com/Site-Map", "capability": "sitemap", "sample_type": "sitemap"},
+        {"url": "https://www.gigabyte.com/kz", "capability": "category_page", "sample_type": "regional_homepage"},
+        {"url": "https://www.gigabyte.com/Power-Supply/GP-P750GM/sp", "capability": "product_page", "sample_type": "product_page", "expected_models": ["GP-P750GM"]},
+        {"url": "https://www.gigabyte.com/Graphics-Card/GV-N3090VISION-OC-24GD", "capability": "product_page", "sample_type": "product_page", "expected_models": ["GV-N3090VISION OC-24GD"]},
+        {"url": "https://www.gigabyte.com/Power-Supply/GP-P750GM/Support", "capability": "support_page", "sample_type": "support_page", "expected_models": ["GP-P750GM"]}
+      ], "endpoints": [], "fingerprint_layers": []
+    }
+  ]
+}

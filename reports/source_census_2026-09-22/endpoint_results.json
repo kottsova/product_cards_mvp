@@ -1,0 +1,823 @@
+{
+  "schema_version": 2,
+  "sources": [
+    {
+      "source_id": "lg_kz",
+      "endpoints": []
+    },
+    {
+      "source_id": "lg_ru",
+      "endpoints": []
+    },
+    {
+      "source_id": "sulpak",
+      "endpoints": []
+    },
+    {
+      "source_id": "mechta",
+      "endpoints": []
+    },
+    {
+      "source_id": "bosch_home",
+      "endpoints": [
+        {
+          "url": "https://www.bosch-home.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bosch-home.com/"
+          ],
+          "content_type": "text/html;charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:50:40+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bosch-home.com/mt/en/mkt-product/MMB2111M",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bosch-home.com/mt/en/mkt-product/MMB2111M"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:04:45+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bosch-home.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bosch-home.com/robots.txt"
+          ],
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:50:42+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bosch-home.com/us/en/productservice/MAF462B0-01",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bosch-home.com/us/en/productservice/MAF462B0-01"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:04:48+00:00",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "source_id": "bosch_tools",
+      "endpoints": [
+        {
+          "url": "https://www.bosch-professional.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bosch-professional.com/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:50:51+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bosch-professional.com/de/de/extra-hard-schrauberbit-set-gemischt-32-tlg-8574631-ocs-ac/?sku=2607017319",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bosch-professional.com/de/de/extra-hard-schrauberbit-set-gemischt-32-tlg-8574631-ocs-ac/?sku=2607017319"
+          ],
+          "content_type": "text/html;charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": true,
+          "checked_at": "2026-09-21T21:04:50+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.bosch-professional.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.bosch-professional.com/robots.txt"
+          ],
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:50:53+00:00",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "source_id": "xiaomi_global",
+      "endpoints": [
+        {
+          "url": "https://www.mi.com/global/product-list/phone/",
+          "capability": "category_page",
+          "sample_type": "category_page",
+          "access_status": "javascript_required",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.mi.com/global/product-list/phone/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": true,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:05+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.mi.com/global/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "javascript_required",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.mi.com/global/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": true,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:50:58+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.mi.com/es/product/poco-x7/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.mi.com/es/product/poco-x7/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:04:53+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.mi.com/global/product/poco-x7-pro/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.mi.com/global/product/poco-x7-pro/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:26:26+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.mi.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.mi.com/robots.txt",
+            "https://www.mi.com/global/errors/404"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:02+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.mi.com/global/support/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "javascript_required",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.mi.com/global/support/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": true,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:26:29+00:00",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "source_id": "samsung_kz",
+      "endpoints": [
+        {
+          "url": "https://www.samsung.com/kz_kz/tvs/all-tvs/",
+          "capability": "category_page",
+          "sample_type": "category_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.samsung.com/kz_kz/tvs/all-tvs/"
+          ],
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:18+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.samsung.com/kz_kz/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.samsung.com/kz_kz/"
+          ],
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:14+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.samsung.com/kz_kz/memory-storage/usb-flash-drive/usb-flash-drive-fit-plus-128gb-black-muf-128ab-apc/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.samsung.com/kz_kz/memory-storage/usb-flash-drive/usb-flash-drive-fit-plus-128gb-black-muf-128ab-apc/"
+          ],
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": true,
+          "checked_at": "2026-09-21T21:04:59+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.samsung.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.samsung.com/robots.txt"
+          ],
+          "content_type": "text/plain",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:16+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.samsung.com/kz_ru/support/model.SM-G780GZRMSER/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.samsung.com/kz_ru/support/model.SM-G780GZRMSER/"
+          ],
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": true,
+          "checked_at": "2026-09-21T21:26:34+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.samsung.com/nl/support/model/MUF-128AB/APC/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.samsung.com/nl/support/model/MUF-128AB/APC/"
+          ],
+          "content_type": "text/html; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:05:01+00:00",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "source_id": "apple_kz",
+      "endpoints": [
+        {
+          "url": "https://www.apple.com/kz/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.apple.com/kz/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:25+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://support.apple.com/en-kg/111961",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://support.apple.com/en-kg/111961"
+          ],
+          "content_type": "text/html;charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:05:03+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.apple.com/kz/macbook-air/specs/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.apple.com/kz/macbook-air/specs/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:26:36+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.apple.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.apple.com/robots.txt"
+          ],
+          "content_type": "text/plain; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:27+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.apple.com/kz/sitemap/",
+          "capability": "sitemap",
+          "sample_type": "sitemap",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.apple.com/kz/sitemap/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:30+00:00",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "source_id": "huawei_kz",
+      "endpoints": [
+        {
+          "url": "https://consumer.huawei.com/kz/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://consumer.huawei.com/kz/"
+          ],
+          "content_type": "text/html;charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:36+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://consumer.huawei.com/pl/headphones/freelace/buy/",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://consumer.huawei.com/pl/headphones/freelace/buy/"
+          ],
+          "content_type": "text/html;charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "checked_at": "2026-09-21T21:05:06+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://consumer.huawei.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://consumer.huawei.com/robots.txt"
+          ],
+          "content_type": "text/plain; charset=UTF-8",
+          "protection_status": "ordinary_page",
+          "protection_evidence": [],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:38+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://consumer.huawei.com/jp/support/content/ja-jp00734161/",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://consumer.huawei.com/jp/support/content/ja-jp00734161/"
+          ],
+          "content_type": "text/html;charset=UTF-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": true,
+          "checked_at": "2026-09-21T21:05:08+00:00",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "source_id": "lenovo_kz",
+      "endpoints": [
+        {
+          "url": "https://www.lenovo.com/kz/ru/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.lenovo.com/kz/ru/"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "captcha_term",
+              "strength": "weak"
+            },
+            {
+              "type": "waf_cookie",
+              "names": [
+                "bm_sz"
+              ],
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:47+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.lenovo.com/us/en/p/handheld/legion-go-s-powered-by-steamos/83n6000gus",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.lenovo.com/us/en/p/handheld/legion-go-s-powered-by-steamos/83n6000gus"
+          ],
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T21:05:11+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.lenovo.com/robots.txt",
+          "capability": "robots_txt",
+          "sample_type": "robots_txt",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://www.lenovo.com/robots.txt"
+          ],
+          "content_type": "text/plain; charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_cookie",
+              "names": [
+                "ak_bmsc"
+              ],
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:49+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-go-s-8apu1/83n6/83n6000uid",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-go-s-8apu1/83n6/83n6000uid"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_cookie",
+              "names": [
+                "ak_bmsc",
+                "bm_sz"
+              ],
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:05:14+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkbook-series/thinkbook-15-g2-itl/20ve/document-userguide",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "direct_access",
+          "http_status": 200,
+          "redirect_chain": [
+            "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkbook-series/thinkbook-15-g2-itl/20ve/document-userguide"
+          ],
+          "content_type": "text/html; charset=utf-8",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "waf_cookie",
+              "names": [
+                "bm_sz"
+              ],
+              "strength": "strong"
+            }
+          ],
+          "javascript_required": false,
+          "product_search_available": false,
+          "checked_at": "2026-09-21T21:26:39+00:00",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "source_id": "lenovo_support_kz",
+      "endpoints": []
+    },
+    {
+      "source_id": "gigabyte_global",
+      "endpoints": [
+        {
+          "url": "https://www.gigabyte.com/kz",
+          "capability": "category_page",
+          "sample_type": "regional_homepage",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.gigabyte.com/kz"
+          ],
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:54:21+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.gigabyte.com/",
+          "capability": "homepage",
+          "sample_type": "homepage",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.gigabyte.com/"
+          ],
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:51:57+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.gigabyte.com/Graphics-Card/GV-N3090VISION-OC-24GD",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.gigabyte.com/Graphics-Card/GV-N3090VISION-OC-24GD"
+          ],
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:52:04+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.gigabyte.com/Power-Supply/GP-P750GM/sp",
+          "capability": "product_page",
+          "sample_type": "product_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.gigabyte.com/Power-Supply/GP-P750GM/sp"
+          ],
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:52:02+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.gigabyte.com/Site-Map",
+          "capability": "sitemap",
+          "sample_type": "sitemap",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.gigabyte.com/Site-Map"
+          ],
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:52:00+00:00",
+          "error": ""
+        },
+        {
+          "url": "https://www.gigabyte.com/Power-Supply/GP-P750GM/Support",
+          "capability": "support_page",
+          "sample_type": "support_page",
+          "access_status": "captcha_or_blocked",
+          "http_status": 403,
+          "redirect_chain": [
+            "https://www.gigabyte.com/Power-Supply/GP-P750GM/Support"
+          ],
+          "content_type": "",
+          "protection_status": "challenge_suspected",
+          "protection_evidence": [
+            {
+              "type": "http_status",
+              "value": 403,
+              "strength": "weak"
+            }
+          ],
+          "javascript_required": null,
+          "product_search_available": null,
+          "checked_at": "2026-09-21T20:52:06+00:00",
+          "error": ""
+        }
+      ]
+    }
+  ]
+}

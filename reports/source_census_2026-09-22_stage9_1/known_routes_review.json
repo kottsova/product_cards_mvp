@@ -1,0 +1,45 @@
+{
+  "schema_version": "stage9_1_known_routes_review.v1",
+  "method": "Re-reads already-persisted Stage 8.2 and Stage 9 evidence files on disk -- 0 new network requests.",
+  "route_1_controllers_category_link_index": {
+    "source": "reports/source_census_2026-09-22_stage8_2/link_index/ps_controllers_cat.json (90 links, from direct.playstation.com/en-us/accessories/controllers-and-remotes)",
+    "finding": "Exactly 1 link(s) on the entire controllers category page match both \"DualSense\" and \"Cosmic Red\".",
+    "links_found": [
+      {
+        "url": "https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller-cosmic-red-for-ps5-pc-mac-mobile",
+        "kind": "navigation",
+        "provenance": {
+          "method": "first_party_navigation",
+          "parent_url": "https://direct.playstation.com/en-us/accessories/controllers-and-remotes",
+          "selector": "a[href]"
+        }
+      }
+    ],
+    "interpretation": "PS Direct (the checked, first-party US storefront) lists exactly ONE product page for \"DualSense ... Cosmic Red\" -- there is no second, differently-coded official page for a distinguishable regional/factory variant to compare against. This is a known route (already crawled in Stage 8.2), not an invented one, and it rules out the possibility that a second, separately-identifiable official listing exists on this storefront."
+  },
+  "route_2_product_page_support_links": {
+    "source": "reports/source_census_2026-09-22_stage9/evidence.json, field instruction_manual",
+    "finding": "No .pdf link was found anywhere on the product page (pdf_links_found is empty). The only /support/ links present are generic e-commerce policy pages (Klarna financing, FAQs, shipping/tracking, cancellations/refunds, products & subscriptions) -- none is a product manual or quick-start guide.",
+    "interpretation": "Already checked in Stage 9: the only /support/ links present on the verified product page are generic e-commerce policy pages (financing, FAQs, shipping, cancellations, subscriptions) -- none is specific to this SKU or capable of confirming a manufacturer/regional code."
+  },
+  "route_3_product_page_itself": {
+    "source": "reports/source_census_2026-09-22_stage9/raw/product_fetch.json",
+    "finding": {
+      "code_context_hits": [],
+      "identity_term_matches_CFI": {
+        "CFI-ZCT1J": false,
+        "CFI-ZCT1W": false
+      }
+    },
+    "interpretation": "Already fetched and searched in Stage 9: zero occurrences of any CFI- pattern anywhere on the page. Per this stage's explicit instruction, this absence is NOT treated as disproof that the page corresponds to either seller SKU -- it only means the page does not DISPLAY that code, which is unsurprising for a US direct-to-consumer storefront that uses its own internal numeric sku system (1000050734) rather than exposing Sony's manufacturer part number to retail buyers."
+  },
+  "substantial_difference_offline_finding": {
+    "found": false,
+    "basis": "See offline_row_analysis.json -- the only differing field that could plausibly indicate a real variant distinction is the seller-assigned article string, which per instruction cannot be used alone as proof."
+  },
+  "known_route_capable_of_confirming_a_difference": {
+    "exists": false,
+    "basis": "All three known, already-discovered official routes (controllers category listing, the product page's own support links, the product page's own body/microdata) have been checked -- across Stage 8.2 and Stage 9 -- and none exposes a manufacturer/regional code or a second distinguishable listing. No further known route remains to check."
+  },
+  "decision": "Per instruction (\"только если офлайн данные показывают существенное различие между строками, проведи ограниченную проверку\"), no substantial difference was found offline, so no new bounded network check is performed this stage. 0 new HTTP requests were made. www.playstation.com and support.playstation.com remain pre-declared-but-uncontacted, unchanged from Stage 9, since no known route leads there for this specific question either."
+}

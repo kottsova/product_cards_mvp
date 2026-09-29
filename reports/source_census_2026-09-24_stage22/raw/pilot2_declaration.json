@@ -1,0 +1,43 @@
+{
+  "declared_at": "2026-09-24T16:23:04+00:00",
+  "sample": {
+    "first_pilot_rows": 12,
+    "new_rows": 12,
+    "total": 24,
+    "new_rows_not_in_kz_sitemap": 6,
+    "order": "the 12 first-pilot rows in their Stage 20 order, then the 12 new rows in group order"
+  },
+  "budget": {
+    "max_real_requests_per_row": 12,
+    "max_real_requests_total": 180,
+    "pacing_seconds": 1.0,
+    "counted": "every REAL request of the LG adapters (pages, sitemaps not held, support pages, document files); a response served from a saved file is not a request and is listed as replayed",
+    "expected": "first-pilot rows: LG pages replayed from Stage 20/21/22 saved responses, so only their support pages and document files are new (<= 3 per row); new rows: KZ/RU pages + support page + <= 2 files",
+    "refusal": "a real request over the per-row or total cap is refused before it is made and the row records it"
+  },
+  "hosts_allowed": [
+    "www.lg.com",
+    "lg.com",
+    "*.lge.com (document files, printed on the support page)",
+    "www.sulpak.kz",
+    "sulpak.kz"
+  ],
+  "addresses": "only URLs that come from a saved or fetched official page or sitemap (sitemap slug match, the /ru/support/product/ link printed on the RU page, an href printed on that support page); nothing is constructed",
+  "stop_rule": "401/403/429 or a confirmed challenge (any HTTP status) stops that host in the pilot's persisted log; a stopped lg.com ends the pilot before the next row and lists rows not run; a stopped document host only ends document requests",
+  "workflow": "the ordinary worker.run_once(database) with the default adapters (LGAdapter, LGRUDocumentAdapter, SulpakAdapter through PolicyAwareSession), stages 1,2,3,4,6, one job per row; dealers make no request for a row that has no known URL",
+  "measured_per_row": [
+    "job status and message",
+    "card readiness verdict and gaps",
+    "variant accuracy: match level per region (full_sku / base_model / mismatch) and the url",
+    "specification facts per source; real conflicts with raw names and values",
+    "photos: gallery selected per source, from exact pages",
+    "instruction: candidate links, files reached, confirmed by content, language from the text, model named in the text",
+    "requests made and replayed"
+  ],
+  "instruction_states": [
+    "candidate_link",
+    "reachable_file",
+    "instruction_confirmed_by_content"
+  ],
+  "not_done_here": "the full run of the 578 rows"
+}

@@ -1,0 +1,46 @@
+{
+  "stage": "12_partb_razer",
+  "declared_before": "any further request beyond the 3 pre-flight connectivity checks below",
+  "selected_catalog_row": {
+    "brand": "Razer",
+    "category": "Мыши",
+    "seller_code": "RZ01-04640100-R3M1",
+    "wb_codes": "326885731; 642344356",
+    "name": "Проводная мышка DeathAdder V3 Black",
+    "alternate_name": "Проводная мышь DeathAdder V3",
+    "model_tokens": ["DeathAdder", "V3", "Black"],
+    "selection_reason": "Single, unambiguous variant (wired, Black) of a current, flagship, non-Pro Razer mouse; Razer's own part-number scheme (RZ0x-xxxxxxxx-Rxxx) is a reliable exact-match anchor; not the QuadCast 2S row (explicitly excluded from this stage's scope)."
+  },
+  "known_official_route": {
+    "source": "product_tool/config/adapter_profiles.v1.json, profile_id=razer_global_candidate",
+    "official_domain": "https://www.razer.com/",
+    "allowed_hosts": ["razer.com"],
+    "prior_verification": "Stage 8 recorded homepage + one category page (apparel-shirts) as direct_access, ordinary_page, no_confirmed_protection_in_sampled_HTTP. completeness_status was 'product_page_not_found' -- no exact product page for ANY Razer SKU had been located as of Stage 8.",
+    "conclusion": "An official route exists (razer.com is a real, previously-observed, non-guessed manufacturer domain) but no exact product page URL is yet known for this or any Razer SKU -- so per instructions, bounded official discovery is authorized (not a request to the user for a URL), strictly within the budget below."
+  },
+  "preflight_connectivity_checks_already_made": [
+    {"url": "https://www.razer.com/robots.txt", "status": 403, "note": "Large (669KB) bot-challenge HTML page, not a real robots.txt. Recorded as BLOCKED per policy -- not retried with different headers or any bypass. No sitemap discovery via robots.txt is possible for this host."},
+    {"url": "https://www.razer.com/", "status": 200, "note": "Homepage reachable, matches Stage 8's prior observation."},
+    {"url": "https://www.razer.com/shop/gear-and-apparel/apparel-shirts", "status": 200, "note": "The one category page already on file from Stage 8 (apparel, not mice) -- reachable, matches prior observation, not useful for this row's category."}
+  ],
+  "remaining_budget": {
+    "allowed_host": "www.razer.com",
+    "max_additional_requests": 7,
+    "min_interval_seconds": 2.0,
+    "timeout_seconds": 10,
+    "max_bytes_per_response": 2000000,
+    "method": "first_party_navigation_only",
+    "stop_conditions": [
+      "any 401/403/429 response on this host: record as blocked, stop navigating that branch, no retry/bypass",
+      "budget of 7 additional requests exhausted",
+      "exact product page for RZ01-04640100-R3M1 / 'DeathAdder V3 Black' found and identity-confirmed"
+    ],
+    "explicitly_forbidden": [
+      "Chromium / any headless browser",
+      "external search engines",
+      "dealer mass search",
+      "model brute-forcing / guessed URL paths",
+      "any endpoint not reached by following a real <a href> found in an already-fetched razer.com page"
+    ]
+  }
+}

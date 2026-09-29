@@ -1,0 +1,185 @@
+{
+  "stage": "10.1",
+  "scope": "Microsoft/Xbox, www.xbox.com and support.xbox.com only, single catalog row XXU-00015",
+  "selected_catalog_row": {
+    "row_number": 9661,
+    "Бренд": "Microsoft",
+    "Категория": "Игровые консоли",
+    "Артикул продавца": "XXU-00015",
+    "Артикулы WB": "366726945",
+    "Наименование": "Игровая консоль Xbox Series S Carbon 1TB",
+    "Альтернативные наименования": null,
+    "ТНВЭД": null,
+    "Повторов в выгрузках": 1
+  },
+  "host_confirmations": {
+    "www.xbox.com": {
+      "reachable": true,
+      "robots_txt": {
+        "fetched": true,
+        "http_status": 200,
+        "disallow_rule_count": 9
+      },
+      "role_before_this_stage": "unverified (product/store candidate, per Stage 10 provenance)",
+      "role_confirmed_this_stage": "product_page (commercial storefront) -- confirmed: the fetched root redirected within-host to a locale homepage, and a sitemap-discovered URL (/en-us/consoles/xbox-series-s) is a real Product-Detail-Page-style listing with purchase options, pricing CTAs, and full technical specifications",
+      "ownership_evidence_this_stage": "Page content includes the Microsoft \"UHF\" (universal header/footer) corporate component -- the same shared footer framework used across microsoft.com properties -- with a \"Microsoft corporate links\" nav section and a link to https://www.microsoft.com/trademarks. Combined with Stage 10's original provenance (linked from the already-verified support.microsoft.com official navigation), this is now content-verified, not just link-provenance.",
+      "official_status_this_stage": "confirmed_official"
+    },
+    "support.xbox.com": {
+      "reachable": true,
+      "robots_txt": {
+        "fetched": true,
+        "http_status": 200,
+        "disallow_rule_count": 0
+      },
+      "role_before_this_stage": "unverified (support candidate, per Stage 10 provenance)",
+      "role_confirmed_this_stage": "support -- confirmed: robots.txt and a 2,973-URL en-US sitemap describe a help/support article structure (help/hardware-network/..., help/games-apps/..., etc.), consistent with a support role, not a commercial storefront",
+      "ownership_evidence_this_stage": "Sitemap structure and URL naming are internally consistent with an official Xbox support portal; the two hardware-setup articles found by URL (unbox-xbox-series-xs-console, set-up-new-series-x-s) are exactly the kind of content an official support site would host for this exact console family.",
+      "official_status_this_stage": "plausibly_official_structure_confirmed_content_not_verified",
+      "content_access_blocker": "Every fetched page on this host (root and both candidate articles) is a bare React SPA shell (~2,897 bytes, <noscript>You need to enable JavaScript to run this app.</noscript>) -- no server-rendered article text is reachable by a static bounded GET. Chromium/browser automation is explicitly out of scope for this stage, so this host's actual help content could not be read."
+    }
+  },
+  "variant_evidence": {
+    "found": true,
+    "source_url": "https://www.xbox.com/en-US/consoles/xbox-series-s",
+    "source_discovery_method": "listed verbatim in the official https://www.xbox.com/sitemap/cms-sitemap-0.xml.gz content sitemap chunk (declared in www.xbox.com/robots.txt), not guessed",
+    "http_status": 200,
+    "page_offers_exactly_three_purchase_options": [
+      "512GB All-Digital Robot White (data-option=\"s-standard\")",
+      "1TB All-Digital Carbon Black (data-option=\"s-new\")",
+      "1TB All-Digital Robot White (data-option=\"s-special\")"
+    ],
+    "explicit_spec_line_pairing_color_and_capacity": "XBOX Series S Robot White: 512GB Custom NVME SSD | XBOX Series S Carbon Black: 1TB Custom NVME SSD | XBOX Series S Robot White: 1TB Custom NVME SSD",
+    "matches_target_variant": "1TB All-Digital Carbon Black -- capacity (1TB) AND color (Carbon Black) both match, together, in one named option, not inferred separately",
+    "not_confused_with": [
+      "512GB Robot White (base/white capacity variant) -- different color AND different capacity, explicitly a separate option on the same page",
+      "1TB Robot White (white 1TB variant) -- same capacity as target but different color, explicitly a separate option on the same page"
+    ],
+    "caveat": "The official page never displays a manufacturer/region SKU code (e.g. no \"RRS-00011\"/\"XXU-00015\"-style string anywhere in the fetched content). Matching to the catalog row is therefore by model + capacity + color descriptive consistency, exactly as Stage 9.1 established for the PlayStation controller -- this is the strongest evidence available, not proof of an exact code-level match. Per instructions, the seller article is not expected to appear on the official page and its absence is not itself evidence of anything."
+  },
+  "catalog_row_to_official_variant_linkage": {
+    "seller_article": "XXU-00015",
+    "catalog_name": "Игровая консоль Xbox Series S Carbon 1TB",
+    "mapped_official_option": "1TB All-Digital Carbon Black",
+    "matching_fields": {
+      "model_line": "Xbox Series S = Xbox Series S (match)",
+      "capacity": "1TB = 1TB (match)",
+      "color": "Carbon = Carbon Black (catalog uses a shortened form of the same official color name, not a conflict)"
+    },
+    "conflicting_fields": [],
+    "manufacturer_code_confirmed_on_official_page": false,
+    "linkage_status": "linked_by_descriptive_consistency_not_code_confirmed"
+  },
+  "exportable_fields_with_evidence": [
+    {
+      "field": "Бренд",
+      "value": "Microsoft",
+      "evidence": "www.xbox.com confirmed official (Microsoft UHF corporate footer + Stage 10 provenance)"
+    },
+    {
+      "field": "Модельный ряд",
+      "value": "Xbox Series S",
+      "evidence": "https://www.xbox.com/en-US/consoles/xbox-series-s, HTTP 200"
+    },
+    {
+      "field": "Цвет/вариант",
+      "value": "Carbon Black",
+      "evidence": "explicit purchase-option label \"1TB All-Digital Carbon Black\" on the official page"
+    },
+    {
+      "field": "Объём памяти",
+      "value": "1TB",
+      "evidence": "same purchase-option label, plus the explicit spec line \"XBOX Series S Carbon Black: 1TB Custom NVME SSD\""
+    },
+    {
+      "field": "Процессор (CPU)",
+      "value": "8x Cores @ 3.8 GHz (3.6 GHz w/SMT), Custom Zen 2",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Графика (GPU)",
+      "value": "4 TFLOPS, 20 CUs @ 1.565 GHz, Custom RDNA 2",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Память",
+      "value": "10GB GDDR6, 128-bit bus (8GB @ 224GB/s + 2GB @ 56GB/s)",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Накопитель",
+      "value": "1TB Custom NVMe SSD (variant-specific, Carbon Black)",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Расширение памяти",
+      "value": "Поддержка карт расширения 1TB для Series X|S; поддержка внешнего USB 3.1 HDD",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Видео",
+      "value": "До 1440p, до 120 FPS, HDMI 2.1 (ALLM, VRR, AMD FreeSync)",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Звук",
+      "value": "L-PCM до 7.1, Dolby Digital 5.1, DTS 5.1, Dolby TrueHD с Atmos",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Порты/связь",
+      "value": "1x HDMI 2.1, 3x USB 3.1 Gen 1, Wi-Fi 802.11ac dual-band",
+      "evidence": "official TECH SPECS section, same page"
+    },
+    {
+      "field": "Габариты",
+      "value": "6.5 x 15.1 x 27.5 cm",
+      "evidence": "official TECH SPECS section, same page",
+      "caveat": "not explicitly split per color/capacity variant on the page; physically identical across Series S SKUs is standard for this console family, but the page does not restate it per-option"
+    },
+    {
+      "field": "Вес",
+      "value": "4.25 lbs (~1.93 kg)",
+      "evidence": "official TECH SPECS section, same page",
+      "caveat": "same caveat as dimensions"
+    },
+    {
+      "field": "Изображения (Carbon)",
+      "value": 3,
+      "evidence": "https://cms-assets.xboxservices.com/... filenames explicitly containing \"Carbon-Aware\", found as <picture>/<source> entries on the confirmed page",
+      "note": "72 further images/videos on the same page depict Xbox Series S generically (games, UI, accessories) and are not color-specific; not claimed as Carbon-specific evidence"
+    }
+  ],
+  "not_exportable_this_stage": {
+    "instruction_manual": "Not confirmed present or absent. Two real, live candidate URLs were found via support.xbox.com's own sitemap (unbox-xbox-series-xs-console, set-up-new-series-x-s, both HTTP 200) but their content could not be read: every page on support.xbox.com served during this stage is a client-rendered SPA shell requiring JavaScript, which this stage is not permitted to execute.",
+    "manufacturer_sku_code_on_official_page": "Not present on the fetched page in any form (expected -- Microsoft does not expose an internal catalog code matching seller article formats)."
+  },
+  "five_point_export_readiness_criterion": {
+    "criterion_1_brand_model_confirmed_by_official_source": {
+      "pass": true,
+      "detail": "Brand and exact model (Xbox Series S) confirmed on www.xbox.com."
+    },
+    "criterion_2_catalog_row_linked_to_confirmed_variant": {
+      "pass": true,
+      "detail": "Linked by model+capacity+color descriptive consistency to the \"1TB All-Digital Carbon Black\" official option; no conflicting field found; manufacturer code not confirmable (expected)."
+    },
+    "criterion_3_official_matched_image_confirmed": {
+      "pass": true,
+      "detail": "3 images explicitly labeled \"Carbon-Aware\" found on the confirmed page."
+    },
+    "criterion_4_specifications_sufficient": {
+      "pass": true,
+      "detail": "CPU, GPU, memory, storage, I/O, video, sound, ports, dimensions, and weight all found with a variant-specific storage/color pairing."
+    },
+    "criterion_5_manual_confirmed_present_or_absence_noted": {
+      "pass": false,
+      "detail": "Neither confirmed present nor confirmed absent -- candidate articles exist but are JS-only and unreadable within this stage's no-Chromium constraint."
+    }
+  },
+  "export_readiness": "not_ready",
+  "export_readiness_reason": "Criteria 1-4 now pass, a substantial change from Stage 10 (which failed at criterion 1). The sole remaining blocker is criterion 5: the instruction manual cannot be confirmed present or absent, because the only host serving support content (support.xbox.com) is a JavaScript-only SPA that this stage is not permitted to render. This is a structural access blocker, not a missing-data gap -- the candidate article URLs are known and could be revisited by a future stage with a different, explicitly authorized capability (e.g. a manual, user-directed Chromium diagnostic session, per this project's existing browser-tooling policy) if the user wants that pursued.",
+  "research_source_profile_outcome": {
+    "www.xbox.com": "content-verified this stage; still NOT promoted to product_tool/config/official_domains.v1.json or source_catalog.v2.json -- that remains a separate, explicit, out-of-band decision per this stage's own budget declaration.",
+    "support.xbox.com": "structure-verified (robots.txt + sitemap) but content-unverified this stage; same non-promotion note applies."
+  }
+}

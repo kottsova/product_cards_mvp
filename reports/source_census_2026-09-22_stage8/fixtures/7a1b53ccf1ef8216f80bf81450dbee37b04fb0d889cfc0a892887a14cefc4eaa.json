@@ -1,0 +1,67 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [
+        "GET:keyword:html_search_form"
+      ],
+      "navigation": [
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "99ebd47e2ec291ca0bbcbd328a2db492ac27b137e03ff6d42154ec8031329ea6",
+    "identity": "e77b02eb91e224f663db0c672eb46e0001b363b923929e0d8b996778f99050ef",
+    "specifications": "5b73690f1e545bf793139dd5e7ca68d674e5a19ac38e3c99a296cb58e0b2b410",
+    "media": "265981deef65306b1d079933b781ab986f5f17f1c19085b844fa57a0350ef8bd",
+    "documents": "2abc35ca49719944e6f8f6f0ec1004480d1f7d0dd2dbcff5eff015109ae19280"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "custom_unknown",
+      "status": "insufficient",
+      "confidence": 0.0,
+      "evidence": []
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "7a1b53ccf1ef8216f80bf81450dbee37b04fb0d889cfc0a892887a14cefc4eaa",
+  "fixture_version": 2
+}

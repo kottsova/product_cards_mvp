@@ -1,0 +1,72 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "category",
+        "navigation",
+        "product"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": false,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "c432161f941340f1aec4e05eb90d37150e611e67e66a83a46dd065655291128c",
+    "identity": "e77b02eb91e224f663db0c672eb46e0001b363b923929e0d8b996778f99050ef",
+    "specifications": "5b73690f1e545bf793139dd5e7ca68d674e5a19ac38e3c99a296cb58e0b2b410",
+    "media": "265981deef65306b1d079933b781ab986f5f17f1c19085b844fa57a0350ef8bd",
+    "documents": "e8edc31aee0c5fee8ceb4135d837f35a32855d3bb43ef045c96bc578b9a3f527"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "next_js",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "__NEXT_DATA__|/_next/static/",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "49cb4a443d4177e1bf04acd280d8b48592ee9315b87d687a042ba2d72e6753d7",
+  "fixture_version": 2
+}

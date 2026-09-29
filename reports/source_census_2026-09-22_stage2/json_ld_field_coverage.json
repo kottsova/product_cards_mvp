@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "bosch_home",
+      "hosts": [
+        "bosch-home.com"
+      ],
+      "product_endpoints": 1,
+      "product_nodes": 1,
+      "fields": {
+        "name": true,
+        "sku": false,
+        "mpn": true,
+        "model": false,
+        "gtin": true,
+        "brand": true,
+        "image": true,
+        "description": true,
+        "characteristics": true,
+        "documents": false,
+        "variant_data": false
+      },
+      "exact_identity_validated": true
+    },
+    {
+      "source_id": "xiaomi_global",
+      "hosts": [
+        "mi.com"
+      ],
+      "product_endpoints": 1,
+      "product_nodes": 1,
+      "fields": {
+        "name": true,
+        "sku": false,
+        "mpn": false,
+        "model": false,
+        "gtin": false,
+        "brand": true,
+        "image": true,
+        "description": true,
+        "characteristics": false,
+        "documents": false,
+        "variant_data": false
+      },
+      "exact_identity_validated": true
+    },
+    {
+      "source_id": "apple_kz",
+      "hosts": [
+        "apple.com",
+        "support.apple.com"
+      ],
+      "product_endpoints": 1,
+      "product_nodes": 1,
+      "fields": {
+        "name": true,
+        "sku": false,
+        "mpn": false,
+        "model": false,
+        "gtin": false,
+        "brand": true,
+        "image": true,
+        "description": true,
+        "characteristics": false,
+        "documents": false,
+        "variant_data": false
+      },
+      "exact_identity_validated": true
+    },
+    {
+      "source_id": "lenovo_kz",
+      "hosts": [
+        "lenovo.com",
+        "pcsupport.lenovo.com"
+      ],
+      "product_endpoints": 1,
+      "product_nodes": 1,
+      "fields": {
+        "name": true,
+        "sku": true,
+        "mpn": true,
+        "model": false,
+        "gtin": false,
+        "brand": true,
+        "image": true,
+        "description": false,
+        "characteristics": false,
+        "documents": false,
+        "variant_data": false
+      },
+      "exact_identity_validated": true
+    },
+    {
+      "source_id": "karcher_global_candidate",
+      "hosts": [
+        "kaercher.com"
+      ],
+      "product_endpoints": 1,
+      "product_nodes": 1,
+      "fields": {
+        "name": true,
+        "sku": true,
+        "mpn": true,
+        "model": false,
+        "gtin": false,
+        "brand": true,
+        "image": true,
+        "description": true,
+        "characteristics": false,
+        "documents": false,
+        "variant_data": false
+      },
+      "exact_identity_validated": true
+    }
+  ]
+}

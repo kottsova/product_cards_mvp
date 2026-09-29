@@ -1,0 +1,93 @@
+{
+  "finished_at": "2026-09-24T16:12:34+00:00",
+  "requests_made": 2,
+  "halted": "",
+  "results": [
+    {
+      "id": "C1",
+      "sku": "MS2032GAS",
+      "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw",
+      "printed": "Руководства пользователя Русский 15/08/2025 1 638K",
+      "file": {
+        "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw",
+        "status": 200,
+        "bytes": 1676908,
+        "sha256": "72dac925061f249bb846e689515ed00e4643a6b27c6eb641786f4b0f16bffcc4",
+        "content_type": "application/pdf",
+        "starts_with_pdf_magic": true,
+        "truncated": false,
+        "pages": 32
+      },
+      "verdict": "reachable_file_not_confirmed_as_instruction",
+      "assessment": {
+        "accepted": false,
+        "kind": "not_confirmed",
+        "regulatory": false,
+        "names_model": [],
+        "instruction_markers": [
+          "нұсқау",
+          "қауіпсіздік"
+        ],
+        "languages": {
+          "pages": 32,
+          "letters_by_language": {
+            "kk": 40971
+          },
+          "present": [
+            "kk"
+          ],
+          "russian_present": false,
+          "russian_instruction_markers": 0,
+          "russian_instruction": false
+        },
+        "text_chars": 52299
+      }
+    },
+    {
+      "id": "C2",
+      "sku": "XL7S",
+      "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg",
+      "printed": "Руководства пользователя Русский 09/08/2024 6 010K",
+      "file": {
+        "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg",
+        "status": 200,
+        "bytes": 6154683,
+        "sha256": "55f1e1753c1f916fa3a65961279cc699fc405d5b08be2b871b06702eb26c0060",
+        "content_type": "application/pdf",
+        "starts_with_pdf_magic": true,
+        "truncated": false,
+        "pages": 42
+      },
+      "verdict": "instruction_confirmed_by_content",
+      "assessment": {
+        "accepted": true,
+        "kind": "instruction_confirmed",
+        "regulatory": false,
+        "names_model": [
+          "XL7S"
+        ],
+        "instruction_markers": [
+          "безопасност",
+          "инструкц",
+          "перед использованием",
+          "руководств",
+          "эксплуатац"
+        ],
+        "languages": {
+          "pages": 42,
+          "letters_by_language": {
+            "en": 321,
+            "ru": 38037
+          },
+          "present": [
+            "ru"
+          ],
+          "russian_present": true,
+          "russian_instruction_markers": 8,
+          "russian_instruction": true
+        },
+        "text_chars": 48559
+      }
+    }
+  ]
+}

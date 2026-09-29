@@ -1,0 +1,17 @@
+{
+  "schema_version": "stage8_6_offline_review.v1",
+  "control_document": "Samsung MS23K3614AK/BW manual PDF (already found in Stage 8.4, first content-checked in Stage 8.5)",
+  "no_new_product_search": true,
+  "reviewed_stage8_5_bytes_and_method": {
+    "how_bytes_were_obtained": "Stage 8.5's fetch_binary(): a single plain GET (no Range header) with a hard read cap of 1,500,000 bytes -- the same number as the ordinary HTML page-load limit, reused as a document cap without a dedicated document-retrieval strategy.",
+    "size_check_used": "len(chunks joined as bytes) -- i.e. Stage 8.5 ALREADY counted raw binary bytes, not decoded-text length. The text-length bug this task asks to fix belongs to STAGE 8.4 (which measured len() of a UTF-8-decoded string with errors='replace' as a stand-in for byte count) -- Stage 8.5 had already corrected this specific measurement. This stage keeps that correction and adds what was still missing: a bounded way to get PAST a single-request truncation, and an explicit completeness classification (Stage 8.5 only had a boolean 'truncated' flag with no assembly capability).",
+    "result": "bytes_read=1,500,000, truncated=True -- the file is provably larger than 1.5MB; Stage 8.5 correctly stopped there rather than declaring the file complete, and left instruction content/language unconfirmed. No saved bytes exist anywhere (Stage 8.5 explicitly does not persist raw PDF bytes into the repo; they lived only in that stage's own scratch directory and were discarded after the run)."
+  },
+  "what_this_stage_adds": [
+    "A completeness classification with three explicit states: complete / partial / unknown_completeness -- never inferred, always derived from Content-Range/Content-Length compared against actual bytes read.",
+    "A bounded HTTP Range-based assembly path, used ONLY if the server actually honors Range (206 + parseable Content-Range) -- verified per part, not assumed.",
+    "Version-consistency checks across assembled parts (total size in Content-Range, ETag, Last-Modified) -- if any part disagrees with the first part, assembly is aborted rather than splicing potentially different document versions.",
+    "A pre-declared, hard ceiling on total document size (MAX_DOCUMENT_TOTAL_BYTES) -- if the server-declared total exceeds it, no further bytes are fetched for that document at all, regardless of remaining request budget."
+  ],
+  "conclusion": "Proceeding to a live check is necessary -- no complete or even reliably partial byte set exists offline for this document. The ordinary page-load cap (1,500,000 bytes) is left untouched and continues to apply to any HTML page fetch; it is not what governs the document-assembly path below."
+}

@@ -1,0 +1,88 @@
+{
+  "declared_at": "2026-09-25T12:33:43+00:00",
+  "stage": "25 / batch 2",
+  "brand": "Samsung",
+  "market": "kz_ru",
+  "products": {
+    "Холодильники": {
+      "article": "RB31FERNDSA",
+      "title": "Холодильник двухкамерный 311 л No Frost, RB31FERNDSA",
+      "catalog_row": 13125,
+      "page_url": "https://www.samsung.com/kz_ru/refrigerators/bottom-mount-freezer/rbf310g-3050-310l-silver-rb31ferndsa-wt/",
+      "class": "appliance",
+      "pool": 13,
+      "reason": "чистый артикул, точная страница есть в полной карте сайта; наименьший SHA-256 среди таких строк категории (старые модели допустимы)"
+    },
+    "Духовые шкафы": {
+      "article": "NV7B4120ZAS/WT",
+      "title": "Духовой шкаф электрический 76 л, WiFi, NV7B4120ZAS",
+      "catalog_row": 12025,
+      "page_url": "https://www.samsung.com/kz_ru/cooking-appliances/ovens/nv7000b-4series-single-fan-4series-single-fan-nv7b4120zas-wt/",
+      "class": "appliance",
+      "pool": 9,
+      "reason": "чистый артикул, точная страница есть в полной карте сайта; наименьший SHA-256 среди таких строк категории (старые модели допустимы)"
+    },
+    "Сплит-системы": {
+      "article": "AR80F09CABWNER",
+      "title": "Сплит-система кондиционер 9000 BTU до 25 м², AR80F09CABWNER",
+      "catalog_row": 12600,
+      "page_url": "https://www.samsung.com/kz_ru/air-conditioners/wall-mount/ar9500t-ar70f12caawneu-ai-fast-comfort-cooling-ai-fast-comfort-cooling-comfort-drying-for-cold-free-dehumidification-ar80f09cabwner/",
+      "class": "appliance",
+      "pool": 4,
+      "reason": "чистый артикул, точная страница есть в полной карте сайта; наименьший SHA-256 среди таких строк категории (старые модели допустимы)"
+    },
+    "Варочные панели": {
+      "article": "NZ64T3506AK/WT",
+      "title": "Варочная панель электрическая 60 см, NZ64T3506AKWT",
+      "catalog_row": 11971,
+      "page_url": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+      "class": "appliance",
+      "pool": 7,
+      "reason": "чистый артикул, точная страница есть в полной карте сайта; наименьший SHA-256 среди таких строк категории (старые модели допустимы)"
+    },
+    "Мониторы": {
+      "article": "LS24D300GAIXCI",
+      "title": "24″ Монитор S3 S30GD, 100 Гц, IPS, 1920x1080",
+      "catalog_row": 12126,
+      "page_url": "https://www.samsung.com/kz_ru/monitors/full-hd-1080p/essential-monitor-s3-s30gd-24-inch-fhd-ips-100hz-ls24d300gaixci/",
+      "class": "other technology",
+      "pool": 12,
+      "reason": "чистый артикул, точная страница есть в полной карте сайта; наименьший SHA-256 среди таких строк категории (старые модели допустимы)"
+    },
+    "Саундбары": {
+      "article": "HW-Q800D",
+      "title": "Саундбар HW-Q800D",
+      "catalog_row": 12281,
+      "page_url": "https://www.samsung.com/kz_ru/audio-devices/soundbar/q800d-black-hw-q800d-ru/",
+      "class": "other technology",
+      "pool": 20,
+      "reason": "чистый артикул, точная страница есть в полной карте сайта; наименьший SHA-256 среди таких строк категории (старые модели допустимы)"
+    }
+  },
+  "extra_requests": {
+    "microwave_product_page": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+    "a37_buy_page": "https://www.samsung.com/kz_ru/smartphones/galaxy-a/galaxy-a37-5g-awesome-graygreen-256gb-sm-a376edggskz/buy/",
+    "a37_buy_page_origin": "the BuyAction target printed in the A37 page's own JSON-LD",
+    "washer_manual": "the only manual link of WD10T754CBX/LD (Stage 24 batch 1, truncated at 25 MB); re-fetched under the new cap"
+  },
+  "budget": {
+    "max_real_requests_total": 26,
+    "max_real_requests_per_product": 3,
+    "pacing_seconds": 1.5,
+    "document_cap_mb": 40,
+    "hosts": [
+      "www.samsung.com",
+      "*.samsung.com (document links printed by the pages)"
+    ],
+    "note": "product pages of the six chosen products: 6; their manuals: at most 2 files each (the first whose file name says RU, then, only if that file is not a Russian instruction by its text, the next RU-named file or the first other one); microwave page 1; A37 buy page 1; washer manual 1"
+  },
+  "document_rule": "the file name orders the requests only; language, instruction-ness and the model named inside are read from the text (adapters/samsung.py assess_samsung_document); declarations/certificates are excluded by content",
+  "dealer_fallback": {
+    "source": "DNS",
+    "requests": 0,
+    "rule": "DnsAdapter knows only pre-verified URLs (KNOWN_URLS); none exists for these Samsung products, so nothing is requested and the ready-to-ask dealer request is produced offline for cards with missing fields; a dealer value would be added only for a missing field, only on an exact model AND variant match, each with its own source, never replacing an official value (merge_dealer_fields)"
+  },
+  "stop_rule": "401/403/429 or a confirmed challenge on a Samsung host stops it in batch2/workdir/samsung_fetch_log.json and ends the batch",
+  "url_construction": "none",
+  "not_done": "the other 19 queued categories; any bulk processing of catalog rows; a new LG pilot"
+}

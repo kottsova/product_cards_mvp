@@ -1,0 +1,91 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "product"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [
+        ".name",
+        ".sku"
+      ],
+      "microdata_properties": [],
+      "code_fields": [
+        "sku"
+      ],
+      "variant_fields": [],
+      "model_semantics": "unverified_sku_meaning"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [
+        ".image"
+      ],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": false,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "7f4186ec79d383fd24335711eed1fde55b39cacce8ae7df85ef2dcef6aae5613",
+    "identity": "ff39fb9a9278bf86a679bbd8c22e7b184277e0e3780e0850e7d75b226467705a",
+    "specifications": "6ebe072b40a520526d0d9af984fbfedd6470bc43b03e2fd46ee127bd21656bb8",
+    "media": "68bee36b30eb4e6d637c9a13afb13ade37c971768edb5f51d551ae99edee1640",
+    "documents": "fdb55aed55ac5500cf5554d4c1bb7fbda9739fd959d08c8e11049a5f0363bbee"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "generic_json_ld_product",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "json_ld",
+          "signal": "@type=Product",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "engine": "magento",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "/static/version\\d+|Magento_[A-Za-z]+|mage-cache-storage",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "c73ed65c139415174f9db1c07ff72c139e4f049ba0320f67dc5ee7b278e68b25",
+  "fixture_version": 2
+}

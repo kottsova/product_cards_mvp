@@ -1,0 +1,200 @@
+{
+  "proposed_at": "2026-09-25T14:31:50+00:00",
+  "status": "PROPOSAL -- nothing has been requested",
+  "brand": "Samsung",
+  "market": "kz_ru",
+  "path": "worker.run_once() with the Samsung adapter, stages 1-4 and 6",
+  "products": {
+    "Машины посудомоечные": {
+      "article": "DW60M5050BB/WT",
+      "title": "Посудомоечная машина встраиваемая 60 см, DW60M5050BB",
+      "catalog_row": 12060,
+      "page_url": "https://www.samsung.com/kz_ru/dishwashers/built-in/dw5500mm-dw60m5050bb-wt/"
+    },
+    "Сушильные машины": {
+      "article": "DV16DG8600BVLD",
+      "title": "Сушильная машина 16 кг, тепловой насос, DV16DG8600BVLD",
+      "catalog_row": 12660,
+      "page_url": "https://www.samsung.com/kz_ru/washers-and-dryers/dryers/dv8000d-dryer-hybrid-heat-pump-ai-control-ai-dry-16kg-black-dv16dg8600bvld/"
+    },
+    "Колонки": {
+      "article": "MX-ST50B",
+      "title": "Портативная аудиосистема Sound Tower MX-ST50B",
+      "catalog_row": 12053,
+      "page_url": "https://www.samsung.com/kz_ru/audio-devices/sound-tower/st50b-black-mx-st50b-ru/"
+    },
+    "Роботы-пылесосы": {
+      "article": "VR50T95735W/EV",
+      "title": "Робот-пылесос VR50T95735W/EV",
+      "catalog_row": 12268,
+      "page_url": "https://www.samsung.com/kz_ru/vacuum-cleaners/robot/vr9500t-white-vr50t95735w-ev/"
+    }
+  },
+  "request_budget": {
+    "sitemaps": "2 (vd и da, каждая читается один раз на всю партию)",
+    "product_pages": 4,
+    "instruction_files": "не более 8 (адаптер читает не более 2 файлов на товар и останавливается на первой русской инструкции)",
+    "per_row_cap": 7,
+    "total_cap": 14,
+    "pacing_seconds": 1.5,
+    "document_cap_mb": 40
+  },
+  "stop_rule": "401/403/429 or a confirmed challenge on a Samsung host stops it in <data dir>/samsung_fetch_log.json and ends the batch",
+  "url_construction": "none",
+  "dealer": "DNS only on a pre-verified exact URL: none exists for these products, so 0 dealer requests",
+  "queued_categories": {
+    "Внутренние SSD-накопители": {
+      "catalog_rows": 35,
+      "clean_articles": 35,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Смарт-часы": {
+      "catalog_rows": 18,
+      "clean_articles": 17,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "wearable (novelty rule)",
+      "route": "носимая техника: сначала нужен официальный список, подтверждающий текущую модель; хаб для неё не установлен"
+    },
+    "Зарядные устройства": {
+      "catalog_rows": 10,
+      "clean_articles": 10,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Кабели": {
+      "catalog_rows": 10,
+      "clean_articles": 10,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Flash-накопители": {
+      "catalog_rows": 9,
+      "clean_articles": 9,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Машины посудомоечные": {
+      "catalog_rows": 6,
+      "clean_articles": 6,
+      "rows_with_exact_page_in_saved_sitemaps": 2,
+      "class": "appliance (old models allowed)",
+      "proposed": {
+        "article": "DW60M5050BB/WT",
+        "title": "Посудомоечная машина встраиваемая 60 см, DW60M5050BB",
+        "catalog_row": 12060,
+        "page_url": "https://www.samsung.com/kz_ru/dishwashers/built-in/dw5500mm-dw60m5050bb-wt/"
+      }
+    },
+    "Внешние SSD-накопители": {
+      "catalog_rows": 5,
+      "clean_articles": 5,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Карты памяти": {
+      "catalog_rows": 5,
+      "clean_articles": 5,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Оперативная память": {
+      "catalog_rows": 5,
+      "clean_articles": 5,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Сушильные машины": {
+      "catalog_rows": 5,
+      "clean_articles": 5,
+      "rows_with_exact_page_in_saved_sitemaps": 3,
+      "class": "appliance (old models allowed)",
+      "proposed": {
+        "article": "DV16DG8600BVLD",
+        "title": "Сушильная машина 16 кг, тепловой насос, DV16DG8600BVLD",
+        "catalog_row": 12660,
+        "page_url": "https://www.samsung.com/kz_ru/washers-and-dryers/dryers/dv8000d-dryer-hybrid-heat-pump-ai-control-ai-dry-16kg-black-dv16dg8600bvld/"
+      }
+    },
+    "Гарнитуры": {
+      "catalog_rows": 4,
+      "clean_articles": 4,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "wearable (novelty rule)",
+      "route": "носимая техника: сначала нужен официальный список, подтверждающий текущую модель; хаб для неё не установлен"
+    },
+    "Колонки": {
+      "catalog_rows": 4,
+      "clean_articles": 4,
+      "rows_with_exact_page_in_saved_sitemaps": 2,
+      "class": "other technology (judged per product)",
+      "proposed": {
+        "article": "MX-ST50B",
+        "title": "Портативная аудиосистема Sound Tower MX-ST50B",
+        "catalog_row": 12053,
+        "page_url": "https://www.samsung.com/kz_ru/audio-devices/sound-tower/st50b-black-mx-st50b-ru/"
+      }
+    },
+    "GPS-трекеры": {
+      "catalog_rows": 3,
+      "clean_articles": 3,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Наушники беспроводные": {
+      "catalog_rows": 3,
+      "clean_articles": 3,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "wearable (novelty rule)",
+      "route": "носимая техника: сначала нужен официальный список, подтверждающий текущую модель; хаб для неё не установлен"
+    },
+    "Роботы-пылесосы": {
+      "catalog_rows": 2,
+      "clean_articles": 1,
+      "rows_with_exact_page_in_saved_sitemaps": 1,
+      "class": "appliance (old models allowed)",
+      "proposed": {
+        "article": "VR50T95735W/EV",
+        "title": "Робот-пылесос VR50T95735W/EV",
+        "catalog_row": 12268,
+        "page_url": "https://www.samsung.com/kz_ru/vacuum-cleaners/robot/vr9500t-white-vr50t95735w-ev/"
+      }
+    },
+    "Фитнес-браслеты": {
+      "catalog_rows": 2,
+      "clean_articles": 2,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "wearable (novelty rule)",
+      "route": "носимая техника: сначала нужен официальный список, подтверждающий текущую модель; хаб для неё не установлен"
+    },
+    "МФУ": {
+      "catalog_rows": 1,
+      "clean_articles": 1,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Музыкальные проигрыватели": {
+      "catalog_rows": 1,
+      "clean_articles": 1,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    },
+    "Проекторы": {
+      "catalog_rows": 1,
+      "clean_articles": 0,
+      "rows_with_exact_page_in_saved_sitemaps": 0,
+      "class": "other technology (judged per product)",
+      "route": "страницы нет в сохранённых картах сайта, хаба нет: сначала небольшой объявленный поиск маршрута (несколько запросов), затем карточка"
+    }
+  }
+}

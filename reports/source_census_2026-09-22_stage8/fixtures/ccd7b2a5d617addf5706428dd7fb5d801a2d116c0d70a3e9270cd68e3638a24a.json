@@ -1,0 +1,92 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [
+        ".name"
+      ],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [
+        ".image",
+        ".image.@type",
+        ".image.contentUrl",
+        ".image.creditText"
+      ],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "687d7f73413f43df6d5ea9ad2805dfe5218c5eecca6a5231f2295e29caa65a4f",
+    "identity": "c0c8e86233f35e75b1fa45514ab05732caa40de34ed0f5807dd65a58a699672a",
+    "specifications": "5b73690f1e545bf793139dd5e7ca68d674e5a19ac38e3c99a296cb58e0b2b410",
+    "media": "1ea7e07c68c02e142c098d58418303c885aeef146c2937b2c2311066d63df63f",
+    "documents": "2abc35ca49719944e6f8f6f0ec1004480d1f7d0dd2dbcff5eff015109ae19280"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "salesforce_commerce_cloud",
+      "status": "confirmed",
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "/on/demandware\\.store/|dwcont=|Demandware",
+          "strength": "strong",
+          "weight": 0.85
+        }
+      ]
+    },
+    {
+      "engine": "generic_json_ld_product",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "json_ld",
+          "signal": "@type=Product",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "ccd7b2a5d617addf5706428dd7fb5d801a2d116c0d70a3e9270cd68e3638a24a",
+  "fixture_version": 2
+}

@@ -1,0 +1,542 @@
+{
+  "rule": "Stage 22 step 4 -- OFFLINE, zero requests. Fixes, BEFORE any request of the second pilot, the sample, the selection rule, the budget,\nthe stop rules and what is measured.\n\nSample = the 12 rows of the first pilot (unchanged, Stage 20 selection) + 12 NEW rows chosen by this rule (deterministic; nothing about a row's\nexpected result other than sitemap reachability is used):\n  universe  = the Stage 19 queue units with family \"lg\" and status \"ready_to_run\" (578) minus the 12 first-pilot rows;\n  reach     = from the SAVED sitemaps (LG Kazakhstan: Stage 20 pilot responses; LG Russia: Stage 21 probe responses), whether a product URL whose slug equals the\n              key of the full article or of its base model exists (the production lookup rule after D4);\n  groups, taken in this order, each with a quota:\n     A  not in the KZ sitemap, in the RU sitemap ........ 5   (the \"not in KZ\" requirement: at least five)\n     B  the article has a dot (regional suffix), reachable in KZ or RU, not yet chosen ... 3\n     C  in neither sitemap ............................... 1   (an honest miss)\n     D  reachable in both, no dot in the article .......... 3\n  inside a group each pick is: among the group's remaining units, those whose category has the FEWEST picks so far in the new set; of those, the smallest\n  SHA-256 of the upper-cased seller article. Categories therefore spread as widely as the groups allow.\n\n",
+  "queue_sha256": "b248f7c20ac46b9edaf692acb8c03eda672090442775837bd848e7d3a55cbc61",
+  "new_rows": [
+    {
+      "group": "A",
+      "category": "Мониторы",
+      "seller_sku": "27U411A-B",
+      "catalog_row": 8677,
+      "brand": "LG",
+      "title": "27\" Монитор 27U411A-B, IPS, 120 Гц, 1920х1080",
+      "unit_id": "f5f2facc0c7a6b83",
+      "sha256_of_article": "0c95649506dbd2a540bb03cd1e77e6c626f2fb227ee2d066e70c113a9e7f4d1f",
+      "in_kz_sitemap": false,
+      "in_ru_sitemap": true,
+      "article_has_dot": false,
+      "group_pool_size": 47
+    },
+    {
+      "group": "A",
+      "category": "Телевизоры",
+      "seller_sku": "55UT81006LA",
+      "catalog_row": 8985,
+      "brand": "LG",
+      "title": "Телевизор 55UT81006LA 55''/4K UHD/Smart TV/Wi-Fi/BT",
+      "unit_id": "376acee4d5f35759",
+      "sha256_of_article": "195a175299f1eaaf06743bf217a2064785aceb32bfb37db7e97b0bd29b547020",
+      "in_kz_sitemap": false,
+      "in_ru_sitemap": true,
+      "article_has_dot": false,
+      "group_pool_size": 46
+    },
+    {
+      "group": "A",
+      "category": "Микроволновые печи",
+      "seller_sku": "MW23R35GIB",
+      "catalog_row": 8637,
+      "brand": "LG",
+      "title": "Микроволновая печь MW23R35GIB",
+      "unit_id": "cf5381a0449ea38b",
+      "sha256_of_article": "1a0b97d3923d9519851fa60eb7e32081ee49c8faa43023981806f33616b69d08",
+      "in_kz_sitemap": false,
+      "in_ru_sitemap": true,
+      "article_has_dot": false,
+      "group_pool_size": 45
+    },
+    {
+      "group": "A",
+      "category": "Пылесосы",
+      "seller_sku": "VC5316NNTS.APSQCIS",
+      "catalog_row": 8733,
+      "brand": "LG",
+      "title": "Пылесос VC5316NNTS",
+      "unit_id": "d771378f0431e696",
+      "sha256_of_article": "21a2dc87ba6bad2980cb2d7905e29d857d747d459a43b52e23a3d598a1b30838",
+      "in_kz_sitemap": false,
+      "in_ru_sitemap": true,
+      "article_has_dot": true,
+      "group_pool_size": 44
+    },
+    {
+      "group": "A",
+      "category": "Стиральные машины",
+      "seller_sku": "F2T3HS6W",
+      "catalog_row": 8794,
+      "brand": "LG",
+      "title": "Стиральная машина узкая F2T3HS6W",
+      "unit_id": "f2c911f6392cf32c",
+      "sha256_of_article": "3f8b0ac381b4650e31dc9559f73372c84d861f633c2ca42586487be6e4eb65eb",
+      "in_kz_sitemap": false,
+      "in_ru_sitemap": true,
+      "article_has_dot": false,
+      "group_pool_size": 43
+    },
+    {
+      "group": "B",
+      "category": "Холодильники",
+      "seller_sku": "GC-B399SMCL.APZQCIS",
+      "catalog_row": 9169,
+      "brand": "LG",
+      "title": "Холодильник двухкамерный 306 л No Frost, GC-B399SMCL",
+      "unit_id": "78433c82f4428598",
+      "sha256_of_article": "0d9a95d37d6fe5d9b8b0c8ad009c54257e88560da4939511000a7e2a8607109f",
+      "in_kz_sitemap": true,
+      "in_ru_sitemap": false,
+      "article_has_dot": true,
+      "group_pool_size": 77
+    },
+    {
+      "group": "B",
+      "category": "Музыкальные проигрыватели",
+      "seller_sku": "RNC5.DRUSLLK",
+      "catalog_row": 8721,
+      "brand": "LG",
+      "title": "Аудиосистема XBOOM RNC5",
+      "unit_id": "20a98277b48bd8ea",
+      "sha256_of_article": "1ba4ddd1022265b02c62a65a05aa025a0b94cd6b6a65137742e87032d22ad6a3",
+      "in_kz_sitemap": true,
+      "in_ru_sitemap": true,
+      "article_has_dot": true,
+      "group_pool_size": 76
+    },
+    {
+      "group": "B",
+      "category": "Саундбары",
+      "seller_sku": "S70TR.ARUSLLK",
+      "catalog_row": 8761,
+      "brand": "LG",
+      "title": "Саундбар S70TR",
+      "unit_id": "fd38c68b74a25f5a",
+      "sha256_of_article": "2a9677ef2d40984f13356eeaaa17e14a78c32111061f718f58a2249f56307ed5",
+      "in_kz_sitemap": true,
+      "in_ru_sitemap": false,
+      "article_has_dot": true,
+      "group_pool_size": 75
+    },
+    {
+      "group": "C",
+      "category": "Сушильные машины",
+      "seller_sku": "DC90V9V9W.ABWPCOM_KZ",
+      "catalog_row": 8848,
+      "brand": "LG",
+      "title": "Сушильная машина DC90V9V9W",
+      "unit_id": "6153032891e73fe3",
+      "sha256_of_article": "8f5bcc3f93f5373c6564231e8c9c050012633f5d6c95d05a40508fc9a44b30c7",
+      "in_kz_sitemap": false,
+      "in_ru_sitemap": false,
+      "article_has_dot": true,
+      "group_pool_size": 64
+    },
+    {
+      "group": "D",
+      "category": "Колонки",
+      "seller_sku": "XL5S",
+      "catalog_row": 8614,
+      "brand": "LG",
+      "title": "Музыкальная колонка XL5S",
+      "unit_id": "e7916a66109a8a24",
+      "sha256_of_article": "40152ee264590e9d5e0c66c73f1e694894fdaa8a38ee8f98bb8343740ab59ade",
+      "in_kz_sitemap": true,
+      "in_ru_sitemap": true,
+      "article_has_dot": false,
+      "group_pool_size": 320
+    },
+    {
+      "group": "D",
+      "category": "Телевизоры",
+      "seller_sku": "65UT80006LA",
+      "catalog_row": 9031,
+      "brand": "LG",
+      "title": "Телевизор 65UT80006LA 65''/4K UHD/Smart TV/Wi-Fi/BT",
+      "unit_id": "7b9d86e6f34ec6a0",
+      "sha256_of_article": "040001b2fa9417e5eb7d3f77dc6aac78b521a045bcbb759a1d6dd695d54ba16b",
+      "in_kz_sitemap": true,
+      "in_ru_sitemap": true,
+      "article_has_dot": false,
+      "group_pool_size": 319
+    },
+    {
+      "group": "D",
+      "category": "Музыкальные проигрыватели",
+      "seller_sku": "CJ45",
+      "catalog_row": 8707,
+      "brand": "LG",
+      "title": "Музыкальный центр XBOOM CJ45",
+      "unit_id": "464153d6b9de9a46",
+      "sha256_of_article": "0567396601fe5e9b0c68ada95654f2411c881111ce26cda1670e23902f206f31",
+      "in_kz_sitemap": true,
+      "in_ru_sitemap": true,
+      "article_has_dot": false,
+      "group_pool_size": 318
+    }
+  ],
+  "first_pilot_rows": [
+    {
+      "category": "Колонки",
+      "candidates_in_category": 3,
+      "seller_sku": "XL7S",
+      "catalog_row": 8615,
+      "brand": "LG",
+      "title": "Музыкальная колонка XL7S",
+      "unit_id": "d899ebf7fe549ae0",
+      "sha256_of_article": "37ae0af52322e83990ba9b70f32f34166ce465d858bbb1e726cdc4065abd4f00",
+      "article_has_suffix": false,
+      "flags": []
+    },
+    {
+      "category": "Микроволновые печи",
+      "candidates_in_category": 25,
+      "seller_sku": "MS2032GAS",
+      "catalog_row": 8622,
+      "brand": "LG",
+      "title": "Микроволновая печь MS2032GAS",
+      "unit_id": "9a3f73e5c0cb42a6",
+      "sha256_of_article": "0808492d1dd989bf2f94673fa47ddaef8e901b260efddb3a1bd7dc7c5955926d",
+      "article_has_suffix": false,
+      "flags": [
+        "has_alternate_titles"
+      ]
+    },
+    {
+      "category": "Мониторы",
+      "candidates_in_category": 60,
+      "seller_sku": "24MR400-B.ARUQ",
+      "catalog_row": 8652,
+      "brand": "LG",
+      "title": "23.8\" Монитор 24MR400-B, IPS, 100 Гц, 1920x1080",
+      "unit_id": "e3ec5015d04b5b7b",
+      "sha256_of_article": "03e4e438ed08a2b64a6a9f024907c34fa7697539925cc8da4dcdee89f6416a35",
+      "article_has_suffix": true,
+      "flags": []
+    },
+    {
+      "category": "Музыкальные проигрыватели",
+      "candidates_in_category": 17,
+      "seller_sku": "CK43",
+      "catalog_row": 8708,
+      "brand": "LG",
+      "title": "Аудиосистема XBOOM CK43",
+      "unit_id": "cd637199c7ebe759",
+      "sha256_of_article": "0499ff665eb375968e79f219614d09417f46fb7753dbbc856cdd7e30abef8f77",
+      "article_has_suffix": false,
+      "flags": []
+    },
+    {
+      "category": "Пылесосы",
+      "candidates_in_category": 33,
+      "seller_sku": "A9N-MASTERX",
+      "catalog_row": 8727,
+      "brand": "LG",
+      "title": "Вертикальный пылесос моющий A9N-MASTERX",
+      "unit_id": "831fe04f0fbb3087",
+      "sha256_of_article": "0dee04ef5438d5eba798b1787f60b7e797af219a8ccbda145a6e3d4a701121d0",
+      "article_has_suffix": false,
+      "flags": [
+        "has_alternate_titles"
+      ]
+    },
+    {
+      "category": "Саундбары",
+      "candidates_in_category": 15,
+      "seller_sku": "SN4",
+      "catalog_row": 8767,
+      "brand": "LG",
+      "title": "Саундбар SN4",
+      "unit_id": "dcb13a8bcb6b60f7",
+      "sha256_of_article": "076414a1ec8300c6c0fea632fedebec958fbf659b5ba8f12573209826de27bb6",
+      "article_has_suffix": false,
+      "flags": []
+    },
+    {
+      "category": "Смарт-часы",
+      "candidates_in_category": 1,
+      "seller_sku": "27MD5KL-B.AEU",
+      "catalog_row": 8771,
+      "brand": "LG",
+      "title": "Монитор LG 27MD5KL-B/27\"/5120x2880/Thunderbolt, USB-C/540 кд/кв.м/IPS/14 мс [27MD5KL-B.AEU]",
+      "unit_id": "801a26609dbe17da",
+      "sha256_of_article": "b801f37b540aff0c0041632f459f569a1972d57cac872d2163baf6a1987c3b23",
+      "article_has_suffix": true,
+      "flags": []
+    },
+    {
+      "category": "Сплит-системы",
+      "candidates_in_category": 3,
+      "seller_sku": "AC09BK",
+      "catalog_row": 8772,
+      "brand": "LG",
+      "title": "Сплит-система кондиционер 9000 BTU, AC09BK",
+      "unit_id": "c8862c720361e72b",
+      "sha256_of_article": "4c63524047719b0e0c4a88fa827f0da5783ebf6d86b7536889d12b4d3c6494b6",
+      "article_has_suffix": false,
+      "flags": []
+    },
+    {
+      "category": "Стиральные машины",
+      "candidates_in_category": 71,
+      "seller_sku": "F2J3WS1W",
+      "catalog_row": 8782,
+      "brand": "LG",
+      "title": "Стиральная машина узкая F2J3WS1W",
+      "unit_id": "d09e4a5bc45e19e7",
+      "sha256_of_article": "0437e2107807bcc25c4621006abccef6b1594309d77a549921634b41388ca610",
+      "article_has_suffix": false,
+      "flags": [
+        "has_alternate_titles"
+      ]
+    },
+    {
+      "category": "Сушильные машины",
+      "candidates_in_category": 4,
+      "seller_sku": "DC90V5V9S",
+      "catalog_row": 8847,
+      "brand": "LG",
+      "title": "Сушильная машина 9 кг, тепловой насос, DC90V5V9S",
+      "unit_id": "464670457a11fab3",
+      "sha256_of_article": "048fb397b357d6557a6ccbd370567e6ddb8a31c27549ce77911f454488e782cd",
+      "article_has_suffix": false,
+      "flags": [
+        "has_alternate_titles"
+      ]
+    },
+    {
+      "category": "Телевизоры",
+      "candidates_in_category": 318,
+      "seller_sku": "50UT91006LA",
+      "catalog_row": 8943,
+      "brand": "LG",
+      "title": "Телевизор 50UT91006LA 50''/4K UHD/Smart TV/Wi-Fi/BT",
+      "unit_id": "736b19447aafdc5a",
+      "sha256_of_article": "01d8c10e6403c150910260fc27c43221360e80f878bcd5bb8841d370793ea81d",
+      "article_has_suffix": false,
+      "flags": []
+    },
+    {
+      "category": "Холодильники",
+      "candidates_in_category": 28,
+      "seller_sku": "GC-B509SEUM",
+      "catalog_row": 9192,
+      "brand": "LG",
+      "title": "Холодильник двухкамерный GC-B509SEUM",
+      "unit_id": "42d1a0b0351f072b",
+      "sha256_of_article": "064d9e1fe49e51ec3f31e5af3b4f76c9df995c73b1f4825dc3b2f49b269fc1a7",
+      "article_has_suffix": false,
+      "flags": []
+    }
+  ],
+  "rows": [
+    {
+      "group": "first_pilot",
+      "category": "Колонки",
+      "seller_sku": "XL7S",
+      "catalog_row": 8615,
+      "brand": "LG",
+      "title": "Музыкальная колонка XL7S"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Микроволновые печи",
+      "seller_sku": "MS2032GAS",
+      "catalog_row": 8622,
+      "brand": "LG",
+      "title": "Микроволновая печь MS2032GAS"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Мониторы",
+      "seller_sku": "24MR400-B.ARUQ",
+      "catalog_row": 8652,
+      "brand": "LG",
+      "title": "23.8\" Монитор 24MR400-B, IPS, 100 Гц, 1920x1080"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Музыкальные проигрыватели",
+      "seller_sku": "CK43",
+      "catalog_row": 8708,
+      "brand": "LG",
+      "title": "Аудиосистема XBOOM CK43"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Пылесосы",
+      "seller_sku": "A9N-MASTERX",
+      "catalog_row": 8727,
+      "brand": "LG",
+      "title": "Вертикальный пылесос моющий A9N-MASTERX"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Саундбары",
+      "seller_sku": "SN4",
+      "catalog_row": 8767,
+      "brand": "LG",
+      "title": "Саундбар SN4"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Смарт-часы",
+      "seller_sku": "27MD5KL-B.AEU",
+      "catalog_row": 8771,
+      "brand": "LG",
+      "title": "Монитор LG 27MD5KL-B/27\"/5120x2880/Thunderbolt, USB-C/540 кд/кв.м/IPS/14 мс [27MD5KL-B.AEU]"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Сплит-системы",
+      "seller_sku": "AC09BK",
+      "catalog_row": 8772,
+      "brand": "LG",
+      "title": "Сплит-система кондиционер 9000 BTU, AC09BK"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Стиральные машины",
+      "seller_sku": "F2J3WS1W",
+      "catalog_row": 8782,
+      "brand": "LG",
+      "title": "Стиральная машина узкая F2J3WS1W"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Сушильные машины",
+      "seller_sku": "DC90V5V9S",
+      "catalog_row": 8847,
+      "brand": "LG",
+      "title": "Сушильная машина 9 кг, тепловой насос, DC90V5V9S"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Телевизоры",
+      "seller_sku": "50UT91006LA",
+      "catalog_row": 8943,
+      "brand": "LG",
+      "title": "Телевизор 50UT91006LA 50''/4K UHD/Smart TV/Wi-Fi/BT"
+    },
+    {
+      "group": "first_pilot",
+      "category": "Холодильники",
+      "seller_sku": "GC-B509SEUM",
+      "catalog_row": 9192,
+      "brand": "LG",
+      "title": "Холодильник двухкамерный GC-B509SEUM"
+    },
+    {
+      "group": "A",
+      "category": "Мониторы",
+      "seller_sku": "27U411A-B",
+      "catalog_row": 8677,
+      "brand": "LG",
+      "title": "27\" Монитор 27U411A-B, IPS, 120 Гц, 1920х1080"
+    },
+    {
+      "group": "A",
+      "category": "Телевизоры",
+      "seller_sku": "55UT81006LA",
+      "catalog_row": 8985,
+      "brand": "LG",
+      "title": "Телевизор 55UT81006LA 55''/4K UHD/Smart TV/Wi-Fi/BT"
+    },
+    {
+      "group": "A",
+      "category": "Микроволновые печи",
+      "seller_sku": "MW23R35GIB",
+      "catalog_row": 8637,
+      "brand": "LG",
+      "title": "Микроволновая печь MW23R35GIB"
+    },
+    {
+      "group": "A",
+      "category": "Пылесосы",
+      "seller_sku": "VC5316NNTS.APSQCIS",
+      "catalog_row": 8733,
+      "brand": "LG",
+      "title": "Пылесос VC5316NNTS"
+    },
+    {
+      "group": "A",
+      "category": "Стиральные машины",
+      "seller_sku": "F2T3HS6W",
+      "catalog_row": 8794,
+      "brand": "LG",
+      "title": "Стиральная машина узкая F2T3HS6W"
+    },
+    {
+      "group": "B",
+      "category": "Холодильники",
+      "seller_sku": "GC-B399SMCL.APZQCIS",
+      "catalog_row": 9169,
+      "brand": "LG",
+      "title": "Холодильник двухкамерный 306 л No Frost, GC-B399SMCL"
+    },
+    {
+      "group": "B",
+      "category": "Музыкальные проигрыватели",
+      "seller_sku": "RNC5.DRUSLLK",
+      "catalog_row": 8721,
+      "brand": "LG",
+      "title": "Аудиосистема XBOOM RNC5"
+    },
+    {
+      "group": "B",
+      "category": "Саундбары",
+      "seller_sku": "S70TR.ARUSLLK",
+      "catalog_row": 8761,
+      "brand": "LG",
+      "title": "Саундбар S70TR"
+    },
+    {
+      "group": "C",
+      "category": "Сушильные машины",
+      "seller_sku": "DC90V9V9W.ABWPCOM_KZ",
+      "catalog_row": 8848,
+      "brand": "LG",
+      "title": "Сушильная машина DC90V9V9W"
+    },
+    {
+      "group": "D",
+      "category": "Колонки",
+      "seller_sku": "XL5S",
+      "catalog_row": 8614,
+      "brand": "LG",
+      "title": "Музыкальная колонка XL5S"
+    },
+    {
+      "group": "D",
+      "category": "Телевизоры",
+      "seller_sku": "65UT80006LA",
+      "catalog_row": 9031,
+      "brand": "LG",
+      "title": "Телевизор 65UT80006LA 65''/4K UHD/Smart TV/Wi-Fi/BT"
+    },
+    {
+      "group": "D",
+      "category": "Музыкальные проигрыватели",
+      "seller_sku": "CJ45",
+      "catalog_row": 8707,
+      "brand": "LG",
+      "title": "Музыкальный центр XBOOM CJ45"
+    }
+  ],
+  "new_rows_not_in_kz_sitemap": 6,
+  "new_rows_with_dot": 5,
+  "new_categories": [
+    "Колонки",
+    "Микроволновые печи",
+    "Мониторы",
+    "Музыкальные проигрыватели",
+    "Пылесосы",
+    "Саундбары",
+    "Стиральные машины",
+    "Сушильные машины",
+    "Телевизоры",
+    "Холодильники"
+  ],
+  "universe_group_sizes": {
+    "A": 47,
+    "B": 78,
+    "C": 64,
+    "D": 320
+  }
+}

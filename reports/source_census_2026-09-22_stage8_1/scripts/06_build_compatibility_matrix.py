@@ -1,0 +1,103 @@
+import json
+from pathlib import Path
+
+OUT = Path('reports/source_census_2026-09-22_stage8_1')
+
+# status vocabulary: compatible_primitive | source_specific | insufficient_evidence | blocked_manual_review
+matrix = {
+    "schema_version": "stage8_1_compatibility_matrix.v1",
+    "status_vocabulary": ["compatible_primitive", "source_specific", "insufficient_evidence", "blocked_manual_review"],
+    "note": "compatible_primitive marks a LOW-LEVEL reader shared across >=2 independent source families with >=2 verified pages each and a matching field-level data contract. It never means the family's full layer is production-ready or that identity/variant meaning is shared.",
+    "rows": {
+        "xiaomi_global": {
+            "pages_verified": 3,
+            "page_urls": [
+                "https://www.mi.com/global/product/leica-leitzphone-powered-by-xiaomi/",
+                "https://www.mi.com/global/product/xiaomi-17-ultra/",
+                "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/"
+            ],
+            "categories_covered": ["smartphone (Leica co-brand)", "smartphone (flagship)", "wearable (watch)"],
+            "discovery": {"status": "source_specific", "note": "Single homepage sample; custom nav classification only, not cross-verified against a 2nd distinct discovery entry point."},
+            "identity": {"status": "insufficient_evidence", "note": "3/3 pages confirmed marketing_name_only: no sku/mpn/gtin field present in JSON-LD on any sampled page. Stable finding, but stable absence, not a usable identity contract."},
+            "specifications": {"status": "insufficient_evidence", "note": "3/3 pages: no additionalProperty and no table/dl/details DOM pattern detected. Specs likely live in embedded client-side state not captured by static HTML parsing."},
+            "media": {"status": "compatible_primitive", "note": "3/3 pages: JSON-LD .image plus DOM responsive_srcset and itemprop=image gallery markers. Matches the same low-level contract also confirmed on bosch_home and hyperx."},
+            "documents": {"status": "insufficient_evidence", "note": "Never observed on any sampled page."}
+        },
+        "bosch_home": {
+            "pages_verified": 3,
+            "page_urls": [
+                "https://www.bosch-home.com/de/de/product/kuechengeraete/wasserkocher/TWK7203",
+                "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+                "https://www.bosch-home.co.uk/en/product/small-appliances/airfryer/airfryerdoubledrawer/MAFD661B0G"
+            ],
+            "categories_covered": ["kettle (DE)", "kitchen machine (DE)", "air fryer (UK, sanitized snapshot)"],
+            "discovery": {"status": "source_specific", "note": "Next.js/AEM-style path-prefix locale routing; not comparable to any other family's discovery mechanism even where the category/navigation label set looks similar."},
+            "identity": {"status": "source_specific", "note": "gtin+mpn+name confirmed stable and explicit_manufacturer_or_model across 2 DE pages, and the UK page's identity signature matches exactly. Strong, but confirmed only within Bosch -- no second independent family shares this explicit gtin+mpn contract, so it stays custom, not shared."},
+            "specifications": {"status": "compatible_primitive", "note": "2/2 DE pages confirmed .additionalProperty[].name/.value(+.unitText) matching schema.org PropertyValue. UK page's specs layer is unconfirmed only because that sample is a Stage 7 sanitized snapshot that omits body content, not a structural difference. Shares field shape with hyperx (name/value common; unitText optional)."},
+            "media": {"status": "compatible_primitive", "note": "2/2 DE pages: JSON-LD .image + DOM responsive_srcset. Matches xiaomi_global and hyperx."},
+            "documents": {"status": "insufficient_evidence", "note": "Never observed on any sampled Bosch page (product or support)."}
+        },
+        "dreame": {
+            "pages_verified": 4,
+            "page_urls": [
+                "https://de.dreametech.com/products/a2 (Stage 7 sanitized snapshot)",
+                "https://de.dreametech.com/products/dreame-x60-pro-ultra-complete-saugroboter (live, Stage 8.1)",
+                "https://global.dreametech.com/products/l60-ultra (live, Stage 8 HTTP -- not a product page per JSON-LD test)",
+                "https://global.dreametech.com/products/t16-pro-heat (live, Stage 8 HTTP -- not a product page per JSON-LD test)"
+            ],
+            "categories_covered": ["robot vacuum (DE storefront, x2)", "robot vacuum / hair styler (global storefront, x2, JSON-LD not confirmed)"],
+            "discovery": {"status": "source_specific", "note": "DE and global.dreametech.com are the SAME brand on two different Shopify storefronts with different theme behavior; not one stable contract even within the family."},
+            "identity": {"status": "source_specific", "note": "gtin13+sku (unverified_sku_meaning) confirmed stable across 2 DE-storefront pages (1 snapshot + 1 live). The global storefront did not expose a single clean JSON-LD Product object on either sampled page (is_product_page=false, likely related-product widgets adding extra Product blocks), so identity is insufficient_evidence there specifically."},
+            "specifications": {"status": "insufficient_evidence", "note": "Confirmed EMPTY (no additionalProperty, no DOM table/dl/details) on the live, non-sanitized x60 page -- a genuine structural gap, not a snapshot artifact. Not observed on the global storefront pages either."},
+            "media": {"status": "source_specific", "note": "JSON-LD .image present on the live DE page, but DOM responsive_srcset was NOT detected there -- unlike bosch_home/hyperx/xiaomi_global. Dreame does not currently qualify for the shared srcset primitive on this evidence."},
+            "documents": {"status": "insufficient_evidence", "note": "Exactly one sample (a2, sanitized snapshot) shows a PDF link, but the runner itself flags model-linkage and language as unverified, and it is a single sample. Not enough to certify a contract, even source-specific."}
+        },
+        "hyperx": {
+            "pages_verified": 3,
+            "page_urls": [
+                "https://hyperx.com/products/hyperx-bundle-alloy-rise-75-keyboard-pulsefire-haste-2-s-wireless-mouse",
+                "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+                "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset"
+            ],
+            "categories_covered": ["keyboard+mouse bundle", "USB microphone", "gaming headset"],
+            "discovery": {"status": "source_specific", "note": "Shopify collections/search navigation; a working bounded internal HTML search form was also detected (GET:q:html_search_form) on the support page."},
+            "identity": {"status": "source_specific", "note": "gtin12+productID+sku (unverified_sku_meaning) confirmed stable across all 3 pages/3 product categories -- a solid intra-family contract, but sku meaning is still unverified against a manufacturer part number, so it cannot resolve exact_model alone."},
+            "specifications": {"status": "compatible_primitive", "note": "3/3 pages: .additionalProperty[].name/.value plus a DOM accordion/dl fallback, matching bosch_home's field shape (minus unitText, which HyperX never emits)."},
+            "media": {"status": "compatible_primitive", "note": "3/3 pages: JSON-LD .image[...] + DOM responsive_srcset. Matches bosch_home and xiaomi_global."},
+            "documents": {"status": "insufficient_evidence", "note": "Support page fetched successfully but no PDF link found on any sampled page."}
+        },
+        "asus (reference)": {
+            "pages_verified": 1,
+            "page_urls": ["https://eshop.asus.com/us/90cb0a71-m003d0-asus-googlebook-14.html"],
+            "categories_covered": ["laptop"],
+            "discovery": {"status": "insufficient_evidence", "note": "Single sample; not extended in Stage 8.1 per scope (reference family only)."},
+            "identity": {"status": "insufficient_evidence", "note": "name+sku (unverified_sku_meaning) on 1 page only -- consistent in shape with hyperx/dreame's sku-only pattern, but a single sample cannot confirm stability."},
+            "specifications": {"status": "insufficient_evidence", "note": "Not observed."},
+            "media": {"status": "insufficient_evidence", "note": "Single-sample signal only (JSON-LD .image + DOM responsive_srcset) -- consistent with the cluster but does not itself qualify it (needs 2 pages)."},
+            "documents": {"status": "insufficient_evidence", "note": "Not observed."}
+        },
+        "delonghi (reference)": {
+            "pages_verified": 1,
+            "page_urls": ["https://www.delonghi.com/en-us/p/la-specialista-touch-la-specialista-touch-espresso-machine-with-cold-brew/EC9455M.html"],
+            "categories_covered": ["espresso machine"],
+            "discovery": {"status": "insufficient_evidence", "note": "Single sample; not extended in Stage 8.1 per scope."},
+            "identity": {"status": "insufficient_evidence", "note": "name only (marketing_name_only) on 1 page -- consistent with xiaomi_global's weak-identity pattern, single sample."},
+            "specifications": {"status": "insufficient_evidence", "note": "Not observed."},
+            "media": {"status": "insufficient_evidence", "note": "Single-sample signal only (JSON-LD .image + .image.contentUrl/.creditText + DOM responsive_srcset) -- richer schema than others, but one page only."},
+            "documents": {"status": "insufficient_evidence", "note": "Not observed."}
+        },
+        "nintendo (reference)": {
+            "pages_verified": 1,
+            "page_urls": ["https://www.nintendo.com/store/products/diablo-iv-age-of-hatred-collection-switch-2/"],
+            "categories_covered": ["game software bundle"],
+            "discovery": {"status": "insufficient_evidence", "note": "Only homepage/category fetched as 'samples'; the product-page evidence came from reused history, not a fresh Stage 8/8.1 discovery chain."},
+            "identity": {"status": "insufficient_evidence", "note": "name+sku (unverified_sku_meaning) on 1 page. Note: this page's cms_fingerprint list only shows next_js, not generic_json_ld_product, even though a JSON-LD Product clearly supplied the .name/.sku fields -- a fingerprinting under-detection worth flagging, not a structural fact about Nintendo."},
+            "specifications": {"status": "insufficient_evidence", "note": "Not observed."},
+            "media": {"status": "insufficient_evidence", "note": "Single-sample signal only (JSON-LD .image + DOM responsive_srcset)."},
+            "documents": {"status": "insufficient_evidence", "note": "Not observed."}
+        }
+    }
+}
+
+OUT.joinpath('compatibility_matrix.json').write_text(json.dumps(matrix, indent=2, ensure_ascii=False), encoding='utf-8')
+print('wrote compatibility_matrix.json')

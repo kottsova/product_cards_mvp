@@ -1,0 +1,5257 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-22T00:00:00Z",
+  "source_catalog": "data/catalog_2026-09-21_filtered.xlsx",
+  "normalization_policy": {
+    "fuzzy_merge_allowed": false,
+    "source_labels_preserved": true,
+    "coverage_inheritance_requires_verified_mapping": true
+  },
+  "brands": [
+    {
+      "original_brand_label": "Xiaomi",
+      "normalized_label": "xiaomi",
+      "canonical_brand": "Xiaomi",
+      "source_family_id": "xiaomi_global",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Verified source family from stage 2."
+    },
+    {
+      "original_brand_label": "Samsung",
+      "normalized_label": "samsung",
+      "canonical_brand": "Samsung",
+      "source_family_id": "samsung",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Apple",
+      "normalized_label": "apple",
+      "canonical_brand": "Apple",
+      "source_family_id": "apple",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "BOSCH",
+      "normalized_label": "bosch",
+      "canonical_brand": "Bosch",
+      "source_family_id": "bosch_category_routed",
+      "relationship": "category_dependent",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.bosch-home.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Official Bosch Home catalog."
+        },
+        {
+          "type": "official_site",
+          "url": "https://www.bosch-professional.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Official Bosch Professional tools catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Category-dependent routing; two independent source families.",
+      "source_family_routes": [
+        {
+          "source_family_id": "bosch_home",
+          "category_scope": [
+            "major_home_appliances",
+            "small_home_appliances"
+          ]
+        },
+        {
+          "source_family_id": "bosch_tools",
+          "category_scope": [
+            "tools_garden"
+          ]
+        }
+      ]
+    },
+    {
+      "original_brand_label": "Asus",
+      "normalized_label": "asus",
+      "canonical_brand": "Asus",
+      "source_family_id": "asus",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "LG",
+      "normalized_label": "lg",
+      "canonical_brand": "LG",
+      "source_family_id": "lg",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "БИРЮСА",
+      "normalized_label": "бирюса",
+      "canonical_brand": "БИРЮСА",
+      "source_family_id": "бирюса",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "MSI",
+      "normalized_label": "msi",
+      "canonical_brand": "MSI",
+      "source_family_id": "msi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "lenovo",
+      "normalized_label": "lenovo",
+      "canonical_brand": "lenovo",
+      "source_family_id": "lenovo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Gigabyte",
+      "normalized_label": "gigabyte",
+      "canonical_brand": "Gigabyte",
+      "source_family_id": "gigabyte",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Huawei",
+      "normalized_label": "huawei",
+      "canonical_brand": "Huawei",
+      "source_family_id": "huawei",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Acer",
+      "normalized_label": "acer",
+      "canonical_brand": "Acer",
+      "source_family_id": "acer",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "POCO",
+      "normalized_label": "poco",
+      "canonical_brand": "POCO",
+      "source_family_id": "xiaomi_global",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.mi.com/global/poco/",
+          "checked_at": "2026-09-22",
+          "claim": "Official Xiaomi route dedicated to POCO products."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Shares Xiaomi source family only through the official POCO route; requires POCO-specific identity rules."
+    },
+    {
+      "original_brand_label": "TP-link",
+      "normalized_label": "tp-link",
+      "canonical_brand": "TP-link",
+      "source_family_id": "tp_link",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Formula V",
+      "normalized_label": "formula v",
+      "canonical_brand": "Formula V",
+      "source_family_id": "formula_v",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HP",
+      "normalized_label": "hp",
+      "canonical_brand": "HP",
+      "source_family_id": "hp",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Canonical HP source family already verified in stage 2."
+    },
+    {
+      "original_brand_label": "HONOR",
+      "normalized_label": "honor",
+      "canonical_brand": "HONOR",
+      "source_family_id": "honor",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "GEFEST",
+      "normalized_label": "gefest",
+      "canonical_brand": "GEFEST",
+      "source_family_id": "gefest",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "THERMALRIGHT",
+      "normalized_label": "thermalright",
+      "canonical_brand": "THERMALRIGHT",
+      "source_family_id": "thermalright",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Rombica",
+      "normalized_label": "rombica",
+      "canonical_brand": "Rombica",
+      "source_family_id": "rombica",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Silicon Power",
+      "normalized_label": "silicon power",
+      "canonical_brand": "Silicon Power",
+      "source_family_id": "silicon_power",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Pozis",
+      "normalized_label": "pozis",
+      "canonical_brand": "Pozis",
+      "source_family_id": "pozis",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Karcher",
+      "normalized_label": "karcher",
+      "canonical_brand": "Karcher",
+      "source_family_id": "karcher",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Infinix",
+      "normalized_label": "infinix",
+      "canonical_brand": "Infinix",
+      "source_family_id": "infinix",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "JBL",
+      "normalized_label": "jbl",
+      "canonical_brand": "JBL",
+      "source_family_id": "jbl",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "be quiet!",
+      "normalized_label": "be quiet!",
+      "canonical_brand": "be quiet!",
+      "source_family_id": "be_quiet",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Patriot Memory",
+      "normalized_label": "patriot memory",
+      "canonical_brand": "Patriot Memory",
+      "source_family_id": "patriot_memory",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "LOGITECH",
+      "normalized_label": "logitech",
+      "canonical_brand": "Logitech",
+      "source_family_id": "logitech",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Canonical Logitech source family already verified in stage 2."
+    },
+    {
+      "original_brand_label": "Philips",
+      "normalized_label": "philips",
+      "canonical_brand": "Philips",
+      "source_family_id": "philips",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "AMD",
+      "normalized_label": "amd",
+      "canonical_brand": "AMD",
+      "source_family_id": "amd",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Deepcool",
+      "normalized_label": "deepcool",
+      "canonical_brand": "Deepcool",
+      "source_family_id": "deepcool",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "LIAN-LI",
+      "normalized_label": "lian-li",
+      "canonical_brand": "LIAN-LI",
+      "source_family_id": "lian_li",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Electrolux",
+      "normalized_label": "electrolux",
+      "canonical_brand": "Electrolux",
+      "source_family_id": "electrolux",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Irbis",
+      "normalized_label": "irbis",
+      "canonical_brand": "Irbis",
+      "source_family_id": "irbis",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "DeLonghi",
+      "normalized_label": "delonghi",
+      "canonical_brand": "DeLonghi",
+      "source_family_id": "delonghi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Yeelight",
+      "normalized_label": "yeelight",
+      "canonical_brand": "Yeelight",
+      "source_family_id": "yeelight",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Playstation",
+      "normalized_label": "playstation",
+      "canonical_brand": "PlayStation",
+      "source_family_id": "playstation",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.playstation.com/en-us/",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated Sony gaming catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Related parent company does not collapse this dedicated source family."
+    },
+    {
+      "original_brand_label": "HIPER",
+      "normalized_label": "hiper",
+      "canonical_brand": "HIPER",
+      "source_family_id": "hiper",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "REDMOND",
+      "normalized_label": "redmond",
+      "canonical_brand": "REDMOND",
+      "source_family_id": "redmond",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Braun",
+      "normalized_label": "braun",
+      "canonical_brand": "Braun",
+      "source_family_id": "braun",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Яндекс",
+      "normalized_label": "яндекс",
+      "canonical_brand": "Яндекс",
+      "source_family_id": "яндекс",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ADATA",
+      "normalized_label": "adata",
+      "canonical_brand": "ADATA",
+      "source_family_id": "adata",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Razer",
+      "normalized_label": "razer",
+      "canonical_brand": "Razer",
+      "source_family_id": "razer",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Kingston",
+      "normalized_label": "kingston",
+      "canonical_brand": "Kingston",
+      "source_family_id": "kingston",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Intel",
+      "normalized_label": "intel",
+      "canonical_brand": "Intel",
+      "source_family_id": "intel",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Chieftec",
+      "normalized_label": "chieftec",
+      "canonical_brand": "Chieftec",
+      "source_family_id": "chieftec",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "CANON",
+      "normalized_label": "canon",
+      "canonical_brand": "CANON",
+      "source_family_id": "canon",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "KingBank",
+      "normalized_label": "kingbank",
+      "canonical_brand": "KingBank",
+      "source_family_id": "kingbank",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Cudy",
+      "normalized_label": "cudy",
+      "canonical_brand": "Cudy",
+      "source_family_id": "cudy",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "AOC",
+      "normalized_label": "aoc",
+      "canonical_brand": "AOC",
+      "source_family_id": "aoc",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "INOI",
+      "normalized_label": "inoi",
+      "canonical_brand": "INOI",
+      "source_family_id": "inoi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Dyson",
+      "normalized_label": "dyson",
+      "canonical_brand": "Dyson",
+      "source_family_id": "dyson",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "KEENETIC",
+      "normalized_label": "keenetic",
+      "canonical_brand": "KEENETIC",
+      "source_family_id": "keenetic",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Raskat",
+      "normalized_label": "raskat",
+      "canonical_brand": "Raskat",
+      "source_family_id": "raskat",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "YOSHIRO",
+      "normalized_label": "yoshiro",
+      "canonical_brand": "YOSHIRO",
+      "source_family_id": "yoshiro",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ATLANT",
+      "normalized_label": "atlant",
+      "canonical_brand": "ATLANT",
+      "source_family_id": "atlant",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ASRock",
+      "normalized_label": "asrock",
+      "canonical_brand": "ASRock",
+      "source_family_id": "asrock",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "OCYPUS",
+      "normalized_label": "ocypus",
+      "canonical_brand": "OCYPUS",
+      "source_family_id": "ocypus",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "SANDISK",
+      "normalized_label": "sandisk",
+      "canonical_brand": "SANDISK",
+      "source_family_id": "sandisk",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "1stPlayer",
+      "normalized_label": "1stplayer",
+      "canonical_brand": "1stPlayer",
+      "source_family_id": "1stplayer",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "DON",
+      "normalized_label": "don",
+      "canonical_brand": "DON",
+      "source_family_id": "don",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NINTENDO",
+      "normalized_label": "nintendo",
+      "canonical_brand": "NINTENDO",
+      "source_family_id": "nintendo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "KingDian",
+      "normalized_label": "kingdian",
+      "canonical_brand": "KingDian",
+      "source_family_id": "kingdian",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Palit",
+      "normalized_label": "palit",
+      "canonical_brand": "Palit",
+      "source_family_id": "palit",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Beats",
+      "normalized_label": "beats",
+      "canonical_brand": "Beats",
+      "source_family_id": "beats",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.beatsbydre.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official Beats catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Related parent company does not collapse this dedicated source family."
+    },
+    {
+      "original_brand_label": "Dell",
+      "normalized_label": "dell",
+      "canonical_brand": "Dell",
+      "source_family_id": "dell",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "BenQ",
+      "normalized_label": "benq",
+      "canonical_brand": "BenQ",
+      "source_family_id": "benq",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Microsoft",
+      "normalized_label": "microsoft",
+      "canonical_brand": "Microsoft",
+      "source_family_id": "microsoft",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NETAC",
+      "normalized_label": "netac",
+      "canonical_brand": "NETAC",
+      "source_family_id": "netac",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "TECNO",
+      "normalized_label": "tecno",
+      "canonical_brand": "TECNO",
+      "source_family_id": "tecno",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "SAMA",
+      "normalized_label": "sama",
+      "canonical_brand": "SAMA",
+      "source_family_id": "sama",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "DxRacer",
+      "normalized_label": "dxracer",
+      "canonical_brand": "DxRacer",
+      "source_family_id": "dxracer",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "THERMALTAKE",
+      "normalized_label": "thermaltake",
+      "canonical_brand": "THERMALTAKE",
+      "source_family_id": "thermaltake",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Weissgauff",
+      "normalized_label": "weissgauff",
+      "canonical_brand": "Weissgauff",
+      "source_family_id": "weissgauff",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Dreame",
+      "normalized_label": "dreame",
+      "canonical_brand": "Dreame",
+      "source_family_id": "dreame",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "XPG",
+      "normalized_label": "xpg",
+      "canonical_brand": "XPG",
+      "source_family_id": "xpg",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.xpg.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official XPG catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Related parent company does not collapse this dedicated source family."
+    },
+    {
+      "original_brand_label": "GoPro",
+      "normalized_label": "gopro",
+      "canonical_brand": "GoPro",
+      "source_family_id": "gopro",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HYPERX",
+      "normalized_label": "hyperx",
+      "canonical_brand": "HyperX",
+      "source_family_id": "hyperx",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://hyperx.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official HyperX catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Related parent company does not collapse this dedicated source family."
+    },
+    {
+      "original_brand_label": "Iiyama",
+      "normalized_label": "iiyama",
+      "canonical_brand": "Iiyama",
+      "source_family_id": "iiyama",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "PocketBook",
+      "normalized_label": "pocketbook",
+      "canonical_brand": "PocketBook",
+      "source_family_id": "pocketbook",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ZOTAC",
+      "normalized_label": "zotac",
+      "canonical_brand": "ZOTAC",
+      "source_family_id": "zotac",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Tefal",
+      "normalized_label": "tefal",
+      "canonical_brand": "Tefal",
+      "source_family_id": "tefal",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "EVGA",
+      "normalized_label": "evga",
+      "canonical_brand": "EVGA",
+      "source_family_id": "evga",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "metabo",
+      "normalized_label": "metabo",
+      "canonical_brand": "metabo",
+      "source_family_id": "metabo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "WD",
+      "normalized_label": "wd",
+      "canonical_brand": "WD",
+      "source_family_id": "wd",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.westerndigital.com/en-sg/legal/trademarks",
+          "checked_at": "2026-09-22",
+          "claim": "Official trademark page lists WD and Western Digital."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Current official brand usage; grouped with Western Digital."
+    },
+    {
+      "original_brand_label": "Sony",
+      "normalized_label": "sony",
+      "canonical_brand": "Sony",
+      "source_family_id": "sony",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ОРСК",
+      "normalized_label": "орск",
+      "canonical_brand": "ОРСК",
+      "source_family_id": "орск",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Colorful",
+      "normalized_label": "colorful",
+      "canonical_brand": "Colorful",
+      "source_family_id": "colorful",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Pantum",
+      "normalized_label": "pantum",
+      "canonical_brand": "Pantum",
+      "source_family_id": "pantum",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NEC",
+      "normalized_label": "nec",
+      "canonical_brand": "NEC",
+      "source_family_id": "nec",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "BQ.",
+      "normalized_label": "bq.",
+      "canonical_brand": "BQ.",
+      "source_family_id": "bq",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "GAMEMAX",
+      "normalized_label": "gamemax",
+      "canonical_brand": "GAMEMAX",
+      "source_family_id": "gamemax",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Gorenje",
+      "normalized_label": "gorenje",
+      "canonical_brand": "Gorenje",
+      "source_family_id": "gorenje",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Lyambda",
+      "normalized_label": "lyambda",
+      "canonical_brand": "Lyambda",
+      "source_family_id": "lyambda",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Super Flower",
+      "normalized_label": "super flower",
+      "canonical_brand": "Super Flower",
+      "source_family_id": "super_flower",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Accesstyle",
+      "normalized_label": "accesstyle",
+      "canonical_brand": "Accesstyle",
+      "source_family_id": "accesstyle",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "AeroCool",
+      "normalized_label": "aerocool",
+      "canonical_brand": "AeroCool",
+      "source_family_id": "aerocool",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "GamerStorm",
+      "normalized_label": "gamerstorm",
+      "canonical_brand": "GamerStorm",
+      "source_family_id": "gamerstorm",
+      "relationship": "product_line",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.deepcool.com/products/Cooling/GAMERSTORM/",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official DeepCool GamerStorm route."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Related parent company does not collapse this dedicated source family."
+    },
+    {
+      "original_brand_label": "Corsair",
+      "normalized_label": "corsair",
+      "canonical_brand": "Corsair",
+      "source_family_id": "corsair",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Dahua",
+      "normalized_label": "dahua",
+      "canonical_brand": "Dahua",
+      "source_family_id": "dahua",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "JONSBO",
+      "normalized_label": "jonsbo",
+      "canonical_brand": "JONSBO",
+      "source_family_id": "jonsbo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Haylou",
+      "normalized_label": "haylou",
+      "canonical_brand": "Haylou",
+      "source_family_id": "haylou",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NZXT",
+      "normalized_label": "nzxt",
+      "canonical_brand": "NZXT",
+      "source_family_id": "nzxt",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Deerma",
+      "normalized_label": "deerma",
+      "canonical_brand": "Deerma",
+      "source_family_id": "deerma",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Makita",
+      "normalized_label": "makita",
+      "canonical_brand": "Makita",
+      "source_family_id": "makita",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Realme",
+      "normalized_label": "realme",
+      "canonical_brand": "Realme",
+      "source_family_id": "realme",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Teamgroup",
+      "normalized_label": "teamgroup",
+      "canonical_brand": "TEAMGROUP",
+      "source_family_id": "teamgroup",
+      "relationship": "spelling_variant",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.teamgroupinc.com/en/about/",
+          "checked_at": "2026-09-22",
+          "claim": "Official company page uses TEAMGROUP and legal name Team Group Inc."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Grouped with Team Group."
+    },
+    {
+      "original_brand_label": "ViewSonic",
+      "normalized_label": "viewsonic",
+      "canonical_brand": "ViewSonic",
+      "source_family_id": "viewsonic",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Wacom",
+      "normalized_label": "wacom",
+      "canonical_brand": "Wacom",
+      "source_family_id": "wacom",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Wahoo",
+      "normalized_label": "wahoo",
+      "canonical_brand": "Wahoo",
+      "source_family_id": "wahoo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Ecovacs",
+      "normalized_label": "ecovacs",
+      "canonical_brand": "Ecovacs",
+      "source_family_id": "ecovacs",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "GENIUS",
+      "normalized_label": "genius",
+      "canonical_brand": "GENIUS",
+      "source_family_id": "genius",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Skullcandy",
+      "normalized_label": "skullcandy",
+      "canonical_brand": "Skullcandy",
+      "source_family_id": "skullcandy",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Zalman",
+      "normalized_label": "zalman",
+      "canonical_brand": "Zalman",
+      "source_family_id": "zalman",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Dunobil",
+      "normalized_label": "dunobil",
+      "canonical_brand": "Dunobil",
+      "source_family_id": "dunobil",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Brother",
+      "normalized_label": "brother",
+      "canonical_brand": "Brother",
+      "source_family_id": "brother",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Crucial",
+      "normalized_label": "crucial",
+      "canonical_brand": "Crucial",
+      "source_family_id": "crucial",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Ezviz",
+      "normalized_label": "ezviz",
+      "canonical_brand": "EZVIZ",
+      "source_family_id": "ezviz",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.ezviz.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official EZVIZ site."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Related parent company does not collapse this dedicated source family."
+    },
+    {
+      "original_brand_label": "Sjcam",
+      "normalized_label": "sjcam",
+      "canonical_brand": "Sjcam",
+      "source_family_id": "sjcam",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "70MAI",
+      "normalized_label": "70mai",
+      "canonical_brand": "70MAI",
+      "source_family_id": "70mai",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "iFrogz",
+      "normalized_label": "ifrogz",
+      "canonical_brand": "iFrogz",
+      "source_family_id": "ifrogz",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Maxsun",
+      "normalized_label": "maxsun",
+      "canonical_brand": "Maxsun",
+      "source_family_id": "maxsun",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Ninebot By Segway",
+      "normalized_label": "ninebot by segway",
+      "canonical_brand": "Ninebot By Segway",
+      "source_family_id": "ninebot_by_segway",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Nokia",
+      "normalized_label": "nokia",
+      "canonical_brand": "Nokia",
+      "source_family_id": "nokia",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "PNY",
+      "normalized_label": "pny",
+      "canonical_brand": "PNY",
+      "source_family_id": "pny",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "TCL",
+      "normalized_label": "tcl",
+      "canonical_brand": "TCL",
+      "source_family_id": "tcl",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "1More",
+      "normalized_label": "1more",
+      "canonical_brand": "1More",
+      "source_family_id": "1more",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Colmi",
+      "normalized_label": "colmi",
+      "canonical_brand": "Colmi",
+      "source_family_id": "colmi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HiLook",
+      "normalized_label": "hilook",
+      "canonical_brand": "HiLook",
+      "source_family_id": "hilook",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.hilooksecurity.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official HiLook site."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Related parent company does not collapse this dedicated source family."
+    },
+    {
+      "original_brand_label": "iconBIT",
+      "normalized_label": "iconbit",
+      "canonical_brand": "iconBIT",
+      "source_family_id": "iconbit",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Netcraze",
+      "normalized_label": "netcraze",
+      "canonical_brand": "Netcraze",
+      "source_family_id": "netcraze",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "СНТ",
+      "normalized_label": "снт",
+      "canonical_brand": "СНТ",
+      "source_family_id": "снт",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ANYCUBIC",
+      "normalized_label": "anycubic",
+      "canonical_brand": "ANYCUBIC",
+      "source_family_id": "anycubic",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Playme",
+      "normalized_label": "playme",
+      "canonical_brand": "Playme",
+      "source_family_id": "playme",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "POLARIS",
+      "normalized_label": "polaris",
+      "canonical_brand": "POLARIS",
+      "source_family_id": "polaris",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "roborock",
+      "normalized_label": "roborock",
+      "canonical_brand": "roborock",
+      "source_family_id": "roborock",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "НРЗ",
+      "normalized_label": "нрз",
+      "canonical_brand": "НРЗ",
+      "source_family_id": "нрз",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "APC",
+      "normalized_label": "apc",
+      "canonical_brand": "APC",
+      "source_family_id": "apc",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HAVN",
+      "normalized_label": "havn",
+      "canonical_brand": "HAVN",
+      "source_family_id": "havn",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "JVC",
+      "normalized_label": "jvc",
+      "canonical_brand": "JVC",
+      "source_family_id": "jvc",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Sapphire",
+      "normalized_label": "sapphire",
+      "canonical_brand": "Sapphire",
+      "source_family_id": "sapphire",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "SUDIO",
+      "normalized_label": "sudio",
+      "canonical_brand": "SUDIO",
+      "source_family_id": "sudio",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ZTE",
+      "normalized_label": "zte",
+      "canonical_brand": "ZTE",
+      "source_family_id": "zte",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Каркам",
+      "normalized_label": "каркам",
+      "canonical_brand": "CARCAM",
+      "source_family_id": "carcam",
+      "relationship": "regional_name",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://carcam.ru/",
+          "checked_at": "2026-09-22",
+          "claim": "Official site uses CARCAM and legal/company name КАРКАМ."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Russian and Latin labels share the official CARCAM catalog."
+    },
+    {
+      "original_brand_label": "Huion",
+      "normalized_label": "huion",
+      "canonical_brand": "Huion",
+      "source_family_id": "huion",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Oral-B",
+      "normalized_label": "oral-b",
+      "canonical_brand": "Oral-B",
+      "source_family_id": "oral_b",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "TRONSMART",
+      "normalized_label": "tronsmart",
+      "canonical_brand": "TRONSMART",
+      "source_family_id": "tronsmart",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Epson",
+      "normalized_label": "epson",
+      "canonical_brand": "Epson",
+      "source_family_id": "epson",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Buro",
+      "normalized_label": "buro",
+      "canonical_brand": "Buro",
+      "source_family_id": "buro",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "janome",
+      "normalized_label": "janome",
+      "canonical_brand": "janome",
+      "source_family_id": "janome",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Seagate",
+      "normalized_label": "seagate",
+      "canonical_brand": "Seagate",
+      "source_family_id": "seagate",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "SEASONIC",
+      "normalized_label": "seasonic",
+      "canonical_brand": "SEASONIC",
+      "source_family_id": "seasonic",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "XP-PEN",
+      "normalized_label": "xp-pen",
+      "canonical_brand": "XPPen",
+      "source_family_id": "xppen",
+      "relationship": "spelling_variant",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.xp-pen.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Official site uses XPPen on the xp-pen.com domain."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Official spelling evolution; shared catalog and support."
+    },
+    {
+      "original_brand_label": "Creality",
+      "normalized_label": "creality",
+      "canonical_brand": "Creality",
+      "source_family_id": "creality",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "deWalt",
+      "normalized_label": "dewalt",
+      "canonical_brand": "deWalt",
+      "source_family_id": "dewalt",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ELARI",
+      "normalized_label": "elari",
+      "canonical_brand": "ELARI",
+      "source_family_id": "elari",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "JAM",
+      "normalized_label": "jam",
+      "canonical_brand": "JAM",
+      "source_family_id": "jam",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "MARSHALL",
+      "normalized_label": "marshall",
+      "canonical_brand": "MARSHALL",
+      "source_family_id": "marshall",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Meizu",
+      "normalized_label": "meizu",
+      "canonical_brand": "Meizu",
+      "source_family_id": "meizu",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NETIS",
+      "normalized_label": "netis",
+      "canonical_brand": "NETIS",
+      "source_family_id": "netis",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Braven",
+      "normalized_label": "braven",
+      "canonical_brand": "Braven",
+      "source_family_id": "braven",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HIKVISION",
+      "normalized_label": "hikvision",
+      "canonical_brand": "HIKVISION",
+      "source_family_id": "hikvision",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HYUNDAI",
+      "normalized_label": "hyundai",
+      "canonical_brand": "HYUNDAI",
+      "source_family_id": "hyundai",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "KitchenAid",
+      "normalized_label": "kitchenaid",
+      "canonical_brand": "KitchenAid",
+      "source_family_id": "kitchenaid",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Mercusys",
+      "normalized_label": "mercusys",
+      "canonical_brand": "Mercusys",
+      "source_family_id": "mercusys",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "MIKROTIK",
+      "normalized_label": "mikrotik",
+      "canonical_brand": "MIKROTIK",
+      "source_family_id": "mikrotik",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Singer",
+      "normalized_label": "singer",
+      "canonical_brand": "Singer",
+      "source_family_id": "singer",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "2018 FIFA World Cup Russia™",
+      "normalized_label": "2018 fifa world cup russiatm",
+      "canonical_brand": "2018 FIFA World Cup Russia™",
+      "source_family_id": "2018_fifa_world_cup_russiatm",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Apacer",
+      "normalized_label": "apacer",
+      "canonical_brand": "Apacer",
+      "source_family_id": "apacer",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Inno3D",
+      "normalized_label": "inno3d",
+      "canonical_brand": "Inno3D",
+      "source_family_id": "inno3d",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "PHILIPS Avent",
+      "normalized_label": "philips avent",
+      "canonical_brand": "Philips Avent",
+      "source_family_id": "philips_avent",
+      "relationship": "product_line",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.philips.com/c-m-mo/philips-avent-and-your-baby",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official Philips Avent product route."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Separate product source family from general Philips electronics."
+    },
+    {
+      "original_brand_label": "Smartmi",
+      "normalized_label": "smartmi",
+      "canonical_brand": "Smartmi",
+      "source_family_id": "smartmi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Thomas",
+      "normalized_label": "thomas",
+      "canonical_brand": "Thomas",
+      "source_family_id": "thomas",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "XPPEN",
+      "normalized_label": "xppen",
+      "canonical_brand": "XPPen",
+      "source_family_id": "xppen",
+      "relationship": "spelling_variant",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.xp-pen.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Official site uses XPPen on the xp-pen.com domain."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Official spelling evolution; shared catalog and support."
+    },
+    {
+      "original_brand_label": "Aqara",
+      "normalized_label": "aqara",
+      "canonical_brand": "Aqara",
+      "source_family_id": "aqara",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Biostar",
+      "normalized_label": "biostar",
+      "canonical_brand": "Biostar",
+      "source_family_id": "biostar",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Cooler Master",
+      "normalized_label": "cooler master",
+      "canonical_brand": "Cooler Master",
+      "source_family_id": "cooler_master",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "D-LINK",
+      "normalized_label": "d-link",
+      "canonical_brand": "D-LINK",
+      "source_family_id": "d_link",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HuntKey",
+      "normalized_label": "huntkey",
+      "canonical_brand": "HuntKey",
+      "source_family_id": "huntkey",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Kyocera",
+      "normalized_label": "kyocera",
+      "canonical_brand": "Kyocera",
+      "source_family_id": "kyocera",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Mophie",
+      "normalized_label": "mophie",
+      "canonical_brand": "Mophie",
+      "source_family_id": "mophie",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ONYX BOOX",
+      "normalized_label": "onyx boox",
+      "canonical_brand": "ONYX BOOX",
+      "source_family_id": "onyx_boox",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "PowerColor",
+      "normalized_label": "powercolor",
+      "canonical_brand": "PowerColor",
+      "source_family_id": "powercolor",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Steelseries",
+      "normalized_label": "steelseries",
+      "canonical_brand": "Steelseries",
+      "source_family_id": "steelseries",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Team Group",
+      "normalized_label": "team group",
+      "canonical_brand": "TEAMGROUP",
+      "source_family_id": "teamgroup",
+      "relationship": "alias",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://industrial.teamgroupinc.com/en/about/about_teamgroup/",
+          "checked_at": "2026-09-22",
+          "claim": "Official page names Team Group Inc. and TEAMGROUP products."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Same official source family as TEAMGROUP."
+    },
+    {
+      "original_brand_label": "Toshiba",
+      "normalized_label": "toshiba",
+      "canonical_brand": "Toshiba",
+      "source_family_id": "toshiba",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Transcend",
+      "normalized_label": "transcend",
+      "canonical_brand": "Transcend",
+      "source_family_id": "transcend",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Ugreen",
+      "normalized_label": "ugreen",
+      "canonical_brand": "Ugreen",
+      "source_family_id": "ugreen",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "XFX",
+      "normalized_label": "xfx",
+      "canonical_brand": "XFX",
+      "source_family_id": "xfx",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ACD",
+      "normalized_label": "acd",
+      "canonical_brand": "ACD",
+      "source_family_id": "acd",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Kept separate from ACD Lime until official routing proves shared coverage."
+    },
+    {
+      "original_brand_label": "Dji",
+      "normalized_label": "dji",
+      "canonical_brand": "Dji",
+      "source_family_id": "dji",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "DOOGEE",
+      "normalized_label": "doogee",
+      "canonical_brand": "DOOGEE",
+      "source_family_id": "doogee",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "EnerMax",
+      "normalized_label": "enermax",
+      "canonical_brand": "EnerMax",
+      "source_family_id": "enermax",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Evapolar",
+      "normalized_label": "evapolar",
+      "canonical_brand": "Evapolar",
+      "source_family_id": "evapolar",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HTC",
+      "normalized_label": "htc",
+      "canonical_brand": "HTC",
+      "source_family_id": "htc",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "IK Multimedia",
+      "normalized_label": "ik multimedia",
+      "canonical_brand": "IK Multimedia",
+      "source_family_id": "ik_multimedia",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Micromax",
+      "normalized_label": "micromax",
+      "canonical_brand": "Micromax",
+      "source_family_id": "micromax",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Moulinex",
+      "normalized_label": "moulinex",
+      "canonical_brand": "Moulinex",
+      "source_family_id": "moulinex",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NEWLAND",
+      "normalized_label": "newland",
+      "canonical_brand": "NEWLAND",
+      "source_family_id": "newland",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Roidmi",
+      "normalized_label": "roidmi",
+      "canonical_brand": "Roidmi",
+      "source_family_id": "roidmi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Valve",
+      "normalized_label": "valve",
+      "canonical_brand": "Valve",
+      "source_family_id": "valve",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Western Digital",
+      "normalized_label": "western digital",
+      "canonical_brand": "WD",
+      "source_family_id": "wd",
+      "relationship": "alias",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.westerndigital.com/en-ca/company/campaign/we-drive",
+          "checked_at": "2026-09-22",
+          "claim": "Official brand-evolution page states Western Digital uses WD in day-to-day communications."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Same official source family as WD."
+    },
+    {
+      "original_brand_label": "Kingspec",
+      "normalized_label": "kingspec",
+      "canonical_brand": "Kingspec",
+      "source_family_id": "kingspec",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "MOSHI",
+      "normalized_label": "moshi",
+      "canonical_brand": "MOSHI",
+      "source_family_id": "moshi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Tenda",
+      "normalized_label": "tenda",
+      "canonical_brand": "Tenda",
+      "source_family_id": "tenda",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Texet",
+      "normalized_label": "texet",
+      "canonical_brand": "Texet",
+      "source_family_id": "texet",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "URBANEARS",
+      "normalized_label": "urbanears",
+      "canonical_brand": "URBANEARS",
+      "source_family_id": "urbanears",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "WHIRLPOOL",
+      "normalized_label": "whirlpool",
+      "canonical_brand": "WHIRLPOOL",
+      "source_family_id": "whirlpool",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "X-Game",
+      "normalized_label": "x-game",
+      "canonical_brand": "X-Game",
+      "source_family_id": "x_game",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Xerox",
+      "normalized_label": "xerox",
+      "canonical_brand": "Xerox",
+      "source_family_id": "xerox",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "3Logic Lime",
+      "normalized_label": "3logic lime",
+      "canonical_brand": "3Logic Lime",
+      "source_family_id": "3logic_lime",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ADVOCAM",
+      "normalized_label": "advocam",
+      "canonical_brand": "ADVOCAM",
+      "source_family_id": "advocam",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "agi",
+      "normalized_label": "agi",
+      "canonical_brand": "agi",
+      "source_family_id": "agi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "APNX",
+      "normalized_label": "apnx",
+      "canonical_brand": "APNX",
+      "source_family_id": "apnx",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ASUSTOR",
+      "normalized_label": "asustor",
+      "canonical_brand": "ASUSTOR",
+      "source_family_id": "asustor",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Cozistyle",
+      "normalized_label": "cozistyle",
+      "canonical_brand": "Cozistyle",
+      "source_family_id": "cozistyle",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "DELI",
+      "normalized_label": "deli",
+      "canonical_brand": "DELI",
+      "source_family_id": "deli",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Fly,",
+      "normalized_label": "fly,",
+      "canonical_brand": "Fly",
+      "source_family_id": "fly",
+      "relationship": "spelling_variant",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Trailing comma is an unambiguous punctuation artifact."
+    },
+    {
+      "original_brand_label": "Fractal",
+      "normalized_label": "fractal",
+      "canonical_brand": "Fractal",
+      "source_family_id": "fractal",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HAIER",
+      "normalized_label": "haier",
+      "canonical_brand": "HAIER",
+      "source_family_id": "haier",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Hysure",
+      "normalized_label": "hysure",
+      "canonical_brand": "Hysure",
+      "source_family_id": "hysure",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ITEL",
+      "normalized_label": "itel",
+      "canonical_brand": "ITEL",
+      "source_family_id": "itel",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Jabra",
+      "normalized_label": "jabra",
+      "canonical_brand": "Jabra",
+      "source_family_id": "jabra",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Kenwood",
+      "normalized_label": "kenwood",
+      "canonical_brand": "Kenwood",
+      "source_family_id": "kenwood",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Lab.c",
+      "normalized_label": "lab.c",
+      "canonical_brand": "Lab.c",
+      "source_family_id": "lab_c",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Logitech G",
+      "normalized_label": "logitech g",
+      "canonical_brand": "Logitech G",
+      "source_family_id": "logitech_g",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.logitechg.com/en-us/about",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official Logitech G site and catalog."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Separate source family because it has a dedicated official catalog and routing."
+    },
+    {
+      "original_brand_label": "maibenben",
+      "normalized_label": "maibenben",
+      "canonical_brand": "maibenben",
+      "source_family_id": "maibenben",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Powercom",
+      "normalized_label": "powercom",
+      "canonical_brand": "Powercom",
+      "source_family_id": "powercom",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Xclea",
+      "normalized_label": "xclea",
+      "canonical_brand": "Xclea",
+      "source_family_id": "xclea",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Alienware",
+      "normalized_label": "alienware",
+      "canonical_brand": "Alienware",
+      "source_family_id": "dell_alienware",
+      "relationship": "subbrand",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.dell.com/en-us/gaming/alienware",
+          "checked_at": "2026-09-22",
+          "claim": "Dedicated official Dell Alienware catalog route."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Dell-owned but separate source family/routing."
+    },
+    {
+      "original_brand_label": "CARCAM",
+      "normalized_label": "carcam",
+      "canonical_brand": "CARCAM",
+      "source_family_id": "carcam",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://carcam.ru/",
+          "checked_at": "2026-09-22",
+          "claim": "Official site uses CARCAM and legal/company name КАРКАМ."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Russian and Latin labels share the official CARCAM catalog."
+    },
+    {
+      "original_brand_label": "Doni",
+      "normalized_label": "doni",
+      "canonical_brand": "Doni",
+      "source_family_id": "doni",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "F+",
+      "normalized_label": "f+",
+      "canonical_brand": "F+",
+      "source_family_id": "f",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "FlashForge",
+      "normalized_label": "flashforge",
+      "canonical_brand": "FlashForge",
+      "source_family_id": "flashforge",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Foxline",
+      "normalized_label": "foxline",
+      "canonical_brand": "Foxline",
+      "source_family_id": "foxline",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Jeton",
+      "normalized_label": "jeton",
+      "canonical_brand": "Jeton",
+      "source_family_id": "jeton",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Jimmy",
+      "normalized_label": "jimmy",
+      "canonical_brand": "Jimmy",
+      "source_family_id": "jimmy",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Omthing",
+      "normalized_label": "omthing",
+      "canonical_brand": "Omthing",
+      "source_family_id": "omthing",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "POWERMAN",
+      "normalized_label": "powerman",
+      "canonical_brand": "POWERMAN",
+      "source_family_id": "powerman",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "SATECHI",
+      "normalized_label": "satechi",
+      "canonical_brand": "SATECHI",
+      "source_family_id": "satechi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "VIVO",
+      "normalized_label": "vivo",
+      "canonical_brand": "VIVO",
+      "source_family_id": "vivo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Xencelabs",
+      "normalized_label": "xencelabs",
+      "canonical_brand": "Xencelabs",
+      "source_family_id": "xencelabs",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ИМПУЛЬС",
+      "normalized_label": "импульс",
+      "canonical_brand": "ИМПУЛЬС",
+      "source_family_id": "импульс",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ACD Lime",
+      "normalized_label": "acd lime",
+      "canonical_brand": "ACD Lime",
+      "source_family_id": "acd_lime",
+      "relationship": "product_line",
+      "confidence": 0.8,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "requires_human_review",
+      "notes": "Product-line relationship is plausible, but it remains a distinct source family."
+    },
+    {
+      "original_brand_label": "AEG",
+      "normalized_label": "aeg",
+      "canonical_brand": "AEG",
+      "source_family_id": "aeg",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Bookeen",
+      "normalized_label": "bookeen",
+      "canonical_brand": "Bookeen",
+      "source_family_id": "bookeen",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "COUGAR",
+      "normalized_label": "cougar",
+      "canonical_brand": "COUGAR",
+      "source_family_id": "cougar",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Griffin",
+      "normalized_label": "griffin",
+      "canonical_brand": "Griffin",
+      "source_family_id": "griffin",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HISENSE",
+      "normalized_label": "hisense",
+      "canonical_brand": "HISENSE",
+      "source_family_id": "hisense",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HiWatch",
+      "normalized_label": "hiwatch",
+      "canonical_brand": "HiWatch",
+      "source_family_id": "hiwatch",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HUTT",
+      "normalized_label": "hutt",
+      "canonical_brand": "HUTT",
+      "source_family_id": "hutt",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Intego",
+      "normalized_label": "intego",
+      "canonical_brand": "Intego",
+      "source_family_id": "intego",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Kyvol",
+      "normalized_label": "kyvol",
+      "canonical_brand": "Kyvol",
+      "source_family_id": "kyvol",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Lebooo",
+      "normalized_label": "lebooo",
+      "canonical_brand": "Lebooo",
+      "source_family_id": "lebooo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Liebherr",
+      "normalized_label": "liebherr",
+      "canonical_brand": "Liebherr",
+      "source_family_id": "liebherr",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Lite-on",
+      "normalized_label": "lite-on",
+      "canonical_brand": "Lite-on",
+      "source_family_id": "lite_on",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Microtek",
+      "normalized_label": "microtek",
+      "canonical_brand": "Microtek",
+      "source_family_id": "microtek",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "RODE",
+      "normalized_label": "rode",
+      "canonical_brand": "RODE",
+      "source_family_id": "rode",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "TOTOLINK",
+      "normalized_label": "totolink",
+      "canonical_brand": "TOTOLINK",
+      "source_family_id": "totolink",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ZMI",
+      "normalized_label": "zmi",
+      "canonical_brand": "ZMI",
+      "source_family_id": "zmi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "ZyXEL",
+      "normalized_label": "zyxel",
+      "canonical_brand": "ZyXEL",
+      "source_family_id": "zyxel",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "СТН",
+      "normalized_label": "стн",
+      "canonical_brand": "СТН",
+      "source_family_id": "стн",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "360",
+      "normalized_label": "360",
+      "canonical_brand": "360",
+      "source_family_id": "360_robotics",
+      "relationship": "exact",
+      "confidence": 0.75,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "requires_human_review",
+      "notes": "Possible shared robotics family with 360 Robot Vacuum Cleaner; official routing must be confirmed."
+    },
+    {
+      "original_brand_label": "360 Robot Vacuum Cleaner",
+      "normalized_label": "360 robot vacuum cleaner",
+      "canonical_brand": "360 Robot Vacuum Cleaner",
+      "source_family_id": "360_robotics",
+      "relationship": "product_line",
+      "confidence": 0.75,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "requires_human_review",
+      "notes": "Tentative family grouping only; coverage remains blocked until official evidence is recorded."
+    },
+    {
+      "original_brand_label": "AFOX",
+      "normalized_label": "afox",
+      "canonical_brand": "AFOX",
+      "source_family_id": "afox",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "BORK",
+      "normalized_label": "bork",
+      "canonical_brand": "BORK",
+      "source_family_id": "bork",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "CyberPower",
+      "normalized_label": "cyberpower",
+      "canonical_brand": "CyberPower",
+      "source_family_id": "cyberpower",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Fujitsu",
+      "normalized_label": "fujitsu",
+      "canonical_brand": "Fujitsu",
+      "source_family_id": "fujitsu",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Hansa",
+      "normalized_label": "hansa",
+      "canonical_brand": "Hansa",
+      "source_family_id": "hansa",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Harman Kardon",
+      "normalized_label": "harman kardon",
+      "canonical_brand": "Harman Kardon",
+      "source_family_id": "harman_kardon",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Hercules",
+      "normalized_label": "hercules",
+      "canonical_brand": "Hercules",
+      "source_family_id": "hercules",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Hotpoint-Ariston",
+      "normalized_label": "hotpoint-ariston",
+      "canonical_brand": "Hotpoint-Ariston",
+      "source_family_id": "hotpoint_ariston",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "HP (Hewlett Packard)",
+      "normalized_label": "hp (hewlett packard)",
+      "canonical_brand": "HP",
+      "source_family_id": "hp",
+      "relationship": "alias",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "official_site",
+          "url": "https://www.hp.com/",
+          "checked_at": "2026-09-22",
+          "claim": "Official HP site; parenthetical expansion is a catalog alias."
+        }
+      ],
+      "review_status": "confirmed_mapping",
+      "notes": "Mapped to the already verified HP family."
+    },
+    {
+      "original_brand_label": "KENU",
+      "normalized_label": "kenu",
+      "canonical_brand": "KENU",
+      "source_family_id": "kenu",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Lexmark",
+      "normalized_label": "lexmark",
+      "canonical_brand": "Lexmark",
+      "source_family_id": "lexmark",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "MERTECH",
+      "normalized_label": "mertech",
+      "canonical_brand": "MERTECH",
+      "source_family_id": "mertech",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Motorola",
+      "normalized_label": "motorola",
+      "canonical_brand": "Motorola",
+      "source_family_id": "motorola",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NATIONAL",
+      "normalized_label": "national",
+      "canonical_brand": "NATIONAL",
+      "source_family_id": "national",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "NINETYGO",
+      "normalized_label": "ninetygo",
+      "canonical_brand": "NINETYGO",
+      "source_family_id": "ninetygo",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "QNAP",
+      "normalized_label": "qnap",
+      "canonical_brand": "QNAP",
+      "source_family_id": "qnap",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "QUMAN",
+      "normalized_label": "quman",
+      "canonical_brand": "QUMAN",
+      "source_family_id": "quman_unresolved",
+      "relationship": "possible_typo",
+      "confidence": 0.45,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "requires_human_review",
+      "notes": "Visually similar to Qumann, but no official evidence establishes identity; not merged."
+    },
+    {
+      "original_brand_label": "Qumann",
+      "normalized_label": "qumann",
+      "canonical_brand": "Qumann",
+      "source_family_id": "qumann",
+      "relationship": "unresolved",
+      "confidence": 0.5,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "requires_human_review",
+      "notes": "Potential relation to QUMAN remains unverified; kept independent."
+    },
+    {
+      "original_brand_label": "Speck",
+      "normalized_label": "speck",
+      "canonical_brand": "Speck",
+      "source_family_id": "speck",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "TrendVision",
+      "normalized_label": "trendvision",
+      "canonical_brand": "TrendVision",
+      "source_family_id": "trendvision",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "VESTEL",
+      "normalized_label": "vestel",
+      "canonical_brand": "VESTEL",
+      "source_family_id": "vestel",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "viomi",
+      "normalized_label": "viomi",
+      "canonical_brand": "viomi",
+      "source_family_id": "viomi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Xiaom",
+      "normalized_label": "xiaom",
+      "canonical_brand": "Xiaom",
+      "source_family_id": "xiaom_unresolved",
+      "relationship": "possible_typo",
+      "confidence": 0.8,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "requires_human_review",
+      "notes": "Likely missing final 'i', but no row-level official identity evidence; not merged and receives no Xiaomi coverage."
+    },
+    {
+      "original_brand_label": "XP",
+      "normalized_label": "xp",
+      "canonical_brand": "XP",
+      "source_family_id": "xp",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    },
+    {
+      "original_brand_label": "Zanussi",
+      "normalized_label": "zanussi",
+      "canonical_brand": "Zanussi",
+      "source_family_id": "zanussi",
+      "relationship": "exact",
+      "confidence": 1,
+      "category_scope": [],
+      "evidence": [
+        {
+          "type": "catalog_occurrence",
+          "source": "data/catalog_2026-09-21_filtered.xlsx#Бренд_Категория",
+          "claim": "Original brand label preserved from the cleaned catalog."
+        }
+      ],
+      "review_status": "confirmed_exact_label",
+      "notes": "Self mapping only; does not imply an official source."
+    }
+  ]
+}
+

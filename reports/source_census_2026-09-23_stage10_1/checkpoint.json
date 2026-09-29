@@ -1,0 +1,361 @@
+{
+  "stage": "10.1",
+  "budget_declared_before_requests": {
+    "declared_at": "2026-09-23",
+    "declared_before_any_request": true,
+    "scope": "Only the two hosts named by the user, provenance-linked from Stage 10's already-fetched support.microsoft.com page: www.xbox.com and support.xbox.com. Single catalog row in scope: XXU-00015 (Xbox Series S Carbon 1TB). No general Xbox census, no other catalog rows.",
+    "allowed_hosts": [
+      "www.xbox.com",
+      "support.xbox.com"
+    ],
+    "allowed_hosts_reason": "Explicitly named by the user; both already carry first-party-link provenance from Stage 10 (found on support.microsoft.com's own official navigation).",
+    "seed_urls_already_known_not_guessed": [
+      "https://www.xbox.com/",
+      "https://support.xbox.com/",
+      "https://support.xbox.com/help/games-apps/my-games-apps/all-about-pc-gaming",
+      "https://www.xbox.com/en-us/games/store/xbox-game-pass-ultimate/cfq7ttc0khs0?icid=DSM_All_XboxGamePassUltimate",
+      "https://www.xbox.com/en-us/games/store/pc-game-pass/cfq7ttc0kgq8?icid=CNavAllPCGamePass"
+    ],
+    "discovery_mechanisms_allowed": [
+      "robots.txt declarations (fetched first, before any other request, on each host)",
+      "sitemap documents declared in robots.txt, or the conventional /sitemap.xml path if none declared (same convention already used in Stage 10 for support.microsoft.com)",
+      "same-host navigation links found in already-fetched page content (e.g. a \"Consoles\" menu item)"
+    ],
+    "discovery_mechanisms_forbidden": [
+      "guessed product-slug URLs",
+      "search engines",
+      "Chromium / browser automation",
+      "dealer/reseller sources",
+      "brute-forcing model/SKU codes"
+    ],
+    "limits": {
+      "max_requests_total": 16,
+      "max_requests_per_host": 10,
+      "max_hosts": 2,
+      "max_response_bytes_per_request": 750000,
+      "min_interval_seconds_between_requests": 2.0,
+      "timeout_seconds_per_request": 10.0,
+      "max_sitemap_child_documents_per_host": 2,
+      "max_candidate_links_followed_per_host": 4,
+      "max_product_pages_deep_fetched": 2
+    },
+    "pdf_document_budget_if_a_manual_is_found": {
+      "note": "A separate, explicit budget is declared in its own artifact (per Stage 8.6 convention) only if a same-host or otherwise-allowlisted manual/PDF URL is actually discovered -- never predeclared speculatively with an unbounded scope.",
+      "reuses": "product_tool.census logic proven in Stage 8.6 (fetch_document_bounded): Range-based chunked fetch, ETag/Last-Modified consistency check, complete/partial/unknown_completeness classification."
+    },
+    "mechanism": "product_tool.census.endpoint_probe.AccessProbe with ProbePolicy (max_bytes=750000, min_interval=2s, timeout=10s), allowed_hosts restricted to the two hosts above. Redirect chains are validated per-hop; an off-host redirect aborts that request rather than following it.",
+    "robots_txt_policy": "robots.txt for each host is fetched and parsed before any other request to that host. Disallow rules under User-agent: * (and the declared crawler UA if present) are honored for every subsequent path on that host; a disallowed candidate path is skipped, not fetched, and recorded as such.",
+    "stop_conditions": [
+      "max_requests_total or max_requests_per_host reached",
+      "HTTP 403 on a host -> stop all further requests to that host for the remainder of this run",
+      "HTTP 429 on a host -> stop all further requests to that host for the remainder of this run",
+      "CAPTCHA or challenge signal detected on a host -> stop all further requests to that host",
+      "robots.txt Disallow covering the only remaining candidate path on a host -> stop that host",
+      "a redirect or discovered link points off the two allowed hosts -> recorded, not followed",
+      "no further in-scope candidate links remain toward a console hardware product page"
+    ],
+    "explicit_non_goals": [
+      "No Chromium / browser automation",
+      "No search engines",
+      "No dealer/reseller sources",
+      "No brute-forcing of model codes or SKU/slug patterns",
+      "No invented endpoints or guessed URLs",
+      "No widening beyond the single selected catalog row (XXU-00015)",
+      "No general Xbox census across other catalog rows",
+      "No automatic promotion of either host into official_domains.v1.json or source_catalog.v2.json"
+    ]
+  },
+  "budget_revision_declared_before_further_requests": {
+    "declared_at": "2026-09-23",
+    "declared_before_any_request_under_these_values": true,
+    "trigger": "www.xbox.com/sitemap.xml is a sitemap INDEX (930 child <sitemap> entries) pointing to gzip-compressed sitemap chunks (e.g. pdp-en-US-sitemap-0.xml.gz, cms-sitemap-0.xml.gz), not plain XML. The original per-request cap (750,000 bytes, sized for HTML pages) truncated the first chunk (pdp-en-US-sitemap-0.xml.gz) mid-file as raw application/gzip bytes -- AccessProbe.probe() also text-decodes bytes, which corrupts binary gzip content beyond just truncation. Neither problem can be fixed within the original budget's document handling; a bounded, Range-aware, byte-preserving fetch (the same mechanism proven in Stage 8.6 for PDFs) is required.",
+    "revision": {
+      "applies_to": "gzip sitemap document fetches only (www.xbox.com/sitemap/*.xml.gz); does NOT change the original 750,000-byte cap used for ordinary HTML page fetches via AccessProbe.probe()",
+      "chunk_bytes_per_range_request": 1500000,
+      "max_document_total_bytes": 8000000,
+      "reasoning_for_8mb_cap": "Conservative first cap, not yet informed by an observed file size (unlike Stage 8.6's revision, which raised its cap only after seeing the confirmed real total via Content-Range). If a document's own declared Content-Range total exceeds this, the fetch stops immediately (unknown_completeness) and is reported as such, not silently retried with an ever-larger cap.",
+      "target_this_stage": "https://www.xbox.com/sitemap/cms-sitemap-0.xml.gz first (a single CMS/content-page sitemap chunk, most likely to contain a canonical hardware landing page such as an 'Xbox Series S' page, rather than one PDP-per-SKU-per-market entry among the 930 PDP chunks). PDP chunks are only opened afterward, and only if the CMS chunk does not yield a usable candidate, each requiring its own added per-chunk budget line before being fetched."
+    },
+    "limits_added_to_the_original_budget_not_replacing_it": {
+      "max_document_fetch_requests_total": 20,
+      "max_document_fetch_requests_per_host": 20,
+      "still_only_hosts": [
+        "www.xbox.com",
+        "support.xbox.com"
+      ],
+      "still_min_interval_seconds": 2.0,
+      "still_stops_on_403_429_challenge": true
+    }
+  },
+  "total_requests_made": 15,
+  "requests_by_host": {
+    "www.xbox.com": 8,
+    "support.xbox.com": 7
+  },
+  "requests_budget_max_total": 36,
+  "request_log_full": [
+    {
+      "seq": 1,
+      "requested_url": "https://www.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://www.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=UTF-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 289,
+      "note": "",
+      "phase_file": "phase1_robots_and_roots.json",
+      "aggregate_seq": 1
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://support.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://support.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 72,
+      "note": "",
+      "phase_file": "phase1_robots_and_roots.json",
+      "aggregate_seq": 2
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://www.xbox.com/",
+      "capability": "homepage",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/ka-GE/",
+      "redirect_chain": [
+        "https://www.xbox.com/",
+        "https://www.xbox.com/ka-GE/"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 167952,
+      "note": "",
+      "phase_file": "phase1_robots_and_roots.json",
+      "aggregate_seq": 3
+    },
+    {
+      "seq": 4,
+      "requested_url": "https://support.xbox.com/",
+      "capability": "homepage",
+      "access_status": "javascript_required",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/",
+      "redirect_chain": [
+        "https://support.xbox.com/"
+      ],
+      "content_type": "text/html",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 2897,
+      "note": "",
+      "phase_file": "phase1_robots_and_roots.json",
+      "aggregate_seq": 4
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://www.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://www.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=UTF-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 289,
+      "note": "re-fetch to capture raw text; phase 1 kept only parsed Disallow rules",
+      "phase_file": "phase2_sitemap_check.json",
+      "aggregate_seq": 5
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://www.xbox.com/sitemap.xml",
+      "capability": "sitemap",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/sitemap.xml",
+      "redirect_chain": [
+        "https://www.xbox.com/sitemap.xml"
+      ],
+      "content_type": "text/xml",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 134175,
+      "note": "",
+      "phase_file": "phase2_sitemap_check.json",
+      "aggregate_seq": 6
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://support.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/robots.txt",
+      "redirect_chain": [
+        "https://support.xbox.com/robots.txt"
+      ],
+      "content_type": "text/plain",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 72,
+      "note": "re-fetch to capture raw text; phase 1 kept only parsed Disallow rules",
+      "phase_file": "phase2_sitemap_check.json",
+      "aggregate_seq": 7
+    },
+    {
+      "seq": 4,
+      "requested_url": "https://support.xbox.com/sitemap.xml",
+      "capability": "sitemap",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/sitemap.xml",
+      "redirect_chain": [
+        "https://support.xbox.com/sitemap.xml"
+      ],
+      "content_type": "application/octet-stream",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 12710,
+      "note": "",
+      "phase_file": "phase2_sitemap_check.json",
+      "aggregate_seq": 8
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://www.xbox.com/sitemap/pdp-en-US-sitemap-0.xml.gz",
+      "capability": "sitemap",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/sitemap/pdp-en-US-sitemap-0.xml.gz",
+      "redirect_chain": [
+        "https://www.xbox.com/sitemap/pdp-en-US-sitemap-0.xml.gz"
+      ],
+      "content_type": "application/gzip",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 750000,
+      "note": "",
+      "phase_file": "phase3_pdp_chunk0_probe.json",
+      "aggregate_seq": 9
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://www.xbox.com/sitemap/cms-sitemap-0.xml.gz",
+      "range": "0-1499999",
+      "http_status": 206,
+      "content_range": "bytes 0-36155/36156",
+      "bytes_read": 36156,
+      "error": "",
+      "phase_file": "phase4_cms_sitemap_fetch.json",
+      "aggregate_seq": 10
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://www.xbox.com/en-US/consoles/xbox-series-s",
+      "capability": "product_page",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.xbox.com/en-US/consoles/xbox-series-s",
+      "redirect_chain": [
+        "https://www.xbox.com/en-US/consoles/xbox-series-s"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 633348,
+      "note": "found via official cms-sitemap-0.xml.gz, not guessed",
+      "phase_file": "phase5_series_s_landing_fetch.json",
+      "aggregate_seq": 11
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://support.xbox.com/en-US/sitemap.xml",
+      "capability": "sitemap",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/en-US/sitemap.xml",
+      "redirect_chain": [
+        "https://support.xbox.com/en-US/sitemap.xml"
+      ],
+      "content_type": "application/octet-stream",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 634551,
+      "note": "",
+      "phase_file": "phase6_support_en_us_sitemap.json",
+      "aggregate_seq": 12
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://support.xbox.com/en-US/help/hardware-network/console/unbox-xbox-series-xs-console",
+      "capability": "support_page",
+      "access_status": "javascript_required",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/en-US/help/hardware-network/console/unbox-xbox-series-xs-console",
+      "redirect_chain": [
+        "https://support.xbox.com/en-US/help/hardware-network/console/unbox-xbox-series-xs-console"
+      ],
+      "content_type": "text/html",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 2897,
+      "note": "found via support.xbox.com en-US sitemap, not guessed",
+      "phase_file": "phase7_manual_candidates_fetch.json",
+      "aggregate_seq": 13
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://support.xbox.com/en-US/help/hardware-network/getting-started-set-up/set-up-new-series-x-s",
+      "capability": "support_page",
+      "access_status": "javascript_required",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/en-US/help/hardware-network/getting-started-set-up/set-up-new-series-x-s",
+      "redirect_chain": [
+        "https://support.xbox.com/en-US/help/hardware-network/getting-started-set-up/set-up-new-series-x-s"
+      ],
+      "content_type": "text/html",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 2897,
+      "note": "found via support.xbox.com en-US sitemap, not guessed",
+      "phase_file": "phase7_manual_candidates_fetch.json",
+      "aggregate_seq": 14
+    },
+    {
+      "aggregate_seq": 15,
+      "phase_file": "adhoc_interactive_diagnostic",
+      "requested_url": "https://www.xbox.com/robots.txt",
+      "capability": "robots_txt",
+      "http_status": 200,
+      "note": "Redundant ad hoc re-fetch of an already-permitted URL, made once during interactive investigation before script 05 existed to capture and log robots.txt text properly. Same host/URL as logged requests elsewhere in this checkpoint; disclosed for completeness, not hidden."
+    }
+  ],
+  "stop_events": {
+    "403_429_or_challenge_seen": false,
+    "hosts_stopped": []
+  },
+  "off_scope_hosts_not_touched": [
+    "www.microsoft.com/en-us/store/b/xbox (explicitly excluded by user scope this stage)",
+    "cms-assets.xboxservices.com (image CDN host referenced by URL on the confirmed page; URLs recorded as evidence, binary content never fetched)"
+  ],
+  "status": "complete_within_budget"
+}

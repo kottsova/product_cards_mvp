@@ -1,0 +1,1923 @@
+{
+  "xiaomi_global": {
+    "nav_url": "https://www.mi.com/global/",
+    "nav_fixture": "fixtures/6647e48e9df5e8240dfef69b538e967b78df2b8986137936efa0bf0284552d2b.json",
+    "candidates_seen": [
+      "https://www.mi.com/global/product/xiaomi-17-ultra/",
+      "https://www.mi.com/global/product/xiaomi-17t-pro/",
+      "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/",
+      "https://www.mi.com/global/product/xiaomi-smart-band-10-pro/",
+      "https://www.mi.com/global/product/xiaomi-buds-6/"
+    ],
+    "picked": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+    "picked_fixture": "fixtures/fac1a5594c7457fcb4e35b9b5eea3e73940738dc28a25c5fe425883b6aff3f08.json",
+    "picked_struct": {
+      "is_product_page": true,
+      "product_objects": 1,
+      "contracts": {
+        "discovery": {
+          "routes": [],
+          "navigation": [
+            "navigation",
+            "product",
+            "support"
+          ],
+          "pagination": [],
+          "locale_contract": "host_or_undeclared"
+        },
+        "identity": {
+          "json_paths": [
+            ".name"
+          ],
+          "microdata_properties": [],
+          "code_fields": [],
+          "variant_fields": [],
+          "model_semantics": "marketing_name_only"
+        },
+        "specifications": {
+          "json_paths": [],
+          "dom_semantics": []
+        },
+        "media": {
+          "json_paths": [
+            ".image"
+          ],
+          "dom_semantics": [
+            "responsive_srcset",
+            "semantic_gallery"
+          ],
+          "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+        },
+        "documents": {
+          "link_schema": [],
+          "support_navigation": true,
+          "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+          "language_contract": "unknown_do_not_infer_from_locale"
+        }
+      },
+      "signatures": {
+        "discovery": "a1341df0793bafe15786a2a7d564e11a4f5a51f235bef797429cb9b0e739037e",
+        "identity": "3477adef680dab7bcc1870a4baac759cd0b407389361505b03a96e7b4b72fed8",
+        "specifications": "adc26a7fc37d8990cc7bb2f4137ff155d420231c3ed9b2fd6e54d7b9435acef1",
+        "media": "3a999e87158b1a383c3a4405d4e6ed23c28ad247f8af5a7427491f8e299dd2ca",
+        "documents": "a74ad2762fa55b65e7c95c57e40699f18023c9dbacbfad324501d95f6969f62b"
+      },
+      "observed": {
+        "discovery": true,
+        "identity": true,
+        "specifications": false,
+        "media": true,
+        "documents": false
+      },
+      "cms_fingerprint": [
+        {
+          "engine": "generic_json_ld_product",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "source": "json_ld",
+              "signal": "@type=Product",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.mi.com/global/",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/product/xiaomi-17-ultra/specs/",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/product/xiaomi-17-ultra-photography-kit-pro/",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/product/xiaomi-17-ultra-photography-kit/",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/product/aces/",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/hyperos/",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/support/vipservice/",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "http://www.mi.com/global/product/xiaomi-17-ultra/specs",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-17-ultra/",
+            "selector": "a[href]"
+          }
+        }
+      ],
+      "sanitized_snapshot_limitations": false,
+      "content_sha256": "fac1a5594c7457fcb4e35b9b5eea3e73940738dc28a25c5fe425883b6aff3f08",
+      "fixture_version": 2
+    },
+    "error": null,
+    "third_page": "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/",
+    "third_fixture": "fixtures/9573649188ea8d35f02aab3e50c5df2597f6de3cb415caef5c940e00e50006dd.json",
+    "third_struct": {
+      "is_product_page": true,
+      "product_objects": 1,
+      "contracts": {
+        "discovery": {
+          "routes": [],
+          "navigation": [
+            "navigation",
+            "product"
+          ],
+          "pagination": [],
+          "locale_contract": "host_or_undeclared"
+        },
+        "identity": {
+          "json_paths": [
+            ".name"
+          ],
+          "microdata_properties": [],
+          "code_fields": [],
+          "variant_fields": [],
+          "model_semantics": "marketing_name_only"
+        },
+        "specifications": {
+          "json_paths": [],
+          "dom_semantics": []
+        },
+        "media": {
+          "json_paths": [
+            ".image"
+          ],
+          "dom_semantics": [
+            "responsive_srcset",
+            "semantic_gallery"
+          ],
+          "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+        },
+        "documents": {
+          "link_schema": [],
+          "support_navigation": false,
+          "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+          "language_contract": "unknown_do_not_infer_from_locale"
+        }
+      },
+      "signatures": {
+        "discovery": "5f3683bdc5f6fde5f58eebf66cb3a87183af825c42da878504affa1a0447d0bf",
+        "identity": "3477adef680dab7bcc1870a4baac759cd0b407389361505b03a96e7b4b72fed8",
+        "specifications": "adc26a7fc37d8990cc7bb2f4137ff155d420231c3ed9b2fd6e54d7b9435acef1",
+        "media": "3a999e87158b1a383c3a4405d4e6ed23c28ad247f8af5a7427491f8e299dd2ca",
+        "documents": "61c0be3af61f9bfe20f600f6b2abf189ea91219d7dade93b1da101633e0c27d5"
+      },
+      "observed": {
+        "discovery": true,
+        "identity": true,
+        "specifications": false,
+        "media": true,
+        "documents": false
+      },
+      "cms_fingerprint": [
+        {
+          "engine": "generic_json_ld_product",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "source": "json_ld",
+              "signal": "@type=Product",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.mi.com/global/",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/specs/",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.mi.com/global/product/xiaomi-watch-s5-46mm/",
+            "selector": "a[href]"
+          }
+        }
+      ],
+      "sanitized_snapshot_limitations": false,
+      "content_sha256": "9573649188ea8d35f02aab3e50c5df2597f6de3cb415caef5c940e00e50006dd",
+      "fixture_version": 2
+    }
+  },
+  "hyperx": {
+    "nav_url": "https://hyperx.com/pages/support",
+    "nav_fixture": "fixtures/ea046d5e8ff8d45fbe326fd1d2cc16dcdcb5cec002adf479e4e44e45315f4a4d.json",
+    "category_candidates_seen": [
+      "https://hyperx.com/collections/sale",
+      "https://hyperx.com/collections/all",
+      "https://hyperx.com/collections/gaming-headsets",
+      "https://hyperx.com/collections/microphones",
+      "https://hyperx.com/collections/gaming-mice"
+    ],
+    "product_urls_tried": [
+      "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+    ],
+    "picked": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+    "picked_fixture": "fixtures/1dd3897450ff08ae7bde27d72cc20a93e140ee61652f79dd96799d271d331099.json",
+    "picked_struct": {
+      "is_product_page": true,
+      "product_objects": 1,
+      "contracts": {
+        "discovery": {
+          "routes": [
+            "GET:q:html_search_form"
+          ],
+          "navigation": [
+            "category",
+            "navigation",
+            "product",
+            "support"
+          ],
+          "pagination": [],
+          "locale_contract": "host_or_undeclared"
+        },
+        "identity": {
+          "json_paths": [
+            ".gtin12",
+            ".name",
+            ".productID",
+            ".sku"
+          ],
+          "microdata_properties": [],
+          "code_fields": [
+            "productID",
+            "sku"
+          ],
+          "variant_fields": [],
+          "model_semantics": "unverified_sku_meaning"
+        },
+        "specifications": {
+          "json_paths": [
+            ".additionalProperty",
+            ".additionalProperty[].@type",
+            ".additionalProperty[].name",
+            ".additionalProperty[].value"
+          ],
+          "dom_semantics": [
+            "accordion:details+summary",
+            "dl:dt+dd"
+          ]
+        },
+        "media": {
+          "json_paths": [
+            ".image",
+            ".image.@type",
+            ".image.height",
+            ".image.url",
+            ".image.width",
+            ".offers.image"
+          ],
+          "dom_semantics": [
+            "responsive_srcset"
+          ],
+          "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+        },
+        "documents": {
+          "link_schema": [],
+          "support_navigation": true,
+          "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+          "language_contract": "unknown_do_not_infer_from_locale"
+        }
+      },
+      "signatures": {
+        "discovery": "3a37e3368e1918adccc33346dc514b54a965a64f7f66d8e78f82e9913af91193",
+        "identity": "bf9c35cd62d2db8c606ef87b32c1650ad87e8e1c5755cdce1e19a500018405d3",
+        "specifications": "75569a5e2ebb535fc7f272a21112732ee32f7b5c50bd139acf4df3f5edc7649c",
+        "media": "010a9dc655a92cd056a73b259bc37615c36e41db00f04be938a4b2a10ae756f4",
+        "documents": "2623905769e9dff909a0abd83924d855e6877e185d0b78ccb7446028fca7b4be"
+      },
+      "observed": {
+        "discovery": true,
+        "identity": true,
+        "specifications": true,
+        "media": true,
+        "documents": false
+      },
+      "cms_fingerprint": [
+        {
+          "engine": "generic_json_ld_product",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "source": "json_ld",
+              "signal": "@type=Product",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        },
+        {
+          "engine": "shopify",
+          "status": "confirmed",
+          "confidence": 0.75,
+          "evidence": [
+            {
+              "source": "html",
+              "signal": "cdn\\.shopify\\.com|Shopify\\.theme|shopify-section",
+              "strength": "strong",
+              "weight": 0.75
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/promo-tcs",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/bundles",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/sale",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/all",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-headsets",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/microphones",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-mice",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-keyboards",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-controllers",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/earbuds",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/accessories",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/xbox",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/playstation-gaming-headsets",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/pc-mac",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/mobile",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-pcs",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-desktops",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-laptops",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-monitors",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-pc-components",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/omen-gaming-pcs-laptops-overview",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/hx3d",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d-custom-keycaps",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d-headset-accessories",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d-collabs",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/ngenuity",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/support",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/delivery-information",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/returns-policy",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://supportcenter.hyperx.com",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/shipping-information",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/limited-warranty-statement",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/price-guarantee",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/about-hyperx",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/social-impact",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/data-sharing-opt-out",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/reviews",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+            "selector": "a[href]"
+          }
+        }
+      ],
+      "sanitized_snapshot_limitations": false,
+      "content_sha256": "1dd3897450ff08ae7bde27d72cc20a93e140ee61652f79dd96799d271d331099",
+      "fixture_version": 2
+    },
+    "error": null,
+    "third_page": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+    "third_fixture": "fixtures/495d69dfc4075b2b91c48ca34e82be2664a1f2732a985af7b31cacb02051d991.json",
+    "third_struct": {
+      "is_product_page": true,
+      "product_objects": 1,
+      "contracts": {
+        "discovery": {
+          "routes": [
+            "GET:q:html_search_form"
+          ],
+          "navigation": [
+            "category",
+            "navigation",
+            "product",
+            "support"
+          ],
+          "pagination": [],
+          "locale_contract": "host_or_undeclared"
+        },
+        "identity": {
+          "json_paths": [
+            ".gtin12",
+            ".name",
+            ".productID",
+            ".sku"
+          ],
+          "microdata_properties": [],
+          "code_fields": [
+            "productID",
+            "sku"
+          ],
+          "variant_fields": [],
+          "model_semantics": "unverified_sku_meaning"
+        },
+        "specifications": {
+          "json_paths": [
+            ".additionalProperty",
+            ".additionalProperty[].@type",
+            ".additionalProperty[].name",
+            ".additionalProperty[].value"
+          ],
+          "dom_semantics": [
+            "accordion:details+summary",
+            "dl:dt+dd"
+          ]
+        },
+        "media": {
+          "json_paths": [
+            ".image",
+            ".image.@type",
+            ".image.height",
+            ".image.url",
+            ".image.width",
+            ".offers.image"
+          ],
+          "dom_semantics": [
+            "responsive_srcset"
+          ],
+          "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+        },
+        "documents": {
+          "link_schema": [],
+          "support_navigation": true,
+          "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+          "language_contract": "unknown_do_not_infer_from_locale"
+        }
+      },
+      "signatures": {
+        "discovery": "3a37e3368e1918adccc33346dc514b54a965a64f7f66d8e78f82e9913af91193",
+        "identity": "bf9c35cd62d2db8c606ef87b32c1650ad87e8e1c5755cdce1e19a500018405d3",
+        "specifications": "75569a5e2ebb535fc7f272a21112732ee32f7b5c50bd139acf4df3f5edc7649c",
+        "media": "010a9dc655a92cd056a73b259bc37615c36e41db00f04be938a4b2a10ae756f4",
+        "documents": "2623905769e9dff909a0abd83924d855e6877e185d0b78ccb7446028fca7b4be"
+      },
+      "observed": {
+        "discovery": true,
+        "identity": true,
+        "specifications": true,
+        "media": true,
+        "documents": false
+      },
+      "cms_fingerprint": [
+        {
+          "engine": "generic_json_ld_product",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "source": "json_ld",
+              "signal": "@type=Product",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        },
+        {
+          "engine": "shopify",
+          "status": "confirmed",
+          "confidence": 0.75,
+          "evidence": [
+            {
+              "source": "html",
+              "signal": "cdn\\.shopify\\.com|Shopify\\.theme|shopify-section",
+              "strength": "strong",
+              "weight": 0.75
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/promo-tcs",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/bundles",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/sale",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/all",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-headsets",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/microphones",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-mice",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-keyboards",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-controllers",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/earbuds",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/accessories",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/xbox",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/playstation-gaming-headsets",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/pc-mac",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/mobile",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-pcs",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-desktops",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-laptops",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-monitors",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/gaming-pc-components",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/omen-gaming-pcs-laptops-overview",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/hx3d",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d-custom-keycaps",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d-headset-accessories",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d-collabs",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/collections/hx3d",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/ngenuity",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/support",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/delivery-information",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/returns-policy",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://supportcenter.hyperx.com",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/cdn/shop/videos/c/vp/1d9870d99bfb4944936c5bd5f635436f/1d9870d99bfb4944936c5bd5f635436f.HD-1080p-7.2Mbps-92029958.mp4?v=0",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/shipping-information",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/limited-warranty-statement",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/price-guarantee",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/about-hyperx",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/social-impact",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/data-sharing-opt-out",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://hyperx.com/pages/reviews",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://hyperx.com/products/hyperx-cloud-alpha-air-open-back-gaming-headset",
+            "selector": "a[href]"
+          }
+        }
+      ],
+      "sanitized_snapshot_limitations": false,
+      "content_sha256": "495d69dfc4075b2b91c48ca34e82be2664a1f2732a985af7b31cacb02051d991",
+      "fixture_version": 2
+    }
+  },
+  "bosch_home": {
+    "nav_url": "https://www.bosch-home.com/de/de",
+    "nav_fixture": "fixtures/f29438f52de3858e328aef4aae39d06fa676e407d514a3c4fc8b0185ac7515a4.json",
+    "product_urls_tried": [
+      "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D"
+    ],
+    "picked": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+    "picked_fixture": "fixtures/f398086de0698d7c8c732dd8a2b72442bd1f6c4c2467e2f3927de589affec171.json",
+    "picked_struct": {
+      "is_product_page": true,
+      "product_objects": 1,
+      "contracts": {
+        "discovery": {
+          "routes": [],
+          "navigation": [
+            "category",
+            "navigation",
+            "product",
+            "support"
+          ],
+          "pagination": [],
+          "locale_contract": "path_prefix"
+        },
+        "identity": {
+          "json_paths": [
+            ".gtin",
+            ".mpn",
+            ".name"
+          ],
+          "microdata_properties": [],
+          "code_fields": [
+            "gtin",
+            "mpn"
+          ],
+          "variant_fields": [],
+          "model_semantics": "explicit_manufacturer_or_model"
+        },
+        "specifications": {
+          "json_paths": [
+            ".additionalProperty",
+            ".additionalProperty[].@type",
+            ".additionalProperty[].name",
+            ".additionalProperty[].unitText",
+            ".additionalProperty[].value"
+          ],
+          "dom_semantics": []
+        },
+        "media": {
+          "json_paths": [
+            ".image"
+          ],
+          "dom_semantics": [
+            "responsive_srcset"
+          ],
+          "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+        },
+        "documents": {
+          "link_schema": [],
+          "support_navigation": true,
+          "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+          "language_contract": "unknown_do_not_infer_from_locale"
+        }
+      },
+      "signatures": {
+        "discovery": "f7424ce34a8d10fa1819aa7cadced98d0e66d2a85b0ce315bf046d6b1370122d",
+        "identity": "ed08eb9dcbeab8011c23aaf72e6c0b3ca3d7c08fe38cfa7a740783c2d6fcf16a",
+        "specifications": "f0798f2395e9b839058984a8d108f2fe48dbee2cc5a1196513aea6f94b28c7dc",
+        "media": "0a2395759379f321af01a6dce541fc521f628d3263350f560496950f9c12b0db",
+        "documents": "00b047afc7f6cc8994e60f49eafdca263bad885c62f09f449583158d16993510"
+      },
+      "observed": {
+        "discovery": true,
+        "identity": true,
+        "specifications": true,
+        "media": true,
+        "documents": false
+      },
+      "cms_fingerprint": [
+        {
+          "engine": "generic_json_ld_product",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "source": "json_ld",
+              "signal": "@type=Product",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        },
+        {
+          "engine": "next_js",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "source": "html",
+              "signal": "__NEXT_DATA__|/_next/static/",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/fachhandels-produkte",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/de/category/kuechenmaschinen/mum-kuechenmaschinen",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/de/category/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/pflege-und-wartung/ersatzteile",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/hilfe-und-unterstuetzung",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/kontakt-und-information",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/reparaturservice",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/garantie",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/kontakt-und-information?intcid=contactpage_26~~Website~Footer~footer_contact",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/bosch-erleben",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/haendler-finden",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/mybosch/produkt-registrieren",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/de/services",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/pflege-und-wartung",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/energielabel",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/sicherheitshinweise",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/instandsetzungsbedingungen/standard_75",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/prospekte",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/pflege-und-wartung/reinigungsmittel-abo-kuendigung",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/likeabosch",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/kaufberatung",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/bosch-erleben/bosch-testsieger",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/bosch-erleben/made-in-germany",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/bosch-erleben/magazin",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/bosch-erleben/objektgeschaeft",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/allgemeine-geschaeftsbedingungen",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/zahlungsmethoden",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/versandkosten",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/liefer-und-anschlussbedingungen",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/instandsetzungsbedingungen/altgeraete-ruecknahme",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/retoure",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/kontakt-und-information/retouren",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/hilfe-und-unterstuetzung/gebrauchsanleitungen",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/produkte/faq",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/service/kontakt-und-information/produktsicherheitsregistrierung",
+          "kind": "support",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/de/c/legal/blt3f018aa1a5d79c16/gesetzliche-gewaehrleistung",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/metaseiten/impressum",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/pressecenter",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/mybosch/registrierung",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/barrierefreiheit",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/de/c/spotlight/bltf68dcf2dfd9613c1/grounding-page",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/de/c/spotlight/blt3eb133a1aa59bac2/produkte/angebote?intcid=BO-DE-D2C-Angebote~~Website~ContentTeaser~USPbar",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://www.bosch-home.com/de/de/category/geschirrspueler?qsales_program=sales_program_dmk_bosch&intcid=5JahreGarantieDC2026~~Website~ContentTeaser~USPbar",
+          "kind": "category",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://www.bosch-home.com/de/de/product/kuechenmaschinen/mum-kuechenmaschinen/kuechenmaschinen-serie6/MUMS6EW13D",
+            "selector": "a[href]"
+          }
+        }
+      ],
+      "sanitized_snapshot_limitations": false,
+      "content_sha256": "f398086de0698d7c8c732dd8a2b72442bd1f6c4c2467e2f3927de589affec171",
+      "fixture_version": 2
+    },
+    "error": null
+  },
+  "dreame_de_live": {
+    "nav_url": "https://de.dreametech.com/",
+    "nav_fixture": "fixtures/d44c2f65072a2b99cb9435a1e55996338453c80b8297443f7f4c249b1cafe716.json",
+    "product_urls_tried": [
+      "https://de.dreametech.com/products/dreame-x60-pro-ultra-complete-saugroboter"
+    ],
+    "picked": "https://de.dreametech.com/products/dreame-x60-pro-ultra-complete-saugroboter",
+    "picked_fixture": "fixtures/f39edad7c4b94e2689b86d227a6b3fe740ea3d36775ace90e810b67f1e805854.json",
+    "picked_struct": {
+      "is_product_page": true,
+      "product_objects": 1,
+      "contracts": {
+        "discovery": {
+          "routes": [],
+          "navigation": [
+            "navigation",
+            "product"
+          ],
+          "pagination": [],
+          "locale_contract": "host_or_undeclared"
+        },
+        "identity": {
+          "json_paths": [
+            ".gtin13",
+            ".name",
+            ".sku"
+          ],
+          "microdata_properties": [],
+          "code_fields": [
+            "gtin13",
+            "sku"
+          ],
+          "variant_fields": [],
+          "model_semantics": "unverified_sku_meaning"
+        },
+        "specifications": {
+          "json_paths": [],
+          "dom_semantics": []
+        },
+        "media": {
+          "json_paths": [
+            ".image"
+          ],
+          "dom_semantics": [],
+          "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+        },
+        "documents": {
+          "link_schema": [],
+          "support_navigation": false,
+          "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+          "language_contract": "unknown_do_not_infer_from_locale"
+        }
+      },
+      "signatures": {
+        "discovery": "3cf40a6a1b440ba5954325d0168cde7c43612673a79014110ca1555cad663d44",
+        "identity": "132b1f226c09f6d2fb7ee83850f96cf6bea550f0c1dd6d84f61fbe7ec2799cdc",
+        "specifications": "5d5da77dbad6032eb18f25eb5785f0b984eda2a297e796ebb0949f1be5a1dce9",
+        "media": "905d99d2ecffa757990c6beb5f8c3761e506c1141b3992fdbaca0999af4da8d5",
+        "documents": "60f963e8a84277eea51f529ff07f2c10fcd1887daf1d686f734dc9d1e0ea6c0a"
+      },
+      "observed": {
+        "discovery": true,
+        "identity": true,
+        "specifications": false,
+        "media": true,
+        "documents": false
+      },
+      "cms_fingerprint": [
+        {
+          "engine": "generic_json_ld_product",
+          "status": "confirmed",
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "source": "json_ld",
+              "signal": "@graph contains Product",
+              "strength": "strong",
+              "weight": 0.8
+            }
+          ]
+        },
+        {
+          "engine": "shopify",
+          "status": "confirmed",
+          "confidence": 0.75,
+          "evidence": [
+            {
+              "source": "html",
+              "signal": "cdn\\.shopify\\.com|Shopify\\.theme|shopify-section",
+              "strength": "strong",
+              "weight": 0.75
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "https://de.dreametech.com/products/dreame-x60-pro-ultra-complete-saugroboter",
+          "kind": "product",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://de.dreametech.com/products/dreame-x60-pro-ultra-complete-saugroboter",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://de.dreametech.com",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://de.dreametech.com/products/dreame-x60-pro-ultra-complete-saugroboter",
+            "selector": "a[href]"
+          }
+        },
+        {
+          "url": "https://de.dreametech.com/",
+          "kind": "navigation",
+          "provenance": {
+            "method": "first_party_navigation",
+            "parent_url": "https://de.dreametech.com/products/dreame-x60-pro-ultra-complete-saugroboter",
+            "selector": "a[href]"
+          }
+        }
+      ],
+      "sanitized_snapshot_limitations": false,
+      "content_sha256": "f39edad7c4b94e2689b86d227a6b3fe740ea3d36775ace90e810b67f1e805854",
+      "fixture_version": 2
+    },
+    "error": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": [
+        "dl:dt+dd"
+      ]
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "59a5e8547749a1230040c4d3d4de2e607c0ddbf000752096d53f1bcb59c58549",
+    "identity": "e77b02eb91e224f663db0c672eb46e0001b363b923929e0d8b996778f99050ef",
+    "specifications": "0c3bdf71ad7c4e28ed970d1687cf761b9f70597098d259339d4be1c85b0295d5",
+    "media": "2b90ff5beb9428e5b92fb886a9a0954004338f181841a665a04eeb0b36fac3ee",
+    "documents": "2abc35ca49719944e6f8f6f0ec1004480d1f7d0dd2dbcff5eff015109ae19280"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": true,
+    "media": false,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "custom_unknown",
+      "status": "insufficient",
+      "confidence": 0.0,
+      "evidence": []
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "9d777107edfc1d61a1918c992de966a29514ef8dc411ea97de72ee80ce5dfbf1",
+  "fixture_version": 2
+}

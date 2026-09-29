@@ -1,0 +1,24 @@
+{
+  "declared_at": "2026-09-25T11:58:16+00:00",
+  "stage": "24 / batch 1b",
+  "budget": {
+    "max_real_requests": 3,
+    "pacing_seconds": 1.5,
+    "hosts": [
+      "www.samsung.com",
+      "*.samsung.com"
+    ]
+  },
+  "requests": {
+    "1_a37_product_page": "https://www.samsung.com/kz_ru/smartphones/galaxy-a/galaxy-a37-5g-awesome-graygreen-256gb-sm-a376edggskz/",
+    "2_vacuum_russian_manual": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=SC18M21D0VG&CttFileID=11013492&CDCttType=UM&VPath=UM%2F202510%2F20251023121509014%2FO-DJ68-00758F-12_IB_VC2100_CIS-SEHC_RU_251001.pdf",
+    "3_a37_manual": "only if the A37 page prints a UM link; the file whose name has _RU_"
+  },
+  "origin": {
+    "a37_url": "printed on the official galaxy-a hub fetched in batch 1 (raw/batch1_result.json, batch1/responses)",
+    "vacuum_ru": "printed on the vacuum cleaner's official product page fetched in batch 1"
+  },
+  "reason": "Stage 24 step 4 -- batch 1b: a declared CORRECTION and one follow-up, after reading the batch 1 responses (offline). Declares first (raw/batch1b_declaration.json), then runs.\n\nWhat batch 1 showed (offline reading of batch1/responses):\n  * smartphones: the declared rule (SKZ-coded catalog rows only, models a36/a56/a26/s25) ended on the Galaxy S25 Ultra FAMILY page, which is the previous generation: the same official\n    galaxy-a hub prints the 2026 Galaxy A37 with a KZ product page (.../galaxy-a37-5g-awesome-graygreen-256gb-sm-a376edggskz/), and the catalog has A37 rows (region code INS, not SKZ).\n    The category's card is therefore corrected to A37; the S25 Ultra fetch stays recorded as evidence of the family-page template. This is a second product in one category and is disclosed as such.\n  * vacuum cleaners: the first manual link was Kazakh (file name token _KK_); the same page prints a Russian one (_RU_). The language is read from the content, the file name only orders the request.\n",
+  "stop_rule": "401/403/429 or confirmed challenge: host stopped in batch1b/workdir/samsung_fetch_log.json, run ends",
+  "url_construction": "none"
+}

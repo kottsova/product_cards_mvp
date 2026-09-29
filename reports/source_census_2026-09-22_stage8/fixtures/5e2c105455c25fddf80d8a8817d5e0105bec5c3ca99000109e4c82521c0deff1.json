@@ -1,0 +1,101 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "category",
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [
+        ".gtin",
+        ".mpn",
+        ".name"
+      ],
+      "microdata_properties": [],
+      "code_fields": [
+        "gtin",
+        "mpn"
+      ],
+      "variant_fields": [],
+      "model_semantics": "explicit_manufacturer_or_model"
+    },
+    "specifications": {
+      "json_paths": [
+        ".additionalProperty",
+        ".additionalProperty[].@type",
+        ".additionalProperty[].name",
+        ".additionalProperty[].unitText",
+        ".additionalProperty[].value"
+      ],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [
+        ".image"
+      ],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "f7424ce34a8d10fa1819aa7cadced98d0e66d2a85b0ce315bf046d6b1370122d",
+    "identity": "ed08eb9dcbeab8011c23aaf72e6c0b3ca3d7c08fe38cfa7a740783c2d6fcf16a",
+    "specifications": "f0798f2395e9b839058984a8d108f2fe48dbee2cc5a1196513aea6f94b28c7dc",
+    "media": "0a2395759379f321af01a6dce541fc521f628d3263350f560496950f9c12b0db",
+    "documents": "00b047afc7f6cc8994e60f49eafdca263bad885c62f09f449583158d16993510"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": true,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "generic_json_ld_product",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "json_ld",
+          "signal": "@type=Product",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "engine": "next_js",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "__NEXT_DATA__|/_next/static/",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "5e2c105455c25fddf80d8a8817d5e0105bec5c3ca99000109e4c82521c0deff1",
+  "fixture_version": 2
+}

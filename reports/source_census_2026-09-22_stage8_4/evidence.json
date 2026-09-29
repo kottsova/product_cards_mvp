@@ -1,0 +1,88 @@
+{
+  "schema_version": "stage8_4_evidence.v1",
+  "item": "Samsung MS23K3614AK/BW (microwave oven, Solo)",
+  "product_page_url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+  "page_type": "Product page (JSON-LD Product confirmed, is_product_page=true) -- distinct source type from the separate downloadcenter.samsung.com document source below.",
+  "canonical_url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+  "canonical_matches_fetched_url": true,
+  "fields": {
+    "brand": {
+      "value": "Samsung",
+      "status": "confirmed",
+      "evidence": "JSON-LD Product.brand = {\"@type\":\"Brand\",\"name\":\"Samsung\"} -- a direct brand-name field this time, not just an @id reference.",
+      "source": "JSON-LD script tag on the product page"
+    },
+    "consumer_model_name": {
+      "value": "23 Л Микроволновая печь Соло БИО-Керамическое покрытие",
+      "status": "confirmed",
+      "evidence": "JSON-LD Product.name, independently corroborated by the HTML <title> tag = '23 Л Микроволновая печь Соло БИО-Керамическое покрытие, Черный | Samsung Казахстан'.",
+      "source": "JSON-LD Product.name + <title> tag"
+    },
+    "manufacturer_model_code": {
+      "value": "MS23K3614AK/BW",
+      "status": "confirmed_and_catalog_matched",
+      "evidence": "JSON-LD Product.sku = 'MS23K3614AK/BW', an EXACT character-for-character match to the working catalog's own seller_article field for this row (data/catalog_2026-09-21_filtered.xlsx). Independently corroborated a third way by the manual download URL's own ModelName=MS23K3614AK query parameter.",
+      "source": "JSON-LD Product.sku + catalog row cross-check + manual URL query parameter"
+    },
+    "color": {
+      "value": "Черный (Black)",
+      "status": "confirmed",
+      "evidence": "Appears in the HTML <title> tag ('...Соло БИО-Керамическое покрытие, Черный | ...'), not the URL slug.",
+      "source": "HTML <title> tag"
+    },
+    "volume": {
+      "value": "23 л (usable cavity volume)",
+      "status": "confirmed",
+      "evidence": "'23 л' / 'Полезный объем рабочей камеры: 23 л' found twice in visible body text, plus '23 Л' repeated in the <title> tag and JSON-LD name. Also matches the catalog row's OWN alternate name field ('Микроволновая печь MS23K3614AK/BW, 23 л') -- a fourth independent confirmation.",
+      "source": "Visible body text + <title> + JSON-LD name + catalog alt-name field"
+    },
+    "power_specs": [
+      {
+        "field": "power_consumption_microwave",
+        "value": "1150 Вт",
+        "status": "confirmed",
+        "evidence": "'Потребляемая мощность (микроволны)' label followed by '1150 Вт' in visible body text."
+      },
+      {
+        "field": "output_power_microwave",
+        "value": "800 Вт",
+        "status": "confirmed",
+        "evidence": "'Выходная мощность (микроволны)' label followed by '800 Вт' in visible body text."
+      }
+    ],
+    "specifications_completeness": {
+      "status": "partial",
+      "reasoning": "Structural contract (Stage 8's inspect_structure) records specifications.dom_semantics and .json_paths as empty (no table/dl/details, no JSON-LD additionalProperty) -- same static-rendering limitation seen on every other Samsung category checked so far. However, direct full-text search of the same static response DID surface 3 concrete, labeled specs with real values and units (volume, input power, output power). A fully exhaustive specifications sheet (dimensions, weight, turntable diameter, control type, etc.) was not confirmed reachable statically and is not claimed."
+    },
+    "official_image": {
+      "value": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "status": "confirmed",
+      "evidence": "DOM img/source[srcset] advertised two explicit width variants of asset 190178091: 624x468 and 1164x776. The larger explicitly advertised variant was selected, per the project's existing 'largest advertised srcset candidate' rule.",
+      "source": "responsive srcset attribute on the product page",
+      "secondary_image_note": "JSON-LD Product.image separately references a different, smaller 'thumb' asset (id 190178092); the srcset gallery image (190178091, larger) was preferred as the primary card image."
+    },
+    "instruction_manual": {
+      "value": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "status": "confirmed_reachable_first_party",
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "final_url_after_redirect": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "redirect_chain": [
+        "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+        "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf"
+      ],
+      "first_party": true,
+      "first_party_evidence": "Both org.downloadcenter.samsung.com and its redirect target downloadcenter.samsung.com are samsung.com subdomains, directly linked from the already-verified product page (not invented, not guessed).",
+      "content_verification": "Fetched and confirmed the response begins with the PDF magic bytes '%PDF-1.6' (1,431,426 bytes read, under the 1.5MB probe cap) -- this is a genuine, reachable PDF file, not a broken or placeholder link.",
+      "document_type": "User Manual (UM)",
+      "document_type_evidence": "The link's own query parameter CDCttType=UM is Samsung's own document-type code (as opposed to, e.g., a delivery-terms or marketing PDF) -- this is first-party structured evidence, not an inferred guess from the filename alone.",
+      "model_linkage_evidence": "The link's own ModelName=MS23K3614AK query parameter exactly matches this product's manufacturer model code (matching the JSON-LD sku's model portion) -- direct first-party evidence of model linkage, stronger than the generic 'a[href:pdf]' structural signal alone.",
+      "language": "Multi-language file whose name lists RU-UK-KK-UZ (Russian, Ukrainian, Kazakh, Uzbek), Russian listed first -- matches the project's stated language priority (Russian first). This is inferred from Samsung's own filename convention and the CDSite=UNI_KZ_RU site parameter, NOT from opening/parsing the PDF's internal text -- the PDF's actual internal-page language was not verified beyond this first-party filename/query-parameter evidence, since no PDF text-extraction capability exists in the current pipeline and building one was out of this stage's scope."
+    }
+  },
+  "requests_used_for_this_item": 3,
+  "requests_detail": [
+    "Fetch 1: product page URL -- extracted JSON-LD (brand/name/sku/image), <title>, canonical, PDF links, srcset image candidates, and spec body text in a single pass (learning from Stage 8.3's need for 2 passes, this stage captured everything needed in one fetch).",
+    "Fetch 2: manual URL with an initially too-narrow allowed_hosts -- rejected as a regional_redirect because the real redirect target (downloadcenter.samsung.com, without the 'org.' prefix) wasn't yet in the allow-list. No content was retrieved on this attempt; recorded honestly rather than hidden.",
+    "Fetch 3: manual URL retried with the already-OBSERVED redirect target host added to allowed_hosts (not a new/invented domain -- taken directly from fetch 2's own redirect_chain) -- confirmed a real PDF via magic-byte check."
+  ]
+}

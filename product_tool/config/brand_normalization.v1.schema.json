@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "brand_normalization.v1.schema.json",
+  "title": "Brand normalization registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "source_catalog",
+    "normalization_policy",
+    "brands"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_catalog": {
+      "type": "string"
+    },
+    "normalization_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fuzzy_merge_allowed",
+        "source_labels_preserved",
+        "coverage_inheritance_requires_verified_mapping"
+      ],
+      "properties": {
+        "fuzzy_merge_allowed": {
+          "const": false
+        },
+        "source_labels_preserved": {
+          "const": true
+        },
+        "coverage_inheritance_requires_verified_mapping": {
+          "const": true
+        }
+      }
+    },
+    "brands": {
+      "type": "array",
+      "minItems": 289,
+      "items": {
+        "$ref": "#/$defs/brandMapping"
+      }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": [
+        "type",
+        "claim"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "source": {
+          "type": "string"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "additionalProperties": false
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_family_id",
+        "category_scope"
+      ],
+      "properties": {
+        "source_family_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "brandMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "original_brand_label",
+        "normalized_label",
+        "canonical_brand",
+        "source_family_id",
+        "relationship",
+        "confidence",
+        "category_scope",
+        "evidence",
+        "review_status",
+        "notes"
+      ],
+      "properties": {
+        "original_brand_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalized_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_brand": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_family_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_\\u0400-\\u04ff]+$"
+        },
+        "relationship": {
+          "enum": [
+            "exact",
+            "spelling_variant",
+            "alias",
+            "regional_name",
+            "subbrand",
+            "product_line",
+            "category_dependent",
+            "possible_typo",
+            "unresolved"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "category_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "review_status": {
+          "enum": [
+            "confirmed_exact_label",
+            "confirmed_mapping",
+            "requires_human_review"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "source_family_routes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/route"
+          }
+        }
+      }
+    }
+  }
+}

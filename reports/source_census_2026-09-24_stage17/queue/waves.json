@@ -1,0 +1,645 @@
+[
+  {
+    "expected_gain": {
+      "adapter_coverage_pairs": 26,
+      "adapter_coverage_pct": 3.75,
+      "adapter_coverage_units": 633,
+      "reading": "Landing the adapter moves adapter_coverage_units out of official_route_no_adapter / needs_product_page_fixture. They become ready_to_run only where an exact URL is on record (guaranteed) or the family's discovery route is confirmed (upper bound); otherwise they wait as adapter_url_missing. Nothing counts as ready before a positive fixture passes the criteria.",
+      "ready_guaranteed_by_urls_on_record_units": 0,
+      "ready_if_every_exact_url_is_supplied_units": 633,
+      "ready_via_confirmed_discovery_route_pct": 0.0,
+      "ready_via_confirmed_discovery_route_units": 0
+    },
+    "families": [
+      "bosch_home",
+      "cudy"
+    ],
+    "group_id": "A",
+    "group_title": "discovery + identity + specs + media confirmed; documents the one gap",
+    "later_wave_families": [
+      "hyperx"
+    ],
+    "measure_with": "python -m product_tool.coverage delta --before <coverage_units.jsonl before> --after <coverage_units.jsonl after>",
+    "per_family": [
+      {
+        "addressable_pairs": 21,
+        "addressable_units": 565,
+        "categories_in_scope": {
+          "Блендеры": 34,
+          "Варочные панели": 58,
+          "Вытяжки кухонные": 23,
+          "Духовые шкафы": 78,
+          "Кофеварки": 7,
+          "Кофемашины": 11,
+          "Кофемолки электрические": 3,
+          "Машины посудомоечные": 91,
+          "Микроволновые печи": 19,
+          "Миксеры": 13,
+          "Морозильные камеры": 1,
+          "Мультиварки": 1,
+          "Плиты с духовкой": 3,
+          "Пылесосы": 77,
+          "Пылесосы строительные": 2,
+          "Стиральные машины": 51,
+          "Сушильные машины": 17,
+          "Тостеры": 16,
+          "Триммеры садовые": 4,
+          "Холодильники": 34,
+          "Чайники электрические": 22
+        },
+        "confirmed_exact_urls_on_record": [],
+        "current_unit_status_counts": {
+          "official_route_no_adapter": 565
+        },
+        "discovery_route": "structural_only",
+        "family": "bosch_home",
+        "fixture_level": "structural_sufficient",
+        "fixture_missing_layers": [],
+        "hosts": [
+          "bosch-home.com",
+          "www.bosch-home.co.uk",
+          "www.bosch-home.com"
+        ],
+        "moves_to_after_adapter": "adapter_url_missing",
+        "prerequisites": [
+          "A negative variant fixture (wrong region/colour/suffix) per category in scope.",
+          "An exact product URL per row from a human, or a confirmed discovery route; URLs are never guessed."
+        ]
+      },
+      {
+        "addressable_pairs": 5,
+        "addressable_units": 68,
+        "categories_in_scope": {
+          "Mesh системы": 15,
+          "Wi-Fi-адаптеры": 4,
+          "Коммутаторы": 16,
+          "Роутеры": 28,
+          "Усилители Wi-Fi сигнала": 5
+        },
+        "confirmed_exact_urls_on_record": [],
+        "current_unit_status_counts": {
+          "official_route_no_adapter": 68
+        },
+        "discovery_route": "structural_only",
+        "family": "cudy",
+        "fixture_level": "structural_sufficient",
+        "fixture_missing_layers": [],
+        "hosts": [
+          "cudy.com"
+        ],
+        "moves_to_after_adapter": "adapter_url_missing",
+        "prerequisites": [
+          "A negative variant fixture (wrong region/colour/suffix) per category in scope.",
+          "An exact product URL per row from a human, or a confirmed discovery route; URLs are never guessed."
+        ]
+      }
+    ],
+    "readiness_criteria": [
+      {
+        "id": "identity_exact",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "Exact identity: the adapter returns exact_variant only when the page's own code equals the catalog code including region/service suffix; base_code_confirmed or family_only otherwise."
+      },
+      {
+        "id": "variants_positive_negative",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "At least one positive and one negative (wrong colour/region/size/suffix) variant fixture per category in scope; the negative never becomes exact_variant."
+      },
+      {
+        "id": "specifications",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "Specifications extracted as name/value pairs, each with source URL and evidence; unit and value are not rewritten."
+      },
+      {
+        "id": "gallery_complete",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "The full gallery that belongs to this exact variant is captured; images of other variants, banners and icons are excluded with a recorded reason."
+      },
+      {
+        "id": "documents_evidence",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "A document is attached only from a direct link whose content or page names the exact model; regulatory papers are not instructions; absence is stated as a gap, not filled from a neighbour model."
+      },
+      {
+        "id": "run_once_offline",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "worker.run_once() replays a catalog row offline against saved fixtures and finishes done or needs_review with the expected reason for every fixture."
+      },
+      {
+        "id": "checkpoint_resume",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "The coverage executor saves a checkpoint per row, and a second pass over the same checkpoint makes no new calls and repeats no completed row."
+      },
+      {
+        "id": "policy_fetch",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "Every fetch goes through PolicyAwareFetcher (allowlist, redirect checks, budget, persisted log); a recorded 401/403/429/challenge stops the host across a restart."
+      },
+      {
+        "id": "coverage_delta",
+        "scope": "bosch_home: 21 categories, 565 units; cudy: 5 categories, 68 units",
+        "text": "`python -m product_tool.coverage delta` against the pre-adapter plan shows the promised movement out of the wave's source statuses and no unit moving into ready_to_run without a positive fixture."
+      }
+    ],
+    "shared_primitives": [
+      "product_tool/adapters/structured_page.py: JSON-LD Product fields, DOM spec table"
+    ],
+    "stays_separate": [
+      "identity: Bosch gtin+mpn, HyperX Shopify sku, Cudy still uncharacterised"
+    ],
+    "template_source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3, updated by reports/source_census_2026-09-23_stage15/readiness_table_hyperx_update.md",
+    "wave_id": "W1-A"
+  },
+  {
+    "expected_gain": {
+      "adapter_coverage_pairs": 94,
+      "adapter_coverage_pct": 10.0,
+      "adapter_coverage_units": 1688,
+      "reading": "Landing the adapter moves adapter_coverage_units out of official_route_no_adapter / needs_product_page_fixture. They become ready_to_run only where an exact URL is on record (guaranteed) or the family's discovery route is confirmed (upper bound); otherwise they wait as adapter_url_missing. Nothing counts as ready before a positive fixture passes the criteria.",
+      "ready_guaranteed_by_urls_on_record_units": 0,
+      "ready_if_every_exact_url_is_supplied_units": 1688,
+      "ready_via_confirmed_discovery_route_pct": 0.0,
+      "ready_via_confirmed_discovery_route_units": 0
+    },
+    "families": [
+      "xiaomi_global"
+    ],
+    "group_id": "B",
+    "group_title": "discovery + identity + media confirmed; specifications and documents missing",
+    "later_wave_families": [
+      "asus",
+      "delonghi",
+      "nintendo"
+    ],
+    "measure_with": "python -m product_tool.coverage delta --before <coverage_units.jsonl before> --after <coverage_units.jsonl after>",
+    "per_family": [
+      {
+        "addressable_pairs": 94,
+        "addressable_units": 1688,
+        "categories_in_scope": {
+          "Flash-накопители": 2,
+          "Mesh системы": 5,
+          "Автомобильные зарядные устройства": 2,
+          "Адаптеры": 2,
+          "Аккумуляторы для камер": 1,
+          "Аксессуары для настольных игр": 2,
+          "Аксессуары для увлажнителей и очистителей": 9,
+          "Аксессуары для электробритв": 1,
+          "Аэрогрили": 7,
+          "Блендеры": 3,
+          "Брелоки-локаторы": 2,
+          "Бритвы электрические": 8,
+          "Вентиляторы": 8,
+          "Весы": 2,
+          "Видеорегистраторы автомобильные": 1,
+          "Видеорегистраторы цифровые": 1,
+          "Внешние аккумуляторы": 38,
+          "Гарнитуры": 1,
+          "Гироскутеры": 2,
+          "Графические планшеты": 2,
+          "Датчики для умного дома и систем безопасности": 6,
+          "Док-станции": 2,
+          "Запчасти для пылесосов": 17,
+          "Зарядные устройства": 23,
+          "Кабели": 15,
+          "Камеры видеонаблюдения": 30,
+          "Колонки": 15,
+          "Колонки портативные": 3,
+          "Компрессоры автомобильные": 3,
+          "Кофемашины": 1,
+          "Кухонные машины": 1,
+          "Лезвия для бритв": 3,
+          "Машинки для стрижки волос": 1,
+          "Медиаплееры": 6,
+          "Микроволновые печи": 1,
+          "Мониторы": 14,
+          "Моноподы": 4,
+          "Мультиварки": 1,
+          "Мыши": 16,
+          "Насадки для пылесосов": 7,
+          "Насадки для электрических зубных щеток": 6,
+          "Настольные лампы": 1,
+          "Наушники беспроводные": 65,
+          "Наушники проводные": 10,
+          "Ночники": 1,
+          "Обогреватели": 2,
+          "Отвертки": 6,
+          "Отпариватели": 3,
+          "Очистители воздуха": 10,
+          "Планшеты": 56,
+          "Плиты настольные": 2,
+          "Принтеры портативные": 5,
+          "Проекторы": 6,
+          "Пульты Умный дом": 1,
+          "Пылесосы": 14,
+          "Ремешки для умных часов": 40,
+          "Рисоварки электрические": 4,
+          "Роботы-пылесосы": 39,
+          "Роутеры": 17,
+          "Рюкзаки": 6,
+          "Саундбары": 1,
+          "Светильники": 2,
+          "Светодиодные ленты": 3,
+          "Сетевые фильтры": 1,
+          "Системы видеонаблюдения": 1,
+          "Системы умный дом": 21,
+          "Смарт-часы": 60,
+          "Смартфоны": 835,
+          "Стиральные машины": 1,
+          "Телевизоры": 50,
+          "Тепловентиляторы": 2,
+          "Термопоты": 1,
+          "Тостеры": 1,
+          "Триммеры": 2,
+          "Увлажнители": 4,
+          "Умные весы": 2,
+          "Умные лампочки": 2,
+          "Умные розетки": 3,
+          "Умные светильники": 4,
+          "Усилители Wi-Fi сигнала": 4,
+          "Фены": 7,
+          "Фильтры для поилки": 3,
+          "Фильтры для пылесосов": 14,
+          "Фитнес-браслеты": 45,
+          "Фотобумага": 9,
+          "Чайники электрические": 9,
+          "Чемоданы": 9,
+          "Чехлы для ноутбуков": 3,
+          "Щетки для робот-пылесосов": 10,
+          "Электрические зубные щетки": 10,
+          "Электросамокаты": 7
+        },
+        "confirmed_exact_urls_on_record": [],
+        "current_unit_status_counts": {
+          "identity_conflict": 56,
+          "needs_product_page_fixture": 1688
+        },
+        "discovery_route": "structural_only",
+        "family": "xiaomi_global",
+        "fixture_level": "structural_partial",
+        "fixture_missing_layers": [
+          "specifications"
+        ],
+        "hosts": [
+          "mi.com"
+        ],
+        "moves_to_after_adapter": "adapter_url_missing",
+        "prerequisites": [
+          "Product page fixture(s) covering: specifications.",
+          "A negative variant fixture (wrong region/colour/suffix) per category in scope.",
+          "An exact product URL per row from a human, or a confirmed discovery route; URLs are never guessed."
+        ]
+      }
+    ],
+    "readiness_criteria": [
+      {
+        "id": "identity_exact",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "Exact identity: the adapter returns exact_variant only when the page's own code equals the catalog code including region/service suffix; base_code_confirmed or family_only otherwise."
+      },
+      {
+        "id": "variants_positive_negative",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "At least one positive and one negative (wrong colour/region/size/suffix) variant fixture per category in scope; the negative never becomes exact_variant."
+      },
+      {
+        "id": "specifications",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "Specifications extracted as name/value pairs, each with source URL and evidence; unit and value are not rewritten."
+      },
+      {
+        "id": "gallery_complete",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "The full gallery that belongs to this exact variant is captured; images of other variants, banners and icons are excluded with a recorded reason."
+      },
+      {
+        "id": "documents_evidence",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "A document is attached only from a direct link whose content or page names the exact model; regulatory papers are not instructions; absence is stated as a gap, not filled from a neighbour model."
+      },
+      {
+        "id": "run_once_offline",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "worker.run_once() replays a catalog row offline against saved fixtures and finishes done or needs_review with the expected reason for every fixture."
+      },
+      {
+        "id": "checkpoint_resume",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "The coverage executor saves a checkpoint per row, and a second pass over the same checkpoint makes no new calls and repeats no completed row."
+      },
+      {
+        "id": "policy_fetch",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "Every fetch goes through PolicyAwareFetcher (allowlist, redirect checks, budget, persisted log); a recorded 401/403/429/challenge stops the host across a restart."
+      },
+      {
+        "id": "coverage_delta",
+        "scope": "xiaomi_global: 91 categories, 1688 units",
+        "text": "`python -m product_tool.coverage delta` against the pre-adapter plan shows the promised movement out of the wave's source statuses and no unit moving into ready_to_run without a positive fixture."
+      }
+    ],
+    "shared_primitives": [
+      "media/gallery extractor (all four confirmed)"
+    ],
+    "stays_separate": [
+      "identity",
+      "specifications extraction (unproven for all four)"
+    ],
+    "template_source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3",
+    "wave_id": "W1-B"
+  },
+  {
+    "expected_gain": {
+      "adapter_coverage_pairs": 5,
+      "adapter_coverage_pct": 0.25,
+      "adapter_coverage_units": 42,
+      "reading": "Landing the adapter moves adapter_coverage_units out of official_route_no_adapter / needs_product_page_fixture. They become ready_to_run only where an exact URL is on record (guaranteed) or the family's discovery route is confirmed (upper bound); otherwise they wait as adapter_url_missing. Nothing counts as ready before a positive fixture passes the criteria.",
+      "ready_guaranteed_by_urls_on_record_units": 0,
+      "ready_if_every_exact_url_is_supplied_units": 42,
+      "ready_via_confirmed_discovery_route_pct": 0.0,
+      "ready_via_confirmed_discovery_route_units": 0
+    },
+    "families": [
+      "dreame"
+    ],
+    "group_id": "C",
+    "group_title": "discovery + identity + documents confirmed; specifications and media missing",
+    "later_wave_families": [],
+    "measure_with": "python -m product_tool.coverage delta --before <coverage_units.jsonl before> --after <coverage_units.jsonl after>",
+    "per_family": [
+      {
+        "addressable_pairs": 5,
+        "addressable_units": 42,
+        "categories_in_scope": {
+          "Аэрогрили": 2,
+          "Мультистайлеры": 1,
+          "Пылесосы": 22,
+          "Роботы-пылесосы": 15,
+          "Увлажнители": 2
+        },
+        "confirmed_exact_urls_on_record": [],
+        "current_unit_status_counts": {
+          "needs_product_page_fixture": 42
+        },
+        "discovery_route": "structural_only",
+        "family": "dreame",
+        "fixture_level": "structural_partial",
+        "fixture_missing_layers": [
+          "specifications",
+          "media"
+        ],
+        "hosts": [
+          "de.dreametech.com",
+          "global.dreametech.com",
+          "www.dreametech.com"
+        ],
+        "moves_to_after_adapter": "adapter_url_missing",
+        "prerequisites": [
+          "Product page fixture(s) covering: specifications, media.",
+          "A negative variant fixture (wrong region/colour/suffix) per category in scope.",
+          "An exact product URL per row from a human, or a confirmed discovery route; URLs are never guessed."
+        ]
+      }
+    ],
+    "readiness_criteria": [
+      {
+        "id": "identity_exact",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "Exact identity: the adapter returns exact_variant only when the page's own code equals the catalog code including region/service suffix; base_code_confirmed or family_only otherwise."
+      },
+      {
+        "id": "variants_positive_negative",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "At least one positive and one negative (wrong colour/region/size/suffix) variant fixture per category in scope; the negative never becomes exact_variant."
+      },
+      {
+        "id": "specifications",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "Specifications extracted as name/value pairs, each with source URL and evidence; unit and value are not rewritten."
+      },
+      {
+        "id": "gallery_complete",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "The full gallery that belongs to this exact variant is captured; images of other variants, banners and icons are excluded with a recorded reason."
+      },
+      {
+        "id": "documents_evidence",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "A document is attached only from a direct link whose content or page names the exact model; regulatory papers are not instructions; absence is stated as a gap, not filled from a neighbour model."
+      },
+      {
+        "id": "run_once_offline",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "worker.run_once() replays a catalog row offline against saved fixtures and finishes done or needs_review with the expected reason for every fixture."
+      },
+      {
+        "id": "checkpoint_resume",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "The coverage executor saves a checkpoint per row, and a second pass over the same checkpoint makes no new calls and repeats no completed row."
+      },
+      {
+        "id": "policy_fetch",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "Every fetch goes through PolicyAwareFetcher (allowlist, redirect checks, budget, persisted log); a recorded 401/403/429/challenge stops the host across a restart."
+      },
+      {
+        "id": "coverage_delta",
+        "scope": "dreame: 5 categories, 42 units",
+        "text": "`python -m product_tool.coverage delta` against the pre-adapter plan shows the promised movement out of the wave's source statuses and no unit moving into ready_to_run without a positive fixture."
+      }
+    ],
+    "shared_primitives": [],
+    "stays_separate": [
+      "n=1: nothing to generalise yet"
+    ],
+    "template_source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3",
+    "wave_id": "W1-C"
+  },
+  {
+    "expected_gain": {
+      "adapter_coverage_pairs": 40,
+      "adapter_coverage_pct": 7.88,
+      "adapter_coverage_units": 1330,
+      "reading": "Landing the adapter moves adapter_coverage_units out of official_route_no_adapter / needs_product_page_fixture. They become ready_to_run only where an exact URL is on record (guaranteed) or the family's discovery route is confirmed (upper bound); otherwise they wait as adapter_url_missing. Nothing counts as ready before a positive fixture passes the criteria.",
+      "ready_guaranteed_by_urls_on_record_units": 1,
+      "ready_if_every_exact_url_is_supplied_units": 1330,
+      "ready_via_confirmed_discovery_route_pct": 7.88,
+      "ready_via_confirmed_discovery_route_units": 1330
+    },
+    "families": [
+      "samsung",
+      "playstation",
+      "microsoft"
+    ],
+    "group_id": "D",
+    "group_title": "full-value cards exist outside the structural census; each has its own identity strategy",
+    "later_wave_families": [
+      "razer"
+    ],
+    "measure_with": "python -m product_tool.coverage delta --before <coverage_units.jsonl before> --after <coverage_units.jsonl after>",
+    "per_family": [
+      {
+        "addressable_pairs": 31,
+        "addressable_units": 1182,
+        "categories_in_scope": {
+          "Flash-накопители": 9,
+          "GPS-трекеры": 3,
+          "Варочные панели": 7,
+          "Внешние SSD-накопители": 5,
+          "Внутренние SSD-накопители": 35,
+          "Гарнитуры": 4,
+          "Духовые шкафы": 9,
+          "Зарядные устройства": 10,
+          "Кабели": 10,
+          "Карты памяти": 5,
+          "Колонки": 4,
+          "МФУ": 1,
+          "Машины посудомоечные": 6,
+          "Микроволновые печи": 58,
+          "Мониторы": 23,
+          "Музыкальные проигрыватели": 1,
+          "Наушники беспроводные": 3,
+          "Оперативная память": 5,
+          "Планшеты": 39,
+          "Проекторы": 1,
+          "Пылесосы": 74,
+          "Роботы-пылесосы": 2,
+          "Саундбары": 20,
+          "Смарт-часы": 18,
+          "Смартфоны": 286,
+          "Сплит-системы": 8,
+          "Стиральные машины": 59,
+          "Сушильные машины": 5,
+          "Телевизоры": 451,
+          "Фитнес-браслеты": 2,
+          "Холодильники": 19
+        },
+        "confirmed_exact_urls_on_record": [
+          {
+            "seller_sku": "MS23K3614AK/BW",
+            "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/"
+          }
+        ],
+        "current_unit_status_counts": {
+          "official_route_no_adapter": 1182
+        },
+        "discovery_route": "sitemap_or_catalog_feed",
+        "family": "samsung",
+        "fixture_level": "full_value",
+        "fixture_missing_layers": [],
+        "hosts": [
+          "samsung.com",
+          "www.samsung.com"
+        ],
+        "moves_to_after_adapter": "ready_to_run",
+        "prerequisites": [
+          "A negative variant fixture (wrong region/colour/suffix) per category in scope."
+        ]
+      },
+      {
+        "addressable_pairs": 3,
+        "addressable_units": 103,
+        "categories_in_scope": {
+          "Геймпады": 33,
+          "Диски с играми": 64,
+          "Игровые консоли": 6
+        },
+        "confirmed_exact_urls_on_record": [],
+        "current_unit_status_counts": {
+          "official_route_no_adapter": 103
+        },
+        "discovery_route": "category_page_to_product_page",
+        "family": "playstation",
+        "fixture_level": "full_value",
+        "fixture_missing_layers": [],
+        "hosts": [
+          "playstation.com"
+        ],
+        "moves_to_after_adapter": "ready_to_run",
+        "prerequisites": [
+          "A negative variant fixture (wrong region/colour/suffix) per category in scope."
+        ]
+      },
+      {
+        "addressable_pairs": 6,
+        "addressable_units": 45,
+        "categories_in_scope": {
+          "Адаптеры": 1,
+          "Аксессуары для геймпадов": 2,
+          "Геймпады": 27,
+          "Игровые консоли": 13,
+          "Мыши": 1,
+          "Наушники игровые": 1
+        },
+        "confirmed_exact_urls_on_record": [],
+        "current_unit_status_counts": {
+          "official_route_no_adapter": 45
+        },
+        "discovery_route": "product_store_page",
+        "family": "microsoft",
+        "fixture_level": "full_value",
+        "fixture_missing_layers": [],
+        "hosts": [
+          "support.microsoft.com"
+        ],
+        "moves_to_after_adapter": "ready_to_run",
+        "prerequisites": [
+          "A negative variant fixture (wrong region/colour/suffix) per category in scope."
+        ]
+      }
+    ],
+    "readiness_criteria": [
+      {
+        "id": "identity_exact",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "Exact identity: the adapter returns exact_variant only when the page's own code equals the catalog code including region/service suffix; base_code_confirmed or family_only otherwise."
+      },
+      {
+        "id": "variants_positive_negative",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "At least one positive and one negative (wrong colour/region/size/suffix) variant fixture per category in scope; the negative never becomes exact_variant."
+      },
+      {
+        "id": "specifications",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "Specifications extracted as name/value pairs, each with source URL and evidence; unit and value are not rewritten."
+      },
+      {
+        "id": "gallery_complete",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "The full gallery that belongs to this exact variant is captured; images of other variants, banners and icons are excluded with a recorded reason."
+      },
+      {
+        "id": "documents_evidence",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "A document is attached only from a direct link whose content or page names the exact model; regulatory papers are not instructions; absence is stated as a gap, not filled from a neighbour model."
+      },
+      {
+        "id": "run_once_offline",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "worker.run_once() replays a catalog row offline against saved fixtures and finishes done or needs_review with the expected reason for every fixture."
+      },
+      {
+        "id": "checkpoint_resume",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "The coverage executor saves a checkpoint per row, and a second pass over the same checkpoint makes no new calls and repeats no completed row."
+      },
+      {
+        "id": "policy_fetch",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "Every fetch goes through PolicyAwareFetcher (allowlist, redirect checks, budget, persisted log); a recorded 401/403/429/challenge stops the host across a restart."
+      },
+      {
+        "id": "coverage_delta",
+        "scope": "samsung: 31 categories, 1182 units; playstation: 3 categories, 103 units; microsoft: 6 categories, 45 units",
+        "text": "`python -m product_tool.coverage delta` against the pre-adapter plan shows the promised movement out of the wave's source statuses and no unit moving into ready_to_run without a positive fixture."
+      }
+    ],
+    "shared_primitives": [],
+    "stays_separate": [
+      "identity: Samsung JSON-LD + sitemap, PlayStation microdata, Microsoft store gallery, Razer blocked"
+    ],
+    "template_source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3",
+    "wave_id": "W1-D"
+  }
+]

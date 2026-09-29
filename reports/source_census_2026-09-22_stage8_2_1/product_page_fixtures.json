@@ -1,0 +1,86 @@
+[
+  {
+    "source_family": "samsung",
+    "profile_id": "samsung_kz_02d9e6",
+    "catalog_sample_ref": "Not the targeted catalog SKU -- current-generation (2025) flagship, catalog rows are 2020-2022 models",
+    "url": "https://www.samsung.com/kz_ru/smartphones/galaxy-s25-ultra/",
+    "discovery_route": "first-party navigation: kz_ru homepage (offline, 0 requests) -> smartphones/all-smartphones category page -> product/buy link",
+    "product_page_fixture_result": "candidate",
+    "catalog_identity_result": "insufficient",
+    "identity_reasoning": "Page text confirms the marketing model name and \"Samsung\" (identity_term_matches all true), but zero JSON-LD Product objects and zero microdata Product nodes were found in the static HTML -- the same client-side-rendering gap already seen on LG.com/kz in Stage 8.2. No code_fields (sku/mpn/gtin), no color, no memory variant are exposed statically, so this cannot be compared to the catalog rows (Galaxy S20 FE 128GB ZRD, Galaxy Z Fold3 5G 512GB ZGG) at all -- and even if it could, this is a different, current-generation model line, not the catalog-targeted one.",
+    "structure_summary": {
+      "is_product_page": false,
+      "identity": {
+        "json_paths": [],
+        "microdata_properties": [],
+        "code_fields": [],
+        "variant_fields": [],
+        "model_semantics": "marketing_name_only"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "media_json_paths": [],
+      "media_dom": [
+        "responsive_srcset"
+      ],
+      "docs": {
+        "link_schema": [],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "product_objects=0: Samsung.com/kz_ru appears to use at least two different page templates -- the TV/audio-sound template (Stage 8.2, JSON-LD Product with .name/.sku) and the smartphone family/buy template (this stage, no static structured data at all).",
+      "Galaxy family or marketing name matching text alone is explicitly not treated as exact_model, per instructions."
+    ],
+    "next_safe_route": "Manual review / embedded-state extraction research (out of this stage's scope, same architectural gap as LG); not a further network search on this route."
+  },
+  {
+    "source_family": "samsung",
+    "profile_id": "samsung_kz_02d9e6",
+    "catalog_sample_ref": "Not the targeted catalog SKU -- current-generation (2026) flagship, catalog rows are 2020-2022 models",
+    "url": "https://www.samsung.com/kz_ru/smartphones/galaxy-s26-ultra/buy/",
+    "discovery_route": "first-party navigation: kz_ru homepage (offline, 0 requests) -> smartphones/all-smartphones category page -> product/buy link",
+    "product_page_fixture_result": "candidate",
+    "catalog_identity_result": "insufficient",
+    "identity_reasoning": "Page text confirms the marketing model name and \"Samsung\" (identity_term_matches all true), but zero JSON-LD Product objects and zero microdata Product nodes were found in the static HTML -- the same client-side-rendering gap already seen on LG.com/kz in Stage 8.2. No code_fields (sku/mpn/gtin), no color, no memory variant are exposed statically, so this cannot be compared to the catalog rows (Galaxy S20 FE 128GB ZRD, Galaxy Z Fold3 5G 512GB ZGG) at all -- and even if it could, this is a different, current-generation model line, not the catalog-targeted one.",
+    "structure_summary": {
+      "is_product_page": false,
+      "identity": {
+        "json_paths": [],
+        "microdata_properties": [],
+        "code_fields": [],
+        "variant_fields": [],
+        "model_semantics": "marketing_name_only"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "media_json_paths": [],
+      "media_dom": [
+        "responsive_srcset"
+      ],
+      "docs": {
+        "link_schema": [],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "product_objects=0: Samsung.com/kz_ru appears to use at least two different page templates -- the TV/audio-sound template (Stage 8.2, JSON-LD Product with .name/.sku) and the smartphone family/buy template (this stage, no static structured data at all).",
+      "Galaxy family or marketing name matching text alone is explicitly not treated as exact_model, per instructions."
+    ],
+    "next_safe_route": "Manual review / embedded-state extraction research (out of this stage's scope, same architectural gap as LG); not a further network search on this route."
+  }
+]

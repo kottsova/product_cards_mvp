@@ -1,0 +1,60 @@
+{
+  "purpose": "Stage 13 offline audit of Stage 12 Part B's razer.com requests -- reconstructs exact order and (where available) timestamps, and marks the point after which every further request to www.razer.com violated this project's own host-stop policy.",
+  "policy_reference": {
+    "module": "product_tool/census/endpoint_probe.py",
+    "mechanism": "AccessProbe.probe(): on an HTTP 403/429 response, the response host is added to self._stopped_hosts (endpoint_probe.py lines ~264-268 for 403, ~251-262 for 429). Every subsequent probe() call whose URL host is in _stopped_hosts short-circuits with AccessStatus.CAPTCHA_OR_BLOCKED and error 'Endpoint probing stopped after a protection response' -- zero network calls.",
+    "existing_test_proving_this": "tests/test_source_census.py::SafeProbeTests.test_403_stops_repeated_request_to_endpoint",
+    "root_cause_of_the_violation": "Stage 12 Part B did NOT use AccessProbe at all. It made five raw requests.Session().get() calls directly from ad-hoc Python one-liners run via the Bash tool, entirely bypassing the project's own stop-after-block enforcement. AccessProbe existed in the codebase the whole time and was not used."
+  },
+  "requests_in_execution_order": [
+    {
+      "seq": 1,
+      "url": "https://www.razer.com/robots.txt",
+      "status_code": 403,
+      "timestamp": "not recorded at the time; this is the BLOCK EVENT -- ordering is authoritative (first request made), exact wall-clock time is not reconstructable beyond 'between the catalog-row selection at 2026-09-23T16:34:27+04:00 and the first scratch-file write at 2026-09-23T16:37:14+04:00'",
+      "classification": "BLOCK_EVENT",
+      "note": "Large (669719 byte) bot-challenge HTML page, not a real robots.txt. This is the response that, per AccessProbe's own rule, must stop every further request to www.razer.com for the remainder of this run."
+    },
+    {
+      "seq": 2,
+      "url": "https://www.razer.com/",
+      "status_code": 200,
+      "timestamp": "not individually recorded (between seq 1 and the seq-4 refetch of the same URL at 16:37:14+04:00); this request's own response body was not persisted, only its status/byte-count were noted at the time",
+      "classification": "POLICY_VIOLATION",
+      "note": "Made AFTER the seq-1 block. Under AccessProbe this would never have been attempted -- host was already stopped."
+    },
+    {
+      "seq": 3,
+      "url": "https://www.razer.com/shop/gear-and-apparel/apparel-shirts",
+      "status_code": 200,
+      "timestamp": "not individually recorded; between seq 2 and seq 4",
+      "classification": "POLICY_VIOLATION",
+      "note": "Made AFTER the seq-1 block. Same violation."
+    },
+    {
+      "seq": 4,
+      "url": "https://www.razer.com/",
+      "status_code": 200,
+      "timestamp": "2026-09-23T16:37:14+04:00 (file mtime of the saved scratch copy, razer_homepage.html)",
+      "classification": "POLICY_VIOLATION",
+      "note": "Re-fetch of the homepage specifically to parse its own <a href> links. Made AFTER the seq-1 block. This is the request whose content was used to 'discover' the /gaming-mice/razer-deathadder-v3 link -- so even the DISCOVERY of the product page traces back to a policy-violating request."
+    },
+    {
+      "seq": 5,
+      "url": "https://www.razer.com/gaming-mice/razer-deathadder-v3",
+      "status_code": 200,
+      "timestamp": "2026-09-23T16:37:39+04:00 (file mtime of the saved scratch copy, razer_deathadder_v3.html)",
+      "classification": "POLICY_VIOLATION",
+      "note": "The Product page fetch itself. Made AFTER the seq-1 block, and reached via a link found in the also-post-block seq-4 fetch. ALL identity/characteristics/image/description data Stage 12's report drew from this response is downstream of a policy violation."
+    }
+  ],
+  "timestamp_reconstruction_limitation": "Stage 12 did not log request timestamps in its own fetch log (raw/partb_fetch_log.json only recorded 'seq' order, not wall-clock time). Precise timestamps exist only for the two requests whose response bodies were saved to the session scratch directory (seq 4 and seq 5, via OS file mtimes). Seq 1-3's exact times are not reconstructable; only their ORDER (from the literal sequence of tool calls in the session transcript, which is authoritative) is certain. This limitation is itself part of what going through AccessProbe would have fixed: ProbeResult.checked_at records a UTC timestamp on every call.",
+  "conclusion": {
+    "block_point": "seq 1 (robots.txt, HTTP 403)",
+    "requests_after_block_point": [2, 3, 4, 5],
+    "all_requests_after_block_point_are_policy_violations": true,
+    "downgrade": "Every identity/characteristics/image/description finding in reports/source_census_2026-09-23_stage12/raw/partb_razer_deathadder_v3_evidence.json was obtained from seq 4/5, both post-block. This data is NOT a confirmed result of an authorized/compliant pipeline run. It must not be cited as evidence that a Razer adapter works, that www.razer.com is currently an open route, or that the identity match is production-grade. It is downgraded in this stage's readiness table to 'host currently stopped, prior discovery invalid under policy, re-verification pending.'",
+    "m1_vs_u1_suffix": "Left unresolved, as instructed. Not investigated further this stage (no new requests were made)."
+  },
+  "old_report_treatment": "reports/source_census_2026-09-23_stage12/report.md and its raw/ JSON files are NOT edited -- kept exactly as originally written, as the historical record of what was actually done (including the mistake). This audit file and reports/source_census_2026-09-23_stage13/report.md are the correction, layered on top, not a rewrite of history."
+}

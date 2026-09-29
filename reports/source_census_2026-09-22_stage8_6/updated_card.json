@@ -1,0 +1,107 @@
+{
+  "schema_version": "stage8_6_updated_card.v1",
+  "item": "Samsung MS23K3614AK/BW (microwave oven, Solo)",
+  "catalog_row": {
+    "seller_article": "MS23K3614AK/BW",
+    "catalog_name": "Микроволновая печь MS23K3614AK/BW",
+    "catalog_alt_name": "Микроволновая печь MS23K3614AK/BW, 23 л | Микроволновая печь Samsung MS23K3614AK/BW"
+  },
+  "fields": {
+    "brand": {
+      "value": "Samsung",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "JSON-LD Product.brand.name = 'Samsung'"
+    },
+    "model_name": {
+      "value": "23 Л Микроволновая печь Соло БИО-Керамическое покрытие",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "JSON-LD Product.name + <title> tag"
+    },
+    "manufacturer_model_code": {
+      "value": "MS23K3614AK/BW",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "JSON-LD Product.sku, exact match to catalog seller_article (independent source) and to the manual URL's ModelName parameter (independent source, linkage-only)"
+    },
+    "color": {
+      "value": "Черный (Black)",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "HTML <title> tag, not URL text"
+    },
+    "volume": {
+      "value": "23 л",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "Body text label+value, corroborated by title/JSON-LD/catalog alt-name"
+    },
+    "power_consumption": {
+      "value": "1150 Вт",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "Body text label+value"
+    },
+    "output_power": {
+      "value": "800 Вт",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "Body text label+value"
+    },
+    "official_image": {
+      "value": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "status": "confirmed",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "evidence": "Advertised srcset on product page, model+color in filename, live-verified as a real 491KB PNG this stage"
+    },
+    "instruction_manual": {
+      "value": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "status": "confirmed_by_content",
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "evidence": "Full 10,572,005-byte file assembled via bounded HTTP Range requests (8 parts, all matching ETag/Last-Modified, size verified against Content-Range total). Parsed cleanly as an 80-page PDF. Content confirms: (1) it is a user manual ('Руководство пользователя' on the cover page), (2) the exact catalog model code 'MS23K3614AK_BW' appears 20 times per language section in an embedded production filename footer (80 occurrences total), stronger than the cover's 'MS23K3614A*' family wildcard alone, (3) all 4 languages the filename claimed (RU-UK-KK-UZ) are genuinely present as real prose content, confirmed page-by-page.",
+      "pages": 80,
+      "languages_confirmed_by_content": [
+        "Russian (pages 1-19)",
+        "Ukrainian (pages 20-39)",
+        "Kazakh (pages 40-59)",
+        "Uzbek (pages 60-79)"
+      ]
+    }
+  },
+  "identity_result": "exact_variant",
+  "identity_result_reasoning": "Model code confirmed via 3 independent sources (JSON-LD sku, exact catalog article match, manual URL ModelName parameter) and color confirmed via on-page <title> text (not URL). This exceeds the exact_model bar and satisfies exact_variant.",
+  "manual_confirmed_by_content": true,
+  "manual_confirmed_by_content_note": "Reversed from Stage 8.5's 'not confirmed' -- the full file was obtained this stage via bounded Range-based assembly and its content was read directly.",
+  "russian_language_confirmed": true,
+  "russian_language_confirmed_note": "Confirmed by content this stage: pages 1-19 are a complete, readable Russian-language manual section, not inferred from the filename.",
+  "specifications_status": "partial -- 3 confirmed values (volume, 2 power figures) plus color and oven type; 6 additional characteristics have a confirmed label but no confirmed value (see specs_completeness.json)",
+  "missing_characteristics": [
+    "Physical weight (net and packaged)",
+    "Physical dimensions (WxHxD)",
+    "Turntable diameter",
+    "Control type/interface",
+    "Auto-program and power-level counts",
+    "Full defrost mode list"
+  ],
+  "export_readiness": {
+    "status": "ready_with_minor_gaps",
+    "ready_fields": [
+      "brand",
+      "model_name",
+      "manufacturer_model_code",
+      "color",
+      "volume",
+      "power_consumption",
+      "output_power",
+      "official_image",
+      "instruction_manual"
+    ],
+    "blocking_or_flagged_gaps": [
+      "6 physical/control characteristics (weight, dimensions, turntable diameter, control type, auto-program/power-level counts, defrost mode list) still have no confirmed value -- unchanged from Stage 8.5, not addressed this stage (out of this stage's scope, which was the document-verification capability only)."
+    ],
+    "recommendation": "The instruction-manual gap that previously blocked full confidence is now closed with genuine content evidence. The card can be exported with the 9 confirmed fields; the 6 missing physical characteristics remain an explicitly flagged, non-blocking gap."
+  },
+  "supersedes": "reports/source_census_2026-09-22_stage8_5/card.json (unmodified; this is a new, separate artifact)"
+}

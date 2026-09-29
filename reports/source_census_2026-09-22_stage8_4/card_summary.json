@@ -1,0 +1,31 @@
+{
+  "schema_version": "stage8_4_card_summary.v1",
+  "pilot_scope": "1 catalog-matched item: Samsung MS23K3614AK/BW microwave oven. Galaxy Buds3 FE has no catalog row (see buds3fe_catalog_check.json) and is not re-worked here. S20 FE / Z Fold3 / N5300 not revisited.",
+  "items": [
+    {
+      "item": "Samsung MS23K3614AK/BW (microwave oven)",
+      "catalog_identity": "Exact match: seller_article 'MS23K3614AK/BW', catalog name 'Микроволновая печь MS23K3614AK/BW', alt name includes '23 л' -- independently confirmed by the official page's own volume spec.",
+      "official_url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "page_type": "Product page (JSON-LD Product confirmed)",
+      "model_variant_status": "exact_variant",
+      "model_variant_status_reasoning": "Model code (MS23K3614AK/BW) confirmed via JSON-LD sku, exactly matching the catalog row AND the manual's ModelName parameter (3 independent sources). Color (Black/Черный) confirmed via on-page <title> text, not URL. Both model and the variant-defining color field are independently on-page confirmed.",
+      "specifications": "Partial: volume (23 l), input power (1150 W), output power (800 W) confirmed via body text with labels and units. No exhaustive spec sheet reached.",
+      "images": "1 official image confirmed: 1164x776 PNG, images.samsung.com, largest explicitly advertised srcset candidate.",
+      "instruction_manual": "Found and confirmed reachable: a genuine, first-party User Manual PDF (Samsung's own CDCttType=UM code), model-linked via the URL's own ModelName parameter, confirmed as real PDF content via magic-byte check.",
+      "instruction_language": "Multi-language filename listing RU-UK-KK-UZ, Russian first -- inferred from Samsung's own filename/query-parameter convention, not from parsing the PDF's internal text (no PDF text-extraction capability in the current pipeline).",
+      "evidence_reference": "evidence.json#fields",
+      "gaps": [
+        "No exhaustive specifications table (dimensions, weight, turntable size, control type not confirmed)",
+        "Manual's internal-page language not verified by opening/parsing the PDF itself, only by first-party filename/query-parameter evidence",
+        "Regional suffix meaning in the sku (the 'BW' portion) not independently decoded beyond its presence in the sku/catalog fields"
+      ],
+      "conflicts": [],
+      "card_export_readiness": "mostly_ready -- identity (exact_variant, catalog-matched), one official image, a partial-but-real spec set, and a confirmed-reachable model-linked manual are all evidence-backed and export-ready. Only spec completeness and manual-language depth remain open, non-blocking gaps."
+    }
+  ],
+  "buds3fe_status": {
+    "item": "Galaxy Buds3 FE",
+    "catalog_identity": "No matching row found in data/catalog_2026-09-21_filtered.xlsx (offline check, see buds3fe_catalog_check.json).",
+    "disposition": "Stage 8.3's evidence stands unchanged as a verified official-source fixture (exact_variant identity, 1 image, no manual found) without a catalog-linked card. No new requests were made for this item this stage."
+  }
+}

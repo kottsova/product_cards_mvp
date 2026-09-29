@@ -1,0 +1,201 @@
+{
+  "stage": "11.1",
+  "scope": "Re-audit of 9A273AA image/identity evidence, plus a scoped HyperX adapter-repeatability check across 2 additional catalog rows (keyboard, mouse). No other brand.",
+  "quadcast_2s_9A273AA": {
+    "identity_confirmation_corrected": "The catalog seller article 9A273AA matches ONE extracted value (the page's Product.sku, which schema.org also mirrors onto .offers.sku by convention) from ONE official page fetch. This is still a genuine, strong, exact-code-level match -- far stronger than the descriptive-consistency-only matches used for other brands in this project -- but it is one source, one document, one request, not two independent confirmations. Stage 11's underlying fact (the codes match) is unchanged; only the \"how many independent signals\" framing is corrected.",
+    "image_evidence_upgraded": {
+      "stage11_basis": "filename-substring match only (SKU string present in each CDN URL)",
+      "stage11_1_basis": "official host confirmed + byte integrity verified (Range-assembled, size matches declared Content-Range total) + actual visual content inspected",
+      "verified_images": [
+        {
+          "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+          "official_host_confirmed": true,
+          "byte_integrity": "complete",
+          "sha256": "000a36af757cfdd20363d2b382986a94700e4aaf52c78f1446cca1dd00b10f33",
+          "bytes": 530088,
+          "visual_content_confirmed": "Yes -- both fetched images show a black cylindrical microphone with an RGB-lit honeycomb grille, an \"HX\" HyperX logo, a shock-mount cradle, a gain/mute knob with headphone icon, and (angle_2) a USB-C port -- consistent with the QuadCast 2S Black described on the same page. Neither image shows an unrelated product or a different color."
+        },
+        {
+          "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289",
+          "official_host_confirmed": true,
+          "byte_integrity": "complete",
+          "sha256": "176020459e88c4d2b495ffbf49f2ddbd00589adb54ed29a1f549b5f79fe50bcf",
+          "bytes": 578352,
+          "visual_content_confirmed": "Yes -- both fetched images show a black cylindrical microphone with an RGB-lit honeycomb grille, an \"HX\" HyperX logo, a shock-mount cradle, a gain/mute knob with headphone icon, and (angle_2) a USB-C port -- consistent with the QuadCast 2S Black described on the same page. Neither image shows an unrelated product or a different color."
+        }
+      ],
+      "note": "Only 2 of the 9 known image URLs were fetched and inspected this stage (a small number, per instructions), not all 9. The other 7 remain filename-matched only, unless a future stage checks them the same way."
+    },
+    "manual_status_unchanged": "Unchanged from Stage 11: a Quick Start Guide is confirmed, by the official page's own text, to physically ship with this product. No online document or its language has been confirmed. This is not re-examined further this stage -- the task scope is the image-evidence re-audit and the adapter-repeatability question, not a renewed document search.",
+    "export_fields_unchanged_from_stage11": [
+      {
+        "field": "Бренд",
+        "value": "HyperX",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "JSON-LD Product.brand.name"
+      },
+      {
+        "field": "Модель",
+        "value": "HyperX QuadCast 2 S – USB Microphone",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "JSON-LD Product.name"
+      },
+      {
+        "field": "Цвет/вариант",
+        "value": "Black",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "JSON-LD Product.offers.name (\"...– USB Microphone - Black\")"
+      },
+      {
+        "field": "GTIN-12",
+        "value": "197961186741",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "JSON-LD Product.gtin12 and Product.offers.gtin12 (identical)"
+      },
+      {
+        "field": "Element (капсюли)",
+        "value": "Three 14 mm electret condenser capsules",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "Official \"Microphone Specifications\" table (DOM), read directly from the fetched page -- JSON-LD additionalProperty values were empty strings on this page, so this field was NOT sourced from the generic additionalProperty reader"
+      },
+      {
+        "field": "Polar Pattern",
+        "value": "Cardioid; Omnidirectional; Bidirectional; Stereo",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table"
+      },
+      {
+        "field": "Frequency Response",
+        "value": "20Hz - 20kHz",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table"
+      },
+      {
+        "field": "Sensitivity",
+        "value": "'-8 dBFS±4dB (94 dBSPL at1kHz, default volume)",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table",
+        "caveat": "Quoted byte-for-byte as published; the leading apostrophe-like character appears in the official source itself and was not corrected or guessed."
+      },
+      {
+        "field": "Self-noise (RMS)",
+        "value": "<-80dBV (A-weighted)",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table"
+      },
+      {
+        "field": "SNR",
+        "value": "≥ 90dB (at 1kHz/0dBFS, A-weighted)",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table"
+      },
+      {
+        "field": "Connection Type",
+        "value": "USB-C; 3.5mm headphone output",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table"
+      },
+      {
+        "field": "Weight",
+        "value": "Microphone 0.76 lb; Shock mount and stand 0.31 lb; Microphone stand 0.59 lb; Total weight 1.84 lb (with USB cable)",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table, \"Physical Specifications\" section"
+      },
+      {
+        "field": "What's In The Box",
+        "value": "HyperX QuadCast 2 S USB Microphone, 3m USB-C to USB-C cable, USB-C to USB-A adapter, Quick Start Guide",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table -- confirms a Quick Start Guide is physically included, see manual_search below"
+      },
+      {
+        "field": "Warranty",
+        "value": "2 years",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "same official spec table"
+      },
+      {
+        "field": "Изображение (главное)",
+        "value": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "JSON-LD Product.offers.image + og:image meta tag, both declaring 4000x4000 -- the largest explicitly advertised size, per the media_resolution_rule; filename itself embeds the exact SKU \"9a273aa\""
+      },
+      {
+        "field": "Изображения (доп. ракурсы)",
+        "value": 8,
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+        "evidence": "angle_2 through angle_9, each filename embedding the same SKU \"9a273aa\", found via DOM srcset attributes on the confirmed page"
+      }
+    ],
+    "export_readiness_unchanged": "not_ready_pending_manual_confirmation"
+  },
+  "additional_catalog_rows_checked": {
+    "keyboard": {
+      "catalog_row": {
+        "row_number": 6975,
+        "Бренд": "HYPERX",
+        "Категория": "Клавиатуры",
+        "Артикул продавца": "7G7A4AA#ACB",
+        "Артикулы WB": "642351174",
+        "Наименование": "Проводная клавиатура для ПК Alloy Rise 75 (Red switch) (RU)",
+        "Альтернативные наименования": null,
+        "ТНВЭД": null,
+        "Повторов в выгрузках": 1
+      },
+      "discovery_method": "Found via https://hyperx.com/collections/gaming-keyboards, an already-known nav link from the microphone product page fixture -- not guessed.",
+      "candidate_url": "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard",
+      "identity_check": {
+        "catalog_seller_article": "7G7A4AA#ACB",
+        "official_page_sku": "7G7A4AA#ABA",
+        "exact_match": false,
+        "base_code_match": true,
+        "mismatch_detail": "Catalog row names this the (RU) market variant (suffix #ACB). The fetched official page's own additionalProperty explicitly states 'Keyboard Layout: US Layout' and its offer name reads 'HyperX Alloy Rise 75 – Mechanical Gaming Keyboard - Black / US Layout / HyperX Red - Linear' -- suffix #ABA. Same base model code (7G7A4AA), different regional/layout suffix. This is a real, evidenced identity GAP, not a confirmed match -- no RU-specific hyperx.com page was found, and none was guessed to paper over the gap.",
+        "conclusion": "model_line_confirmed_exact_regional_variant_not_confirmed"
+      }
+    },
+    "mouse": {
+      "catalog_row": {
+        "row_number": 6988,
+        "Бренд": "HYPERX",
+        "Категория": "Мыши",
+        "Артикул продавца": "A1KY6AA",
+        "Артикулы WB": "555453398",
+        "Наименование": "Беспроводная мышь Pulsefire Fuse",
+        "Альтернативные наименования": null,
+        "ТНВЭД": null,
+        "Повторов в выгрузках": 1
+      },
+      "discovery_method": "Found via https://hyperx.com/collections/gaming-mice, an already-known nav link from the microphone product page fixture -- not guessed.",
+      "candidate_url": "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse",
+      "identity_check": {
+        "catalog_seller_article": "A1KY6AA",
+        "official_page_sku": "A1KY6AA",
+        "exact_match": true,
+        "conclusion": "confirmed_by_exact_code_match"
+      }
+    }
+  },
+  "hyperx_adapter_status": {
+    "scope_statement": "HyperX (hyperx.com, Shopify) has now been checked live on 3 real product pages covering 3 different peripheral types (USB microphone, mechanical keyboard, wireless mouse), plus 2 earlier sanitized-fixture-only samples (a gaming headset and a keyboard+mouse bundle, Stage 8/8.1) that yielded no retained values by design.",
+    "confirmed_compatible_primitive_field_shape_across_3_live_pages": [
+      "JSON-LD Product with .sku/.productID/.gtin12 (identity field SHAPE only)",
+      "JSON-LD Product.additionalProperty array (specification field SHAPE only -- NOT its value population, see below)",
+      "JSON-LD Product.image with explicit width/height (media field AND value, reliable)",
+      "A DOM specifications table (<td class=\"specs-label\">/<td class=\"specs-value\">) -- reliable VALUE source on all 3 pages"
+    ],
+    "confirmed_page_specific_not_a_shared_guarantee": [
+      "additionalProperty VALUE population: empty on the microphone, 1/5 populated on the mouse, 6/10 populated on the keyboard -- the reader must check each page for non-empty values rather than assume them",
+      "Exact catalog-row SKU match: confirmed on 2/3 checked rows (microphone, mouse); the keyboard's catalog row is a different regional/layout variant (RU vs the fetched page's US layout) -- not confirmed, not papered over"
+    ],
+    "corrected_from_stage8_1": [
+      "The DOM \"responsive_srcset\" marker was treated in Stage 8.1 as a confirmed shared media primitive. Across all 3 live pages this project has now read in full, every genuine multi-width srcset belongs to the shared site logo, never a product photo -- product images are always single-URL. This marker should not be relied on for image resolution selection; the JSON-LD image.width/height is the reliable source instead."
+    ],
+    "documents_still_unconfirmed": "0 PDF links found across all 5 HyperX product pages examined project-wide (3 live, 2 sanitized-fixture-only). A stable negative pattern, not proof of universal absence.",
+    "adapter_verdict": "HyperX supports a repeatable EXTRACTION SHAPE (JSON-LD Product + a DOM specs table) confirmed across 3 independent peripheral categories -- this is a genuine, evidenced compatible_primitive at the structural level. It does NOT support a fully repeatable IDENTITY-to-catalog-row guarantee: 2 of 3 checked rows matched exactly by SKU, one did not (a real regional-variant gap, not a data problem). A generic adapter can therefore extract HyperX product data reliably, but each catalog row's exact variant match must still be verified individually -- the shared template is not itself proof of a correct row-to-page match."
+  },
+  "gaps": [
+    "7 of the 9 known QuadCast 2S images remain filename-matched only, not integrity/visually verified",
+    "Manual (Quick Start Guide) confirmed physically included; no online document or language confirmed for 9A273AA",
+    "Keyboard catalog row (7G7A4AA#ACB, RU layout) has no confirmed exact-match official page -- only the US-layout sibling (7G7A4AA#ABA) was found",
+    "Documents contract remains unconfirmed across the whole HyperX family sampled so far"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "clusters": [
+    {
+      "layer": "product_data",
+      "engine": "generic_json_ld_product",
+      "sources": [
+        "apple_kz",
+        "bosch_home",
+        "karcher_global_candidate",
+        "lenovo_kz",
+        "xiaomi_global"
+      ],
+      "independent_hosts": [
+        "apple.com",
+        "bosch-home.com",
+        "kaercher.com",
+        "lenovo.com",
+        "mi.com",
+        "pcsupport.lenovo.com",
+        "support.apple.com"
+      ],
+      "sample_types": [
+        "product_page"
+      ],
+      "catalog_products": 4086,
+      "single_source_candidate": false,
+      "multi_site_cluster": true,
+      "adapter_candidate": false,
+      "structure_compatibility_validated": false,
+      "compatibility_evidence": "Product @type alone is insufficient; useful field/identity compatibility not validated"
+    },
+    {
+      "layer": "site_cms",
+      "engine": "adobe_experience_manager",
+      "sources": [
+        "honor_global_candidate",
+        "hp_global_candidate",
+        "huawei_kz",
+        "lg_kz",
+        "logitech_global_candidate",
+        "samsung_kz"
+      ],
+      "independent_hosts": [
+        "consumer.huawei.com",
+        "honor.com",
+        "hp.com",
+        "lg.com",
+        "logitech.com",
+        "samsung.com"
+      ],
+      "sample_types": [
+        "category_page",
+        "homepage",
+        "internal_search",
+        "product_page",
+        "robots_txt",
+        "support_page"
+      ],
+      "catalog_products": 2689,
+      "single_source_candidate": false,
+      "multi_site_cluster": true,
+      "adapter_candidate": false,
+      "structure_compatibility_validated": false,
+      "compatibility_evidence": "confirmed fingerprint on bounded endpoints"
+    },
+    {
+      "layer": "site_cms",
+      "engine": "next_js",
+      "sources": [
+        "bosch_home",
+        "lg_kz",
+        "patriot_memory_global_candidate"
+      ],
+      "independent_hosts": [
+        "bosch-home.com",
+        "lg.com",
+        "patriotmemory.com"
+      ],
+      "sample_types": [
+        "homepage",
+        "internal_search",
+        "product_page",
+        "support_page"
+      ],
+      "catalog_products": 1418,
+      "single_source_candidate": false,
+      "multi_site_cluster": true,
+      "adapter_candidate": false,
+      "structure_compatibility_validated": false,
+      "compatibility_evidence": "confirmed fingerprint on bounded endpoints"
+    },
+    {
+      "layer": "commerce_search",
+      "engine": "woocommerce",
+      "sources": [
+        "thermalright_global_candidate"
+      ],
+      "independent_hosts": [
+        "thermalright.com"
+      ],
+      "sample_types": [
+        "homepage",
+        "product_page",
+        "robots_txt"
+      ],
+      "catalog_products": 200,
+      "single_source_candidate": true,
+      "multi_site_cluster": false,
+      "adapter_candidate": false,
+      "structure_compatibility_validated": true,
+      "compatibility_evidence": "confirmed fingerprint on bounded endpoints"
+    },
+    {
+      "layer": "site_cms",
+      "engine": "nuxt",
+      "sources": [
+        "infinix_global_candidate"
+      ],
+      "independent_hosts": [
+        "infinixmobility.com"
+      ],
+      "sample_types": [
+        "homepage",
+        "product_page"
+      ],
+      "catalog_products": 162,
+      "single_source_candidate": true,
+      "multi_site_cluster": false,
+      "adapter_candidate": false,
+      "structure_compatibility_validated": false,
+      "compatibility_evidence": "confirmed fingerprint on bounded endpoints"
+    }
+  ]
+}

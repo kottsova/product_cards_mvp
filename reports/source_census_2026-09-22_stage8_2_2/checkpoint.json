@@ -1,0 +1,38 @@
+{
+  "schema_version": "stage8_2_2_checkpoint.v1",
+  "budget_plan": {
+    "max_total": 12,
+    "max_per_host": 4,
+    "max_hosts": 3,
+    "max_pages_per_item": 2,
+    "max_documents_per_model": 2
+  },
+  "budget_actual": {
+    "total_requests": 6,
+    "by_host": {
+      "www.samsung.com": 6
+    },
+    "hosts_contacted": 1,
+    "per_host_cap_overshoot": "6 requests to www.samsung.com against a planned cap of 4 -- disclosed and explained in support_routes.json's budget_note_and_correction; no further requests were made to this or any host once identified."
+  },
+  "offline_reuse_before_any_request": [
+    "robots.txt (samsung_kz, Stage 7 sqlite) -- 0 requests",
+    "kz_ru/sitemap.xml index (Stage 8.2 offline reprocess) -- 0 requests",
+    "b2c-sitemap.xml + all 5 children (Stage 8.2 / Stage 8.2.1) -- 0 requests, not re-checked per instructions",
+    "kz_ru homepage full link list (Stage 8.2.1 offline reprocess, reused) -- 0 requests, source of the /support/... links used this stage",
+    "samsung.com/sec/support/ cached structure (Stage 8 structural_cache.json) -- 0 requests, checked for mobile-manuals links (none found)",
+    "samsung.com/us/ homepage (Stage 7 sqlite) reprocessed offline for the first time this stage -- 0 requests, source of the samsung_us fallback candidates recorded in regional_fallbacks.json"
+  ],
+  "stop_reason": "Consistent, repeated negative structural result (5 different route types, 6 requests, 0 identity matches for either target model) plus an identified per-host budget overshoot. Stopping here is a deliberate choice to not keep spending budget on a route category (kz_ru support/search) that has now been thoroughly disproven, rather than forcing a result.",
+  "hosts_paused_this_run": [],
+  "requests_not_made": [
+    {
+      "item": "samsung_us /support/downloads/",
+      "reason": "Discovered offline (0 cost) but not fetched live this stage -- recorded as the recommended next step in regional_fallbacks.json rather than opened under an already-overshot per-host budget."
+    },
+    {
+      "item": "A second /smartphones/... or /buy/ page for either model",
+      "reason": "Not attempted -- Stage 8.2.1 already established this page type is client-rendered on 2/2 samples; a 3rd would not add information."
+    }
+  ]
+}

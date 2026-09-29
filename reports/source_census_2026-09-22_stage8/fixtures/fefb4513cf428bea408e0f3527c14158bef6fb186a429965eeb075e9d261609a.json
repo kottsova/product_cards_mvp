@@ -1,0 +1,69 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": [
+        "dl:dt+dd"
+      ]
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [
+        "a[href:pdf]"
+      ],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "687d7f73413f43df6d5ea9ad2805dfe5218c5eecca6a5231f2295e29caa65a4f",
+    "identity": "e77b02eb91e224f663db0c672eb46e0001b363b923929e0d8b996778f99050ef",
+    "specifications": "0c3bdf71ad7c4e28ed970d1687cf761b9f70597098d259339d4be1c85b0295d5",
+    "media": "265981deef65306b1d079933b781ab986f5f17f1c19085b844fa57a0350ef8bd",
+    "documents": "98ec887193b359b0aee56591407fe3dd704ec3eef456524e700c3cb83b03c2cd"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": true,
+    "media": true,
+    "documents": true
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "custom_unknown",
+      "status": "insufficient",
+      "confidence": 0.0,
+      "evidence": []
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "fefb4513cf428bea408e0f3527c14158bef6fb186a429965eeb075e9d261609a",
+  "fixture_version": 2
+}

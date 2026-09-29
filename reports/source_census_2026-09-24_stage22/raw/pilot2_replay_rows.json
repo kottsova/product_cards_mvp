@@ -1,0 +1,4821 @@
+{
+  "rows": [
+    {
+      "job": {
+        "status": "done",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 33; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready",
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 64,
+        "official_gallery_selected": 42,
+        "official_gallery_from_exact_pages": 42,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/speakers/xboom/xl7s/",
+          "found_model": "XL7S",
+          "error": "",
+          "evidence": "Страница с описанием LG XBOOM XL7S | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u",
+          "facts": 32,
+          "gallery_selected": 28
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/audio/lg-xl7s",
+          "found_model": "XL7S",
+          "error": "",
+          "evidence": "Портативная колонка LG XBOOM XL7S - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 32,
+          "gallery_selected": 14
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Музыкальная колонка XL7S» (артикул XL7S). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 33,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "09/08/2024",
+          "support_model": "XL7S.DRUSLLK",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg"
+        }
+      ],
+      "documents_report": {
+        "product_model": "XL7S",
+        "support_url": "https://www.lg.com/ru/support/product/lg-XL7S.DRUSLLK",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "date": "02/04/2025",
+            "size": "2 496K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=GCG3kvyydm3cBKtc25zD1w",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "09/08/2024",
+            "size": "6 010K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Lithuanian",
+            "date": "07/03/2025",
+            "size": "5 906K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=UiD5Dsn5HE0kRO5fFvQyrA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 6154683,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "XL7S",
+                "XL7S"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 48559,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "en": 321,
+                "ru": 38037
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул XL7S и базовую модель XL7S."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Страница с описанием LG XBOOM XL7S | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Портативная колонка LG XBOOM XL7S - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Музыкальная колонка XL7S» (артикул XL7S). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 33; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        }
+      ],
+      "index": 0,
+      "seller_sku": "XL7S",
+      "category": "Колонки",
+      "group": "first_pilot",
+      "seconds": 4.2,
+      "real_requests": 0,
+      "replayed": 6
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 2; только базовая модель LG: 81; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_language_not_russian, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "unresolved_conflicts",
+          "instruction_language_not_russian"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "unresolved_conflicts",
+          "instruction_language_not_russian",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 118,
+        "official_gallery_selected": 35,
+        "official_gallery_from_exact_pages": 35,
+        "real_conflicts": 2,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Казахский"
+          ],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/microwave-ovens/solo-microwave-ovens/ms2032gas/",
+          "found_model": "MS2032GAS",
+          "error": "",
+          "evidence": "Микроволновая печь MS2032GAS LG NeoChef™ 20л | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies o",
+          "facts": 63,
+          "gallery_selected": 24
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/microwaves/lg-ms2032gas",
+          "found_model": "MS2032GAS",
+          "error": "",
+          "evidence": "Микроволновая печь Соло LG MS2032GAS | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется использовать ал",
+          "facts": 55,
+          "gallery_selected": 11
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Микроволновая печь MS2032GAS» (артикул MS2032GAS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет уга",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 83,
+      "real_conflicts": [
+        {
+          "normalized_name": "дизайн_стекла_дверцы",
+          "raw_names": [
+            "Дизайн стекла дверцы"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "дымчатый",
+            "смог"
+          ]
+        },
+        {
+          "normalized_name": "тип_установки",
+          "raw_names": [
+            "Тип установки"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "настольная",
+            "отдельно стоящая"
+          ]
+        }
+      ],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Казахский",
+          "date": "15/08/2025",
+          "support_model": "MS2032GAS.BBKQCIS",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw"
+        }
+      ],
+      "documents_report": {
+        "product_model": "MS2032GAS",
+        "support_url": "https://www.lg.com/ru/support/product/lg-MS2032GAS.BBKQCIS",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "15/08/2025",
+            "size": "1 732K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=DgkBn9WDxL5ki4F60G4N9w",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "Русский",
+            "date": "15/08/2025",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "15/08/2025",
+            "size": "1 638K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 1676908,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [],
+              "model_masks": [
+                "MS203****"
+              ],
+              "model_evidence": "family_mask",
+              "text_chars": 52299,
+              "languages": [
+                "kk"
+              ],
+              "russian_instruction": false,
+              "letters_by_language": {
+                "kk": 40971
+              }
+            },
+            "content_language": "Казахский"
+          },
+          {
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=DgkBn9WDxL5ki4F60G4N9w",
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "state": "reachable_but_not_a_complete_pdf",
+            "bytes": 1773186
+          }
+        ],
+        "outcome": "instruction_confirmed_not_russian"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул MS2032GAS и базовую модель MS2032GAS."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Микроволновая печь MS2032GAS LG NeoChef™ 20л | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies o"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Микроволновая печь Соло LG MS2032GAS | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется использовать ал"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Микроволновая печь MS2032GAS» (артикул MS2032GAS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 0. Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 2; подтверждена инструкция не на русском языке (язык определён по тексту файла)."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_language_not_russian, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 2; только базовая модель LG: 81; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_language_not_russian, dealer_cross_check_missing."
+        }
+      ],
+      "index": 1,
+      "seller_sku": "MS2032GAS",
+      "category": "Микроволновые печи",
+      "group": "first_pilot",
+      "seconds": 3.2,
+      "real_requests": 0,
+      "replayed": 5
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Найдена только базовая модель, требуется подтверждение артикула. Реальных конфликтов: 0; только базовая модель LG: 111; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 125,
+        "official_gallery_selected": 23,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/kz/monitors/fhd-qhd/24mr400-b/",
+          "found_model": "24MR400-B",
+          "error": "",
+          "evidence": "Мой профиль Зарегистрировать продукт LG Выйти Отмена Домашняя страница Мониторы FHD & QHD 24MR400-B 24-дюймовый IPS-монитор Full HD с AMD FreeSync™ Рекомендуемый Продукт Рекомендуемый Проду",
+          "facts": 47,
+          "gallery_selected": 16
+        },
+        "lg_ru": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/ru/monitors/lg-24mr400-b",
+          "found_model": "24MR400-B",
+          "error": "",
+          "evidence": "Монитор LG 24MR400-B Full HD IPS - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам",
+          "facts": 78,
+          "gallery_selected": 7
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG 23.8\" Монитор 24MR400-B, IPS, 100 Гц, 1920x1080» (артикул 24MR400-B.ARUQ). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Те",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 111,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "25/03/2025",
+          "support_model": "24MR400-B.ARUQ",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=640I7R09VG1hApohqeXPgA"
+        }
+      ],
+      "documents_report": {
+        "product_model": "24MR400-B",
+        "support_url": "https://www.lg.com/ru/support/product/lg-24MR400-B.ARUQ",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "25/03/2025",
+            "size": "16 112K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=640I7R09VG1hApohqeXPgA",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "Русский",
+            "date": "03/05/2024",
+            "size": "6 058K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=uH7HtEn45fdJxRRLj1fGpA",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "English",
+            "date": "27/01/2026",
+            "size": "3 502K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=sbbg2XQKtoiK91hRFVdEkA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=640I7R09VG1hApohqeXPgA",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 16498658,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "24MR400-B",
+                "24MR400-B"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 400226,
+              "languages": [
+                "en",
+                "kk",
+                "ru",
+                "uk"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "en": 11435,
+                "kk": 7689,
+                "ru": 52186,
+                "uk": 7916
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул 24MR400-B.ARUQ и базовую модель 24MR400-B."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: base_model. Мой профиль Зарегистрировать продукт LG Выйти Отмена Домашняя страница Мониторы FHD & QHD 24MR400-B 24-дюймовый IPS-монитор Full HD с AMD FreeSync™ Рекомендуемый Продукт Рекомендуемый Проду"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: base_model. Монитор LG 24MR400-B Full HD IPS - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG 23.8\" Монитор 24MR400-B, IPS, 100 Гц, 1920x1080» (артикул 24MR400-B.ARUQ). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Найдена только базовая модель, требуется подтверждение артикула. Реальных конфликтов: 0; только базовая модель LG: 111; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing."
+        }
+      ],
+      "index": 2,
+      "seller_sku": "24MR400-B.ARUQ",
+      "category": "Мониторы",
+      "group": "first_pilot",
+      "seconds": 24.9,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 86; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz"
+        ],
+        "official_facts": 86,
+        "official_gallery_selected": 6,
+        "official_gallery_from_exact_pages": 6,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/speakers/music-center/ck43/",
+          "found_model": "CK43",
+          "error": "",
+          "evidence": "LG XBOOM CK43, 300 Вт, Функция Караоке, Подсветка, Синхронизация звука с ТВ - CK43 | LG Қазақстан Skip",
+          "facts": 86,
+          "gallery_selected": 6
+        },
+        "lg_ru": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Аудиосистема XBOOM CK43» (артикул CK43). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не ",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 86,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": null,
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул CK43 и базовую модель CK43."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. LG XBOOM CK43, 300 Вт, Функция Караоке, Подсветка, Синхронизация звука с ТВ - CK43 | LG Қазақстан Skip"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Аудиосистема XBOOM CK43» (артикул CK43). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 86; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 3,
+      "seller_sku": "CK43",
+      "category": "Музыкальные проигрыватели",
+      "group": "first_pilot",
+      "seconds": 0.8,
+      "real_requests": 0,
+      "replayed": 1
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 41; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_ru"
+        ],
+        "official_facts": 42,
+        "official_gallery_selected": 15,
+        "official_gallery_from_exact_pages": 15,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/vacuum-cleaners/lg-a9n-masterx",
+          "found_model": "A9N-MASTERX",
+          "error": "",
+          "evidence": "Пылесос вертикальный LG A9N-MASTERX - купить, цены, отзывы Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 42,
+          "gallery_selected": 15
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Вертикальный пылесос моющий A9N-MASTERX» (артикул A9N-MASTERX). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) --",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 41,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": {
+        "product_model": "A9N-MASTERX",
+        "support_url": "https://www.lg.com/ru/support/product/lg-A9N-MASTERX.BBKQCIS",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "date": "09/05/2024",
+            "size": "4 370K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=bcYN7yHmAC3Y69xemoNA",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "English,Русский",
+            "date": "09/05/2024",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "27/10/2022",
+            "size": "8 548K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=lrxirBPKcVUFnZw4NBx5Kw",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=lrxirBPKcVUFnZw4NBx5Kw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_by_content_model_not_named",
+            "bytes": 8752641,
+            "assessment": {
+              "accepted": false,
+              "kind": "instruction_model_not_named",
+              "names_model": [],
+              "model_masks": [],
+              "model_evidence": "none",
+              "text_chars": 62317,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 49383
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_model_not_named"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул A9N-MASTERX и базовую модель A9N-MASTERX."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Пылесос вертикальный LG A9N-MASTERX - купить, цены, отзывы Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Вертикальный пылесос моющий A9N-MASTERX» (артикул A9N-MASTERX). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; найдена инструкция на русском языке, но её текст не называет модель или её семейство (связь только через страницу поддержки), она не сохранена."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 41; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 4,
+      "seller_sku": "A9N-MASTERX",
+      "category": "Пылесосы",
+      "group": "first_pilot",
+      "seconds": 8.0,
+      "real_requests": 0,
+      "replayed": 3
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 96; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "unresolved_conflicts"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "unresolved_conflicts",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 103,
+        "official_gallery_selected": 39,
+        "official_gallery_from_exact_pages": 39,
+        "real_conflicts": 1,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/tvs-soundbars/soundbars/sn4/",
+          "found_model": "SN4",
+          "error": "",
+          "evidence": "й профиль Зарегистрировать продукт LG Выйти Отмена Домашняя страница Телевизоры Саундбары SN4 Саундбар LG, технология DTS Virtual: X, карбоновый НЧ-динамик Рекомендуемый Продукт Реком",
+          "facts": 33,
+          "gallery_selected": 26
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/audio/lg-SN4",
+          "found_model": "SN4",
+          "error": "",
+          "evidence": "Саундбар LG SN4: характеристики, обзоры, где купить — LG Россия Чтобы правильно использовать наш веб-сайт",
+          "facts": 70,
+          "gallery_selected": 13
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Саундбар SN4» (артикул SN4). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запуще",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 97,
+      "real_conflicts": [
+        {
+          "normalized_name": "usb",
+          "raw_names": [
+            "USB"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "1",
+            "true"
+          ]
+        }
+      ],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "15/11/2023",
+          "support_model": "SN4.DRUSLLK",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=ST6zWjz96bqBzusTSfMnnw"
+        }
+      ],
+      "documents_report": {
+        "product_model": "SN4",
+        "support_url": "https://www.lg.com/ru/support/product/lg-SN4.DRUSLLK",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "15/11/2023",
+            "size": "2 914K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=ST6zWjz96bqBzusTSfMnnw",
+            "fetchable": true
+          },
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "15/11/2023",
+            "size": "1 315K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=wnSBOh11knhyDpvm8cjU3A",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Lithuanian",
+            "date": "22/12/2023",
+            "size": "1 634K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=msdSEhp1uhomH2lKgJ3bw",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=ST6zWjz96bqBzusTSfMnnw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 2983926,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "SN4",
+                "SN4"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 55282,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 43239
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул SN4 и базовую модель SN4."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. й профиль Зарегистрировать продукт LG Выйти Отмена Домашняя страница Телевизоры Саундбары SN4 Саундбар LG, технология DTS Virtual: X, карбоновый НЧ-динамик Рекомендуемый Продукт Реком"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Саундбар LG SN4: характеристики, обзоры, где купить — LG Россия Чтобы правильно использовать наш веб-сайт"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Саундбар SN4» (артикул SN4). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 96; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+        }
+      ],
+      "index": 5,
+      "seller_sku": "SN4",
+      "category": "Саундбары",
+      "group": "first_pilot",
+      "seconds": 4.1,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 58; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 58,
+        "official_gallery_selected": 8,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/ru/monitors/lg-27MD5KL-B",
+          "found_model": "27MD5KL-B",
+          "error": "",
+          "evidence": "Монитор LG 27MD5KL-B - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 58,
+          "gallery_selected": 8
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Монитор LG 27MD5KL-B/27\"/5120x2880/Thunderbolt, USB-C/540 кд/кв.м/IPS/14 мс [27MD5KL-B.AEU]» (артикул 27MD5KL-B.AEU). Не хватает: инструкция. Нужна точная ссылк",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 58,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": {
+        "product_model": "27MD5KL-B",
+        "support_url": "https://www.lg.com/ru/support/product/lg-27MD5KL-B.AEU",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "07/08/2023",
+            "size": "14 960K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=VnEoarVUs2OvECPMZJZOPw",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "English",
+            "date": "24/08/2023",
+            "size": "14 952K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=Ad32qoRslsND9F9msd87jw",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Lithuanian",
+            "date": "06/01/2021",
+            "size": "6 813K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=nwn8MVzjYhiVmce0tjh9UA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=VnEoarVUs2OvECPMZJZOPw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "reachable_but_not_a_complete_pdf",
+            "bytes": 15319046
+          }
+        ],
+        "outcome": "no_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул 27MD5KL-B.AEU и базовую модель 27MD5KL-B."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: base_model. Монитор LG 27MD5KL-B - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Монитор LG 27MD5KL-B/27\"/5120x2880/Thunderbolt, USB-C/540 кд/кв.м/IPS/14 мс [27MD5KL-B.AEU]» (артикул 27MD5KL-B.AEU). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; ни один файл не подтверждён как инструкция на русском языке."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 58; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 6,
+      "seller_sku": "27MD5KL-B.AEU",
+      "category": "Смарт-часы",
+      "group": "first_pilot",
+      "seconds": 4.3,
+      "real_requests": 0,
+      "replayed": 3
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 83; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 88,
+        "official_gallery_selected": 42,
+        "official_gallery_from_exact_pages": 42,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/air-conditioner/ac09bk/",
+          "found_model": "AC09BK",
+          "error": "",
+          "evidence": "Кондиционер ARTCOOL Mirror | Технология Dual Inverter | до 27 м² - AC09BK | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u",
+          "facts": 60,
+          "gallery_selected": 28
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/air-conditioners-split-systems/lg-ac09bk",
+          "found_model": "AC09BK",
+          "error": "",
+          "evidence": "Кондиционер LG AC09BK- купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потре",
+          "facts": 28,
+          "gallery_selected": 14
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Сплит-система кондиционер 9000 BTU, AC09BK» (артикул AC09BK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- н",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 83,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": {
+        "product_model": "AC09BK",
+        "support_url": "https://www.lg.com/ru/support/product/lg-AC09BK.NSJR",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "date": "16/07/2024",
+            "size": "9 553K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=kzoZHvJXBQqax1DvSozoA",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "English,Русский",
+            "date": "16/07/2024",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "English,Русский",
+            "date": "20/12/2021",
+            "size": "44 959K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=X27LaRgZcIEugswOtgjsQ",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=X27LaRgZcIEugswOtgjsQ",
+            "type": "Руководства пользователя",
+            "label": "English,Русский",
+            "state": "reachable_but_not_a_complete_pdf",
+            "bytes": 25000000
+          },
+          {
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=kzoZHvJXBQqax1DvSozoA",
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "state": "reachable_but_not_a_complete_pdf",
+            "bytes": 9782674
+          }
+        ],
+        "outcome": "no_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул AC09BK и базовую модель AC09BK."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Кондиционер ARTCOOL Mirror | Технология Dual Inverter | до 27 м² - AC09BK | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Кондиционер LG AC09BK- купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потре"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Сплит-система кондиционер 9000 BTU, AC09BK» (артикул AC09BK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 2; ни один файл не подтверждён как инструкция на русском языке."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 83; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 7,
+      "seller_sku": "AC09BK",
+      "category": "Сплит-системы",
+      "group": "first_pilot",
+      "seconds": 11.2,
+      "real_requests": 0,
+      "replayed": 5
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 81; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready",
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 96,
+        "official_gallery_selected": 36,
+        "official_gallery_from_exact_pages": 36,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/laundry/washing-machines/f2j3ws1w/",
+          "found_model": "F2J3WS1W",
+          "error": "",
+          "evidence": "F2J3WS1W Стиральная машина LG F2J3WS1W DirectDrive 6.5 кг | LG Қазақстан Skip to Content Skip to A",
+          "facts": 35,
+          "gallery_selected": 24
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/washing-machines/lg-f2j3ws1w",
+          "found_model": "F2J3WS1W",
+          "error": "",
+          "evidence": "Стиральная машина LG F2J3WS1W c функцией пара | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 61,
+          "gallery_selected": 12
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Стиральная машина узкая F2J3WS1W» (артикул F2J3WS1W). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет ",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 81,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "19/09/2023",
+          "support_model": "F2J3WS1W.ABWPCOM",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=JXSTQjoSlpEidsZNHTozXA"
+        }
+      ],
+      "documents_report": {
+        "product_model": "F2J3WS1W",
+        "support_url": "https://www.lg.com/ru/support/product/lg-F2J3WS1W.ABWPCOM",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "19/09/2023",
+            "size": "3 310K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=JXSTQjoSlpEidsZNHTozXA",
+            "fetchable": true
+          },
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "19/09/2023",
+            "size": "6 184K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=o7mqBYQv6ZynTphJgP5Uog",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "Русский",
+            "date": "19/09/2023",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=JXSTQjoSlpEidsZNHTozXA",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 3389304,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [],
+              "model_masks": [
+                "F2J3WS**"
+              ],
+              "model_evidence": "family_mask",
+              "text_chars": 65255,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 50820
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул F2J3WS1W и базовую модель F2J3WS1W."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. F2J3WS1W Стиральная машина LG F2J3WS1W DirectDrive 6.5 кг | LG Қазақстан Skip to Content Skip to A"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Стиральная машина LG F2J3WS1W c функцией пара | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Стиральная машина узкая F2J3WS1W» (артикул F2J3WS1W). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 81; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        }
+      ],
+      "index": 8,
+      "seller_sku": "F2J3WS1W",
+      "category": "Стиральные машины",
+      "group": "first_pilot",
+      "seconds": 4.3,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 2; только базовая модель LG: 66; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "unresolved_conflicts"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "unresolved_conflicts",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 88,
+        "official_gallery_selected": 24,
+        "official_gallery_from_exact_pages": 24,
+        "real_conflicts": 2,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/laundry/dryers/dc90v5v9s/",
+          "found_model": "DC90V5V9S",
+          "error": "",
+          "evidence": "Сушильная машина LG, 9кг - DC90V5V9S | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u",
+          "facts": 30,
+          "gallery_selected": 13
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/laundry/lg-dc90v5v9s",
+          "found_model": "DC90V5V9S",
+          "error": "",
+          "evidence": "Сушильная машина LG DC90V5V9S - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр",
+          "facts": 58,
+          "gallery_selected": 11
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Сушильная машина 9 кг, тепловой насос, DC90V5V9S» (артикул DC90V5V9S). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Техноп",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 68,
+      "real_conflicts": [
+        {
+          "normalized_name": "color__body",
+          "raw_names": [
+            "Цвет корпуса"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "платиновое серебро",
+            "темно-серебристый"
+          ]
+        },
+        {
+          "normalized_name": "product_dimensions",
+          "raw_names": [
+            "Размеры (Ш × В × Г, мм)",
+            "Размеры продукта (ШxВxГ мм)"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "w=600;h=850;d=660",
+            "w=600;h=850;d=690"
+          ]
+        }
+      ],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "09/06/2026",
+          "support_model": "DC90V5V9S.APTPCOM",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=OfSrDRFk9hESKy5RU1lQIQ"
+        }
+      ],
+      "documents_report": {
+        "product_model": "DC90V5V9S",
+        "support_url": "https://www.lg.com/ru/support/product/lg-DC90V5V9S.APTPCOM",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "09/06/2026",
+            "size": "7 498K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=SO4PTu9HTAoZVloWSbd7gQ",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "Русский",
+            "date": "09/06/2026",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "09/06/2026",
+            "size": "5 422K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=OfSrDRFk9hESKy5RU1lQIQ",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=OfSrDRFk9hESKy5RU1lQIQ",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 5552201,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "DC90V5V9S",
+                "DC90V5V9S"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 77163,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 60505
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул DC90V5V9S и базовую модель DC90V5V9S."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Сушильная машина LG, 9кг - DC90V5V9S | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Сушильная машина LG DC90V5V9S - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Сушильная машина 9 кг, тепловой насос, DC90V5V9S» (артикул DC90V5V9S). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 2; только базовая модель LG: 66; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+        }
+      ],
+      "index": 9,
+      "seller_sku": "DC90V5V9S",
+      "category": "Сушильные машины",
+      "group": "first_pilot",
+      "seconds": 6.7,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 100; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "unresolved_conflicts",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "unresolved_conflicts",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 127,
+        "official_gallery_selected": 25,
+        "official_gallery_from_exact_pages": 25,
+        "real_conflicts": 1,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/tvs-soundbars/4k-uhd-tvs/50ut91006la/",
+          "found_model": "50UT91006LA",
+          "error": "",
+          "evidence": "50 дюймовый телевизор LG UHD 50ut91006la | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u",
+          "facts": 62,
+          "gallery_selected": 12
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/televisions/lg-50ut91006la",
+          "found_model": "50UT91006LA",
+          "error": "",
+          "evidence": "менный сервис LG Сертификаты Main Menu Поиск Потребительские товары ТВ / АУДИО Телевизоры 50UT91006LA *discountMsg* Продажа в ограниченном количестве. Почти все распродано SNS Поделиться Поде",
+          "facts": 65,
+          "gallery_selected": 13
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Телевизор 50UT91006LA 50''/4K UHD/Smart TV/Wi-Fi/BT» (артикул 50UT91006LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Т",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 101,
+      "real_conflicts": [
+        {
+          "normalized_name": "пульт_magic_remote",
+          "raw_names": [
+            "Пульт Magic Remote"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "в комплекте",
+            "встроенный"
+          ]
+        }
+      ],
+      "documents_saved": [],
+      "documents_report": {
+        "product_model": "50UT91006LA",
+        "support_url": "https://www.lg.com/ru/support/product/lg-50UT91006LA.ARUG",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "28/10/2024",
+            "size": "1 561K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=iKoIqcRWXS3DsHhYuDg",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "Русский",
+            "date": "29/04/2024",
+            "size": "25 657K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=kGuWWwc9xAaNnkoldzqA",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "English",
+            "date": "28/10/2024",
+            "size": "25 476K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=s8eQZw5L1lJMGBgzmcPBkQ",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=iKoIqcRWXS3DsHhYuDg",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_by_content_model_not_named",
+            "bytes": 1598690,
+            "assessment": {
+              "accepted": false,
+              "kind": "instruction_model_not_named",
+              "names_model": [],
+              "model_masks": [],
+              "model_evidence": "none",
+              "text_chars": 30305,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 24248
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_model_not_named"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул 50UT91006LA и базовую модель 50UT91006LA."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. 50 дюймовый телевизор LG UHD 50ut91006la | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. менный сервис LG Сертификаты Main Menu Поиск Потребительские товары ТВ / АУДИО Телевизоры 50UT91006LA *discountMsg* Продажа в ограниченном количестве. Почти все распродано SNS Поделиться Поде"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Телевизор 50UT91006LA 50''/4K UHD/Smart TV/Wi-Fi/BT» (артикул 50UT91006LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; найдена инструкция на русском языке, но её текст не называет модель или её семейство (связь только через страницу поддержки), она не сохранена."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 100; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 10,
+      "seller_sku": "50UT91006LA",
+      "category": "Телевизоры",
+      "group": "first_pilot",
+      "seconds": 2.1,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 24; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 25,
+        "official_gallery_selected": 30,
+        "official_gallery_from_exact_pages": 30,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/refrigerators/bottom-freezer/gc-b509seum/",
+          "found_model": "GC-B509SEUM",
+          "error": "",
+          "evidence": "GC-B509SEUM Холодильник LG DoorCooling+™ 384л | LG Қазақстан Skip to Content Skip to Accessibility He",
+          "facts": 19,
+          "gallery_selected": 15
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/refrigerators/lg-gc-b509seum",
+          "found_model": "GC-B509SEUM",
+          "error": "",
+          "evidence": "Холодильник LG GC-B509SEUM - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр",
+          "facts": 6,
+          "gallery_selected": 15
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Холодильник двухкамерный GC-B509SEUM» (артикул GC-B509SEUM). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 24,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": {
+        "product_model": "GC-B509SEUM",
+        "support_url": "https://www.lg.com/ru/support/product/lg-GC-B509SEUM.ASEQCIS",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "date": "25/02/2026",
+            "size": "20 723K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=udfFMQY3LZ01e2wtJTXw",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "English,Русский",
+            "date": "25/02/2026",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "25/02/2026",
+            "size": "769K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=CXgdWUo44amDWnMThA21pA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=CXgdWUo44amDWnMThA21pA",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_by_content_model_not_named",
+            "bytes": 786987,
+            "assessment": {
+              "accepted": false,
+              "kind": "instruction_model_not_named",
+              "names_model": [],
+              "model_masks": [],
+              "model_evidence": "none",
+              "text_chars": 59535,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 46614
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_model_not_named"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул GC-B509SEUM и базовую модель GC-B509SEUM."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. GC-B509SEUM Холодильник LG DoorCooling+™ 384л | LG Қазақстан Skip to Content Skip to Accessibility He"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Холодильник LG GC-B509SEUM - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Холодильник двухкамерный GC-B509SEUM» (артикул GC-B509SEUM). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; найдена инструкция на русском языке, но её текст не называет модель или её семейство (связь только через страницу поддержки), она не сохранена."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 24; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 11,
+      "seller_sku": "GC-B509SEUM",
+      "category": "Холодильники",
+      "group": "first_pilot",
+      "seconds": 3.1,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 75; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready",
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_ru"
+        ],
+        "official_facts": 77,
+        "official_gallery_selected": 8,
+        "official_gallery_from_exact_pages": 8,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/monitors/lg-27u411a-b",
+          "found_model": "27U411A-B",
+          "error": "",
+          "evidence": "Фирменный сервис LG Сертификаты Main Menu Поиск Потребительские товары Мониторы Мониторы 27U411A-B *discountMsg* Продажа в ограниченном количестве. Почти все распродано SNS Поделиться Поде",
+          "facts": 77,
+          "gallery_selected": 8
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG 27\" Монитор 27U411A-B, IPS, 120 Гц, 1920х1080» (артикул 27U411A-B). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 75,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "19/12/2025",
+          "support_model": "27U411A-B.ARUQ",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=XZ1ik5o91ifQZP37pTCFHw"
+        }
+      ],
+      "documents_report": {
+        "product_model": "27U411A-B",
+        "support_url": "https://www.lg.com/ru/support/product/lg-27U411A-B.ARUQ",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "19/12/2025",
+            "size": "15 157K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=XZ1ik5o91ifQZP37pTCFHw",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "English",
+            "date": "13/03/2026",
+            "size": "15 040K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=DmjsjPDeZekyOz5VGAcqQ",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "English",
+            "date": "12/02/2026",
+            "size": "3 850K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=362bEmCwtGQsGyfztl8nNg",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=XZ1ik5o91ifQZP37pTCFHw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 15521210,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "27U411A-B",
+                "27U411A-B"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 392170,
+              "languages": [
+                "en",
+                "kk",
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "en": 11067,
+                "kk": 7681,
+                "ru": 54302
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул 27U411A-B и базовую модель 27U411A-B."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Фирменный сервис LG Сертификаты Main Menu Поиск Потребительские товары Мониторы Мониторы 27U411A-B *discountMsg* Продажа в ограниченном количестве. Почти все распродано SNS Поделиться Поде"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG 27\" Монитор 27U411A-B, IPS, 120 Гц, 1920х1080» (артикул 27U411A-B). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 75; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        }
+      ],
+      "index": 12,
+      "seller_sku": "27U411A-B",
+      "category": "Мониторы",
+      "group": "A",
+      "seconds": 25.4,
+      "real_requests": 0,
+      "replayed": 3
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 64; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_ru"
+        ],
+        "official_facts": 64,
+        "official_gallery_selected": 13,
+        "official_gallery_from_exact_pages": 13,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/televisions/lg-55ut81006la",
+          "found_model": "55UT81006LA",
+          "error": "",
+          "evidence": "Телевизор 55'' LG 55UT81006LA - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр",
+          "facts": 64,
+          "gallery_selected": 13
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Телевизор 55UT81006LA 55''/4K UHD/Smart TV/Wi-Fi/BT» (артикул 55UT81006LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Т",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 64,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": {
+        "product_model": "55UT81006LA",
+        "support_url": "https://www.lg.com/ru/support/product/lg-55UT81006LA.ARUG",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "30/12/2024",
+            "size": "1 553K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=QB3brMJqlEeZdTkLlK0lsw",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "Русский",
+            "date": "18/09/2024",
+            "size": "4 682K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=SqN69lIIIAXMbyk1grE63A",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "English",
+            "date": "30/12/2024",
+            "size": "25 930K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=TgSQ821sidUx4E8aDEziiA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=QB3brMJqlEeZdTkLlK0lsw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_by_content_model_not_named",
+            "bytes": 1590207,
+            "assessment": {
+              "accepted": false,
+              "kind": "instruction_model_not_named",
+              "names_model": [],
+              "model_masks": [],
+              "model_evidence": "none",
+              "text_chars": 30305,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 24248
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_model_not_named"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул 55UT81006LA и базовую модель 55UT81006LA."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Телевизор 55'' LG 55UT81006LA - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Телевизор 55UT81006LA 55''/4K UHD/Smart TV/Wi-Fi/BT» (артикул 55UT81006LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; найдена инструкция на русском языке, но её текст не называет модель или её семейство (связь только через страницу поддержки), она не сохранена."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 64; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 13,
+      "seller_sku": "55UT81006LA",
+      "category": "Телевизоры",
+      "group": "A",
+      "seconds": 1.4,
+      "real_requests": 0,
+      "replayed": 3
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 30; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready",
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_ru"
+        ],
+        "official_facts": 30,
+        "official_gallery_selected": 8,
+        "official_gallery_from_exact_pages": 8,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/microwaves/lg-MW23R35GIB",
+          "found_model": "MW23R35GIB",
+          "error": "",
+          "evidence": "Микроволновая печь LG-MW23R35GIB - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 30,
+          "gallery_selected": 8
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Микроволновая печь MW23R35GIB» (артикул MW23R35GIB). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет у",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 30,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "21/01/2026",
+          "support_model": "MW23R35GIB.BB2QCIS",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=L09txG55otJQNP0zVHDDVA"
+        }
+      ],
+      "documents_report": {
+        "product_model": "MW23R35GIB",
+        "support_url": "https://www.lg.com/ru/support/product/lg-MW23R35GIB.BB2QCIS",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "21/01/2026",
+            "size": "995K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=3fEAUES2G9tLUDmq7HNYQg",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "Русский",
+            "date": "21/01/2026",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "21/01/2026",
+            "size": "2 100K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=L09txG55otJQNP0zVHDDVA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=L09txG55otJQNP0zVHDDVA",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 2150875,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [],
+              "model_masks": [
+                "MW23R3****"
+              ],
+              "model_evidence": "family_mask",
+              "text_chars": 64600,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 50069
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул MW23R35GIB и базовую модель MW23R35GIB."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Микроволновая печь LG-MW23R35GIB - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Микроволновая печь MW23R35GIB» (артикул MW23R35GIB). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 30; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        }
+      ],
+      "index": 14,
+      "seller_sku": "MW23R35GIB",
+      "category": "Микроволновые печи",
+      "group": "A",
+      "seconds": 2.5,
+      "real_requests": 0,
+      "replayed": 3
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 21; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 22,
+        "official_gallery_selected": 10,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/ru/vacuum-cleaners/lg-vc5316nnts",
+          "found_model": "VC5316NNTS",
+          "error": "",
+          "evidence": "Пылесос компактный LG VC5316NNTS - купить, цены, отзывы Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 22,
+          "gallery_selected": 10
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Пылесос VC5316NNTS» (артикул VC5316NNTS.APSQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угад",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 21,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "26/04/2023",
+          "support_model": "VC5316NNTS.APSQCIS",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=elyq5HlfGu5NvbQEmdN6w"
+        }
+      ],
+      "documents_report": {
+        "product_model": "VC5316NNTS",
+        "support_url": "https://www.lg.com/ru/support/product/lg-VC5316NNTS.APSQCIS",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "date": "06/01/2025",
+            "size": "28 162K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=TAkA40SyYhjoLRVGMDvdbQ",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "English,Русский",
+            "date": "06/01/2025",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "26/04/2023",
+            "size": "4 382K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=elyq5HlfGu5NvbQEmdN6w",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=elyq5HlfGu5NvbQEmdN6w",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 4487581,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [],
+              "model_masks": [
+                "VC53*******"
+              ],
+              "model_evidence": "family_mask",
+              "text_chars": 21399,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 16773
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул VC5316NNTS.APSQCIS и базовую модель VC5316NNTS."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: base_model. Пылесос компактный LG VC5316NNTS - купить, цены, отзывы Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Пылесос VC5316NNTS» (артикул VC5316NNTS.APSQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 21; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, dealer_cross_check_missing."
+        }
+      ],
+      "index": 15,
+      "seller_sku": "VC5316NNTS.APSQCIS",
+      "category": "Пылесосы",
+      "group": "A",
+      "seconds": 4.3,
+      "real_requests": 0,
+      "replayed": 3
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 43; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready",
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_ru"
+        ],
+        "official_facts": 44,
+        "official_gallery_selected": 15,
+        "official_gallery_from_exact_pages": 15,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/laundry/lg-F2T3HS6W",
+          "found_model": "F2T3HS6W",
+          "error": "",
+          "evidence": "Стиральная машина LG F2T3HS6W - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 44,
+          "gallery_selected": 15
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Стиральная машина узкая F2T3HS6W» (артикул F2T3HS6W). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет ",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 43,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "07/12/2021",
+          "support_model": "F2T3HS6W.ABWPCIS",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=XuWvlxPvZ8w6tGNd3pZQA"
+        }
+      ],
+      "documents_report": {
+        "product_model": "F2T3HS6W",
+        "support_url": "https://www.lg.com/ru/support/product/lg-F2T3HS6W.ABWPCIS",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "18/08/2023",
+            "size": "2 429K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=wIRit5Sx8rpNzXTNLqhPA",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "Русский",
+            "date": "18/08/2023",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "07/12/2021",
+            "size": "12 317K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=XuWvlxPvZ8w6tGNd3pZQA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=XuWvlxPvZ8w6tGNd3pZQA",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 12612666,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [],
+              "model_masks": [
+                "F2T3H***"
+              ],
+              "model_evidence": "family_mask",
+              "text_chars": 93030,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 71006
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул F2T3HS6W и базовую модель F2T3HS6W."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Стиральная машина LG F2T3HS6W - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Стиральная машина узкая F2T3HS6W» (артикул F2T3HS6W). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 43; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        }
+      ],
+      "index": 16,
+      "seller_sku": "F2T3HS6W",
+      "category": "Стиральные машины",
+      "group": "A",
+      "seconds": 7.3,
+      "real_requests": 0,
+      "replayed": 3
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 19; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 19,
+        "official_gallery_selected": 30,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/kz/refrigerators/bottom-freezer/gc-b399smcl/",
+          "found_model": "GC-B399SMCL",
+          "error": "",
+          "evidence": "Холодильник GC-B399SMCL LG DoorCooling+™ 306 л | LG Қазақстан Skip to Content Skip to Accessibility Help About Co",
+          "facts": 19,
+          "gallery_selected": 30
+        },
+        "lg_ru": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Холодильник двухкамерный 306 л No Frost, GC-B399SMCL» (артикул GC-B399SMCL.APZQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DN",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 19,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": null,
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул GC-B399SMCL.APZQCIS и базовую модель GC-B399SMCL."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: base_model. Холодильник GC-B399SMCL LG DoorCooling+™ 306 л | LG Қазақстан Skip to Content Skip to Accessibility Help About Co"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Холодильник двухкамерный 306 л No Frost, GC-B399SMCL» (артикул GC-B399SMCL.APZQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 19; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 17,
+      "seller_sku": "GC-B399SMCL.APZQCIS",
+      "category": "Холодильники",
+      "group": "B",
+      "seconds": 0.8,
+      "real_requests": 0,
+      "replayed": 1
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Найдена только базовая модель, требуется подтверждение артикула. Реальных конфликтов: 1; только базовая модель LG: 123; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, unresolved_conflicts, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "unresolved_conflicts"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "unresolved_conflicts",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 125,
+        "official_gallery_selected": 30,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 1,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/kz/speakers/party-speakers/rnc5/",
+          "found_model": "RNC5",
+          "error": "",
+          "evidence": "Страница описания продукта LG XBOOM RNC5 | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u",
+          "facts": 21,
+          "gallery_selected": 20
+        },
+        "lg_ru": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/ru/audio/lg-rnc5",
+          "found_model": "RNC5",
+          "error": "",
+          "evidence": "Аудиосистема LG XBOOM RNC5 - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 104,
+          "gallery_selected": 10
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Аудиосистема XBOOM RNC5» (артикул RNC5.DRUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угада",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 124,
+      "real_conflicts": [
+        {
+          "normalized_name": "гарантийный_талон",
+          "raw_names": [
+            "Гарантийный талон"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "o",
+            "true"
+          ]
+        }
+      ],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "11/07/2025",
+          "support_model": "RNC5.DRUSLLK",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=Rcbla6KKFRusb5bDPcoK7w"
+        }
+      ],
+      "documents_report": {
+        "product_model": "RNC5",
+        "support_url": "https://www.lg.com/ru/support/product/lg-RNC5.DRUSLLK",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "11/07/2025",
+            "size": "1 318K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=Rcbla6KKFRusb5bDPcoK7w",
+            "fetchable": true
+          },
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "02/04/2025",
+            "size": "4 487K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=x8C0Inageb6TRM7ZaSvDIg",
+            "fetchable": true
+          },
+          {
+            "type": "Краткое руководство",
+            "label": "English",
+            "date": "29/06/2026",
+            "size": "4 434K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=o5x1aLcbeNSKShIZ78tcw",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=Rcbla6KKFRusb5bDPcoK7w",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 1349358,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "RNC5",
+                "RNC5"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 64082,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 49644
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул RNC5.DRUSLLK и базовую модель RNC5."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: base_model. Страница описания продукта LG XBOOM RNC5 | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: base_model. Аудиосистема LG XBOOM RNC5 - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Аудиосистема XBOOM RNC5» (артикул RNC5.DRUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, unresolved_conflicts, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Найдена только базовая модель, требуется подтверждение артикула. Реальных конфликтов: 1; только базовая модель LG: 123; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, unresolved_conflicts, dealer_cross_check_missing."
+        }
+      ],
+      "index": 18,
+      "seller_sku": "RNC5.DRUSLLK",
+      "category": "Музыкальные проигрыватели",
+      "group": "B",
+      "seconds": 2.6,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 55; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 55,
+        "official_gallery_selected": 26,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "base_model",
+          "url": "https://www.lg.com/kz/speakers/soundbars/s70tr/",
+          "found_model": "S70TR",
+          "error": "",
+          "evidence": "Звуковая панель S70TR LG для домашнего кинотеатра с поддержкой технологии Dolby Atmos, 5.1.1-канальным звуком и",
+          "facts": 55,
+          "gallery_selected": 26
+        },
+        "lg_ru": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Саундбар S70TR» (артикул S70TR.ARUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не ",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 55,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": null,
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул S70TR.ARUSLLK и базовую модель S70TR."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: base_model. Звуковая панель S70TR LG для домашнего кинотеатра с поддержкой технологии Dolby Atmos, 5.1.1-канальным звуком и"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Саундбар S70TR» (артикул S70TR.ARUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 55; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 19,
+      "seller_sku": "S70TR.ARUSLLK",
+      "category": "Саундбары",
+      "group": "B",
+      "seconds": 0.8,
+      "real_requests": 0,
+      "replayed": 1
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "lg_ru": {
+          "match_level": "mismatch",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Сушильная машина DC90V9V9W» (артикул DC90V9V9W.ABWPCOM_KZ). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 0,
+      "real_conflicts": [],
+      "documents_saved": [],
+      "documents_report": null,
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул DC90V9V9W.ABWPCOM_KZ и базовую модель DC90V9V9W.ABWPCOM_KZ."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Сушильная машина DC90V9V9W» (артикул DC90V9V9W.ABWPCOM_KZ). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Найдено несоответствие артикула. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing."
+        }
+      ],
+      "index": 20,
+      "seller_sku": "DC90V9V9W.ABWPCOM_KZ",
+      "category": "Сушильные машины",
+      "group": "C",
+      "seconds": 0.3,
+      "real_requests": 0,
+      "replayed": 0
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 33; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready",
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 64,
+        "official_gallery_selected": 30,
+        "official_gallery_from_exact_pages": 30,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/speakers/xboom/xl5s/",
+          "found_model": "XL5S",
+          "error": "",
+          "evidence": "LG XBOOM XL5S - XL5S | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Si",
+          "facts": 32,
+          "gallery_selected": 20
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/audio/lg-xl5s",
+          "found_model": "XL5S",
+          "error": "",
+          "evidence": "Портативная колонка LG XBOOM XL5S - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 32,
+          "gallery_selected": 10
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Музыкальная колонка XL5S» (артикул XL5S). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 33,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "22/07/2025",
+          "support_model": "XL5S.DRUSLLK",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=2N9jhvvqrYUtVegnPoZWw"
+        }
+      ],
+      "documents_report": {
+        "product_model": "XL5S",
+        "support_url": "https://www.lg.com/ru/support/product/lg-XL5S.DRUSLLK",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "22/07/2025",
+            "size": "27 558K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=2N9jhvvqrYUtVegnPoZWw",
+            "fetchable": true
+          },
+          {
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "date": "02/04/2025",
+            "size": "27 558K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=vpoO4CI3UmKud0eyuuQcBw",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "English",
+            "date": "22/07/2025",
+            "size": "27 558K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=QJQNva7KRNki6xvxyEY4w",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=2N9jhvvqrYUtVegnPoZWw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 5866734,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "XL5S",
+                "XL5S"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 47262,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "en": 321,
+                "ru": 37080
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул XL5S и базовую модель XL5S."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. LG XBOOM XL5S - XL5S | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Si"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Портативная колонка LG XBOOM XL5S - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Музыкальная колонка XL5S» (артикул XL5S). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 33; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        }
+      ],
+      "index": 21,
+      "seller_sku": "XL5S",
+      "category": "Колонки",
+      "group": "D",
+      "seconds": 3.3,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "needs_review",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 98; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready_with_gaps",
+        "blocking_gaps": [
+          "unresolved_conflicts"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "unresolved_conflicts",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 125,
+        "official_gallery_selected": 25,
+        "official_gallery_from_exact_pages": 25,
+        "real_conflicts": 1,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/tvs-soundbars/4k-uhd-tvs/65ut80006la/",
+          "found_model": "65UT80006LA",
+          "error": "",
+          "evidence": "65 дюймовый телевизор LG UHD 65ut80006la | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u",
+          "facts": 61,
+          "gallery_selected": 12
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/televisions/lg-65ut80006la",
+          "found_model": "65UT80006LA",
+          "error": "",
+          "evidence": "Телевизор 65'' LG 65UT80006LA - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр",
+          "facts": 64,
+          "gallery_selected": 13
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Телевизор 65UT80006LA 65''/4K UHD/Smart TV/Wi-Fi/BT» (артикул 65UT80006LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Т",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 99,
+      "real_conflicts": [
+        {
+          "normalized_name": "пульт_magic_remote",
+          "raw_names": [
+            "Пульт Magic Remote"
+          ],
+          "sources": [
+            "lg_kz",
+            "lg_ru"
+          ],
+          "values": [
+            "в комплекте",
+            "встроенный"
+          ]
+        }
+      ],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "27/09/2024",
+          "support_model": "65UT80006LA.ARUG",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=exmaKFodPhSI4PxKNqNfg"
+        }
+      ],
+      "documents_report": {
+        "product_model": "65UT80006LA",
+        "support_url": "https://www.lg.com/ru/support/product/lg-65UT80006LA.ARUG",
+        "candidates": [
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "Русский",
+            "date": "27/09/2024",
+            "size": "3 427K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=iJaKiEzytEXhKRsCrwTYA",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "27/09/2024",
+            "size": "364K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=exmaKFodPhSI4PxKNqNfg",
+            "fetchable": true
+          },
+          {
+            "type": "Инструкция для быстрого старта",
+            "label": "English",
+            "date": "27/09/2024",
+            "size": "24 626K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=vJRs4SFCGpsPEq2QLimw",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=exmaKFodPhSI4PxKNqNfg",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 373178,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [],
+              "model_masks": [
+                "65UT80*"
+              ],
+              "model_evidence": "family_mask",
+              "text_chars": 30305,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 24248
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул 65UT80006LA и базовую модель 65UT80006LA."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. 65 дюймовый телевизор LG UHD 65ut80006la | LG Қазақстан Skip to Content Skip to Accessibility Help About Cookies on This Site We u"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Телевизор 65'' LG 65UT80006LA - купить, цены, отзывы | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потр"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Телевизор 65UT80006LA 65''/4K UHD/Smart TV/Wi-Fi/BT» (артикул 65UT80006LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 98; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing."
+        }
+      ],
+      "index": 22,
+      "seller_sku": "65UT80006LA",
+      "category": "Телевизоры",
+      "group": "D",
+      "seconds": 2.1,
+      "real_requests": 0,
+      "replayed": 4
+    },
+    {
+      "job": {
+        "status": "done",
+        "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 66; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+      },
+      "readiness": {
+        "verdict": "export_ready",
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [
+          "lg_kz",
+          "lg_ru"
+        ],
+        "official_facts": 91,
+        "official_gallery_selected": 16,
+        "official_gallery_from_exact_pages": 16,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 1,
+          "languages": [
+            "Русский"
+          ],
+          "russian": true
+        },
+        "dealer_confirmed": []
+      },
+      "sources": {
+        "lg_kz": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/kz/speakers/xboom/cj45/",
+          "found_model": "CJ45",
+          "error": "",
+          "evidence": "Минисистема LG XBOOM CJ45, 720 Вт, Функция Караоке, Подключение нескольких устройств, Функций DJ - CJ45 | LG Қазақс",
+          "facts": 39,
+          "gallery_selected": 8
+        },
+        "lg_ru": {
+          "match_level": "full_sku",
+          "url": "https://www.lg.com/ru/audio/lg-cj45",
+          "found_model": "CJ45",
+          "error": "",
+          "evidence": "Минисистема LG CJ45 - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется",
+          "facts": 52,
+          "gallery_selected": 8
+        },
+        "sulpak": {
+          "match_level": "unknown",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "facts": 0,
+          "gallery_selected": 0
+        },
+        "dns": {
+          "match_level": "dealer_url_needed",
+          "url": "",
+          "found_model": "",
+          "error": "",
+          "evidence": "Нет проверенного дилерского URL для «LG Музыкальный центр XBOOM CJ45» (артикул CJ45). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана ",
+          "facts": 0,
+          "gallery_selected": 0
+        }
+      },
+      "resolved_total": 66,
+      "real_conflicts": [],
+      "documents_saved": [
+        {
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "date": "30/03/2026",
+          "support_model": "CJ45.DRUSLLX",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=81DkR1vDG1xPcclPaML2BA"
+        }
+      ],
+      "documents_report": {
+        "product_model": "CJ45",
+        "support_url": "https://www.lg.com/ru/support/product/lg-CJ45.DRUSLLX",
+        "candidates": [
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "30/03/2026",
+            "size": "2 548K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=81DkR1vDG1xPcclPaML2BA",
+            "fetchable": true
+          },
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "26/03/2026",
+            "size": "1 420K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=RxkZTt261QOdXEEE4Gxkww",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "English",
+            "date": "07/04/2026",
+            "size": "2 399K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=xxqzwsyt3w8MUdAGjX0XQQ",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=81DkR1vDG1xPcclPaML2BA",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "instruction_confirmed_by_content",
+            "bytes": 2608987,
+            "assessment": {
+              "accepted": true,
+              "kind": "instruction_confirmed",
+              "names_model": [
+                "CJ45",
+                "CJ45"
+              ],
+              "model_masks": [],
+              "model_evidence": "exact",
+              "text_chars": 59708,
+              "languages": [
+                "ru"
+              ],
+              "russian_instruction": true,
+              "letters_by_language": {
+                "ru": 45408
+              }
+            },
+            "content_language": "Русский"
+          }
+        ],
+        "outcome": "russian_instruction_confirmed"
+      },
+      "events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: проверяем полный артикул CJ45 и базовую модель CJ45."
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Минисистема LG XBOOM CJ45, 720 Вт, Функция Караоке, Подключение нескольких устройств, Функций DJ - CJ45 | LG Қазақс"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Минисистема LG CJ45 - купить, цены | LG RU Чтобы правильно использовать наш веб-сайт LG.com, вам потребуется"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak."
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Музыкальный центр XBOOM CJ45» (артикул CJ45). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск."
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1."
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): No pre-verified DNS document candidate for this search code."
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 66; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing."
+        }
+      ],
+      "index": 23,
+      "seller_sku": "CJ45",
+      "category": "Музыкальные проигрыватели",
+      "group": "D",
+      "seconds": 2.9,
+      "real_requests": 0,
+      "replayed": 4
+    }
+  ],
+  "halted": "",
+  "not_run": []
+}

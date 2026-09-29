@@ -1,0 +1,90 @@
+{
+  "is_product_page": true,
+  "product_objects": 1,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "category",
+        "navigation",
+        "product"
+      ],
+      "pagination": [],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [
+        ".gtin",
+        ".mpn",
+        ".name"
+      ],
+      "microdata_properties": [],
+      "code_fields": [
+        "gtin",
+        "mpn"
+      ],
+      "variant_fields": [],
+      "model_semantics": "explicit_manufacturer_or_model"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": false,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "02768a7f6a872352d8c270ad72c4b7741ff4eaaa1bb9ffd516ee99a2f6da7ebf",
+    "identity": "ed08eb9dcbeab8011c23aaf72e6c0b3ca3d7c08fe38cfa7a740783c2d6fcf16a",
+    "specifications": "19fd3bd7ebbf7c45a37fa3997af0fa21a30c857b3c1eee98ebad01358d573a58",
+    "media": "eb0639fac9aa6ac13849c4b83ded1a7bce569f7dd762f17c9ea30c7a9facd4fc",
+    "documents": "e995312d482e46eb1b8cb042e0f15fd2f953f83447af84033e0292cc9b1ba917"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": true,
+    "specifications": false,
+    "media": false,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "generic_json_ld_product",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "json_ld",
+          "signal": "@type=Product",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "engine": "next_js",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "__NEXT_DATA__|/_next/static/",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": true,
+  "content_sha256": "30b782bdfe4474708774e51775c7c426494b0c60ac57c9384a6114ca0a3d7292",
+  "fixture_version": 2
+}

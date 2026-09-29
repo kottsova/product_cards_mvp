@@ -1,0 +1,112 @@
+{
+  "rows": 24,
+  "new_rows": 12,
+  "new_rows_not_in_kz_sitemap": 6,
+  "job_live": {
+    "done": 10,
+    "needs_review": 14
+  },
+  "job_after_fixes": {
+    "done": 12,
+    "needs_review": 12
+  },
+  "readiness_after_fixes": {
+    "export_ready": 7,
+    "export_ready_with_gaps": 10,
+    "not_ready": 7
+  },
+  "done_but_not_export_ready": 5,
+  "conflicts_live": 10,
+  "conflicts_after_fixes": 8,
+  "rows_with_conflicts_after_fixes": 6,
+  "exact_page_rows": 17,
+  "exact_rows_both_regions": 11,
+  "exact_rows_both_regions_with_conflicts": 5,
+  "exact_rows_single_region": 6,
+  "exact_rows_single_region_with_conflicts": 0,
+  "base_model_only_rows": 6,
+  "no_official_page_rows": 1,
+  "rows_with_ru_page": 20,
+  "instruction_states_among_ru_page_rows": {
+    "instruction_confirmed_by_content": 14,
+    "instruction_by_content_model_not_named": 4,
+    "reachable_not_a_complete_pdf": 2
+  },
+  "russian_instruction_saved_with_model_evidence": 13,
+  "instruction_model_evidence": {
+    "exact": 8,
+    "family_mask": 6
+  },
+  "kazakh_only_instruction_rows": [
+    "MS2032GAS"
+  ],
+  "requests": {
+    "real_total": 58,
+    "cap_total": 180,
+    "max_real_in_one_row": 4,
+    "cap_row": 12,
+    "refusals": 0,
+    "replayed": 28,
+    "real_new_rows": 36,
+    "real_first_pilot_rows": 22,
+    "real_downloaded_mb": 281.1,
+    "real_document_files_mb": 267.0,
+    "real_document_files": 25,
+    "blocks": 0,
+    "stopped_hosts": []
+  },
+  "seconds_per_row_live": {
+    "mean": 20.6,
+    "max": 59.5,
+    "rows_over_50_s": [
+      "24MR400-B.ARUQ",
+      "VC5316NNTS.APSQCIS"
+    ]
+  },
+  "export": {
+    "sheets": [
+      "Инструкции",
+      "Источники",
+      "Колонки",
+      "Микроволновые печи",
+      "Мониторы",
+      "Музыкальные проигрыватели",
+      "Проверка источников",
+      "Пылесосы",
+      "Саундбары",
+      "Смарт-часы",
+      "Сплит-системы",
+      "Стиральные машины",
+      "Сушильные машины",
+      "Телевизоры",
+      "Фотографии",
+      "Холодильники"
+    ],
+    "rows_with_photo_rows": 23,
+    "photo_rows": 536,
+    "rows_with_instruction_rows": 14,
+    "instruction_rows": 14,
+    "instruction_languages_in_sheet": [
+      "Казахский",
+      "Русский"
+    ]
+  },
+  "estimate_578": {
+    "pages_reachable_now": 514,
+    "share_pages_reachable_now": 0.889,
+    "expected_exact_page": 434,
+    "share_expected_exact": 0.751,
+    "expected_base_model_only": 80,
+    "expected_no_page": 64,
+    "exact_slug_by_region": {
+      "exact_both_regions": 328,
+      "exact_ru_only": 37,
+      "exact_kz_only": 69
+    },
+    "market_tag_rows": 36,
+    "market_tag_rows_currently_missed": 36,
+    "market_tag_rows_found_if_the_tag_were_stripped": 35,
+    "truly_absent_without_tag_rows": 28
+  },
+  "calibration_agree": 24
+}

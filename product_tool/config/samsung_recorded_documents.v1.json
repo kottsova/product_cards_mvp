@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "purpose": "Content assessments of Samsung instruction files that an earlier stage already read in full. The adapter uses an entry (matched by the exact link the official product page prints and by the catalog article) instead of downloading the file again; the tie to the product by the CURRENT page is still read live. Nothing here is a code-equality rule.",
+  "documents": [
+    {
+      "article": "MS23K3614AK/BW",
+      "href": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "bytes": 10572005,
+      "pages": 80,
+      "assessed": "2026-09-22 (Stage 8.6): the fully assembled file was read page by page with pypdf; the bytes were not kept",
+      "evidence": [
+        "reports/source_census_2026-09-22_stage8_6/content_verification.json",
+        "reports/source_census_2026-09-22_stage8_6/assembly_result.json",
+        "reports/source_census_2026-09-22_stage8_4/documents.json"
+      ],
+      "basis": "Russian user manual by its own text (pages 1-19 of 80; Ukrainian, Kazakh, Uzbek sections follow); the cover names the family MS23K3614A*, and the exact catalog code MS23K3614AK_BW stands in the page footers (80 occurrences); no other model is named.",
+      "facts": {
+        "content_status": "readable",
+        "pages": 80,
+        "empty_pages": 0,
+        "chars": null,
+        "russian_by_text": true,
+        "instruction_by_content": true,
+        "regulatory": false,
+        "names_catalog_model": {
+          "exact": true,
+          "family_mask": [
+            "MS23K3614A*"
+          ],
+          "tokens": [
+            "MS23K3614AK"
+          ]
+        },
+        "names_link_model": {
+          "model_name": "MS23K3614AK",
+          "exact": true,
+          "family_mask": [
+            "MS23K3614A*"
+          ]
+        },
+        "conflicting_models": [],
+        "languages_by_text": [
+          "ru",
+          "uk",
+          "kk",
+          "uz"
+        ],
+        "letters_by_language": {}
+      }
+    },
+    {
+      "article": "DW60M5050BB/WT",
+      "href": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=DW60M5050BB&CttFileID=10696196&CDCttType=UM&VPath=UM%2F202507%2F20250724101125641%2FDW5500M_DD81-02615G-06_RU_UK_KK_UZ_R.pdf",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/202507/20250724101125641/DW5500M_DD81-02615G-06_RU_UK_KK_UZ_R.pdf",
+      "bytes": 47370898,
+      "pages": 208,
+      "assessed": "2026-09-26 (Stage 28): the file (47 MB, ceiling 60 MB, 1 request) was read page by page with pypdf; the bytes were not kept",
+      "evidence": [
+        "reports/source_census_2026-09-26_stage28/raw/dishwasher_result.json",
+        "reports/source_census_2026-09-26_stage28/raw/dishwasher_declaration.json",
+        "reports/source_census_2026-09-26_stage28/docs_extract/index.json"
+      ],
+      "basis": "Russian by its own text (a multi-language file: Russian, Ukrainian, Kazakh, Uzbek sections); the exact catalog code DW60M5050BB is named in the text; no other model is named.",
+      "facts": {
+        "content_status": "readable",
+        "pages": 208,
+        "empty_pages": 0,
+        "chars": 340538,
+        "russian_by_text": true,
+        "instruction_by_content": true,
+        "regulatory": false,
+        "names_catalog_model": {
+          "exact": true,
+          "family_mask": [
+            "DW60M5050**"
+          ],
+          "tokens": [
+            "DW60M5050BB"
+          ]
+        },
+        "names_link_model": {
+          "model_name": "DW60M5050BB",
+          "exact": true,
+          "family_mask": [
+            "DW60M5050**"
+          ]
+        },
+        "conflicting_models": [],
+        "languages_by_text": [
+          "en",
+          "kk",
+          "ru",
+          "uk"
+        ],
+        "letters_by_language": {
+          "en": 614,
+          "kk": 60837,
+          "ru": 68504,
+          "uk": 62700
+        }
+      }
+    }
+  ]
+}

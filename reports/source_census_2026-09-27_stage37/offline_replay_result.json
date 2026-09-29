@@ -1,0 +1,186 @@
+{
+  "network": "saved responses only; tests package blocks HTTP/DNS",
+  "chosen": [
+    "XL7S",
+    "MS2032GAS"
+  ],
+  "saved_response_calls": 12,
+  "worker_seconds": {
+    "XL7S": 11.332,
+    "MS2032GAS": 7.99
+  },
+  "document_reports": {
+    "XL7S": [
+      {
+        "product_model": "XL7S",
+        "support_url": "https://www.lg.com/ru/support/product/lg-XL7S.DRUSLLK",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "date": "02/04/2025",
+            "size": "2 496K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=GCG3kvyydm3cBKtc25zD1w",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "09/08/2024",
+            "size": "6 010K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg",
+            "fetchable": true
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Lithuanian",
+            "date": "07/03/2025",
+            "size": "5 906K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=UiD5Dsn5HE0kRO5fFvQyrA",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=3EAQjr62q61X0tBLZXc2pg",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "reachable_file",
+            "bytes": 6153321,
+            "error": "pdf: Invalid hexadecimal character b'.' in hex string"
+          },
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=GCG3kvyydm3cBKtc25zD1w",
+            "type": "Краткое руководство",
+            "label": "English,Русский",
+            "state": "reachable_file",
+            "bytes": 2555801,
+            "error": "pdf: Invalid Elementary Object starting with b'>' @3749: b'6 5Td\\n103 4cm\\nTm0266>4A.4<025A046304B304B3046-747804TJ\\n0 -6.510"
+          }
+        ],
+        "outcome": "no_instruction_confirmed",
+        "support_page_model": "XL7S",
+        "support_page_ties_full_article": true
+      }
+    ],
+    "MS2032GAS": [
+      {
+        "product_model": "MS2032GAS",
+        "support_url": "https://www.lg.com/ru/support/product/lg-MS2032GAS.BBKQCIS",
+        "candidates": [
+          {
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "date": "15/08/2025",
+            "size": "1 732K",
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=DgkBn9WDxL5ki4F60G4N9w",
+            "fetchable": true
+          },
+          {
+            "type": "Online Manual",
+            "label": "Русский",
+            "date": "15/08/2025",
+            "size": "",
+            "href": "https://www.lg.com/ru/support/product/_blank",
+            "fetchable": false
+          },
+          {
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "date": "15/08/2025",
+            "size": "1 638K",
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw",
+            "fetchable": true
+          }
+        ],
+        "files": [
+          {
+            "href": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MTEhHDZ1oogP22Kj48lw",
+            "type": "Руководства пользователя",
+            "label": "Русский",
+            "state": "reachable_file",
+            "bytes": 1676595,
+            "error": "pdf: Cannot find Root object in pdf"
+          },
+          {
+            "href": "https://gscs-b2c.lge.com/downloadFile?fileId=DgkBn9WDxL5ki4F60G4N9w",
+            "type": "Краткое руководство",
+            "label": "Русский",
+            "state": "reachable_but_not_a_complete_pdf",
+            "bytes": 1679778
+          }
+        ],
+        "outcome": "no_instruction_confirmed",
+        "support_page_model": "MS2032GAS",
+        "support_page_ties_full_article": true
+      }
+    ]
+  },
+  "batch_counts": {
+    "selected": 2,
+    "queued": 0,
+    "running": 0,
+    "completed": 2,
+    "review": 2
+  },
+  "products": {
+    "XL7S": {
+      "job_status": "done",
+      "card_readiness": "export_ready_with_gaps",
+      "reasons": [
+        "Полученный PDF не удалось прочитать; русская инструкция не подтверждена."
+      ],
+      "facts": 64,
+      "selected_photos": 42,
+      "documents": [],
+      "instruction_events": [
+        "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 2; ни один файл не подтверждён как инструкция на русском языке. PDF не удалось прочитать: 2.",
+        "DNS (дилер): Дилерский документ не проверялся в контрольном прогоне.",
+        "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing."
+      ],
+      "product_page_http": 200
+    },
+    "MS2032GAS": {
+      "job_status": "needs_review",
+      "card_readiness": "export_ready_with_gaps",
+      "reasons": [
+        "Есть неразрешённый конфликт характеристик LG Казахстан и LG Россия.",
+        "Полученный PDF не удалось прочитать; русская инструкция не подтверждена."
+      ],
+      "facts": 118,
+      "selected_photos": 35,
+      "documents": [],
+      "instruction_events": [
+        "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 2; ни один файл не подтверждён как инструкция на русском языке. PDF не удалось прочитать: 1.",
+        "DNS (дилер): Дилерский документ не проверялся в контрольном прогоне.",
+        "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing."
+      ],
+      "product_page_http": 200
+    },
+    "CK43": {
+      "job_status": "not_started",
+      "card_readiness": "not_checked",
+      "reasons": [
+        "Проверка ещё не запускалась."
+      ],
+      "facts": 0,
+      "selected_photos": 0,
+      "documents": [],
+      "instruction_events": [],
+      "product_page_http": 200
+    },
+    "XL7S.OTHER": {
+      "job_status": "not_started",
+      "card_readiness": "not_checked",
+      "reasons": [
+        "Проверка ещё не запускалась."
+      ],
+      "facts": 0,
+      "selected_photos": 0,
+      "documents": [],
+      "instruction_events": [],
+      "product_page_http": 200
+    }
+  },
+  "excel_bytes": 25917
+}

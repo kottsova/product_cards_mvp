@@ -1,0 +1,84 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [
+        "GET:s:html_search_form"
+      ],
+      "navigation": [
+        "category",
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [
+        "rel_next"
+      ],
+      "locale_contract": "host_or_undeclared"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [
+        "responsive_srcset",
+        "semantic_gallery"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "b07af86fa3449f0ff369fc9f4978d388fa499292e9884d06c1bc7a38096475e9",
+    "identity": "6dc04ce4b5e874f8faa170b273a2017cb65945d52641bf5e10803fb1797f7516",
+    "specifications": "9214e08019f93ae013eda7dcc56556a701f258a12714148cc6b8f48d528eb2e4",
+    "media": "f10cfeaa78105c1140348ada08226ed976866fe89e2a12fdcea279a5e0d503c4",
+    "documents": "81d1c2b870e5eec620f647a323a1f97d47610818a6fa8e296ac445aab93f9d5a"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": false,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "woocommerce",
+      "status": "confirmed",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "wp-content/plugins/woocommerce|wc-ajax=|woocommerce_params",
+          "strength": "strong",
+          "weight": 0.8
+        },
+        {
+          "source": "html",
+          "signal": "/wp-content/",
+          "strength": "weak",
+          "weight": 0.25
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "b70b42e3ae14e15bd37e0ffb64b70479fc42f28a77c4460f1a8e5792fff20880",
+  "fixture_version": 2
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-22T12:07:55.654682+00:00",
+  "clusters": [
+    {
+      "engine": "adobe_experience_manager",
+      "families": [
+        "beats",
+        "benq",
+        "dell",
+        "sandisk",
+        "wd"
+      ],
+      "family_count": 5,
+      "endpoint_evidence_count": 12,
+      "status_counts": {
+        "confirmed": 10,
+        "probable": 2
+      },
+      "max_confidence": 1.0,
+      "adapter_recommendation": "evaluate_after_exact_identity_sampling"
+    },
+    {
+      "engine": "next_js",
+      "families": [
+        "gopro",
+        "nintendo"
+      ],
+      "family_count": 2,
+      "endpoint_evidence_count": 2,
+      "status_counts": {
+        "confirmed": 2
+      },
+      "max_confidence": 1.0,
+      "adapter_recommendation": "evaluate_after_exact_identity_sampling"
+    },
+    {
+      "engine": "nuxt",
+      "families": [
+        "metabo",
+        "xpg"
+      ],
+      "family_count": 2,
+      "endpoint_evidence_count": 2,
+      "status_counts": {
+        "confirmed": 2
+      },
+      "max_confidence": 1.0,
+      "adapter_recommendation": "evaluate_after_exact_identity_sampling"
+    },
+    {
+      "engine": "shopify",
+      "families": [
+        "dreame",
+        "hyperx"
+      ],
+      "family_count": 2,
+      "endpoint_evidence_count": 7,
+      "status_counts": {
+        "confirmed": 3,
+        "probable": 4
+      },
+      "max_confidence": 1.0,
+      "adapter_recommendation": "evaluate_after_exact_identity_sampling"
+    },
+    {
+      "engine": "sitemap_catalog_feed",
+      "families": [
+        "1stplayer",
+        "aerocool",
+        "asrock",
+        "beats",
+        "benq",
+        "bq",
+        "dreame",
+        "dxracer",
+        "gamemax",
+        "hiper",
+        "hyperx",
+        "iiyama",
+        "kingbank",
+        "kingdian",
+        "lyambda",
+        "metabo",
+        "nintendo",
+        "ocypus",
+        "palit",
+        "raskat",
+        "sama",
+        "sandisk",
+        "super_flower",
+        "teamgroup",
+        "tecno",
+        "wd",
+        "weissgauff",
+        "xpg",
+        "yoshiro",
+        "орск"
+      ],
+      "family_count": 30,
+      "endpoint_evidence_count": 30,
+      "status_counts": {
+        "confirmed": 30
+      },
+      "max_confidence": 0.9,
+      "adapter_recommendation": "evaluate_after_exact_identity_sampling"
+    },
+    {
+      "engine": "woocommerce",
+      "families": [
+        "1stplayer",
+        "aerocool",
+        "lyambda",
+        "sama",
+        "xpg"
+      ],
+      "family_count": 5,
+      "endpoint_evidence_count": 11,
+      "status_counts": {
+        "confirmed": 3,
+        "probable": 8
+      },
+      "max_confidence": 1.0,
+      "adapter_recommendation": "evaluate_after_exact_identity_sampling"
+    }
+  ],
+  "custom_or_unknown_families": [
+    "colorful",
+    "don",
+    "evga",
+    "gamerstorm",
+    "gefest",
+    "gorenje",
+    "irbis",
+    "jonsbo",
+    "microsoft",
+    "nec",
+    "netac",
+    "pantum",
+    "pocketbook",
+    "sony",
+    "tefal",
+    "thermaltake",
+    "zotac"
+  ],
+  "browser_or_manual_review_families": [
+    "gopro",
+    "gorenje",
+    "nec",
+    "sony"
+  ],
+  "recommended_first_family": {
+    "strategy": "sitemap_catalog_feed",
+    "kind": "bounded_discovery_strategy_not_product_adapter",
+    "reason": "Broadest multi-brand evidence and reusable existing bounded sitemap primitives; exact identity remains a separate gate."
+  },
+  "platform_adapter_note": "Shopify is the first platform-adapter evaluation candidate (Dreame and HyperX), but is not implementation-ready until reproducible product discovery and structured exact identity are sampled. AEM remains explicitly out of scope."
+}

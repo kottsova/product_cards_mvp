@@ -1,0 +1,42 @@
+<!--
+SYNTHETIC, Stage 14 -- BOUNDARY-TESTING FIXTURE ONLY. Not a real capture,
+not the basis for a Bosch adapter or identity check (none is built this
+stage). Shaped after Bosch's own confirmed structural contract (Stage 8.1):
+JSON-LD Product with explicit gtin+mpn (its strongest identity signal) and
+a plain <img srcset> gallery -- NOT the data-media-id/data-fancybox
+Shopify pattern HyperX/Cudy share. Used only to prove where the shared
+extraction primitives in adapters/structured_page.py do and do not
+generalize: JSON-LD/DOM-table extraction should work here too; the
+data-media-id/data-fancybox gallery extractor should correctly find
+NOTHING, since this page never uses that attribute pattern at all.
+-->
+<html>
+<head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Bosch TWK7203 Kettle",
+  "gtin13": "4242002948291",
+  "mpn": "TWK7203",
+  "image": [{"@type": "ImageObject", "url": "https://www.bosch-home.com/images/twk7203-hero.jpg"}],
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Capacity", "value": "1.7 L"},
+    {"@type": "PropertyValue", "name": "Power", "value": "2400 W"}
+  ]
+}
+</script>
+</head>
+<body>
+<main>
+  <h1>Bosch TWK7203</h1>
+  <img src="https://www.bosch-home.com/images/twk7203-front.jpg"
+       srcset="https://www.bosch-home.com/images/twk7203-front-320.jpg 320w, https://www.bosch-home.com/images/twk7203-front-960.jpg 960w">
+  <section class="specifications">
+    <dl>
+      <dt>Colour</dt><dd>Black</dd>
+    </dl>
+  </section>
+</main>
+</body>
+</html>

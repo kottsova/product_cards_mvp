@@ -1,0 +1,83 @@
+{
+  "executed_at": "2026-09-23",
+  "budget_reference": "budget_predeclaration.json",
+  "allowed_hosts": [
+    "support.microsoft.com"
+  ],
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://support.microsoft.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.microsoft.com/robots.txt",
+      "redirect_chain": [
+        "https://support.microsoft.com/robots.txt"
+      ],
+      "content_type": "text/plain",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_evidence": [
+        {
+          "type": "bounded_get",
+          "bytes_read": 1080,
+          "url": "https://support.microsoft.com/robots.txt",
+          "sample_type": "robots"
+        }
+      ]
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://support.microsoft.com/sitemap.xml",
+      "capability": "sitemap",
+      "access_status": "unavailable",
+      "http_status": 404,
+      "final_url": "https://support.microsoft.com/sitemap.xml",
+      "redirect_chain": [
+        "https://support.microsoft.com/sitemap.xml"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 404",
+      "bytes_evidence": []
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://support.microsoft.com/en-us/all-products",
+      "capability": "homepage",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.microsoft.com/en-us/all-products-list",
+      "redirect_chain": [
+        "https://support.microsoft.com/en-us/all-products",
+        "https://support.microsoft.com/en-us/all-products-list"
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_evidence": [
+        {
+          "type": "bounded_get",
+          "bytes_read": 108197,
+          "url": "https://support.microsoft.com/en-us/all-products-list",
+          "sample_type": "support"
+        }
+      ]
+    }
+  ],
+  "total_requests_made": 3,
+  "candidate_xbox_links_found_on_support_page_same_host": [],
+  "candidate_links_followed_results": [],
+  "off_host_links_seen_but_not_followed": [
+    "https://support.xbox.com/",
+    "https://support.xbox.com/help/games-apps/my-games-apps/all-about-pc-gaming",
+    "https://www.xbox.com/",
+    "https://www.microsoft.com/en-us/store/b/xbox?icid=DSM_All_ShopXbox",
+    "https://www.xbox.com/en-us/games/store/xbox-game-pass-ultimate/cfq7ttc0khs0?icid=DSM_All_XboxGamePassUltimate",
+    "https://www.xbox.com/en-us/games/store/pc-game-pass/cfq7ttc0kgq8?icid=CNavAllPCGamePass",
+    "https://www.microsoft.com/en-us/store/b/xboxgames?icid=DSM_All_XboxGames"
+  ],
+  "off_host_links_total_seen": 7,
+  "stop_reason": "all_declared_and_discovered_same_host_candidates_exhausted"
+}

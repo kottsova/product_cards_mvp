@@ -1,0 +1,79 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [
+        "GET:q:html_search_form"
+      ],
+      "navigation": [
+        "category",
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [
+        "rel_next"
+      ],
+      "locale_contract": "host_or_undeclared"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": [
+        "accordion:details+summary"
+      ]
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "e178fefea48cc128266f555b999bcd9ac8b18c99bb0c09a37a4cd07eea2445b5",
+    "identity": "6dc04ce4b5e874f8faa170b273a2017cb65945d52641bf5e10803fb1797f7516",
+    "specifications": "6ad1f6e89e14118a41e0b834a06307ec1505964f9c59f8cacdd8ce36350043dd",
+    "media": "a9f224b6dff296067f905c85e004e9c3b51cf1ee6b00f210e16c47fb4e0e19ff",
+    "documents": "81d1c2b870e5eec620f647a323a1f97d47610818a6fa8e296ac445aab93f9d5a"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": true,
+    "media": true,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "shopify",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "cdn\\.shopify\\.com|Shopify\\.theme|shopify-section",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "42b1fb4006f9f1f0e593249f79fba85e2b9fadcf556c5a7ea89690d91b89ba22",
+  "fixture_version": 2
+}

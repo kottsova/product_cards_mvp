@@ -1,0 +1,101 @@
+{
+  "root_cause": {
+    "stage11_method": "Regex-substring filter requiring the literal SKU string \"9a273aa\" to appear in the image filename (re.findall(r\"hyperx_quadcast_2_s_9a273aa_[a-zA-Z0-9_]+\\.jpg\", text)). This is not how the page itself groups gallery images.",
+    "actual_dom_grouping": "The page's own lightbox gallery groups images by data-fancybox=\"images\" inside containers carrying a shared numeric data-media-id, under the same product-view template. Filename pattern is irrelevant to this grouping.",
+    "true_gallery_count": 14,
+    "true_gallery_items": [
+      {
+        "media_id": "33969182474397",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182507165",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_s_2_annotated_1_future_en.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182539933",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_2_dynamic_en_9a497f0f-27f3-4c7d-84aa-c8d556c1177e.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182572701",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_3_tap_en.jpg?v=1787066288"
+      },
+      {
+        "media_id": "33969182605469",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_4_versatile_en.jpg?v=1787066288"
+      },
+      {
+        "media_id": "33969182638237",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_5_redesigned_en.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182671005",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182703773",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_3.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182736541",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_4.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182769309",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_5.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182802077",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_6.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182834845",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_7.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182867613",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_8.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182900381",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_9.jpg?v=1787066289"
+      }
+    ],
+    "items_stage11_missed": [
+      {
+        "media_id": "33969182507165",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_s_2_annotated_1_future_en.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182539933",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_2_dynamic_en_9a497f0f-27f3-4c7d-84aa-c8d556c1177e.jpg?v=1787066289"
+      },
+      {
+        "media_id": "33969182572701",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_3_tap_en.jpg?v=1787066288"
+      },
+      {
+        "media_id": "33969182605469",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_4_versatile_en.jpg?v=1787066288"
+      },
+      {
+        "media_id": "33969182638237",
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_annotated_5_redesigned_en.jpg?v=1787066289"
+      }
+    ],
+    "why_they_were_missed": "Five of the 14 gallery images are annotated marketing/feature callouts (filenames containing \"annotated_1_future_en\", \"annotated_2_dynamic_en\", \"annotated_3_tap_en\", \"annotated_4_versatile_en\", \"annotated_5_redesigned_en\") -- none contains the SKU string \"9a273aa\", so Stage 11's substring filter silently excluded them even though they belong to the same gallery, same data-fancybox group, same product template.",
+    "conclusion": "Stage 11 found 9 of 14 real gallery images -- not because 5 images were unofficial or unrelated, but because the extraction method (filename substring) does not match the page's own grouping mechanism (DOM data-media-id/data-fancybox). This stage's corrected extraction method uses the DOM grouping directly."
+  },
+  "video_evidence": {
+    "user_provided_url": "https://cdn.shopify.com/videos/c/o/v/b05b09498da44727be948864df7222ac.mp4",
+    "found_verbatim_in_saved_hyperx_page_html": true,
+    "occurrence_count": 3,
+    "dom_container": "section#shopify-section-template--20613538611357__video_block_tTVMRn",
+    "shares_same_page_template_id_as_the_14_image_gallery": true,
+    "embedding_markup": "<video class=\"js-video slide-pc/slide-mb\"><source src=\"...b05b09498da44727be948864df7222ac.mp4\"></video>, inside <deferred-media data-media-id=\"template--...__video_block_tTVMRn\">",
+    "cover_image_found_separately": true,
+    "cover_image_url": "https://hyperx.com/cdn/shop/files/HX-QUADCAST-2-S-YouTube-tn-1080p_1920x.jpg?v=1789488039",
+    "cover_image_alt_text": "HyperX QuadCast 2 S – USB Microphone - video",
+    "conclusion": "The video is embedded directly inside THIS product's own page markup, under the same Shopify section template id family as the 14-image gallery, with its own product-specific poster image (filename itself says \"HX-QUADCAST-2-S...\"). This is first-party DOM evidence of belonging to this exact product, not an inference from sharing a generic Shopify CDN domain."
+  }
+}

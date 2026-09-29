@@ -1,0 +1,76 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "category",
+        "navigation",
+        "support"
+      ],
+      "pagination": [
+        "page_parameter"
+      ],
+      "locale_contract": "host_or_undeclared"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [
+        "responsive_srcset"
+      ],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [
+        "a[href:pdf]"
+      ],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "3af7d99f2b6900093d27eace65f9f798d8ea992d9b7b328260fe96e3140d7016",
+    "identity": "d1371492e78063865f3bcdbb0bb0d44dfec7b0e5648dbbf71a547bbecf415563",
+    "specifications": "2f237e61338083df644c10173eab05e6debb90e09c04eda14f0f7c03b9342239",
+    "media": "f51e4bd8586fcdb4240d8ec6607f3dc6e1768f902162dc55abd8dd5a2c8912c6",
+    "documents": "890582a76bfdb80277c78df5effe603a1cb9de503ca609fe3843c2975543abb8"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": false,
+    "media": true,
+    "documents": true
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "adobe_experience_manager",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "a0b47365ec4da6f784938369d5ab96486ae15d6dbe1a960f963cff55de17bbf6",
+  "fixture_version": 2
+}

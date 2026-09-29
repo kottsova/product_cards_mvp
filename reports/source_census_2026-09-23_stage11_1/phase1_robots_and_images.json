@@ -1,0 +1,120 @@
+{
+  "phase": "robots_and_images",
+  "robots_http_status": 200,
+  "robots_disallow_rules": [
+    "/admin",
+    "/cart/",
+    "/*/cart/",
+    "/checkout",
+    "/*/checkout",
+    "/checkouts/",
+    "/*/checkouts/",
+    "/orders",
+    "/*/orders",
+    "/account",
+    "/*/account",
+    "/56183455901",
+    "/cdn/wpm/*.js",
+    "/services",
+    "/sf_*",
+    "/cart.js",
+    "/*/cart.js",
+    "/recommendations/products",
+    "/*/recommendations/products",
+    "/collections/*sort_by*",
+    "/*/collections/*sort_by*",
+    "/collections/*+*",
+    "/collections/*%2B*",
+    "/collections/*%2b*",
+    "/*/collections/*+*",
+    "/*/collections/*%2B*",
+    "/*/collections/*%2b*",
+    "/collections/*filter*&*filter*",
+    "/*/collections/*filter*&*filter*",
+    "/blogs/*+*",
+    "/blogs/*%2B*",
+    "/blogs/*%2b*",
+    "/*/blogs/*+*",
+    "/*/blogs/*%2B*",
+    "/*/blogs/*%2b*",
+    "/*?*ls=*&ls=*",
+    "/*?*ls%3*ls%3*",
+    "/*?*oseid=*",
+    "/*?*preview_theme_id=*",
+    "/*?*preview_script_id=*"
+  ],
+  "page_request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://hyperx.com/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://hyperx.com/robots.txt",
+      "redirect_chain": [
+        "https://hyperx.com/robots.txt"
+      ],
+      "content_type": "text/plain; charset=utf-8",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 3608,
+      "note": ""
+    }
+  ],
+  "skipped": [],
+  "image_fetch_total_requests": 2,
+  "image_results": {
+    "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289": {
+      "completeness": "complete",
+      "reason": "assembled_size_matches_declared_total",
+      "declared_total_bytes": 530088,
+      "bytes_assembled": 530088,
+      "content_type": "image/jpeg",
+      "sha256": "000a36af757cfdd20363d2b382986a94700e4aaf52c78f1446cca1dd00b10f33",
+      "saved_as": null,
+      "note": "Bytes were assembled, hashed, and visually inspected (Read tool) in-session, then discarded -- not committed into the repository, consistent with this project's no-raw-content rule (Stage 8.6).",
+      "host_of_url": "hyperx.com",
+      "host_is_official_confirmed_host": true,
+      "range_requests_log": [
+        {
+          "seq": 1,
+          "requested_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+          "range": "0-2999999",
+          "http_status": 206,
+          "content_range": "bytes 0-530087/530088",
+          "content_type": "image/jpeg",
+          "bytes_read": 530088,
+          "final_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_main_1.jpg?v=1787066289",
+          "error": "",
+          "aggregate_seq": null
+        }
+      ]
+    },
+    "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289": {
+      "completeness": "complete",
+      "reason": "assembled_size_matches_declared_total",
+      "declared_total_bytes": 578352,
+      "bytes_assembled": 578352,
+      "content_type": "image/jpeg",
+      "sha256": "176020459e88c4d2b495ffbf49f2ddbd00589adb54ed29a1f549b5f79fe50bcf",
+      "saved_as": null,
+      "note": "Bytes were assembled, hashed, and visually inspected (Read tool) in-session, then discarded -- not committed into the repository, consistent with this project's no-raw-content rule (Stage 8.6).",
+      "host_of_url": "hyperx.com",
+      "host_is_official_confirmed_host": true,
+      "range_requests_log": [
+        {
+          "seq": 2,
+          "requested_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289",
+          "range": "0-2999999",
+          "http_status": 206,
+          "content_range": "bytes 0-578351/578352",
+          "content_type": "image/jpeg",
+          "bytes_read": 578352,
+          "final_url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_s_9a273aa_angle_2.jpg?v=1787066289",
+          "error": "",
+          "aggregate_seq": null
+        }
+      ]
+    }
+  }
+}

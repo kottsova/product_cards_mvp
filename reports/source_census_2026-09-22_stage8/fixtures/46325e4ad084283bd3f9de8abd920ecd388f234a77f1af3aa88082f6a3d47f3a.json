@@ -1,0 +1,71 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [],
+      "navigation": [
+        "navigation",
+        "support"
+      ],
+      "pagination": [
+        "page_parameter"
+      ],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "2760408b7a5e9afe88fea9630d652aa09768d42f1731ad3e1602f2d6e0ca0aa5",
+    "identity": "6630e3410393d492f7c8a156f1ca196c9816696a0bfa5325c8e11cbc23526258",
+    "specifications": "a9a3e4d5da43ded05231b859667eedada78ff22d57ed4ae9b95b8aee964e1ca4",
+    "media": "02250985420de6ea6a6dbf3ead920bbeb032c3a85538d5b4c651350d326198c6",
+    "documents": "47025af016fa739b4231b449d43837ef57f07cd9ce2aad3cc4d08490b558a5a1"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": false,
+    "media": false,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "next_js",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "__NEXT_DATA__|/_next/static/",
+          "strength": "strong",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": false,
+  "content_sha256": "46325e4ad084283bd3f9de8abd920ecd388f234a77f1af3aa88082f6a3d47f3a",
+  "fixture_version": 2
+}

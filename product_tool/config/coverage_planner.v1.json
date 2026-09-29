@@ -1,0 +1,917 @@
+{
+  "schema_version": 1,
+  "purpose": "Machine-readable form of the Stage 13-16 readiness facts used by the offline coverage planner (product_tool/coverage). Every claim names repo evidence; nothing here was re-verified with a network request. Facts override adapter_profiles.v1.json only where a later stage proved that profile stale. Stage 18: a Product page fixture proves only the host, market, catalog category and page template that were actually observed (family_facts.<family>.scopes); it is never carried to the rest of the brand.",
+  "statuses": [
+    {
+      "id": "ready_to_run",
+      "label_ru": "Готово к запуску",
+      "meaning": "A working adapter wired into worker.run_once() covers the brand and can reach the product page: an exact URL is on record, or the adapter's own confirmed discovery route resolves it from the catalog code."
+    },
+    {
+      "id": "adapter_url_missing",
+      "label_ru": "Адаптер есть, URL нет",
+      "meaning": "A working adapter exists but has no confirmed exact product URL for this row and no confirmed discovery route; run_once() would stop at official_url_needed."
+    },
+    {
+      "id": "official_route_no_adapter",
+      "label_ru": "Маршрут известен, адаптера нет",
+      "meaning": "The official host is verified and the saved Product page evidence covers identity, specifications and media (a full-value card, or a structural sample with all three layers), but no adapter is wired into run_once()."
+    },
+    {
+      "id": "needs_product_page_fixture",
+      "label_ru": "Нужен fixture Product page",
+      "meaning": "The official host is verified but there is no Product page evidence sufficient to build an adapter (none, or a structural sample missing identity/specifications/media)."
+    },
+    {
+      "id": "host_blocked",
+      "label_ru": "Host заблокирован",
+      "meaning": "The only official host(s) returned 401/403/429/challenge or were paused by a recorded block; no further requests are allowed until a human clears the host."
+    },
+    {
+      "id": "identity_conflict",
+      "label_ru": "Конфликт identity/варианта",
+      "meaning": "The catalog row or saved evidence shows the exact model/variant cannot be settled (same seller article under several catalog units, or a confirmed regional/variant mismatch)."
+    },
+    {
+      "id": "manual_review",
+      "label_ru": "Нужна ручная проверка",
+      "meaning": "No verified official route, unresolved brand, missing brand or article, or a data anomaly a person must decide."
+    }
+  ],
+  "priority_brands": {
+    "provenance": "The priority-brand list recorded in Stage 8 (product_tool/census/structural_report_v8.py PRIORITY and reports/source_census_2026-09-22_stage8/report.md 'Priority-brand adapter map'), the order the user's task gave. Edit this list to re-rank; the planner recomputes everything from it.",
+    "families": [
+      "jbl",
+      "samsung",
+      "lg",
+      "apple",
+      "playstation",
+      "microsoft",
+      "xbox",
+      "razer",
+      "hyperx",
+      "hiper",
+      "xiaomi_global",
+      "dreame",
+      "electrolux",
+      "bosch_home"
+    ]
+  },
+  "host_stop_logs": {
+    "static": [
+      "reports/source_census_2026-09-23_stage13/raw/stage12_razer_fetch_log_for_host_stop.json"
+    ],
+    "runtime_optional": [
+      "data/hyperx_fetch_log.json",
+      "data/lg_fetch_log.json"
+    ],
+    "rule": "A host that ever logged 401/403/429 stays stopped (endpoint_probe.blocked_hosts_from_fetch_log); a fresh run inherits the stop."
+  },
+  "family_facts": {
+    "samsung": {
+      "note": "Stage 13 called Samsung 'full value'; the evidence is one microwave card plus two structural pages (TV, earbuds), all on samsung.com/kz_ru. adapter_profiles.v1.json still says product_page_not_found (stale). Every other Samsung catalog category has no observed Product page.",
+      "hosts": [
+        "www.samsung.com"
+      ],
+      "scopes": [
+        {
+          "scope_id": "samsung_kz_ru_microwave",
+          "label": "Samsung kz_ru microwave ovens (solo)",
+          "categories": [
+            "Микроволновые печи"
+          ],
+          "hosts": [
+            "www.samsung.com"
+          ],
+          "market": "kz_ru",
+          "market_matches_catalog": true,
+          "market_reason": "Observed on samsung.com/kz_ru, the market the source registry uses for Samsung.",
+          "page_template": "samsung_aem_json_ld_product_with_downloadcenter_manual",
+          "observed_urls": [
+            "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "partial",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "confirmed",
+            "route": "da-sitemap.xml link index (300 saved links, 37 microwave) matched by exact model code to the page slug; 1 exact hit for the 58 catalog microwave rows"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-22_stage8_4/candidate_selection.json",
+            "reports/source_census_2026-09-22_stage8_5/card.json",
+            "reports/source_census_2026-09-22_stage8_6/updated_card.json"
+          ],
+          "note": "Value-level card, identity exact_variant, content-verified manual. Six characteristics still have no confirmed value (weight, dimensions, turntable, controls, program counts, defrost modes).",
+          "fixture_level": "full_value"
+        },
+        {
+          "scope_id": "samsung_kz_ru_tv_audio",
+          "label": "Samsung kz_ru TV and Galaxy Buds product pages",
+          "categories": [
+            "Телевизоры",
+            "Наушники беспроводные"
+          ],
+          "hosts": [
+            "www.samsung.com"
+          ],
+          "market": "kz_ru",
+          "market_matches_catalog": true,
+          "market_reason": "Observed on samsung.com/kz_ru.",
+          "page_template": "samsung_aem_json_ld_product",
+          "observed_urls": [
+            "https://www.samsung.com/kz_ru/tvs/full-hd-tv/n5300-43-inch-full-hd-smart-tv-ue43n5300auxce/",
+            "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "absent",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "structural_only",
+            "route": "b2c-sitemap.xml -> vd-sitemap.xml (TV) and im-sitemap.xml (audio) list product URLs, but the catalog rows targeted in Stage 8.2 were not reached (52-URL TV slice, 300-loc audio slice)"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-22_stage8_2/product_page_fixtures.json",
+            "reports/source_census_2026-09-22_stage8_3/card_summary.json"
+          ],
+          "note": "TV UE43N5300AUXCE and Galaxy Buds3 FE carry JSON-LD name+sku and one image. The specifications tab is client-rendered: the TV page has none, the earbuds page has qualitative body text only, no table. Identity meaning of the sku is unverified for the TV. The Galaxy Buds3 FE page matches no catalog row; the TV page was not carded."
+        }
+      ]
+    },
+    "playstation": {
+      "note": "Stage 13 called PlayStation 'full value'; Stage 9's own criterion check failed on specifications (qualitative text only) and on the catalog row (two candidate rows, code absent from the page). Both pages are on the US web-store, not the catalog's market. Consoles and every other category have no observed page.",
+      "hosts": [
+        "direct.playstation.com"
+      ],
+      "scopes": [
+        {
+          "scope_id": "playstation_direct_us_accessories",
+          "label": "PS Direct (en-us) accessory page: DualSense controller",
+          "categories": [
+            "Геймпады"
+          ],
+          "hosts": [
+            "direct.playstation.com"
+          ],
+          "market": "en-us",
+          "market_matches_catalog": false,
+          "market_reason": "PS Direct is Sony's US web-store; its sku is the store's internal product id (1000050734), not the CFI-ZCT code. No page for the catalog's market was observed.",
+          "page_template": "aem_schema_org_microdata_product",
+          "observed_urls": [
+            "https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller-cosmic-red-for-ps5-pc-mac-mobile"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "partial",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "none",
+            "route": "category page -> product page was walked only inside the US store"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-22_stage9/card.json",
+            "reports/source_census_2026-09-22_stage9/identity_ambiguity.json",
+            "reports/source_census_2026-09-22_stage8_2/product_page_fixtures.json"
+          ],
+          "note": "Identity is microdata (name, sku), not JSON-LD, so it needs its own parser. Stage 9 reached exact_model only: model and colour confirmed, the catalog cannot pick between CFI-ZCT1J 02 and CFI-ZCT1W_cosmic_red."
+        },
+        {
+          "scope_id": "playstation_direct_us_games",
+          "label": "PS Direct (en-us) game page: collector's edition",
+          "categories": [
+            "Диски с играми"
+          ],
+          "hosts": [
+            "direct.playstation.com"
+          ],
+          "market": "en-us",
+          "market_matches_catalog": false,
+          "market_reason": "US web-store page; Stage 8.2 itself doubts PS Direct maps to the catalog's plain game discs at all.",
+          "page_template": "aem_schema_org_microdata_product",
+          "observed_urls": [
+            "https://direct.playstation.com/en-us/buy-games/ghost-of-yotei-collectors-edition-ps5"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "absent",
+            "media": "absent"
+          },
+          "discovery": {
+            "status": "none",
+            "route": "no route observed for the catalog's game category"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-22_stage8_2/product_page_fixtures.json"
+          ],
+          "note": "Ghost of Yotei Collector's Edition: microdata name+sku only, family_only against the catalog."
+        }
+      ]
+    },
+    "microsoft": {
+      "note": "Stage 13 called Microsoft 'full value'; Stage 10.2's own re-audit showed the page is the Xbox Series S line page on the en-US site with a variant selector, not an exact-variant page. Controllers, accessories, mice and headsets have no observed page.",
+      "hosts": [
+        "www.xbox.com",
+        "support.xbox.com"
+      ],
+      "scopes": [
+        {
+          "scope_id": "microsoft_xbox_us_console",
+          "label": "xbox.com (en-US) Xbox Series S line page",
+          "categories": [
+            "Игровые консоли"
+          ],
+          "hosts": [
+            "www.xbox.com"
+          ],
+          "market": "en-us",
+          "market_matches_catalog": false,
+          "market_reason": "The page is xbox.com/en-US; support.xbox.com/ru-RU answered with a bare JavaScript shell, so no page in the catalog's market was captured.",
+          "page_template": "xbox_com_line_landing_with_variant_selector",
+          "observed_urls": [
+            "https://www.xbox.com/en-US/consoles/xbox-series-s"
+          ],
+          "layers": {
+            "identity": "partial",
+            "specifications": "partial",
+            "media": "partial"
+          },
+          "discovery": {
+            "status": "none",
+            "route": "landing pages listed by the xbox.com sitemap; no route to a per-variant page was observed"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-23_stage10_2/card.json",
+            "reports/source_census_2026-09-23_stage10_2/offline_reverification.json"
+          ],
+          "note": "Identity is line-level (the seller article XXU-00015 is absent from the page), dimensions and weight are line-wide, the 14-image gallery has no colour-specific image."
+        }
+      ]
+    },
+    "razer": {
+      "host_blocked": true,
+      "hosts": [
+        "www.razer.com"
+      ],
+      "evidence": [
+        "reports/source_census_2026-09-23_stage13/report.md",
+        "reports/source_census_2026-09-23_stage13/raw/stage12_razer_fetch_log_for_host_stop.json"
+      ],
+      "note": "robots.txt returned a 403 bot-challenge; Stage 12's Razer page data was collected after that block and is not valid evidence."
+    },
+    "hyperx": {
+      "note": "Adapter wired into run_once() (Stage 14-16); 2 of 41 catalog rows have a confirmed exact URL. Fixtures are listed per category: hyperx.com is one global storefront, so the observed pages are in the catalog's market, but a keyboard page is a US layout.",
+      "hosts": [
+        "hyperx.com"
+      ],
+      "scopes": [
+        {
+          "scope_id": "hyperx_com_microphone",
+          "label": "hyperx.com microphone page (QuadCast 2S)",
+          "categories": [
+            "Микрофоны"
+          ],
+          "hosts": [
+            "hyperx.com"
+          ],
+          "market": "global",
+          "market_matches_catalog": true,
+          "market_reason": "hyperx.com is the manufacturer's single storefront; no country pages were observed.",
+          "page_template": "shopify_json_ld_product_dom_specs",
+          "observed_urls": [
+            "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "observed",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "no_crawl",
+            "route": "human_confirmed_exact_url"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-23_stage11/card.json",
+            "reports/source_census_2026-09-23_stage11_2/report.md"
+          ],
+          "note": "Value-level card, exact_variant on the exact seller code.",
+          "fixture_level": "full_value"
+        },
+        {
+          "scope_id": "hyperx_com_mice",
+          "label": "hyperx.com mouse page (Pulsefire Fuse)",
+          "categories": [
+            "Мыши"
+          ],
+          "hosts": [
+            "hyperx.com"
+          ],
+          "market": "global",
+          "market_matches_catalog": true,
+          "market_reason": "Same storefront.",
+          "page_template": "shopify_json_ld_product_dom_specs",
+          "observed_urls": [
+            "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "observed",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "no_crawl",
+            "route": "human_confirmed_exact_url"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-23_stage11_1/additional_rows_and_adapter_status.json"
+          ],
+          "note": "Live page with values, exact match on the seller code."
+        },
+        {
+          "scope_id": "hyperx_com_keyboards",
+          "label": "hyperx.com keyboard page (Alloy Rise 75, US layout)",
+          "categories": [
+            "Клавиатуры"
+          ],
+          "hosts": [
+            "hyperx.com"
+          ],
+          "market": "global",
+          "market_matches_catalog": true,
+          "market_reason": "Same storefront; the page itself is the US layout (#ABA), which is why the RU row #ACB does not match.",
+          "page_template": "shopify_json_ld_product_dom_specs",
+          "observed_urls": [
+            "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "observed",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "no_crawl",
+            "route": "human_confirmed_exact_url"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-23_stage11_1/additional_rows_and_adapter_status.json"
+          ],
+          "note": "Live page with values; base code matches the catalog row, regional suffix does not."
+        }
+      ]
+    },
+    "bosch_home": {
+      "note": "Bosch Home has 21 catalog categories; the only structurally sufficient page is a kettle on the German country site (field names only, values not retained). The UK air-fryer page lacks specifications and media. Category-routed Bosch rows are not part of this family.",
+      "scopes": [
+        {
+          "scope_id": "bosch_home_de_kettle",
+          "label": "bosch-home.com/de/de kettle page",
+          "categories": [
+            "Чайники электрические"
+          ],
+          "hosts": [
+            "www.bosch-home.com"
+          ],
+          "market": "de-de",
+          "market_matches_catalog": false,
+          "market_reason": "The observed page is the German country site; no page for the catalog's market was observed and regional variants of one model differ.",
+          "page_template": "bosch_home_gtin_mpn_json_ld",
+          "observed_urls": [
+            "https://www.bosch-home.com/de/de/product/kuechengeraete/wasserkocher/TWK7203"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "observed",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "structural_only",
+            "route": "structural: profile discovery layer confirmed, no catalog-row lookup route exercised"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-22_stage8/adapter_profiles.v1.json",
+            "reports/source_census_2026-09-23_stage13/readiness_table.md"
+          ],
+          "note": "Strongest identity signal in the project (gtin + mpn). Structure only; documents layer partial."
+        }
+      ]
+    },
+    "cudy": {
+      "note": "The only structurally sufficient page is a router on cudy.com. Switches, mesh systems, range extenders and Wi-Fi adapters share the storefront but no page for them was observed.",
+      "scopes": [
+        {
+          "scope_id": "cudy_com_routers",
+          "label": "cudy.com router page (WR6500H)",
+          "categories": [
+            "Роутеры"
+          ],
+          "hosts": [
+            "cudy.com"
+          ],
+          "market": "global",
+          "market_matches_catalog": true,
+          "market_reason": "cudy.com is the manufacturer's single global storefront.",
+          "page_template": "shopify_product_page",
+          "observed_urls": [
+            "https://www.cudy.com/products/wr6500h-1-0"
+          ],
+          "layers": {
+            "identity": "observed",
+            "specifications": "observed",
+            "media": "observed"
+          },
+          "discovery": {
+            "status": "structural_only",
+            "route": "structural: /collections/wi-fi-routers listed products; no catalog-row lookup exercised"
+          },
+          "evidence": [
+            "reports/source_census_2026-09-22_stage8/adapter_profiles.v1.json",
+            "reports/source_census_2026-09-23_stage13/readiness_table.md"
+          ],
+          "note": "Identity strategy not characterised yet; documents layer unconfirmed.",
+          "caveat": "Stage 8 recorded protection_status=challenge_suspected on every cudy.com sample. No 401/403/429 is on record, so the host is not stopped, but the first request must go through the policy-aware fetcher and stop on any challenge."
+        }
+      ]
+    }
+  },
+  "discovery_status_for_structural_only": "structural_only",
+  "product_facts": [
+    {
+      "brand_family": "hyperx",
+      "seller_sku": "7G7A4AA#ACB",
+      "status": "identity_conflict",
+      "reason": "region_suffix_mismatch_confirmed",
+      "detail": "The only found official page carries sku 7G7A4AA#ABA (US layout); the catalog row is #ACB. Never exact_variant.",
+      "evidence": [
+        "reports/source_census_2026-09-23_stage15/readiness_table_hyperx_update.md",
+        "reports/source_census_2026-09-23_stage15/report.md"
+      ]
+    }
+  ],
+  "template_groups": [
+    {
+      "group_id": "A",
+      "title": "discovery + identity + specs + media confirmed; documents the one gap",
+      "families": [
+        "bosch_home",
+        "cudy",
+        "hyperx"
+      ],
+      "shared_primitives": [
+        "product_tool/adapters/structured_page.py: JSON-LD Product fields, DOM spec table"
+      ],
+      "stays_separate": [
+        "identity: Bosch gtin+mpn, HyperX Shopify sku, Cudy still uncharacterised"
+      ],
+      "source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3, updated by reports/source_census_2026-09-23_stage15/readiness_table_hyperx_update.md",
+      "first_wave_families": [
+        "bosch_home",
+        "cudy"
+      ]
+    },
+    {
+      "group_id": "B",
+      "title": "discovery + identity + media confirmed; specifications and documents missing",
+      "families": [
+        "xiaomi_global",
+        "asus",
+        "delonghi",
+        "nintendo"
+      ],
+      "shared_primitives": [
+        "media/gallery extractor (all four confirmed)"
+      ],
+      "stays_separate": [
+        "identity",
+        "specifications extraction (unproven for all four)"
+      ],
+      "source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3",
+      "first_wave_families": [
+        "xiaomi_global"
+      ]
+    },
+    {
+      "group_id": "C",
+      "title": "discovery + identity + documents confirmed; specifications and media missing",
+      "families": [
+        "dreame"
+      ],
+      "shared_primitives": [],
+      "stays_separate": [
+        "n=1: nothing to generalise yet"
+      ],
+      "source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3",
+      "first_wave_families": [
+        "dreame"
+      ]
+    },
+    {
+      "group_id": "D",
+      "title": "full-value cards exist outside the structural census; each has its own identity strategy",
+      "families": [
+        "playstation",
+        "microsoft",
+        "razer"
+      ],
+      "note": "Stage 27: samsung left this group -- its adapter is wired into worker.run_once() (see selected_products); the queue offers only the products listed there.",
+      "shared_primitives": [],
+      "stays_separate": [
+        "identity: Samsung JSON-LD + sitemap, PlayStation microdata, Microsoft store gallery, Razer blocked"
+      ],
+      "source": "reports/source_census_2026-09-23_stage13/readiness_table.md Part 3",
+      "first_wave_families": [
+        "playstation",
+        "microsoft"
+      ]
+    }
+  ],
+  "dealer_routes": {
+    "dns": {
+      "role": "dealer_fallback",
+      "state": "wired",
+      "url_policy": "exact known URL only (adapters/dns.py KNOWN_URLS)",
+      "host": "www.dns-shop.ru"
+    },
+    "sulpak": {
+      "role": "lg_supplier_fallback",
+      "state": "wired",
+      "url_policy": "exact known URL only (adapters/sulpak.py KNOWN_LG_URLS)",
+      "host": "www.sulpak.kz"
+    },
+    "technopark": {
+      "role": "preferred_dealer_verification",
+      "state": "adapter_not_implemented",
+      "url_policy": "would need an exact product page; nothing is wired",
+      "host": ""
+    }
+  },
+  "wave_readiness_criteria": [
+    {
+      "id": "identity_exact",
+      "text": "Exact identity is decided by the source's own model and variant signals (the model name or code fields the page publishes, plus a variant discriminator such as colour, size, capacity or layout taken from a structured field), not by finding the seller SKU on the official site: seller SKUs such as CFI-ZCT1W_cosmic_red are catalog labels and may never appear on a page. exact_variant needs both model and variant to match; without a variant discriminator the result is exact_model at most. A manufacturer or regional code that the page does publish must not disagree with the catalog code: a confirmed mismatch (7G7A4AA#ABA on the page, #ACB in the catalog) blocks exact_variant and yields base_code_confirmed or identity_conflict, never a silent pass."
+    },
+    {
+      "id": "variants_positive_negative",
+      "text": "Per category in scope: at least one positive and one negative variant fixture (wrong colour/region/size/layout), taken from the same host and market as the scope; the negative never becomes exact_variant. A fixture from another category, market or page template does not count."
+    },
+    {
+      "id": "specifications",
+      "text": "Specifications extracted as name/value pairs, each with source URL and evidence; unit and value are not rewritten."
+    },
+    {
+      "id": "gallery_complete",
+      "text": "The full gallery that belongs to this exact variant is captured; images of other variants, banners and icons are excluded with a recorded reason."
+    },
+    {
+      "id": "documents_evidence",
+      "text": "A document is attached only from a direct link whose content or page names the exact model; regulatory papers are not instructions; absence is stated as a gap, not filled from a neighbour model."
+    },
+    {
+      "id": "run_once_offline",
+      "text": "worker.run_once() replays a catalog row offline against saved fixtures and finishes done or needs_review with the expected reason for every fixture."
+    },
+    {
+      "id": "checkpoint_resume",
+      "text": "The coverage executor saves a checkpoint per row, and a second pass over the same checkpoint makes no new calls and repeats no completed row."
+    },
+    {
+      "id": "policy_fetch",
+      "text": "Every fetch goes through PolicyAwareFetcher (allowlist, redirect checks, budget, persisted log); a recorded 401/403/429/challenge stops the host across a restart."
+    },
+    {
+      "id": "coverage_delta",
+      "text": "`python -m product_tool.coverage delta` against the pre-adapter plan shows the promised movement out of the wave's source statuses and no unit moving into ready_to_run without a positive fixture."
+    }
+  ],
+  "pair_tiebreak_order": [
+    "identity_conflict",
+    "manual_review",
+    "host_blocked",
+    "ready_to_run",
+    "adapter_url_missing",
+    "official_route_no_adapter",
+    "needs_product_page_fixture"
+  ],
+  "confirmed_exact_urls": {
+    "rule": "Only rows whose saved evidence reached identity exact_variant on an official page for the catalog market are counted as exact URLs on record. An adapter built for the family can use them as positive fixtures the day it lands.",
+    "counted": [
+      {
+        "brand_family": "samsung",
+        "seller_sku": "MS23K3614AK/BW",
+        "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+        "identity_level": "exact_variant",
+        "evidence": [
+          "reports/source_census_2026-09-22_stage8_5/card.json"
+        ]
+      }
+    ],
+    "not_counted": [
+      {
+        "brand_family": "playstation",
+        "seller_sku": "CFI-ZCT1W_cosmic_red",
+        "reason": "Stage 9 reached exact_model only: the page is the US web-store (direct.playstation.com/en-us, market differs from the catalog) and two catalog rows (CFI-ZCT1J 02 and CFI-ZCT1W_cosmic_red) share the colour, so the row cannot be told apart. The absence of the CFI code from the page is not the reason; 25 catalog DualSense units differ by colour/revision code.",
+        "evidence": [
+          "reports/source_census_2026-09-22_stage9/card.json"
+        ]
+      },
+      {
+        "brand_family": "microsoft",
+        "seller_sku": "XXU-00015",
+        "reason": "Stage 10.2's page is the Xbox Series S line page, not an exact-variant page; the catalog-vs-page match is line-wide.",
+        "evidence": [
+          "reports/source_census_2026-09-23_stage10_2/card.json"
+        ]
+      }
+    ]
+  },
+  "scope_rules": {
+    "rule": "A fixture is a scope: (host, market, catalog categories, page template). A unit is covered only if its own catalog category is listed in a scope whose layers are complete and whose market matches the catalog's. A family with no scope covering the unit's category is needs_product_page_fixture, never official_route_no_adapter.",
+    "layer_values": [
+      "observed",
+      "partial",
+      "absent"
+    ],
+    "sufficient_when": "identity, specifications and media are all 'observed' (a scope may also declare fixture_level 'full_value' when a value-level card was built)",
+    "market_rule": "market_matches_catalog is stated per scope with its reason. A page observed in a foreign store (a US web-store, a German country site) does not prove the catalog's market; the unit waits for a fixture in the catalog market or an explicit decision.",
+    "categories_are": "exact catalog category strings (Категория column); nothing is matched by keyword or by brand"
+  },
+  "shared_seller_sku": {
+    "rule": "The same seller article under several brands or categories is recorded as a risk flag (seller_sku_shared_across_brand / _category) and the unit is classified by its own route. It becomes identity_conflict only when the catalog titles of the units carry model tokens and share none of them (real contradiction). Titles without a model token are 'uninformative': the risk stays, no conflict is declared.",
+    "model_token": "alphanumeric token with a digit and a letter, at least 3 characters, not a bare quantity (20W, 350mm, 12V, 30шт)"
+  },
+  "product_flags": [
+    {
+      "brand_family": "hyperx",
+      "seller_sku": "00000031048",
+      "flag": "title_names_other_manufacturer",
+      "detail": "The catalog title is 'Модуль памяти Kingston HyperX Fury HX434C16FB3/8': a Kingston memory module. hyperx.com is the gaming-peripherals storefront, so an exact hyperx.com page for this row is unlikely; the manufacturer code is HX434C16FB3/8, not the seller article.",
+      "evidence": [
+        "data/catalog_2026-09-21_filtered.xlsx (row title)"
+      ]
+    }
+  ],
+  "selected_products": {
+    "samsung": {
+      "rule": "Owner rule: one product per category, checked in small batches with a declared budget; no mass run. The Samsung adapter is wired into worker.run_once(); the queue offers ONLY the products listed here as ready_to_run, every other Samsung row waits (manual_review, not_selected_one_card_per_category).",
+      "evidence": [
+        "reports/source_census_2026-09-25_stage24/report.md",
+        "reports/source_census_2026-09-25_stage25/report.md",
+        "reports/source_census_2026-09-25_stage26/report.md",
+        "reports/source_census_2026-09-26_stage29/report.md",
+        "reports/source_census_2026-09-26_stage30/report.md",
+        "reports/source_census_2026-09-26_stage31/raw/route_check_result.json",
+        "reports/source_census_2026-09-26_stage31/raw/offline_two_result.json"
+      ],
+      "products": [
+        {
+          "category": "Телевизоры",
+          "seller_sku": "QE48S85HAEXCE",
+          "batch": "1"
+        },
+        {
+          "category": "Смартфоны",
+          "seller_sku": "SM-A376EZAGINS",
+          "batch": "1"
+        },
+        {
+          "category": "Пылесосы",
+          "seller_sku": "VC18M21D0VG/EV",
+          "batch": "1"
+        },
+        {
+          "category": "Стиральные машины",
+          "seller_sku": "WD10T754CBX/LD",
+          "batch": "1"
+        },
+        {
+          "category": "Микроволновые печи",
+          "seller_sku": "MS23K3614AK/BW",
+          "batch": "1"
+        },
+        {
+          "category": "Холодильники",
+          "seller_sku": "RB31FERNDSA",
+          "batch": "2"
+        },
+        {
+          "category": "Духовые шкафы",
+          "seller_sku": "NV7B4120ZAS/WT",
+          "batch": "2"
+        },
+        {
+          "category": "Сплит-системы",
+          "seller_sku": "AR80F09CABWNER",
+          "batch": "2"
+        },
+        {
+          "category": "Варочные панели",
+          "seller_sku": "NZ64T3506AK/WT",
+          "batch": "2"
+        },
+        {
+          "category": "Мониторы",
+          "seller_sku": "LS24D300GAIXCI",
+          "batch": "2"
+        },
+        {
+          "category": "Саундбары",
+          "seller_sku": "HW-Q800D",
+          "batch": "2"
+        },
+        {
+          "category": "Машины посудомоечные",
+          "seller_sku": "DW60M5050BB/WT",
+          "batch": "4"
+        },
+        {
+          "category": "Сушильные машины",
+          "seller_sku": "DV16DG8600BVLD",
+          "batch": "4"
+        },
+        {
+          "category": "Колонки",
+          "seller_sku": "MX-ST50B",
+          "batch": "4"
+        },
+        {
+          "category": "Роботы-пылесосы",
+          "seller_sku": "VR50T95735W/EV",
+          "batch": "4"
+        },
+        {
+          "category": "Внутренние SSD-накопители",
+          "seller_sku": "MZ-77E500BW",
+          "batch": "5A"
+        },
+        {
+          "category": "Flash-накопители",
+          "seller_sku": "MUF-64BE3/APC",
+          "batch": "5A"
+        },
+        {
+          "category": "Внешние SSD-накопители",
+          "seller_sku": "MU-PC1T0H/WW",
+          "batch": "5A"
+        },
+        {
+          "category": "Карты памяти",
+          "seller_sku": "MB-MC64HARU",
+          "batch": "5A"
+        },
+        {
+          "category": "Кабели",
+          "seller_sku": "EP-DA705BBRGRU",
+          "batch": "6A"
+        }
+      ],
+      "batch_notes": {
+        "1": "Stage 24 batch 1 (tablets: no suitable novelty, none selected)",
+        "2": "Stage 25 batch 2",
+        "4": "Stage 27 (the four categories proposed in Stage 26)",
+        "5A": "Stage 29 checked one product in each of four memory categories; Stage 30 confirmed the current variant, document and readiness decisions offline",
+        "6A": "Stage 31: cable EP-DA705BBRGRU confirmed by official page content; charger EP-T4511XBEGEU not selected because only another regional variant was observed"
+      }
+    },
+    "bosch_home": {
+      "rule": "Stage 36: exactly one verified KZ model per selected Bosch Home category; all other Bosch rows stop before requests.",
+      "evidence": [
+        "reports/source_census_2026-09-26_stage35/report.md",
+        "reports/source_census_2026-09-26_stage36/report.md"
+      ],
+      "products": [
+        {
+          "category": "Чайники электрические",
+          "seller_sku": "TWK7203",
+          "batch": "1"
+        },
+        {
+          "category": "Блендеры",
+          "seller_sku": "MMB2111M",
+          "batch": "1"
+        }
+      ],
+      "batch_notes": {
+        "1": "Stage 35 KZ Product.mpn and GTIN verified; Stage 36 narrow worker adapter."
+      }
+    }
+  },
+  "url_findings": {
+    "hyperx": {
+      "stage": "19",
+      "evidence": [
+        "reports/source_census_2026-09-24_stage18/raw/url_findings.json",
+        "reports/source_census_2026-09-24_stage18/raw/live_discovery_result.json",
+        "reports/source_census_2026-09-24_stage19/raw/url_findings.json",
+        "reports/source_census_2026-09-24_stage19/raw/accepted_variant_urls.json"
+      ],
+      "rule": "Rows listed here were examined and did not get a URL of record. Rows that did are in adapters/hyperx.py KNOWN_URLS.",
+      "rows": {
+        "00000031048": {
+          "outcome": "title_names_other_manufacturer",
+          "detail": "Kingston memory module under the HYPERX brand: hyperx.com is not its manufacturer's storefront."
+        },
+        "4P4F5AX#ACB": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-alloy-core-rgb-gaming-keyboard",
+          "page_default_sku": "4P4F5AA#ABA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "4P4F6AX#ACB": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-alloy-origins-mechanical-gaming-keyboard",
+          "page_default_sku": "4P5N9AA#ABA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "4P5D6AX#ACB": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-alloy-origins-65",
+          "page_default_sku": "56R64AA#ABA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "4P5E2AA": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "4P5L2AA": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-cloud-alpha-s",
+          "page_default_sku": "4P5L3AA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "4P5N0AA": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-alloy-origins-60-mechanical-gaming-keyboard",
+          "page_default_sku": "4P5N4AA#ABA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "4P5P8AA": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "4Z7X3AA": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "4Z7X4AA": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "4Z7X5AA": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-pulsefire-mat-gaming-mouse-pad-xl",
+          "page_default_sku": "572Y5AA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "4Z7X6AA": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "519T2AA": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "572Y6AA#ACB": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-alloy-origins-60-mechanical-gaming-keyboard",
+          "page_default_sku": "4P5N4AA#ABA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "639N3AA": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-alloy-origins-mechanical-gaming-keyboard",
+          "page_default_sku": "4P5N9AA#ABA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "639N7AA#ACB": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "6H9B5AA": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-cloud-stinger-2-core-wired-gaming-headset",
+          "page_default_sku": "683L9AA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "75X30AA": {
+          "outcome": "no_observed_page_for_title",
+          "detail": "no saved official link and no product slug in the official sitemap carries every model token of the title"
+        },
+        "77Z45AA": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-cloud-iii-wireless-gaming-headset",
+          "page_default_sku": "77Z46AA",
+          "detail": "code is not on the page: a different product, region or generation"
+        },
+        "872V1AA": {
+          "outcome": "page_sku_differs_from_catalog",
+          "page_url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+          "page_default_sku": "9A273AA",
+          "detail": "code is not on the page: a different product, region or generation"
+        }
+      }
+    }
+  }
+}

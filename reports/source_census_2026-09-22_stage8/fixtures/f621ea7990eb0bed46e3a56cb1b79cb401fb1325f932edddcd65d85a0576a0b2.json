@@ -1,0 +1,75 @@
+{
+  "is_product_page": false,
+  "product_objects": 0,
+  "contracts": {
+    "discovery": {
+      "routes": [
+        "GET:search:html_search_form"
+      ],
+      "navigation": [
+        "category",
+        "navigation",
+        "product",
+        "support"
+      ],
+      "pagination": [
+        "page_parameter"
+      ],
+      "locale_contract": "path_prefix"
+    },
+    "identity": {
+      "json_paths": [],
+      "microdata_properties": [],
+      "code_fields": [],
+      "variant_fields": [],
+      "model_semantics": "marketing_name_only"
+    },
+    "specifications": {
+      "json_paths": [],
+      "dom_semantics": []
+    },
+    "media": {
+      "json_paths": [],
+      "dom_semantics": [],
+      "resolution_rule": "Select largest explicitly advertised srcset width/density or ImageObject.contentUrl; never invent CDN transforms or download media sets."
+    },
+    "documents": {
+      "link_schema": [],
+      "support_navigation": true,
+      "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+      "language_contract": "unknown_do_not_infer_from_locale"
+    }
+  },
+  "signatures": {
+    "discovery": "350d9350cbb61707bb42ff822287854305b4c2900bd29f75d3054906c50ddcf9",
+    "identity": "6630e3410393d492f7c8a156f1ca196c9816696a0bfa5325c8e11cbc23526258",
+    "specifications": "a9a3e4d5da43ded05231b859667eedada78ff22d57ed4ae9b95b8aee964e1ca4",
+    "media": "02250985420de6ea6a6dbf3ead920bbeb032c3a85538d5b4c651350d326198c6",
+    "documents": "47025af016fa739b4231b449d43837ef57f07cd9ce2aad3cc4d08490b558a5a1"
+  },
+  "observed": {
+    "discovery": true,
+    "identity": false,
+    "specifications": false,
+    "media": false,
+    "documents": false
+  },
+  "cms_fingerprint": [
+    {
+      "engine": "adobe_experience_manager",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "source": "html",
+          "signal": "/etc\\.clientlibs/|/content/dam/|granite\\.utils|cq:Page",
+          "strength": "strong",
+          "weight": 0.75
+        }
+      ]
+    }
+  ],
+  "sanitized_snapshot_limitations": true,
+  "content_sha256": "f621ea7990eb0bed46e3a56cb1b79cb401fb1325f932edddcd65d85a0576a0b2",
+  "fixture_version": 2
+}

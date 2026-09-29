@@ -1,0 +1,99 @@
+{
+  "schema_version": "stage8_5_card.v1",
+  "item": "Samsung MS23K3614AK/BW (microwave oven, Solo)",
+  "catalog_row": {
+    "seller_article": "MS23K3614AK/BW",
+    "catalog_name": "Микроволновая печь MS23K3614AK/BW",
+    "catalog_alt_name": "Микроволновая печь MS23K3614AK/BW, 23 л | Микроволновая печь Samsung MS23K3614AK/BW"
+  },
+  "fields": {
+    "brand": {
+      "value": "Samsung",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "JSON-LD Product.brand.name = 'Samsung'"
+    },
+    "model_name": {
+      "value": "23 Л Микроволновая печь Соло БИО-Керамическое покрытие",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "JSON-LD Product.name + <title> tag"
+    },
+    "manufacturer_model_code": {
+      "value": "MS23K3614AK/BW",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "JSON-LD Product.sku, exact match to catalog seller_article (independent source) and to the manual URL's ModelName parameter (independent source, linkage-only)"
+    },
+    "color": {
+      "value": "Черный (Black)",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "HTML <title> tag, not URL text"
+    },
+    "volume": {
+      "value": "23 л",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "Body text label+value, corroborated by title/JSON-LD/catalog alt-name"
+    },
+    "power_consumption": {
+      "value": "1150 Вт",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "Body text label+value"
+    },
+    "output_power": {
+      "value": "800 Вт",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/kz_ru/microwave-ovens/solo/ms23k3614akbw/",
+      "evidence": "Body text label+value"
+    },
+    "official_image": {
+      "value": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "status": "confirmed",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-ms23k3614akbw-ms23k3614ak-bw-frontblack-190178091?$1164_776_PNG$",
+      "evidence": "Advertised srcset on product page, model+color in filename, live-verified as a real 491KB PNG this stage"
+    },
+    "instruction_manual": {
+      "value": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "status": "official_pdf_candidate_content_language_not_confirmed",
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "final_url": "https://downloadcenter.samsung.com/content/UM/201907/20190723164117830/MS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "evidence": "Reachable, first-party, genuine PDF (magic bytes confirmed) and linked to this model via the URL's own ModelName parameter (linkage evidence, not content evidence). Content/language NOT confirmed: the file exceeds the 1.5MB fetch cap, and the truncated download's cross-reference table, page tree and /Info metadata dictionary are unrecoverable, so no text could be extracted -- see pdf_content_verification.json for the full diagnosis."
+    }
+  },
+  "identity_result": "exact_variant",
+  "identity_result_reasoning": "Model code confirmed via 3 independent sources (JSON-LD sku, exact catalog article match, manual URL ModelName parameter) and color confirmed via on-page <title> text (not URL). This exceeds the exact_model bar and satisfies exact_variant.",
+  "manual_confirmed_by_content": false,
+  "manual_confirmed_by_content_note": "Reachability and first-party linkage are confirmed; document content (that it is genuinely this model's user manual, page-by-page) is NOT confirmed, due to the truncation described above -- not due to absence of a plausible manual.",
+  "russian_language_confirmed": false,
+  "russian_language_confirmed_note": "The manual's filename lists 'RU' first among RU-UK-KK-UZ, and the download request itself used CDSite=UNI_KZ_RU -- both first-party but both metadata, not content. No Russian (or any other) text was extracted from the PDF itself, so Russian-language availability is not confirmed by content.",
+  "specifications_status": "partial -- 3 confirmed values (volume, 2 power figures) plus color and oven type; 6 additional characteristics have a confirmed label but no confirmed value (see specs_completeness.json)",
+  "missing_characteristics": [
+    "Physical weight (net and packaged)",
+    "Physical dimensions (WxHxD)",
+    "Turntable diameter",
+    "Control type/interface",
+    "Auto-program and power-level counts",
+    "Full defrost mode list"
+  ],
+  "export_readiness": {
+    "status": "partially_ready",
+    "ready_fields": [
+      "brand",
+      "model_name",
+      "manufacturer_model_code",
+      "color",
+      "volume",
+      "power_consumption",
+      "output_power",
+      "official_image"
+    ],
+    "blocking_or_flagged_gaps": [
+      "Instruction manual content/language not confirmed (candidate only) -- should be flagged to a human reviewer or re-attempted with a larger fetch allowance before being presented as a verified manual, not silently upgraded to 'confirmed'.",
+      "6 physical/control characteristics have no confirmed value."
+    ],
+    "recommendation": "Card CAN be exported now for the confirmed fields, with the manual and the 6 missing characteristics explicitly marked as open gaps -- not blocked entirely, but not silently presented as complete either."
+  }
+}

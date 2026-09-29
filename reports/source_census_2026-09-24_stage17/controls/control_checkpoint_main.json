@@ -1,0 +1,209 @@
+{
+  "units": {
+    "213c66f2dc721e9b": {
+      "brand": "HYPERX",
+      "catalog_row": 6975,
+      "category": "Клавиатуры",
+      "network_calls_refused": [],
+      "next_action": "settle_identity_with_catalog_owner",
+      "outcome": "stopped",
+      "plan_reason": "region_suffix_mismatch_confirmed",
+      "plan_status": "identity_conflict",
+      "resume_skips": 1,
+      "seller_sku": "7G7A4AA#ACB",
+      "stop_code": "region_suffix_mismatch_confirmed",
+      "stop_detail": "The only found official page carries sku 7G7A4AA#ABA (US layout); the catalog row is #ACB. Never exact_variant.",
+      "stopped_before_run_once": true
+    },
+    "23529cc1d9cee49f": {
+      "brand": "HYPERX",
+      "card": {
+        "conflicts": 0,
+        "documents": 0,
+        "evidence_urls": [],
+        "facts": 0,
+        "gaps": [
+          "attributes",
+          "photos",
+          "documents"
+        ],
+        "identity": "Источники не найдены за отведённое время",
+        "job_message": "Нет проверенного официального URL hyperx.com для артикула '4P5E2AA'. Нужна точная ссылка на карточку товара -- не будет угадана.",
+        "job_status": "error",
+        "photos": 0,
+        "resolved_attributes": 0,
+        "sources": [
+          {
+            "error": "",
+            "evidence": "Нет проверенного дилерского кандидата.",
+            "match_level": "unknown",
+            "source_key": "dns",
+            "url": ""
+          },
+          {
+            "error": "",
+            "evidence": "Нет проверенного официального URL hyperx.com для артикула '4P5E2AA'. Нужна точная ссылка на карточку товара -- не будет угадана.",
+            "match_level": "official_url_needed",
+            "source_key": "hyperx",
+            "url": ""
+          }
+        ]
+      },
+      "catalog_row": 6980,
+      "category": "Микрофоны",
+      "job_status": "error",
+      "network_calls_refused": [],
+      "next_action": "supply_exact_official_url",
+      "outcome": "stopped",
+      "plan_reason": "no_confirmed_exact_url",
+      "plan_status": "adapter_url_missing",
+      "resume_skips": 1,
+      "seller_sku": "4P5E2AA",
+      "stop_code": "official_url_needed",
+      "stop_detail": "Нет проверенного официального URL hyperx.com для артикула '4P5E2AA'. Нужна точная ссылка на карточку товара -- не будет угадана.",
+      "stopped_before_run_once": false
+    },
+    "620b73a1ec5e5b39": {
+      "brand": "HYPERX",
+      "card": {
+        "conflicts": 0,
+        "documents": 0,
+        "evidence_urls": [
+          "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse"
+        ],
+        "facts": 22,
+        "gaps": [
+          "documents"
+        ],
+        "identity": "Источники не найдены за отведённое время",
+        "job_message": "HyperX: exact_variant. Реальных конфликтов: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+        "job_status": "done",
+        "photos": 31,
+        "resolved_attributes": 22,
+        "sources": [
+          {
+            "error": "",
+            "evidence": "Нет проверенного дилерского кандидата.",
+            "match_level": "unknown",
+            "source_key": "dns",
+            "url": ""
+          },
+          {
+            "error": "",
+            "evidence": "identity=exact_variant (page code 'A1KY6AA' vs catalog 'A1KY6AA'); json_ld_fields=6, spec_fields=21, gallery_images=31, description_images=0, videos=2",
+            "match_level": "exact_variant",
+            "source_key": "hyperx",
+            "url": "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse"
+          }
+        ]
+      },
+      "catalog_row": 6988,
+      "category": "Мыши",
+      "job_status": "done",
+      "network_calls_refused": [],
+      "next_action": "run_once",
+      "outcome": "card",
+      "plan_reason": "exact_url_on_record",
+      "plan_status": "ready_to_run",
+      "resume_skips": 1,
+      "seller_sku": "A1KY6AA",
+      "stop_code": "",
+      "stopped_before_run_once": false
+    },
+    "68e7f315927d3032": {
+      "brand": "HYPERX",
+      "card": {
+        "conflicts": 0,
+        "documents": 0,
+        "evidence_urls": [
+          "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+        ],
+        "facts": 9,
+        "gaps": [
+          "documents"
+        ],
+        "identity": "Источники не найдены за отведённое время",
+        "job_message": "HyperX: exact_variant. Реальных конфликтов: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+        "job_status": "done",
+        "photos": 29,
+        "resolved_attributes": 9,
+        "sources": [
+          {
+            "error": "",
+            "evidence": "Нет проверенного дилерского кандидата.",
+            "match_level": "unknown",
+            "source_key": "dns",
+            "url": ""
+          },
+          {
+            "error": "",
+            "evidence": "identity=exact_variant (page code '9A273AA' vs catalog '9A273AA'); json_ld_fields=5, spec_fields=9, gallery_images=29, description_images=0, videos=2",
+            "match_level": "exact_variant",
+            "source_key": "hyperx",
+            "url": "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone"
+          }
+        ]
+      },
+      "catalog_row": 6985,
+      "category": "Микрофоны",
+      "job_status": "done",
+      "network_calls_refused": [],
+      "next_action": "run_once",
+      "outcome": "card",
+      "plan_reason": "exact_url_on_record",
+      "plan_status": "ready_to_run",
+      "resume_skips": 1,
+      "seller_sku": "9A273AA",
+      "stop_code": "",
+      "stopped_before_run_once": false
+    },
+    "control-negative-keyboard": {
+      "brand": "HYPERX",
+      "card": {
+        "conflicts": 1,
+        "documents": 0,
+        "evidence_urls": [
+          "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard"
+        ],
+        "facts": 26,
+        "gaps": [
+          "documents"
+        ],
+        "identity": "Источники не найдены за отведённое время",
+        "job_message": "HyperX: base_code_confirmed. identity=base_code_confirmed (page code '7G7A4AA#ABA' vs catalog '7G7A4AA#ACB'); json_ld_fields=11, spec_fields=20, gallery_images=27, description_images=0, videos=3 Реальных конфликтов: 1. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+        "job_status": "needs_review",
+        "photos": 27,
+        "resolved_attributes": 24,
+        "sources": [
+          {
+            "error": "",
+            "evidence": "Нет проверенного дилерского кандидата.",
+            "match_level": "unknown",
+            "source_key": "dns",
+            "url": ""
+          },
+          {
+            "error": "",
+            "evidence": "identity=base_code_confirmed (page code '7G7A4AA#ABA' vs catalog '7G7A4AA#ACB'); json_ld_fields=11, spec_fields=20, gallery_images=27, description_images=0, videos=3",
+            "match_level": "base_code_confirmed",
+            "source_key": "hyperx",
+            "url": "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard"
+          }
+        ]
+      },
+      "catalog_row": 106975,
+      "category": "Клавиатуры",
+      "job_status": "needs_review",
+      "network_calls_refused": [],
+      "next_action": "run_once",
+      "outcome": "review",
+      "plan_reason": "forced_negative_control",
+      "plan_status": "ready_to_run",
+      "seller_sku": "7G7A4AA#ACB",
+      "stop_code": "identity_base_code_only",
+      "stop_detail": "HyperX: base_code_confirmed. identity=base_code_confirmed (page code '7G7A4AA#ABA' vs catalog '7G7A4AA#ACB'); json_ld_fields=11, spec_fields=20, gallery_images=27, description_images=0, videos=3 Реальных конфликтов: 1. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+      "stopped_before_run_once": false
+    }
+  },
+  "version": 1
+}

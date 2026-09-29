@@ -1,0 +1,104 @@
+{
+  "phase": "robots_and_dns_page",
+  "robots_by_host": {
+    "www.dns-shop.ru": {
+      "http_status": 200,
+      "access_status": "direct_access",
+      "disallow": [
+        "/*.woff2",
+        "/*?",
+        "/actionMarketing/",
+        "/actionsOnTV/",
+        "/cart/",
+        "/catalog/actions/",
+        "/catalog/collection/*",
+        "/catalog/markdown/*",
+        "/check-invoice/",
+        "/checkout/",
+        "/configurator/*",
+        "/custompc/",
+        "/custompc/user-pc/configuration/*",
+        "/mobile-app/",
+        "/opinion-page/",
+        "/order/",
+        "/preorder/",
+        "/product/*/*/description",
+        "/profile/feedback/",
+        "/profile/mail-change/",
+        "/search/",
+        "/similar-design/",
+        "/survey/checkout-order/*",
+        "/survey/delivery/*",
+        "/survey/pickup-store/*",
+        "/survey/smart-consultant/",
+        "/wishlist/*"
+      ]
+    },
+    "drv.dns-shop.ru": {
+      "http_status": 404,
+      "access_status": "unavailable",
+      "disallow": []
+    }
+  },
+  "page_url": "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/",
+  "page_http_status": 401,
+  "page_access_status": "unavailable",
+  "identity_check": {
+    "model_name_quadcast_2s_mentions": 0,
+    "manufacturer_code_9A273AA_mentions": 0,
+    "both_present": false,
+    "pdf_link_present_on_page": false,
+    "conclusion": "not_confirmed_insufficient_page_evidence"
+  },
+  "request_log": [
+    {
+      "seq": 1,
+      "requested_url": "https://www.dns-shop.ru/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://www.dns-shop.ru/robots.txt",
+      "redirect_chain": [
+        "https://www.dns-shop.ru/robots.txt"
+      ],
+      "content_type": "text/plain",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 2182,
+      "note": ""
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://drv.dns-shop.ru/robots.txt",
+      "capability": "robots_txt",
+      "access_status": "unavailable",
+      "http_status": 404,
+      "final_url": "https://drv.dns-shop.ru/robots.txt",
+      "redirect_chain": [
+        "https://drv.dns-shop.ru/robots.txt"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 404",
+      "bytes_read": 0,
+      "note": ""
+    },
+    {
+      "seq": 3,
+      "requested_url": "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/",
+      "capability": "product_page",
+      "access_status": "unavailable",
+      "http_status": 401,
+      "final_url": "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/",
+      "redirect_chain": [
+        "https://www.dns-shop.ru/product/driver/e949b555b392d582/mikrofonnyj-komplekt-hyperx-quadcast-2-s-cernyj/"
+      ],
+      "content_type": "",
+      "protection_status": "inconclusive",
+      "error": "HTTP 401",
+      "bytes_read": 0,
+      "note": "exact URL supplied by the user, not guessed"
+    }
+  ],
+  "skipped": []
+}

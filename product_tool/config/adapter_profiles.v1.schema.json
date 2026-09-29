@@ -1,0 +1,485 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:product-tool:adapter-profiles:v1",
+  "title": "Research-only structural adapter profiles",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "production_ready",
+    "profiles"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "production_ready": {
+      "const": false
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "profile_id",
+          "source_family",
+          "brand_aliases",
+          "division",
+          "category_scope",
+          "market",
+          "locale",
+          "official_domain",
+          "allowed_hosts",
+          "samples",
+          "sample_homepage",
+          "sample_category_page",
+          "sample_product_page",
+          "sample_support_page",
+          "access_method",
+          "access_status",
+          "protection_status",
+          "cms_fingerprint",
+          "layers",
+          "javascript_dependency",
+          "locale_behavior",
+          "redirect_behavior",
+          "pagination_behavior",
+          "completeness_status",
+          "last_checked_at",
+          "review_notes",
+          "next_action",
+          "production_ready"
+        ],
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "source_family": {
+            "type": "string"
+          },
+          "division": {
+            "type": "string"
+          },
+          "market": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string"
+          },
+          "official_domain": {
+            "type": "string"
+          },
+          "access_status": {
+            "type": "string"
+          },
+          "protection_status": {
+            "type": "string"
+          },
+          "javascript_dependency": {
+            "type": "string"
+          },
+          "last_checked_at": {
+            "type": "string"
+          },
+          "next_action": {
+            "type": "string"
+          },
+          "sample_homepage": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sample_category_page": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sample_product_page": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sample_support_page": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "brand_aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowed_hosts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "category_scope": {
+            "type": "array"
+          },
+          "samples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "url",
+                "provenance",
+                "origin",
+                "access_status",
+                "protection_status"
+              ],
+              "properties": {
+                "provenance": {
+                  "type": "object",
+                  "required": [
+                    "method"
+                  ]
+                }
+              }
+            }
+          },
+          "access_method": {
+            "const": "http"
+          },
+          "production_ready": {
+            "const": false
+          },
+          "completeness_status": {
+            "enum": [
+              "adapter_profile_complete",
+              "structure_partial",
+              "http_blocked",
+              "javascript_only",
+              "product_page_not_found",
+              "support_structure_not_found",
+              "manual_review_required",
+              "insufficient_evidence"
+            ]
+          },
+          "layers": {
+            "type": "object",
+            "required": [
+              "discovery",
+              "identity",
+              "specifications",
+              "media",
+              "documents"
+            ],
+            "properties": {
+              "discovery": {
+                "type": "object",
+                "required": [
+                  "observed",
+                  "contract",
+                  "signature",
+                  "fixture",
+                  "contract_reviewed",
+                  "status",
+                  "evidence_url",
+                  "limitation"
+                ],
+                "properties": {
+                  "observed": {
+                    "type": "boolean"
+                  },
+                  "contract": {
+                    "type": [
+                      "object",
+                      "null"
+                    ]
+                  },
+                  "signature": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixture": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "contract_reviewed": {
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "enum": [
+                      "custom_adapter_candidate",
+                      "structure_partial",
+                      "shared_adapter_candidate",
+                      "regional_shared_candidate"
+                    ]
+                  },
+                  "evidence_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limitation": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "identity": {
+                "type": "object",
+                "required": [
+                  "observed",
+                  "contract",
+                  "signature",
+                  "fixture",
+                  "contract_reviewed",
+                  "status",
+                  "evidence_url",
+                  "limitation"
+                ],
+                "properties": {
+                  "observed": {
+                    "type": "boolean"
+                  },
+                  "contract": {
+                    "type": [
+                      "object",
+                      "null"
+                    ]
+                  },
+                  "signature": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixture": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "contract_reviewed": {
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "enum": [
+                      "custom_adapter_candidate",
+                      "structure_partial",
+                      "shared_adapter_candidate",
+                      "regional_shared_candidate"
+                    ]
+                  },
+                  "evidence_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limitation": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "specifications": {
+                "type": "object",
+                "required": [
+                  "observed",
+                  "contract",
+                  "signature",
+                  "fixture",
+                  "contract_reviewed",
+                  "status",
+                  "evidence_url",
+                  "limitation"
+                ],
+                "properties": {
+                  "observed": {
+                    "type": "boolean"
+                  },
+                  "contract": {
+                    "type": [
+                      "object",
+                      "null"
+                    ]
+                  },
+                  "signature": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixture": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "contract_reviewed": {
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "enum": [
+                      "custom_adapter_candidate",
+                      "structure_partial",
+                      "shared_adapter_candidate",
+                      "regional_shared_candidate"
+                    ]
+                  },
+                  "evidence_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limitation": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "media": {
+                "type": "object",
+                "required": [
+                  "observed",
+                  "contract",
+                  "signature",
+                  "fixture",
+                  "contract_reviewed",
+                  "status",
+                  "evidence_url",
+                  "limitation"
+                ],
+                "properties": {
+                  "observed": {
+                    "type": "boolean"
+                  },
+                  "contract": {
+                    "type": [
+                      "object",
+                      "null"
+                    ]
+                  },
+                  "signature": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixture": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "contract_reviewed": {
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "enum": [
+                      "custom_adapter_candidate",
+                      "structure_partial",
+                      "shared_adapter_candidate",
+                      "regional_shared_candidate"
+                    ]
+                  },
+                  "evidence_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limitation": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "documents": {
+                "type": "object",
+                "required": [
+                  "observed",
+                  "contract",
+                  "signature",
+                  "fixture",
+                  "contract_reviewed",
+                  "status",
+                  "evidence_url",
+                  "limitation"
+                ],
+                "properties": {
+                  "observed": {
+                    "type": "boolean"
+                  },
+                  "contract": {
+                    "type": [
+                      "object",
+                      "null"
+                    ]
+                  },
+                  "signature": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixture": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "contract_reviewed": {
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "enum": [
+                      "custom_adapter_candidate",
+                      "structure_partial",
+                      "shared_adapter_candidate",
+                      "regional_shared_candidate"
+                    ]
+                  },
+                  "evidence_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limitation": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "cms_fingerprint": {
+            "type": "array"
+          },
+          "review_notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "locale_behavior": {
+            "type": "object"
+          },
+          "redirect_behavior": {
+            "type": "array"
+          },
+          "pagination_behavior": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

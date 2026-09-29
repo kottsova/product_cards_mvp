@@ -1,0 +1,95 @@
+{
+  "schema_version": "stage8_3_evidence.v1",
+  "item": "Galaxy Buds3 FE (Samsung)",
+  "product_page_url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+  "page_type": "Product page (JSON-LD Product object confirmed, is_product_page=true) -- NOT a support/listing page. Kept as a distinct source type from any support.samsung.com/support-path evidence.",
+  "canonical_url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+  "canonical_matches_fetched_url": true,
+  "fields": {
+    "brand": {
+      "value": "Samsung",
+      "status": "confirmed",
+      "evidence": "JSON-LD Product.brand.@id = 'https://www.samsung.com/kz_ru/#brand-galaxy' and Product.manufacturer.@id = 'https://www.samsung.com/#org', both first-party samsung.com identifiers.",
+      "source": "JSON-LD script tag on the product page"
+    },
+    "family_name": {
+      "value": "Galaxy Buds",
+      "status": "confirmed",
+      "evidence": "URL path segment /audio-sound/galaxy-buds/ (category tree) plus JSON-LD Product.name prefix 'Galaxy Buds3 FE'.",
+      "source": "Page URL structure + JSON-LD"
+    },
+    "consumer_model_name": {
+      "value": "Galaxy Buds3 FE",
+      "status": "confirmed",
+      "evidence": "JSON-LD Product.name = 'Galaxy Buds3 FE'; independently corroborated by the HTML <title> tag = 'Galaxy Buds3 FE | Черный | Samsung Казахстан'. Two independent on-page sources, not URL text.",
+      "source": "JSON-LD Product.name + <title> tag"
+    },
+    "manufacturer_model_code": {
+      "value": "SM-R420NZKACIS",
+      "status": "confirmed",
+      "evidence": "JSON-LD Product.sku = 'SM-R420NZKACIS'. The SM-R4xx prefix matches Samsung's publicly known Galaxy Buds numbering convention (e.g. SM-R400 = Buds FE, SM-R510 = Buds2 Pro), corroborating this is a genuine manufacturer code, not an arbitrary internal catalog SKU -- though this specific cross-check against Samsung's full official code registry was not independently re-verified beyond the pattern match.",
+      "source": "JSON-LD Product.sku"
+    },
+    "regional_suffix": {
+      "value": "KACIS",
+      "status": "confirmed_present_meaning_not_independently_verified",
+      "evidence": "Trailing segment of the JSON-LD sku value. Consistent with Samsung's general regional-suffix pattern (seen elsewhere in this project's evidence, e.g. catalog articles ending 'SKZ'), but this stage did not independently confirm what 'KACIS' specifically denotes (e.g. exact market/channel) beyond it being part of the on-page sku field.",
+      "source": "JSON-LD Product.sku (suffix)"
+    },
+    "color": {
+      "value": "Черный (Black)",
+      "status": "confirmed",
+      "evidence": "Appears in the HTML <title> tag ('...| Черный | ...') and repeated multiple times in the visible page body text ('Черный'), independent of the URL slug. Per instructions, the URL slug alone ('...-black-...') was NOT used as evidence; only the on-page title/body text occurrences were counted.",
+      "source": "HTML <title> tag + visible body text (2+ independent occurrences)"
+    },
+    "storage": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": "Galaxy Buds do not carry a user-selectable storage/memory variant; no storage field is expected or claimed.",
+      "source": null
+    },
+    "connectivity": {
+      "value": "Bluetooth v5.4",
+      "status": "confirmed",
+      "evidence": "Two occurrences of 'Версия Bluetooth' / 'Bluetooth v5.4' found in the visible page body text.",
+      "source": "Visible body text (plain HTML, not a structured table/dl/details element -- specifications.dom_semantics was empty in Stage 8.2's structural contract, meaning this text exists outside the patterns that census specifically looks for)"
+    },
+    "other_variant_or_spec_fields": [
+      {
+        "field": "water_dust_resistance",
+        "value": "IP54",
+        "status": "confirmed",
+        "evidence": "'класс защиты от воды и пыли IP54' found in visible body text."
+      },
+      {
+        "field": "active_noise_cancellation",
+        "value": "present (marketing description, no numeric spec)",
+        "status": "confirmed_qualitative_only",
+        "evidence": "'Активное шумоподавление минимизирует посторонние шумы' found in visible body text -- confirms the feature exists, but no dB or numeric ANC spec was found."
+      }
+    ],
+    "full_specifications_table": {
+      "status": "insufficient",
+      "reasoning": "Stage 8.2's structural contract already recorded specifications.dom_semantics as empty (no table/dl/details markup) and specifications.json_paths as empty (no JSON-LD additionalProperty). This stage's direct full-text search confirms individual spec facts exist as plain body text (Bluetooth version, IP rating, ANC), but found no comprehensive specifications table/list -- Samsung's full 'characteristics' tab is very likely rendered client-side, consistent with every other Samsung category checked in Stage 8.2.1/8.2.2. Card export can use the individually confirmed facts above but cannot claim a complete specifications set."
+    },
+    "official_image": {
+      "value": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/sm-r420nzkacis/gallery/kz-ru-galaxy-buds3-fe-sm-r420nzkacis-548910327?$1164_776_PNG$",
+      "status": "confirmed",
+      "evidence": "DOM img/source[srcset] on the product page advertised two explicit width variants of the same gallery asset (548910327): 624x468 and 1164x776. The larger explicitly advertised variant was selected, per the project's existing 'select the largest explicitly advertised srcset candidate' rule -- no CDN transform was invented.",
+      "source": "responsive srcset attribute on the product page",
+      "secondary_image_note": "JSON-LD Product.image separately references a DIFFERENT asset id (548910328, a 'thumb' rendition) -- both are legitimate first-party images.samsung.com URLs; the srcset gallery image (327, larger) was preferred as the primary card image over the JSON-LD thumb (328)."
+    },
+    "instruction_manual": {
+      "value": null,
+      "status": "not_found",
+      "evidence": "The only PDF link found on the product page (https://images.samsung.com/is/content/samsung/assets/in/info/installation/Delivery-Service-TnC.pdf, anchor text 'Click here') is a delivery-service Terms & Conditions document -- first-party (images.samsung.com) but NOT model-specific and NOT a user manual. It is explicitly excluded from being reported as an instruction. No product manual/user guide link was found on this page within budget.",
+      "support_route_note": "A further support-first search specifically for this model's manual was considered but not attempted: Stage 8.2.2 already exhaustively proved (5 independent route types, 6 requests) that the entire kz_ru support surface renders client-side regardless of the model searched. Spending further budget to re-prove the same wall for a different model was judged low-value and was not done."
+    },
+    "documents_language_available": "none (no document found)"
+  },
+  "requests_used_for_this_item": 2,
+  "requests_detail": [
+    "Fetch 1: same product page URL -- extracted JSON-LD (name/sku/image) and the delivery-terms PDF link.",
+    "Fetch 2: same product page URL, second pass -- extracted <title>, canonical link, color/connectivity/spec body text, and embedded-state script evidence (none found). Two passes were needed only because the census pipeline's raw HTML is never persisted between requests, so all extraction needs had to be identified up front or covered by a second pass."
+  ]
+}

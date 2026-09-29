@@ -5,6 +5,18 @@ import re
 from typing import Iterable
 
 DISPLAY_NAME_RU = {
+    "bluetooth": "Bluetooth",
+    "bluetooth_version": "Версия Bluetooth",
+    "версия_bluetooth": "Версия Bluetooth",
+    "wi_fi": "Wi-Fi",
+    "wi_fi_version": "Версия Wi-Fi",
+    "версия_wi_fi": "Версия Wi-Fi",
+    "usb": "USB",
+    "usb_ports": "Порты USB",
+    "usb_port_count": "Порты USB",
+    "usb_порты": "Порты USB",
+    "количество_портов_usb": "Порты USB",
+    "количество_usb_портов": "Порты USB",
     "pants_hanger_qty": "Количество вешалок для брюк",
     "drip_tray_qty": "Количество поддонов для сбора воды",
     "shelf_qty": "Количество полок",
@@ -40,8 +52,7 @@ DISPLAY_NAME_RU = {
 
 SOURCE_NAMES = {
     "lg": "LG Казахстан", "lg_kz": "LG Казахстан", "lg_ru": "LG Россия",
-    "sulpak": "Sulpak", "mechta": "Mechta", "manual": "Ручное решение",
-    "sulpak+mechta": "Sulpak и Mechta",
+    "sulpak": "Sulpak", "manual": "Ручное решение", "dns": "DNS", "bosch_home": "Bosch Home Казахстан", "samsung": "Samsung Казахстан",
 }
 
 STATUS_NAMES = {
@@ -74,11 +85,20 @@ def display_source(key: str, site_name: str = "") -> str:
     return site_name or SOURCE_NAMES.get(key, key)
 
 
-def display_status(status: str) -> str:
+SAMSUNG_STATUS_NAMES = {"official_base_only": "Значение официального сайта Samsung; вариант оценивается отдельно"}
+
+
+def display_status(status: str, source: str = "") -> str:
+    if source == "samsung" and status in SAMSUNG_STATUS_NAMES:
+        return SAMSUNG_STATUS_NAMES[status]
     return STATUS_NAMES.get(status, status.replace("_", " ").capitalize())
 
 
 def display_value(value: str, unit: str = "") -> str:
+    if value == "unknown" and unit == "unknown":
+        return "Не указано"
+    if unit == "bool_vector":
+        return " / ".join("Да" if part == "true" else "Нет" for part in value.split("/"))
     if value == "true" and unit == "bool":
         return "Да"
     if value == "false" and unit == "bool":

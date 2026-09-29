@@ -1,0 +1,231 @@
+{
+  "schema_version": "stage8_6_checkpoint.v1",
+  "budget_declared_before_first_request": {
+    "schema_version": "stage8_6_budget_predeclaration.v1",
+    "declared_before_any_request": true,
+    "ordinary_page_load_limit_unchanged": {
+      "bytes": 1500000,
+      "note": "Left exactly as in every prior stage; governs fetch() for HTML pages only, not used here."
+    },
+    "document_assembly_limits": {
+      "max_document_total_bytes": 6000000,
+      "document_chunk_bytes_per_request": 1500000,
+      "note": "If a document's server-declared total size (via Content-Range or Content-Length) exceeds max_document_total_bytes, no further bytes are fetched for it -- this is a hard stop, not a soft preference."
+    },
+    "request_limits": {
+      "max_total_requests": 8,
+      "max_requests_per_host": 6,
+      "max_hosts": 2
+    },
+    "pre_declared_allowed_hosts": [
+      "org.downloadcenter.samsung.com",
+      "downloadcenter.samsung.com"
+    ],
+    "stop_conditions": [
+      "403 or 429 response on any host -- that host is paused for the remainder of the run, per ProbePolicy.",
+      "A redirect to a host outside the pre-declared allow-list.",
+      "Content-Range total size disagrees between two parts of the same assembly (possible different document version) -- assembly aborted.",
+      "ETag or Last-Modified disagrees between two parts -- assembly aborted.",
+      "Server-declared total size exceeds max_document_total_bytes -- no further fetch for that document.",
+      "Range not honored by the server AND Content-Length is missing or exceeds the cap -- no unbounded fallback download is attempted.",
+      "Total or per-host request budget exhausted."
+    ],
+    "no_chromium_no_search_engines_no_dealers_no_invented_urls": true,
+    "target_url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+    "target_url_provenance": "The exact same URL already established in Stage 8.4/8.5 -- not a new discovery, not invented."
+  },
+  "budget_revision_declared_before_further_requests": {
+    "schema_version": "stage8_6_budget_revision.v1",
+    "trigger": "The first bounded probe (1 request, logged) confirmed via Content-Range that the control document's true size is 10,572,005 bytes -- larger than the initially declared 6,000,000-byte cap. The capability correctly stopped and fetched no further bytes, leaving status 'unknown_completeness' / content not confirmed, exactly per instructions.",
+    "why_a_second_declaration_and_not_a_silent_retry": "This stage's stated purpose is verifying LARGE official instructions specifically. Stopping permanently at the first conservative cap would validate only the stop-safety mechanism, not the assembly mechanism the stage is meant to build and test. Rather than quietly abandoning the goal or silently loosening the cap after the fact, this is recorded as an explicit, separate budget revision -- declared here, in writing, BEFORE any further request is made under it -- not a retroactive change to the first declaration, which stands unmodified in budget_predeclaration.json and assembly_result.json.",
+    "revised_document_assembly_limits": {
+      "max_document_total_bytes": {
+        "previous": 6000000,
+        "revised": 12000000,
+        "reason": "Comfortably above the confirmed 10,572,005-byte total; still a fixed, finite ceiling, not 'unlimited'."
+      },
+      "document_chunk_bytes_per_request": {
+        "previous": 1500000,
+        "revised": 1500000,
+        "reason": "Unchanged -- still the same per-request chunk size, reusing the existing ordinary page-load number."
+      }
+    },
+    "revised_request_limits": {
+      "max_total_requests": {
+        "previous": 8,
+        "revised": 12,
+        "reason": "10,572,005 bytes / 1,500,000-byte chunks = 8 chunk requests total (0-indexed, last chunk partial); 1 was already spent on the probe/first chunk, so up to 7 more are needed. 12 leaves headroom for the image/model-check steps that follow, without being open-ended."
+      },
+      "max_requests_per_host": {
+        "previous": 6,
+        "revised": 10,
+        "reason": "All chunks target the same host pair observed in the redirect chain; matches the 8 chunk requests needed."
+      },
+      "max_hosts": {
+        "previous": 2,
+        "revised": 2,
+        "reason": "Unchanged."
+      }
+    },
+    "counters_not_reset": "The persisted run_state.json attempt log (1 request already made) is kept as-is and counts toward the new limits -- this is a limit increase, not a counter reset.",
+    "still_bounded": "12,000,000 bytes remains a fixed, pre-declared ceiling before the next request, not an unbounded/adaptive limit that grows again if this document also turns out to exceed it. If the confirmed total had been e.g. 50MB, this stage would have stopped at 'content not confirmed' instead of revising again."
+  },
+  "budget_actual": {
+    "total_requests": 9,
+    "by_host": {
+      "org.downloadcenter.samsung.com": 9
+    },
+    "hosts_contacted": [
+      "org.downloadcenter.samsung.com"
+    ],
+    "within_revised_plan": true
+  },
+  "rejected_attempts": [],
+  "rejected_attempts_note": "Kept separate from executed requests -- empty this stage; every call stayed within whichever budget (original or revised) was in force at the time.",
+  "request_log": [
+    {
+      "seq": 1,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "0-1499999",
+      "http_status": 206,
+      "content_range_header": "bytes 0-1499999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 1,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 1
+      }
+    },
+    {
+      "seq": 2,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "0-1499999",
+      "http_status": 206,
+      "content_range_header": "bytes 0-1499999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 2,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 2
+      }
+    },
+    {
+      "seq": 3,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "1500000-2999999",
+      "http_status": 206,
+      "content_range_header": "bytes 1500000-2999999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 3,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 3
+      }
+    },
+    {
+      "seq": 4,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "3000000-4499999",
+      "http_status": 206,
+      "content_range_header": "bytes 3000000-4499999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 4,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 4
+      }
+    },
+    {
+      "seq": 5,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "4500000-5999999",
+      "http_status": 206,
+      "content_range_header": "bytes 4500000-5999999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 5,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 5
+      }
+    },
+    {
+      "seq": 6,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "6000000-7499999",
+      "http_status": 206,
+      "content_range_header": "bytes 6000000-7499999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 6,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 6
+      }
+    },
+    {
+      "seq": 7,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "7500000-8999999",
+      "http_status": 206,
+      "content_range_header": "bytes 7500000-8999999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 7,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 7
+      }
+    },
+    {
+      "seq": 8,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "9000000-10499999",
+      "http_status": 206,
+      "content_range_header": "bytes 9000000-10499999/10572005",
+      "bytes_read": 1500000,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 8,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 8
+      }
+    },
+    {
+      "seq": 9,
+      "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_KZ_RU&OriginYN=N&ModelType=N&ModelName=MS23K3614AK&CttFileID=7400287&CDCttType=UM&VPath=UM%2F201907%2F20190723164117830%2FMS23K3614AK_BW_DE68-04547Q-00_RU-UK-KK-UZ.pdf",
+      "kind": "document_range",
+      "range_requested": "10500000-10572004",
+      "http_status": 206,
+      "content_range_header": "bytes 10500000-10572004/10572005",
+      "bytes_read": 72005,
+      "etag": "\"0863cfa2a41d51:0\"",
+      "last_modified": "Tue, 23 Jul 2019 07:48:12 GMT",
+      "total_after": 9,
+      "host_after": {
+        "org.downloadcenter.samsung.com": 9
+      }
+    }
+  ],
+  "hosts_paused_this_run": [],
+  "version_consistency_check_result": "All 9 requests (1 from the first, capped attempt + 8 from the successful assembly) returned the IDENTICAL ETag ('0863cfa2a41d51:0') and Last-Modified ('Tue, 23 Jul 2019 07:48:12 GMT') -- confirmed no version drift across parts; no splicing risk.",
+  "assembly_attempts": {
+    "attempt_1_original_6mb_cap": "reports/source_census_2026-09-22_stage8_6/assembly_result_attempt1_6mb_cap.json -- stopped cleanly at the size-check gate (declared total 10,572,005 bytes > 6,000,000-byte cap), 0 bytes fetched beyond the first probe chunk, status unknown_completeness -- correct, safe behavior.",
+    "attempt_2_revised_12mb_cap": "reports/source_census_2026-09-22_stage8_6/assembly_result.json -- succeeded, status complete, 10,572,005/10,572,005 bytes assembled."
+  },
+  "counter_persistence": "Continues Stage 8.3-8.5's fix unchanged: total and per-host counts are always recomputed from this stage's own run_state.json.",
+  "ordinary_page_load_limit": "Unchanged at 1,500,000 bytes; not used in this stage's requests (all were document Range/probe requests to the PDF host, not HTML page fetches).",
+  "new_tooling": "pypdf 6.19.0 (already installed in Stage 8.5, reused here, local gitignored .venv only)."
+}

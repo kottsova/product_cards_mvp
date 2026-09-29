@@ -1,0 +1,78 @@
+{
+ "stop": {
+  "first_run": {
+   "status": "error",
+   "requests_to_transport": 1,
+   "log_status_codes": [
+    403
+   ]
+  },
+  "second_run_same_directory": {
+   "status": "error",
+   "requests_to_transport": 0,
+   "halted": "HTTP-ошибка: HTTP 403 [policy_host_stopped]"
+  }
+ },
+ "dealer_exact_model_and_code": {
+  "job_status": "needs_review",
+  "dealer": {
+   "dns_match_level": "model_and_code_confirmed",
+   "dns_url": "https://www.dns-shop.ru/product/verified-example/",
+   "added_fields": [
+    {
+     "field": "особенность_только_у_дилера",
+     "value": "да, есть",
+     "source": "dns",
+     "url": "https://www.dns-shop.ru/product/verified-example/"
+    }
+   ],
+   "disputes": [
+    {
+     "field": "360_audio",
+     "dealer_value": "да и еще что-то",
+     "dealer_source": "dns",
+     "official_values": [
+      "true"
+     ],
+     "resolution": "official value kept; sent to review"
+    }
+   ],
+   "agreements": 0,
+   "note": "synthetic dealer double for this check"
+  },
+  "open_reviews": [
+   "dealer_dispute",
+   "samsung_instruction_check"
+  ],
+  "official_field_after_run": {
+   "field": "360_audio",
+   "value": "true",
+   "source": "samsung"
+  },
+  "dealer_fact_rows": 2,
+  "dealer_only_field": {
+   "особенность_только_у_дилера": "dns/needs_review"
+  }
+ },
+ "dealer_not_exact": {
+  "job_status": "done",
+  "dealer": {
+   "dns_match_level": "model_confirmed",
+   "dns_url": "https://www.dns-shop.ru/product/verified-example/",
+   "added_fields": [],
+   "disputes": [],
+   "agreements": 0,
+   "note": "synthetic dealer double for this check Значения дилера не используются: точное совпадение модели и варианта не подтверждено."
+  },
+  "open_reviews": [
+   "samsung_instruction_check"
+  ],
+  "official_field_after_run": {
+   "field": "360_audio",
+   "value": "true",
+   "source": "samsung"
+  },
+  "dealer_fact_rows": 0,
+  "dealer_only_field": {}
+ }
+}

@@ -1,0 +1,8 @@
+# Stage 23: the owner's four answers as LG rules
+
+Evidence and the per-category table: `reports/source_census_2026-09-25_stage23/report.md`. Working rule from the owner: check ONE representative product per category of a brand, note what is found and what needs fixing, and do not widen samples or estimate a whole catalog through a mass run unless separately asked. LG needs no further pilot.
+
+1. **Market tag.** `lg_base_model()` drops a trailing `_KZ` / `_SU` (only these two) of the seller's article, so a candidate official page can be found. The match stays `base_model` until the official page itself shows the full article.
+2. **Support URL is not proof.** A support-page URL containing the full article does not confirm a variant. `support_page_ties_article()` requires the support page's own product heading to be the row's full article (or the article plus a regional suffix). The link printed on a base-model product page is not used to promote it to an exact variant.
+3. **KZ vs RU disagreement.** No value is chosen: the resolved value stays empty (`official_regions_conflict`), both facts stay with their sources, the job goes to `needs_review`, readiness shows `unresolved_conflicts`.
+4. **Russian instruction that names no model.** Accepted only if all hold: the PDF's content is a Russian instruction (not a declaration); the RU product page shows the full article (`full_sku`) and the official support page names that article as its product and lists the file; the text has no conflicting model (a code with the same first 4 characters that neither continues nor begins the model). The saved document's title carries the note "связь с моделью подтверждена страницей поддержки, а не текстом PDF". Otherwise it is reported and not saved.

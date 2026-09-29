@@ -1,0 +1,293 @@
+[
+  {
+    "source_family": "samsung",
+    "profile_id": "samsung_kz_02d9e6",
+    "catalog_sample_ref": {
+      "catalog_category": "Телевизоры",
+      "seller_article": "QE100QN80FUX (targeted, not reached)"
+    },
+    "url": "https://www.samsung.com/kz_ru/tvs/full-hd-tv/n5300-43-inch-full-hd-smart-tv-ue43n5300auxce/",
+    "discovery_route": "sitemap_or_catalog_feed: robots-declared sitemap index -> b2c-sitemap.xml -> vd-sitemap.xml -> product URL",
+    "product_page_fixture_result": "verified",
+    "catalog_identity_result": "insufficient",
+    "identity_reasoning": "Reached TV is UE43N5300AUXCE, a different model from the targeted catalog article QE100QN80FUX (a 100\" premium set not present in the ~52-URL TV sitemap slice actually served). Brand (Samsung) and category (TV) confirmed; exact catalog article not reached, so no variant/model comparison was possible.",
+    "structure_summary": {
+      "is_product_page": true,
+      "identity": {
+        "json_paths": [
+          ".name",
+          ".sku"
+        ],
+        "microdata_properties": [],
+        "code_fields": [
+          "sku"
+        ],
+        "variant_fields": [],
+        "model_semantics": "unverified_sku_meaning"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "media_json_paths": [
+        ".image"
+      ],
+      "media_dom": [
+        "responsive_srcset"
+      ],
+      "docs": {
+        "link_schema": [
+          "a[href:pdf]"
+        ],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "generic_json_ld_product",
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "sku present, no mpn/gtin -> unverified_sku_meaning, same as most non-Bosch families",
+      "specifications layer empty in static HTML (likely client-rendered spec tab)"
+    ],
+    "next_safe_route": "Try samsung_kr (sec) consumer_sitemap.xml, or samsung_kz_02d9e6 vd-sitemap.xml deeper pages (>300 loc), for the exact 100in QLED article."
+  },
+  {
+    "source_family": "samsung",
+    "profile_id": "samsung_kz_02d9e6",
+    "catalog_sample_ref": {
+      "catalog_category": "Смартфоны",
+      "seller_article": "SM-G780GZRDSKZ (targeted, not reached)"
+    },
+    "url": "https://www.samsung.com/kz_ru/audio-sound/galaxy-buds/galaxy-buds3-fe-black-sm-r420nzkacis/",
+    "discovery_route": "sitemap_or_catalog_feed: robots-declared sitemap index -> b2c-sitemap.xml -> im-sitemap.xml -> product URL",
+    "product_page_fixture_result": "verified",
+    "catalog_identity_result": "insufficient",
+    "identity_reasoning": "im-sitemap.xml (the \"IT & Mobile\" sub-sitemap) contained only audio-sound and mobile-accessories paths in its 300 <loc> entries -- no /smartphones/ path segment appeared at all within the bounded traversal, so no Galaxy phone URL was reached. Reached a Galaxy Buds3 FE product instead (same im-sitemap, audio-sound path), which is Samsung-brand and mobile-category-adjacent but not the targeted smartphone.",
+    "structure_summary": {
+      "is_product_page": true,
+      "identity": {
+        "json_paths": [
+          ".name",
+          ".sku"
+        ],
+        "microdata_properties": [],
+        "code_fields": [
+          "sku"
+        ],
+        "variant_fields": [],
+        "model_semantics": "unverified_sku_meaning"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "media_json_paths": [
+        ".image"
+      ],
+      "media_dom": [
+        "responsive_srcset"
+      ],
+      "docs": {
+        "link_schema": [
+          "a[href:pdf]"
+        ],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "generic_json_ld_product",
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "Smartphones (Galaxy S-series) not located inside b2c/im/vd/assorted sitemaps within the bounded 300-loc-per-file sample; a dedicated mobile-phone sitemap file may exist under a different name not discoverable without inventing a URL."
+    ],
+    "next_safe_route": "Probe robots.txt on samsung.com/kz_ru specifically for a mobile/phones-named sitemap declaration not yet seen, or use samsung_us b2c-sitemap equivalent to cross-check naming."
+  },
+  {
+    "source_family": "lg",
+    "profile_id": "lg_kz",
+    "catalog_sample_ref": {
+      "catalog_category": "Телевизоры",
+      "seller_article": "27ART10AKPL / 27LX5QKNA / 32LB650B6LA (targeted, not reached)"
+    },
+    "url": "https://www.lg.com/kz/tvs-soundbars/4k-uhd-tvs/43um7100plb/",
+    "discovery_route": "sitemap_or_catalog_feed: robots-declared sitemap index -> kz-gpone-index.xml -> kz-pdp-sitemap-hreflang.xml -> product URL",
+    "product_page_fixture_result": "candidate",
+    "catalog_identity_result": "insufficient",
+    "identity_reasoning": "URL came from a sitemap explicitly named \"pdp\" (Product Detail Page) by LG itself, and the model slug (43UM7100PLB) is a real LG TV model -- but the fetched static HTML carried zero JSON-LD Product objects and zero microdata Product nodes, so the automated structural test cannot confirm it is a single-product page vs. a client-side-rendered shell. Matches Stage 8s prior javascript_only finding for other LG profiles.",
+    "structure_summary": {
+      "is_product_page": false,
+      "identity": {
+        "json_paths": [],
+        "microdata_properties": [],
+        "code_fields": [],
+        "variant_fields": [],
+        "model_semantics": "marketing_name_only"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "media_json_paths": [],
+      "media_dom": [
+        "responsive_srcset"
+      ],
+      "docs": {
+        "link_schema": [],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "next_js",
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "product_objects=0 despite a PDP-labeled sitemap and a real-looking model slug -- LG.com/kz likely renders identity/spec data client-side (Next.js) and does not embed it in the initial HTML response."
+    ],
+    "next_safe_route": "Manual review / embedded-state extraction research (out of this stages scope); do not mark official_exact_product_not_found from this single route."
+  },
+  {
+    "source_family": "lg",
+    "profile_id": "lg_kz",
+    "catalog_sample_ref": {
+      "catalog_category": "Стиральные машины",
+      "seller_article": "F2J3HS0W / F2J3HS4L / F2J3HS8W (targeted, not reached)"
+    },
+    "url": "https://www.lg.com/kz/laundry/washing-machines/f2v5hs2s/",
+    "discovery_route": "sitemap_or_catalog_feed: robots-declared sitemap index -> kz-gpone-index.xml -> kz-pdp-sitemap-hreflang.xml -> product URL",
+    "product_page_fixture_result": "candidate",
+    "catalog_identity_result": "insufficient",
+    "identity_reasoning": "Same pattern as the TV page: real PDP-sitemap URL (model F2V5HS2S, a plausible near-generation sibling of the targeted F2J3 series, not an exact match), zero JSON-LD/microdata Product objects in the static response.",
+    "structure_summary": {
+      "is_product_page": false,
+      "identity": {
+        "json_paths": [],
+        "microdata_properties": [],
+        "code_fields": [],
+        "variant_fields": [],
+        "model_semantics": "marketing_name_only"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "media_json_paths": [],
+      "media_dom": [
+        "responsive_srcset"
+      ],
+      "docs": {
+        "link_schema": [],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "next_js",
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "Same client-side-rendering gap as the TV page."
+    ],
+    "next_safe_route": "Same as above -- manual review / embedded-state extraction research, not a network retry."
+  },
+  {
+    "source_family": "playstation",
+    "profile_id": "playstation_global_candidate",
+    "catalog_sample_ref": {
+      "catalog_category": "Геймпады",
+      "seller_article": "CFI-ZCT1J 02"
+    },
+    "url": "https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller-cosmic-red-for-ps5-pc-mac-mobile",
+    "discovery_route": "sitemap_or_catalog_feed: already-known PS Direct collection page (direct.playstation.com/en-us/collections/wolverine, reused from Stage 8 cache, 0 new requests) -> first-party navigation to accessories/controllers-and-remotes category -> product URL",
+    "product_page_fixture_result": "verified",
+    "catalog_identity_result": "exact_model",
+    "identity_reasoning": "Page text contains \"DualSense\", \"Cosmic Red\" and \"PS5\" -- brand, product line and color variant name all match the catalog row ('Геймпад DualSense для PS5 Cosmic Red') textually. The manufacturer regional part number CFI-ZCT1J was NOT found in the page text, and the structural contract only exposes microdata sku/name (no extracted value comparison is performed by the sanitized census pipeline, by design). Classified exact_model rather than exact_variant: model and stated color variant are corroborated, but the manufacturer code itself is unconfirmed on this regional storefront, so full SKU-level certainty is not claimed.",
+    "structure_summary": {
+      "is_product_page": true,
+      "identity": {
+        "json_paths": [],
+        "microdata_properties": [
+          "name",
+          "sku"
+        ],
+        "code_fields": [
+          "sku"
+        ],
+        "variant_fields": [],
+        "model_semantics": "marketing_name_only"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "docs": {
+        "link_schema": [],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "Identity is exposed via schema.org Microdata (itemprop=\"sku\"/\"name\"), not JSON-LD -- the first confirmed non-JSON-LD identity source in this whole review.",
+      "model_semantics classifier reports marketing_name_only here even though a sku microdata property is present, because the existing inspect_structure() logic only feeds JSON-LD `fields` into that specific classification, not microdata `props` -- a real gap in Stage 8s own contract inspector, noted as an architecture observation, not fixed in this stage."
+    ],
+    "next_safe_route": "If exact SKU confirmation is required, a manual document/value-level review of this already-verified page is the next step, not a further network search."
+  },
+  {
+    "source_family": "playstation",
+    "profile_id": "playstation_global_candidate",
+    "catalog_sample_ref": {
+      "catalog_category": "Диски с играми",
+      "seller_article": "007 First Light PS5 (targeted, not reached)"
+    },
+    "url": "https://direct.playstation.com/en-us/buy-games/ghost-of-yotei-collectors-edition-ps5",
+    "discovery_route": "sitemap_or_catalog_feed: same PS Direct collection page -> first-party navigation to games/catalog -> /buy-games/ product URL",
+    "product_page_fixture_result": "verified",
+    "catalog_identity_result": "family_only",
+    "identity_reasoning": "A real /buy-games/ product page was reached (Ghost of Yotei Collectors Edition PS5), confirming PS Directs buy-games/ URL convention and structural contract -- but it is a different title from the catalog-targeted \"007 First Light PS5\", which was not found as a direct.playstation.com/buy-games/ link within the bounded navigation performed (007 First Light appeared only as a DualSense controller limited-edition bundle, not as its own /buy-games/ listing, in the pages reached).",
+    "structure_summary": {
+      "is_product_page": true,
+      "identity": {
+        "json_paths": [],
+        "microdata_properties": [
+          "name",
+          "sku"
+        ],
+        "code_fields": [
+          "sku"
+        ],
+        "variant_fields": [],
+        "model_semantics": "marketing_name_only"
+      },
+      "specs": {
+        "json_paths": [],
+        "dom_semantics": []
+      },
+      "docs": {
+        "link_schema": [],
+        "support_navigation": true,
+        "model_linkage": "unverified: require model-specific support association; a PDF link alone is insufficient",
+        "language_contract": "unknown_do_not_infer_from_locale"
+      },
+      "cms": [
+        "adobe_experience_manager"
+      ]
+    },
+    "limitations": [
+      "Same microdata-only identity pattern as the controller page.",
+      "PS Direct sells hardware/accessories/collectors editions, not plain physical game discs as a general rule -- the catalogs \"Диски с играми\" category may not map cleanly onto PS Direct at all; a games-focused route (e.g. the PlayStation Store, a different official domain) may be more appropriate for that specific catalog category, and is out of this stages scope to open."
+    ],
+    "next_safe_route": "For the game-disc category specifically, consider PlayStation Store (official digital storefront) as a separate, still-official route in a later stage, rather than retrying PS Direct."
+  }
+]

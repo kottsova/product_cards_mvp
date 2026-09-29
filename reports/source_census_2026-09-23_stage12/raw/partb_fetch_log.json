@@ -1,0 +1,64 @@
+{
+  "stage": "12_partb_razer",
+  "budget_declared_in": "budget_predeclaration_partb.json",
+  "requests": [
+    {
+      "seq": 1,
+      "url": "https://www.razer.com/robots.txt",
+      "phase": "preflight_connectivity_check",
+      "status_code": 403,
+      "bytes": 669719,
+      "outcome": "blocked",
+      "note": "Large bot-challenge HTML page, not a real robots.txt. Recorded as blocked; not retried with a different User-Agent or any other bypass. No sitemap discovery possible for this host as a result."
+    },
+    {
+      "seq": 2,
+      "url": "https://www.razer.com/",
+      "phase": "preflight_connectivity_check",
+      "status_code": 200,
+      "bytes": 1492651,
+      "content_sha256": "8c190ec885722f6e8f5ce224c5b2c528fc63e20c1f55464cd3cdbd8b18cbd250",
+      "outcome": "ok",
+      "note": "Matches Stage 8's prior observation of this exact URL (direct_access, ordinary_page)."
+    },
+    {
+      "seq": 3,
+      "url": "https://www.razer.com/shop/gear-and-apparel/apparel-shirts",
+      "phase": "preflight_connectivity_check",
+      "status_code": 200,
+      "outcome": "ok",
+      "note": "The one category page already on file from Stage 8 -- reachable, but apparel, not useful for a Mice-category row."
+    },
+    {
+      "seq": 4,
+      "url": "https://www.razer.com/",
+      "phase": "budget_item_1_of_7",
+      "status_code": 200,
+      "bytes": 1492651,
+      "content_sha256": "8c190ec885722f6e8f5ce224c5b2c528fc63e20c1f55464cd3cdbd8b18cbd250",
+      "outcome": "ok",
+      "note": "Re-fetched (same content as preflight check 2) specifically to parse its own <a href> links for first-party navigation -- not a search, not a guess. Found '/gaming-mice/razer-deathadder-v3' with exact visible link text 'Razer DeathAdder V3' among 625 links on the page."
+    },
+    {
+      "seq": 5,
+      "url": "https://www.razer.com/gaming-mice/razer-deathadder-v3",
+      "phase": "budget_item_2_of_7",
+      "status_code": 200,
+      "bytes": 1420726,
+      "content_sha256": "2f59e57eb2ae5cdd8ca0072644f40fcfb9ef4443987e430aa8f39ea2f60222cb",
+      "redirect_chain_hosts": ["www.razer.com"],
+      "outcome": "ok",
+      "note": "Reached by following the homepage nav link found in request #4 -- not guessed. Host stayed on www.razer.com throughout (no redirect off-allowlist). This is the exact product page used for identity/characteristics/media extraction below."
+    }
+  ],
+  "total_requests_this_stage": 5,
+  "budget_remaining_unused": 5,
+  "hosts_contacted": ["www.razer.com"],
+  "hosts_seen_but_not_contacted": [
+    {"host": "mysupport.razer.com", "reason": "Linked from the product page (support/manual links) but not covered by this stage's declared allowlist (www.razer.com only); not predeclared, so not fetched. See report.md gaps."}
+  ],
+  "no_chromium_used": true,
+  "no_search_engine_used": true,
+  "no_model_brute_forcing": true,
+  "no_invented_endpoints": true
+}

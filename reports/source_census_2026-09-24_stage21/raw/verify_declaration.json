@@ -1,0 +1,27 @@
+{
+  "declared_at": "2026-09-24T15:33:46+00:00",
+  "max_requests": 14,
+  "host": "www.lg.com",
+  "pacing_seconds": 1.0,
+  "product_pages": [
+    "https://www.lg.com/ru/microwaves/lg-ms2032gas",
+    "https://www.lg.com/kz/monitors/fhd-qhd/24mr400-b/",
+    "https://www.lg.com/ru/monitors/lg-24mr400-b",
+    "https://www.lg.com/ru/vacuum-cleaners/lg-a9n-masterx",
+    "https://www.lg.com/ru/audio/lg-SN4",
+    "https://www.lg.com/ru/monitors/lg-27MD5KL-B",
+    "https://www.lg.com/ru/air-conditioners-split-systems/lg-ac09bk",
+    "https://www.lg.com/ru/washing-machines/lg-f2j3ws1w",
+    "https://www.lg.com/ru/laundry/lg-dc90v5v9s",
+    "https://www.lg.com/ru/televisions/lg-50ut91006la",
+    "https://www.lg.com/ru/refrigerators/lg-gc-b509seum"
+  ],
+  "documents_route": {
+    "first": "https://www.lg.com/ru/support/manuals?csSalesCode=XL7S.DRUSLLK",
+    "follow_ups_max": 2,
+    "follow_up_rule": "links printed on the fetched page under https://www.lg.com/ru/support/ whose URL contains 'manual' or 'download', document order; no PDF downloaded"
+  },
+  "stop_rule": "401/403/429 or confirmed challenge: host stopped in data/lg_fetch_log.json, run ends",
+  "url_construction": "none",
+  "script": "reports/source_census_2026-09-24_stage21/scripts/04_verify_route.py"
+}

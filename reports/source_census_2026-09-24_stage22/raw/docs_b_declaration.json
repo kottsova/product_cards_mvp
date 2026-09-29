@@ -1,0 +1,30 @@
+{
+  "declared_at": "2026-09-24T16:09:15+00:00",
+  "stage": "22b",
+  "reason": "Phase A ended by its own declared rule (no request logic found by the declared textual test); a new stage is declared instead of editing that rule",
+  "budget": {
+    "max_requests": 6,
+    "hosts": [
+      "www.lg.com",
+      "*.lge.com"
+    ],
+    "pacing_seconds": 1.0
+  },
+  "products": [
+    {
+      "sku": "XL7S",
+      "support_url": "https://www.lg.com/ru/support/product/lg-XL7S.DRUSLLK"
+    },
+    {
+      "sku": "MS2032GAS",
+      "support_url": "https://www.lg.com/ru/support/product/lg-MS2032GAS.BBKQCIS"
+    }
+  ],
+  "step1": "GET the support page printed on the saved RU page; candidates = anchors in .support-downloads li.manuals; none -> stop (P2 not tried)",
+  "step2": "<=1 file request per product: the first candidate with an http(s)/relative href on lg.com or *.lge.com",
+  "p2_condition": "P1's page had at least one candidate",
+  "classification": "candidate link -> reachable file (200, complete, %PDF-) -> confirmed instruction (text not regulatory, names model/code); language from extracted text per page only",
+  "stop_rule": "401/403/429 or confirmed challenge: host stopped in data/lg_fetch_log.json, run ends",
+  "url_construction": "none",
+  "script": "reports/source_census_2026-09-24_stage22/scripts/02_docs_route_stage22b.py"
+}

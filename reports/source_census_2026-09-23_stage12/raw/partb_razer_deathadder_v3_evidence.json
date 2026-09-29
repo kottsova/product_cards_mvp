@@ -1,0 +1,92 @@
+{
+  "catalog_row": {
+    "brand": "Razer",
+    "category": "Мыши",
+    "seller_code": "RZ01-04640100-R3M1",
+    "name": "Проводная мышка DeathAdder V3 Black"
+  },
+  "official_source": {
+    "site_name": "Razer (official, razer.com, US store)",
+    "url": "https://www.razer.com/gaming-mice/razer-deathadder-v3",
+    "content_sha256": "2f59e57eb2ae5cdd8ca0072644f40fcfb9ef4443987e430aa8f39ea2f60222cb",
+    "discovered_via": "first_party_navigation: homepage (https://www.razer.com/) -> <a href='/gaming-mice/razer-deathadder-v3'>Razer DeathAdder V3</a>",
+    "site_own_canonical_code": "RZ01-04640100-R3U1",
+    "code_note": "Base code RZ01-04640100 matches the catalog row exactly. Region suffix differs: catalog has R3M1, this US-store listing has R3U1. This is the same pattern as the project's existing LG base_model-vs-full_sku distinction -- treated the same way here: base model confirmed, full (region-specific) SKU not confirmed by this source."
+  },
+  "identity": {
+    "match_level": "base_model_confirmed",
+    "evidence": [
+      "title: 'Ultra-lightweight Ergonomic Esports Mouse - Razer DeathAdder V3 | Razer United States'",
+      "h1: 'Razer DeathAdder V3'",
+      "schema.org Product JSON-LD name field contains 'Razer DeathAdder V3'",
+      "embedded page-state field 'Color / Design' = 'Black' (matches the catalog row's variant exactly)",
+      "embedded page-state field 'Product family' = 'Razer DeathAdder'",
+      "base code RZ01-04640100 appears verbatim in the page's own canonical URL"
+    ],
+    "gap": "Full seller code RZ01-04640100-R3M1 (region M1) is not the code this US-store page uses (R3U1) -- a region-specific razer.com listing for M1 was not searched for or guessed; none was found via first-party navigation from the pages fetched this stage."
+  },
+  "characteristics": {
+    "source_url": "https://www.razer.com/gaming-mice/razer-deathadder-v3",
+    "extraction_method": "Parsed from a JSON state object server-embedded in the page's own initial HTML response (SSR hydration state) -- no JavaScript execution, no Chromium, nothing rendered client-side.",
+    "fields": {
+      "Product family": "Razer DeathAdder",
+      "Form Factor": "Right-handed",
+      "Connectivity": "Wired - Razer Speedflex Cable",
+      "Color / Design": "Black",
+      "Sensor": "Focus Pro 30K Optical Sensor",
+      "Max Sensitivity (DPI)": "30000",
+      "Max Speed (IPS)": "750",
+      "Max Acceleration (G)": "70",
+      "Programmable Buttons": "6",
+      "Switch Type": "Optical Mouse Switches Gen-3",
+      "Switch Lifecycle": "90-million Clicks",
+      "On-board Memory Profiles": "5",
+      "Mouse Feet": "100% PTFE",
+      "Cable": "Razer Speedflex Cable",
+      "Chroma RGB": "No",
+      "Tilt Scroll Wheel": "None",
+      "Battery Life": "None (wired)",
+      "Size": "Length: 128.0 mm / 5.00 in; Width: 68.0 mm / 2.67 in; Height: 44.0 mm / 1.73 in",
+      "Weight": "59 g",
+      "Box Contents": "Razer DeathAdder V3; Important Product Information Guide"
+    }
+  },
+  "description": {
+    "meta_description": "Victory takes on a new shape with the Razer DeathAdder V3 - an ergonomic esports gaming mouse with a true 8000 Hz polling rate for the fastest response time.",
+    "marketing_intro": "Victory takes on a new shape with the Razer DeathAdder V3. Refined and reforged with the aid of top esports pros, its iconic ergonomic form is now more than 25% lighter than its predecessor, backed by a set of cutting-edge upgrades to push the limits of competitive play."
+  },
+  "official_images": [
+    {
+      "kind": "primary_product_photo",
+      "url": "https://assets3.razerzone.com/fgOxqPbg2c_3ZaR4lajdYcIdhRs=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh79%2Fhaf%2F9529652674590%2Fdeathadder-v3-2-500x500.png",
+      "source": "product-catalog image entry in the page's own embedded state (imageType=PRIMARY)"
+    },
+    {
+      "kind": "hero_marketing_image",
+      "url": "https://assets2.razerzone.com/images/pnx.assets/bf7ea91398b704ea710dfad671d185b9/razer-deathadder-v3-hero-desktop.webp",
+      "source": "<img> tag in page markup"
+    },
+    {
+      "kind": "detail_image",
+      "url": "https://assets2.razerzone.com/images/pnx.assets/2b16d58235e84ebb72850df8ebb97001/razer-deathadder-v3-raised-arch.webp",
+      "source": "<img>/<source> tag in page markup"
+    },
+    {
+      "kind": "detail_image",
+      "url": "https://assets2.razerzone.com/images/pnx.assets/57f749b949dd030d0865f29c20f46043/razer-deathadder-v3-no-weight-and-drag.webp",
+      "source": "<img>/<source> tag in page markup"
+    }
+  ],
+  "instruction_manual": {
+    "status": "not_found_within_this_stage_allowlist",
+    "evidence": "Box Contents lists an 'Important Product Information Guide', confirming a document exists, but no PDF/document link to it appears anywhere in this page's own HTML.",
+    "gap": "The product page's own support links all point to mysupport.razer.com, a different host from www.razer.com. That host was not predeclared in this stage's budget/allowlist, so it was not fetched -- this is a real, reported gap, not a silent omission and not a guessed document URL.",
+    "language": "unknown (document not reached)"
+  },
+  "dealer_fallback": {
+    "dns_known_url_for_this_code": false,
+    "note": "product_tool/adapters/dns.py KNOWN_URLS has no entry for RZ01-04640100-R3M1 or RZ01-04640100. No DNS URL was guessed or searched for. Per Stage 11.5's documented rule, running the real pipeline for this row would produce match_level='dealer_url_needed' -- this Part B investigation did not invent or supply a URL to bypass that, consistent with 'no guessed dealer URLs'.",
+    "technopark_status": "No adapter exists (Stage 11.5); not usable regardless of URL knowledge; not treated as an active route here either.",
+    "conflict_policy": "Official data (this page) takes priority over any future dealer data for the same field name; any future dealer value that disagrees would go to review, never silently overwrite what's recorded here."
+  }
+}

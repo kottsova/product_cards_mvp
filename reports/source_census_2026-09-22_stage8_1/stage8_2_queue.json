@@ -1,0 +1,1023 @@
+{
+  "schema_version": "stage8_2_queue.v1",
+  "generated_from": "reports/source_census_2026-09-22_stage8/adapter_profiles.v1.json (read-only baseline)",
+  "scope_note": "Grouping only; Stage 8.1 does not execute this queue. Each group lists a reproducible next method, not a guarantee of success.",
+  "total_profiles": 92,
+  "groups": {
+    "sitemap_or_catalog_feed": [
+      {
+        "profile_id": "samsung_kr",
+        "source_family": "samsung",
+        "official_domain": "https://www.samsung.com/sec/",
+        "unique_products": 1182,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Detected commerce platform (woocommerce); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "lg_kz",
+        "source_family": "lg",
+        "official_domain": "https://www.lg.com/kz",
+        "unique_products": 582,
+        "cms_engines": [
+          "adobe_experience_manager",
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Detected commerce platform (adobe_experience_manager); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "playstation_global_candidate",
+        "source_family": "playstation",
+        "official_domain": "https://www.playstation.com/en-us/",
+        "unique_products": 103,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Detected commerce platform (adobe_experience_manager); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "dreame",
+        "source_family": "dreame",
+        "official_domain": "https://global.dreametech.com/collections/all",
+        "unique_products": 42,
+        "cms_engines": [
+          "shopify"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Detected commerce platform (shopify); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "dreame_global",
+        "source_family": "dreame",
+        "official_domain": "https://global.dreametech.com/",
+        "unique_products": 42,
+        "cms_engines": [
+          "shopify"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (shopify); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "huawei_kz",
+        "source_family": "huawei",
+        "official_domain": "https://consumer.huawei.com/kz/",
+        "unique_products": 356,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (adobe_experience_manager); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "formula_v_global_candidate",
+        "source_family": "formula_v",
+        "official_domain": "https://www.formulav-line.com/",
+        "unique_products": 218,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (woocommerce); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "hp_global_candidate",
+        "source_family": "hp",
+        "official_domain": "https://www.hp.com/",
+        "unique_products": 210,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (adobe_experience_manager); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "honor_global_candidate",
+        "source_family": "honor",
+        "official_domain": "https://www.honor.com/global/",
+        "unique_products": 208,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Detected commerce platform (adobe_experience_manager); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "yeelight_global_candidate",
+        "source_family": "yeelight",
+        "official_domain": "https://en.yeelight.com/home-page/",
+        "unique_products": 106,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Detected commerce platform (woocommerce); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "braun_household_global_candidate",
+        "source_family": "braun",
+        "official_domain": "https://www.braunhousehold.com/en",
+        "unique_products": 96,
+        "cms_engines": [
+          "salesforce_commerce_cloud"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (salesforce_commerce_cloud); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "inoi_global_candidate",
+        "source_family": "inoi",
+        "official_domain": "https://inoi.com/",
+        "unique_products": 66,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (woocommerce); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "dyson_global_candidate",
+        "source_family": "dyson",
+        "official_domain": "https://www.dyson.com/",
+        "unique_products": 64,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (adobe_experience_manager); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "1stplayer",
+        "source_family": "1stplayer",
+        "official_domain": "https://1stplayer.com/",
+        "unique_products": 52,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (woocommerce); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      },
+      {
+        "profile_id": "wd",
+        "source_family": "wd",
+        "official_domain": "https://www.westerndigital.com/en-us/products",
+        "unique_products": 43,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Detected commerce platform (adobe_experience_manager); these platforms expose standard sitemap.xml / sitemap index or catalog feed routes that were not yet walked to a product URL."
+      }
+    ],
+    "internal_http_search": [
+      {
+        "profile_id": "samsung_kz",
+        "source_family": "samsung",
+        "official_domain": "https://www.samsung.com/kz_kz/",
+        "unique_products": 1182,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:search:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "samsung_kz_02d9e6",
+        "source_family": "samsung",
+        "official_domain": "https://www.samsung.com/kz_ru/",
+        "unique_products": 1182,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:search:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "samsung_us",
+        "source_family": "samsung",
+        "official_domain": "https://www.samsung.com/us/",
+        "unique_products": 1182,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:search:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "lg_kr",
+        "source_family": "lg",
+        "official_domain": "https://www.lge.co.kr/home",
+        "unique_products": 582,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:search:first_party_search_link) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "karcher_global",
+        "source_family": "karcher",
+        "official_domain": "https://www.kaercher.com/int/",
+        "unique_products": 165,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:query:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "karcher_kz",
+        "source_family": "karcher",
+        "official_domain": "https://www.kaercher.com/kz/",
+        "unique_products": 165,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:query:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "philips_global_candidate",
+        "source_family": "philips",
+        "official_domain": "https://www.philips.com/global",
+        "unique_products": 151,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:q:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "lianli_global_candidate",
+        "source_family": "lian_li",
+        "official_domain": "https://lian-li.com/product/",
+        "unique_products": 121,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:s:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "irbis",
+        "source_family": "irbis",
+        "official_domain": "https://www.irbis-digital.ru/",
+        "unique_products": 116,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:query:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "chieftec_eu_candidate",
+        "source_family": "chieftec",
+        "official_domain": "https://www.chieftec.eu/",
+        "unique_products": 85,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:keyword:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "kingbank",
+        "source_family": "kingbank",
+        "official_domain": "https://www.kingbank.com/products",
+        "unique_products": 70,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:search:first_party_search_link) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "raskat",
+        "source_family": "raskat",
+        "official_domain": "https://raskat.ru/catalog/",
+        "unique_products": 64,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:q:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "sama",
+        "source_family": "sama",
+        "official_domain": "https://www.sama.cn/",
+        "unique_products": 44,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:s:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "dxracer",
+        "source_family": "dxracer",
+        "official_domain": "https://www.dxracer.com/",
+        "unique_products": 43,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:q:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "weissgauff",
+        "source_family": "weissgauff",
+        "official_domain": "https://www.weissgauff.ru/menu_1/katalog.html",
+        "unique_products": 43,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:search:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "metabo",
+        "source_family": "metabo",
+        "official_domain": "https://www.metabo.com/uk/en/products/",
+        "unique_products": 37,
+        "cms_engines": [
+          "nuxt"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:search:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "gamemax",
+        "source_family": "gamemax",
+        "official_domain": "https://gamemaxpc.com/en/",
+        "unique_products": 29,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:keyword:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "teamgroup",
+        "source_family": "teamgroup",
+        "official_domain": "https://www.teamgroupinc.com/en/",
+        "unique_products": 28,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:keyword:first_party_search_link) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "lyambda",
+        "source_family": "lyambda",
+        "official_domain": "https://www.lyambda.com/",
+        "unique_products": 27,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:s:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      },
+      {
+        "profile_id": "aerocool",
+        "source_family": "aerocool",
+        "official_domain": "https://aerocool.io/",
+        "unique_products": 26,
+        "cms_engines": [
+          "woocommerce"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "A bounded internal HTML search form/link was already detected (GET:s:html_search_form) on the sampled page; Stage 5.1 bounded internal search can query it directly instead of crawling categories blind."
+      }
+    ],
+    "regional_official_domain": [
+      {
+        "profile_id": "apple_kz",
+        "source_family": "apple",
+        "official_domain": "https://www.apple.com/kz/",
+        "unique_products": 1122,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 2 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "lg_us",
+        "source_family": "lg",
+        "official_domain": "https://www.lg.com/us/",
+        "unique_products": 582,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 5 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "lenovo_kz",
+        "source_family": "lenovo",
+        "official_domain": "https://www.lenovo.com/kz/ru/",
+        "unique_products": 373,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 3 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "karcher_de",
+        "source_family": "karcher",
+        "official_domain": "https://www.kaercher.com/de/de/",
+        "unique_products": 165,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 5 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "karcher_global_candidate",
+        "source_family": "karcher",
+        "official_domain": "https://www.kaercher.com/gb/en/",
+        "unique_products": 165,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 5 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "braun_personal_care_candidate",
+        "source_family": "braun",
+        "official_domain": "https://us.braun.com/en-us",
+        "unique_products": 96,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Source family has 2 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "yandex_devices_candidate",
+        "source_family": "яндекс",
+        "official_domain": "https://alice.yandex.ru/smart-home/devices",
+        "unique_products": 94,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 2 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "keenetic_global_candidate",
+        "source_family": "keenetic",
+        "official_domain": "https://keenetic.com/de/products",
+        "unique_products": 64,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 2 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "bosch_tools",
+        "source_family": "bosch_tools",
+        "official_domain": "https://www.bosch-professional.com/",
+        "unique_products": 33,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 2 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      },
+      {
+        "profile_id": "bosch_tools_support_bosch-diy_com",
+        "source_family": "bosch_tools",
+        "official_domain": "https://bosch-diy.com/",
+        "unique_products": 33,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source family has 2 known official/regional profiles; an alternate market mirror may expose a reachable catalog even if this one did not."
+      }
+    ],
+    "support_first": [
+      {
+        "profile_id": "apple_kz_support_support_apple_com",
+        "source_family": "apple",
+        "official_domain": "https://support.apple.com/",
+        "unique_products": 1122,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "microsoft",
+        "source_family": "microsoft",
+        "official_domain": "https://support.microsoft.com/en-us/all-products",
+        "unique_products": 45,
+        "cms_engines": [],
+        "source_role": "support",
+        "support_status": "structure_partial",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "lenovo_kz_support_pcsupport_lenovo_com",
+        "source_family": "lenovo",
+        "official_domain": "https://pcsupport.lenovo.com/",
+        "unique_products": 373,
+        "cms_engines": [
+          "sitecore"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "lenovo_support_kz",
+        "source_family": "lenovo",
+        "official_domain": "https://support.lenovo.com/kz/en/",
+        "unique_products": 373,
+        "cms_engines": [
+          "sitecore"
+        ],
+        "source_role": "support",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "hp_global_candidate_support_support_hp_com",
+        "source_family": "hp",
+        "official_domain": "https://support.hp.com/",
+        "unique_products": 210,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "karcher_kz_support_www_karcher_com",
+        "source_family": "karcher",
+        "official_domain": "https://www.karcher.com/",
+        "unique_products": 165,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "redmond_corporate_candidate",
+        "source_family": "redmond",
+        "official_domain": "https://redmond.company/",
+        "unique_products": 98,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "observed",
+        "reason": "A support-page sample already yielded document/structure evidence for this profile; extend from the confirmed support endpoint before retrying the product path."
+      },
+      {
+        "profile_id": "yandex_devices_candidate_support_yandex_com",
+        "source_family": "яндекс",
+        "official_domain": "https://yandex.com/",
+        "unique_products": 94,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "keenetic_global_candidate_support_support_keenetic_com",
+        "source_family": "keenetic",
+        "official_domain": "https://support.keenetic.com/",
+        "unique_products": 64,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "sandisk",
+        "source_family": "sandisk",
+        "official_domain": "https://www.sandisk.com/support",
+        "unique_products": 53,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "support",
+        "support_status": "structure_partial",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "beats",
+        "source_family": "beats",
+        "official_domain": "https://www.beatsbydre.com/support",
+        "unique_products": 46,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "support",
+        "support_status": "structure_partial",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "dell",
+        "source_family": "dell",
+        "official_domain": "https://www.dell.com/support/home/en-us",
+        "unique_products": 46,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "support",
+        "support_status": "observed",
+        "reason": "A support-page sample already yielded document/structure evidence for this profile; extend from the confirmed support endpoint before retrying the product path."
+      },
+      {
+        "profile_id": "benq",
+        "source_family": "benq",
+        "official_domain": "https://www.benq.com/en-us/business/support.html",
+        "unique_products": 45,
+        "cms_engines": [
+          "adobe_experience_manager"
+        ],
+        "source_role": "support",
+        "support_status": "structure_partial",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "thermaltake",
+        "source_family": "thermaltake",
+        "official_domain": "https://support.thermaltake.com/",
+        "unique_products": 43,
+        "cms_engines": [],
+        "source_role": "support",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      },
+      {
+        "profile_id": "iiyama",
+        "source_family": "iiyama",
+        "official_domain": "https://iiyama.com/gl_en/",
+        "unique_products": 40,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "observed",
+        "reason": "A support-page sample already yielded document/structure evidence for this profile; extend from the confirmed support endpoint before retrying the product path."
+      },
+      {
+        "profile_id": "tefal",
+        "source_family": "tefal",
+        "official_domain": "https://www.tefal.com/countryselector",
+        "unique_products": 39,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "observed",
+        "reason": "A support-page sample already yielded document/structure evidence for this profile; extend from the confirmed support endpoint before retrying the product path."
+      },
+      {
+        "profile_id": "pantum",
+        "source_family": "pantum",
+        "official_domain": "https://support.pantum.com/",
+        "unique_products": 33,
+        "cms_engines": [],
+        "source_role": "support",
+        "support_status": "support_structure_not_found",
+        "reason": "Source role/domain is support-oriented; the manufacturer product catalog likely lives on a separate consumer domain not yet verified."
+      }
+    ],
+    "official_category": [
+      {
+        "profile_id": "hiper",
+        "source_family": "hiper",
+        "official_domain": "https://hiper-power.com/",
+        "unique_products": 100,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "razer_global_candidate",
+        "source_family": "razer",
+        "official_domain": "https://www.razer.com/",
+        "unique_products": 89,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "biryusa_ru_candidate",
+        "source_family": "бирюса",
+        "official_domain": "https://biryusa.ru/",
+        "unique_products": 504,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "tplink_global_candidate",
+        "source_family": "tp_link",
+        "official_domain": "https://www.tp-link.com/",
+        "unique_products": 254,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "rombica_ru_candidate",
+        "source_family": "rombica",
+        "official_domain": "https://rombica.ru/",
+        "unique_products": 183,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "silicon_power_global_candidate",
+        "source_family": "silicon_power",
+        "official_domain": "https://www.silicon-power.com/",
+        "unique_products": 178,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "pozis_ru_candidate",
+        "source_family": "pozis",
+        "official_domain": "https://wwwpozis.ru/",
+        "unique_products": 171,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "infinix_global_candidate",
+        "source_family": "infinix",
+        "official_domain": "https://www.infinixmobility.com/",
+        "unique_products": 162,
+        "cms_engines": [
+          "nuxt"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "bequiet_global_candidate",
+        "source_family": "be_quiet",
+        "official_domain": "https://www.bequiet.com/en",
+        "unique_products": 155,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "patriot_memory_global_candidate",
+        "source_family": "patriot_memory",
+        "official_domain": "https://www.patriotmemory.com/",
+        "unique_products": 154,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "deepcool_global_candidate",
+        "source_family": "deepcool",
+        "official_domain": "https://www.deepcool.com/",
+        "unique_products": 125,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "adata_global_candidate",
+        "source_family": "adata",
+        "official_domain": "https://www.adata.com/",
+        "unique_products": 89,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "canon_global_candidate",
+        "source_family": "canon",
+        "official_domain": "https://global.canon/",
+        "unique_products": 70,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "aoc_global_candidate",
+        "source_family": "aoc",
+        "official_domain": "https://www.aoc.com/us/monitors",
+        "unique_products": 67,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "yoshiro",
+        "source_family": "yoshiro",
+        "official_domain": "https://yoshiro.ru/",
+        "unique_products": 64,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "atlant_kz_candidate",
+        "source_family": "atlant",
+        "official_domain": "https://atlant.kz/",
+        "unique_products": 63,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "asrock",
+        "source_family": "asrock",
+        "official_domain": "https://www.asrock.com/index.asp",
+        "unique_products": 57,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "ocypus",
+        "source_family": "ocypus",
+        "official_domain": "https://ocypus.com/",
+        "unique_products": 57,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "kingdian",
+        "source_family": "kingdian",
+        "official_domain": "https://www.kingdianssd.com/",
+        "unique_products": 49,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "palit",
+        "source_family": "palit",
+        "official_domain": "https://www.palit.com/palit/palit_new/product_list.php?lang=en",
+        "unique_products": 49,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "netac",
+        "source_family": "netac",
+        "official_domain": "https://www.netac.com/",
+        "unique_products": 45,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "tecno",
+        "source_family": "tecno",
+        "official_domain": "https://www.tecno-mobile.com/home/",
+        "unique_products": 45,
+        "cms_engines": [
+          "next_js"
+        ],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "xpg",
+        "source_family": "xpg",
+        "official_domain": "https://www.xpg.com/us/",
+        "unique_products": 42,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "pocketbook",
+        "source_family": "pocketbook",
+        "official_domain": "https://products.pocketbook.ch/",
+        "unique_products": 40,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "орск",
+        "source_family": "орск",
+        "official_domain": "https://orsk-holod.ru/",
+        "unique_products": 35,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "colorful",
+        "source_family": "colorful",
+        "official_domain": "https://www.colorfulgroup.com/home/productlist?mid=84",
+        "unique_products": 34,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "bq",
+        "source_family": "bq",
+        "official_domain": "https://bq.ru/",
+        "unique_products": 29,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "structure_partial",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "super_flower",
+        "source_family": "super_flower",
+        "official_domain": "https://www.super-flower.com.tw/",
+        "unique_products": 27,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "gamerstorm",
+        "source_family": "gamerstorm",
+        "official_domain": "https://www.gamerstorm.com/",
+        "unique_products": 26,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      },
+      {
+        "profile_id": "jonsbo",
+        "source_family": "jonsbo",
+        "official_domain": "https://www.jonsbo.com/en/",
+        "unique_products": 23,
+        "cms_engines": [],
+        "source_role": "manufacturer",
+        "support_status": "support_structure_not_found",
+        "reason": "Direct HTTP access succeeded on the homepage but no category/product link was resolved within the bounded sample; a dedicated category-first crawl (not just homepage) is the next reproducible step."
+      }
+    ]
+  }
+}

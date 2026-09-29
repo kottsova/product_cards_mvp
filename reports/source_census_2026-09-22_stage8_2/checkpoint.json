@@ -1,0 +1,54 @@
+{
+  "schema_version": "stage8_2_checkpoint.v1",
+  "reused_snapshots": {
+    "offline_reprocessed_from_existing_sqlite_snapshots": 37,
+    "note": "37 pre-existing HTTP snapshots (Stage 5.1-7.1 sqlite stores) for samsung_kr/samsung_kz/samsung_kz_02d9e6/samsung_us/lg_kr/lg_kz were reprocessed offline with inspect_structure() -- zero new network requests -- before any new fetch was planned. See scripts/02_offline_reprocess.py and offline_reprocess.json.",
+    "key_finding_from_reuse": "internal_http_search turned out to be non-viable via static HTTP for both families that had it queued, discovered entirely from existing snapshots (0 new requests): Samsung's ?search=<term> responses (5 distinct queries, kz_ru and us) are byte-identical to the plain homepage; LG's search/?q=<term> (lg_kz) and search?keyword=<term> (lg_kr) responses vary only by a byte or two across distinct queries (the echoed query string itself), with identical extracted category links every time. Both are client-side-rendered SPA shells that do not return per-query server-rendered results. This eliminated internal_http_search as a viable route for samsung_kz/samsung_kz_02d9e6/samsung_us/lg_kr before any new request was made, and redirected all new-request budget to sitemap_or_catalog_feed instead."
+  },
+  "new_http_requests": {
+    "total": 16,
+    "by_host": {
+      "www.samsung.com": 8,
+      "www.lg.com": 3,
+      "direct.playstation.com": 5
+    },
+    "budget_caps_used": {
+      "max_per_host": 8,
+      "max_total": 30
+    }
+  },
+  "stop_reasons": {
+    "hosts_paused_this_run": [],
+    "note": "No host reached a confirmed 403/429/challenge_confirmed in this run. www.samsung.com reached its self-imposed 8-request host cap and further Samsung sitemap descent (e.g. a mobile/phones-named sitemap for smartphones) was deferred to next_queue.json rather than exceeding the cap."
+  },
+  "requests_not_made_due_to_scope_or_checkpoint": [
+    {
+      "family": "apple",
+      "reason": "No queue entry in internal_http_search/sitemap_or_catalog_feed (only regional_official_domain, support_first) -- out of this stage's permitted method scope."
+    },
+    {
+      "family": "jbl",
+      "reason": "http_blocked from Stage 8 (jbl.com and support.jbl.com both paused) -- not retried, per host-stop policy."
+    },
+    {
+      "family": "razer",
+      "reason": "No queue entry in the two permitted groups (only official_category) -- out of scope."
+    },
+    {
+      "family": "hiper",
+      "reason": "No queue entry in the two permitted groups (only official_category) -- out of scope."
+    },
+    {
+      "family": "microsoft",
+      "reason": "No queue entry in the two permitted groups (only support_first) -- out of scope."
+    },
+    {
+      "family": "samsung_us / samsung_kz / samsung_kz_02d9e6 internal search",
+      "reason": "Confirmed via offline snapshot reprocessing (not a new request) to return content identical (or near-identical, differing only by the echoed query string) to the plain homepage across 5 distinct queries -- not a viable static-HTTP route; not retried live."
+    },
+    {
+      "family": "lg_kr internal search (lge.co.kr)",
+      "reason": "Confirmed via offline snapshot reprocessing (not a new request) to return near-identical content across 3 distinct queries, same pattern as Samsung -- not a viable static-HTTP route; not retried live."
+    }
+  ]
+}

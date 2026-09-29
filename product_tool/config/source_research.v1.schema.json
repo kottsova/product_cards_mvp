@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source_research.v1.schema.json",
+  "title": "Stage 3 source research registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "selection_policy",
+    "families"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "selection_policy": {
+      "type": "object"
+    },
+    "families": {
+      "type": "array",
+      "minItems": 50,
+      "maxItems": 50,
+      "items": {
+        "$ref": "#/$defs/family"
+      }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "url",
+        "claim",
+        "checked_at"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string"
+        },
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "capability",
+        "sample_type"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "capability": {
+          "enum": [
+            "homepage",
+            "robots_txt",
+            "sitemap",
+            "category_page",
+            "internal_search",
+            "product_page",
+            "support_page",
+            "document_endpoint",
+            "asset_host",
+            "structured_api"
+          ]
+        },
+        "sample_type": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_family_id",
+        "canonical_brand",
+        "source_labels",
+        "priority_rank",
+        "unique_products",
+        "research_status",
+        "official_status",
+        "source_role",
+        "market",
+        "candidate_url",
+        "page_hosts",
+        "support_hosts",
+        "asset_document_hosts",
+        "evidence",
+        "checked_variants",
+        "no_result_reason",
+        "probe_targets",
+        "endpoint_results",
+        "checkpoint"
+      ],
+      "properties": {
+        "source_family_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_brand": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_labels": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "priority_rank": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "unique_products": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "research_status": {
+          "enum": [
+            "official_verified",
+            "official_source_not_found"
+          ]
+        },
+        "official_status": {
+          "enum": [
+            "official_verified",
+            "research_pending"
+          ]
+        },
+        "source_role": {
+          "enum": [
+            "manufacturer",
+            "support"
+          ]
+        },
+        "market": {
+          "type": "string"
+        },
+        "candidate_url": {
+          "type": "string"
+        },
+        "page_hosts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "support_hosts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "asset_document_hosts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "checked_variants": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "no_result_reason": {
+          "type": "string"
+        },
+        "probe_targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "endpoint_results": {
+          "type": "array"
+        },
+        "checkpoint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "last_checked_at",
+            "stop_reason"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "complete",
+                "stopped",
+                "not_applicable"
+              ]
+            },
+            "last_checked_at": {
+              "type": "string"
+            },
+            "stop_reason": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

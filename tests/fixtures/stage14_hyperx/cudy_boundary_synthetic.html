@@ -1,0 +1,37 @@
+<!--
+SYNTHETIC, Stage 14 -- BOUNDARY-TESTING FIXTURE ONLY. Not a real capture,
+not the basis for a Cudy adapter or identity check (none is built this
+stage). Shaped after Cudy's own confirmed structural contract (Stage 8.1:
+discovery/identity/specs/media all confirmed -- the strongest structural
+profile alongside Bosch/HyperX). Uses a plain table for specs and a plain
+<img> gallery with neither data-media-id nor data-fancybox, to prove the
+same boundary as the Bosch fixture: JSON-LD/DOM-table extraction
+generalizes, the Shopify-specific gallery attribute pattern correctly
+finds nothing here.
+-->
+<html>
+<head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Cudy WR6500H",
+  "sku": "WR6500H-1.0",
+  "image": [{"@type": "ImageObject", "url": "https://www.cudy.com/images/wr6500h-hero.jpg"}],
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Wi-Fi standard", "value": "Wi-Fi 6"},
+    {"@type": "PropertyValue", "name": "Ports", "value": "4x Gigabit LAN"}
+  ]
+}
+</script>
+</head>
+<body>
+<main>
+  <h1>Cudy WR6500H</h1>
+  <img src="https://www.cudy.com/images/wr6500h-front.jpg" class="product-photo">
+  <table class="specifications">
+    <tr><th>Antennas</th><td>4x external</td></tr>
+  </table>
+</main>
+</body>
+</html>

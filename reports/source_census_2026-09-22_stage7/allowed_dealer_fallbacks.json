@@ -1,0 +1,610 @@
+[
+  {
+    "source_family": "lg",
+    "seller_sku": "F2J3HS0W",
+    "category": "Стиральные машины",
+    "gate": {
+      "allowed": true,
+      "source_id": "sulpak",
+      "reason": "existing_LG_appliance_approval_after_bounded_official_search",
+      "approval_status": "approved_existing_scope"
+    },
+    "discovery": {
+      "domain_id": "sulpak",
+      "url": "https://www.sulpak.kz/",
+      "market": "KZ",
+      "division": "approved_LG_appliances",
+      "outcome": "http_host_protection_stop",
+      "http_requests": 6,
+      "requests": [
+        {
+          "requested_url": "https://www.sulpak.kz/",
+          "final_url": "https://www.sulpak.kz/",
+          "discovery_method": "catalog_index",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "challenge_suspected",
+          "checked_at": "2026-09-22T16:16:26+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/robots.txt",
+          "final_url": "https://www.sulpak.kz/robots.txt",
+          "discovery_method": "robots",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:27+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/robots.txt"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/sitemap.xml",
+          "final_url": "https://www.sulpak.kz/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:28+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/sitemap.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/sitemap-Categories2.xml",
+          "final_url": "https://www.sulpak.kz/sitemap-Categories2.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:31+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/sitemap-Categories2.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/sitemap-akkol-kz.xml",
+          "final_url": "https://www.sulpak.kz/sitemap-akkol-kz.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:37+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/sitemap-akkol-kz.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149",
+          "final_url": "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149",
+          "discovery_method": "product",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "captcha_or_blocked",
+          "protection_status": "challenge_confirmed",
+          "checked_at": "2026-09-22T16:16:39+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "url": "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 338
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        },
+        {
+          "url": "https://www.sulpak.kz/g/otparivateli_dlya_odezhdiy_tefal_it8480e0",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 214
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        },
+        {
+          "url": "https://www.sulpak.kz/g/portativniye-kolonki-soundcore-rave-3s-black",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 397
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        },
+        {
+          "url": "https://www.sulpak.kz/g/smartfoniy-apple-iphone-17-pro-256gb-deep-blue-mg8j4hxa",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 276
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        }
+      ],
+      "routes": [
+        {
+          "action_url": "https://www.sulpak.kz/Stocks/Action/9133/s",
+          "method": "GET",
+          "query_parameter": "",
+          "constant_parameters": [],
+          "source": "first_party_search_link",
+          "originating_page": "https://www.sulpak.kz/",
+          "allowed_host": "www.sulpak.kz",
+          "confidence": 0.8,
+          "rejection_reason": "javascript_handler",
+          "timestamp": "2026-09-22T16:16:26.858581+00:00",
+          "disposition": "manual_or_future_strategy",
+          "action": "https://www.sulpak.kz/Stocks/Action/9133/s",
+          "type": "search_path"
+        }
+      ],
+      "queries": [],
+      "errors": [
+        "invalid_sitemap:https://www.sulpak.kz/sitemap-Categories2.xml"
+      ],
+      "snapshots": [
+        {
+          "snapshot_id": 17,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "90039e7df9d626d3a18b3d4599c09a9ee82ab71dbdfbeca1cd126c73a7e0adb6",
+          "requested_url": "https://www.sulpak.kz/",
+          "sample_type": "catalog_index"
+        },
+        {
+          "snapshot_id": 18,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "f630cb2609df1b4bfb9dcf5749586fb396105b0374e076945ee5946183cc3989",
+          "requested_url": "https://www.sulpak.kz/robots.txt",
+          "sample_type": "robots"
+        },
+        {
+          "snapshot_id": 19,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "723d4d6c10b745f88f7c3fdc1dffb2d8260435d6600662e6af07df0e85b0e035",
+          "requested_url": "https://www.sulpak.kz/sitemap.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 20,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "c66f53eeb2374eee74c5f0bc7bfd79710aecf1ccf1c8422f3956d3f3ff75b3a1",
+          "requested_url": "https://www.sulpak.kz/sitemap-Categories2.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 21,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "243f0ccf72835dbb15d85e7e846a8357700c206dbdfc0b9b631f793c607e5d8e",
+          "requested_url": "https://www.sulpak.kz/sitemap-akkol-kz.xml",
+          "sample_type": "sitemap"
+        }
+      ],
+      "search_evidence_available": true,
+      "unvalidated_candidates": true,
+      "truncated": true,
+      "product_validations": 0,
+      "started_at": "2026-09-22T16:16:24.773166+00:00",
+      "last_checked_at": "2026-09-22T16:16:39.391723+00:00",
+      "browser_used": false
+    }
+  },
+  {
+    "source_family": "lg",
+    "seller_sku": "A9K-PRO1",
+    "category": "Пылесосы",
+    "gate": {
+      "allowed": true,
+      "source_id": "sulpak",
+      "reason": "existing_LG_appliance_approval_after_bounded_official_search",
+      "approval_status": "approved_existing_scope"
+    },
+    "discovery": {
+      "domain_id": "sulpak",
+      "url": "https://www.sulpak.kz/",
+      "market": "KZ",
+      "division": "approved_LG_appliances",
+      "outcome": "http_host_protection_stop",
+      "http_requests": 0,
+      "requests": [
+        {
+          "requested_url": "https://www.sulpak.kz/",
+          "final_url": "https://www.sulpak.kz/",
+          "discovery_method": "catalog_index",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "challenge_suspected",
+          "checked_at": "2026-09-22T16:16:26+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/robots.txt",
+          "final_url": "https://www.sulpak.kz/robots.txt",
+          "discovery_method": "robots",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:27+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/robots.txt"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/sitemap.xml",
+          "final_url": "https://www.sulpak.kz/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:28+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/sitemap.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/sitemap-Categories2.xml",
+          "final_url": "https://www.sulpak.kz/sitemap-Categories2.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:31+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/sitemap-Categories2.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/sitemap-akkol-kz.xml",
+          "final_url": "https://www.sulpak.kz/sitemap-akkol-kz.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:16:37+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/sitemap-akkol-kz.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149",
+          "final_url": "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149",
+          "discovery_method": "product",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "captcha_or_blocked",
+          "protection_status": "challenge_confirmed",
+          "checked_at": "2026-09-22T16:16:39+00:00",
+          "redirect_chain": [
+            "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "url": "https://www.sulpak.kz/g/holodilnik_haier_cef537asd_25_1149",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 338
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        },
+        {
+          "url": "https://www.sulpak.kz/g/otparivateli_dlya_odezhdiy_tefal_it8480e0",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 214
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        },
+        {
+          "url": "https://www.sulpak.kz/g/portativniye-kolonki-soundcore-rave-3s-black",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 397
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        },
+        {
+          "url": "https://www.sulpak.kz/g/smartfoniy-apple-iphone-17-pro-256gb-deep-blue-mg8j4hxa",
+          "final_url": "",
+          "source_family": "lg",
+          "strategy": "internal_search",
+          "ranking_score": 35,
+          "ranking_reasons": [
+            "canonical_first_party_host:+15",
+            "html_product_card:+20"
+          ],
+          "category_hints": [],
+          "model_token_hints": [],
+          "discovery_evidence": [
+            {
+              "type": "html_product_card",
+              "ranking_only": true,
+              "container": {
+                "marker": "data-product-id",
+                "node": 276
+              }
+            },
+            {
+              "type": "search_result_context",
+              "response_url": "https://www.sulpak.kz/",
+              "title": "\n\n\n\n\n\n",
+              "ranking_only": true
+            }
+          ],
+          "access_status": "not_checked",
+          "protection_status": "inconclusive",
+          "identity_verification": {},
+          "rejection_reason": "not_validated_within_budget"
+        }
+      ],
+      "routes": [
+        {
+          "action_url": "https://www.sulpak.kz/Stocks/Action/9133/s",
+          "method": "GET",
+          "query_parameter": "",
+          "constant_parameters": [],
+          "source": "first_party_search_link",
+          "originating_page": "https://www.sulpak.kz/",
+          "allowed_host": "www.sulpak.kz",
+          "confidence": 0.8,
+          "rejection_reason": "javascript_handler",
+          "timestamp": "2026-09-22T16:16:58.118919+00:00",
+          "disposition": "manual_or_future_strategy",
+          "action": "https://www.sulpak.kz/Stocks/Action/9133/s",
+          "type": "search_path"
+        }
+      ],
+      "queries": [],
+      "errors": [
+        "invalid_sitemap:https://www.sulpak.kz/sitemap-Categories2.xml"
+      ],
+      "snapshots": [
+        {
+          "snapshot_id": 17,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "90039e7df9d626d3a18b3d4599c09a9ee82ab71dbdfbeca1cd126c73a7e0adb6",
+          "requested_url": "https://www.sulpak.kz/",
+          "sample_type": "catalog_index"
+        },
+        {
+          "snapshot_id": 18,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "f630cb2609df1b4bfb9dcf5749586fb396105b0374e076945ee5946183cc3989",
+          "requested_url": "https://www.sulpak.kz/robots.txt",
+          "sample_type": "robots"
+        },
+        {
+          "snapshot_id": 19,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "723d4d6c10b745f88f7c3fdc1dffb2d8260435d6600662e6af07df0e85b0e035",
+          "requested_url": "https://www.sulpak.kz/sitemap.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 20,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "c66f53eeb2374eee74c5f0bc7bfd79710aecf1ccf1c8422f3956d3f3ff75b3a1",
+          "requested_url": "https://www.sulpak.kz/sitemap-Categories2.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 21,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "243f0ccf72835dbb15d85e7e846a8357700c206dbdfc0b9b631f793c607e5d8e",
+          "requested_url": "https://www.sulpak.kz/sitemap-akkol-kz.xml",
+          "sample_type": "sitemap"
+        }
+      ],
+      "search_evidence_available": true,
+      "unvalidated_candidates": true,
+      "truncated": true,
+      "product_validations": 0,
+      "started_at": "2026-09-22T16:16:57.824642+00:00",
+      "last_checked_at": "2026-09-22T16:16:58.311340+00:00",
+      "browser_used": false
+    }
+  }
+]

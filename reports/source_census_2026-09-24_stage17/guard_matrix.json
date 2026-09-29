@@ -1,0 +1,91 @@
+{
+  "full_runs": {
+    "python -m tests": {
+      "returncode": 0,
+      "summary": [
+        "Ran 878 tests in 27.297s",
+        "",
+        "OK"
+      ]
+    },
+    "python -m unittest discover -s tests -q": {
+      "returncode": 0,
+      "summary": [
+        "Ran 878 tests in 24.941s",
+        "",
+        "OK"
+      ]
+    },
+    "python -m unittest discover -s tests -t . -q": {
+      "returncode": 0,
+      "summary": [
+        "Ran 878 tests in 28.211s",
+        "",
+        "OK"
+      ]
+    }
+  },
+  "guaranteed_regardless_of_module_order_or_file_selection": [
+    "python -m unittest discover -s tests -t . -p test_hyperx_adapter.py",
+    "python -m unittest tests.test_hyperx_adapter",
+    "python -m tests"
+  ],
+  "held_only_by_import_order": [
+    "python -m unittest discover -s tests"
+  ],
+  "not_guaranteed": [
+    "python -m unittest discover -s tests -p test_hyperx_adapter.py"
+  ],
+  "probes": {
+    "legacy_full_discovery": {
+      "command": "python -m unittest discover -s tests",
+      "guard_on_before_any_test_runs": true,
+      "package_imported": false,
+      "returncode": 0,
+      "state": {
+        "dns_blocked": true,
+        "http_blocked": true
+      }
+    },
+    "legacy_narrowed_pattern": {
+      "command": "python -m unittest discover -s tests -p test_hyperx_adapter.py",
+      "guard_on_before_any_test_runs": false,
+      "package_imported": false,
+      "returncode": 0,
+      "state": {
+        "dns_blocked": false,
+        "http_blocked": false
+      }
+    },
+    "runner_module": {
+      "command": "python -m tests",
+      "guard_on_before_any_test_runs": true,
+      "package_imported": true,
+      "returncode": 0,
+      "state": {
+        "dns_blocked": true,
+        "http_blocked": true
+      }
+    },
+    "single_module": {
+      "command": "python -m unittest tests.test_hyperx_adapter",
+      "guard_on_before_any_test_runs": true,
+      "package_imported": true,
+      "returncode": 0,
+      "state": {
+        "dns_blocked": true,
+        "http_blocked": true
+      }
+    },
+    "top_level_dir_narrowed": {
+      "command": "python -m unittest discover -s tests -t . -p test_hyperx_adapter.py",
+      "guard_on_before_any_test_runs": true,
+      "package_imported": true,
+      "returncode": 0,
+      "state": {
+        "dns_blocked": true,
+        "http_blocked": true
+      }
+    }
+  }
+}

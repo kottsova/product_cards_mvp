@@ -1,0 +1,478 @@
+{
+  "version": "7.0.1",
+  "scope": "810b79aa3545feee9ecbeaa67223bf280a6f7ac4cfbe50397982284cbc820e90",
+  "complete": true,
+  "source_family": "samsung",
+  "identity": {
+    "brand_raw": "Samsung",
+    "brand_canonical": "samsung",
+    "category_raw": "Стиральные машины",
+    "category_canonical": "bosch_home",
+    "seller_sku": "WD10T654CBH/LD",
+    "wb_sku": "",
+    "title_raw": "WD10T654CBH/LD",
+    "model_candidates": [
+      "WD10T654CBH/LD"
+    ],
+    "variant_attributes": {},
+    "market": ""
+  },
+  "outcome": "official_exact_product_not_found",
+  "all_official_domains_considered": true,
+  "identity_query_scope_complete": true,
+  "search_scope": "confirmed registry domains within declared budget; not proof of global absence",
+  "domains_planned": [
+    "samsung_kz",
+    "samsung_us",
+    "samsung_kr"
+  ],
+  "domains": [
+    {
+      "domain_id": "samsung_kz",
+      "url": "https://www.samsung.com/kz_ru/",
+      "market": "KZ",
+      "division": "consumer",
+      "outcome": "bounded_discovery_complete",
+      "http_requests": 1,
+      "requests": [
+        {
+          "requested_url": "https://www.samsung.com/kz_ru/",
+          "final_url": "https://www.samsung.com/kz_ru/",
+          "discovery_method": "catalog_index",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:40+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/kz_ru/"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/kz_ru/?search=WD10T654CBH%2FLD",
+          "final_url": "https://www.samsung.com/kz_ru/?search=WD10T654CBH%2FLD",
+          "discovery_method": "internal_search",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:20:52+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/kz_ru/?search=WD10T654CBH%2FLD"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/robots.txt",
+          "final_url": "https://www.samsung.com/robots.txt",
+          "discovery_method": "robots",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:43+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/robots.txt"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/kz_ru/sitemap.xml",
+          "final_url": "https://www.samsung.com/kz_ru/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:44+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/kz_ru/sitemap.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/ae/sitemap.xml",
+          "final_url": "https://www.samsung.com/ae/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:45+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/ae/sitemap.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/ae_ar/sitemap.xml",
+          "final_url": "https://www.samsung.com/ae_ar/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:46+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/ae_ar/sitemap.xml"
+          ]
+        }
+      ],
+      "candidates": [],
+      "routes": [
+        {
+          "action_url": "https://www.samsung.com/kz_ru/",
+          "method": "GET",
+          "query_parameter": "search",
+          "constant_parameters": [],
+          "source": "html_search_form",
+          "originating_page": "https://www.samsung.com/kz_ru/",
+          "allowed_host": "www.samsung.com",
+          "confidence": 0.8,
+          "rejection_reason": "",
+          "timestamp": "2026-09-22T16:20:51.282059+00:00",
+          "disposition": "safe_get",
+          "action": "https://www.samsung.com/kz_ru/",
+          "type": "search_form"
+        },
+        {
+          "action_url": "https://www.samsung.com/kz_ru/search/",
+          "method": "GET",
+          "query_parameter": "",
+          "constant_parameters": [],
+          "source": "first_party_search_link",
+          "originating_page": "https://www.samsung.com/kz_ru/",
+          "allowed_host": "www.samsung.com",
+          "confidence": 0.8,
+          "rejection_reason": "query_parameter_not_declared",
+          "timestamp": "2026-09-22T16:20:51.283244+00:00",
+          "disposition": "manual_or_future_strategy",
+          "action": "https://www.samsung.com/kz_ru/search/",
+          "type": "search_path"
+        }
+      ],
+      "queries": [
+        "WD10T654CBH/LD"
+      ],
+      "errors": [],
+      "snapshots": [
+        {
+          "snapshot_id": 42,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "899c7af8b92d1b6f078e17b1d9d4aae0ecf6befaab9b526d8c6a440b555166ce",
+          "requested_url": "https://www.samsung.com/kz_ru/",
+          "sample_type": "catalog_index"
+        },
+        {
+          "snapshot_id": 88,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "899c7af8b92d1b6f078e17b1d9d4aae0ecf6befaab9b526d8c6a440b555166ce",
+          "requested_url": "https://www.samsung.com/kz_ru/?search=WD10T654CBH%2FLD",
+          "sample_type": "internal_search"
+        },
+        {
+          "snapshot_id": 44,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "d3ed4ce356a9a05ace6f3c6552ee253b0eb747d7e54aab5874de8dad5caca572",
+          "requested_url": "https://www.samsung.com/robots.txt",
+          "sample_type": "robots"
+        },
+        {
+          "snapshot_id": 45,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "9207ace2a3b73988834b4d355caf38501b47718eaba7bed7bbacb2e8c053bca1",
+          "requested_url": "https://www.samsung.com/kz_ru/sitemap.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 46,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "a2a5b073c379d8c23a3d8b5f3c352de7b7b92a075f052a945c127b6d1b793042",
+          "requested_url": "https://www.samsung.com/ae/sitemap.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 47,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "f1937e65c1fd7e70c2258d27cc5ec22d199c65aeeef9a511122f85fbe2eefa4a",
+          "requested_url": "https://www.samsung.com/ae_ar/sitemap.xml",
+          "sample_type": "sitemap"
+        }
+      ],
+      "search_evidence_available": true,
+      "unvalidated_candidates": false,
+      "truncated": true,
+      "product_validations": 0,
+      "started_at": "2026-09-22T16:20:51.205789+00:00",
+      "last_checked_at": "2026-09-22T16:20:52.247893+00:00",
+      "browser_used": false
+    },
+    {
+      "domain_id": "samsung_us",
+      "url": "https://www.samsung.com/us/",
+      "market": "US",
+      "division": "consumer",
+      "outcome": "bounded_discovery_complete",
+      "http_requests": 1,
+      "requests": [
+        {
+          "requested_url": "https://www.samsung.com/us/",
+          "final_url": "https://www.samsung.com/us/",
+          "discovery_method": "catalog_index",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:48+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/us/"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/us/?search=WD10T654CBH%2FLD",
+          "final_url": "https://www.samsung.com/us/?search=WD10T654CBH%2FLD",
+          "discovery_method": "internal_search",
+          "access_method": "http",
+          "origin": "live_http",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:20:53+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/us/?search=WD10T654CBH%2FLD"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/robots.txt",
+          "final_url": "https://www.samsung.com/robots.txt",
+          "discovery_method": "robots",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:43+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/robots.txt"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/global/business/sitemap.xml",
+          "final_url": "https://www.samsung.com/global/business/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:50+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/global/business/sitemap.xml"
+          ]
+        }
+      ],
+      "candidates": [],
+      "routes": [
+        {
+          "action_url": "https://www.samsung.com/us/",
+          "method": "GET",
+          "query_parameter": "search",
+          "constant_parameters": [],
+          "source": "html_search_form",
+          "originating_page": "https://www.samsung.com/us/",
+          "allowed_host": "www.samsung.com",
+          "confidence": 0.8,
+          "rejection_reason": "",
+          "timestamp": "2026-09-22T16:20:52.326695+00:00",
+          "disposition": "safe_get",
+          "action": "https://www.samsung.com/us/",
+          "type": "search_form"
+        }
+      ],
+      "queries": [
+        "WD10T654CBH/LD"
+      ],
+      "errors": [],
+      "snapshots": [
+        {
+          "snapshot_id": 48,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "f621ea7990eb0bed46e3a56cb1b79cb401fb1325f932edddcd65d85a0576a0b2",
+          "requested_url": "https://www.samsung.com/us/",
+          "sample_type": "catalog_index"
+        },
+        {
+          "snapshot_id": 89,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "f621ea7990eb0bed46e3a56cb1b79cb401fb1325f932edddcd65d85a0576a0b2",
+          "requested_url": "https://www.samsung.com/us/?search=WD10T654CBH%2FLD",
+          "sample_type": "internal_search"
+        },
+        {
+          "snapshot_id": 44,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "d3ed4ce356a9a05ace6f3c6552ee253b0eb747d7e54aab5874de8dad5caca572",
+          "requested_url": "https://www.samsung.com/robots.txt",
+          "sample_type": "robots"
+        },
+        {
+          "snapshot_id": 50,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "822057f103cc45f451921115a3ea62606e609c05c3911c6055a983a852ceda5e",
+          "requested_url": "https://www.samsung.com/global/business/sitemap.xml",
+          "sample_type": "sitemap"
+        }
+      ],
+      "search_evidence_available": true,
+      "unvalidated_candidates": false,
+      "truncated": true,
+      "product_validations": 0,
+      "started_at": "2026-09-22T16:20:52.247909+00:00",
+      "last_checked_at": "2026-09-22T16:20:54.057748+00:00",
+      "browser_used": false
+    },
+    {
+      "domain_id": "samsung_kr",
+      "url": "https://www.samsung.com/sec/",
+      "market": "KR",
+      "division": "consumer",
+      "outcome": "bounded_discovery_complete",
+      "http_requests": 0,
+      "requests": [
+        {
+          "requested_url": "https://www.samsung.com/sec/",
+          "final_url": "https://www.samsung.com/sec/",
+          "discovery_method": "catalog_index",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:52+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/sec/"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/robots.txt",
+          "final_url": "https://www.samsung.com/robots.txt",
+          "discovery_method": "robots",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:43+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/robots.txt"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/sec/sitemap.xml",
+          "final_url": "https://www.samsung.com/sec/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "inconclusive",
+          "checked_at": "2026-09-22T16:17:54+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/sec/sitemap.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/sec/sustainability/main/sitemap.xml",
+          "final_url": "https://www.samsung.com/sec/sustainability/main/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:55+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/sec/sustainability/main/sitemap.xml"
+          ]
+        },
+        {
+          "requested_url": "https://www.samsung.com/ae/sitemap.xml",
+          "final_url": "https://www.samsung.com/ae/sitemap.xml",
+          "discovery_method": "sitemap",
+          "access_method": "http",
+          "origin": "snapshot_cache",
+          "http_status": 200,
+          "access_status": "direct_access",
+          "protection_status": "ordinary_page",
+          "checked_at": "2026-09-22T16:17:45+00:00",
+          "redirect_chain": [
+            "https://www.samsung.com/ae/sitemap.xml"
+          ]
+        }
+      ],
+      "candidates": [],
+      "routes": [],
+      "queries": [],
+      "errors": [],
+      "snapshots": [
+        {
+          "snapshot_id": 51,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "f848d5f610ce8d117ea661e5e5d1ceb870e0513a55ea32038ba62f4751b5366e",
+          "requested_url": "https://www.samsung.com/sec/",
+          "sample_type": "catalog_index"
+        },
+        {
+          "snapshot_id": 44,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "d3ed4ce356a9a05ace6f3c6552ee253b0eb747d7e54aab5874de8dad5caca572",
+          "requested_url": "https://www.samsung.com/robots.txt",
+          "sample_type": "robots"
+        },
+        {
+          "snapshot_id": 52,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "e32bfcfb677f9c31f0e303b3001147be446f17c4a9a218c6c04ebc7e048e3ccc",
+          "requested_url": "https://www.samsung.com/sec/sitemap.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 53,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "6c412d7b0289faeedfa7aad0b62d59ac168dd8498060e076434ca161b626d3b8",
+          "requested_url": "https://www.samsung.com/sec/sustainability/main/sitemap.xml",
+          "sample_type": "sitemap"
+        },
+        {
+          "snapshot_id": 46,
+          "store": "source_snapshots.sqlite3",
+          "content_sha256": "a2a5b073c379d8c23a3d8b5f3c352de7b7b92a075f052a945c127b6d1b793042",
+          "requested_url": "https://www.samsung.com/ae/sitemap.xml",
+          "sample_type": "sitemap"
+        }
+      ],
+      "search_evidence_available": true,
+      "unvalidated_candidates": false,
+      "truncated": true,
+      "product_validations": 0,
+      "started_at": "2026-09-22T16:20:54.057882+00:00",
+      "last_checked_at": "2026-09-22T16:20:54.745359+00:00",
+      "browser_used": false
+    }
+  ],
+  "best_official": null,
+  "http_requests": 2,
+  "new_http_requests": 2,
+  "production_ready": false,
+  "browser_used": false,
+  "dealer_fallback": {
+    "allowed": false,
+    "source_id": null,
+    "reason": "no_approved_dealer_for_brand_category",
+    "approval_status": "review_pending"
+  },
+  "result_origin": "supplemental_live_http"
+}

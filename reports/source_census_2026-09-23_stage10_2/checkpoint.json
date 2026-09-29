@@ -1,0 +1,118 @@
+{
+  "stage": "10.2",
+  "budget_declared_before_requests": {
+    "declared_at": "2026-09-23",
+    "declared_before_any_request": true,
+    "scope": "One bounded document/support route for the already-selected console (XXU-00015, Xbox Series S Carbon 1TB). No general Xbox census, no other catalog row, no other product.",
+    "allowed_hosts": [
+      "support.xbox.com"
+    ],
+    "allowed_hosts_reason": "support.xbox.com is the only host role-confirmed as 'support' (Stage 10.1); www.xbox.com already fully explored for this console in Stage 10.1 (no document/manual link found there, reconfirmed offline this stage). A document-CDN host is not yet known; if a genuinely new document host is discovered via an already-fetched sitemap or page (not guessed), it will get its own separate, explicit budget line before any request to it, per the same rule Stage 10.1 applied to the gzip sitemap discovery.",
+    "seed_urls_already_known_not_guessed": [
+      "https://support.xbox.com/ru-RU/sitemap.xml",
+      "https://support.xbox.com/en-US/help/hardware-network/console/unbox-xbox-series-xs-console",
+      "https://support.xbox.com/en-US/help/hardware-network/getting-started-set-up/set-up-new-series-x-s"
+    ],
+    "seed_urls_note": "The ru-RU sitemap URL is listed verbatim inside support.xbox.com's own already-fetched sitemap index (Stage 10.1, raw/support_xbox_com_sitemap.xml.txt) -- not guessed. The two en-US article URLs are the same ones already fetched in Stage 10.1 (JS-only shells); they are re-examined offline only, not re-fetched, unless a Russian equivalent slug is found and needs its own fetch.",
+    "language_priority": "Russian first, then English, then any other language actually found -- never assumed.",
+    "discovery_mechanisms_allowed": [
+      "reading the already-saved support.xbox.com sitemap index and en-US child sitemap (offline, no new request)",
+      "fetching the ru-RU child sitemap (already declared in the index)",
+      "fetching a Russian-locale equivalent of an already-found English article slug, ONLY if that exact URL is confirmed present in the fetched ru-RU sitemap listing (never by pattern-substituting the locale without confirming the URL exists in the sitemap)",
+      "Stage 8.6's bounded, Range-aware document fetch mechanism, reused verbatim in logic, IF a PDF/document URL is found this way"
+    ],
+    "discovery_mechanisms_forbidden": [
+      "guessing a Russian URL by substituting 'ru-RU' into the English slug without sitemap confirmation",
+      "search engines",
+      "Chromium / browser automation to render the JS-only support articles",
+      "dealer/reseller sources",
+      "brute-forcing model/SKU codes or document filenames"
+    ],
+    "limits": {
+      "max_requests_total": 6,
+      "max_requests_per_host": 6,
+      "max_hosts": 1,
+      "max_response_bytes_per_request": 750000,
+      "min_interval_seconds_between_requests": 2.0,
+      "timeout_seconds_per_request": 10.0
+    },
+    "document_host_budget_if_discovered": {
+      "note": "Not predeclared with a specific host/number, because none is known yet. If this stage's sitemap/page reading surfaces an actual document (PDF) URL, a separate budget line naming that exact host and reusing Stage 8.6's chunk_bytes/max_total_bytes/completeness-classification approach will be written and declared BEFORE any request to it, exactly as Stage 10.1 did for the gzip sitemap chunks."
+    },
+    "robots_txt_policy": "support.xbox.com/robots.txt was already fetched in Stage 10.1 (0 Disallow rules under User-agent: *, reused from that stage's saved record, not re-fetched) and continues to apply.",
+    "stop_conditions": [
+      "max_requests_total reached",
+      "HTTP 403/429/challenge on support.xbox.com -> stop immediately, record the gap",
+      "the only reachable route for a given locale is confirmed JS-only (a bare SPA shell, <noscript> required) -> stop pursuing that locale's article content, record the gap, do not attempt Chromium",
+      "ru-RU sitemap does not list an equivalent slug for either candidate article -> stop the Russian search, fall back to what Stage 10.1 already found for English (also JS-only, already recorded)"
+    ]
+  },
+  "total_requests_made": 3,
+  "requests_by_host": {
+    "support.xbox.com": 3
+  },
+  "requests_budget_max_total": 6,
+  "request_log_full": [
+    {
+      "seq": 1,
+      "requested_url": "https://support.xbox.com/ru-RU/sitemap.xml",
+      "capability": "sitemap",
+      "access_status": "direct_access",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/ru-RU/sitemap.xml",
+      "redirect_chain": [
+        "https://support.xbox.com/ru-RU/sitemap.xml"
+      ],
+      "content_type": "application/octet-stream",
+      "protection_status": "ordinary_page",
+      "error": "",
+      "bytes_read": 633342,
+      "note": "URL taken verbatim from Stage 10.1's already-saved sitemap index, not guessed",
+      "phase_file": "phase1_ru_sitemap_fetch.json",
+      "aggregate_seq": 1
+    },
+    {
+      "seq": 1,
+      "requested_url": "https://support.xbox.com/ru-RU/help/hardware-network/console/unbox-xbox-series-xs-console",
+      "capability": "support_page",
+      "access_status": "javascript_required",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/ru-RU/help/hardware-network/console/unbox-xbox-series-xs-console",
+      "redirect_chain": [
+        "https://support.xbox.com/ru-RU/help/hardware-network/console/unbox-xbox-series-xs-console"
+      ],
+      "content_type": "text/html",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 2897,
+      "note": "confirmed present in ru-RU sitemap (phase 1), not guessed",
+      "phase_file": "phase2_ru_article_fetch.json",
+      "aggregate_seq": 2
+    },
+    {
+      "seq": 2,
+      "requested_url": "https://support.xbox.com/ru-RU/help/hardware-network/getting-started-set-up/set-up-new-series-x-s",
+      "capability": "support_page",
+      "access_status": "javascript_required",
+      "http_status": 200,
+      "final_url": "https://support.xbox.com/ru-RU/help/hardware-network/getting-started-set-up/set-up-new-series-x-s",
+      "redirect_chain": [
+        "https://support.xbox.com/ru-RU/help/hardware-network/getting-started-set-up/set-up-new-series-x-s"
+      ],
+      "content_type": "text/html",
+      "protection_status": "inconclusive",
+      "error": "",
+      "bytes_read": 2897,
+      "note": "confirmed present in ru-RU sitemap (phase 1), not guessed",
+      "phase_file": "phase2_ru_article_fetch.json",
+      "aggregate_seq": 3
+    }
+  ],
+  "document_host_budget_used": false,
+  "stop_events": {
+    "403_429_or_challenge_seen": false,
+    "js_only_blocker_confirmed_ru_and_en": true
+  },
+  "why_stage_stopped_here": "Both Russian candidate articles returned the identical bare-SPA-shell architecture already seen for the English versions in Stage 10.1. Per this stage's own pre-declared stop condition (\"the only reachable route for a given locale is confirmed JS-only -> stop pursuing that locale's article content, record the gap\"), further requests to structurally identical pages (e.g. the warranty-service article also found in the sitemap) would not produce new information and were not made.",
+  "status": "complete_within_budget"
+}

@@ -1,0 +1,49 @@
+{
+  "host_stop": {
+    "outcomes": {
+      "stopped": 2
+    },
+    "stop_codes": {
+      "host_blocked": 2
+    },
+    "units": 2
+  },
+  "lg": {
+    "outcomes": {
+      "card": 1
+    },
+    "stop_codes": {},
+    "units": 1
+  },
+  "main": {
+    "outcomes": {
+      "card": 2,
+      "review": 1,
+      "stopped": 2
+    },
+    "stop_codes": {
+      "identity_base_code_only": 1,
+      "official_url_needed": 1,
+      "region_suffix_mismatch_confirmed": 1
+    },
+    "units": 5
+  },
+  "network": {
+    "calls_after_restart_on_a_stopped_host": [],
+    "hyperx_fixture_calls": [
+      "https://hyperx.com/products/hyperx-quadcast-2-s-usb-microphone",
+      "https://hyperx.com/products/hyperx-pulsefire-fuse-wireless-gaming-mouse"
+    ],
+    "lg_fixture_calls": [
+      "https://www.lg.com/kz/sitemap.xml",
+      "https://www.lg.com/kz/microwave-ovens/mb63w35gib/",
+      "https://www.lg.com/ru/laundry/lg-MB63W35GIB",
+      "https://www.sulpak.kz/g/mikrovolnovaya_pech_lg_mb63w35gib"
+    ],
+    "negative_control_fixture_calls": [
+      "https://hyperx.com/products/hyperx-alloy-rise-75-mechanical-gaming-keyboard"
+    ],
+    "note": "Every call above was answered from memory by tests/coverage_controls.py; no socket was opened (offline_guard active).",
+    "refused_requests": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "declared_at": "2026-09-24T14:10:15+00:00",
+  "host": "hyperx.com",
+  "max_requests_total": 7,
+  "urls": [
+    {
+      "seller_sku": "727A8AA",
+      "url": "https://hyperx.com/products/hyperx-cloud-iii-wired-gaming-headset?variant=43656365375645"
+    },
+    {
+      "seller_sku": "727A9AA",
+      "url": "https://hyperx.com/products/hyperx-cloud-iii-wired-gaming-headset?variant=43656365408413"
+    },
+    {
+      "seller_sku": "A59YZAA",
+      "url": "https://hyperx.com/products/hyperx-cloud-iii-s-wireless-gaming-headset?variant=46760503967901"
+    },
+    {
+      "seller_sku": "A59Z0AA",
+      "url": "https://hyperx.com/products/hyperx-cloud-iii-s-wireless-gaming-headset?variant=46760503935133"
+    },
+    {
+      "seller_sku": "AJ0T1AA",
+      "url": "https://hyperx.com/products/hyperx-cloud-jet-wireless-gaming-headset?variant=46592844431517"
+    },
+    {
+      "seller_sku": "B5VC5AA",
+      "url": "https://hyperx.com/products/hyperx-cloud-flight-2-wireless-gaming-headset?variant=47310091813021"
+    },
+    {
+      "seller_sku": "BS7C1AA",
+      "url": "https://hyperx.com/products/hyperx-cloud-iii-wired-gaming-headset?variant=47331550986397"
+    }
+  ],
+  "url_source": "raw/variant_linkage.json: each URL is printed in the saved page's JSON-LD offer and its variant id equals the embedded product JSON id",
+  "forbidden": [
+    "any URL not listed above",
+    "site search",
+    "sitemaps",
+    "retries",
+    "any other host"
+  ],
+  "stop_rule": "first 401/403/429 or confirmed challenge (any HTTP status) halts the run; the host stays stopped via data/hyperx_fetch_log.json",
+  "script": "reports/source_census_2026-09-24_stage19/scripts/02_live_variant_pages.py"
+}
