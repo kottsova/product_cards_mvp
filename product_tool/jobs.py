@@ -597,13 +597,56 @@ def set_photo_selection(path: Path, product_id: int, asset_keys: list[str], *, m
 
 
 def save_documents(path: Path, product_id: int, source_key: str, documents: list[ProductDocument]) -> None:
-    now=storage._now()
-    with storage._connection(path) as connection:
-        page=connection.execute("SELECT id FROM source_pages WHERE product_id=? AND source_key=?",(product_id,source_key)).fetchone()
-        connection.execute("DELETE FROM product_documents WHERE product_id=? AND source_key=?",(product_id,source_key))
-        if page:
-            connection.executemany("INSERT INTO product_documents (product_id,source_page_id,source_key,title,language,document_date,size,direct_url,source_url,product_model,support_model,relation_url,is_primary,fetched_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",[(product_id,page["id"],source_key,d.title,d.language,d.document_date,d.size,d.direct_url,d.source_url,d.product_model,d.support_model,d.relation_url,int(d.primary),now) for d in documents])
+    """Refresh one source without duplicating a PDF shared by several sources.
 
+    The URL is the product-wide document identity. Keep its row (and existing
+    provenance) when another source discovers the same verified file. Repeated
+    saves from its owning source update that row in place.
+    """
+    now = storage._now()
+    with storage._connection(path) as connection:
+        page = connection.execute(
+            "SELECT id FROM source_pages WHERE product_id=? AND source_key=?",
+            (product_id, source_key),
+        ).fetchone()
+        incoming = {}
+        if page:
+            for document in documents:
+                if document.direct_url:
+                    incoming.setdefault(document.direct_url, document)
+        for row in connection.execute(
+            "SELECT id,direct_url FROM product_documents WHERE product_id=? AND source_key=?",
+            (product_id, source_key),
+        ).fetchall():
+            if row["direct_url"] not in incoming:
+                connection.execute("DELETE FROM product_documents WHERE id=?", (row["id"],))
+        for url, document in incoming.items():
+            existing = connection.execute(
+                "SELECT id,source_key FROM product_documents WHERE product_id=? AND direct_url=?",
+                (product_id, url),
+            ).fetchone()
+            if existing and existing["source_key"] != source_key:
+                # A second official page is still retained as source evidence;
+                # this PDF's original, verified relation is not overwritten.
+                continue
+            values = (page["id"], source_key, document.title, document.language,
+                      document.document_date, document.size, url, document.source_url,
+                      document.product_model, document.support_model,
+                      document.relation_url, int(document.primary), now)
+            if existing:
+                connection.execute(
+                    "UPDATE product_documents SET source_page_id=?,source_key=?,title=?,language=?,"
+                    "document_date=?,size=?,direct_url=?,source_url=?,product_model=?,"
+                    "support_model=?,relation_url=?,is_primary=?,fetched_at=? WHERE id=?",
+                    (*values, existing["id"]),
+                )
+            else:
+                connection.execute(
+                    "INSERT INTO product_documents (product_id,source_page_id,source_key,title,"
+                    "language,document_date,size,direct_url,source_url,product_model,"
+                    "support_model,relation_url,is_primary,fetched_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                    (product_id, *values),
+                )
 
 def get_documents(path: Path, product_id: int) -> list[dict[str,Any]]:
     with storage._connection(path) as connection: rows=connection.execute("SELECT * FROM product_documents WHERE product_id=? ORDER BY is_primary DESC, document_date DESC,id",(product_id,)).fetchall()

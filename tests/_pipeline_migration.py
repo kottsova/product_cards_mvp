@@ -621,6 +621,17 @@ STAGE51_1_CODE_MIGRATION: dict[str, str] = {
 for _path, _reason in STAGE51_1_CODE_MIGRATION.items():
     PRODUCTION_CODE_MIGRATION[_path] = PRODUCTION_CODE_MIGRATION.get(_path, "") + " " + _reason
 
+# Stage 52: idempotent shared-PDF persistence and content-based support
+# matching on previously observed official pages; no source registry change.
+STAGE52_CODE_MIGRATION: dict[str, str] = {
+    "product_tool/jobs.py": "Stage 52: reuse a product document by direct URL across official sources and reruns, preserving its row and verified provenance instead of violating the unique constraint.",
+    "product_tool/adapters/lg.py": "Stage 52: use the existing structured sales-code relation for the code printed on a searched official support candidate, including joined versus dotted format.",
+    "product_tool/adapters/lg_support.py": "Stage 52: use that same relation on support-page content; URL and search label remain candidates only.",
+    "product_tool/worker.py": "Stage 52: retain an exact official support page when a later manual lookup lands on a weaker sibling variant, and save the sibling as candidate audit evidence.",
+}
+for _path, _reason in STAGE52_CODE_MIGRATION.items():
+    PRODUCTION_CODE_MIGRATION[_path] = PRODUCTION_CODE_MIGRATION.get(_path, "") + " " + _reason
+
 ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION}
 
 
@@ -845,6 +856,16 @@ STAGE51_1_PINNED_SHA256: dict[str, str] = {
     "product_tool/worker.py": "6ccc3d38315585e18db55cb2a497e5bf3fb384e04b9c73ddc34e9b6a664372d6",
 }
 PINNED_SHA256.update(STAGE51_1_PINNED_SHA256)
+
+
+# Stage 52: exact protected bytes after the bounded quality fixes above.
+STAGE52_PINNED_SHA256: dict[str, str] = {
+    "product_tool/jobs.py": "f107a92ba07c70f950d39204ee83bfac137c65773248b5a194ce1f2705d9bf1c",
+    "product_tool/worker.py": "0ea5186ce743a0c40dcea4a8fc47fe9edae27318b84b3568dc4482b49b533f34",
+    "product_tool/adapters/lg.py": "859ce8d7303e3502aa8b4611e2d21b1ff00dfd3918ffc59ed8e9892e1d3b0fc6",
+    "product_tool/adapters/lg_support.py": "1da9c2d39696956e579e6564c935aba952440da52c076303498d380b91c7a4dd",
+}
+PINNED_SHA256.update(STAGE52_PINNED_SHA256)
 
 
 def check_migrated_file(path: str, actual_sha256: str) -> tuple[bool, str]:

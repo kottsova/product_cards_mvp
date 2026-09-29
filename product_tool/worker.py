@@ -18,7 +18,7 @@ from .lg_identity import structured_sales_relation
 from .adapters.lg_policy import default_lg_adapters
 from .adapters.lg_support import LGSupportAdapter, is_official_support_url, observed_product_support_urls
 from .adapters.samsung_source import default_samsung_adapter
-from .fetch_history import latest_source_snapshot
+from .fetch_history import latest_source_snapshot, record_fetch_attempt, save_source_snapshot
 from .readiness import card_readiness, readiness_text
 from .adapters.sulpak import SulpakAdapter
 from .resolution import SUPPLIERS
@@ -42,6 +42,31 @@ SAMSUNG_BRAND_ALIASES=frozenset({"samsung","samsung electronics","самсунг
 
 def _save(database, product_id, document, stages):
     jobs.save_source_document(database,product_id,document,update_description=2 in stages,update_attributes=3 in stages,update_photos=4 in stages)
+
+
+def _save_lg_support_relation(database: Path, product_id: int, document: SourceDocument) -> None:
+    """Keep an exact support page when a later manual lookup lands on a sibling."""
+    previous = next(
+        (page for page in jobs.get_source_pages(database, product_id)
+         if page["source_key"] == document.source_key), None,
+    )
+    if previous and previous["match_level"] == "full_sku" and document.match_level != "full_sku":
+        candidate_key = document.source_key + "_candidate"
+        attempt_id = record_fetch_attempt(
+            database, product_id, candidate_key, status="success",
+            requested_url=document.url, final_url=document.url,
+        )
+        save_source_snapshot(
+            database, product_id, candidate_key, attempt_id,
+            source_url=document.url, content=document.html,
+            extracted={"found_model": document.found_model,
+                       "match_level": document.match_level, "evidence": document.evidence},
+        )
+        return
+    jobs.save_source_document(
+        database, product_id, document,
+        update_description=False, update_attributes=False, update_photos=False,
+    )
 
 def _model_tokens_from_name(name: str) -> list[str]:
     """Latin-script tokens from the catalog name (e.g. 'QuadCast', '2S',
@@ -311,14 +336,13 @@ def run_once(
                         relation = structured_sales_relation(full, printed)
                         level = ("full_sku" if relation == "exact" else
                                  "base_model" if relation in {"family_of", "regional_variant_of"} else "unknown")
-                        jobs.save_source_document(
-                            database, product_id,
-                            SourceDocument("lg_ru_support", "LG RU support", report["support_page_url"],
-                                           found_model=printed, match_level=level,
-                                           evidence=f"Support page printed sales code: {printed or 'none'}; relation: {relation}.",
-                                           html=report["_support_html"]),
-                            update_description=False, update_attributes=False, update_photos=False,
+                        support_source = SourceDocument(
+                            "lg_ru_support", "LG RU support", report["support_page_url"],
+                            found_model=printed, match_level=level,
+                            evidence=f"Support page printed sales code: {printed or 'none'}; relation: {relation}.",
+                            html=report["_support_html"],
                         )
+                        _save_lg_support_relation(database, product_id, support_source)
                     retry_failed = (report.get("outcome") == "support_page_unreachable"
                                     or any(item.get("state") == "candidate_link_unreachable"
                                            for item in report.get("files", [])))

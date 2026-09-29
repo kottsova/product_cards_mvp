@@ -17,6 +17,7 @@ from urllib.parse import parse_qs, urldefrag, urljoin, urlsplit
 from bs4 import BeautifulSoup
 
 from .common import ProductDocument, SourceDocument, SourceError, fetch_with_retry
+from ..lg_identity import structured_sales_relation
 from .lg import lg_article_components, lg_base_model, normalize_lg_sku
 from .lg_documents import BinarySafeSession, assess_document, document_bytes, looks_like_pdf
 from .lg_documents_adapter import _pdf_pages
@@ -168,7 +169,11 @@ class LGSupportAdapter:
             printed = printed_support_codes(response.text)
             registered = registration_component_codes(response.text, response.url)
             api_codes = support_payload_codes(self.candidate_payloads.get(response.url, {}))
-            matched = tuple(code for code in components if code in printed or code in registered or code in api_codes)
+            content_codes = (*printed, *registered, *api_codes)
+            matched = tuple(code for code in components if any(
+                structured_sales_relation(code, observed) == "exact"
+                for observed in content_codes
+            ))
             if len(matched) == len(components):
                 level, found = "full_sku", normalize_lg_sku(article)
             elif matched:

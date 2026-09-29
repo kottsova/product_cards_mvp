@@ -196,7 +196,8 @@ def _augment_with_browser_search(doc: SourceDocument, adapter, full: str, base: 
                 continue
             codes = (*printed_support_codes(response.text), *registration_component_codes(response.text, response.url))
             code = codes[0] if codes else ""
-            if normalize_lg_sku(component) in codes:
+            from ..lg_identity import structured_sales_relation
+            if any(structured_sales_relation(component, printed) == "exact" for printed in codes):
                 adapter.support_candidate_urls.append(response.url)
                 adapter.support_candidate_pages[response.url] = response.text
                 notes.append(f"Поиск LG ({region}) подтвердил артикул «{component}» на официальной странице поддержки: {response.url}.")
