@@ -632,7 +632,17 @@ STAGE52_CODE_MIGRATION: dict[str, str] = {
 for _path, _reason in STAGE52_CODE_MIGRATION.items():
     PRODUCTION_CODE_MIGRATION[_path] = PRODUCTION_CODE_MIGRATION.get(_path, "") + " " + _reason
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION}
+STAGE52_1_CODE_MIGRATION: dict[str, str] = {
+    "product_tool/web.py": "Stage 52.1: migrate legacy timed access-stop audit entries on production startup and label synthetic refusals in both source rows and historical job events.",
+}
+for _path, _reason in STAGE52_1_CODE_MIGRATION.items():
+    PRODUCTION_CODE_MIGRATION[_path] = PRODUCTION_CODE_MIGRATION.get(_path, "") + " " + _reason
+
+STAGE52_1_DATA_MIGRATION: dict[str, str] = {
+    "data/batches.sqlite3": "Stage 52.1: one S40T (product 13) source-only production job through the actual runtime; preserve all other products and prior evidence. Access-stop history is in the adjacent ignored JSON log, not in SQLite. Integrity and foreign-key checks passed.",
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -866,6 +876,13 @@ STAGE52_PINNED_SHA256: dict[str, str] = {
     "product_tool/adapters/lg_support.py": "1da9c2d39696956e579e6564c935aba952440da52c076303498d380b91c7a4dd",
 }
 PINNED_SHA256.update(STAGE52_PINNED_SHA256)
+
+# Stage 52.1: exact protected UI bytes and the single-row production SQLite snapshot.
+STAGE52_1_PINNED_SHA256: dict[str, str] = {
+    "product_tool/web.py": "df896709e5ff60c8d425b6cc268708db4f77452f10572e4f11dbe3f659e3af85",
+    "data/batches.sqlite3": "14c31793ece06bcf37186671885c35628bd28067a7df1770f77c595ec6512ac6",
+}
+PINNED_SHA256.update(STAGE52_1_PINNED_SHA256)
 
 
 def check_migrated_file(path: str, actual_sha256: str) -> tuple[bool, str]:

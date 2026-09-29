@@ -102,6 +102,9 @@ def active_stops(entries: Iterable[Mapping[str, Any]], *, now: datetime | None =
     for entry in entries:
         if not isinstance(entry, Mapping):
             continue
+        if entry.get("event") == "legacy_stop_migrated":
+            # Migration annotations are audit records, never fresh stops.
+            continue
         reason = stop_reason(entry)
         if not reason:
             continue
@@ -141,3 +144,40 @@ def active_stops(entries: Iterable[Mapping[str, Any]], *, now: datetime | None =
 
 def stopped_hosts(entries: Iterable[Mapping[str, Any]], *, now: datetime | None = None) -> frozenset[str]:
     return frozenset(active_stops(entries, now=now))
+
+
+def legacy_migration_events(entries: Iterable[Mapping[str, Any]], *,
+                            now: datetime | None = None) -> list[dict[str, Any]]:
+    """Annotate old timed stops without rewriting the original response history.
+
+    Replaying a migrated log produces the same active-host set. Repeating this
+    function on its output returns no new events.
+    """
+    history = list(entries)
+    current = _utc(now) or datetime.now(timezone.utc)
+    active = active_stops(history, now=current)
+    migrated = {(entry.get("legacy_index"), entry.get("domain")) for entry in history
+                if isinstance(entry, Mapping) and entry.get("event") == "legacy_stop_migrated"}
+    events: list[dict[str, Any]] = []
+    for index, entry in enumerate(history):
+        if not isinstance(entry, Mapping) or entry.get("event"):
+            continue
+        reason = stop_reason(entry)
+        if reason not in TIMED_TTL or entry.get("expires_at"):
+            continue
+        created = _utc(entry.get("created_at") or entry.get("checked_at"))
+        expiry = created + TIMED_TTL[reason] if created else None
+        for domain in _domains(entry):
+            if (index, domain) in migrated:
+                continue
+            events.append({
+                "event": "legacy_stop_migrated", "legacy_index": index,
+                "domain": domain, "reason": reason,
+                "created_at": created.isoformat() if created else None,
+                "last_attempt_at": created.isoformat() if created else None,
+                "expires_at": expiry.isoformat() if expiry else None,
+                "scope": "domain", "source_session": entry.get("source_session") or "legacy_response",
+                "active_at_migration": any(item.get("reason") == reason for item in active.get(domain, ())),
+                "migrated_at": current.isoformat(),
+            })
+    return events

@@ -66,6 +66,15 @@ def append_log_entry(path: Path, entry: dict) -> None:
     _append_log(path, entry)
 
 
+def migrate_legacy_stop_log(path: Path, *, now: datetime | None = None) -> int:
+    """Append lifecycle audit records once; keep all original responses intact."""
+    entries = _read_log(path)
+    events = access_stop.legacy_migration_events(entries, now=now)
+    if events:
+        path.write_text(json.dumps([*entries, *events], ensure_ascii=False, indent=2), encoding="utf-8")
+    return len(events)
+
+
 def record_stop(path: Path, domain: str, reason: str, *, source_session: str = "") -> None:
     """Explicit manual/fatal or timed stop without rewriting history."""
     _append_log(path, access_stop.stop_event(domain, reason, source_session=source_session))

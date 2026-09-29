@@ -19,11 +19,22 @@ from openpyxl import load_workbook
 
 from . import attribute_projection, bosch_readiness, exporter, jobs, lg_batch, storage
 from .adapters.lg import lg_base_model
+from .adapters.policy_fetch import migrate_legacy_stop_log
 from .lg_identity import document_tied_to_article, photo_tied_to_article
 from .importer import MAX_COLUMNS, MAX_FILE_BYTES, MAX_ROWS, ImportPreview, preview_xlsx
 
 
 LOGGER = logging.getLogger(__name__)
+
+
+def _display_access_stop(message: str) -> str:
+    if "policy_host_stopped" not in message:
+        return message
+    source = message.split(":", 1)[0] if ":" in message else ""
+    if source.casefold().startswith(("http", "policy_")):
+        source = ""
+    prefix = source + ": " if source else ""
+    return prefix + "\u0412\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0438\u0439 access-stop: \u0437\u0430\u043f\u0440\u043e\u0441 \u043a \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435 \u043d\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u043b\u0441\u044f."
 PACKAGE_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = PACKAGE_DIR.parent
 COLUMN_FIELDS = ("category", "brand", "name", "search_code", "fallback_code")
@@ -97,6 +108,10 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
     database = root / "batches.sqlite3"
     jobs.initialize(database)
     lg_batch.initialize(database)
+    # Access stops are stored beside the SQLite database, in append-only fetch logs.
+    # Annotate legacy timed responses before the background worker starts.
+    for fetch_log in root.glob("*_fetch_log.json"):
+        migrate_legacy_stop_log(fetch_log)
     templates = Jinja2Templates(directory=str(PACKAGE_DIR / "templates"))
 
     # The ordinary one-command launch processes queued jobs as well as serving pages.
@@ -383,7 +398,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             request, "product.html", status_code,
             product=product,
             result=jobs.get_result(database, product_id),
-            sources=sources,
+            sources=[{**source, "error": _display_access_stop(source["error"])} for source in sources],
             bosch_card=bosch_readiness.card_readiness(database, product_id) if any(src["source_key"] == "bosch_home" for src in sources) else None,
             lg_card=lg_batch.card_summary(database, product_id, latest) if lg_batch.is_lg(product) else None,
             comparison=attribute_projection.final_attribute_rows(database, product_id),
@@ -393,7 +408,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             identification_status=jobs.identification_status(sources),
             base_model=lg_base_model(product["search_code"]) if product["brand"].strip().upper() == "LG" else "",
             latest=latest,
-            events=jobs.list_events(database, latest["id"]) if latest else [],
+            events=[{**event, "message": _display_access_stop(event["message"])}
+                    for event in jobs.list_events(database, latest["id"])] if latest else [],
             stages=jobs.STAGE_NAMES,
             message=message,
             active=bool(latest and latest["status"] in jobs.ACTIVE),
