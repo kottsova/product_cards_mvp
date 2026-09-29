@@ -1,60 +1,38 @@
-"""Stage 16: the shared policy-aware fetch client production adapters use
-for their ordinary (non-test) fetch path.
+"""Shared policy-aware production fetch and auditable host-stop history.
 
-Stage 15 found that HyperXAdapter's default fetch path was a bare
-`requests.Session().get(url, timeout=...)` -- no ProbePolicy, no allowlist
-enforcement beyond one manual host check, no redirect-chain check beyond
-one manual pass, no persisted memory of a prior block, and (critically) no
-protection against an accidental real call in an offline test that forgot
-to inject a fake session. This module closes that at the root: it wraps
-product_tool.census.endpoint_probe.AccessProbe (the same policy-aware
-client the project's own research scripts use -- ProbePolicy, host
-allowlist, redirect-chain host checks, 403/429/challenge detection,
-in-process host-stop) with a small JSON-file-backed fetch log, so a host
-stop survives a fresh process/adapter instance ("a new run"), not just one
-instance's lifetime -- exactly the guarantee AccessProbe's own
-initial_stopped_hosts/blocked_hosts_from_fetch_log() already gives research
-code, now available to a production adapter's ordinary fetch path too.
-
-The log is intentionally a plain JSON file, not a database table: a host
-stop is adapter-wide, global state, not scoped to one product/job row, and
-this keeps the mechanism usable by a future adapter without threading a
-database handle and product_id through code that has neither.
+Stage 51.1: a challenge or rate limit creates a timed domain cooldown.
+Manual and fatal stops remain active until explicitly resolved. Historical
+responses are never deleted; active stops are derived before each request.
 """
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Iterable, Mapping
 from urllib.parse import urlsplit
+from uuid import uuid4
+
+from . import access_stop
 
 from ..census.endpoint_probe import (
     AccessProbe,
     EndpointCapability,
     ProbePolicy,
     ProbeResult,
-    blocked_hosts_from_fetch_log,
 )
 
 
 # A page that answered HTTP 200 but IS a challenge (not merely resembling one) stops the host exactly like a 403/429.
 # `challenge_suspected` is a heuristic hit that ordinary pages trigger too (every hyperx.com product page does): it is
 # logged for the record and never stops anything.
-CONFIRMED_CHALLENGE = frozenset({"challenge_confirmed", "browser_verification_required"})
+CONFIRMED_CHALLENGE = access_stop.CONFIRMED_CHALLENGE
 
 
-def stopped_hosts_from_fetch_log(entries: Iterable[Mapping[str, Any]]) -> frozenset[str]:
-    """Hosts a new fetcher must treat as stopped: everything blocked_hosts_from_fetch_log() returns (401/403/429)
-    plus every host whose logged response was a confirmed challenge, whatever its HTTP status."""
-    entries = [entry for entry in entries if isinstance(entry, Mapping)]
-    hosts = set(blocked_hosts_from_fetch_log(entries))
-    for entry in entries:
-        if entry.get("protection_status") in CONFIRMED_CHALLENGE:
-            for key in ("url", "final_url"):
-                host = (urlsplit(str(entry.get(key, ""))).hostname or "").casefold()
-                if host:
-                    hosts.add(host)
-    return frozenset(hosts)
+def stopped_hosts_from_fetch_log(entries: Iterable[Mapping[str, Any]], *,
+                                 now: datetime | None = None) -> frozenset[str]:
+    """Active host cooldowns; old responses remain in the audit log."""
+    return access_stop.stopped_hosts(entries, now=now)
 
 
 def _read_log(path: Path) -> list[dict]:
@@ -69,6 +47,9 @@ def _read_log(path: Path) -> list[dict]:
 
 def _append_log(path: Path, entry: dict) -> None:
     entries = _read_log(path)
+    if entry.get("event") not in {"stop", "stop_resolved"}:
+        entry = {**entry, **access_stop.response_stop_fields(
+            entry, source_session=str(entry.get("source_session") or ""))}
     entries.append(entry)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -85,29 +66,47 @@ def append_log_entry(path: Path, entry: dict) -> None:
     _append_log(path, entry)
 
 
+def record_stop(path: Path, domain: str, reason: str, *, source_session: str = "") -> None:
+    """Explicit manual/fatal or timed stop without rewriting history."""
+    _append_log(path, access_stop.stop_event(domain, reason, source_session=source_session))
+
+
+def resolve_attended_challenge(path: Path, domain: str, *, source_session: str = "") -> None:
+    """Only a successful, user-attended browser capture may call this."""
+    _append_log(path, access_stop.attended_success_event(domain, source_session=source_session))
+
+
 class PolicyAwareFetcher:
-    """One instance per adapter construction. The on-disk log at `log_path`
-    -- not this instance's own in-memory AccessProbe state -- is what makes
-    a host-stop survive a fresh instance/process ("a new run"): __init__
-    reads it and seeds a fresh AccessProbe with every host that log has
-    ever recorded a 401/403/429 for, then every real fetch through .get()
-    appends its outcome back to the same file."""
+    """Use the append-only fetch log to refresh active stops before each request."""
 
     def __init__(
         self, log_path: Path, *, session=None,
         policy: ProbePolicy | None = None,
         clock: Callable[[], float] | None = None,
+        wall_clock: Callable[[], datetime] | None = None,
     ):
         self.log_path = log_path
-        stopped = stopped_hosts_from_fetch_log(_read_log(log_path))
+        self._wall_clock = wall_clock or (lambda: datetime.now(timezone.utc))
+        self.session_id = uuid4().hex
+        stopped = stopped_hosts_from_fetch_log(_read_log(log_path), now=self._wall_clock())
         probe_kwargs: dict = {"policy": policy, "initial_stopped_hosts": stopped}
         if clock is not None:
             probe_kwargs["clock"] = clock
         self._probe = AccessProbe(session, **probe_kwargs)
 
     def host_stopped(self, url: str) -> bool:
-        """True when a request to this url's host would be refused without I/O (persisted or in-process stop)."""
-        return (urlsplit(url).hostname or "").casefold() in self._probe._stopped_hosts
+        """Refresh the probe's in-memory guard from the expiring audit log."""
+        host = (urlsplit(url).hostname or "").casefold()
+        active = host in stopped_hosts_from_fetch_log(_read_log(self.log_path), now=self._wall_clock())
+        if active:
+            self._probe._stopped_hosts.add(host)
+        else:
+            self._probe._stopped_hosts.discard(host)
+            self._probe._stopped_endpoints = {
+                endpoint for endpoint in self._probe._stopped_endpoints
+                if (urlsplit(endpoint).hostname or "").casefold() != host
+            }
+        return active
 
     def set_policy(self, policy: ProbePolicy) -> None:
         self._probe.policy = policy
@@ -117,6 +116,7 @@ class PolicyAwareFetcher:
         capability: EndpointCapability | str = EndpointCapability.PRODUCT_PAGE,
         deadline: float | None = None,
     ) -> ProbeResult:
+        self.host_stopped(url)
         result = self._probe.probe(
             url, allowed_hosts=allowed_hosts, capability=capability,
             sample_type="product_page", deadline=deadline,
@@ -130,5 +130,6 @@ class PolicyAwareFetcher:
                 "url": url, "status_code": result.http_status,
                 "final_url": result.final_url, "checked_at": result.checked_at,
                 "access_status": result.access_status.value, "protection_status": result.protection_status.value,
+                "source_session": self.session_id,
             })
         return result

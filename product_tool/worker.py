@@ -281,7 +281,7 @@ def run_once(
         # for every catalog row except the ones explicitly seeded there.
         dns_model_tokens = _model_tokens_from_name(effective_name)
         dns_missing_fields = samsung_pipeline.dealer_missing_fields(database, product_id, stages) if is_samsung else _compute_missing_fields(database, product_id, stages)
-        dns = (dns_adapter_factory or (lambda: DnsAdapter(clock=clock)))()
+        dns = (dns_adapter_factory or (lambda: DnsAdapter(clock=clock, fetch_log_path=database.parent / "dns_fetch_log.json")))()
         dns_deadline = min(total_deadline, clock()+DNS_BUDGET_SECONDS)
         dns_doc = dns.find_source(
             dns_query, deadline=dns_deadline, model_tokens=dns_model_tokens,

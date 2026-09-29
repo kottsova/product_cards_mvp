@@ -51,6 +51,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
 from urllib.parse import quote, urlsplit
+from uuid import uuid4
 
 from ..census.browser_contracts import BrowserBudget
 from ..census.browser_runtime import BrowserFailure, BrowserRuntime, PlaywrightBrowser, discover_runtime
@@ -134,19 +135,17 @@ class LGBrowserSearch:
         self._driver_factory = driver_factory or PlaywrightBrowser
         self.clock = clock
         self._driver = None
-        self._stopped_this_run: set[str] = set()
+        self.session_id = uuid4().hex
 
     def _host_stopped(self, host: str) -> bool:
-        if host in self._stopped_this_run:
-            return True
         return host in policy_fetch.stopped_hosts_from_fetch_log(policy_fetch.read_log(self.log_path))
 
     def _record_challenge(self, url: str) -> None:
         host = (urlsplit(url).hostname or "").casefold()
-        self._stopped_this_run.add(host)
         policy_fetch.append_log_entry(self.log_path, {
             "url": url, "status_code": 200, "final_url": url, "checked_at": _now(),
             "access_status": "captcha_or_blocked", "protection_status": "challenge_confirmed",
+            "source_session": self.session_id,
         })
 
     def _ensure_driver(self):

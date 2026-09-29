@@ -11,9 +11,11 @@ import gzip
 import hashlib
 import json
 import time
+from datetime import datetime, timezone
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlsplit
+from uuid import uuid4
 from bs4 import BeautifulSoup
 
 from .browser_runtime import discover_runtime
@@ -76,12 +78,19 @@ class AttendedBudget:
 
 
 def capture(url: str, output_dir: Path, profile_dir: Path, *, budget: AttendedBudget = AttendedBudget(),
+            fetch_log_path: Path | None = None,
             playwright_factory=None, clock=time.monotonic, pause=time.sleep, announce=print) -> dict:
     """One navigation and passive observation. No challenge interaction is automated."""
     if not official_support_url(url):
         raise ValueError("An observed LG KZ support URL is required")
     if profile_dir.resolve() == output_dir.resolve():
         raise ValueError("Profile and capture paths must differ")
+    if fetch_log_path is not None:
+        from product_tool.adapters.access_stop import FATAL, MANUAL, RATE_LIMIT, active_stops
+        from product_tool.adapters.policy_fetch import read_log
+        active = active_stops(read_log(Path(fetch_log_path))).get(LG_SUPPORT_HOST, ())
+        if any(stop["reason"] in {MANUAL, FATAL, RATE_LIMIT} for stop in active):
+            raise ValueError("An active manual, fatal, or rate-limit stop forbids attended navigation")
     output_dir.mkdir(parents=True, exist_ok=True)
     profile_dir.mkdir(parents=True, exist_ok=True)
     if playwright_factory is None:
@@ -225,6 +234,24 @@ def capture(url: str, output_dir: Path, profile_dir: Path, *, budget: AttendedBu
             result["blocked_hosts"] = sorted(state["blocked_hosts"])
         finally:
             context.close()
+    if fetch_log_path is not None:
+        from product_tool.adapters.policy_fetch import append_log_entry, resolve_attended_challenge
+        session_id = f"attended_browser:{uuid4().hex}"
+        if result.get("challenge_seen"):
+            append_log_entry(Path(fetch_log_path), {
+                "url": url, "final_url": result.get("final_url") or url,
+                "status_code": state["last_document_status"] or 200,
+                "checked_at": datetime.now(timezone.utc).isoformat(),
+                "access_status": "captcha_or_blocked",
+                "protection_status": "challenge_confirmed",
+                "source_session": session_id,
+            })
+        if result["outcome"] == "captured":
+            # The challenge is gone on a real official page in this session.
+            # Only challenge stops are resolved; manual/fatal/rate limit stay.
+            resolve_attended_challenge(Path(fetch_log_path), LG_SUPPORT_HOST,
+                                       source_session=session_id)
+            result["challenge_stop_resolved"] = True
     (output_dir / "manifest.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return result
 
@@ -235,13 +262,16 @@ def main() -> int:
     parser.add_argument("--attended", action="store_true", help="explicit user-assisted mode")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--profile", type=Path, required=True)
+    parser.add_argument("--fetch-log", type=Path,
+                        default=Path(__file__).resolve().parents[2] / "data" / "lg_fetch_log.json")
     args = parser.parse_args()
     if not args.attended:
         parser.error("--attended is required; background runs must keep the host stop")
     runtime = discover_runtime()
     if not runtime.available:
         parser.error(runtime.reason)
-    result = capture(args.url, args.output, args.profile, announce=lambda message: print(message, flush=True))
+    result = capture(args.url, args.output, args.profile, fetch_log_path=args.fetch_log,
+                     announce=lambda message: print(message, flush=True))
     print(json.dumps({"outcome": result["outcome"], "counts": result["counts"]}), flush=True)
     return 0 if result["outcome"] == "captured" else 2
 

@@ -272,12 +272,12 @@ class ConfirmedChallengeStopsTheHostAcrossInstances(unittest.TestCase):
         self.assertEqual(second.http_status, 200)
         self.assertNotIn("hyperx.com", planner_view)
 
-    def test_the_rule_reads_old_logs_and_ignores_the_suspected_status(self):
+    def test_the_rule_reads_old_logs_without_permanent_undated_challenge(self):
         old = [{"url": "https://a.example/x", "status_code": 403}, {"url": "https://b.example/x", "status_code": 200}]
         new = [{"url": "https://c.example/x", "status_code": 200, "protection_status": "challenge_suspected"},
                {"url": "https://d.example/x", "status_code": 200, "final_url": "https://e.example/y", "protection_status": "browser_verification_required"},
                {"url": "https://f.example/x", "status_code": 200, "protection_status": "ordinary_page"}]
-        self.assertEqual(stopped_hosts_from_fetch_log(old + new), frozenset({"a.example", "d.example", "e.example"}))
+        self.assertEqual(stopped_hosts_from_fetch_log(old + new), frozenset({"a.example"}))  # undated legacy challenge is audit history
 
     def test_every_fetch_now_records_the_protection_status(self):
         first, entries, *_ = self.fetch_twice(self.ORDINARY, self.ORDINARY)

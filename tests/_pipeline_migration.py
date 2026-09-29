@@ -613,6 +613,14 @@ STAGE50_CODE_MIGRATION: dict[str, str] = {
 for _path, _reason in STAGE50_CODE_MIGRATION.items():
     PRODUCTION_CODE_MIGRATION[_path] = PRODUCTION_CODE_MIGRATION.get(_path, "") + " " + _reason
 
+# Stage 51.1: the ordinary DNS fallback shares the expiring access-stop
+# lifecycle and keeps a 401/403/429 from being retried by the next job.
+STAGE51_1_CODE_MIGRATION: dict[str, str] = {
+    "product_tool/worker.py": "Stage 51.1: pass the job database directory's dns_fetch_log.json to the default DNS adapter; its known-URL fallback now honors active access-stops across jobs."
+}
+for _path, _reason in STAGE51_1_CODE_MIGRATION.items():
+    PRODUCTION_CODE_MIGRATION[_path] = PRODUCTION_CODE_MIGRATION.get(_path, "") + " " + _reason
+
 ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION}
 
 
@@ -831,6 +839,12 @@ STAGE50_PINNED_SHA256: dict[str, str] = {
     "product_tool/templates/product.html": "3880d35720cff6e2440da7f2245e2ba16b70538a02f6ed165069cd4245c8ba23",
 }
 PINNED_SHA256.update(STAGE50_PINNED_SHA256)
+
+# Stage 51.1: exact protected worker bytes after the default DNS stop-log hookup.
+STAGE51_1_PINNED_SHA256: dict[str, str] = {
+    "product_tool/worker.py": "6ccc3d38315585e18db55cb2a497e5bf3fb384e04b9c73ddc34e9b6a664372d6",
+}
+PINNED_SHA256.update(STAGE51_1_PINNED_SHA256)
 
 
 def check_migrated_file(path: str, actual_sha256: str) -> tuple[bool, str]:

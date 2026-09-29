@@ -30,9 +30,12 @@ from __future__ import annotations
 
 import re
 import time
+from datetime import datetime, timezone
+from pathlib import Path
 from dataclasses import dataclass
 from typing import Callable
 from urllib.parse import urlsplit
+from uuid import uuid4
 
 import requests
 from bs4 import BeautifulSoup
@@ -41,6 +44,7 @@ from product_tool.census.endpoint_probe import ProbePolicy
 
 from ..dealer_fallback import dealer_url_needed_request
 from .common import SourceDocument, SourceError, clean_text, meta_description
+from .policy_fetch import append_log_entry, read_log, stopped_hosts_from_fetch_log
 from .document_verification import verify_document
 from .supplier import extract_photo_candidates, extract_table_attributes, visible_text
 
@@ -154,6 +158,7 @@ class DnsAdapter:
         clock: Callable[[], float] = time.monotonic,
         urls: dict[str, str] | None = None,
         document_urls: dict[str, str] | None = None,
+        fetch_log_path: Path | None = None,
     ):
         self.http = http or requests.Session()
         self.http.headers.update({
@@ -167,6 +172,22 @@ class DnsAdapter:
         self._last_request_at: float | None = None
         self._confirmed_codes: set[str] = set()
         self._requested_missing: dict[str, frozenset[str]] = {}
+        self.fetch_log_path = Path(fetch_log_path) if fetch_log_path is not None else None
+        self.session_id = uuid4().hex
+
+    def _host_stopped(self, url: str) -> bool:
+        return bool(self.fetch_log_path and _host_of(url) in
+                    stopped_hosts_from_fetch_log(read_log(self.fetch_log_path)))
+
+    def _record_response(self, url: str, response) -> None:
+        if self.fetch_log_path is not None:
+            append_log_entry(self.fetch_log_path, {
+                "url": url, "final_url": response.url, "status_code": response.status_code,
+                "checked_at": datetime.now(timezone.utc).isoformat(),
+                "access_status": "captcha_or_blocked" if response.status_code in BLOCKED_STATUS else "direct_access",
+                "protection_status": "ordinary_page",
+                "source_session": self.session_id,
+            })
 
     def _respect_rate_limit(self) -> None:
         if self._last_request_at is not None:
@@ -208,6 +229,9 @@ class DnsAdapter:
                 self.source_key, self.site_name, url, match_level="unknown",
                 error=f"Configured URL host '{_host_of(url)}' is not the allowed product-page host '{PAGE_HOST}'.",
             )
+        if self._host_stopped(url):
+            return SourceDocument(self.source_key, self.site_name, url, match_level="blocked",
+                                  error="DNS host has an active access-stop; no request made.")
         try:
             self.request_count += 1
             self._respect_rate_limit()
@@ -216,6 +240,7 @@ class DnsAdapter:
                 raise SourceError("Time budget exhausted before the DNS page request.")
             response = self.http.get(url, timeout=min(PAGE_POLICY.timeout_seconds, remaining))
             self._last_request_at = self.clock()
+            self._record_response(url, response)
         except requests.RequestException as exc:
             return SourceDocument(self.source_key, self.site_name, url, match_level="unknown", error=f"Request failed: {exc}")
 
@@ -264,6 +289,8 @@ class DnsAdapter:
         remaining = deadline - self.clock()
         if remaining <= 0:
             return None, "Time budget exhausted before this document chunk."
+        if self._host_stopped(url):
+            return None, "DNS document host has an active access-stop; no request made."
         self._respect_rate_limit()
         try:
             self.request_count += 1
@@ -273,6 +300,7 @@ class DnsAdapter:
                 stream=True,
             )
             self._last_request_at = self.clock()
+            self._record_response(url, response)
         except requests.RequestException as exc:
             return None, f"Request failed: {exc}"
         bad_host = _redirect_chain_hosts_allowed(response, DOCUMENT_HOST)

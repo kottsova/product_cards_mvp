@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import tempfile
+from datetime import datetime, timezone
 import unittest
 from pathlib import Path
 
@@ -49,7 +50,7 @@ class Stage42LGTest(unittest.TestCase):
     def test_sulpak_candidate_is_not_requested_after_other_page_challenge(self):
         with tempfile.TemporaryDirectory() as directory:
             log = Path(directory) / "log.json"
-            log.write_text(json.dumps([{"url": "https://www.sulpak.kz/g/parovoj_shkaf_lg_styler_s3wer_alwpcom", "checked_at": "2026-09-26T22:44:01+00:00", "status_code": 200, "access_status": "captcha_or_blocked", "protection_status": "challenge_confirmed"}]), encoding="utf-8")
+            log.write_text(json.dumps([{"url": "https://www.sulpak.kz/g/parovoj_shkaf_lg_styler_s3wer_alwpcom", "checked_at": datetime.now(timezone.utc).isoformat(), "status_code": 200, "access_status": "captcha_or_blocked", "protection_status": "challenge_confirmed"}]), encoding="utf-8")
             transport = _NoNetwork()
             session = PolicyAwareSession(log, allowed_hosts=("www.sulpak.kz", "sulpak.kz"), underlying=transport, min_interval_seconds=0)
             document = SulpakAdapter(session).find_source("P12ED.NSAR + P12ED.USAR", deadline=10**10)
