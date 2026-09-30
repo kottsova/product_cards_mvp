@@ -571,11 +571,17 @@ def save_photo_candidates(path: Path, product_id: int, source_key: str, candidat
     with storage._connection(path) as connection:
         page=connection.execute("SELECT id FROM source_pages WHERE product_id=? AND source_key=?",(product_id,source_key)).fetchone()
         if not page: return
-        previous={row["asset_key"]:row["selected"] for row in connection.execute("SELECT asset_key,selected FROM photo_candidates WHERE product_id=? AND source_key=?",(product_id,source_key))}
+        previous={row["asset_key"]:dict(row) for row in connection.execute(
+            "SELECT * FROM photo_candidates WHERE product_id=? AND source_key=?", (product_id,source_key))}
         connection.execute("DELETE FROM photo_candidates WHERE product_id=? AND source_key=?",(product_id,source_key))
         for item in candidates:
-            selected=previous.get(item.asset_key, int(source_key in {"lg_kz","lg_ru"} and item.kind=="product_gallery" and not item.excluded_reason))
-            connection.execute("INSERT INTO photo_candidates (product_id,source_page_id,source_key,url,asset_key,kind,width,height,selected,excluded_reason,fetched_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",(product_id,page["id"],source_key,item.url,item.asset_key,item.kind,item.width,item.height,selected,item.excluded_reason,now))
+            prior=previous.get(item.asset_key, {})
+            selected=prior.get("selected", int(source_key in {"lg_kz","lg_ru"} and item.kind=="product_gallery" and not item.excluded_reason))
+            measured = prior if prior.get("url") == item.url else {}
+            connection.execute(
+                "INSERT INTO photo_candidates (product_id,source_page_id,source_key,url,asset_key,kind,width,height,selected,excluded_reason,fetched_at,verified_width,verified_height,verified_bytes,verified_format) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (product_id,page["id"],source_key,item.url,item.asset_key,item.kind,item.width,item.height,selected,item.excluded_reason,now,
+                 measured.get("verified_width"),measured.get("verified_height"),measured.get("verified_bytes"),measured.get("verified_format") or ""))
 
 
 def get_photo_candidates(path: Path, product_id: int, *, include_excluded: bool=True) -> list[dict[str,Any]]:
@@ -584,6 +590,25 @@ def get_photo_candidates(path: Path, product_id: int, *, include_excluded: bool=
     query += " ORDER BY pc.source_key, pc.kind, pc.id"
     with storage._connection(path) as connection: rows=connection.execute(query,(product_id,)).fetchall()
     return [dict(x) for x in rows]
+
+
+def get_photo_candidate(path: Path, product_id: int, photo_id: int) -> dict[str, Any] | None:
+    with storage._connection(path) as connection:
+        row = connection.execute(
+            "SELECT * FROM photo_candidates WHERE id=? AND product_id=?", (photo_id, product_id)
+        ).fetchone()
+    return dict(row) if row else None
+
+
+def save_photo_metadata(path: Path, product_id: int, photo_id: int, url: str, *,
+                        width: int, height: int, size_bytes: int, image_format: str) -> bool:
+    with storage._connection(path) as connection:
+        changed = connection.execute(
+            "UPDATE photo_candidates SET verified_width=?,verified_height=?,verified_bytes=?,verified_format=? "
+            "WHERE id=? AND product_id=? AND url=?",
+            (width, height, size_bytes, image_format, photo_id, product_id, url),
+        ).rowcount
+    return bool(changed)
 
 
 def set_photo_selection(path: Path, product_id: int, asset_keys: list[str], *, mode: str="exact", source_key: str="") -> None:

@@ -346,10 +346,12 @@ def run_once(
                     retry_failed = (report.get("outcome") == "support_page_unreachable"
                                     or any(item.get("state") == "candidate_link_unreachable"
                                            for item in report.get("files", [])))
-                    if documents or not (retry_failed and _has_retained_documents(database, product_id, "lg_ru")):
+                    retained = _has_retained_documents(database, product_id, "lg_ru")
+                    if documents or not retained:
                         jobs.save_documents(database,product_id,"lg_ru",documents)
                     russian=sum(1 for d in documents if d.language=="Русский")
-                    message=(f"Инструкций подтверждено по содержимому: {len(documents)}; русских: {russian}."+("" if russian else " "+error)) if documents else error
+                    message=(f"Инструкций подтверждено по содержимому: {len(documents)}; русских: {russian}."+("" if russian else " "+error)) if documents else (
+                        "Ранее проверенная инструкция сохранена; новая попытка: " + error if retained else error)
                     if getattr(lg_ru, "reports", None) and not russian:
                         files = lg_ru.reports[-1].get("files", [])
                         unreadable = sum(1 for item in files if item.get("error", "").startswith("pdf:"))
@@ -359,24 +361,30 @@ def run_once(
                     retained = _has_retained_documents(database, product_id, "lg_ru")
                     if not retained:
                         jobs.save_documents(database,product_id,"lg_ru",[])
-                    message="Инструкции не проверены: официальная страница LG Россия недоступна."
+                    message=("Ранее проверенная инструкция сохранена; текущая страница LG Россия недоступна." if retained else
+                             "Инструкции не проверены: официальная страница LG Россия недоступна.")
                 jobs.progress(database,job_id,6,message,level="info" if jobs.get_documents(database,product_id) else "warning",source_url=ru.url if ru else "")
             if is_lg and support_doc and lg_support and support_doc.url and not support_doc.error:
                 support_documents, support_report = lg_support.find_documents(support_doc, full, deadline=total_deadline)
                 retry_failed = any(item.get("state") == "unreachable"
                                    for item in support_report.get("files", []))
-                if support_documents or not (retry_failed and _has_retained_documents(
-                        database, product_id, support_doc.source_key)):
+                retained = _has_retained_documents(database, product_id, support_doc.source_key)
+                if support_documents or not retained:
                     jobs.save_documents(database, product_id, support_doc.source_key, support_documents)
                 checked = support_report.get("files", [])
                 detail = "; ".join(
                     f"{item.get('state')}: {item.get('url')}; models={item.get('assessment', {}).get('model_references', [])}"
                     for item in checked
                 )
+                retained_documents = [d for d in jobs.get_documents(database, product_id)
+                                      if d["source_key"] == support_doc.source_key]
+                outcome = ("Ранее проверенная русская инструкция сохранена; "
+                           f"новая попытка: {support_report['outcome']}"
+                           if retained and not support_documents else support_report["outcome"])
                 jobs.progress(database,job_id,6,
-                              f"LG KZ support manual: {support_report['outcome']}; {detail}",
-                              level="info" if support_documents else "warning",
-                              source_url=support_documents[0].direct_url if support_documents else support_doc.url)
+                              f"LG KZ support manual: {outcome}; {detail}",
+                              level="info" if retained_documents else "warning",
+                              source_url=retained_documents[0]["direct_url"] if retained_documents else support_doc.url)
             if is_hyperx:
                 # A genuine downloadable link is the only thing that counts
                 # -- a Quick Start Guide named in "what's in the box" text

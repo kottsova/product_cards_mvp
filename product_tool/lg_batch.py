@@ -143,7 +143,7 @@ def card_summary(path: Path, product_id: int, latest: dict | None | object = _UN
     elif official and not any(source["description"].strip() for source in official):
         reasons.append("Описание с точной официальной страницы не получено.")
     events = jobs.list_events(path, latest["id"])
-    if any("PDF не удалось прочитать" in event["message"] for event in events):
+    if not card["instruction"]["russian"] and any("PDF не удалось прочитать" in event["message"] for event in events):
         reasons = [reason for reason in reasons if reason != GAP_LABELS["instruction_missing"]]
         reasons.append("Полученный PDF не удалось прочитать; русская инструкция не подтверждена.")
     if 6 in latest["stages"] and "instruction_missing" in card["blocking_gaps"]:
@@ -163,26 +163,32 @@ def card_summary(path: Path, product_id: int, latest: dict | None | object = _UN
     color = next((row for row in jobs.get_resolved(path, product_id) if row["normalized_name"] == "color" or row["normalized_name"].startswith("color__") or row["normalized_name"].startswith("\u043e\u0442\u0434\u0435\u043b\u043a\u0430_")), None)
     if color and not color["selected_value"] and color["status"] == "official_base_only":
         reasons.append("\u0426\u0432\u0435\u0442 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0430\u0440\u0442\u0438\u043a\u0443\u043b\u0430 \u043d\u0435 \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0451\u043d; \u043d\u0430\u0439\u0434\u0435\u043d \u0442\u043e\u043b\u044c\u043a\u043e \u0446\u0432\u0435\u0442 \u0431\u0430\u0437\u043e\u0432\u043e\u0439 \u043c\u043e\u0434\u0435\u043b\u0438.")
-    # Comparison rows show only one value per source. Preserve both values
-    # from an internally contradictory page in the user-facing summary.
+    # Include every raw fact in a conflict, even when one page repeats the label.
     conflict_names = {}
+    conflict_status = {}
     for row in jobs.comparison_rows(path, product_id):
-        if not (row.get("resolved") or {}).get("conflict"):
-            continue
-        name = row["display_name"]
-        if name == "Дополнительная характеристика" and row["raw_names"]:
-            name = row["raw_names"][0]
-        conflict_names[row["normalized_name"]] = name
+        resolved = row.get("resolved") or {}
+        if resolved.get("conflict"):
+            conflict_names[row["normalized_name"]] = row["display_name"]
+            conflict_status[row["normalized_name"]] = resolved.get("display_status") or resolved.get("status") or ""
+    pages = {source["source_key"]: source for source in jobs.get_source_pages(path, product_id)}
     conflict_facts: dict[str, list[str]] = {name: [] for name in conflict_names}
     for fact in jobs.get_facts(path, product_id):
-        if fact["normalized_name"] not in conflict_facts:
+        name = fact["normalized_name"]
+        if name not in conflict_facts:
             continue
-        detail = f"{fact['site_name']}: {fact['raw_value']}"
-        if fact.get("section"):
-            detail += f" (раздел «{fact['section']}»)"
-        if detail not in conflict_facts[fact["normalized_name"]]:
-            conflict_facts[fact["normalized_name"]].append(detail)
-    conflicts = [{"name": conflict_names[name], "values": values}
+        page = pages.get(fact["source_key"], {})
+        match = {
+            "full_sku": "точный артикул",
+            "base_model": "только базовая модель",
+        }.get(page.get("match_level"), "связь с вариантом не подтверждена")
+        section = fact.get("section") or "без раздела"
+        detail = (f"{fact['site_name']} · раздел «{section}» · "
+                  f"{fact['raw_name']}: {fact['raw_value']} · "
+                  f"статус: {conflict_status[name]}; связь: {match}")
+        if detail not in conflict_facts[name]:
+            conflict_facts[name].append(detail)
+    conflicts = [{"key": name, "name": conflict_names[name], "values": values}
                  for name, values in conflict_facts.items()]
     return {"verdict": card["verdict"], "label": VERDICT_LABELS.get(card["verdict"], card["verdict"]),
             "reasons": reasons, "conflicts": conflicts,

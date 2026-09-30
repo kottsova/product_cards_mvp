@@ -116,10 +116,23 @@ def _job_migration_3(connection: sqlite3.Connection) -> None:
         connection.execute("ALTER TABLE extracted_attribute_facts ADD COLUMN value_cell INTEGER")
 
 
+def _job_migration_4(connection: sqlite3.Connection) -> None:
+    # The old width/height fields are HTML size hints, never measured pixels.
+    for name, sql_type in (
+        ("verified_width", "INTEGER"),
+        ("verified_height", "INTEGER"),
+        ("verified_bytes", "INTEGER"),
+        ("verified_format", "TEXT NOT NULL DEFAULT ''"),
+    ):
+        if name not in _columns(connection, "photo_candidates"):
+            connection.execute(f"ALTER TABLE photo_candidates ADD COLUMN {name} {sql_type}")
+
+
 JOB_MIGRATIONS = (
     (_job_migration_1, "LG source-key compatibility and resolution confirmation"),
     (_job_migration_2, "Preserve source specification section before canonical mapping"),
     (_job_migration_3, "Record whether an attribute came from a specification value cell"),
+    (_job_migration_4, "Store measured image pixels, file size and format separately from HTML hints"),
 )
 
 

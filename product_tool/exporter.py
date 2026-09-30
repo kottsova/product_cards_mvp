@@ -5,10 +5,10 @@ from pathlib import Path
 import re
 from openpyxl import Workbook
 from openpyxl.styles import Font
-from . import attribute_projection, bosch_readiness, jobs, lg_batch, samsung_readiness, storage
+from . import attribute_projection, bosch_readiness, jobs, lg_batch, photo_metadata, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .lg_identity import document_tied_to_article, photo_tied_to_article
-from .display import display_name_ru, display_source, display_status, display_value
+from .display import display_access_error, display_name_ru, display_source, display_status, display_value
 
 def _title(value,used):
     base=re.sub(r"[\[\]:*?/\\]"," ",value or "Категория не определена").strip()[:31] or "Категория"; candidate=base; n=2
@@ -20,6 +20,16 @@ def _headers(sheet,values):
     for cell in sheet[1]: cell.font=Font(bold=True)
     sheet.freeze_panes="A2"; sheet.auto_filter.ref=sheet.dimensions
 
+
+def _photo_cells(item: dict) -> list[str | int]:
+    size = item.get("verified_bytes")
+    return [
+        item.get("verified_width") or "не определено",
+        item.get("verified_height") or "не определено",
+        photo_metadata.format_file_size(size),
+        item.get("verified_format") or "не определено",
+    ]
+
 def export_batch(database: Path,batch_id: str)->bytes:
     batch=storage.get_batch(database,batch_id)
     if not batch: raise ValueError("Партия не найдена.")
@@ -29,6 +39,11 @@ def export_batch(database: Path,batch_id: str)->bytes:
         sheet=book.create_sheet(_title(category,used)); rows={p["id"]:attribute_projection.final_attribute_rows(database,p["id"]) for p in products}
         keys=sorted({r["normalized_name"] for rr in rows.values() for r in rr},key=lambda k:next(r["display_name"] for rr in rows.values() for r in rr if r["normalized_name"]==k))
         labels={k:next(r["display_name"] for rr in rows.values() for r in rr if r["normalized_name"]==k) for k in keys}
+        # Distinct canonical concepts must not acquire an indistinguishable column.
+        repeated = {label for label in labels.values() if list(labels.values()).count(label) > 1}
+        for key in keys:
+            if labels[key] in repeated:
+                labels[key] += f" ({key.replace('_', ' ')})"
         _headers(sheet,["Строка","Название","Бренд","Полный артикул","Базовая модель",*[labels[k] for k in keys]])
         for p in products:
             is_lg = lg_batch.is_lg(p)
@@ -63,28 +78,35 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 level = {"full_sku":"Связь инструкции с артикулом","base_model":"Поддержка семейства/другого варианта","component_only":"Поддержка одного компонента"}.get(s["match_level"],"Кандидат поддержки")
             else:
                 level = {"full_sku":"Полный артикул","code_in_page_text":"Артикул только в тексте страницы","base_model":"Базовая модель","mismatch":"Несоответствие","unknown":"Не проверено"}.get(s["match_level"],s["match_level"])
-            source_sheet.append([(p["name"] or p["search_code"]),p["search_code"],s["site_name"],s["found_model"],level,s["evidence"],s["fetched_at"],s["error"],s["url"]])
-    docs=book.create_sheet(_title("Инструкции",used)); _headers(docs,["Товар","Документ","Язык","Дата","Размер","Основной","Модель поддержки","Источник","Прямая ссылка","Связь с артикулом"])
-    photos=book.create_sheet(_title("Фотографии",used)); _headers(photos,["Товар","Источник","Тип","URL","Подтверждение варианта"])
+            source_sheet.append([(p["name"] or p["search_code"]),p["search_code"],s["site_name"],s["found_model"],level,s["evidence"],s["fetched_at"],display_access_error(s["error"]),s["url"]])
+    docs=book.create_sheet(_title("Инструкции",used)); _headers(docs,["Товар","Документ","Язык","Дата","Размер","Основной","Модель поддержки","Источник","Прямая ссылка","Связь с артикулом","Статус проверки"])
+    photo_columns=["Ширина, px","Высота, px","Размер файла","Формат"]
+    photos=book.create_sheet(_title("Фотографии",used)); _headers(photos,["Товар","Источник","Тип","URL","Подтверждение варианта",*photo_columns])
     photo_candidates = None
     for p in batch["products"]:
         source_pages = jobs.get_source_pages(database, p["id"])
         lg = lg_batch.is_lg(p)
-        for d in jobs.get_documents(database,p["id"]):
+        saved_documents = jobs.get_documents(database,p["id"])
+        for d in saved_documents:
             tied = document_tied_to_article(p["search_code"], d, source_pages) if lg else True
             docs.append([(p["name"] or p["search_code"]),d["title"],d["language"],d["document_date"],d["size"],"Да" if d["is_primary"] else "Нет",d["support_model"],d["source_url"],d["direct_url"],
-                         "Подтверждена" if tied else "PDF проверен, связь с вариантом не подтверждена"])
+                         "Подтверждена" if tied else "PDF проверен, связь с вариантом не подтверждена",
+                         "Проверена" if tied else "Найдена, не проверена"])
+        if lg and not saved_documents:
+            latest = next(iter(jobs.list_jobs(database,p["id"])), None)
+            status = "Не найдена" if latest and 6 in latest["stages"] else "Не проверялась"
+            docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "", "", "", "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=False):
             tied = photo_tied_to_article(item, source_pages) if lg else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["selected"] and tied:
-                photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Подтверждён"])
+                photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Подтверждён",*_photo_cells(item)])
             elif item["selected"] and not tied:
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
-                    _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус"])
+                    _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
                 photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],
-                                         "Да" if item["selected"] else "Нет","Связь с артикулом не подтверждена"])
+                                         "Да" if item["selected"] else "Нет","Связь с артикулом не подтверждена",*_photo_cells(item)])
     if any(lg_batch.is_lg(p) for p in batch["products"]):
         ready=book.create_sheet(_title("Готовность LG",used))
         _headers(ready,["Товар","Полный артикул","Статус задания","Готовность карточки","Проверенные этапы","Причины пробелов","Справочно"])

@@ -49,6 +49,11 @@ class UnreachableSupport:
                     "files": [{"state": "unreachable", "url": "https://gscs-b2c.lge.com/manual"}]}
 
 
+class NoCandidatesSupport(UnreachableSupport):
+    def find_documents(self, *args, **kwargs):
+        return [], {"outcome": "no_manual_candidates", "files": []}
+
+
 class RetainedEvidenceTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -95,9 +100,27 @@ class RetainedEvidenceTests(unittest.TestCase):
             dns_adapter_factory=EmptyDns, lg_support_adapter_factory=UnreachableSupport))
         self.assertEqual(len(jobs.get_documents(self.db, 4)), 1)
         self.assertEqual(jobs.get_documents(self.db, 4)[0]["source_key"], "lg_kz_support")
+        events = jobs.list_events(self.db, jobs.list_jobs(self.db, 4)[0]["id"])
+        self.assertTrue(any("Ранее проверенная русская инструкция сохранена" in e["message"] for e in events))
         message = jobs.list_jobs(self.db, 4)[0]["message"]
         self.assertIn("подтверждает модель/комплект", message)
         self.assertIn("характеристиками и фото", message)
+
+    def test_render_without_manual_list_does_not_erase_previously_verified_pdf(self):
+        url = "https://www.lg.com/kz/support/product-support/cs-TEST.USAR/"
+        jobs.save_source_document(self.db, 4, SourceDocument(
+            "lg_kz_support", "LG KZ support", url, match_level="full_sku",
+            html='<div data-product-id="TEST.USAR"></div>'))
+        jobs.save_documents(self.db, 4, "lg_kz_support", [ProductDocument(
+            "Guide", "Русский", "", "",
+            "https://gscs-b2c.lge.com/manual", url, "TEST", "TEST.USAR", url)])
+        jobs.enqueue(self.db, 4, [1, 6])
+        self.assertTrue(worker.run_once(self.db,
+            adapter_factory=lambda: (EmptyOfficial("lg_kz"), EmptyOfficial("lg_ru"), EmptyDealer()),
+            dns_adapter_factory=EmptyDns, lg_support_adapter_factory=NoCandidatesSupport))
+        self.assertEqual(len(jobs.get_documents(self.db, 4)), 1)
+        events = jobs.list_events(self.db, jobs.list_jobs(self.db, 4)[0]["id"])
+        self.assertTrue(any("Ранее проверенная" in e["message"] for e in events))
 
     def test_printed_product_support_link_reaches_existing_adapter(self):
         product_url = "https://www.lg.com/kz/product/test"

@@ -7,6 +7,7 @@ from dataclasses import asdict
 import logging
 import os
 from pathlib import Path
+import requests
 from threading import Event, Thread
 from typing import Any
 from uuid import uuid4
@@ -17,10 +18,11 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import attribute_projection, bosch_readiness, exporter, jobs, lg_batch, storage
+from . import attribute_projection, bosch_readiness, exporter, jobs, lg_batch, photo_metadata, product_description, storage
 from .adapters.lg import lg_base_model
 from .adapters.policy_fetch import migrate_legacy_stop_log
 from .lg_identity import document_tied_to_article, photo_tied_to_article
+from .display import display_access_error
 from .importer import MAX_COLUMNS, MAX_FILE_BYTES, MAX_ROWS, ImportPreview, preview_xlsx
 
 
@@ -28,13 +30,9 @@ LOGGER = logging.getLogger(__name__)
 
 
 def _display_access_stop(message: str) -> str:
-    if "policy_host_stopped" not in message:
-        return message
-    source = message.split(":", 1)[0] if ":" in message else ""
-    if source.casefold().startswith(("http", "policy_")):
-        source = ""
-    prefix = source + ": " if source else ""
-    return prefix + "\u0412\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0438\u0439 access-stop: \u0437\u0430\u043f\u0440\u043e\u0441 \u043a \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435 \u043d\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u043b\u0441\u044f."
+    return display_access_error(message)
+
+
 PACKAGE_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = PACKAGE_DIR.parent
 COLUMN_FIELDS = ("category", "brand", "name", "search_code", "fallback_code")
@@ -389,27 +387,50 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                 document["identity_confirmed"] = document_tied_to_article(product["search_code"], document, sources)
             for photo in photos:
                 photo["identity_confirmed"] = photo_tied_to_article(photo, sources)
+                photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
+                photo["size_label"] = photo_metadata.format_file_size(photo.get("verified_bytes"))
         else:
             for document in documents:
                 document["identity_confirmed"] = True
             for photo in photos:
                 photo["identity_confirmed"] = True
+                photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
+                photo["size_label"] = photo_metadata.format_file_size(photo.get("verified_bytes"))
+        retained_manual_sources = {
+            d["source_key"] for d in documents
+            if d["identity_confirmed"] and d["language"] == "Русский"
+        }
+        events = []
+        for event in jobs.list_events(database, latest["id"]) if latest else []:
+            message = _display_access_stop(event["message"])
+            if ("LG KZ support manual: no_verified_russian_instruction" in message
+                    and "lg_kz_support" in retained_manual_sources):
+                message = ("Повторная попытка проверки PDF не завершилась; "
+                           "ранее проверенная русская инструкция сохранена.")
+            events.append({**event, "message": message})
+        lg_card = lg_batch.card_summary(database, product_id, latest) if lg_batch.is_lg(product) else None
+        comparison = attribute_projection.final_attribute_rows(database, product_id)
+        if lg_card:
+            conflict_values = {item["key"]: item["values"] for item in lg_card.get("conflicts", [])}
+            for row in comparison:
+                row["conflict_values"] = conflict_values.get(row["normalized_name"], [])
         return render(
             request, "product.html", status_code,
             product=product,
             result=jobs.get_result(database, product_id),
-            sources=[{**source, "error": _display_access_stop(source["error"])} for source in sources],
+            sources=[{**source, "error": _display_access_stop(source["error"]),
+                       "description": product_description.product_description(source["description"])
+                       if lg_batch.is_lg(product) else source["description"]} for source in sources],
             bosch_card=bosch_readiness.card_readiness(database, product_id) if any(src["source_key"] == "bosch_home" for src in sources) else None,
-            lg_card=lg_batch.card_summary(database, product_id, latest) if lg_batch.is_lg(product) else None,
-            comparison=attribute_projection.final_attribute_rows(database, product_id),
+            lg_card=lg_card,
+            comparison=comparison,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
             photos=photos,
             identification_status=jobs.identification_status(sources),
             base_model=lg_base_model(product["search_code"]) if product["brand"].strip().upper() == "LG" else "",
             latest=latest,
-            events=[{**event, "message": _display_access_stop(event["message"])}
-                    for event in jobs.list_events(database, latest["id"])] if latest else [],
+            events=events,
             stages=jobs.STAGE_NAMES,
             message=message,
             active=bool(latest and latest["status"] in jobs.ACTIVE),
@@ -467,6 +488,24 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             headers={"Content-Disposition": f'attachment; filename="batch-{batch_id}.xlsx"'},
         )
+
+    @app.post("/products/{product_id}/photos/{photo_id}/inspect", response_class=HTMLResponse)
+    def inspect_photo(request: Request, product_id: int, photo_id: int) -> HTMLResponse:
+        photo = jobs.get_photo_candidate(database, product_id, photo_id)
+        if photo is None:
+            return error_page(request, "Фото не найдено.", 404)
+        try:
+            measured = photo_metadata.inspect_saved_photo(
+                photo["url"], photo["source_key"],
+                root / photo_metadata.log_name(photo["source_key"]),
+            )
+        except (ValueError, OSError, requests.RequestException) as exc:
+            return product_page(request, product_id,
+                message=f"Параметры фото не определены: {exc}")
+        jobs.save_photo_metadata(database, product_id, photo_id, photo["url"],
+            width=int(measured["width"]), height=int(measured["height"]),
+            size_bytes=int(measured["size_bytes"]), image_format=str(measured["format"]))
+        return RedirectResponse(f"/products/{product_id}#photos", status_code=303)
 
     @app.post("/products/{product_id}/photos", response_class=HTMLResponse)
     async def save_photo_selection(request: Request, product_id: int) -> HTMLResponse:

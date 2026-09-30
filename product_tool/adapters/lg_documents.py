@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import re
 
-_BINARY_TYPES = ("application/pdf", "application/octet-stream", "application/x-pdf")
+_BINARY_TYPES = ("application/pdf", "application/octet-stream", "application/x-pdf", "image/png", "image/jpeg", "image/webp")
 
 
 class BinarySafeSession:

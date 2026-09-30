@@ -642,7 +642,21 @@ STAGE52_1_DATA_MIGRATION: dict[str, str] = {
     "data/batches.sqlite3": "Stage 52.1: one S40T (product 13) source-only production job through the actual runtime; preserve all other products and prior evidence. Access-stop history is in the adjacent ignored JSON log, not in SQLite. Integrity and foreign-key checks passed.",
 }
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION}
+STAGE53_MIGRATION: dict[str, str] = {
+    'product_tool/adapters/lg_documents.py': 'Stage 53: allow image MIME types through the existing lossless policy transport for on-demand byte measurement.',
+    'product_tool/display.py': 'Stage 53: retain semantic Latin LG labels and distinguish a synthetic 200 challenge from a real HTTP error.',
+    'product_tool/exporter.py': 'Stage 53: unique semantic headings, clear manual status, truthful photo metadata columns, and conditional candidate sheet.',
+    'product_tool/jobs.py': 'Stage 53: preserve verified photo metadata on source refresh and save it only against the exact stored URL.',
+    'product_tool/lg_batch.py': 'Stage 53: show all raw sides of conflicts with region, section and identity scope; retained manual is not called lost.',
+    'product_tool/migrations.py': 'Stage 53: additive photo metadata migration; old HTML dimension hints remain separate from measured pixels.',
+    'product_tool/static/styles.css': 'Stage 53: readable image metadata beneath each card preview.',
+    'product_tool/templates/product.html': 'Stage 53: manual status and support link, full conflict sides, and actual or unknown image measurements.',
+    'product_tool/web.py': 'Stage 53: filtered product description and truthful manual/access messages; one-photo policy-aware inspection.',
+    'product_tool/worker.py': 'Stage 53: retain verified manuals when a later fetch is inconclusive and report that retention.',
+    'data/batches.sqlite3': 'Stage 53: additive photo metadata columns; one corrupted historic Sulpak evidence string restored from the saved 200 challenge log; two saved S3WER image URLs measured. All card/job/fact/document/photo row counts unchanged; integrity passed.',
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -884,6 +898,22 @@ STAGE52_1_PINNED_SHA256: dict[str, str] = {
 }
 PINNED_SHA256.update(STAGE52_1_PINNED_SHA256)
 
+
+# Stage 53: exact bytes after the presentation and additive SQLite migration.
+STAGE53_PINNED_SHA256: dict[str, str] = {
+    'product_tool/adapters/lg_documents.py': '8168120dd7f7e3a7c93994965d1a7e731481a45ae008362d3a3a5cadd56a52d2',
+    'product_tool/display.py': '14ff7a6842dbcfc0abeb973a97c7645d7e13a449418ae16e9e8347af5c1fd8b3',
+    'product_tool/exporter.py': '814e494e54a32b40e6dcc936f97365aa2762c62a93dde4b8621eac24a7b7d791',
+    'product_tool/jobs.py': '3e6d035dd4b48a087ab00a5fb59589ab99e094cb22efdbc3e2db342428326e4a',
+    'product_tool/lg_batch.py': '37fb8b1dbc9e7e8b18a4d714904ffc2a7cc322da75c9fb173913514470e25a86',
+    'product_tool/migrations.py': '16f97dbe341a03bf28b52f365225ca275f473aa169ef7c4bd930615f3ab54f8f',
+    'product_tool/static/styles.css': '414b4e0a6b2a30bf46af84108a60a0c0b53cb7496677c9495a57c3a90deb2e17',
+    'product_tool/templates/product.html': '567af93638e94314071f037ec9bef1d1bb94c97cdea5790fff2f3fc7b3fd3eed',
+    'product_tool/web.py': 'bad509e4fc951558a24344616fffb7abcf1e567b1daebda0230f0913f1b21fa5',
+    'product_tool/worker.py': 'fbe6f5d3898583b27192609f97af0234e302ed17cce54575196622991e422f70',
+    'data/batches.sqlite3': '839fe7c3cbc57c4c118a44506a9ba36353be560cb24cf8948851171429ec5311',
+}
+PINNED_SHA256.update(STAGE53_PINNED_SHA256)
 
 def check_migrated_file(path: str, actual_sha256: str) -> tuple[bool, str]:
     """The real protection check for one of the 13 authorized paths: not

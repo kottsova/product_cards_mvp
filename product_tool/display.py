@@ -75,10 +75,20 @@ def display_name_ru(key: str, raw_names: Iterable[str] = ()) -> str:
         text = key.replace("_", " ").strip()
         return text[:1].upper() + text[1:]
     for raw in raw_names:
-        if re.search(r"[а-яё]", raw, re.I):
-            cleaned = " ".join(raw.split())
-            return cleaned[:1].upper() + cleaned[1:]
-    return "Дополнительная характеристика"
+        cleaned = " ".join(str(raw).split())
+        if cleaned and re.search(r"[A-Za-zА-Яа-яЁё]", cleaned):
+            label = cleaned[:1].upper() + cleaned[1:]
+            if "__" in key:
+                context = key.rsplit("__", 1)[1].replace("_", " ")
+                context = {"drying": "сушка", "washing": "стирка"}.get(context, context)
+                label += f" ({context})"
+            return label
+    # Source labels remain in raw evidence; a named Latin feature is a real label.
+    text = key.replace("__", " (").replace("_", " ")
+    if " (" in text:
+        text += ")"
+    return text[:1].upper() + text[1:] if text else "Дополнительная характеристика"
+
 
 
 def display_source(key: str, site_name: str = "") -> str:
@@ -109,3 +119,18 @@ def display_value(value: str, unit: str = "") -> str:
     units = {"rpm": "об/мин", "kg": "кг", "mm": "мм", "bool": ""}
     shown_unit = units.get(unit, unit)
     return f"{value} {shown_unit}".strip()
+
+def display_access_error(message: str) -> str:
+    """Distinguish a synthetic policy response from a site's actual HTTP status."""
+    if "[policy_challenge_confirmed]" in message:
+        return message.replace(
+            "HTTP-ошибка: HTTP 403 [policy_challenge_confirmed]",
+            "HTTP 200: страница проверки сайта; товарные данные не получены",
+        )
+    if "policy_host_stopped" not in message:
+        return message
+    source = message.split(":", 1)[0] if ":" in message else ""
+    if source.casefold().startswith(("http", "policy_")):
+        source = ""
+    prefix = source + ": " if source else ""
+    return prefix + "Внутренний access-stop: запрос к этой странице не отправлялся."
