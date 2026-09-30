@@ -18,12 +18,12 @@
     <div class="section-heading"><h2>Проверка LG одной кнопкой</h2></div>
     <p>Товары выбраны из вашего файла: по одному LG-товару на каждую категорию, без списка разрешённых категорий. Выбор можно изменить. Для полного поиска включены описание, характеристики, фото и инструкции. Если загрузку PDF хотите отложить, снимите только «Инструкции» и выполните для них отдельный проход позже.</p>
     <p><a href="/batches/{{ batch.id }}#lg-batch">Обновить прогресс</a></p>
-    <div class="stage-grid" aria-label="Состояние выбора LG">
+    <div class="stage-grid" aria-label="Состояние выбора LG" aria-live="polite">
       <div class="status-card"><strong id="lg-selected-count">{{ lg_counts.selected }}</strong><br>Выбрано</div>
-      <div class="status-card"><strong>{{ lg_counts.queued }}</strong><br>В очереди</div>
-      <div class="status-card"><strong>{{ lg_counts.running }}</strong><br>Выполняется</div>
-      <div class="status-card"><strong>{{ lg_counts.completed }}</strong><br>Завершено</div>
-      <div class="status-card"><strong>{{ lg_counts.review }}</strong><br>Требует проверки</div>
+      <div class="status-card"><strong id="lg-queued-count">{{ lg_counts.queued }}</strong><br>В очереди</div>
+      <div class="status-card"><strong id="lg-running-count">{{ lg_counts.running }}</strong><br>Выполняется</div>
+      <div class="status-card"><strong id="lg-completed-count">{{ lg_counts.completed }}</strong><br>Завершено</div>
+      <div class="status-card"><strong id="lg-review-count">{{ lg_counts.review }}</strong><br>Требует проверки</div>
     </div>
     <form action="/batches/{{ batch.id }}/lg-search" method="post" id="lg-batch-form">
       <h3>Состав проверки</h3>
@@ -41,15 +41,49 @@
             <td><input type="checkbox" class="lg-product-select" name="product_ids" value="{{ product.id }}" {% if product.id in lg_selected %}checked{% endif %} aria-label="Выбрать {{ product.search_code }}"></td>
             <td>{{ product.category }}</td>
             <td><a href="/products/{{ product.id }}">{{ product.name or product.search_code }}</a><br><small>{{ product.search_code }}</small></td>
-            <td>{% if state.job %}{{ state.job_label }} ({{ state.job.status }}){% else %}Не запускалось{% endif %}</td>
-            <td>{% if state.job and state.job.status == 'queued' %}Ожидает обработки; итог карточки появится после проверки.{% elif state.job and state.job.status == 'running' %}Проверяется; итог карточки появится после завершения.{% else %}{{ state.card.label }} ({{ state.card.verdict }}){% if state.card.reasons %}<br><small>{{ state.card.reasons|join(' ') }}</small>{% endif %}{% endif %}</td>
+            <td data-lg-job="{{ product.id }}">{% if state.job %}{{ state.job_label }} ({{ state.job.status }}){% else %}Не запускалось{% endif %}</td>
+            <td data-lg-card="{{ product.id }}">{% if state.job and state.job.status == 'queued' %}Ожидает обработки; итог карточки появится после проверки.{% elif state.job and state.job.status == 'running' %}Проверяется; итог карточки появится после завершения.{% else %}{{ state.card.label }} ({{ state.card.verdict }}){% if state.card.reasons %}<br><small>{{ state.card.reasons|join(' ') }}</small>{% endif %}{% endif %}</td>
           </tr>
         {% endfor %}</tbody>
       </table></div>
       <div class="form-actions"><button class="button primary" type="submit">Поставить выбранные LG в очередь</button><span class="hint">Уже ожидающие и выполняющиеся товары повторно не добавляются. Приложение обрабатывает задания по одному.</span></div>
     </form>
   </section>
-  <script>document.querySelectorAll('.lg-product-select').forEach(function(box) { box.addEventListener('change', function() { document.getElementById('lg-selected-count').textContent = document.querySelectorAll('.lg-product-select:checked').length; }); });</script>
+  <script>
+    document.querySelectorAll('.lg-product-select').forEach(function(box) {
+      box.addEventListener('change', function() {
+        document.getElementById('lg-selected-count').textContent = document.querySelectorAll('.lg-product-select:checked').length;
+      });
+    });
+    (function() {
+      var keys = ['queued', 'running', 'completed', 'review'];
+      function hasActiveJobs() {
+        return Number(document.getElementById('lg-queued-count').textContent) +
+          Number(document.getElementById('lg-running-count').textContent) > 0;
+      }
+      async function refreshProgress() {
+        try {
+          var response = await fetch(window.location.pathname, {cache: 'no-store'});
+          if (!response.ok) throw new Error('Progress request failed');
+          var page = new DOMParser().parseFromString(await response.text(), 'text/html');
+          keys.forEach(function(key) {
+            var source = page.getElementById('lg-' + key + '-count');
+            if (source) document.getElementById('lg-' + key + '-count').textContent = source.textContent;
+          });
+          ['job', 'card'].forEach(function(kind) {
+            document.querySelectorAll('[data-lg-' + kind + ']').forEach(function(cell) {
+              var source = page.querySelector('[data-lg-' + kind + '="' + cell.getAttribute('data-lg-' + kind) + '"]');
+              if (source) cell.innerHTML = source.innerHTML;
+            });
+          });
+        } catch (error) {
+          // The manual refresh link remains available if a local request fails.
+        }
+        if (hasActiveJobs()) window.setTimeout(refreshProgress, 5000);
+      }
+      if (hasActiveJobs()) window.setTimeout(refreshProgress, 5000);
+    })();
+  </script>
   {% endif %}
 
   {% for category, products in groups.items() %}

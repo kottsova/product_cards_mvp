@@ -662,7 +662,12 @@ STAGE53_UI_MIGRATION: dict[str, str] = {
     "product_tool/static/styles.css": "Stage 53 UI completion: grouped attribute tables and accessible full-size photo dialog.",
 }
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION}
+STAGE53_1_MIGRATION: dict[str, str] = {
+    "product_tool/templates/batch.html": "Stage 53.1: poll the existing read-only batch page while jobs are active, updating counters and per-row status without enqueuing anything.",
+    "data/batches.sqlite3": "Stage 53.1: owner uploaded a new 12-row LG batch and the already embedded worker completed its 12 jobs before this diagnostic. No row was replayed or deleted in this stage; the current production bytes and integrity are pinned after a consistent backup.",
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -928,6 +933,14 @@ STAGE53_UI_PINNED_SHA256: dict[str, str] = {
     "product_tool/templates/product.html": "f8265dbb783acc74bd37ccbf8cefb86c63929f63955555eca62c51acbf4acda2",
 }
 PINNED_SHA256.update(STAGE53_UI_PINNED_SHA256)
+
+# Stage 53.1: live batch progress and the completed owner-created 12-job SQLite state.
+STAGE53_1_PINNED_SHA256: dict[str, str] = {
+    "product_tool/templates/batch.html": "a71cd1c1b0745b4c883bc7f8de457ea1c402e309e059dc4c2a4fbb0dc30118eb",
+    "data/batches.sqlite3": "36c1b8156e2f781860566facde0f6cd14d133684e368764bb1cc9dba4636cfef",
+}
+PINNED_SHA256.update(STAGE53_1_PINNED_SHA256)
+
 
 def check_migrated_file(path: str, actual_sha256: str) -> tuple[bool, str]:
     """The real protection check for one of the 13 authorized paths: not

@@ -160,6 +160,44 @@ class LgBatchTests(unittest.TestCase):
         finally:
             book.close()
 
+    def test_batch_progress_get_tracks_queue_without_starting_worker(self):
+        import re
+
+        batch, ids = self.upload()
+        selected = [ids["XL7S"], ids["MS2032GAS"]]
+        lg_batch.queue_selected(self.database, batch["id"], selected, [1])
+
+        def count(html, key):
+            match = re.search(r'<strong id="lg-' + key + r'-count">(\d+)</strong>', html)
+            self.assertIsNotNone(match, key)
+            return int(match.group(1))
+
+        url = f"/batches/{batch['id']}"
+        queued = self.client.get(url).text
+        self.assertEqual((count(queued, "queued"), count(queued, "running")), (2, 0))
+        self.assertIn("fetch(window.location.pathname, {cache: 'no-store'})", queued)
+        self.assertIn(f'data-lg-job="{selected[0]}"', queued)
+        self.assertIn(f'data-lg-card="{selected[1]}"', queued)
+        self.assertEqual(len(jobs.list_jobs(self.database, selected[0])), 1)
+        self.assertEqual(len(jobs.list_jobs(self.database, selected[1])), 1)
+
+        first = jobs.claim_next(self.database)
+        self.assertIsNotNone(first)
+        running = self.client.get(url).text
+        self.assertEqual((count(running, "queued"), count(running, "running")), (1, 1))
+        self.assertIsNone(jobs.claim_next(self.database))
+        jobs.finish(self.database, first["id"], "done", "Completed.")
+        second = jobs.claim_next(self.database)
+        self.assertIsNotNone(second)
+        self.assertNotEqual(first["id"], second["id"])
+        next_page = self.client.get(url).text
+        self.assertEqual((count(next_page, "queued"), count(next_page, "running"), count(next_page, "completed")), (0, 1, 1))
+        jobs.finish(self.database, second["id"], "done", "Completed.")
+        finished = self.client.get(url).text
+        self.assertEqual((count(finished, "queued"), count(finished, "running"), count(finished, "completed")), (0, 0, 2))
+        self.assertEqual(len(jobs.list_jobs(self.database, selected[0])), 1)
+        self.assertEqual(len(jobs.list_jobs(self.database, selected[1])), 1)
+
     def test_global_worker_claim_is_sequential(self):
         batch, ids = self.upload()
         lg_batch.queue_selected(self.database, batch["id"], [ids["XL7S"], ids["MS2032GAS"]], [1])
