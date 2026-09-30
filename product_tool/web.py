@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import attribute_projection, bosch_readiness, exporter, jobs, lg_batch, photo_metadata, product_description, storage
+from . import attribute_projection, bosch_readiness, card_presentation, exporter, jobs, lg_batch, photo_metadata, product_description, storage
 from .adapters.lg import lg_base_model
 from .adapters.policy_fetch import migrate_legacy_stop_log
 from .lg_identity import document_tied_to_article, photo_tied_to_article
@@ -410,6 +410,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             events.append({**event, "message": message})
         lg_card = lg_batch.card_summary(database, product_id, latest) if lg_batch.is_lg(product) else None
         comparison = attribute_projection.final_attribute_rows(database, product_id)
+        card_attributes = card_presentation.present_card_rows(
+            comparison, jobs.get_facts(database, product_id), sources, product["category"]
+        )
         if lg_card:
             conflict_values = {item["key"]: item["values"] for item in lg_card.get("conflicts", [])}
             for row in comparison:
@@ -424,6 +427,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             bosch_card=bosch_readiness.card_readiness(database, product_id) if any(src["source_key"] == "bosch_home" for src in sources) else None,
             lg_card=lg_card,
             comparison=comparison,
+            card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
             photos=photos,
@@ -466,7 +470,6 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         form = await request.form()
         value = str(form.get("value", "")).strip()
         unit = str(form.get("unit", "")).strip()
-        reason = str(form.get("reason", "")).strip()
         if not value:
             return product_page(
                 request, product_id, message="Укажите итоговое значение.", status_code=400
@@ -474,7 +477,10 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         resolved = next((item for item in jobs.get_resolved(database, product_id) if str(item["id"]) == attribute_ref or item["normalized_name"] == attribute_ref), None)
         if resolved is None:
             return product_page(request, product_id, message="Характеристика не найдена.", status_code=404)
-        jobs.save_manual_decision(database, product_id, resolved["normalized_name"], value, unit, reason)
+        jobs.save_manual_decision(
+            database, product_id, resolved["normalized_name"], value, unit,
+            "manual_user_override",
+        )
         return RedirectResponse(f"/products/{product_id}#comparison", status_code=303)
 
     @app.get("/batches/{batch_id}/export.xlsx")

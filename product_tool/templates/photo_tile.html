@@ -1,0 +1,14 @@
+<div class="photo-tile">
+  <label class="photo-select"><input type="checkbox" name="asset_keys" value="{{ p.asset_key }}" {% if p.selected %}checked{% endif %}> Выбрать фото</label>
+  <button type="button" class="photo-open" aria-label="Открыть фото: {{ p.site_name }}"
+          data-url="{{ p.url }}" data-source="{{ p.site_name }}"
+          data-resolution="{% if p.verified_width and p.verified_height %}{{ p.verified_width }} × {{ p.verified_height }} px{% else %}Не определено{% endif %}"
+          data-size="{{ p.size_label }}" data-format="{{ p.verified_format or 'Не определено' }}"
+          data-identity="{% if p.identity_confirmed %}Подтверждено{% else %}Кандидат: вариант не подтверждён{% endif %}">
+    <img src="{{ p.url }}" alt="{{ p.site_name }}" loading="lazy">
+  </button>
+  <small>Разрешение: {% if p.verified_width and p.verified_height %}{{ p.verified_width }} × {{ p.verified_height }} px{% else %}Не определено{% endif %}<br>Размер файла: {{ p.size_label }}<br>Формат: {{ p.verified_format or 'Не определено' }}</small>
+  {% if p.can_inspect and not p.verified_width %}<button type="submit" formaction="/products/{{ product.id }}/photos/{{ p.id }}/inspect" formmethod="post" class="button">Проверить параметры</button>{% endif %}
+  <small>{{ p.site_name }} · {% if p.identity_confirmed %}подтверждено{% else %}кандидат; связь с артикулом не подтверждена{% endif %}{% if p.kind == 'feature' %} · инфографика{% elif p.kind == 'marketing' %} · маркетинговый материал{% endif %}</small>
+  <a href="{{ p.url }}" target="_blank" rel="noopener">Открыть URL</a>
+</div>

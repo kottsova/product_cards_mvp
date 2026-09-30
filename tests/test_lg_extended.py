@@ -134,7 +134,7 @@ class PhotoAndExportTests(unittest.TestCase):
         jobs.resolve_product(self.db,self.product)
         with TestClient(create_app(self.root)) as client:
             page=client.get(f"/products/{self.product}").text
-            self.assertIn("Количество поддонов для сбора воды",page); self.assertNotIn("drip_tray_qty",page); self.assertIn("Изменить итог",page)
+            self.assertIn("Количество поддонов для сбора воды",page); self.assertNotIn("drip_tray_qty",page); self.assertIn("Свое значение",page)
         book=load_workbook(BytesIO(export_batch(self.db,"b1")),read_only=True)
         try:
             self.assertIn("Инструкции",book.sheetnames); self.assertIn("Фотографии",book.sheetnames)

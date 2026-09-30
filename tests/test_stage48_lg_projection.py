@@ -118,7 +118,17 @@ class FinalAttributeProjectionTests(unittest.TestCase):
                 self.assertEqual(response.status_code, 200)
                 self.assertIn("Bluetooth", response.text)
                 self.assertIn("4.0", response.text)
-                self.assertIn("●; ver 4.0", response.text)
+                # The user-facing value is the meaningful refinement; the
+                # original presence marker and version remain in evidence.
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(response.text, "html.parser")
+                row = next(tr for tr in soup.select("#comparison tbody tr")
+                           if tr.find("th") and tr.find("th").text.strip() == "Bluetooth")
+                self.assertIn("4.0", row.find_all("td")[0].text)
+                self.assertNotIn("●", row.find_all("td")[0].text)
+                evidence = row.select_one(".evidence-detail").text
+                self.assertIn("●", evidence)
+                self.assertIn("ver 4.0", evidence)
 
 
 if __name__ == "__main__":

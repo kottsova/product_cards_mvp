@@ -656,7 +656,13 @@ STAGE53_MIGRATION: dict[str, str] = {
     'data/batches.sqlite3': 'Stage 53: additive photo metadata columns; one corrupted historic Sulpak evidence string restored from the saved 200 challenge log; two saved S3WER image URLs measured. All card/job/fact/document/photo row counts unchanged; integrity passed.',
 }
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION}
+STAGE53_UI_MIGRATION: dict[str, str] = {
+    "product_tool/web.py": "Stage 53 UI completion: present existing facts by source section and category role; record a one-field manual_user_override while retaining official facts.",
+    "product_tool/templates/product.html": "Stage 53 UI completion: grouped comparison and photo lightbox markup; no evidence or source selection changed.",
+    "product_tool/static/styles.css": "Stage 53 UI completion: grouped attribute tables and accessible full-size photo dialog.",
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -914,6 +920,14 @@ STAGE53_PINNED_SHA256: dict[str, str] = {
     'data/batches.sqlite3': '839fe7c3cbc57c4c118a44506a9ba36353be560cb24cf8948851171429ec5311',
 }
 PINNED_SHA256.update(STAGE53_PINNED_SHA256)
+
+# Stage 53 UI completion: exact protected bytes; production SQLite is unchanged.
+STAGE53_UI_PINNED_SHA256: dict[str, str] = {
+    "product_tool/web.py": "51919b10aecbc5f5b5d41a58bff05d712fa3a588dee54e6d2aeac268f7d9e7c7",
+    "product_tool/static/styles.css": "21a419d0b600010837b0199f95eacd47eb834c5b08f23cdf165ede1c3f2a33bb",
+    "product_tool/templates/product.html": "f8265dbb783acc74bd37ccbf8cefb86c63929f63955555eca62c51acbf4acda2",
+}
+PINNED_SHA256.update(STAGE53_UI_PINNED_SHA256)
 
 def check_migrated_file(path: str, actual_sha256: str) -> tuple[bool, str]:
     """The real protection check for one of the 13 authorized paths: not

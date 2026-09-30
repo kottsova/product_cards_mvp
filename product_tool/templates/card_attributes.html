@@ -1,0 +1,46 @@
+<section class="section" id="comparison">
+  <div class="section-heading"><h2>Характеристики</h2><span class="count">{{ card_attributes.count }}</span></div>
+  {% if comparison %}
+    {% for role, heading in [('core', 'Основные характеристики'), ('feature', 'Особенности модели')] %}
+      {% if card_attributes.groups[role] %}
+        <h3>{{ heading }}</h3>
+        {% for section, rows in card_attributes.groups[role].items() %}
+          <div class="attribute-group" data-role="{{ role }}" data-section="{{ section }}">
+            <h4>{{ section }}</h4>
+            <div class="table-wrap"><table class="card-attributes">
+              <thead><tr><th>Характеристика</th>{% for key, label in card_attributes.columns %}<th>{{ label }}</th>{% endfor %}<th>Статус</th></tr></thead>
+              <tbody>
+                {% for row in rows %}
+                  <tr>
+                    <th scope="row">{{ row.display_name }}</th>
+                    {% for key, label in card_attributes.columns %}
+                      {% set fact = row.sources.get(key) %}
+                      <td>{% if fact %}{{ fact.display_value }}{% else %}—{% endif %}</td>
+                    {% endfor %}
+                    <td>
+                      <span class="badge {% if row.resolved and row.resolved.conflict %}danger{% elif row.compact_status == 'Совпадает' %}ready{% else %}warning{% endif %}">{{ row.compact_status }}</span>
+                      {% if row.conflict_sides %}<ul class="conflict-sides">{% for side in row.conflict_sides %}<li>{{ side }}</li>{% endfor %}</ul>{% endif %}
+                      {% if row.resolved and row.resolved.status == 'manual' %}<p class="manual-value">Свое значение: {{ row.resolved.display_value }}</p>{% endif %}
+                      <details class="evidence-detail"><summary>Доказательства</summary>
+                        {% for fact in row.evidence_facts %}
+                          <p><strong>{{ fact.display_source }}</strong> · {{ fact.section or 'без раздела' }}<br>{{ fact.raw_name }}: {{ fact.raw_value }}</p>
+                        {% endfor %}
+                        {% if row.resolved %}<p>Выбор системы: {{ row.resolved.display_value or '—' }} · {{ row.resolved.display_status }}. {{ row.resolved.reason }}</p>{% endif %}
+                      </details>
+                      {% if row.resolved %}<details class="manual-override"><summary class="button">Свое значение</summary>
+                        <form action="/products/{{ product.id }}/attributes/{{ row.resolved.id }}/decision" method="post">
+                          <label>Свое значение<input name="value" value="{% if row.resolved.status == 'manual' %}{{ row.resolved.selected_value }}{% endif %}" required></label>
+                          <button class="button" type="submit">Сохранить</button>
+                        </form>
+                      </details>{% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table></div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% else %}<p class="empty">Характеристики появятся после этапа 3.</p>{% endif %}
+</section>
