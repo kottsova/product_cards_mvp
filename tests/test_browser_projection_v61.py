@@ -84,6 +84,18 @@ class WorkerRoutingTests(unittest.TestCase):
         self.assertEqual(self.route(env),['continue']);self.assertEqual(self.route(env,'xhr'),['continue'])
         self.assertEqual(self.route(env,'fetch'),['abort']);self.assertEqual(env['signal'],'network_budget_exhausted')
         self.assertEqual(self.route(env),['abort']);self.assertEqual(env['counts']['network_requests'],2)
+    def test_completed_search_drops_surplus_subresources_but_not_document(self):
+        env=self.worker()
+        env['policy']['render_mode']='render_existing_search_result'
+        self.assertEqual(self.route(env),['continue'])
+        self.assertEqual(self.route(env,'xhr'),['continue'])
+        self.assertEqual(self.route(env,'stylesheet'),['abort'])
+        self.assertEqual(env['counts']['network_requests'],2)
+        self.assertEqual(env['counts']['capped_requests'],1)
+        self.assertEqual(env['signal'],'')
+        self.assertEqual(self.route(env,'document',url='https://example.com/next'),['abort'])
+        self.assertEqual(env['signal'],'network_budget_exhausted')
+
     def test_worker_blocks_media_and_stops_403_without_retry(self):
         from types import SimpleNamespace
         env=self.worker()

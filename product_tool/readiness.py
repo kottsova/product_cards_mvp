@@ -21,7 +21,7 @@ from typing import Any
 from . import jobs
 from .lg_identity import allows_evidence, document_tied_to_article, source_relation
 
-OFFICIAL_KEYS = frozenset({"lg_kz", "lg_ru"})
+OFFICIAL_KEYS = frozenset({"lg_kz", "lg_ru", "lg_global"})
 DEALER_KEYS = frozenset({"sulpak", "dns"})
 DEALER_CONFIRMED_LEVELS = frozenset({"full_sku", "model_and_code_confirmed"})
 

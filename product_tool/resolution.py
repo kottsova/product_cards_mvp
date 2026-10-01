@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Any, Iterable
 
 SUPPLIERS={"sulpak"}
-OFFICIAL={"lg","lg_kz","lg_ru","hyperx","samsung","bosch_home"}
+OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home"}
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -50,7 +50,7 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             if f["source_key"] in SUPPLIERS and pages.get(f["source_key"],{}).get("match_level")=="full_sku" and f["source_key"] not in seen:
                 suppliers.append(f); seen.add(f["source_key"])
         official=[f for f in values if f["source_key"] in OFFICIAL]
-        if (name == "color" or name.startswith("color__") or name.startswith("\u043e\u0442\u0434\u0435\u043b\u043a\u0430_")) and any(key in pages for key in ("lg", "lg_kz", "lg_ru")):
+        if (name == "color" or name.startswith("color__") or name.startswith("\u043e\u0442\u0434\u0435\u043b\u043a\u0430_")) and any(key in pages for key in ("lg", "lg_kz", "lg_ru", "lg_global")):
             exact = [f for f in values if pages.get(f["source_key"], {}).get("match_level") in {"full_sku", "model_and_code_confirmed"}]
             if not exact:
                 reason = "\u0426\u0432\u0435\u0442 \u0431\u0430\u0437\u043e\u0432\u043e\u0439 \u043c\u043e\u0434\u0435\u043b\u0438 \u043d\u0435 \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0430\u0435\u0442 \u0446\u0432\u0435\u0442 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0430\u0440\u0442\u0438\u043a\u0443\u043b\u0430."
@@ -72,7 +72,7 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             for f in exact:
                 if f["source_key"] == "dns" and f["source_key"] not in seen:
                     suppliers.append(f); seen.add(f["source_key"])
-        exact_lg = [f for f in official if f["source_key"] in {"lg", "lg_kz", "lg_ru"} and pages.get(f["source_key"], {}).get("match_level") == "full_sku"]
+        exact_lg = [f for f in official if f["source_key"] in {"lg", "lg_kz", "lg_ru", "lg_global"} and pages.get(f["source_key"], {}).get("match_level") == "full_sku"]
         if exact_lg:
             if _different(official):
                 names = " и ".join(sorted({o.get("site_name") or o["source_key"] for o in official}))

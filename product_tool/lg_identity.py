@@ -108,7 +108,7 @@ def source_relation(source_key: str, match_level: str) -> str:
     if source_key in {"lg_kz_support", "lg_ru_support"}:
         return {"full_sku": "support_for", "component_only": "component_of",
                 "base_model": "family_of"}.get(match_level, "unknown")
-    if source_key in {"lg_kz", "lg_ru"}:
+    if source_key in {"lg_kz", "lg_ru", "lg_global"}:
         return {"full_sku": "exact", "base_model": "family_of",
                 "component_only": "component_of"}.get(match_level, "unknown")
     return "unknown"
@@ -154,7 +154,7 @@ def photo_tied_to_article(photo: dict, source_pages: Iterable[dict]) -> bool:
     pages = {p["source_key"]: p for p in source_pages if not p.get("error")}
     key = photo.get("source_key", "")
     page = pages.get(key, {})
-    if key in {"lg_kz", "lg_ru"}:
+    if key in {"lg_kz", "lg_ru", "lg_global"}:
         return allows_evidence(source_relation(key, page.get("match_level", "")), "photo")
     if key in {"dns", "sulpak"}:
         return page.get("match_level") in {"full_sku", "model_and_code_confirmed"}

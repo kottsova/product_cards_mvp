@@ -4,11 +4,11 @@
     const visible = e => !!e.getClientRects().length && getComputedStyle(e).visibility !== 'hidden' && !e.closest('[hidden],[aria-hidden="true"]');
     const excluded = e => !!e.closest('nav,header,footer,aside,[role="navigation"]');
     const secret = /csrf|xsrf|token|session|password|auth|cookie|nonce|signature|secret/i;
-    const url = value => {
+    const url = (value, observedSearchResult=false) => {
         try {
             const u = new URL(value, location.href);
             if (!['http:','https:'].includes(u.protocol) || u.username || u.password || (u.port && !['80','443'].includes(u.port))) return '';
-            if (!policy.allowed_hosts.some(h => u.hostname === h || u.hostname.endsWith('.'+h))) return '';
+            if (!observedSearchResult && !policy.allowed_hosts.some(h => u.hostname === h || u.hostname.endsWith('.'+h))) return '';
             if (secret.test(u.pathname) || /[a-f0-9]{32,}/i.test(u.pathname)) return '';
             for (const k of [...u.searchParams.keys()]) if (!['q','query','search','sku','mpn','model','productcode'].includes(k.toLowerCase())) u.searchParams.delete(k);
             u.hash = '';
@@ -51,7 +51,7 @@
     let textNode,seen=0;
     while ((textNode=walker.nextNode()) && seen++<20000) {
         const e=textNode.parentElement;
-        if (e && !e.closest('script,style,noscript,svg') && /verify (?:that )?you are human|access denied|unusual traffic|checking your browser/i.test(textNode.nodeValue.slice(0,2000)) && visible(e)) {projection.protection=true;break;}
+        if (e && !e.closest('script,style,noscript,svg') && /verify (?:that )?you are human|access denied|unusual traffic|checking your browser|bots use DuckDuckGo too|complete the following challenge/i.test(textNode.nodeValue.slice(0,2000)) && visible(e)) {projection.protection=true;break;}
     }
     if (policy.inspect_only) return {protection:projection.protection};
     const cardPattern=/(?:^|[ _-])(?:product-card|card-product|product-item|search-result|result-item)(?:[ _-]|$)/i;
@@ -59,7 +59,11 @@
         if (overflow) break;
         projection.metrics.links_examined++;
         if (!visible(a) || excluded(a) || a.hasAttribute('download')) continue;
-        const href=url(a.getAttribute('href'));if (!href) continue;
+        const searchProvider=/(^|\.)(google\.com|bing\.com|duckduckgo\.com)$/.test(location.hostname);
+        const resultContainer=searchProvider ? a.closest('li.b_algo, article[data-testid="result"], .result, .web-result') : null;
+        const primaryResultLink=resultContainer?.querySelector('h2 a, h3 a, a[data-testid="result-title-a"], a.result__a, a[href]');
+        if (primaryResultLink && primaryResultLink!==a) continue;
+        const href=url(a.getAttribute('href'), !!resultContainer);if (!href) continue;
         let card=null,node=a;
         for(let i=0;i<4 && node && !['BODY','MAIN','HTML'].includes(node.tagName);i++,node=node.parentElement) {
             if (cardPattern.test(node.className||'') || node.hasAttribute('data-product-id')) {card=node;break;}
@@ -67,8 +71,27 @@
         const title=safeText(a.innerText || a.getAttribute('title') || (card?.querySelector('h2,h3,h4')?.textContent));
         const path=new URL(href).pathname;
         const exact=(policy.queries||[]).some(q=>title.toUpperCase().includes(q.toUpperCase())||path.toUpperCase().includes(q.toUpperCase()));
-        if (!card && !exact && !/\/(?:products?|p|mkt-product)\/[^/]+/i.test(path)) continue;
-        add({type:'result_link',url:href,title,local_card:!!card});
+        // Generic external search results may point at a base-model URL while
+        // the exact article is printed only in the result card. The URL remains
+        // a candidate; the opened manufacturer's page decides identity.
+        const targetHost=new URL(href).hostname;
+        const externalResult=searchProvider &&
+            (location.hostname.endsWith('google.com') ?
+             (policy.search_result_hosts||[]).some(h=>targetHost===h||targetHost.endsWith('.'+h)) :
+             !!resultContainer);
+        if (!card && !exact && !externalResult && !/\/(?:products?|p|mkt-product)\/[^/]+/i.test(path)) continue;
+        let snippet='';
+        if (externalResult) {
+            let parent=resultContainer||a.parentElement;
+            for(let depth=0;depth<5 && parent;depth++,parent=parent.parentElement) {
+                const nearby=safeText(parent.innerText||'');
+                if(nearby.length>title.length+15 && nearby.length<600) {
+                    snippet=safeText(nearby.replace(title,'').trim());
+                    break;
+                }
+            }
+        }
+        add({type:'result_link',url:href,title,snippet,local_card:!!card});
     }
     const scalarKeys=['name','model','sku','mpn','color','size','storage','ram','revision','serviceIndex','region','configuration','productGroupID'];
     function clean(value,depth=0) {

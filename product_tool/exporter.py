@@ -52,9 +52,10 @@ def export_batch(database: Path,batch_id: str)->bytes:
                         else ""
                         for r in rows[p["id"]] for value in [r.get("resolved") or {}]}
             sheet.append([p["row_number"],(p["name"] or p["search_code"]),p["brand"],p["search_code"],lg_base_model(p["search_code"]) if p["brand"].strip().upper()=="LG" else "",*[resolved.get(k,"") for k in keys]])
+    has_lg_global=any(s["source_key"]=="lg_global" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))
     has_bosch=any(s["source_key"]=="bosch_home" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))
     has_samsung=any(s["source_key"]=="samsung" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))  # the Samsung column and sheet exist only when the batch has a Samsung page
-    check=book.create_sheet(_title("Проверка источников",used)); _headers(check,["Товар","Полный артикул","Характеристика","LG Казахстан","LG Россия","Sulpak",*(["Samsung"] if has_samsung else []),*(["Bosch Home"] if has_bosch else []),"Итог","Причина","Статус","Все спорные значения"])
+    check=book.create_sheet(_title("Проверка источников",used)); _headers(check,["Товар","Полный артикул","Характеристика","LG Казахстан","LG Россия","Sulpak",*(["LG other region"] if has_lg_global else []),*(["Samsung"] if has_samsung else []),*(["Bosch Home"] if has_bosch else []),"Итог","Причина","Статус","Все спорные значения"])
     for p in batch["products"]:
         conflict_facts = {}
         for fact in jobs.get_facts(database,p["id"]):
@@ -70,7 +71,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
             label = row["display_name"]
             if r.get("conflict") and label == "Дополнительная характеристика" and row["raw_names"]:
                 label = row["raw_names"][0]
-            check.append([(p["name"] or p["search_code"]),p["search_code"],label,s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value",""),s.get("sulpak",{}).get("raw_value",""),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail])
+            check.append([(p["name"] or p["search_code"]),p["search_code"],label,s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value",""),s.get("sulpak",{}).get("raw_value",""),*([s.get("lg_global",{}).get("raw_value","")] if has_lg_global else []),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail])
     source_sheet=book.create_sheet(_title("Источники",used)); _headers(source_sheet,["Товар","Полный артикул","Сайт","Найденная модель","Уровень совпадения","Доказательство","Дата","Ошибка","URL"])
     for p in batch["products"]:
         for s in jobs.get_source_pages(database,p["id"]):

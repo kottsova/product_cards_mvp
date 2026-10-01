@@ -159,7 +159,7 @@ class RetainedEvidenceTests(unittest.TestCase):
         finally:
             book.close()
 
-    def test_actual_new_page_can_replace_old_page(self):
+    def test_actual_mismatch_page_cannot_replace_confirmed_exact_page(self):
         old = SourceDocument("lg_kz", "LG KZ", "https://www.lg.com/kz/product/old",
                              match_level="full_sku", attributes=[RawAttribute("Power", "100 W")])
         new = SourceDocument("lg_kz", "LG KZ", "https://www.lg.com/kz/product/new",
@@ -168,7 +168,7 @@ class RetainedEvidenceTests(unittest.TestCase):
         jobs.save_source_document(self.db, 4, new)
         page = next(x for x in jobs.get_source_pages(self.db, 4) if x["source_key"] == "lg_kz")
         self.assertEqual((page["url"], page["match_level"], len(jobs.get_facts(self.db, 4))),
-                         (new.url, "mismatch", 0))
+                         (old.url, "full_sku", 1))
 
 
 if __name__ == "__main__":

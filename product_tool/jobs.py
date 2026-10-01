@@ -325,6 +325,21 @@ def save_source_document(
             "SELECT url, match_level, error FROM source_pages WHERE product_id=? AND source_key=?",
             (product_id, document.source_key),
         ).fetchone()
+    # A weaker refresh cannot replace a previously content-confirmed exact page.
+    # The attempt remains in fetch history, while its facts and selected photos stay.
+    if (previous_evidence and previous_evidence["url"] and not previous_evidence["error"]
+            and previous_evidence["match_level"] == "full_sku"
+            and document.match_level != "full_sku"):
+        return
+    if previous_evidence and previous_evidence["match_level"] == "full_sku" and not previous_evidence["error"]:
+        # A same-identity refresh can update fields it actually extracted, but
+        # an empty extraction is not evidence that prior verified data vanished.
+        update_description = update_description and bool(document.description.strip())
+        update_attributes = update_attributes and bool(document.attributes)
+        update_photos = update_photos and bool(document.photo_candidates or document.photos)
+        if (document.source_key == "lg_global" and document.match_level == "full_sku"
+                and previous_evidence["url"] and document.url != previous_evidence["url"]):
+            return
     no_new_page = bool(document.error) or not (
         document.url or document.html or document.attributes or document.photos
     )
@@ -407,7 +422,7 @@ def get_source_pages(path: Path, product_id: int) -> list[dict[str, Any]]:
     with storage._connection(path) as connection:
         rows = connection.execute(
             "SELECT * FROM source_pages WHERE product_id=? "
-            "ORDER BY CASE source_key WHEN 'lg_kz' THEN 1 WHEN 'lg_ru' THEN 2 WHEN 'sulpak' THEN 3 WHEN 'dns' THEN 4 ELSE 5 END",
+            "ORDER BY CASE source_key WHEN 'lg_kz' THEN 1 WHEN 'lg_ru' THEN 2 WHEN 'lg_global' THEN 3 WHEN 'sulpak' THEN 4 WHEN 'dns' THEN 5 ELSE 6 END",
             (product_id,),
         ).fetchall()
     result = []
@@ -422,7 +437,7 @@ def get_facts(path: Path, product_id: int) -> list[dict[str, Any]]:
     with storage._connection(path) as connection:
         rows = connection.execute(
             "SELECT * FROM extracted_attribute_facts WHERE product_id=? "
-            "ORDER BY normalized_name, source_key, id",
+            "ORDER BY normalized_name, CASE source_key WHEN 'lg_kz' THEN 1 WHEN 'lg_ru' THEN 2 WHEN 'lg_global' THEN 3 ELSE 4 END, source_key, id",
             (product_id,),
         ).fetchall()
     return [dict(row) for row in rows]
@@ -519,7 +534,7 @@ def result_counts(path: Path, product_id: int) -> dict[str, int]:
     }
 def identification_status(source_pages: list[dict[str, Any]]) -> str:
     by_key = {page["source_key"]: page for page in source_pages}
-    official = [by_key.get(key, {}) for key in ("lg_kz", "lg_ru", "lg")]
+    official = [by_key.get(key, {}) for key in ("lg_kz", "lg_ru", "lg_global", "lg")]
     # Driven entirely by resolution.SUPPLIERS and each page's own recorded
     # site_name -- never a hardcoded per-supplier branch, so adding or
     # removing a trusted supplier from SUPPLIERS needs no change here.
@@ -552,7 +567,7 @@ def identification_status(source_pages: list[dict[str, Any]]) -> str:
 def get_result(path: Path, product_id: int) -> dict[str, Any]:
     """Compatibility view for existing templates/tests."""
     sources = get_source_pages(path, product_id)
-    lg = next((page for page in sources if page["source_key"] in {"lg_kz", "lg_ru", "lg"}), None)
+    lg = next((page for page in sources if page["source_key"] in {"lg_kz", "lg_ru", "lg_global", "lg"}), None)
     return {
         "page_url": lg["url"] if lg else "",
         "match_status": lg["match_level"] if lg else "none",
@@ -576,7 +591,7 @@ def save_photo_candidates(path: Path, product_id: int, source_key: str, candidat
         connection.execute("DELETE FROM photo_candidates WHERE product_id=? AND source_key=?",(product_id,source_key))
         for item in candidates:
             prior=previous.get(item.asset_key, {})
-            selected=prior.get("selected", int(source_key in {"lg_kz","lg_ru"} and item.kind=="product_gallery" and not item.excluded_reason))
+            selected=prior.get("selected", int(source_key in {"lg_kz","lg_ru","lg_global"} and item.kind=="product_gallery" and not item.excluded_reason))
             measured = prior if prior.get("url") == item.url else {}
             connection.execute(
                 "INSERT INTO photo_candidates (product_id,source_page_id,source_key,url,asset_key,kind,width,height,selected,excluded_reason,fetched_at,verified_width,verified_height,verified_bytes,verified_format) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
@@ -614,7 +629,7 @@ def save_photo_metadata(path: Path, product_id: int, photo_id: int, url: str, *,
 def set_photo_selection(path: Path, product_id: int, asset_keys: list[str], *, mode: str="exact", source_key: str="") -> None:
     with storage._connection(path) as connection:
         if mode=="none": connection.execute("UPDATE photo_candidates SET selected=0 WHERE product_id=?",(product_id,))
-        elif mode=="official": connection.execute("UPDATE photo_candidates SET selected=CASE WHEN source_key IN ('lg_kz','lg_ru') AND kind='product_gallery' THEN 1 ELSE 0 END WHERE product_id=?",(product_id,))
+        elif mode=="official": connection.execute("UPDATE photo_candidates SET selected=CASE WHEN source_key IN ('lg_kz','lg_ru','lg_global') AND kind='product_gallery' THEN 1 ELSE 0 END WHERE product_id=?",(product_id,))
         elif mode=="source": connection.execute("UPDATE photo_candidates SET selected=1 WHERE product_id=? AND source_key=? AND kind='product_gallery'",(product_id,source_key))
         else:
             connection.execute("UPDATE photo_candidates SET selected=0 WHERE product_id=?",(product_id,))

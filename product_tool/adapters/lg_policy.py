@@ -17,6 +17,8 @@ from .policy_session import PolicyAwareSession
 from .sulpak import SulpakAdapter
 
 LG_HOSTS = ("www.lg.com", "lg.com")
+BROWSER_HOSTS = ("www.lg.com", "lg.com", "www.google.com", "google.com", "gstatic.com",
+                 "www.bing.com", "bing.com", "duckduckgo.com")
 DOCUMENT_HOSTS = ("lg.com", "lge.com")  # the support page (lg.com) and the official document host printed on it (gscs-b2c.lge.com)
 DOCUMENT_MAX_BYTES = 25_000_000
 SULPAK_HOSTS = ("www.sulpak.kz", "sulpak.kz")
@@ -37,7 +39,7 @@ def default_lg_adapters(directory: Path, *, clock: Callable[[], float] = time.mo
     lg_http = PolicyAwareSession(log, allowed_hosts=LG_HOSTS, underlying=underlying_lg if underlying_lg is not None else lg_session(), **pacing)
     sulpak_http = PolicyAwareSession(log, allowed_hosts=SULPAK_HOSTS, underlying=underlying_sulpak if underlying_sulpak is not None else requests.Session(), **pacing)
     document_http = PolicyAwareSession(log, allowed_hosts=DOCUMENT_HOSTS, underlying=BinarySafeSession(underlying_lg if underlying_lg is not None else lg_session()), max_bytes=DOCUMENT_MAX_BYTES, **pacing)
-    search = LGBrowserSearch(log, allowed_hosts=LG_HOSTS, clock=clock) if browser_search is True else (browser_search or None)
+    search = LGBrowserSearch(log, allowed_hosts=BROWSER_HOSTS, clock=clock) if browser_search is True else (browser_search or None)
     return (
         LGAdapter(lg_http, clock=clock, browser_search=search),
         LGRUDocumentAdapter(lg_http, documents_http=document_http, clock=clock, browser_search=search),

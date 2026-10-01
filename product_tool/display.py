@@ -52,6 +52,7 @@ DISPLAY_NAME_RU = {
 
 SOURCE_NAMES = {
     "lg": "LG Казахстан", "lg_kz": "LG Казахстан", "lg_ru": "LG Россия",
+    "lg_global": "LG official other region",
     "sulpak": "Sulpak", "manual": "Ручное решение", "dns": "DNS", "bosch_home": "Bosch Home Казахстан", "samsung": "Samsung Казахстан",
 }
 

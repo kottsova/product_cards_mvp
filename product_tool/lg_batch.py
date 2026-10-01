@@ -137,7 +137,7 @@ def card_summary(path: Path, product_id: int, latest: dict | None | object = _UN
     if card["instruction"]["russian"] and not card["official_exact_regions"]:
         reasons.append("Официальная поддержка связывает русскую инструкцию с артикулом; эта связь не подтверждает характеристики и фото товара.")
     official = [source for source in jobs.get_source_pages(path, product_id)
-                if source["source_key"] in {"lg_kz", "lg_ru"} and source["match_level"] == "full_sku" and not source["error"]]
+                if source["source_key"] in {"lg_kz", "lg_ru", "lg_global"} and source["match_level"] == "full_sku" and not source["error"]]
     if 2 not in latest["stages"]:
         reasons.append("Описание не проверялось: этап не выбран.")
     elif official and not any(source["description"].strip() for source in official):

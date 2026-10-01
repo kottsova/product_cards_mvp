@@ -9,7 +9,7 @@ branch, which never overwrites an official or supplier-confirmed value.
 """
 from __future__ import annotations
 
-OFFICIAL_SOURCE_KEYS = frozenset({"lg", "lg_kz", "lg_ru", "hyperx", "bosch_home"})
+OFFICIAL_SOURCE_KEYS = frozenset({"lg", "lg_kz", "lg_ru", "lg_global", "hyperx", "bosch_home"})
 
 # All dealer/retailer fallback sources, including the trusted LG-only
 # full-SKU supplier (sulpak), the general-purpose, all-brand

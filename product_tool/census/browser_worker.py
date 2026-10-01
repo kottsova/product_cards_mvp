@@ -25,7 +25,9 @@ def timeout():
 def guard():
     if signal:raise RuntimeError(signal)
     timeout()
-    if page and page.url!='about:blank' and not allowed(page.url):raise RuntimeError('foreign_redirect')
+    if page and page.url!='about:blank' and not allowed(page.url):
+        counts['last_blocked_host']=(urlsplit(page.url).hostname or '')
+        raise RuntimeError('foreign_redirect')
     if page and page.url!='about:blank':
         protected=page.evaluate(PROJECTION_SCRIPT,dict(policy,inspect_only=True)).get('protection',False)
         if protected:raise RuntimeError('challenge_detected')
@@ -37,7 +39,9 @@ def routed(route):
     if signal or time.monotonic()>=deadline:
         signal=signal or 'deadline_exhausted';counts['blocked_requests']+=1;route.abort();return
     if not allowed(request.url):
-        if nav:signal='foreign_redirect'
+        if nav:
+            signal='foreign_redirect'
+            counts['last_blocked_host']=(urlsplit(request.url).hostname or '')
         counts['blocked_requests']+=1;route.abort();return
     path=urlsplit(request.url).path.lower()
     if re.search(r'/(?:login|register|account|cart|checkout|contact)(?:[/.]|$)',path):
@@ -51,18 +55,30 @@ def routed(route):
         counts['navigations']+=1;pending.append(request.url)
     admission=admit_resource(counts,request.resource_type,path,policy['max_network_requests'])
     if admission!='allowed':
-        if admission=='network_budget_exhausted':signal=admission
+        if admission=='network_budget_exhausted':
+            counts['capped_requests']=counts.get('capped_requests',0)+1
+            # A search result document may already be readable. Block surplus
+            # subresources within the same cap, then inspect its DOM instead of
+            # discarding the whole navigation. A capped document still fails.
+            if nav or policy.get('render_mode')!='render_existing_search_result':
+                signal=admission
         counts['blocked_requests']+=1;route.abort();return
     route.continue_()
 
 def response_event(response):
     global signal
-    if allowed(response.url) and response.status in {403,429}:signal='challenge_detected'
+    if allowed(response.url) and response.status == 403:signal='challenge_detected'
+    if allowed(response.url) and response.status == 429:
+        counts['rate_limit_url']=response.url
+        signal='rate_limited'
 
 def frame_event(frame):
     global signal,last_url
     if frame!=page.main_frame or frame.url=='about:blank':return
-    if not allowed(frame.url):signal='foreign_redirect';return
+    if not allowed(frame.url):
+        signal='foreign_redirect'
+        counts['last_blocked_host']=(urlsplit(frame.url).hostname or '')
+        return
     if frame.url!=last_url:
         if frame.url in pending:pending.remove(frame.url)
         else:
@@ -112,6 +128,7 @@ def command(cmd):
     guard()
     if kind=='goto':
         policy['queries']=cmd.get('queries',[])
+        policy['search_result_hosts']=cmd.get('search_result_hosts',[])
         policy['render_mode']=cmd.get('render_mode','interactive_search_ui')
         if not allowed(cmd['url']):raise RuntimeError('foreign_redirect')
         page.goto(cmd['url'],wait_until='domcontentloaded',timeout=timeout())
@@ -145,6 +162,6 @@ for line in sys.stdin:
         print(json.dumps({'ok':True,'result':result}),flush=True)
         if request['command']=='close':break
     except Exception as exc:
-        known={'challenge_detected','foreign_redirect','budget_exhausted','deadline_exhausted','interaction_blocked','browser_search_ui_unsafe','projection_budget_exhausted','network_budget_exhausted'}
+        known={'challenge_detected','rate_limited','foreign_redirect','budget_exhausted','deadline_exhausted','interaction_blocked','browser_search_ui_unsafe','projection_budget_exhausted','network_budget_exhausted'}
         code=signal or (str(exc) if str(exc) in known else 'browser_javascript_error')
         print(json.dumps({'ok':False,'error':code,'counts':dict(counts)}),flush=True)

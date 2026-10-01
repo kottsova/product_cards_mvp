@@ -1,0 +1,98 @@
+[
+  {
+    "event": "robots_fetch",
+    "outcome": "parsed",
+    "provider": "lg_sitemap",
+    "sitemap_refs": [
+      "https://www.lg.com/sitemap.xml"
+    ],
+    "timestamp": "2026-10-01T11:21:24.569733+00:00",
+    "url": "https://www.lg.com/robots.txt"
+  },
+  {
+    "bytes": 6994,
+    "event": "sitemap_fetch",
+    "kind": "sitemapindex",
+    "loc_count": 80,
+    "outcome": "parsed",
+    "provider": "lg_sitemap",
+    "timestamp": "2026-10-01T11:21:25.722927+00:00",
+    "url": "https://www.lg.com/sitemap.xml"
+  },
+  {
+    "bytes": 608,
+    "event": "sitemap_fetch",
+    "kind": "sitemapindex",
+    "loc_count": 6,
+    "outcome": "parsed",
+    "provider": "lg_sitemap",
+    "timestamp": "2026-10-01T11:21:27.115620+00:00",
+    "url": "https://www.lg.com/uk/uk-gpone-index.xml"
+  },
+  {
+    "bytes": 188126,
+    "event": "sitemap_fetch",
+    "kind": "urlset",
+    "loc_count": 1724,
+    "outcome": "parsed",
+    "provider": "lg_sitemap",
+    "timestamp": "2026-10-01T11:21:29.720622+00:00",
+    "url": "https://www.lg.com/uk/business/sitemap.xml"
+  },
+  {
+    "bytes": 858580,
+    "event": "sitemap_fetch",
+    "kind": "urlset",
+    "loc_count": 10463,
+    "outcome": "parsed",
+    "provider": "lg_sitemap",
+    "timestamp": "2026-10-01T11:21:32.087700+00:00",
+    "url": "https://www.lg.com/uk/sitemap.xml"
+  },
+  {
+    "chain": [
+      "https://www.lg.com/robots.txt",
+      "https://www.lg.com/sitemap.xml",
+      "https://www.lg.com/uk/uk-gpone-index.xml",
+      "https://www.lg.com/uk/sitemap.xml"
+    ],
+    "decision": "candidate",
+    "event": "sitemap_result",
+    "matched_key": "ms2082f",
+    "opened": false,
+    "provider": "lg_sitemap",
+    "sitemap_url": "https://www.lg.com/uk/sitemap.xml",
+    "timestamp": "2026-10-01T11:21:32.097055+00:00",
+    "url": "https://www.lg.com/uk/microwaves/solo/ms2082f/"
+  },
+  {
+    "chain": [
+      "https://www.lg.com/robots.txt",
+      "https://www.lg.com/sitemap.xml",
+      "https://www.lg.com/uk/uk-gpone-index.xml",
+      "https://www.lg.com/uk/sitemap.xml"
+    ],
+    "decision": "accepted",
+    "event": "sitemap_validation",
+    "evidence": "Main product sales code: data-pim-sku=MS2082F.CBKQEUK.EEUK.UK.C",
+    "final_url": "https://www.lg.com/uk/microwaves/solo/ms2082f/",
+    "identity": "full_sku",
+    "matched_key": "ms2082f",
+    "opened": true,
+    "photo_count": 36,
+    "provider": "lg_sitemap",
+    "reason": "exact_product_identity",
+    "sitemap_url": "https://www.lg.com/uk/sitemap.xml",
+    "specs_count": 69,
+    "timestamp": "2026-10-01T11:21:39.797848+00:00",
+    "url": "https://www.lg.com/uk/microwaves/solo/ms2082f/"
+  },
+  {
+    "decision": "skipped",
+    "event": "provider_skip",
+    "provider": "external_search",
+    "query": "",
+    "reason": "exact_official_sitemap_product_page_found",
+    "timestamp": "2026-10-01T11:21:39.953609+00:00"
+  }
+]

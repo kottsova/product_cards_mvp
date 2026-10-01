@@ -131,7 +131,7 @@ def _ensure_product(database: Path, unit: dict, batch_id: str) -> int:
         connection.close()
 
 
-_OFFICIAL_KEYS = frozenset({"hyperx", "lg_kz", "lg_ru", "samsung"})
+_OFFICIAL_KEYS = frozenset({"hyperx", "lg_kz", "lg_ru", "lg_global", "samsung"})
 _EVIDENCE_LEVELS = frozenset({"exact_variant", "full_sku", "code_in_page_text", "base_model", "base_code_confirmed", "model_and_code_confirmed"})
 
 
@@ -154,7 +154,7 @@ def _stop_code(job: dict, sources: list[dict], conflicts: int = 0) -> str:
             return "identity_mismatch"
         if conflicts:
             return "attribute_conflict"
-        if any(key in {"lg_kz", "lg_ru"} and level == "full_sku" for key, level in levels):
+        if any(key in {"lg_kz", "lg_ru", "lg_global"} and level == "full_sku" for key, level in levels):
             return "official_full_sku_awaiting_supplier_confirmation"
         if ("dns", "model_and_code_confirmed") in levels:
             return "dealer_only_needs_human_review"

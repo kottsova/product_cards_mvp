@@ -166,49 +166,94 @@ def _support_page_sales_code(html_text: str) -> str:
 
 
 def _augment_with_browser_search(doc: SourceDocument, adapter, full: str, base: str, deadline: float, *, region: str) -> SourceDocument:
-    """Stage 43: after the sitemap failed to reach full_sku, ask LG's own site search (a bounded, real
-    browser render -- see adapters/lg_browser_search.py) and add what it found as EVIDENCE TEXT ONLY.
-    A search hit is never enough by itself to upgrade match_level: only the CANDIDATE PAGE'S OWN printed
-    code, fetched and read like any other official page, counts -- exactly the project's existing rule for
-    support pages (a URL/label containing the article proves nothing on its own)."""
+    """Check bounded regional support results until exact content or budget exhaustion.
+
+    A result title/URL is only a candidate. The opened support page's printed
+    code is the decision point, and later queries remain eligible after rejected
+    results. This does not confer product/spec/photo identity.
+    """
     if adapter.browser_search is None:
         return doc
+    from datetime import datetime, timezone
+    from .lg_support import is_official_support_url, printed_support_codes, registration_component_codes
+    from ..lg_identity import structured_sales_relation
     notes: list[str] = []
-    for component in lg_article_components(full):
+    checked = 0
+    seen_urls: set[str] = set()
+    max_checks = 8
+    components = lg_article_components(full)
+    for component in components:
         component_base = lg_base_model(component)
-        queries = [component] if component == component_base else [component, component_base]
-        result = adapter.browser_search.search(region, queries)
-        if result.outcome != "candidates_found":
-            if result.note:
-                notes.append(result.note)
-            continue
-        for candidate in result.candidates:
-            try:
-                response = fetch_with_retry(adapter.http, candidate.url, deadline=deadline, clock=adapter.clock)
-            except SourceError as exc:
-                notes.append(f"Не удалось открыть кандидата поиска LG ({region}) {candidate.url}: {exc}")
+        # For a kit, reserve the finite browser-navigation budget for both
+        # exact components and the later generic search of the shared base.
+        queries = [component] if len(components) > 1 or component == component_base else [component, component_base]
+        component_confirmed = False
+        component_checked = 0
+        per_component_limit = 4 if len(components) > 1 else max_checks
+        for query in queries:
+            if checked >= max_checks or component_checked >= per_component_limit or adapter.clock() >= deadline:
+                notes.append("LG regional support candidate budget exhausted.")
+                break
+            result = adapter.browser_search.search(region, [query])
+            if result.outcome != "candidates_found":
+                if result.note:
+                    notes.append(result.note)
+                if result.outcome in {"host_stopped", "challenge_detected", "rate_limited", "navigation_error", "runtime_unavailable", "route_not_available"}:
+                    break
                 continue
-            # Keep a verified support hit as a candidate for the ordinary support
-            # evidence step. The search label and URL never establish identity.
-            from .lg_support import is_official_support_url, printed_support_codes, registration_component_codes
-            if not is_official_support_url(response.url):
-                notes.append(f"LG support candidate redirected off the official support route: {response.url}.")
-                continue
-            codes = (*printed_support_codes(response.text), *registration_component_codes(response.text, response.url))
-            code = codes[0] if codes else ""
-            from ..lg_identity import structured_sales_relation
-            if any(structured_sales_relation(component, printed) == "exact" for printed in codes):
-                adapter.support_candidate_urls.append(response.url)
-                adapter.support_candidate_pages[response.url] = response.text
-                notes.append(f"Поиск LG ({region}) подтвердил артикул «{component}» на официальной странице поддержки: {response.url}.")
-            elif code:
-                notes.append(f"Поиск LG ({region}) нашёл «{component}» в результатах, но открытая страница поддержки показывает другой код: {code} ({response.url}); артикул этим источником не подтверждён.")
-            else:
-                notes.append(f"Страница-кандидат поиска LG ({region}) не содержит распознаваемого кода товара: {response.url}.")
-    notes = list(dict.fromkeys(notes))  # several candidate links commonly redirect to the same support page; do not repeat the same sentence
-    if not notes:
-        return doc
-    return replace(doc, evidence=(doc.evidence + " " if doc.evidence else "") + " ".join(notes), fetched_at=doc.fetched_at)
+            for candidate in result.candidates:
+                if checked >= max_checks or component_checked >= per_component_limit or adapter.clock() >= deadline:
+                    break
+                if candidate.url in seen_urls:
+                    continue
+                seen_urls.add(candidate.url)
+                checked += 1
+                component_checked += 1
+                relation = "unknown"
+                reason = ""
+                opened = False
+                final_url = candidate.url
+                try:
+                    response = fetch_with_retry(adapter.http, candidate.url, deadline=deadline, clock=adapter.clock)
+                    opened = True
+                    final_url = response.url
+                    if not is_official_support_url(response.url):
+                        reason = "redirected_off_official_support_route"
+                        notes.append(f"LG support candidate redirected off the official support route: {response.url}.")
+                    else:
+                        codes = (*printed_support_codes(response.text),
+                                 *registration_component_codes(response.text, response.url))
+                        relation = "exact" if any(
+                            structured_sales_relation(component, printed) == "exact" for printed in codes
+                        ) else "other_code" if codes else "no_printed_code"
+                        if relation == "exact":
+                            adapter.support_candidate_urls.append(response.url)
+                            adapter.support_candidate_pages[response.url] = response.text
+                            notes.append(f"LG support search \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u043b \u0430\u0440\u0442\u0438\u043a\u0443\u043b {component} on {response.url}.")
+                            component_confirmed = True
+                        else:
+                            reason = relation
+                            notes.append(f"LG support search: \u0434\u0440\u0443\u0433\u043e\u0439 \u043a\u043e\u0434 at {response.url} for {component}: {', '.join(codes) or 'no printed code'}.")
+                except SourceError as exc:
+                    reason = str(exc)
+                    notes.append(f"LG support candidate could not be opened: {candidate.url}: {exc}.")
+                trace = getattr(adapter.browser_search, "_trace", None)
+                if trace is not None:
+                    trace(event="decision", provider=candidate.provider, query=candidate.query or query,
+                          position=candidate.position, title=candidate.label, snippet="",
+                          url=candidate.url, final_url=final_url,
+                          domain=urlparse(candidate.url).hostname or "", region=region,
+                          candidate_type="support", opened=opened,
+                          decision="accepted" if component_confirmed else "rejected",
+                          reason=reason, identity=relation)
+                if component_confirmed or "policy_host_stopped" in reason or "HTTP 403" in reason or "HTTP 429" in reason:
+                    break
+            if component_confirmed:
+                break
+        # Each kit component must have its own exact support relation.
+    notes = list(dict.fromkeys(notes))
+    return replace(doc, evidence=(doc.evidence + " " if doc.evidence else "") + " ".join(notes),
+                   fetched_at=doc.fetched_at) if notes else doc
 
 
 def extract_lg_attributes(soup: BeautifulSoup) -> list[RawAttribute]:
@@ -319,11 +364,13 @@ def _ru_image_variants(node, page_url: str) -> list[tuple[str, int]]:
 
 
 def extract_lg_photo_candidates(soup: BeautifulSoup, page_url: str, *, region: str) -> list[PhotoCandidate]:
-    gallery_selectors = ("#popSummaryGallery img, #popSummaryGallery source, .c-summary-gallery img, .c-summary-gallery source" if region == "kz" else "#desktop_summary_gallery img, #desktop_summary_gallery source, #mobile_summary_gallery img, #mobile_summary_gallery source, #pdpGallery img, #pdpGallery source, .product-gallery img, .product-gallery source")
+    kz_gallery = "#popSummaryGallery img, #popSummaryGallery source, .c-summary-gallery img, .c-summary-gallery source"
+    other_gallery = "#desktop_summary_gallery img, #desktop_summary_gallery source, #mobile_summary_gallery img, #mobile_summary_gallery source, #pdpGallery img, #pdpGallery source, .product-gallery img, .product-gallery source"
+    gallery_selectors = kz_gallery if region == "kz" else other_gallery if region == "ru" else kz_gallery + ", " + other_gallery
     candidates: list[PhotoCandidate] = []
     for node in soup.select(gallery_selectors):
         variants = _image_urls(node, page_url)
-        if region == "ru":  # Stage 22: a thumbnail's own large picture is in data-medium/data-large; take the largest variant the node names
+        if region in {"ru", "global"}:  # Stage 22: a thumbnail's own large picture is in data-medium/data-large; take the largest variant the node names
             variants = _ru_image_variants(node, page_url) or variants
         if not variants:
             continue
@@ -337,7 +384,7 @@ def extract_lg_photo_candidates(soup: BeautifulSoup, page_url: str, *, region: s
         key = clean_url.lower()
         key = re.sub(r"(?i)(?:small|medium|large)_?(\d+)", r"image_\1", key)
         key = re.sub(r"(?i)_(?:small|medium|large)(\d+)(?:-new)?", r"_image_\1", key)
-        candidates.append(PhotoCandidate(clean_url, key, "product_gallery", width=None if region == "ru" else (size or None)))
+        candidates.append(PhotoCandidate(clean_url, key, "product_gallery", width=None if region in {"ru", "global"} else (size or None)))
     overview = soup.select_one("#overview, #pdp-overview-section")
     if overview:
         for node in overview.select("img, source"):

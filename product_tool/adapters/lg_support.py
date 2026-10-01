@@ -141,6 +141,7 @@ class LGSupportAdapter:
         self.candidate_pages = candidate_pages or {}
         self.candidate_payloads = candidate_payloads or {}
         self.clock = clock
+        self.decision_callback = None
 
     def find_source(self, article: str, *, deadline: float) -> SourceDocument:
         components = lg_article_components(article)
@@ -151,15 +152,21 @@ class LGSupportAdapter:
         notes = []
         best = None
         rank = {"support_candidate": 0, "base_model": 1, "component_only": 2, "full_sku": 3}
-        for url in urls[:3]:
+        for url in urls[:8]:
             try:
                 response = (SimpleNamespace(url=url, text=self.candidate_pages[url])
                             if url in self.candidate_pages else
                             fetch_with_retry(self.http, url, deadline=deadline, clock=self.clock))
             except SourceError as exc:
+                if self.decision_callback:
+                    self.decision_callback(url, url, "unknown", "rejected", str(exc), False)
                 notes.append(f"Наблюдаемую страницу поддержки не удалось проверить: {url}; {exc}")
+                if any(marker in str(exc) for marker in ("policy_host_stopped", "HTTP 403", "HTTP 429", "challenge")):
+                    break
                 continue
             if not is_official_support_url(response.url):
+                if self.decision_callback:
+                    self.decision_callback(url, response.url, "unknown", "rejected", "redirected_off_official_support_route", True)
                 notes.append(f"Перенаправление увело с официальной страницы поддержки: {response.url}")
                 continue
             soup = BeautifulSoup(response.text, "html.parser")
@@ -192,6 +199,10 @@ class LGSupportAdapter:
             document = SourceDocument(f"lg_{region}_support",
                                       self.site_name if region == "kz" else "LG RU support", response.url,
                                       found_model=found, match_level=level, evidence=evidence, html=response.text)
+            if self.decision_callback:
+                self.decision_callback(url, response.url, level,
+                                       "accepted" if level == "full_sku" else "rejected",
+                                       "exact_support_identity" if level == "full_sku" else level, True)
             if best is None or rank[level] > rank[best.match_level]:
                 best = document
             if level == "full_sku":

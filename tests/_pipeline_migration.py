@@ -667,7 +667,22 @@ STAGE53_1_MIGRATION: dict[str, str] = {
     "data/batches.sqlite3": "Stage 53.1: owner uploaded a new 12-row LG batch and the already embedded worker completed its 12 jobs before this diagnostic. No row was replayed or deleted in this stage; the current production bytes and integrity are pinned after a consistent backup.",
 }
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION}
+
+# Stage 54.1: bounded LG discovery fallback, cross-region evidence, and no downgrade.
+STAGE54_1_MIGRATION: dict[str, str] = {
+    "product_tool/adapters/lg.py": "Stage 54.1: Scan bounded regional support candidates past rejected identities and retain decisions.",
+    "product_tool/census/browser_worker.py": "Stage 54.1: allow bounded Google search result links to official LG hosts and report blocked redirect hosts.",
+    "product_tool/adapters/lg_support.py": "Stage 54.1: scan bounded support candidates past three rejected pages and trace exact identity decisions.",
+    "product_tool/display.py": "Stage 54.1: Name cross-region official evidence in the user-visible source description.",
+    "product_tool/exporter.py": "Stage 54.1: Include verified cross-region LG sources in the export audit.",
+    "product_tool/jobs.py": "Stage 54.1: Preserve stronger exact evidence on weaker reruns and recognize cross-region official pages.",
+    "product_tool/lg_batch.py": "Stage 54.1: Recognize a verified cross-region LG source in batch presentation.",
+    "product_tool/resolution.py": "Stage 54.1: Give verified cross-region official LG facts the official source priority.",
+    "product_tool/source_types.py": "Stage 54.1: Register cross-region official LG as a distinct source type.",
+    "product_tool/worker.py": "Stage 54.1: Run bounded shared-browser search after regional misses and retain trace decisions.",
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION, **STAGE54_1_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -941,13 +956,58 @@ STAGE53_1_PINNED_SHA256: dict[str, str] = {
 }
 PINNED_SHA256.update(STAGE53_1_PINNED_SHA256)
 
+# Stage 54.1: exact bytes of the protected discovery and presentation files.
+# The LG adapter pin includes the bounded Google fallback; the browser worker
+# pin includes explicit HTTP 429 classification and its observed response URL.
+# The worker pin includes the saved exact KZ/RU PDP gate that avoids an
+# unnecessary Google fallback on a later transient source refresh.
+STAGE54_1_PINNED_SHA256: dict[str, str] = {
+    "product_tool/adapters/lg.py": "9c9dc1169ecf9c14e82e35f95cf67f78872ad006a5c4a980e9a767a3f784da88",
+    "product_tool/census/browser_worker.py": "6b7e00218bafc80ac8f19df6e9f3fae2cee0617135d59fcbb63eafdf14ef0117",
+    "product_tool/adapters/lg_support.py": "7b190aa236abc79886e8cca7422ceccdc47f9bf29868398652cd73e1bd8ffe28",
+    "product_tool/display.py": "e50c90ea5c17b1fd9e245bfc2c8a429eaaacaf19c703c7ea2a8e741b63a91793",
+    "product_tool/exporter.py": "ca474bff6dbd395c09df24d66f41260c1ac445ae11c75314890f1e21d7aaf999",
+    "product_tool/jobs.py": "f5c2bb911b36b60736743efb49a2272e6d19fa4ead4eec8e3efa09fac294fc00",
+    "product_tool/lg_batch.py": "692c1349b7a57956ca0ace495f4e085c59dd3b8a63084ed9c8350e7274753c4b",
+    "product_tool/resolution.py": "1b119c3c01aec1e1781a688c4b9511f32bf1d6650b98e5dc6c41eaec29e24280",
+    "product_tool/source_types.py": "80bf58f2f815ce4f43fa217ad2e5b5269b2aaec11ac99c8f1433a784486cdd21",
+    "product_tool/worker.py": "0b51519d5c049e8786406a92726199badeed558166598ae10ca1bad54456428e",
+}
+PINNED_SHA256.update(STAGE54_1_PINNED_SHA256)
+
+# Stage 54.2: the LG worker records an explicit exact KZ/RU provider skip and
+# labels the sequential web-provider fallback without changing readiness gates.
+STAGE54_2_PINNED_SHA256: dict[str, str] = {
+    "product_tool/worker.py": "89a68c36fc6fc7141fa5b5e760ce6166c02f4e3aeef669422b3acafc44f77a6e",
+    "product_tool/census/browser_worker.py": "dc5c444a0decd4b6da3a6891f60eacb1be688fb97061a02c5da3c179491c613f",
+}
+PINNED_SHA256.update(STAGE54_2_PINNED_SHA256)
+
+
+# Stage 54.4: the worker inserts official LG sitemap discovery before web fallback.
+STAGE54_4_PINNED_SHA256: dict[str, str] = {
+    "product_tool/worker.py": "3ebb0e4d52a25b51db1aaf9ecd6c546c93f8d9f8f0327725f4bff03b31d455f4",
+}
+PINNED_SHA256.update(STAGE54_4_PINNED_SHA256)
+
+
+# Stage 54.1: this database is the live application state, not a fixture.
+# The Stage 53.1 digest remains an audit snapshot, while routine user uploads
+# and worker jobs are validated by schema/integrity checks in test_live_db_invariants.
+MUTABLE_RUNTIME_PATHS = frozenset({"data/batches.sqlite3"})
+
 
 def check_migrated_file(path: str, actual_sha256: str) -> tuple[bool, str]:
-    """The real protection check for one of the 13 authorized paths: not
-    just 'is this path on the list', but 'does its CURRENT content match
-    the exact hash pinned at migration time'. Returns (ok, message)."""
+    """Verify pinned files by SHA-256; validate live SQLite by invariants.
+
+    The old database digest remains in the migration audit, while routine
+    product uploads and job processing are expected to change its bytes.
+    Returns (ok, message).
+    """
     if path not in ALL_AUTHORIZED_CHANGES:
         return False, f"{path!r} is not part of the authorized Stage 11.4/11.5/12 migration."
+    if path in MUTABLE_RUNTIME_PATHS:
+        return True, f"{path!r} is mutable runtime state; verify schema and integrity separately."
     expected = PINNED_SHA256.get(path)
     if not expected:
         return False, f"{path!r} is listed as authorized but has no pinned post-migration hash recorded."

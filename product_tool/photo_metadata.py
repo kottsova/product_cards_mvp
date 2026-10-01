@@ -15,6 +15,7 @@ ALLOWED_BY_SOURCE = {
     "lg": ("lg.com", "lge.com"),
     "lg_kz": ("lg.com", "lge.com"),
     "lg_ru": ("lg.com", "lge.com"),
+    "lg_global": ("lg.com", "lge.com"),
     "sulpak": ("sulpak.kz",),
     "samsung": ("samsung.com", "samsungimages.com"),
     "bosch_home": ("bosch-home.com", "bosch-home.kz", "bsh-group.com"),
@@ -22,7 +23,7 @@ ALLOWED_BY_SOURCE = {
 
 
 def log_name(source_key: str) -> str:
-    if source_key in {"lg", "lg_kz", "lg_ru", "sulpak"}:
+    if source_key in {"lg", "lg_kz", "lg_ru", "lg_global", "sulpak"}:
         return "lg_fetch_log.json"
     return f"{source_key}_fetch_log.json"
 

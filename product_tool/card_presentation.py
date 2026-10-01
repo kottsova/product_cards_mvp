@@ -8,7 +8,7 @@ from typing import Any
 from .display import display_name_ru, display_source, display_value
 
 
-OFFICIAL = ("lg_ru", "lg_kz", "lg", "samsung", "bosch_home")
+OFFICIAL = ("lg_ru", "lg_kz", "lg_global", "lg", "samsung", "bosch_home")
 SUPPORT = ("lg_ru_support", "lg_kz_support")
 
 
@@ -34,7 +34,7 @@ def _preferred_fact(row: dict[str, Any], pages: dict[str, dict[str, Any]]) -> di
     ru = facts.get("lg_ru")
     if ru and pages.get("lg_ru", {}).get("match_level") == "full_sku":
         return ru
-    for key in ("lg_kz", "lg", "samsung", "bosch_home", "lg_ru"):
+    for key in ("lg_kz", "lg_global", "lg", "samsung", "bosch_home", "lg_ru"):
         fact = facts.get(key)
         if fact and re.search(r"[а-яё]", fact.get("raw_name") or "", re.I):
             return fact
@@ -112,6 +112,8 @@ def _compact_status(row: dict[str, Any]) -> str:
         return "Совпадает"
     if "lg_ru" in facts:
         return "Только LG Россия"
+    if "lg_global" in facts:
+        return "\u0422\u043e\u043b\u044c\u043a\u043e " + display_source("lg_global", row["sources"]["lg_global"].get("site_name", ""))
     if "lg_kz" in facts or "lg" in facts:
         return "Только LG Казахстан"
     selected = value.get("selected_source")
@@ -128,8 +130,10 @@ def present_card_rows(
                             if key not in OFFICIAL + SUPPORT and page.get("url")
                             and page.get("match_level") not in {"not_needed", "mismatch"}})
     columns = []
-    if any(key in pages or any(key in row["sources"] for row in rows) for key in ("lg_ru", "lg_kz", "lg")):
+    if any(key in pages or any(key in row["sources"] for row in rows) for key in ("lg_ru", "lg_kz", "lg_global", "lg")):
         columns = [("lg_ru", "LG Россия"), ("lg_kz", "LG Казахстан")]
+        if "lg_global" in pages or any("lg_global" in row["sources"] for row in rows):
+            columns.append(("lg_global", display_source("lg_global", pages.get("lg_global", {}).get("site_name", ""))))
         if any("lg" in row["sources"] for row in rows):
             columns.append(("lg", "LG официальный сайт"))
     else:

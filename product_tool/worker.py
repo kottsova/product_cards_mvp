@@ -8,12 +8,14 @@ import argparse, json, logging, os, re, time
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Callable
-from . import bosch_pipeline, jobs, samsung_pipeline
+from urllib.parse import urlsplit
+from . import bosch_pipeline, discovery_trace, jobs, lg_discovery_pipeline, samsung_pipeline
 from .adapters.common import ProductDocument, SourceDocument
 from .adapters.dns import DnsAdapter
 from .adapters.bosch_home import BoschHomeAdapter
 from .adapters.hyperx import HyperXAdapter
 from .adapters.lg import LGAdapter, LGRUAdapter, lg_article_components, lg_base_model, normalize_lg_sku
+from .adapters.lg_global import LGGlobalAdapter
 from .lg_identity import structured_sales_relation
 from .adapters.lg_policy import default_lg_adapters
 from .adapters.lg_support import LGSupportAdapter, is_official_support_url, observed_product_support_urls
@@ -143,6 +145,8 @@ def run_once(
     samsung_adapter_factory: Callable[[], object] | None = None,
     bosch_adapter_factory: Callable[[], BoschHomeAdapter] | None = None,
     lg_support_adapter_factory: Callable[[], LGSupportAdapter] | None = None,
+    lg_global_adapter_factory: Callable[[], LGGlobalAdapter] | None = None,
+    lg_sitemap_discovery_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -183,6 +187,11 @@ def run_once(
                 else: lg_kz,lg_ru,sulpak,lg_browser_search=supplied  # Stage 43: optional 4th element, adapters.lg_browser_search.LGBrowserSearch
             else:
                 lg_kz,lg_ru,sulpak,lg_browser_search=default_lg_adapters(database.parent,clock=clock)
+            if lg_browser_search is not None and hasattr(lg_browser_search, "trace_callback"):
+                discovery_trace.initialize(database)
+                lg_browser_search.trace_callback = lambda event: discovery_trace.record(
+                    database, job_id, product_id, event)
+            google_support_urls = ()
             official_deadline=min(total_deadline,start+OFFICIAL_BUDGET_SECONDS)
             for adapter in (lg_kz,lg_ru):
                 if adapter is None: continue
@@ -193,6 +202,74 @@ def run_once(
                 else: doc=adapter.find_source(full,deadline=official_deadline)
                 official_docs.append(doc); _save(database,product_id,doc,stages)
                 jobs.progress(database,job_id,1,f"{doc.site_name}: {doc.match_level}. {doc.error or doc.evidence}",level="warning" if doc.error or doc.match_level not in {"full_sku","base_model"} else "info",source_url=doc.url)
+            # A validated KZ/RU page short-circuits every fallback. Otherwise
+            # use LG's own advertised sitemaps before public web search.
+            exact_current = any(doc.match_level == "full_sku" and not doc.error
+                                and doc.source_key in {"lg_kz", "lg_ru"}
+                                for doc in official_docs)
+            exact_saved = any(page["source_key"] in {"lg_kz", "lg_ru", "lg_global"}
+                              and page["match_level"] == "full_sku"
+                              and page["url"] and not page["error"]
+                              for page in jobs.get_source_pages(database, product_id))
+            can_fallback = not (exact_current or exact_saved) and clock() < official_deadline
+            if can_fallback:
+                global_adapter = ((lg_global_adapter_factory or
+                                   (lambda: LGGlobalAdapter(lg_kz.http, clock=clock)))()
+                                  if (lg_global_adapter_factory is not None or
+                                      isinstance(lg_kz, LGAdapter)) else None)
+                sitemap = None
+                if lg_sitemap_discovery_factory is not None:
+                    sitemap = lg_sitemap_discovery_factory()
+                elif isinstance(lg_kz, LGAdapter):
+                    from .lg_sitemap_discovery import LGOfficialSitemapDiscovery
+                    discovery_trace.initialize(database)
+                    sitemap = LGOfficialSitemapDiscovery(
+                        lg_kz.http, Path(database).parent / "lg_sitemap_cache", clock=clock,
+                        trace_callback=lambda event: discovery_trace.record(
+                            database, job_id, product_id, event))
+                sitemap_outcome = lg_discovery_pipeline.run_sitemap_fallback(
+                    database, job_id, product_id, full, sitemap, kz=lg_kz, ru=lg_ru,
+                    global_adapter=global_adapter, deadline=official_deadline,
+                    stages=stages, clock=clock)
+                if sitemap_outcome.product_document is not None:
+                    doc = sitemap_outcome.product_document
+                    official_docs.append(doc)
+                    jobs.progress(database, job_id, 1,
+                                  f"{doc.site_name} (official sitemap PDP verified): {doc.match_level}. {doc.evidence}",
+                                  source_url=doc.url)
+                    if lg_browser_search is not None and hasattr(lg_browser_search, "_trace"):
+                        lg_browser_search._trace(event="provider_skip", provider="external_search",
+                                                 query="", decision="skipped",
+                                                 reason="exact_official_sitemap_product_page_found")
+                elif lg_browser_search is not None and hasattr(lg_browser_search, "search_google"):
+                    web_outcome = lg_discovery_pipeline.run_web_fallback(
+                        database, job_id, product_id, full, effective_name,
+                        lg_browser_search, kz=lg_kz, ru=lg_ru,
+                        global_adapter=global_adapter, deadline=official_deadline,
+                        stages=stages, clock=clock)
+                    google_support_urls = web_outcome.support_urls
+                    if web_outcome.product_document is not None:
+                        doc = web_outcome.product_document
+                        official_docs.append(doc)
+                        jobs.progress(database, job_id, 1,
+                                      f"{doc.site_name} (web candidate verified on page): {doc.match_level}. {doc.evidence}",
+                                      source_url=doc.url,
+                                      level="info" if doc.match_level == "full_sku" else "warning")
+                    if web_outcome.stop_reason:
+                        jobs.progress(database, job_id, 1,
+                                      "LG web search fallback stopped: " + web_outcome.stop_reason,
+                                      level="warning")
+            elif lg_browser_search is not None and hasattr(lg_browser_search, "_trace"):
+                saved_regional = any(page["source_key"] in {"lg_kz", "lg_ru"}
+                                     and page["match_level"] == "full_sku" and page["url"]
+                                     and not page["error"]
+                                     for page in jobs.get_source_pages(database, product_id))
+                reason = ("exact_kz_ru_product_page_present" if exact_current or saved_regional else
+                          "exact_official_global_product_page_present" if exact_saved else
+                          "official_deadline_exhausted")
+                for provider in ("lg_sitemap", "external_search"):
+                    lg_browser_search._trace(event="provider_skip", provider=provider,
+                                             query="", decision="skipped", reason=reason)
             # Reuse observed URLs already saved for this row and content-tied hits
             # from the existing LG browser search. No per-SKU URL table or new discovery.
             saved_support = [page for page in jobs.get_source_pages(database, product_id)
@@ -210,7 +287,7 @@ def run_once(
                     if snapshot and snapshot["source_url"] == page["url"] and snapshot["content"]:
                         observed_support.extend(observed_product_support_urls(snapshot["content"], page["url"]))
             support_urls = tuple(dict.fromkeys(
-                [page["url"] for page in saved_support] + observed_support
+                [page["url"] for page in saved_support] + observed_support + list(google_support_urls)
                 + [url for adapter in (lg_kz, lg_ru) if adapter is not None
                    for url in getattr(adapter, "support_candidate_urls", ()) if is_official_support_url(url)]
             ))
@@ -237,6 +314,17 @@ def run_once(
                     lg_support.candidate_urls = support_urls
                     lg_support.candidate_pages = {**support_pages, **lg_support.candidate_pages}
                     lg_support.candidate_payloads = {**support_payloads, **lg_support.candidate_payloads}
+                if lg_browser_search is not None and hasattr(lg_browser_search, "_trace") and hasattr(lg_support, "decision_callback"):
+                    def trace_support(url, final_url, identity, decision, reason, opened):
+                        parsed = urlsplit(url)
+                        lg_browser_search._trace(
+                            event="decision", provider="lg_support_page", query="",
+                            position=0, title="", snippet="", url=url, final_url=final_url,
+                            domain=parsed.hostname or "", region=parsed.path.split("/")[1],
+                            candidate_type="support", opened=opened, decision=decision,
+                            reason=reason, identity=identity,
+                        )
+                    lg_support.decision_callback = trace_support
                 support_doc=lg_support.find_source(full,deadline=official_deadline)
                 if support_doc.url:
                     official_docs.append(support_doc)
@@ -424,7 +512,7 @@ def run_once(
             # conflict, is enough for `done`; a supplier/dealer confirmation is optional. Card completeness is judged
             # apart from the status (readiness.py) and its gaps are written next to it, never hidden behind `done`.
             # Support/manual identity does not establish the commerce product's specs or photo identity.
-            official_exact=any(x["source_key"] in {"lg_kz","lg_ru"} and x["match_level"]=="full_sku" and not x["error"] for x in sources)
+            official_exact=any(x["source_key"] in {"lg_kz","lg_ru","lg_global"} and x["match_level"]=="full_sku" and not x["error"] for x in sources)
             support_pages = [x for x in sources if x["source_key"] in {"lg_kz_support", "lg_ru_support"}
                              and x["url"] and not x["error"]]
             if not official_exact and support_pages:
