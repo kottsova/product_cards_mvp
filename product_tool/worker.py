@@ -14,7 +14,7 @@ from .adapters.common import ProductDocument, SourceDocument
 from .adapters.dns import DnsAdapter
 from .adapters.bosch_home import BoschHomeAdapter
 from .adapters.hyperx import HyperXAdapter
-from .adapters.lg import LGAdapter, LGRUAdapter, lg_article_components, lg_base_model, normalize_lg_sku
+from .adapters.lg import LGAdapter, LGRUAdapter, _augment_with_browser_search, lg_article_components, lg_base_model, normalize_lg_sku
 from .adapters.lg_global import LGGlobalAdapter
 from .lg_identity import structured_sales_relation
 from .adapters.lg_policy import default_lg_adapters
@@ -198,7 +198,7 @@ def run_once(
                 if clock()>=official_deadline:
                     doc=SourceDocument(adapter.source_key,adapter.site_name,"",error="Регион не проверен: исчерпан общий 20-секундный бюджет официального поиска.")
                 elif isinstance(adapter,(LGAdapter,LGRUAdapter)):
-                    doc=adapter.find_source(full,deadline=official_deadline,fallback_models=name_models)
+                    doc=adapter.find_source(full,deadline=official_deadline,fallback_models=name_models, support_search=False)
                 else: doc=adapter.find_source(full,deadline=official_deadline)
                 official_docs.append(doc); _save(database,product_id,doc,stages)
                 jobs.progress(database,job_id,1,f"{doc.site_name}: {doc.match_level}. {doc.error or doc.evidence}",level="warning" if doc.error or doc.match_level not in {"full_sku","base_model"} else "info",source_url=doc.url)
@@ -270,6 +270,26 @@ def run_once(
                 for provider in ("lg_sitemap", "external_search"):
                     lg_browser_search._trace(event="provider_skip", provider=provider,
                                              query="", decision="skipped", reason=reason)
+            # Regional support search is discovery for manuals, not a PDP. Run it
+            # after both official sitemap and external PDP fallback so a slow
+            # sequence of unrelated support hits cannot starve exact PDP lookup.
+            if not (exact_current or exact_saved) and clock() < official_deadline:
+                for adapter in (lg_kz, lg_ru):
+                    if not isinstance(adapter, (LGAdapter, LGRUAdapter)) or clock() >= official_deadline:
+                        continue
+                    index = next((i for i, item in enumerate(official_docs)
+                                  if item.source_key == adapter.source_key), None)
+                    if index is None:
+                        continue
+                    doc = official_docs[index]
+                    if doc.match_level == "full_sku" or adapter.browser_search is None:
+                        continue
+                    augmented = _augment_with_browser_search(
+                        doc, adapter, full, base, official_deadline,
+                        region="kz" if adapter.source_key == "lg_kz" else "ru")
+                    if augmented.evidence != doc.evidence:
+                        official_docs[index] = augmented
+                        _save(database, product_id, augmented, stages)
             # Reuse observed URLs already saved for this row and content-tied hits
             # from the existing LG browser search. No per-SKU URL table or new discovery.
             saved_support = [page for page in jobs.get_source_pages(database, product_id)

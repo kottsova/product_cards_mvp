@@ -682,7 +682,13 @@ STAGE54_1_MIGRATION: dict[str, str] = {
     "product_tool/worker.py": "Stage 54.1: Run bounded shared-browser search after regional misses and retain trace decisions.",
 }
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION, **STAGE54_1_MIGRATION}
+STAGE56_MIGRATION: dict[str, str] = {
+    "product_tool/adapters/lg.py": "Stage 56: allow the production worker to defer regional support search until exact PDP discovery has had its sitemap and web fallback budget.",
+    "product_tool/worker.py": "Stage 56: run KZ/RU and other-region sitemap PDP checks before slower regional support candidates, preserving external search after a sitemap miss.",
+    "product_tool/exporter.py": "Stage 56: include a Sulpak comparison column only when the exported batch contains actual Sulpak facts.",
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION, **STAGE54_1_MIGRATION, **STAGE56_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -1001,6 +1007,13 @@ STAGE55_PINNED_SHA256: dict[str, str] = {
 }
 PINNED_SHA256.update(STAGE55_PINNED_SHA256)
 
+
+STAGE56_PINNED_SHA256: dict[str, str] = {
+    "product_tool/adapters/lg.py": "6a62b32bda8787d81766932d9acebb273596cbb0f4fdde30bae68e310027392b",
+    "product_tool/worker.py": "c4975fc3fcc74ddea1eaf83d1f0b1278eebe59d3c480041eda60115f78e82298",
+    "product_tool/exporter.py": "e3bb506a5fe235eb4e2080240d2f46d9259034d31e0dd2a3a2d79c8184d09a22",
+}
+PINNED_SHA256.update(STAGE56_PINNED_SHA256)
 
 # Stage 54.1: this database is the live application state, not a fixture.
 # The Stage 53.1 digest remains an audit snapshot, while routine user uploads

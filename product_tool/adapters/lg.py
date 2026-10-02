@@ -432,7 +432,7 @@ class LGAdapter:
         found, level, evidence = _product_designation(page.soup, full, base, region="kz")
         photos = extract_lg_photo_candidates(page.soup, page.url, region="kz")
         return SourceDocument(self.source_key,self.site_name,page.url,found_model=found,match_level=level,evidence=evidence,attributes=extract_lg_attributes(page.soup),description=extract_lg_description(page.soup),photos=[p.url for p in photos if p.kind=="product_gallery"],photo_candidates=photos,html=str(page.soup))
-    def find_source(self, full_sku, *, deadline, fallback_models=()):
+    def find_source(self, full_sku, *, deadline, fallback_models=(), support_search=True):
         official_deadline=min(deadline,self.clock()+OFFICIAL_BUDGET_SECONDS); full=normalize_lg_sku(full_sku); base=lg_base_model(full)
         try:
             urls=self.sitemap_product_urls(official_deadline)
@@ -446,7 +446,7 @@ class LGAdapter:
                 doc=None
             if doc is None:
                 doc=SourceDocument(self.source_key,self.site_name,"",match_level="mismatch",evidence="Страница артикула или базовой модели не найдена в LG sitemap.")
-            if doc.match_level!="full_sku":
+            if support_search and doc.match_level!="full_sku":
                 doc=_augment_with_browser_search(doc,self,full,base,official_deadline,region="kz")
             return doc
         except LGSourceError as exc:
@@ -477,7 +477,7 @@ class LGRUAdapter:
         found,level,evidence=_product_designation(soup,full,base,region="ru")
         photos=extract_lg_photo_candidates(soup,response.url,region="ru")
         return SourceDocument(self.source_key,self.site_name,response.url,found_model=found,match_level=level,evidence=evidence,attributes=extract_lg_ru_attributes(soup),description=extract_lg_ru_description(soup),photos=[p.url for p in photos if p.kind=="product_gallery"],photo_candidates=photos,html=response.text)
-    def find_source(self, full_sku, *, deadline, fallback_models=()):
+    def find_source(self, full_sku, *, deadline, fallback_models=(), support_search=True):
         full=normalize_lg_sku(full_sku); base=lg_base_model(full)
         try:
             urls=self.sitemap_product_urls(deadline)
@@ -491,7 +491,7 @@ class LGRUAdapter:
                 doc=None
             if doc is None:
                 doc=SourceDocument(self.source_key,self.site_name,"",match_level="mismatch",evidence="Страница артикула или базовой модели не найдена в sitemap LG Россия.")
-            if doc.match_level!="full_sku":
+            if support_search and doc.match_level!="full_sku":
                 doc=_augment_with_browser_search(doc,self,full,base,deadline,region="ru")
             return doc
         except SourceError as exc:

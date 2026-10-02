@@ -1,0 +1,2904 @@
+{
+  "frozen_dataset_sha256": "15acec8f8e3a003338283ac7b2d848af676c0dca36b770cf6e35b6e5298d4b51",
+  "batch_id": "stage56_independent_frozen",
+  "product_count": 15,
+  "job_count": 15,
+  "sqlite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "rows": [
+    {
+      "product_id": 1,
+      "article": "32LB650B6LA",
+      "category": "Телевизоры",
+      "catalog_name": "Телевизор LED 32'' 32LB650B6LA 720 HD Smart TV",
+      "job_id": "02d88823ec3d4397bd218c4942094953",
+      "job_status": "done",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 61. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+      "readiness": "export_ready",
+      "blocking_gaps": [],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "32LB650B6LA"
+        ],
+        "base": "32LB650B6LA",
+        "from_name": [
+          "32LB650B6LA"
+        ],
+        "sitemap_keys": [
+          "32lb650b6la"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/tvs-soundbars/smart-tvs/32lb650b6la/",
+          "found_model": "32LB650B6LA",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: 32LB650B6LA.ADKG.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/televisions/lg-32lb650b6la",
+          "found_model": "32LB650B6LA",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: 32LB650B6LA.ARUG.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Телевизор LED 32'' 32LB650B6LA 720 HD Smart TV» (артикул 32LB650B6LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-32LB650B6LA.ARUG",
+          "found_model": "32LB650B6LA.ARUG",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: 32LB650B6LA.ARUG; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 61,
+      "facts_by_source": {
+        "lg_ru": 61
+      },
+      "confirmed_characteristics": 61,
+      "official_facts_from_exact_pages": 61,
+      "photo_candidates": 149,
+      "photos_by_source": {
+        "lg_kz": 83,
+        "lg_ru": 66
+      },
+      "confirmed_photos": 24,
+      "official_gallery_from_exact_pages": 24,
+      "documents": [
+        {
+          "source_key": "lg_ru",
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=J5pMcbGHOEyMg7nIHPdWHQ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-32LB650B6LA.ARUG"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 0,
+      "main_gap": "",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул 32LB650B6LA; базовая модель 32LB650B6LA.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: 32LB650B6LA.ADKG.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/tvs-soundbars/smart-tvs/32lb650b6la/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: 32LB650B6LA.ARUG.",
+          "source_url": "https://www.lg.com/ru/televisions/lg-32lb650b6la"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: 32LB650B6LA.ARUG; компоненты комплекта, подтверждённые содержимым: 32LB650B6LA. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-32LB650B6LA.ARUG"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Телевизор LED 32'' 32LB650B6LA 720 HD Smart TV» (артикул 32LB650B6LA). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1.",
+          "source_url": "https://www.lg.com/ru/televisions/lg-32lb650b6la"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: verified_russian_instruction; not_confirmed_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=s2GhBhSZyGsHjdXB1gXUA; models=[]; verified_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=J5pMcbGHOEyMg7nIHPdWHQ; models=[]",
+          "source_url": "https://www.lg.com/ru/support/product/lg-32LB650B6LA.ARUG"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 61. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 2,
+      "article": "43NANO80A6B.ARUG",
+      "category": "Телевизоры",
+      "catalog_name": "Телевизор LG 43NANO80A6B.ARUG",
+      "job_id": "c3b08fd9c8a643d38209add0110c7bc0",
+      "job_status": "needs_review",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 40; подтверждено поставщиком: 64. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "unresolved_conflicts"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "43NANO80A6B.ARUG"
+        ],
+        "base": "43NANO80A6B",
+        "from_name": [
+          "43NANO80A6B"
+        ],
+        "sitemap_keys": [
+          "43nano80a6barug",
+          "43nano80a6b"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/tvs-soundbars/nanocell/43nano80a6b/",
+          "found_model": "43NANO80A6B",
+          "match_level": "base_model",
+          "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/televisions/lg-43nano80a6b",
+          "found_model": "43NANO80A6B.ARUG",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: 43NANO80A6B.ARUG.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Телевизор LG 43NANO80A6B.ARUG» (артикул 43NANO80A6B.ARUG). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-43NANO80A6B.ARUG",
+          "found_model": "43NANO80A6B.ARUG",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: 43NANO80A6B.ARUG; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_ru"
+      ],
+      "raw_facts": 135,
+      "facts_by_source": {
+        "lg_kz": 70,
+        "lg_ru": 65
+      },
+      "confirmed_characteristics": 64,
+      "official_facts_from_exact_pages": 65,
+      "photo_candidates": 169,
+      "photos_by_source": {
+        "lg_kz": 117,
+        "lg_ru": 52
+      },
+      "confirmed_photos": 12,
+      "official_gallery_from_exact_pages": 12,
+      "documents": [
+        {
+          "source_key": "lg_ru",
+          "title": "Руководства пользователя · связь с моделью подтверждена страницей поддержки, а не текстом PDF",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=K8cG70gbfo8mi4xQ09i7g",
+          "source_url": "https://www.lg.com/ru/support/product/lg-43NANO80A6B.ARUG"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 1,
+      "main_gap": "unresolved_conflicts",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул 43NANO80A6B.ARUG; базовая модель 43NANO80A6B.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: base_model. Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "source_url": "https://www.lg.com/kz/tvs-soundbars/nanocell/43nano80a6b/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: 43NANO80A6B.ARUG.",
+          "source_url": "https://www.lg.com/ru/televisions/lg-43nano80a6b"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: 43NANO80A6B.ARUG; компоненты комплекта, подтверждённые содержимым: 43NANO80A6B.ARUG. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-43NANO80A6B.ARUG"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Телевизор LG 43NANO80A6B.ARUG» (артикул 43NANO80A6B.ARUG). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1.",
+          "source_url": "https://www.lg.com/ru/televisions/lg-43nano80a6b"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: verified_russian_instruction; verified_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=K8cG70gbfo8mi4xQ09i7g; models=[]",
+          "source_url": "https://www.lg.com/ru/support/product/lg-43NANO80A6B.ARUG"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 1; только базовая модель LG: 40; подтверждено поставщиком: 64. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 3,
+      "article": "43NANO756QA_KZ",
+      "category": "Телевизоры",
+      "catalog_name": "Телевизор 43NANO756QA/43\"/4K UHD/Smart TV/Wi-Fi/Bluetooth",
+      "job_id": "470609f263a4496daf0f145e4a745ede",
+      "job_status": "needs_review",
+      "job_message": "Официальная страница поддержки LG найдена как кандидат; содержимое пока не подтверждает полный артикул. Реальных конфликтов: 0; только базовая модель LG: 150; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "no_official_full_sku_page",
+        "no_official_specifications",
+        "no_official_gallery_photo",
+        "instruction_missing"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "43NANO756QA_KZ"
+        ],
+        "base": "43NANO756QA",
+        "from_name": [
+          "43NANO756QA"
+        ],
+        "sitemap_keys": [
+          "43nano756qakz",
+          "43nano756qa"
+        ]
+      },
+      "queries": [
+        {
+          "provider": "lg_regional",
+          "query": "43NANO756QA_KZ",
+          "url": "https://www.lg.com/ru/search/search-support?search=43NANO756QA_KZ&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=43NANO756QA_KZ&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        },
+        {
+          "provider": "lg_regional",
+          "query": "43NANO756QA",
+          "url": "https://www.lg.com/ru/search/search-support?search=43NANO756QA&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=43NANO756QA&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        }
+      ],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/tvs-soundbars/nanocell/43nano756qa/",
+          "found_model": "43NANO756QA",
+          "match_level": "base_model",
+          "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/televisions/lg-43nano756qa",
+          "found_model": "43NANO756QA",
+          "match_level": "base_model",
+          "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO81A6A.ADRB for 43NANO756QA_KZ: 43NANO81A6A.ADRB. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO81A6A.ARUG for 43NANO756QA_KZ: 43NANO81A6A.ARUG. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO80T6A.ARUG for 43NANO756QA_KZ: 43NANO80T6A.ARUG. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO80A6B.ARUG for 43NANO756QA_KZ: 43NANO80A6B.ARUG. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO80T6A.ARUB for 43NANO756QA_KZ: 43NANO80T6A.ARUB. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO90A6B.ADRB for 43NANO756QA_KZ: 43NANO90A6B.ADRB. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO756QA.ARU for 43NANO756QA_KZ: 43NANO756QA.ARU.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Телевизор 43NANO756QA/43\"/4K UHD/Smart TV/Wi-Fi/Bluetooth» (артикул 43NANO756QA_KZ). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-43NANO756QA.ARU",
+          "found_model": "43NANO756QA.ARU",
+          "match_level": "unknown",
+          "evidence": "Support page printed sales code: 43NANO756QA.ARU; relation: unknown.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [],
+      "raw_facts": 156,
+      "facts_by_source": {
+        "lg_kz": 45,
+        "lg_ru": 111
+      },
+      "confirmed_characteristics": 0,
+      "official_facts_from_exact_pages": 0,
+      "photo_candidates": 48,
+      "photos_by_source": {
+        "lg_kz": 6,
+        "lg_ru": 42
+      },
+      "confirmed_photos": 0,
+      "official_gallery_from_exact_pages": 0,
+      "documents": [],
+      "manual_status": "Не проверена",
+      "real_conflicts": 0,
+      "main_gap": "no_official_full_sku_page",
+      "trace_events": 27,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул 43NANO756QA_KZ; базовая модель 43NANO756QA.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: base_model. Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "source_url": "https://www.lg.com/kz/tvs-soundbars/nanocell/43nano756qa/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: base_model. Основная карточка LG не подтверждает полный артикул; видна только базовая модель. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO81A6A.ADRB for 43NANO756QA_KZ: 43NANO81A6A.ADRB. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO81A6A.ARUG for 43NANO756QA_KZ: 43NANO81A6A.ARUG. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO80T6A.ARUG for 43NANO756QA_KZ: 43NANO80T6A.ARUG. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO80A6B.ARUG for 43NANO756QA_KZ: 43NANO80A6B.ARUG. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO80T6A.ARUB for 43NANO756QA_KZ: 43NANO80T6A.ARUB. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO90A6B.ADRB for 43NANO756QA_KZ: 43NANO90A6B.ADRB. LG support search: другой код at https://www.lg.com/ru/support/product/lg-43NANO756QA.ARU for 43NANO756QA_KZ: 43NANO756QA.ARU.",
+          "source_url": "https://www.lg.com/ru/televisions/lg-43nano756qa"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан — поддержка: support_candidate. Наблюдаемую страницу поддержки не удалось проверить: https://www.lg.com/kz/support/product-support/cs-43NANO756QA.ADKG; Исчерпан бюджет времени источника. Наблюдаемую страницу поддержки не удалось проверить: https://www.lg.com/ru/support/product/lg-43NANO756QA.ARU; Исчерпан бюджет времени источника.",
+          "source_url": "https://www.lg.com/kz/support/product-support/cs-43NANO756QA.ADKG"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Телевизор 43NANO756QA/43\"/4K UHD/Smart TV/Wi-Fi/Bluetooth» (артикул 43NANO756QA_KZ). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 2; файлов проверено по содержимому: 1; найдена инструкция на русском языке, но её текст не называет модель или её семейство (связь только через страницу поддержки), она не сохранена.",
+          "source_url": "https://www.lg.com/ru/televisions/lg-43nano756qa"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Официальная страница поддержки LG найдена как кандидат; содержимое пока не подтверждает полный артикул. Реальных конфликтов: 0; только базовая модель LG: 150; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 4,
+      "article": "F2Y1NS5W.AGWPCOM",
+      "category": "Стиральные машины",
+      "catalog_name": "Стиральная машина узкая 6 кг, F2Y1NS5W",
+      "job_id": "9267cc845f48457c904f214243fe51be",
+      "job_status": "needs_review",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 5; только базовая модель LG: 0; подтверждено поставщиком: 117. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_variant_link_unconfirmed, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "unresolved_conflicts",
+        "instruction_variant_link_unconfirmed"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "F2Y1NS5W.AGWPCOM"
+        ],
+        "base": "F2Y1NS5W",
+        "from_name": [
+          "F2Y1NS5W"
+        ],
+        "sitemap_keys": [
+          "f2y1ns5wagwpcom",
+          "f2y1ns5w"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/laundry/washing-machines/f2y1ns5w/",
+          "found_model": "F2Y1NS5W.AGWPCOM",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: F2Y1NS5W.AGWPCOM.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/laundry/lg-f2y1ns5w",
+          "found_model": "F2Y1NS5W.AGWPCOM",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: F2Y1NS5W.AGWPCOM.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Стиральная машина узкая 6 кг, F2Y1NS5W» (артикул F2Y1NS5W.AGWPCOM). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-F2Y1NS5W",
+          "found_model": "F2Y1NS5W.ABWPCOM",
+          "match_level": "base_model",
+          "evidence": "Support page printed sales code: F2Y1NS5W.ABWPCOM; relation: regional_variant_of.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 153,
+      "facts_by_source": {
+        "lg_kz": 108,
+        "lg_ru": 45
+      },
+      "confirmed_characteristics": 117,
+      "official_facts_from_exact_pages": 153,
+      "photo_candidates": 117,
+      "photos_by_source": {
+        "lg_kz": 68,
+        "lg_ru": 49
+      },
+      "confirmed_photos": 43,
+      "official_gallery_from_exact_pages": 43,
+      "documents": [
+        {
+          "source_key": "lg_ru",
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=QJ12ooFrBkQ8Z7MbmQAqLA",
+          "source_url": "https://www.lg.com/ru/support/product/lg-F2Y1NS5W"
+        }
+      ],
+      "manual_status": "Не проверена",
+      "real_conflicts": 5,
+      "main_gap": "unresolved_conflicts",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул F2Y1NS5W.AGWPCOM; базовая модель F2Y1NS5W.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: F2Y1NS5W.AGWPCOM.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/laundry/washing-machines/f2y1ns5w/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: F2Y1NS5W.AGWPCOM.",
+          "source_url": "https://www.lg.com/ru/laundry/lg-f2y1ns5w"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG RU support: base_model. Официальная страница поддержки открыта. Поля с кодом товара: F2Y1NS5W.ABWPCOM, F2Y1NS5W; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-F2Y1NS5W"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Стиральная машина узкая 6 кг, F2Y1NS5W» (артикул F2Y1NS5W.AGWPCOM). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1.",
+          "source_url": "https://www.lg.com/ru/laundry/lg-f2y1ns5w"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: kit_identity_unconfirmed; ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-F2Y1NS5W"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_variant_link_unconfirmed, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 5; только базовая модель LG: 0; подтверждено поставщиком: 117. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_variant_link_unconfirmed, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 5,
+      "article": "W1S1CVKK2HM",
+      "category": "Стиральные машины",
+      "catalog_name": "Стирально-сушильная машина 18/16 кг, W1S1CVKK2HM",
+      "job_id": "728ff75fa9d646ae8d883046ea416bd3",
+      "job_status": "done",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 30. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "instruction_missing"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "W1S1CVKK2HM"
+        ],
+        "base": "W1S1CVKK2HM",
+        "from_name": [
+          "W1S1CVKK2HM"
+        ],
+        "sitemap_keys": [
+          "w1s1cvkk2hm"
+        ]
+      },
+      "queries": [
+        {
+          "provider": "lg_regional",
+          "query": "W1S1CVKK2HM",
+          "url": "https://www.lg.com/ru/search/search-support?search=W1S1CVKK2HM&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=W1S1CVKK2HM&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        }
+      ],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/laundry/objet-collection-washtower/w1s1cvkk2hm/",
+          "found_model": "W1S1CVKK2HM",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: W1S1CVKK2HM.ABGPCOM.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "",
+          "found_model": "",
+          "match_level": "mismatch",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W18LH for W1S1CVKK2HM: W18LH. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W12LH for W1S1CVKK2HM: W12LH.AWYZERU, W12LH. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W1-KP68R.* for W1S1CVKK2HM: no printed code. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W1-J555R.* for W1S1CVKK2HM: no printed code. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W1-J755R.* for W1S1CVKK2HM: no printed code.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Стирально-сушильная машина 18/16 кг, W1S1CVKK2HM» (артикул W1S1CVKK2HM). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_kz_support",
+          "site_name": "LG Казахстан — поддержка",
+          "url": "https://www.lg.com/kz/support/product-support/cs-W1S1CVKK2HM.ABGPCOM",
+          "found_model": "",
+          "match_level": "support_candidate",
+          "evidence": "Официальная страница поддержки открыта. Поля с кодом товара: нет; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz"
+      ],
+      "raw_facts": 33,
+      "facts_by_source": {
+        "lg_kz": 33
+      },
+      "confirmed_characteristics": 30,
+      "official_facts_from_exact_pages": 33,
+      "photo_candidates": 77,
+      "photos_by_source": {
+        "lg_kz": 77
+      },
+      "confirmed_photos": 22,
+      "official_gallery_from_exact_pages": 22,
+      "documents": [],
+      "manual_status": "Не проверена",
+      "real_conflicts": 0,
+      "main_gap": "instruction_missing",
+      "trace_events": 17,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул W1S1CVKK2HM; базовая модель W1S1CVKK2HM.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: W1S1CVKK2HM.ABGPCOM.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/laundry/objet-collection-washtower/w1s1cvkk2hm/"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W18LH for W1S1CVKK2HM: W18LH. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W12LH for W1S1CVKK2HM: W12LH.AWYZERU, W12LH. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W1-KP68R.* for W1S1CVKK2HM: no printed code. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W1-J555R.* for W1S1CVKK2HM: no printed code. LG support search: другой код at https://www.lg.com/ru/support/product/lg-W1-J755R.* for W1S1CVKK2HM: no printed code.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан — поддержка: support_candidate. Официальная страница поддержки открыта. Поля с кодом товара: нет; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/kz/support/product-support/cs-W1S1CVKK2HM.ABGPCOM"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Стирально-сушильная машина 18/16 кг, W1S1CVKK2HM» (артикул W1S1CVKK2HM). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: kit_identity_unconfirmed; ",
+          "source_url": "https://www.lg.com/kz/support/product-support/cs-W1S1CVKK2HM.ABGPCOM"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 30. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 6,
+      "article": "DC90V9V9WN",
+      "category": "Сушильные машины",
+      "catalog_name": "Сушильная машина 9 кг, тепловой насос, DC90V9V9WN",
+      "job_id": "921986d7beb94ef4aab1174698193f92",
+      "job_status": "needs_review",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 4; только базовая модель LG: 0; подтверждено поставщиком: 93. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "unresolved_conflicts"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "DC90V9V9WN"
+        ],
+        "base": "DC90V9V9WN",
+        "from_name": [
+          "DC90V9V9WN"
+        ],
+        "sitemap_keys": [
+          "dc90v9v9wn"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/laundry/dryers/dc90v9v9wn/",
+          "found_model": "DC90V9V9WN",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: DC90V9V9WN.BBWPCOM.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/laundry/lg-dc90v9v9wn",
+          "found_model": "DC90V9V9WN",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: DC90V9V9WN.BBWPCOM.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Сушильная машина 9 кг, тепловой насос, DC90V9V9WN» (артикул DC90V9V9WN). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-DC90V9V9WN",
+          "found_model": "DC90V9V9WN.ABWPCOM",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: DC90V9V9WN.ABWPCOM; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 138,
+      "facts_by_source": {
+        "lg_kz": 81,
+        "lg_ru": 57
+      },
+      "confirmed_characteristics": 93,
+      "official_facts_from_exact_pages": 138,
+      "photo_candidates": 113,
+      "photos_by_source": {
+        "lg_kz": 69,
+        "lg_ru": 44
+      },
+      "confirmed_photos": 45,
+      "official_gallery_from_exact_pages": 45,
+      "documents": [
+        {
+          "source_key": "lg_ru",
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=OfSrDRFk9hESKy5RU1lQIQ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-DC90V9V9WN"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 4,
+      "main_gap": "unresolved_conflicts",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул DC90V9V9WN; базовая модель DC90V9V9WN.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: DC90V9V9WN.BBWPCOM.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/laundry/dryers/dc90v9v9wn/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: DC90V9V9WN.BBWPCOM.",
+          "source_url": "https://www.lg.com/ru/laundry/lg-dc90v9v9wn"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: DC90V9V9WN.ABWPCOM, DC90V9V9WN; компоненты комплекта, подтверждённые содержимым: DC90V9V9WN. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-DC90V9V9WN"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Сушильная машина 9 кг, тепловой насос, DC90V9V9WN» (артикул DC90V9V9WN). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1.",
+          "source_url": "https://www.lg.com/ru/laundry/lg-dc90v9v9wn"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: verified_russian_instruction; verified_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=OfSrDRFk9hESKy5RU1lQIQ; models=['DC90V9V9WN']",
+          "source_url": "https://www.lg.com/ru/support/product/lg-DC90V9V9WN"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 4; только базовая модель LG: 0; подтверждено поставщиком: 93. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 7,
+      "article": "GC-B399SMCL.APZQCIS",
+      "category": "Холодильники",
+      "catalog_name": "Холодильник двухкамерный 306 л No Frost, GC-B399SMCL",
+      "job_id": "6bc0c614ecaf4734919fe8e396fc28dd",
+      "job_status": "done",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 19. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "instruction_missing"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "GC-B399SMCL.APZQCIS"
+        ],
+        "base": "GC-B399SMCL",
+        "from_name": [
+          "GC-B399SMCL"
+        ],
+        "sitemap_keys": [
+          "gcb399smclapzqcis",
+          "gcb399smcl"
+        ]
+      },
+      "queries": [
+        {
+          "provider": "lg_regional",
+          "query": "GC-B399SMCL.APZQCIS",
+          "url": "https://www.lg.com/ru/search/search-support?search=GC-B399SMCL.APZQCIS&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=GC-B399SMCL.APZQCIS&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        },
+        {
+          "provider": "lg_regional",
+          "query": "GC-B399SMCL",
+          "url": "https://www.lg.com/ru/search/search-support?search=GC-B399SMCL&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=GC-B399SMCL&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        }
+      ],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/refrigerators/bottom-freezer/gc-b399smcl/",
+          "found_model": "GC-B399SMCL.APZQCIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: GC-B399SMCL.APZQCIS.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "",
+          "found_model": "",
+          "match_level": "mismatch",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B401FAPM for GC-B399SMCL.APZQCIS: GC-B401FAPM.AGSQCIS, GC-B401FAPM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B404FEQM for GC-B399SMCL.APZQCIS: GC-B404FEQM.ABEQCIS, GC-B404FEQM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B404FAQM for GC-B399SMCL.APZQCIS: GC-B404FAQM.AGSQCIS, GC-B404FAQM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B401FEPM for GC-B399SMCL.APZQCIS: GC-B401FEPM.ABEQCIS, GC-B401FEPM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B22FHEGM for GC-B399SMCL.APZQCIS: GC-B22FHEGM.ABBQCIS, GC-B22FHEGM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B459SECL for GC-B399SMCL.APZQCIS: GC-B459SECL.ASEQCIS, GC-B459SECL.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Холодильник двухкамерный 306 л No Frost, GC-B399SMCL» (артикул GC-B399SMCL.APZQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_kz_support",
+          "site_name": "LG Казахстан — поддержка",
+          "url": "https://www.lg.com/kz/support/product-support/cs-GC-B399SMCL.APZQCIS",
+          "found_model": "",
+          "match_level": "support_candidate",
+          "evidence": "Официальная страница поддержки открыта. Поля с кодом товара: нет; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz"
+      ],
+      "raw_facts": 19,
+      "facts_by_source": {
+        "lg_kz": 19
+      },
+      "confirmed_characteristics": 19,
+      "official_facts_from_exact_pages": 19,
+      "photo_candidates": 49,
+      "photos_by_source": {
+        "lg_kz": 49
+      },
+      "confirmed_photos": 30,
+      "official_gallery_from_exact_pages": 30,
+      "documents": [],
+      "manual_status": "Не проверена",
+      "real_conflicts": 0,
+      "main_gap": "instruction_missing",
+      "trace_events": 25,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул GC-B399SMCL.APZQCIS; базовая модель GC-B399SMCL.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: GC-B399SMCL.APZQCIS.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/refrigerators/bottom-freezer/gc-b399smcl/"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B401FAPM for GC-B399SMCL.APZQCIS: GC-B401FAPM.AGSQCIS, GC-B401FAPM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B404FEQM for GC-B399SMCL.APZQCIS: GC-B404FEQM.ABEQCIS, GC-B404FEQM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B404FAQM for GC-B399SMCL.APZQCIS: GC-B404FAQM.AGSQCIS, GC-B404FAQM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B401FEPM for GC-B399SMCL.APZQCIS: GC-B401FEPM.ABEQCIS, GC-B401FEPM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B22FHEGM for GC-B399SMCL.APZQCIS: GC-B22FHEGM.ABBQCIS, GC-B22FHEGM. LG support search: другой код at https://www.lg.com/ru/support/product/lg-GC-B459SECL for GC-B399SMCL.APZQCIS: GC-B459SECL.ASEQCIS, GC-B459SECL.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан — поддержка: support_candidate. Официальная страница поддержки открыта. Поля с кодом товара: нет; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/kz/support/product-support/cs-GC-B399SMCL.APZQCIS"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Холодильник двухкамерный 306 л No Frost, GC-B399SMCL» (артикул GC-B399SMCL.APZQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: kit_identity_unconfirmed; ",
+          "source_url": "https://www.lg.com/kz/support/product-support/cs-GC-B399SMCL.APZQCIS"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 19. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 8,
+      "article": "GC-B509FNPW.APYQCIS",
+      "category": "Холодильники",
+      "catalog_name": "Холодильник двухкамерный 419 л, No Frost, GC-B509FNPW",
+      "job_id": "9120ebb13f084d99adbcf54483bd46ff",
+      "job_status": "needs_review",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 3; только базовая модель LG: 0; подтверждено поставщиком: 50. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "unresolved_conflicts",
+        "instruction_missing"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "GC-B509FNPW.APYQCIS"
+        ],
+        "base": "GC-B509FNPW",
+        "from_name": [
+          "GC-B509FNPW"
+        ],
+        "sitemap_keys": [
+          "gcb509fnpwapyqcis",
+          "gcb509fnpw"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/refrigerators/bottom-freezer/gc-b509fnpw/",
+          "found_model": "GC-B509FNPW.APYQCIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: GC-B509FNPW.APYQCIS.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/refrigerators/lg-gc-b509fnpw",
+          "found_model": "GC-B509FNPW.APYQCIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: GC-B509FNPW.APYQCIS.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Холодильник двухкамерный 419 л, No Frost, GC-B509FNPW» (артикул GC-B509FNPW.APYQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-GC-B509FNPW",
+          "found_model": "GC-B509FNPW.APYQCIS",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: GC-B509FNPW.APYQCIS; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 77,
+      "facts_by_source": {
+        "lg_ru": 38,
+        "lg_kz": 39
+      },
+      "confirmed_characteristics": 50,
+      "official_facts_from_exact_pages": 77,
+      "photo_candidates": 141,
+      "photos_by_source": {
+        "lg_kz": 80,
+        "lg_ru": 61
+      },
+      "confirmed_photos": 47,
+      "official_gallery_from_exact_pages": 47,
+      "documents": [],
+      "manual_status": "Не проверена",
+      "real_conflicts": 3,
+      "main_gap": "unresolved_conflicts",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул GC-B509FNPW.APYQCIS; базовая модель GC-B509FNPW.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: GC-B509FNPW.APYQCIS.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/refrigerators/bottom-freezer/gc-b509fnpw/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: GC-B509FNPW.APYQCIS.",
+          "source_url": "https://www.lg.com/ru/refrigerators/lg-gc-b509fnpw"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: GC-B509FNPW.APYQCIS, GC-B509FNPW; компоненты комплекта, подтверждённые содержимым: GC-B509FNPW.APYQCIS. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-GC-B509FNPW"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Холодильник двухкамерный 419 л, No Frost, GC-B509FNPW» (артикул GC-B509FNPW.APYQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; ни один файл не подтверждён как инструкция на русском языке.",
+          "source_url": "https://www.lg.com/ru/refrigerators/lg-gc-b509fnpw"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: no_verified_russian_instruction; ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-GC-B509FNPW"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 3; только базовая модель LG: 0; подтверждено поставщиком: 50. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 9,
+      "article": "MH6565DIS",
+      "category": "Микроволновые печи",
+      "catalog_name": "Микроволновая печь с грилем MH6565DIS",
+      "job_id": "1abb2867f3ad44758c489d22bfdc253f",
+      "job_status": "needs_review",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 2; только базовая модель LG: 0; подтверждено поставщиком: 86. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "unresolved_conflicts"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "MH6565DIS"
+        ],
+        "base": "MH6565DIS",
+        "from_name": [
+          "MH6565DIS"
+        ],
+        "sitemap_keys": [
+          "mh6565dis"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/cooking-appliances/mh6565dis/",
+          "found_model": "MH6565DIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: MH6565DIS.BBKQCIS.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/microwaves/lg-MH6565DIS",
+          "found_model": "MH6565DIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: MH6565DIS.BBKQCIS.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Микроволновая печь с грилем MH6565DIS» (артикул MH6565DIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-MH6565DIS",
+          "found_model": "MH6565DIS.BB2QUZB",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: MH6565DIS.BB2QUZB; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 94,
+      "facts_by_source": {
+        "lg_kz": 31,
+        "lg_ru": 63
+      },
+      "confirmed_characteristics": 86,
+      "official_facts_from_exact_pages": 94,
+      "photo_candidates": 89,
+      "photos_by_source": {
+        "lg_kz": 57,
+        "lg_ru": 32
+      },
+      "confirmed_photos": 29,
+      "official_gallery_from_exact_pages": 29,
+      "documents": [
+        {
+          "source_key": "lg_ru",
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=5doJp7G1aNFkn3WrTK3dAQ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-MH6565DIS"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 2,
+      "main_gap": "unresolved_conflicts",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул MH6565DIS; базовая модель MH6565DIS.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: MH6565DIS.BBKQCIS.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/cooking-appliances/mh6565dis/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: MH6565DIS.BBKQCIS.",
+          "source_url": "https://www.lg.com/ru/microwaves/lg-MH6565DIS"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: MH6565DIS.BB2QUZB, MH6565DIS; компоненты комплекта, подтверждённые содержимым: MH6565DIS. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-MH6565DIS"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Микроволновая печь с грилем MH6565DIS» (артикул MH6565DIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1.",
+          "source_url": "https://www.lg.com/ru/microwaves/lg-MH6565DIS"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: no_verified_russian_instruction; unreachable: https://gscs-b2c.lge.com/open/downloadFile?fileId=5doJp7G1aNFkn3WrTK3dAQ; models=[]",
+          "source_url": "https://www.lg.com/ru/support/product/lg-MH6565DIS"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 2; только базовая модель LG: 0; подтверждено поставщиком: 86. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 10,
+      "article": "MS2535GIS",
+      "category": "Микроволновые печи",
+      "catalog_name": "Микроволновая печь LG MS2535GIS с технологией Smart Inverter",
+      "job_id": "8dc671631d094b64961dbcb2ecb189b3",
+      "job_status": "done",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 42. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+      "readiness": "export_ready",
+      "blocking_gaps": [],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "MS2535GIS"
+        ],
+        "base": "MS2535GIS",
+        "from_name": [
+          "MS2535GIS"
+        ],
+        "sitemap_keys": [
+          "ms2535gis"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/cooking-appliances/ms2535gis/",
+          "found_model": "MS2535GIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: MS2535GIS.BBKQCIS.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/microwaves/lg-MS2535GIS",
+          "found_model": "MS2535GIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: MS2535GIS.BBKQCIS.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Микроволновая печь LG MS2535GIS с технологией Smart Inverter» (артикул MS2535GIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-MS2535GIS",
+          "found_model": "MS2535GIS.BB2QUZB",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: MS2535GIS.BB2QUZB; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 52,
+      "facts_by_source": {
+        "lg_ru": 30,
+        "lg_kz": 22
+      },
+      "confirmed_characteristics": 42,
+      "official_facts_from_exact_pages": 52,
+      "photo_candidates": 65,
+      "photos_by_source": {
+        "lg_kz": 33,
+        "lg_ru": 32
+      },
+      "confirmed_photos": 16,
+      "official_gallery_from_exact_pages": 16,
+      "documents": [
+        {
+          "source_key": "lg_ru",
+          "title": "Руководства пользователя",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=jspt5l9nX0tMepkfSygToQ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-MS2535GIS"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 0,
+      "main_gap": "",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул MS2535GIS; базовая модель MS2535GIS.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: MS2535GIS.BBKQCIS.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/cooking-appliances/ms2535gis/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: MS2535GIS.BBKQCIS.",
+          "source_url": "https://www.lg.com/ru/microwaves/lg-MS2535GIS"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: MS2535GIS.BB2QUZB, MS2535GIS; компоненты комплекта, подтверждённые содержимым: MS2535GIS. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-MS2535GIS"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Микроволновая печь LG MS2535GIS с технологией Smart Inverter» (артикул MS2535GIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1.",
+          "source_url": "https://www.lg.com/ru/microwaves/lg-MS2535GIS"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: verified_russian_instruction; verified_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=jspt5l9nX0tMepkfSygToQ; models=[]",
+          "source_url": "https://www.lg.com/ru/support/product/lg-MS2535GIS"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 42. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 11,
+      "article": "A9N-PRIME",
+      "category": "Пылесосы",
+      "catalog_name": "Вертикальный беспроводной пылесос A9N-PRIME",
+      "job_id": "832ad10b0f2245599f4862176f82d70c",
+      "job_status": "needs_review",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 5; только базовая модель LG: 0; подтверждено поставщиком: 76. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "unresolved_conflicts"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "A9N-PRIME"
+        ],
+        "base": "A9N-PRIME",
+        "from_name": [
+          "A9N-PRIME"
+        ],
+        "sitemap_keys": [
+          "a9nprime"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/vacuum-cleaners/cordless-vacuum-cleaners/a9n-prime/",
+          "found_model": "A9N-PRIME",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: A9N-PRIME.BBWQCIS.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/vacuum-cleaners/lg-a9n-prime",
+          "found_model": "A9N-PRIME",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: A9N-PRIME.BBWQCIS.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Вертикальный беспроводной пылесос A9N-PRIME» (артикул A9N-PRIME). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-A9N-PRIME",
+          "found_model": "A9N-PRIME.BBWQCIS",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: A9N-PRIME.BBWQCIS; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 87,
+      "facts_by_source": {
+        "lg_kz": 30,
+        "lg_ru": 57
+      },
+      "confirmed_characteristics": 76,
+      "official_facts_from_exact_pages": 87,
+      "photo_candidates": 56,
+      "photos_by_source": {
+        "lg_kz": 24,
+        "lg_ru": 32
+      },
+      "confirmed_photos": 23,
+      "official_gallery_from_exact_pages": 23,
+      "documents": [
+        {
+          "source_key": "lg_ru",
+          "title": "Руководства пользователя · связь с моделью подтверждена страницей поддержки, а не текстом PDF",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=FxCrvVUOErj8kq5FqaTzqw",
+          "source_url": "https://www.lg.com/ru/support/product/lg-A9N-PRIME"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 5,
+      "main_gap": "unresolved_conflicts",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул A9N-PRIME; базовая модель A9N-PRIME.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: A9N-PRIME.BBWQCIS.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/vacuum-cleaners/cordless-vacuum-cleaners/a9n-prime/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: A9N-PRIME.BBWQCIS.",
+          "source_url": "https://www.lg.com/ru/vacuum-cleaners/lg-a9n-prime"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: A9N-PRIME.BBWQCIS, A9N-PRIME; компоненты комплекта, подтверждённые содержимым: A9N-PRIME. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-A9N-PRIME"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Вертикальный беспроводной пылесос A9N-PRIME» (артикул A9N-PRIME). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Инструкций подтверждено по содержимому: 1; русских: 1.",
+          "source_url": "https://www.lg.com/ru/vacuum-cleaners/lg-a9n-prime"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: verified_russian_instruction; verified_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=FxCrvVUOErj8kq5FqaTzqw; models=[]",
+          "source_url": "https://www.lg.com/ru/support/product/lg-A9N-PRIME"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 5; только базовая модель LG: 0; подтверждено поставщиком: 76. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: unresolved_conflicts, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 12,
+      "article": "VC5420NHTG.AIGQCIS",
+      "category": "Пылесосы",
+      "catalog_name": "Пылесос VC5420NHTG 2000Вт",
+      "job_id": "21d47a35f15248cbb353a5ced723653e",
+      "job_status": "done",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 30. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "instruction_missing"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "VC5420NHTG.AIGQCIS"
+        ],
+        "base": "VC5420NHTG",
+        "from_name": [
+          "VC5420NHTG"
+        ],
+        "sitemap_keys": [
+          "vc5420nhtgaigqcis",
+          "vc5420nhtg"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "",
+          "found_model": "",
+          "match_level": "mismatch",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/vacuum-cleaners/lg-vc5420nhtg",
+          "found_model": "VC5420NHTG.AIGQCIS",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: VC5420NHTG.AIGQCIS.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Пылесос VC5420NHTG 2000Вт» (артикул VC5420NHTG.AIGQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-VC5420NHTG",
+          "found_model": "VC5420NHTG.AIGQCIS",
+          "match_level": "full_sku",
+          "evidence": "Support page printed sales code: VC5420NHTG.AIGQCIS; relation: exact.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_ru"
+      ],
+      "raw_facts": 31,
+      "facts_by_source": {
+        "lg_ru": 31
+      },
+      "confirmed_characteristics": 30,
+      "official_facts_from_exact_pages": 31,
+      "photo_candidates": 29,
+      "photos_by_source": {
+        "lg_ru": 29
+      },
+      "confirmed_photos": 12,
+      "official_gallery_from_exact_pages": 12,
+      "documents": [],
+      "manual_status": "Не проверена",
+      "real_conflicts": 0,
+      "main_gap": "instruction_missing",
+      "trace_events": 3,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул VC5420NHTG.AIGQCIS; базовая модель VC5420NHTG.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: VC5420NHTG.AIGQCIS.",
+          "source_url": "https://www.lg.com/ru/vacuum-cleaners/lg-vc5420nhtg"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: VC5420NHTG.AIGQCIS, VC5420NHTG; компоненты комплекта, подтверждённые содержимым: VC5420NHTG.AIGQCIS. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-VC5420NHTG"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Пылесос VC5420NHTG 2000Вт» (артикул VC5420NHTG.AIGQCIS). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; ни один файл не подтверждён как инструкция на русском языке.",
+          "source_url": "https://www.lg.com/ru/vacuum-cleaners/lg-vc5420nhtg"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: no_verified_russian_instruction; ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-VC5420NHTG"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 30. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 13,
+      "article": "S70TY.ARUSLLK",
+      "category": "Саундбары",
+      "catalog_name": "Саундбар S70TY",
+      "job_id": "5169e21606264e44a77f135f00ccfcc9",
+      "job_status": "done",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 51. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+      "readiness": "export_ready_with_gaps",
+      "blocking_gaps": [
+        "instruction_missing"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "S70TY.ARUSLLK"
+        ],
+        "base": "S70TY",
+        "from_name": [
+          "S70TY"
+        ],
+        "sitemap_keys": [
+          "s70tyarusllk",
+          "s70ty"
+        ]
+      },
+      "queries": [],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/speakers/soundbars/s70ty/",
+          "found_model": "S70TY.ARUSLLK",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: S70TY.ARUSLLK.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "https://www.lg.com/ru/audio/lg-s70ty",
+          "found_model": "S70TY.ARUSLLK",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: S70TY.ARUSLLK.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Саундбар S70TY» (артикул S70TY.ARUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-S70TY",
+          "found_model": "S70TY.AEUSLLD",
+          "match_level": "base_model",
+          "evidence": "Support page printed sales code: S70TY.AEUSLLD; relation: regional_variant_of.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz",
+        "lg_ru"
+      ],
+      "raw_facts": 102,
+      "facts_by_source": {
+        "lg_kz": 51,
+        "lg_ru": 51
+      },
+      "confirmed_characteristics": 51,
+      "official_facts_from_exact_pages": 102,
+      "photo_candidates": 78,
+      "photos_by_source": {
+        "lg_kz": 26,
+        "lg_ru": 52
+      },
+      "confirmed_photos": 39,
+      "official_gallery_from_exact_pages": 39,
+      "documents": [],
+      "manual_status": "Не проверена",
+      "real_conflicts": 0,
+      "main_gap": "instruction_missing",
+      "trace_events": 4,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул S70TY.ARUSLLK; базовая модель S70TY.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: S70TY.ARUSLLK.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/speakers/soundbars/s70ty/"
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Россия: full_sku. Полный артикул в поле data-adobe-salesmodelcode + data-adobe-salessuffixcode основной карточки LG: S70TY.ARUSLLK.",
+          "source_url": "https://www.lg.com/ru/audio/lg-s70ty"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG RU support: base_model. Официальная страница поддержки открыта. Поля с кодом товара: S70TY.AEUSLLD, S70TY; компоненты комплекта, подтверждённые содержимым: нет. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-S70TY"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Саундбар S70TY» (артикул S70TY.ARUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Кандидатов на странице поддержки: 3; файлов проверено по содержимому: 1; ни один файл не подтверждён как инструкция на русском языке.",
+          "source_url": "https://www.lg.com/ru/audio/lg-s70ty"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "LG KZ support manual: kit_identity_unconfirmed; ",
+          "source_url": "https://www.lg.com/ru/support/product/lg-S70TY"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 51. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready_with_gaps; пробелы: instruction_missing, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 14,
+      "article": "OL90DK.DRUSLLK",
+      "category": "Музыкальные проигрыватели",
+      "catalog_name": "Аудиосистема XBOOM OL90DK",
+      "job_id": "0e8beb7a88d940909aa0d7bec551d8ac",
+      "job_status": "done",
+      "job_message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 136. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+      "readiness": "export_ready",
+      "blocking_gaps": [],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "OL90DK.DRUSLLK"
+        ],
+        "base": "OL90DK",
+        "from_name": [
+          "OL90DK"
+        ],
+        "sitemap_keys": [
+          "ol90dkdrusllk",
+          "ol90dk"
+        ]
+      },
+      "queries": [
+        {
+          "provider": "lg_regional",
+          "query": "OL90DK.DRUSLLK",
+          "url": "https://www.lg.com/ru/search/search-support?search=OL90DK.DRUSLLK&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=OL90DK.DRUSLLK&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        }
+      ],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/speakers/xboom/ol90dk/",
+          "found_model": "OL90DK.DRUSLLK",
+          "match_level": "full_sku",
+          "evidence": "Полный артикул в поле data-pim-sku основной карточки LG: OL90DK.DRUSLLK.EEAK.KZ.C.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "",
+          "found_model": "",
+          "match_level": "mismatch",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search подтвердил артикул OL90DK.DRUSLLK on https://www.lg.com/ru/support/product/lg-OL90DK.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Аудиосистема XBOOM OL90DK» (артикул OL90DK.DRUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-OL90DK",
+          "found_model": "OL90DK.DRUSLLK",
+          "match_level": "full_sku",
+          "evidence": "Официальная страница поддержки открыта. Поля с кодом товара: OL90DK.DRUSLLK, OL90DK; компоненты комплекта, подтверждённые содержимым: OL90DK.DRUSLLK. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [
+        "lg_kz"
+      ],
+      "raw_facts": 136,
+      "facts_by_source": {
+        "lg_kz": 136
+      },
+      "confirmed_characteristics": 136,
+      "official_facts_from_exact_pages": 136,
+      "photo_candidates": 16,
+      "photos_by_source": {
+        "lg_kz": 16
+      },
+      "confirmed_photos": 16,
+      "official_gallery_from_exact_pages": 16,
+      "documents": [
+        {
+          "source_key": "lg_ru_support",
+          "title": "Руководства пользователя Русский 19/03/2021 3 275K",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=swF20gwh902aC7N9mO0Ilg",
+          "source_url": "https://www.lg.com/ru/support/product/lg-OL90DK"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 0,
+      "main_gap": "",
+      "trace_events": 13,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул OL90DK.DRUSLLK; базовая модель OL90DK.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: full_sku. Полный артикул в поле data-pim-sku основной карточки LG: OL90DK.DRUSLLK.EEAK.KZ.C.",
+          "source_url": "https://www.lg.com/kz/speakers/xboom/ol90dk/"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search подтвердил артикул OL90DK.DRUSLLK on https://www.lg.com/ru/support/product/lg-OL90DK.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: OL90DK.DRUSLLK, OL90DK; компоненты комплекта, подтверждённые содержимым: OL90DK.DRUSLLK. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-OL90DK"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Аудиосистема XBOOM OL90DK» (артикул OL90DK.DRUSLLK). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "LG KZ support manual: verified_russian_instruction; verified_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=swF20gwh902aC7N9mO0Ilg; models=['OL90DK']",
+          "source_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=swF20gwh902aC7N9mO0Ilg"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Полный артикул найден на LG. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 136. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: export_ready; пробелы: dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": 15,
+      "article": "WZ09AWN",
+      "category": "Сплит-системы",
+      "catalog_name": "Сплит-система кондиционер 9000 BTU, WZ09AWN",
+      "job_id": "d14b9c92fd4b4567bf82bff5f52b5180",
+      "job_status": "needs_review",
+      "job_message": "Официальная страница поддержки LG подтверждает модель/комплект для инструкции; товарная страница с характеристиками и фото полного артикула не подтверждена. Реальных конфликтов: 0; только базовая модель LG: 53; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, dealer_cross_check_missing.",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "no_official_full_sku_page",
+        "no_official_specifications",
+        "no_official_gallery_photo"
+      ],
+      "advisory_gaps": [
+        "dealer_cross_check_missing"
+      ],
+      "model_variants": {
+        "components": [
+          "WZ09AWN"
+        ],
+        "base": "WZ09AWN",
+        "from_name": [
+          "WZ09AWN"
+        ],
+        "sitemap_keys": [
+          "wz09awn"
+        ]
+      },
+      "queries": [
+        {
+          "provider": "lg_regional",
+          "query": "WZ09AWN",
+          "url": "https://www.lg.com/ru/search/search-support?search=WZ09AWN&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=WZ09AWN&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        },
+        {
+          "provider": "google_old_parser",
+          "query": "site:lg.com \"WZ09AWN\"",
+          "url": "https://www.google.com/search?q=site%3Alg.com+%22WZ09AWN%22&hl=en"
+        },
+        {
+          "provider": "google_old_parser",
+          "query": "site:lg.com WZ09AWN LG",
+          "url": "https://www.google.com/search?q=site%3Alg.com+WZ09AWN+LG&hl=en"
+        },
+        {
+          "provider": "bing_browser",
+          "query": "site:lg.com \"WZ09AWN\"",
+          "url": "https://www.bing.com/search?q=site%3Alg.com%20%22WZ09AWN%22"
+        },
+        {
+          "provider": "bing_browser",
+          "query": "site:lg.com WZ09AWN LG",
+          "url": "https://www.bing.com/search?q=site%3Alg.com%20WZ09AWN%20LG"
+        }
+      ],
+      "sources": [
+        {
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "https://www.lg.com/kz/air-conditioner/wz09awn/",
+          "found_model": "WZ09AWN",
+          "match_level": "base_model",
+          "evidence": "Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "",
+          "found_model": "",
+          "match_level": "mismatch",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search подтвердил артикул WZ09AWN on https://www.lg.com/ru/support/product/lg-WZ09AWN.",
+          "error": ""
+        },
+        {
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "error": ""
+        },
+        {
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Сплит-система кондиционер 9000 BTU, WZ09AWN» (артикул WZ09AWN). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "error": ""
+        },
+        {
+          "source_key": "lg_ru_support",
+          "site_name": "LG RU support",
+          "url": "https://www.lg.com/ru/support/product/lg-WZ09AWN",
+          "found_model": "WZ09AWN",
+          "match_level": "full_sku",
+          "evidence": "Официальная страница поддержки открыта. Поля с кодом товара: WZ09AWN.SNR1, WZ09AWN; компоненты комплекта, подтверждённые содержимым: WZ09AWN. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "error": ""
+        }
+      ],
+      "official_exact_regions": [],
+      "raw_facts": 53,
+      "facts_by_source": {
+        "lg_kz": 53
+      },
+      "confirmed_characteristics": 0,
+      "official_facts_from_exact_pages": 0,
+      "photo_candidates": 51,
+      "photos_by_source": {
+        "lg_kz": 51
+      },
+      "confirmed_photos": 0,
+      "official_gallery_from_exact_pages": 0,
+      "documents": [
+        {
+          "source_key": "lg_ru_support",
+          "title": "Руководства пользователя English,Русский 12/01/2026 20 833K",
+          "language": "Русский",
+          "direct_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=un3HexIxrTLaFVu6h1Zg",
+          "source_url": "https://www.lg.com/ru/support/product/lg-WZ09AWN"
+        }
+      ],
+      "manual_status": "Проверена",
+      "real_conflicts": 0,
+      "main_gap": "no_official_full_sku_page",
+      "trace_events": 30,
+      "job_events": [
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул WZ09AWN; базовая модель WZ09AWN.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG Казахстан: base_model. Основная карточка LG не подтверждает полный артикул; видна только базовая модель. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "source_url": "https://www.lg.com/kz/air-conditioner/wz09awn/"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия. LG support search подтвердил артикул WZ09AWN on https://www.lg.com/ru/support/product/lg-WZ09AWN.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "LG web search fallback stopped: deadline_or_candidate_budget_exhausted",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "info",
+          "message": "LG RU support: full_sku. Официальная страница поддержки открыта. Поля с кодом товара: WZ09AWN.SNR1, WZ09AWN; компоненты комплекта, подтверждённые содержимым: WZ09AWN. Адрес, заголовок и метаданные остаются лишь признаками кандидата. Характеристики, фото и инструкции требуют отдельной проверки.",
+          "source_url": "https://www.lg.com/ru/support/product/lg-WZ09AWN"
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": ""
+        },
+        {
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Сплит-система кондиционер 9000 BTU, WZ09AWN» (артикул WZ09AWN). Не хватает: инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": ""
+        },
+        {
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "info",
+          "message": "LG KZ support manual: verified_russian_instruction; verified_russian_instruction: https://gscs-b2c.lge.com/open/downloadFile?fileId=un3HexIxrTLaFVu6h1Zg; models=[]",
+          "source_url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=un3HexIxrTLaFVu6h1Zg"
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": ""
+        },
+        {
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, dealer_cross_check_missing.",
+          "source_url": ""
+        },
+        {
+          "stage": null,
+          "level": "warning",
+          "message": "Официальная страница поддержки LG подтверждает модель/комплект для инструкции; товарная страница с характеристиками и фото полного артикула не подтверждена. Реальных конфликтов: 0; только базовая модель LG: 53; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, dealer_cross_check_missing.",
+          "source_url": ""
+        }
+      ]
+    }
+  ]
+}
