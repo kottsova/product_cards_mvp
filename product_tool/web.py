@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import attribute_projection, bosch_readiness, card_presentation, exporter, jobs, lg_batch, photo_metadata, product_description, storage
+from . import attribute_projection, bosch_readiness, card_presentation, exporter, jobs, lg_batch, manual_status, photo_metadata, product_description, storage
 from .adapters.lg import lg_base_model
 from .adapters.policy_fetch import migrate_legacy_stop_log
 from .lg_identity import document_tied_to_article, photo_tied_to_article
@@ -430,6 +430,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
+            manual_status=manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,
             identification_status=jobs.identification_status(sources),
             base_model=lg_base_model(product["search_code"]) if product["brand"].strip().upper() == "LG" else "",

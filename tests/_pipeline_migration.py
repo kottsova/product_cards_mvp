@@ -991,6 +991,17 @@ STAGE54_4_PINNED_SHA256: dict[str, str] = {
 PINNED_SHA256.update(STAGE54_4_PINNED_SHA256)
 
 
+# Stage 55: authorized manual-status presentation and preservation of a
+# content-reviewed Sulpak rejection across later stopped-host attempts.
+STAGE55_PINNED_SHA256: dict[str, str] = {
+    "product_tool/exporter.py": "25df9afbd4292a37812b5e5e82a9192a5c021b31ce42fa8608d3eb8102cf33c1",
+    "product_tool/jobs.py": "c74a0ae578b362be2b39aebb357151ca4a2f47f38e4b42e734c521bcfe9394a1",
+    "product_tool/templates/product.html": "286d3f5240d94ef788ce4b0bd2c8a6c76148ec523645679ef2fd63d1e2e5125c",
+    "product_tool/web.py": "0bd8f0fdbd21ba2e47267a92d2afbf9bb6019795cb600fcdf4bd0a098d9dd381",
+}
+PINNED_SHA256.update(STAGE55_PINNED_SHA256)
+
+
 # Stage 54.1: this database is the live application state, not a fixture.
 # The Stage 53.1 digest remains an audit snapshot, while routine user uploads
 # and worker jobs are validated by schema/integrity checks in test_live_db_invariants.

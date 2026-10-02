@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 from openpyxl import Workbook
 from openpyxl.styles import Font
-from . import attribute_projection, bosch_readiness, jobs, lg_batch, photo_metadata, samsung_readiness, storage
+from . import attribute_projection, bosch_readiness, jobs, lg_batch, manual_status, photo_metadata, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .lg_identity import document_tied_to_article, photo_tied_to_article
 from .display import display_access_error, display_name_ru, display_source, display_status, display_value
@@ -79,8 +79,10 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 level = {"full_sku":"Связь инструкции с артикулом","base_model":"Поддержка семейства/другого варианта","component_only":"Поддержка одного компонента"}.get(s["match_level"],"Кандидат поддержки")
             else:
                 level = {"full_sku":"Полный артикул","code_in_page_text":"Артикул только в тексте страницы","base_model":"Базовая модель","mismatch":"Несоответствие","unknown":"Не проверено"}.get(s["match_level"],s["match_level"])
+            if s["source_key"] == "sulpak" and s["match_level"] == "unknown" and s["evidence"] and not s["error"]:
+                level = "Комплект не подтверждён"
             source_sheet.append([(p["name"] or p["search_code"]),p["search_code"],s["site_name"],s["found_model"],level,s["evidence"],s["fetched_at"],display_access_error(s["error"]),s["url"]])
-    docs=book.create_sheet(_title("Инструкции",used)); _headers(docs,["Товар","Документ","Язык","Дата","Размер","Основной","Модель поддержки","Источник","Прямая ссылка","Связь с артикулом","Статус проверки"])
+    docs=book.create_sheet(_title("Инструкции",used)); _headers(docs,["Товар","Документ","Язык","Дата","Размер","Основной","Модель поддержки","Источник","Прямая ссылка","Связь с артикулом","Тип источника","Статус проверки"])
     photo_columns=["Ширина, px","Высота, px","Размер файла","Формат"]
     photos=book.create_sheet(_title("Фотографии",used)); _headers(photos,["Товар","Источник","Тип","URL","Подтверждение варианта",*photo_columns])
     photo_candidates = None
@@ -92,11 +94,13 @@ def export_batch(database: Path,batch_id: str)->bytes:
             tied = document_tied_to_article(p["search_code"], d, source_pages) if lg else True
             docs.append([(p["name"] or p["search_code"]),d["title"],d["language"],d["document_date"],d["size"],"Да" if d["is_primary"] else "Нет",d["support_model"],d["source_url"],d["direct_url"],
                          "Подтверждена" if tied else "PDF проверен, связь с вариантом не подтверждена",
-                         "Проверена" if tied else "Найдена, не проверена"])
+                         "LG" if d["source_key"].startswith("lg_") else display_source(d["source_key"]),
+                         "Проверена" if tied else "Не проверена"])
         if lg and not saved_documents:
-            latest = next(iter(jobs.list_jobs(database,p["id"])), None)
-            status = "Не найдена" if latest and 6 in latest["stages"] else "Не проверялась"
-            docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "", "", "", "", status])
+            status = manual_status.russian_status(database, p["id"], p["search_code"])
+            audit = manual_status.completed_search(database, p["id"]) if status == manual_status.NOT_FOUND else None
+            support_url = next((item.get("support_url") or item.get("url", "") for item in audit["evidence"] if item.get("kind") == "official_manual_list"), "") if audit else ""
+            docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "", support_url, "", "", "LG" if audit else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=False):
             tied = photo_tied_to_article(item, source_pages) if lg else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])

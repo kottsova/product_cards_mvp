@@ -11,7 +11,7 @@ from uuid import uuid4
 from . import storage
 from .adapters.common import PhotoCandidate, ProductDocument, SourceDocument
 from .display import display_name_ru, display_source, display_status, display_value
-from .fetch_history import record_fetch_attempt, save_source_snapshot
+from .fetch_history import latest_source_snapshot, record_fetch_attempt, save_source_snapshot
 from .migrations import apply_job_migrations
 from .normalization import normalize_facts
 from .resolution import SUPPLIERS, resolve_attributes
@@ -343,12 +343,18 @@ def save_source_document(
     no_new_page = bool(document.error) or not (
         document.url or document.html or document.attributes or document.photos
     )
+    attended_dealer_review = (
+        no_new_page and previous_evidence and document.source_key == "sulpak"
+        and previous_evidence["match_level"] == "unknown" and not previous_evidence["error"]
+        and (snapshot := latest_source_snapshot(path, product_id, "sulpak"))
+        and bool(snapshot["content"].strip())
+    )
     if (no_new_page and previous_evidence and previous_evidence["url"]
             and not previous_evidence["error"]
-            and previous_evidence["match_level"] in {
+            and (previous_evidence["match_level"] in {
                 "full_sku", "base_model", "model_and_code_confirmed", "exact_variant",
                 "code_in_page_text", "component_only",
-            }):
+            } or attended_dealer_review)):
         return
     if not document.error:
         save_source_snapshot(
