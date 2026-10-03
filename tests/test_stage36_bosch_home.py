@@ -13,6 +13,7 @@ from openpyxl import Workbook, load_workbook
 from product_tool import bosch_readiness, jobs, storage, worker
 from product_tool.adapters.bosch_home import BoschHomeAdapter, _asset_key, parse_page, verified_pages
 from product_tool.adapters.policy_session import PolicyResponse
+from product_tool.adapters.common import SourceDocument
 from product_tool.coverage.catalog_units import load_catalog
 from product_tool.coverage.planner import build_plan
 from product_tool.web import create_app
@@ -78,13 +79,12 @@ class BoschOrdinaryPath(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):cls.tmp.cleanup()
 
-    def test_plan_and_enqueue_guard(self):
+    def test_plan_keeps_legacy_selected_pair(self):
         plan=build_plan()
         bosch=[u for u in plan['units'] if u['family']=='bosch_home']
         self.assertEqual({u['seller_sku'] for u in bosch if u['status']=='ready_to_run'},set(self.manifest))
         self.assertEqual(sum(u['status']=='ready_to_run' for u in bosch),2)
         self.assertTrue(all(u['status']!='ready_to_run' for u in bosch if u['seller_sku'] not in self.manifest))
-        with self.assertRaises(ValueError):jobs.enqueue(self.db,self.products[self.other.seller_sku]['id'],[1,2,3,4,6])
         self.assertEqual(jobs.list_jobs(self.db,self.products[self.other.seller_sku]['id']),[])
         self.assertEqual(self.replay.calls,[self.manifest[code]['page_url'] for code in self.manifest])
 
@@ -142,19 +142,25 @@ class BoschOrdinaryPath(unittest.TestCase):
         doc,_=parse_page(html,url,code+'/01',self.manifest[code]['category'])
         self.assertTrue(doc.error)
 
-    def test_z_old_queued_unselected_row_stops_before_client(self):
-        from uuid import uuid4
-        job_id=uuid4().hex
+    def test_z_other_row_uses_general_bosch_adapter(self):
         product_id=self.products[self.other.seller_sku]['id']
-        with storage._connection(self.db) as connection:
-            connection.execute("INSERT INTO search_jobs (id,product_id,stages_json,status,message,created_at,updated_at) VALUES (?,?,?,'queued',?,?,?)",
-                               (job_id,product_id,'[1,2,3,4,6]','old queued job',storage._now(),storage._now()))
+        jobs.enqueue(self.db,product_id,[1,2,3,4,6])
         before=list(self.replay.calls)
-        def forbidden():raise AssertionError('unselected Bosch row constructed a source client')
-        self.assertTrue(worker.run_once(self.db,bosch_adapter_factory=forbidden,clock=lambda:0.0))
+        class EmptyOfficialAdapter:
+            source_key='bosch_home'
+            reports={}
+            trace_callback=None
+            called=False
+            def find_source(self,article,*,category,deadline):
+                self.called=True
+                return SourceDocument(self.source_key,'Bosch Home','',error='No validated PDP')
+            def find_documents(self,document,article):return []
+        adapter=EmptyOfficialAdapter()
+        self.assertTrue(worker.run_once(self.db,bosch_adapter_factory=lambda:adapter,clock=lambda:0.0))
+        self.assertTrue(adapter.called)
         self.assertEqual(self.replay.calls,before)
         self.assertEqual(jobs.list_jobs(self.db,product_id)[0]['status'],'needs_review')
-        self.assertEqual(jobs.get_source_pages(self.db,product_id),[])
+        self.assertEqual(bosch_readiness.card_readiness(self.db,product_id)['verdict'],'not_ready')
 
     def test_excel_export_includes_bosch_provenance_and_status(self):
         book=load_workbook(io.BytesIO(self.xlsx),read_only=True,data_only=True)

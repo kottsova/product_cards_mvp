@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from . import jobs, lg_presentation
+from . import bosch_presentation, jobs, lg_presentation
 
 
 def _refinements(base: str) -> tuple[str, ...]:
@@ -154,6 +154,9 @@ def project_final_rows(rows: list[dict[str, Any]], *, exact_ru: bool = False) ->
 def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     rows = jobs.comparison_rows(path, product_id)
     product = jobs.get_product(path, product_id)
+    if product and product["brand"].strip().upper() == "BOSCH" and any(
+            page["source_key"] == "bosch_home" for page in jobs.get_source_pages(path, product_id)):
+        return bosch_presentation.project(rows)
     if product and product["brand"].strip().upper() == "LG":
         sources = jobs.get_source_pages(path, product_id)
         exact_ru = any(source["source_key"] == "lg_ru" and source["match_level"] == "full_sku"

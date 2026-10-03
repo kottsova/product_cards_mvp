@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 from openpyxl import Workbook
 from openpyxl.styles import Font
-from . import attribute_projection, bosch_readiness, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
+from . import attribute_projection, bosch_presentation, bosch_readiness, card_evidence, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .lg_identity import document_tied_to_article, photo_tied_to_article
 from .display import display_access_error, display_name_ru, display_source, display_status, display_value
@@ -52,11 +52,12 @@ def export_batch(database: Path,batch_id: str)->bytes:
                         else ""
                         for r in rows[p["id"]] for value in [r.get("resolved") or {}]}
             sheet.append([p["row_number"],(p["name"] or p["search_code"]),p["brand"],p["search_code"],lg_base_model(p["search_code"]) if p["brand"].strip().upper()=="LG" else "",*[resolved.get(k,"") for k in keys]])
+    has_lg=any(lg_batch.is_lg(p) for p in batch["products"])
     has_lg_global=any(s["source_key"]=="lg_global" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))
     has_sulpak_facts=any(f["source_key"]=="sulpak" for p in batch["products"] for f in jobs.get_facts(database,p["id"]))
     has_bosch=any(s["source_key"]=="bosch_home" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))
     has_samsung=any(s["source_key"]=="samsung" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))  # the Samsung column and sheet exist only when the batch has a Samsung page
-    check=book.create_sheet(_title("Проверка источников",used)); _headers(check,["Товар","Полный артикул","Характеристика","LG Казахстан","LG Россия",*(["Sulpak"] if has_sulpak_facts else []),*(["LG other region"] if has_lg_global else []),*(["Samsung"] if has_samsung else []),*(["Bosch Home"] if has_bosch else []),"Итог","Причина","Статус","Все спорные значения","\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0435 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044f"])
+    check=book.create_sheet(_title("Проверка источников",used)); _headers(check,["Товар","Полный артикул","Характеристика",*(["LG Казахстан","LG Россия"] if has_lg else []),*(["Sulpak"] if has_sulpak_facts else []),*(["LG other region"] if has_lg_global else []),*(["Samsung"] if has_samsung else []),*(["Bosch Home"] if has_bosch else []),"Итог","Причина","Статус","Все спорные значения","\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0435 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044f"])
     for p in batch["products"]:
         conflict_facts = {}
         for fact in jobs.get_facts(database,p["id"]):
@@ -70,10 +71,10 @@ def export_batch(database: Path,batch_id: str)->bytes:
             s=row["sources"]; r=(lg_presentation.safe_composite_dimensions(row).get("resolved")
                                   if lg_batch.is_lg(p) else row.get("resolved")) or {}
             detail = "; ".join(conflict_facts.get(row["normalized_name"], [])) if r.get("conflict") else ""
-            label = row["display_name"]
+            label = (bosch_presentation.label(row) if p["brand"].strip().upper() == "BOSCH" else row["display_name"])
             if r.get("conflict") and label == "Дополнительная характеристика" and row["raw_names"]:
                 label = row["raw_names"][0]
-            check.append([(p["name"] or p["search_code"]),p["search_code"],label,s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value",""),*([s.get("sulpak",{}).get("raw_value","")] if has_sulpak_facts else []),*([s.get("lg_global",{}).get("raw_value","")] if has_lg_global else []),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail, "; ".join(dict.fromkeys(row["raw_names"]))])
+            check.append([(p["name"] or p["search_code"]),p["search_code"],label,*([s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value","")] if has_lg else []),*([s.get("sulpak",{}).get("raw_value","")] if has_sulpak_facts else []),*([s.get("lg_global",{}).get("raw_value","")] if has_lg_global else []),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail, "; ".join(dict.fromkeys(row["raw_names"]))])
     source_sheet=book.create_sheet(_title("Источники",used)); _headers(source_sheet,["Товар","Полный артикул","Сайт","Найденная модель","Уровень совпадения","Доказательство","Дата","Ошибка","URL"])
     for p in batch["products"]:
         for s in jobs.get_source_pages(database,p["id"]):
@@ -94,10 +95,15 @@ def export_batch(database: Path,batch_id: str)->bytes:
         saved_documents = (manual_status.effective_documents(database,p["id"],p["search_code"])
                            if lg else jobs.get_documents(database,p["id"]))
         for d in saved_documents:
-            tied = d.get("identity_confirmed", False) if lg else True
+            tied = (d.get("identity_confirmed", False) if lg else
+                    bosch_presentation.document_verified(d, card_evidence.load(database,p["id"],"bosch_home"), source_pages)
+                    if p["brand"].strip().upper() == "BOSCH" else True)
             docs.append([(p["name"] or p["search_code"]),d["title"],d["language"],d["document_date"],d["size"],"Да" if d["is_primary"] else "Нет",d["support_model"],d["source_url"],d["direct_url"],
                          "Подтверждена" if tied else "PDF проверен, связь с вариантом не подтверждена",
-                         "LG" if d["source_key"].startswith("lg_") else display_source(d["source_key"]),
+                         "LG" if d["source_key"].startswith("lg_") else display_source(
+                             d["source_key"], next((page["site_name"] for page in source_pages
+                                                    if page["source_key"] == d["source_key"]
+                                                    and page["url"] == d["source_url"]), "")),
                          "Проверена" if tied else "Не проверена"])
         if lg:
             status = manual_status.russian_status(database, p["id"], p["search_code"])
@@ -108,9 +114,19 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 reason = manual_status.unchecked_reason(database, p["id"], p["search_code"])
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if audit else "", status])
-        for item in jobs.get_photo_candidates(database,p["id"],include_excluded=False):
+        for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() == "BOSCH"):
             tied = photo_tied_to_article(item, source_pages) if lg else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
+            if item["kind"] == "excluded" and p["brand"].strip().upper() == "BOSCH":
+                if photo_candidates is None:
+                    photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
+                    _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
+                reason = {"base_model_only": "Только базовая модель",
+                          "not_model_bound": "Нет доказанной связи с точной моделью"}.get(
+                              item["excluded_reason"], item["excluded_reason"] or "Исключено")
+                photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],
+                                         "Исключённый кандидат",item["url"],"Нет",reason,*_photo_cells(item)])
+                continue
             if item["selected"] and tied:
                 photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Подтверждён",*_photo_cells(item)])
             elif item["selected"] and not tied:

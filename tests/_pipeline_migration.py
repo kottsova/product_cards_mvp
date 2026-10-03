@@ -1043,6 +1043,41 @@ STAGE57_PINNED_SHA256: dict[str, str] = {
 }
 PINNED_SHA256.update(STAGE57_PINNED_SHA256)
 
+# Stage 58: Bosch Home transfer through the existing production stores and browser transport.
+STAGE58_MIGRATION: dict[str, str] = {
+    'product_tool/adapters/bosch_official.py': 'Stage 58: Content-validated regional and sitemap discovery, grouped specifications, typed PDFs, E-Nr and browser fallback.',
+    'product_tool/adapters/lg_browser_search.py': 'Stage 58: Reuse browser search transport with a configurable official host; LG default retained.',
+    'product_tool/attribute_projection.py': 'Stage 58: Present Bosch attributes through Russian labels and proven dimensions.',
+    'product_tool/bosch_pipeline.py': 'Stage 58: Run ordinary Bosch Home jobs with shared evidence, readiness and DNS fallback; exclude Professional tools.',
+    'product_tool/bosch_presentation.py': 'Stage 58: Translate general Bosch labels, including live foreign-region gaps, and document verification status without altering raw facts.',
+    'product_tool/card_presentation.py': 'Stage 58: Show Bosch translated labels and grouped sections.',
+    'product_tool/exporter.py': 'Stage 58: Export Bosch translated labels, actual official PDF region and only relevant brand audit columns, with excluded photo candidates separated.',
+    'product_tool/jobs.py': 'Stage 58: Remove obsolete two-model Bosch enqueue gate and show actual Bosch region.',
+    'product_tool/normalization.py': 'Stage 58: Use explicit axes including compact unit suffixes, distinguish colours and decode general Bosch quantities.',
+    'product_tool/web.py': 'Stage 58: Display checked Bosch PDF evidence separately from unverified documents.',
+    'product_tool/worker.py': 'Stage 58: Pass existing DNS fallback into the general Bosch worker.',
+    'tests/test_stage36_bosch_home.py': 'Stage 58: Retain legacy selected-page checks under the broader Bosch queue.',
+    'tests/test_stage58_bosch_official.py': 'Stage 58: Check identity, extraction, compact explicit dimension axes and ordered fallback boundaries.',
+}
+ALL_AUTHORIZED_CHANGES.update(STAGE58_MIGRATION)
+
+STAGE58_PINNED_SHA256: dict[str, str] = {
+    'product_tool/adapters/bosch_official.py': 'cab4569ec3288f6d472d084dd92c7d86cc230d5a35ebbac88d5c60e1af475112',
+    'product_tool/adapters/lg_browser_search.py': '7b73a7bd37b1f7a3486f67ae5dc2bea3b0410a66a78d48487bf9bc3aebe530f0',
+    'product_tool/attribute_projection.py': '52a0e44e5524aa866c4d186f653b5cfd6cfe80581e2fc842ca8b4a925c63f435',
+    'product_tool/bosch_pipeline.py': 'd652b38950123c1f3bda9ba1fcbb27ce34f400ae7f71bcfbcaf1230aba3d0d59',
+    'product_tool/bosch_presentation.py': '156eb59e65e26cc509e92d42067dcd1b30426385c856c832ffb455928c4f83a6',
+    'product_tool/card_presentation.py': '89437457286a2ca6271d68862719844cf940733878f0b6b67e6e7f5715d3dcb6',
+    'product_tool/exporter.py': '8fda3b082c36c20109763cfc3fe2bf5d612c57835dca2d7851546b1306648356',
+    'product_tool/jobs.py': 'f1261666bbb155b6ee7affa050c26b5785600ce963efa2b439b09cb6fe5c6b25',
+    'product_tool/normalization.py': 'ef1479617ba80d5dcb80eb930ed4553b8c6f0b6be072d97abfa118d3a37b4938',
+    'product_tool/web.py': 'cc857d47708107b086590d66c1a74c080c0c9b737e038e3e64c852929f02bd7f',
+    'product_tool/worker.py': '8e8657dff434dda142c66ef585bae0a0c03ea60d9baf4efb5488c66730230858',
+    'tests/test_stage36_bosch_home.py': 'b643775000f3babd079274a966d72b52940bc4d55cda134c3bc4eec332e061cc',
+    'tests/test_stage58_bosch_official.py': 'e2120b82dfd5f2bb77e2e34f8c0080b8cb1d3616b20437b7cb53e0a9fed16157',
+}
+PINNED_SHA256.update(STAGE58_PINNED_SHA256)
+
 # Stage 54.1: this database is the live application state, not a fixture.
 # The Stage 53.1 digest remains an audit snapshot, while routine user uploads
 # and worker jobs are validated by schema/integrity checks in test_live_db_invariants.

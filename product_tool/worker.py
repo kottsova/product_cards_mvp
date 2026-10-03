@@ -158,7 +158,8 @@ def run_once(
             jobs.finish(database,job_id,"error","Подтверждённый товар не найден."); return True
         if product["brand"].strip().casefold() in BOSCH_HOME_BRAND_ALIASES:
             bosch_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],
-                                   adapter_factory=bosch_adapter_factory, clock=clock)
+                                   adapter_factory=bosch_adapter_factory,
+                                   dns_adapter_factory=dns_adapter_factory, clock=clock)
             return True
         is_lg = product["brand"].strip().casefold() in LG_BRAND_ALIASES
         is_hyperx = product["brand"].strip().casefold() in HYPERX_BRAND_ALIASES

@@ -22,6 +22,12 @@ class NormalizedFact:
 
 
 NAME_RULES = (
+    (re.compile(r"^размеры?\s+нагревательных\s+элементов", re.I), "heating_element_sizes"),
+    (re.compile(r"^abmessungen des verpackten gerätes$", re.I), "package_dimensions"),
+    (re.compile(r"^abmessungen des gerätes", re.I), "product_dimensions"),
+    (re.compile(r"^dimensions$", re.I), "product_dimensions"),
+    (re.compile(r"^net weight$", re.I), "product_weight"),
+    (re.compile(r"^(?:main colour of product|farbe)$", re.I), "color"),
     (re.compile(r"^(?:версия\s+bluetooth|bluetooth\s+version)$", re.I), "bluetooth_version"),
     (re.compile(r"drip\s*tray", re.I), "drip_tray_qty"),
     (re.compile(r"pants\s*hanger", re.I), "pants_hanger_qty"),
@@ -59,9 +65,11 @@ AXIS_MAP = {
     "ш": "w", "w": "w", "width": "w", "ширина": "w",
     "в": "h", "h": "h", "height": "h", "высота": "h",
     "г": "d", "d": "d", "depth": "d", "глубина": "d",
+    "b": "w", "t": "d",  # German Breite/Tiefe in explicit H x B x T labels.
+
 }
-TRUE_VALUES = {"да", "есть", "yes", "true", "имеется"}
-FALSE_VALUES = {"нет", "no", "false", "отсутствует"}
+TRUE_VALUES = {"да", "есть", "yes", "true", "имеется", "ja"}
+FALSE_VALUES = {"нет", "no", "false", "отсутствует", "nein"}
 _PRESENT_MARKERS = frozenset({"●", "•", "O", "+"})
 _AMBIGUOUS_MARKERS = frozenset({"○"})
 _ABSENT_MARKERS = frozenset({"-", "–", "—", "−"})
@@ -107,7 +115,8 @@ _QUALIFIERS = (
 # The same screen diagonal in inches and in centimetres is stated twice; the unit word tells them apart.
 _DIAGONAL_UNITS = ((re.compile(r"дюйм|\""), "inch"), (re.compile(r"\(см\)|см"), "cm"))
 _COLOR_PARTS = (
-    (re.compile(r"дверц"), "door"),
+    (re.compile(r"дверц|двери|дверь"), "door"),
+    (re.compile(r"панел|panel"), "panel"),
     (re.compile(r"корпус"), "body"),
     (re.compile(r"внутри|внутренн"), "inside"),
     (re.compile(r"подставк"), "stand"),
@@ -184,6 +193,9 @@ def _axis_order(name: str) -> list[str]:
     parenthesized = re.findall(r"\(([^)]*(?:x|/)[^)]*)\)", content)
     candidates = parenthesized or [content]
     for candidate in candidates:
+        # Bosch and LG explicitly print axes as ШxВxГмм or HxBxT, sometimes
+        # joining the unit to the last axis. Strip only that trailing unit.
+        candidate = re.sub(r"[\s,]*(?:мм|mm)\s*$", "", candidate)
         split_tokens = [part.strip(" .,:;-") for part in re.split(r"[x/]", candidate)]
         mapped = [AXIS_MAP[token] for token in split_tokens if token in AXIS_MAP]
         if len(mapped) >= 3 and len(set(mapped[:3])) == 3:
@@ -206,8 +218,8 @@ def _normalize_dimensions(name: str, value: str) -> tuple[str, str] | None:
     values = [number * multiplier for number in numbers[:3]]
     order = _axis_order(name)
     if not order:
-        # Common source default is W×H×D. Unknown order remains explicit.
-        order = ["w", "h", "d"]
+        # Keep an unordered triple as source text; axis values cannot be inferred.
+        return None
     axes = dict(zip(order, values))
     canonical = ";".join(f"{axis}={_format_decimal(axes[axis])}" for axis in ("w", "h", "d"))
     return canonical, "mm"

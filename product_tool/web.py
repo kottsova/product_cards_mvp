@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import attribute_projection, bosch_readiness, card_presentation, exporter, jobs, lg_batch, manual_status, photo_metadata, product_description, storage
+from . import attribute_projection, bosch_presentation, bosch_readiness, card_evidence, card_presentation, exporter, jobs, lg_batch, manual_status, photo_metadata, product_description, storage
 from .adapters.lg import lg_base_model
 from .adapters.policy_fetch import migrate_legacy_stop_log
 from .lg_identity import document_tied_to_article, photo_tied_to_article
@@ -391,8 +391,11 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                 photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
                 photo["size_label"] = photo_metadata.format_file_size(photo.get("verified_bytes"))
         else:
+            bosch_evidence = (card_evidence.load(database, product_id, "bosch_home")
+                              if product["brand"].strip().upper() == "BOSCH" else None)
             for document in documents:
-                document["identity_confirmed"] = True
+                document["identity_confirmed"] = (bosch_presentation.document_verified(
+                    document, bosch_evidence, sources) if bosch_evidence is not None else True)
             for photo in photos:
                 photo["identity_confirmed"] = True
                 photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE

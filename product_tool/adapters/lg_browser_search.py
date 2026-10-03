@@ -146,8 +146,10 @@ class LGBrowserSearch:
         driver_factory: Callable | None = None, clock: Callable[[], float] = time.monotonic,
         allow_attended_challenge: bool = False,
         preloaded_google_results: dict[str, BrowserSearchResult] | None = None,
+        official_host: str = "www.lg.com",
     ):
         self.log_path = Path(log_path)
+        self.official_host = official_host
         self.allowed_hosts = allowed_hosts
         self.budget = budget or DEFAULT_BUDGET
         self._runtime = runtime
@@ -364,7 +366,7 @@ class LGBrowserSearch:
                         url=url, outcome="host_stopped", reason="provider_access_stop")
             return BrowserSearchResult("global", query, "host_stopped",
                                        note=provider + " access-stop is active.")
-        if self._host_stopped("www.lg.com"):
+        if self._host_stopped(self.official_host):
             self._trace(event="query_outcome", provider=label, query=query,
                         url=url, outcome="host_stopped", reason="lg_access_stop")
             return BrowserSearchResult("global", query, "host_stopped",
@@ -391,7 +393,7 @@ class LGBrowserSearch:
                     old_parser_source=getattr(driver, "source_kind", "") if legacy_google else "")
         try:
             state = driver.call("goto", url=url, queries=[term],
-                                search_result_hosts=["www.lg.com"],
+                                search_result_hosts=[self.official_host],
                                 render_mode="render_existing_search_result")
         except BrowserFailure as exc:
             outcome = str(exc)
@@ -425,7 +427,7 @@ class LGBrowserSearch:
             result_host = (parsed.hostname or "").casefold()
             parts = [part for part in parsed.path.lower().split("/") if part]
             region = parts[0] if parts else ""
-            official = parsed.scheme == "https" and result_host == "www.lg.com"
+            official = parsed.scheme == "https" and result_host == self.official_host
             is_support = official and len(parts) >= 3 and "support" in parts
             is_product = (official and len(parts) >= 3 and not any(
                 part in {"support", "search", "sitemap", "blog", "news"} for part in parts))

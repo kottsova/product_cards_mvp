@@ -6,6 +6,7 @@ import re
 from typing import Any
 
 from .display import display_name_ru, display_source, display_value
+from . import bosch_presentation
 
 
 OFFICIAL = ("lg_ru", "lg_kz", "lg_global", "lg", "samsung", "bosch_home")
@@ -158,7 +159,7 @@ def present_card_rows(
         chosen = _preferred_fact(row, pages)
         if chosen:
             official_russian = bool(re.search(r"[а-яё]", chosen.get("raw_name") or "", re.I))
-            row["display_name"] = (row["display_name"] if row.get("lg_presentation") else _related_ru_label(row, rows, pages)
+            row["display_name"] = (row["display_name"] if row.get("lg_presentation") or row.get("bosch_presentation") else _related_ru_label(row, rows, pages)
                                    or (_clean_label(chosen["raw_name"]) if official_russian else "")
                                    or display_name_ru(row["normalized_name"], row.get("raw_names", [])))
             section = chosen.get("section") or "Другие характеристики"
@@ -171,6 +172,8 @@ def present_card_rows(
         if row.get("lg_presentation"):
             from .lg_presentation import canonical_section
             section = canonical_section(section)
+        if row.get("bosch_presentation"):
+            section = bosch_presentation.section(section)
         row["section_name"] = section.strip().lower().capitalize() if section.isupper() and not section.startswith("SMART") else section.strip()
         row["role"] = _role(category, row)
         row["compact_status"] = _compact_status(row)

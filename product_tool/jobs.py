@@ -201,10 +201,6 @@ def enqueue(path: Path, product_id: int, stages: list[int]) -> str:
         ).fetchone()
         if product is None:
             raise ValueError("Товар не найден.")
-        if product["brand"].strip().casefold() == "bosch":
-            from .bosch_pipeline import is_selected
-            if not is_selected(product["category"], product["search_code"]):
-                raise ValueError("Bosch Home: this catalog row is not one of the two selected products.")
         # The LG-only supplier fallback (Sulpak) stays LG-only (worker.py
         # enforces this at dispatch time); DNS dealer fallback (Stage 11.4,
         # explicit user authorization) is available for any brand/category,
@@ -557,7 +553,7 @@ def identification_status(source_pages: list[dict[str, Any]]) -> str:
         return "Найдено несоответствие артикула"
     bosch = by_key.get("bosch_home", {})
     if bosch.get("url") and not bosch.get("error") and bosch.get("match_level") == "full_sku":
-        return "Bosch Home KZ: catalog model confirmed; E-Nr revision unknown"
+        return f"{bosch.get('site_name') or 'Bosch Home'}: catalog model confirmed; E-Nr revision unknown"
     samsung = by_key.get("samsung", {})
     if samsung.get("url") and not samsung.get("error"):
         # Stage 26: Samsung's own evidence levels (the article in the page's markup/title, only in the page's text, or only the base model)
