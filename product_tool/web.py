@@ -380,11 +380,12 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         history = jobs.list_jobs(database, product_id)
         latest = history[0] if history else None
         sources = jobs.get_source_pages(database, product_id)
-        documents = jobs.get_documents(database, product_id)
+        documents = (manual_status.effective_documents(database, product_id, product["search_code"])
+                     if lg_batch.is_lg(product) else jobs.get_documents(database, product_id))
         photos = jobs.get_photo_candidates(database, product_id)
         if lg_batch.is_lg(product):
             for document in documents:
-                document["identity_confirmed"] = document_tied_to_article(product["search_code"], document, sources)
+                document["identity_confirmed"] = document.get("identity_confirmed", False)
             for photo in photos:
                 photo["identity_confirmed"] = photo_tied_to_article(photo, sources)
                 photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
@@ -431,6 +432,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             counts=jobs.result_counts(database, product_id),
             documents=documents,
             manual_status=manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_reason=manual_status.unchecked_reason(database, product_id, product["search_code"]) if lg_batch.is_lg(product) else "",
             manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,
             identification_status=jobs.identification_status(sources),

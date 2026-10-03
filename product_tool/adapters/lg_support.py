@@ -6,8 +6,10 @@ must print the product designation in an identity field.
 """
 from __future__ import annotations
 
+import io
 import re
 import time
+import zipfile
 from types import SimpleNamespace
 
 import requests
@@ -117,10 +119,42 @@ def support_manual_candidates(html: str, page_url: str) -> tuple[dict, ...]:
         if not (manual_list_anchor or "manual" in low or "\u0440\u0443\u043a\u043e\u0432\u043e\u0434" in low
                 or "\u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446" in low):
             continue
-        if any(bad in low for bad in ("quick", "\u043a\u0440\u0430\u0442\u043a", "\u0434\u0435\u043a\u043b\u0430\u0440", "\u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a")):
+        if any(bad in low for bad in ("\u0434\u0435\u043a\u043b\u0430\u0440", "\u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a")):
             continue
         candidates.append({"url": href, "label": label[:160]})
     return tuple(dict((item["url"], item) for item in candidates).values())
+
+
+def verified_russian_archive(data: bytes) -> dict | None:
+    """Accept a downloadable LG manual archive only with substantial RU HTML.
+
+    Read members in memory without extraction; the support page supplies the
+    exact product tie separately.
+    """
+    if not data.startswith(b"PK") or not zipfile.is_zipfile(io.BytesIO(data)):
+        return None
+    try:
+        with zipfile.ZipFile(io.BytesIO(data)) as archive:
+            names = [item for item in archive.infolist()
+                     if item.filename.casefold().startswith("ru-ru/")
+                     and item.filename.casefold().endswith(".html")]
+            if not any(item.filename.casefold() == "ru-ru/main.html" for item in names):
+                return None
+            if not 3 <= len(names) <= 500:
+                return None
+            total_size = sum(item.file_size for item in names)
+            if total_size > 10_000_000:
+                return None
+            cyrillic = 0
+            for item in names:
+                text = archive.read(item).decode("utf-8", "ignore")
+                cyrillic += len(re.findall(r"[\u0410-\u042f\u0430-\u044f]", text))
+            if cyrillic < 1000:
+                return None
+            return {"kind": "russian_html_manual_archive", "russian_pages": len(names),
+                    "cyrillic_characters": cyrillic}
+    except (OSError, ValueError, zipfile.BadZipFile, RuntimeError):
+        return None
 
 
 class LGSupportAdapter:
@@ -135,7 +169,7 @@ class LGSupportAdapter:
         )
         self.documents_http = documents_http or PolicyAwareSession(
             log_path or Path("data/lg_fetch_log.json"), allowed_hosts=("www.lg.com", "gscs-b2c.lge.com"),
-            underlying=BinarySafeSession(requests.Session()), max_bytes=25_000_000
+            underlying=BinarySafeSession(requests.Session()), max_bytes=40_000_000
         )
         self.candidate_urls = tuple(candidate_urls)
         self.candidate_pages = candidate_pages or {}
@@ -247,7 +281,20 @@ class LGSupportAdapter:
                     break
                 continue
             data = document_bytes(response)
-            if not looks_like_pdf(data) or getattr(response, "truncated", False):
+            if getattr(response, "truncated", False):
+                entry["state"] = "truncated_document"
+                continue
+            archive = verified_russian_archive(data)
+            if archive is not None:
+                entry["assessment"] = archive
+                entry["evidence_relation"] = "official_support_page"
+                entry["state"] = "verified_russian_instruction"
+                report["outcome"] = "verified_russian_instruction"
+                document = ProductDocument((candidate.get("title") or candidate["label"]) + " (ZIP)",
+                                           "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", "", "", response.url,
+                                           support.url, base, ", ".join(lg_article_components(article)), support.url, True)
+                return [document], report
+            if not looks_like_pdf(data):
                 entry["state"] = "not_complete_pdf"
                 continue
             try:

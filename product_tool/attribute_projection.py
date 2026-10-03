@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from . import jobs
+from . import jobs, lg_presentation
 
 
 def _refinements(base: str) -> tuple[str, ...]:
@@ -81,7 +81,7 @@ def _combined_sources(base: dict[str, Any], detail: dict[str, Any]) -> dict[str,
     return combined
 
 
-def project_final_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def project_final_rows(rows: list[dict[str, Any]], *, exact_ru: bool = False) -> list[dict[str, Any]]:
     """Keep one final value per presence/refinement pair without changing evidence.
 
     The independent rows remain available through jobs.comparison_rows() and
@@ -121,12 +121,42 @@ def project_final_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 shown = dict(shown)
                 shown["resolved"] = {**value, "display_value": "Есть"}
         output.append(shown)
-    return sorted(output, key=lambda row: row["display_name"])
+    final = []
+    for row in output:
+        if lg_presentation.classify(row) != "product attribute":
+            continue
+        row = {**row, "display_name": lg_presentation.canonical_label(row, exact_ru=exact_ru),
+               "lg_presentation": True}
+        row = lg_presentation.normalize_measure(row)
+        split = lg_presentation.split_dimensions(row)
+        final.extend(split if split else [lg_presentation.safe_composite_dimensions(row)])
+    # Curated same-feature spellings from two LG regions. Merge the visible
+    # row only when both independent values agree; raw facts remain intact.
+    by_key = {row["normalized_name"]: row for row in final}
+    consumed = set()
+    for alias, canonical in {"hygienefresh_plus": "hygiene_fresh_plus"}.items():
+        left, right = by_key.get(canonical), by_key.get(alias)
+        if not left or not right:
+            continue
+        a, b = left.get("resolved") or {}, right.get("resolved") or {}
+        if (a.get("conflict") or b.get("conflict") or
+                (a.get("selected_value"), a.get("selected_unit")) !=
+                (b.get("selected_value"), b.get("selected_unit")) or
+                set(left["sources"]) & set(right["sources"])):
+            continue
+        left["sources"] = {**left["sources"], **right["sources"]}
+        left["raw_names"] = [*left["raw_names"], *right["raw_names"]]
+        consumed.add(alias)
+    return sorted((row for row in final if row["normalized_name"] not in consumed),
+                  key=lambda row: row["display_name"].casefold())
 
 
 def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     rows = jobs.comparison_rows(path, product_id)
     product = jobs.get_product(path, product_id)
     if product and product["brand"].strip().upper() == "LG":
-        return project_final_rows(rows)
+        sources = jobs.get_source_pages(path, product_id)
+        exact_ru = any(source["source_key"] == "lg_ru" and source["match_level"] == "full_sku"
+                       and not source["error"] for source in sources)
+        return project_final_rows(rows, exact_ru=exact_ru)
     return rows

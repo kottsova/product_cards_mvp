@@ -688,7 +688,20 @@ STAGE56_MIGRATION: dict[str, str] = {
     "product_tool/exporter.py": "Stage 56: include a Sulpak comparison column only when the exported batch contains actual Sulpak facts.",
 }
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION, **STAGE54_1_MIGRATION, **STAGE56_MIGRATION}
+STAGE57_MIGRATION: dict[str, str] = {
+    "product_tool/adapters/lg_support.py": "Stage 57: Verify official Russian HTML manual archives from exact LG support.",
+    "product_tool/attribute_projection.py": "Stage 57: Project Russian labels, filtered attributes, and proven dimensions without changing raw facts.",
+    "product_tool/card_presentation.py": "Stage 57: Group translated LG attributes and preserve raw dimension evidence.",
+    "product_tool/exporter.py": "Stage 57: Export projected labels and exact-article official manual status with raw-name audit.",
+    "product_tool/lg_presentation.py": "Stage 57: Add customer-facing LG label and dimensional projection rules.",
+    "product_tool/manual_status.py": "Stage 57: Reuse verified official manuals for identical LG articles and record incomplete searches.",
+    "product_tool/readiness.py": "Stage 57: Count verified manuals inherited by identical LG articles under unchanged readiness gates.",
+    "product_tool/templates/card_attributes.html": "Stage 57: Prevent editing one derived axis as the composite source value.",
+    "product_tool/templates/product.html": "Stage 57: Show technical manual-search reasons and correct ZIP label.",
+    "product_tool/web.py": "Stage 57: Render inherited exact-article official manuals and search reasons.",
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION, **STAGE54_1_MIGRATION, **STAGE56_MIGRATION, **STAGE57_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -1014,6 +1027,21 @@ STAGE56_PINNED_SHA256: dict[str, str] = {
     "product_tool/exporter.py": "e3bb506a5fe235eb4e2080240d2f46d9259034d31e0dd2a3a2d79c8184d09a22",
 }
 PINNED_SHA256.update(STAGE56_PINNED_SHA256)
+
+# Stage 57: customer-facing LG normalization and manual evidence preservation.
+STAGE57_PINNED_SHA256: dict[str, str] = {
+    "product_tool/adapters/lg_support.py": "042b2ede2ab809e7e4d53b4d1dadda6d51345527af6e3dd4917b7f29c56837be",
+    "product_tool/attribute_projection.py": "04cb3c7cfee396a16e0fed0f959cf7ad0cf446315aac3b806432565f2989048a",
+    "product_tool/card_presentation.py": "1a317ea37681c40e6e5ada57e2c8bfc035c7663dc5517d488aa810282b16d4a5",
+    "product_tool/exporter.py": "d48fb387c47b56ec59fed8772381ff4de610b55fcddbc2b229a144387f38e706",
+    "product_tool/lg_presentation.py": "a0ac6840501d6bc9ba162bc2807fbb394f89e084e70096e07de29d0ad58f75b8",
+    "product_tool/manual_status.py": "7e6b1e0f1499d88635e78d641231565d09fc7d61cc7c2d2b5a908bcc5611b633",
+    "product_tool/readiness.py": "bc9a509b638e49c1c36f6181e529fd476e840afacd1846fb849cb0ca6769a17d",
+    "product_tool/templates/card_attributes.html": "a552e5823072a1e083b30ff901231001f31028be0cc0a118806e4d623511d682",
+    "product_tool/templates/product.html": "5a47a369857f4d2c146697c67580188164e624fa8e1f41dc2bdcd8417b503905",
+    "product_tool/web.py": "0752ee2a5adaafcb69dcf3454f2bc89db2a336df52cb4a584761eb0b8d00f96e",
+}
+PINNED_SHA256.update(STAGE57_PINNED_SHA256)
 
 # Stage 54.1: this database is the live application state, not a fixture.
 # The Stage 53.1 digest remains an audit snapshot, while routine user uploads

@@ -18,7 +18,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from . import jobs
+from . import jobs, manual_status
 from .lg_identity import allows_evidence, document_tied_to_article, source_relation
 
 OFFICIAL_KEYS = frozenset({"lg_kz", "lg_ru", "lg_global"})
@@ -33,7 +33,11 @@ def card_readiness(database: Path, product_id: int) -> dict[str, Any]:
     sources = jobs.get_source_pages(database, product_id)
     facts = jobs.get_facts(database, product_id)
     photos = jobs.get_photo_candidates(database, product_id, include_excluded=False)
-    documents = jobs.get_documents(database, product_id)
+    product = jobs.get_product(database, product_id) or {}
+    article = product.get("search_code", "")
+    documents = (manual_status.effective_documents(database, product_id, article)
+                 if product.get("brand", "").strip().upper() == "LG"
+                 else jobs.get_documents(database, product_id))
     conflicts = jobs.result_counts(database, product_id)["conflicts"]
 
     exact_regions = sorted(s["source_key"] for s in sources if s["source_key"] in OFFICIAL_KEYS and s["match_level"] == "full_sku" and not s["error"])
@@ -47,8 +51,8 @@ def card_readiness(database: Path, product_id: int) -> dict[str, Any]:
                         allows_evidence(product_relations.get(p["source_key"], "unknown"), "photo") and
                         p["kind"] == "product_gallery" and p["selected"])
     languages = sorted({d["language"] for d in documents if d["language"]})
-    article = (jobs.get_product(database, product_id) or {}).get("search_code", "")
-    tied_documents = [d for d in documents if document_tied_to_article(article, d, sources)]
+    tied_documents = [d for d in documents if d.get("identity_confirmed",
+                       document_tied_to_article(article, d, sources))]
     tied_languages = {d["language"] for d in tied_documents if d["language"]}
     dealer_confirmed = sorted(s["source_key"] for s in sources if s["source_key"] in DEALER_KEYS and s["match_level"] in DEALER_CONFIRMED_LEVELS and not s["error"])
 

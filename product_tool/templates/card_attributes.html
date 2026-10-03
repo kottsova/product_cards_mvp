@@ -27,7 +27,7 @@
                         {% endfor %}
                         {% if row.resolved %}<p>Выбор системы: {{ row.resolved.display_value or '—' }} · {{ row.resolved.display_status }}. {{ row.resolved.reason }}</p>{% endif %}
                       </details>
-                      {% if row.resolved %}<details class="manual-override"><summary class="button">Свое значение</summary>
+                      {% if row.resolved and not row.derived_from %}<details class="manual-override"><summary class="button">Свое значение</summary>
                         <form action="/products/{{ product.id }}/attributes/{{ row.resolved.id }}/decision" method="post">
                           <label>Свое значение<input name="value" value="{% if row.resolved.status == 'manual' %}{{ row.resolved.selected_value }}{% endif %}" required></label>
                           <button class="button" type="submit">Сохранить</button>

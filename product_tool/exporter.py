@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 from openpyxl import Workbook
 from openpyxl.styles import Font
-from . import attribute_projection, bosch_readiness, jobs, lg_batch, manual_status, photo_metadata, samsung_readiness, storage
+from . import attribute_projection, bosch_readiness, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .lg_identity import document_tied_to_article, photo_tied_to_article
 from .display import display_access_error, display_name_ru, display_source, display_status, display_value
@@ -56,7 +56,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
     has_sulpak_facts=any(f["source_key"]=="sulpak" for p in batch["products"] for f in jobs.get_facts(database,p["id"]))
     has_bosch=any(s["source_key"]=="bosch_home" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))
     has_samsung=any(s["source_key"]=="samsung" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))  # the Samsung column and sheet exist only when the batch has a Samsung page
-    check=book.create_sheet(_title("Проверка источников",used)); _headers(check,["Товар","Полный артикул","Характеристика","LG Казахстан","LG Россия",*(["Sulpak"] if has_sulpak_facts else []),*(["LG other region"] if has_lg_global else []),*(["Samsung"] if has_samsung else []),*(["Bosch Home"] if has_bosch else []),"Итог","Причина","Статус","Все спорные значения"])
+    check=book.create_sheet(_title("Проверка источников",used)); _headers(check,["Товар","Полный артикул","Характеристика","LG Казахстан","LG Россия",*(["Sulpak"] if has_sulpak_facts else []),*(["LG other region"] if has_lg_global else []),*(["Samsung"] if has_samsung else []),*(["Bosch Home"] if has_bosch else []),"Итог","Причина","Статус","Все спорные значения","\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0435 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044f"])
     for p in batch["products"]:
         conflict_facts = {}
         for fact in jobs.get_facts(database,p["id"]):
@@ -67,12 +67,13 @@ def export_batch(database: Path,batch_id: str)->bytes:
             if detail not in values:
                 values.append(detail)
         for row in jobs.comparison_rows(database,p["id"]):
-            s=row["sources"]; r=row.get("resolved") or {}
+            s=row["sources"]; r=(lg_presentation.safe_composite_dimensions(row).get("resolved")
+                                  if lg_batch.is_lg(p) else row.get("resolved")) or {}
             detail = "; ".join(conflict_facts.get(row["normalized_name"], [])) if r.get("conflict") else ""
             label = row["display_name"]
             if r.get("conflict") and label == "Дополнительная характеристика" and row["raw_names"]:
                 label = row["raw_names"][0]
-            check.append([(p["name"] or p["search_code"]),p["search_code"],label,s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value",""),*([s.get("sulpak",{}).get("raw_value","")] if has_sulpak_facts else []),*([s.get("lg_global",{}).get("raw_value","")] if has_lg_global else []),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail])
+            check.append([(p["name"] or p["search_code"]),p["search_code"],label,s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value",""),*([s.get("sulpak",{}).get("raw_value","")] if has_sulpak_facts else []),*([s.get("lg_global",{}).get("raw_value","")] if has_lg_global else []),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail, "; ".join(dict.fromkeys(row["raw_names"]))])
     source_sheet=book.create_sheet(_title("Источники",used)); _headers(source_sheet,["Товар","Полный артикул","Сайт","Найденная модель","Уровень совпадения","Доказательство","Дата","Ошибка","URL"])
     for p in batch["products"]:
         for s in jobs.get_source_pages(database,p["id"]):
@@ -90,18 +91,23 @@ def export_batch(database: Path,batch_id: str)->bytes:
     for p in batch["products"]:
         source_pages = jobs.get_source_pages(database, p["id"])
         lg = lg_batch.is_lg(p)
-        saved_documents = jobs.get_documents(database,p["id"])
+        saved_documents = (manual_status.effective_documents(database,p["id"],p["search_code"])
+                           if lg else jobs.get_documents(database,p["id"]))
         for d in saved_documents:
-            tied = document_tied_to_article(p["search_code"], d, source_pages) if lg else True
+            tied = d.get("identity_confirmed", False) if lg else True
             docs.append([(p["name"] or p["search_code"]),d["title"],d["language"],d["document_date"],d["size"],"Да" if d["is_primary"] else "Нет",d["support_model"],d["source_url"],d["direct_url"],
                          "Подтверждена" if tied else "PDF проверен, связь с вариантом не подтверждена",
                          "LG" if d["source_key"].startswith("lg_") else display_source(d["source_key"]),
                          "Проверена" if tied else "Не проверена"])
-        if lg and not saved_documents:
+        if lg:
             status = manual_status.russian_status(database, p["id"], p["search_code"])
-            audit = manual_status.completed_search(database, p["id"]) if status == manual_status.NOT_FOUND else None
-            support_url = next((item.get("support_url") or item.get("url", "") for item in audit["evidence"] if item.get("kind") == "official_manual_list"), "") if audit else ""
-            docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "", support_url, "", "", "LG" if audit else "", status])
+            if status != manual_status.VERIFIED:
+                audit = manual_status.completed_search(database, p["id"])
+                support_url = next((item.get("support_url") or item.get("url", "")
+                                    for item in audit["evidence"] if item.get("official")), "") if audit else ""
+                reason = manual_status.unchecked_reason(database, p["id"], p["search_code"])
+                docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
+                             support_url, "", reason, "LG" if audit else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=False):
             tied = photo_tied_to_article(item, source_pages) if lg else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
