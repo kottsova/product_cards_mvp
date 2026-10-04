@@ -84,6 +84,19 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
                 site_name = chosen.get("site_name") or chosen["source_key"]
                 results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"], "full_sku_lg", f"Значение на официальной странице полного артикула {site_name}.", chosen["source_key"], False, True))
             continue
+        exact_samsung = [f for f in official if f["source_key"] == "samsung"
+                         and pages.get("samsung", {}).get("match_level") == "full_sku"
+                         and not pages.get("samsung", {}).get("error")]
+        if exact_samsung:
+            if _different(exact_samsung):
+                results.append(ResolvedValue(name, "", "", "needs_review",
+                    "Разные значения на точной официальной странице Samsung требуют проверки.", "", True, False))
+            else:
+                chosen = exact_samsung[0]
+                results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"],
+                    "full_sku_official", "Значение с точной официальной страницы товара Samsung.",
+                    "samsung", False, True))
+            continue
         if _different(suppliers):
             results.append(ResolvedValue(name,"","","needs_review","Несколько поставщиков подтверждают полный артикул, но значения расходятся.","",True,True)); continue
         if suppliers:

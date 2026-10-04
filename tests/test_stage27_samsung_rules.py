@@ -358,7 +358,8 @@ class Batch4OnTheOrdinaryPathOffline(unittest.TestCase):
         book = load_workbook(io.BytesIO(self.batch["export"]))
         rows = {r[1]: r for r in book["Готовность Samsung"].iter_rows(min_row=2, values_only=True)}
         self.assertEqual({a: r[2] for a, r in rows.items()}, {"DW60M5050BB/WT": "export_ready_with_gaps", "DV16DG8600BVLD": "export_ready", "MX-ST50B": "export_ready", "VR50T95735W/EV": "export_ready_with_gaps"})
-        self.assertEqual(rows["DW60M5050BB/WT"][13], "not_a_russian_instruction_by_text: не принята")
+        acceptance_column = next(book["\u0413\u043e\u0442\u043e\u0432\u043d\u043e\u0441\u0442\u044c Samsung"].values).index("\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f: \u043e\u0441\u043d\u043e\u0432\u0430\u043d\u0438\u0435 \u043f\u0440\u0438\u043d\u044f\u0442\u0438\u044f")
+        self.assertEqual(rows["DW60M5050BB/WT"][acceptance_column], "not_a_russian_instruction_by_text: не принята")
 
 
 if __name__ == "__main__":

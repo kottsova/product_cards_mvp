@@ -44,6 +44,25 @@ def _best_instruction(documents: list[dict[str, Any]], evidence: dict[str, Any] 
     return result
 
 
+
+def document_verified(document: dict, evidence: dict | None) -> bool:
+    """A fetched Samsung PDF is a checked manual only when its content/tie decision accepted it."""
+    return any(entry.get("final_url") == document.get("direct_url") and
+               (entry.get("facts") or {}).get("acceptance", {}).get("accepted")
+               for entry in (evidence or {}).get("documents", []))
+
+
+def photo_verified(photo: dict, pages: list[dict], article: str) -> bool:
+    """Weak PDPs keep gallery assets as candidates until an exact asset code binds the variant."""
+    from .adapters.samsung import norm
+    page = next((p for p in pages if p["source_key"] == KEY), None)
+    if not page or page["error"] or photo["source_key"] != KEY:
+        return False
+    if page["match_level"] == "full_sku":
+        return True
+    key = norm(article)
+    return photo["kind"] == "product_gallery" and len(key) >= 8 and key in norm(photo.get("asset_key", ""))
+
 def full_russian_instruction_confirmed(database: Path, product_id: int) -> bool:
     """True only for a saved instruction that is Russian by its text AND accepted by the rules: a file in another language, a brief multilingual guide with a Russian section, a file whose text
     cannot be read and a Russian file left to a person do not count."""

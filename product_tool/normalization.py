@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from decimal import Decimal, InvalidOperation
 import re
 from typing import Iterable
@@ -353,4 +353,15 @@ def normalize_facts(facts: Iterable[RawAttribute]) -> list[NormalizedFact]:
                         re.sub(r"[.]0$", "", version.group(2)), "",
                         fact.section, fact.value_cell,
                     ))
+    # A bare overview number and an explicitly unit-marked detail value can
+    # describe the same measurement. Infer a unit only from the same canonical
+    # field and identical numeric value on this very page; keep raw text intact.
+    explicit: dict[tuple[str, str], set[str]] = {}
+    for row in result:
+        if row.unit:
+            explicit.setdefault((row.normalized_name, row.normalized_value), set()).add(row.unit)
+    for index, row in enumerate(result):
+        units = explicit.get((row.normalized_name, row.normalized_value), set())
+        if not row.unit and re.fullmatch(r"\d+(?:[.]\d+)?", row.normalized_value) and len(units) == 1:
+            result[index] = replace(row, unit=next(iter(units)))
     return result

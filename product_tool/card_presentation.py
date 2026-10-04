@@ -108,6 +108,8 @@ def _compact_status(row: dict[str, Any]) -> str:
         return "Есть расхождение"
     if value.get("status") == "manual":
         return "Свое значение"
+    if value.get("selected_source") == "samsung" and not value.get("full_sku_confirmed"):
+        return "\u0412\u0430\u0440\u0438\u0430\u043d\u0442 \u043d\u0435 \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0451\u043d"
     facts = row["sources"]
     if "lg_ru" in facts and "lg_kz" in facts:
         return "Совпадает"
@@ -118,7 +120,7 @@ def _compact_status(row: dict[str, Any]) -> str:
     if "lg_kz" in facts or "lg" in facts:
         return "Только LG Казахстан"
     selected = value.get("selected_source")
-    return f"Только {display_source(selected)}" if selected else "Не подтверждено"
+    return f"Только {display_source(selected, facts.get(selected, {}).get('site_name', ''))}" if selected else "Не подтверждено"
 
 
 def present_card_rows(

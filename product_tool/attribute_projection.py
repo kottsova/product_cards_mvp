@@ -157,6 +157,16 @@ def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     if product and product["brand"].strip().upper() == "BOSCH" and any(
             page["source_key"] == "bosch_home" for page in jobs.get_source_pages(path, product_id)):
         return bosch_presentation.project(rows)
+    if product and product["brand"].strip().upper() == "SAMSUNG":
+        projected = project_final_rows(rows)
+        for row in projected:
+            if row.get("derived_from"):
+                continue
+            raw = (row.get("sources", {}).get("samsung") or {}).get("raw_name") or ""
+            if re.search(r"[\u0400-\u04ff]", raw):
+                label = " ".join(raw.split())
+                row["display_name"] = label[:1].upper() + label[1:]
+        return projected
     if product and product["brand"].strip().upper() == "LG":
         sources = jobs.get_source_pages(path, product_id)
         exact_ru = any(source["source_key"] == "lg_ru" and source["match_level"] == "full_sku"

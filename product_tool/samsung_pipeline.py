@@ -14,7 +14,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Any, Callable, Iterator
 
-from . import card_evidence, jobs, samsung_readiness, storage
+from . import card_evidence, jobs, manual_status, samsung_readiness, storage
 from .adapters.common import SourceDocument
 from .adapters.policy_session import RequestBudget, request_budget
 from .adapters.samsung_source import MAX_REQUESTS_PER_ROW, levels_note
@@ -66,7 +66,7 @@ def official_stage(database: Path, job_id: str, product_id: int, product: dict[s
             document.attributes = attributes
     jobs.save_source_document(database, product_id, document, update_description=2 in stages, update_attributes=3 in stages, update_photos=4 in stages)
     report = adapter.reports.get(code, {})
-    card_evidence.save(database, product_id, "samsung_page", {**{key: report.get(key) for key in ("article", "route", "steps", "page_url", "buy_page_url", "identity", "specs", "photos", "document_links", "gaps", "missing_fields", "outcome", "halted")},
+    card_evidence.save(database, product_id, "samsung_page", {**{key: report.get(key) for key in ("article", "route", "query_variants", "candidates", "external_search", "external_results", "steps", "page_url", "buy_page_url", "identity", "specs", "photos", "document_links", "gaps", "missing_fields", "outcome", "halted")},
                                                               "device_split": device_split})
     if device_split and device_split["tables"]:
         jobs.progress(database, job_id, 3, f"Samsung: размер и вес разделены по устройствам только по явной связи (таблицы инструкции с названием устройства): отнесено {len(device_split['assigned'])}, без связи оставлено {len(device_split['unassigned'])} (оба исходных значения сохранены, нужна проверка).",
@@ -108,7 +108,10 @@ def documents_stage(database: Path, job_id: str, product_id: int, adapter, docum
         jobs.save_documents(database, product_id, adapter.source_key, documents)
         report = adapter.reports.get(code, {})
         card_evidence.save(database, product_id, "samsung_documents", {"documents": report.get("documents", []), "document_links_on_page": (card_evidence.load(database, product_id, "samsung_page") or {}).get("document_links", []),
-                                                                       "page_model_data": report.get("page_model_data") or {}, "outcome": report.get("documents_outcome", ""), "halted": report.get("halted", ""), "steps": [s for s in report.get("steps", []) if s["step"] == "document"]})
+                                                                       "page_model_data": report.get("page_model_data") or {}, "support": report.get("support") or {}, "outcome": report.get("documents_outcome", ""), "halted": report.get("halted", ""), "steps": [s for s in report.get("steps", []) if s["step"] in ("document", "support_page")]})
+        support = report.get("support") or {}
+        if support.get("exact_model") and not any("RU" in item.get("languages_declared", []) for item in support.get("manuals", []) if item.get("kind") in ("UM", "PM")) and not documents:
+            manual_status.record_completed_absence(database, product_id, code, [{"checked": True, "official": True, "kind": "official_manual_list", "exact_model": True, "russian_found": False, "url": support["url"], "manuals_seen": len(support.get("manuals", []))}])
         russian = sum(1 for d in documents if d.language == "Русский")
         message = (f"Samsung: инструкций сохранено {len(documents)}; русских по тексту: {russian}." + ("" if russian else " " + reason)) if documents else reason
         jobs.progress(database, job_id, 6, message, level="info" if russian else "warning", source_url=document.url)

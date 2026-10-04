@@ -20,13 +20,14 @@ import re
 import time
 from pathlib import Path
 from typing import Callable
+from urllib.parse import urlsplit, urljoin, unquote, parse_qs
 
 import requests
 
 from .common import PhotoCandidate, ProductDocument, SourceDocument, SourceError, clean_text, fetch_with_retry, meta_description
 from .lg_documents import BinarySafeSession, document_bytes, looks_like_pdf
 from .policy_session import PolicyAwareSession
-from .samsung import (SamsungCard, assess_samsung_document, brief_guide_note, is_brief_guide, buy_page_url, extract_document_links, extract_photos, find_in_sitemap, find_on_hub, hub_product_links, assign_devices, extract_spec_table, instruction_acceptance, manual_device_tables, norm, order_for_request, page_model_data, parse_product_page, photo_variant_binding, soup_of,
+from .samsung import (DocumentLink, SamsungCard, assess_samsung_document, brief_guide_note, is_brief_guide, buy_page_url, extract_document_links, extract_photos, find_in_sitemap, find_on_hub, hub_product_links, assign_devices, extract_spec_table, instruction_acceptance, manual_device_tables, norm, order_for_request, page_model_data, parse_product_page, photo_variant_binding, soup_of,
                       spec_attributes, _json_ld_product, PAGE_TIES)
 from .sitemap_urls import sitemap_locs
 
@@ -123,11 +124,50 @@ def levels_note(facts: dict) -> str:
     return f"{language}; связь с товаром: {tie}; {model}{tail}"
 
 
+def exact_support_url(html: str, page_url: str, article: str) -> str:
+    """Only a product page's explicit link to this exact model may seed support search."""
+    for anchor in soup_of(html).select("a[href]"):
+        url = urljoin(page_url, anchor.get("href", "")).split("#", 1)[0].split("?", 1)[0]
+        path = urlsplit(url).path
+        marker = "/support/model/" if "/support/model/" in path else "/support/model." if "/support/model." in path else ""
+        if urlsplit(url).hostname == "www.samsung.com" and marker and norm(unquote(path.split(marker, 1)[1])) == norm(article):
+            return url
+    return ""
+
+
+def support_manual_links(html: str) -> tuple[list[DocumentLink], list[dict]]:
+    """Read the official support page's embedded manual list; filename/language are leads, not verification."""
+    match = re.search(r'"manuals"\s*:\s*\[', html)
+    if not match:
+        return [], []
+    try:
+        manuals, _ = json.JSONDecoder().raw_decode(html[match.end() - 1:])
+    except (ValueError, TypeError):
+        return [], []
+    links, typed, seen = [], [], set()
+    for item in manuals if isinstance(manuals, list) else []:
+        if not isinstance(item, dict):
+            continue
+        kind = str(item.get("contentsTypeCode") or "")
+        url = str(item.get("downloadUrl") or "")
+        languages = [str(lang.get("code") or "") for lang in item.get("languageList") or [] if isinstance(lang, dict)]
+        typed.append({"kind": kind, "description": item.get("englishDescription") or item.get("description") or "", "file": item.get("fileName") or "", "languages_declared": languages, "url": url})
+        if kind != "UM" or url in seen or urlsplit(url).hostname not in DOCUMENT_HOSTS:
+            continue
+        seen.add(url)
+        query = parse_qs(urlsplit(url).query)
+        model = unquote((query.get("ModelName") or [""])[0])
+        name = str(item.get("fileName") or "")
+        hint = "RU" if "RU" in languages else ""
+        links.append(DocumentLink(url, model, name, hint, str(item.get("englishDescription") or "")))
+    return links, typed
+
+
 class SamsungAdapter:
     source_key = "samsung"
     site_name = "Samsung Казахстан"
 
-    def __init__(self, http, *, documents_http=None, clock: Callable[[], float] = time.monotonic, pages_reader: Callable[[bytes], list[str]] | None = None, recorded_documents: dict[str, dict] | None = None):
+    def __init__(self, http, *, documents_http=None, clock: Callable[[], float] = time.monotonic, pages_reader: Callable[[bytes], list[str]] | None = None, recorded_documents: dict[str, dict] | None = None, regional_search: bool = False, browser_search=None):
         self.http = http
         self.recorded = load_recorded_documents() if recorded_documents is None else recorded_documents
         self.documents_http = documents_http if documents_http is not None else http
@@ -136,6 +176,9 @@ class SamsungAdapter:
         self.reports: dict[str, dict] = {}
         self.pending: dict[str, tuple] = {}     # documents assessed before the page is saved (the device split needs the manual): article -> (documents, reason)
         self.halted = ""
+        self.regional_search = regional_search
+        self.browser_search = browser_search
+        self._located_response = None
 
     # -- fetching ------------------------------------------------------------------------------------------------------------------
 
@@ -159,33 +202,125 @@ class SamsungAdapter:
 
     # -- the page ------------------------------------------------------------------------------------------------------------------
 
+    @staticmethod
+    def _search_variants(code: str) -> list[str]:
+        """Queries only: catalog annotations may locate a base PDP but never prove its variant."""
+        variants = [code, code.split("/")[0]]
+        variants.extend(part for part in re.split(r"[_\s]+", code) if len(norm(part)) >= 9 and re.search(r"\d", part))
+        return list(dict.fromkeys(value for value in variants if len(norm(value)) >= 6))
+
     def _locate(self, code: str, category: str, report: dict, deadline: float) -> str:
-        kind, addresses, reason = route_for(code, category)
+        kind, local_addresses, reason = route_for(code, category)
+        regional = tuple(address.replace("/kz_ru/", "/ru/") for address in local_addresses) if self.regional_search and kind == "sitemap" else ()
+        addresses = local_addresses + regional
         report["route"] = {"kind": kind, "addresses": list(addresses), "reason": reason}
         if kind == "none":
             return ""
+        variants = self._search_variants(code)
+        report["query_variants"] = variants
+        seen, best = set(), None
         for address in addresses:
+            if self.clock() >= deadline or self.halted:
+                break
             response = self._get(self.http, report, "hub" if kind == "hub" else "sitemap", address, deadline)
             if response is None:
-                if self.halted:
-                    return ""
                 continue
             if kind == "hub":
                 links = hub_product_links(response.text, address)
-                exact = next((u for u in links if len(norm(code)) >= 10 and norm(code) in norm(u.rsplit("/kz_ru/", 1)[-1])), "")  # a page whose address shows the whole catalog code
-                url = exact or find_on_hub(links, code)
+                urls = [next((u for u in links if len(norm(code)) >= 10 and norm(code) in norm(u)), "") or find_on_hub(links, code)]
             else:
-                url = find_in_sitemap(sitemap_locs(response.text), code)
-            if url:
-                report["route"]["found_via"] = address
+                locations = sitemap_locs(response.text)
+                urls = [find_in_sitemap(locations, variant) for variant in variants]
+            for url in dict.fromkeys(u for u in urls if u):
+                if url in seen:
+                    continue
+                seen.add(url)
+                if not self.regional_search:
+                    report["route"]["found_via"] = address
+                    return url
+                page = self._get(self.http, report, "product_page", url, deadline)
+                if page is None:
+                    continue
+                identity = parse_product_page(page.text, url, code).identity
+                level = match_level_of(identity)
+                report.setdefault("candidates", []).append({"url": url, "via": address, "match_level": level, "product_page": identity.is_product_page})
+                if not identity.is_product_page:
+                    continue
+                if level == "full_sku":
+                    self._located_response = page
+                    report["route"]["found_via"] = address
+                    return url
+                if best is None:
+                    best = (url, page, address)
+        if self.regional_search and not self.halted and self.clock() < deadline:
+            external = self._external_fallback(code, variants, report, deadline)
+            if external:
+                url, page, via = external
+                self._located_response = page
+                report["route"]["found_via"] = via
                 return url
+        if best:
+            url, self._located_response, via = best
+            report["route"]["found_via"] = via
+            return url
         return ""
+
+    def _external_fallback(self, code: str, variants: list[str], report: dict, deadline: float):
+        """Existing browser transport is used only after all official sitemap candidates miss exact identity."""
+        from .lg_browser_search import LGBrowserSearch
+        owned = self.browser_search is None
+        browser = self.browser_search or LGBrowserSearch(
+            getattr(self.http, "log_path", Path("samsung_fetch_log.json")),
+            allowed_hosts=("www.samsung.com", "samsung.com", "www.google.com", "google.com", "gstatic.com", "www.bing.com", "bing.com", "duckduckgo.com"),
+            official_host="www.samsung.com", clock=self.clock)
+        opened, seen = 0, set()
+        try:
+            for provider in ("google", "bing"):
+                for variant in list(dict.fromkeys((variants[0], variants[-1])))[:2]:
+                    if self.clock() >= deadline or opened >= 4 or self.halted:
+                        return None
+                    query = f'site:samsung.com "{variant}"'
+                    result = browser.search_provider(provider, query)
+                    report.setdefault("external_search", []).append({"provider": provider, "query": query, "outcome": result.outcome, "candidates": len(result.candidates)})
+                    if result.outcome in {"host_stopped", "challenge_detected", "rate_limited", "http_denied", "runtime_unavailable"}:
+                        return None
+                    for item in result.candidates:
+                        url = item.url
+                        parsed = urlsplit(url)
+                        path = parsed.path
+                        detail = {"query": query, "provider": provider, "url": url, "region": path.split("/")[1] if len(path.split("/")) > 1 else "",
+                                  "title": getattr(item, "label", ""), "snippet": getattr(item, "snippet", ""), "identity": "unverified"}
+                        report.setdefault("external_results", []).append(detail)
+                        if url in seen or parsed.hostname != "www.samsung.com" or "/support/" in path or path.endswith(".xml"):
+                            detail.update({"decision": "rejected", "reason": "duplicate_or_non_product_url"})
+                            continue
+                        seen.add(url)
+                        if self.clock() >= deadline or opened >= 4:
+                            detail.update({"decision": "not_opened", "reason": "bounded_search_limit"})
+                            return None
+                        opened += 1
+                        page = self._get(self.http, report, "external_product_candidate", url, deadline)
+                        if page is None:
+                            detail.update({"decision": "rejected", "reason": "page_unavailable"})
+                            continue
+                        identity = parse_product_page(page.text, url, code).identity
+                        level = match_level_of(identity)
+                        detail.update({"identity": level, "decision": "accepted" if identity.is_product_page and level == "full_sku" else "rejected",
+                                       "reason": "exact_product_content" if identity.is_product_page and level == "full_sku" else "content_identity_or_page_type_mismatch"})
+                        report.setdefault("candidates", []).append({"url": url, "via": provider, "match_level": level, "product_page": identity.is_product_page})
+                        if detail["decision"] == "accepted":
+                            return url, page, provider + "_external"
+            return None
+        finally:
+            if owned:
+                browser.close()
 
     def find_source(self, code: str, *, deadline: float, category: str = "", name: str = "") -> SourceDocument:
         article = (code or "").strip().upper()
         report = {"article": article, "route": {}, "steps": [], "page_url": "", "buy_page_url": "", "identity": {}, "specs": 0, "photos": {}, "document_links": [], "gaps": [], "missing_fields": []}
         self.reports[article] = report
         self.halted = ""
+        self._located_response = None
         if len(norm(article)) < 6:   # the article cannot be looked up in a sitemap or a hub (a blank or a stub code): nothing is requested
             report["outcome"] = "no_usable_code"
             return SourceDocument(self.source_key, self.site_name, "", match_level="unknown", evidence="Артикул строки пуст или слишком короток для поиска на официальном сайте: запросов не делалось.")
@@ -195,7 +330,7 @@ class SamsungAdapter:
             evidence = {"route_not_established": report["route"].get("reason", ""), "halted": f"запросы остановлены: {self.halted}", "page_not_listed": "на официальных страницах Samsung (карта сайта или список моделей) страница этого артикула не найдена"}[report["outcome"]]
             return SourceDocument(self.source_key, self.site_name, "", match_level="unknown", evidence=clean_text(evidence), error=self.halted)
         report["page_url"] = page_url
-        response = self._get(self.http, report, "product_page", page_url, deadline)
+        response = self._located_response or (self._get(self.http, report, "product_page", page_url, deadline) if not self.regional_search else None)
         if response is None:
             report["outcome"] = "page_unreachable"
             error = next((s.get("error", "") for s in reversed(report["steps"]) if s["step"] == "product_page"), "") or "страница не получена"
@@ -220,7 +355,8 @@ class SamsungAdapter:
         candidates = list(photos.photos) + [PhotoCandidate(u, u, "excluded", excluded_reason="thumbnail") for u in photos.thumbnails] + [PhotoCandidate(u, u, "excluded", excluded_reason="3d_model") for u in photos.three_d]
         soup = soup_of(response.text)
         description = meta_description(soup) or clean_text(str(_json_ld_product(soup).get("description", "")))
-        return SourceDocument(self.source_key, self.site_name, page_url, found_model=card.identity.jsonld_sku or (article if level == "full_sku" else ""), match_level=level, evidence=identity_evidence(card, article, level),
+        site_name = "Samsung Россия" if "/ru/" in urlsplit(page_url).path else self.site_name
+        return SourceDocument(self.source_key, site_name, page_url, found_model=card.identity.jsonld_sku or (article if level == "full_sku" else ""), match_level=level, evidence=identity_evidence(card, article, level),
                               attributes=spec_attributes(card.specs), description=description, photos=[p.url for p in photos.photos], photo_candidates=candidates, html=response.text)
 
     # -- the documents -------------------------------------------------------------------------------------------------------------
@@ -239,6 +375,23 @@ class SamsungAdapter:
         report = self.reports.setdefault(article, {"article": article, "steps": []})
         report["documents"] = []
         links = order_for_request(extract_document_links(document.html or "", document.url))
+        source_page_url = document.url
+        if self.regional_search and not links and document.html and document.match_level == "full_sku":
+            support_url = exact_support_url(document.html, document.url, article)
+            if support_url:
+                response = self._get(self.http, report, "support_page", support_url, deadline)
+                support = {"url": support_url, "status": response.status_code if response else None, "exact_model": False, "manuals": []}
+                report["support"] = support
+                if response is not None:
+                    body = response.text
+                    path = urlsplit(response.url).path
+                    exact = norm(unquote(path.split("/support/model/", 1)[-1] if "/support/model/" in path else path.split("/support/model.", 1)[-1])) == norm(article)
+                    exact = exact and "page-support-detail" in body and norm(article) in norm(body)
+                    support["exact_model"] = exact
+                    if exact:
+                        links, support["manuals"] = support_manual_links(body)
+                        links = order_for_request(links)
+                        source_page_url = response.url
         if only_hrefs is not None:       # a limited, declared attempt at named files only (nothing else the page prints is requested)
             links = [link for link in links if link.href in only_hrefs]
         if not links:
@@ -301,7 +454,7 @@ class SamsungAdapter:
             entry["language_by_text"] = language
             entry["brief_guide"] = brief
             title = f"Краткая памятка Samsung · {brief_guide_note(facts)}" if brief else f"Руководство пользователя Samsung · {levels_note(facts)}"
-            documents.append(ProductDocument(title, language, "", "", final_url, document.url, article.split("/")[0], link.model_name, document.url))
+            documents.append(ProductDocument(title, language, "", "", final_url, source_page_url, article.split("/")[0], link.model_name, source_page_url))
             if language == "Русский" and (facts["acceptance"]["accepted"] or facts["acceptance"]["basis"] == "page_tie_not_exact"):
                 break      # an accepted Russian instruction ends the search; so does one that a weaker PAGE tie leaves to a person (another file of the same page would be tied no better); a Russian one needing a person for another reason does not
         documents.sort(key=lambda d: d.language != "Русский")
@@ -342,7 +495,7 @@ def identity_evidence(card: SamsungCard, article: str, level: str) -> str:
 
 def default_samsung_adapter(directory: Path, *, clock: Callable[[], float] = time.monotonic, underlying=None, underlying_documents=None, min_interval_seconds: float | None = None,
                             pages_reader: Callable[[bytes], list[str]] | None = None, document_max_bytes: int = DOCUMENT_MAX_BYTES,
-                            recorded_documents: dict[str, dict] | None = None) -> SamsungAdapter:
+                            recorded_documents: dict[str, dict] | None = None, regional_search: bool | None = None, browser_search=None) -> SamsungAdapter:
     """The adapter the worker builds when nothing is injected. `underlying*` are for tests: a transport double instead of a real requests.Session. Every real call goes through PolicyAwareSession with
     one persisted log (`<data dir>/samsung_fetch_log.json`), so a stop (401/403/429 or a confirmed challenge) outlives the process; pacing is 1.5 s unless the caller replaces it."""
     pacing = {"min_interval_seconds": 1.5 if min_interval_seconds is None else min_interval_seconds}
@@ -356,4 +509,5 @@ def default_samsung_adapter(directory: Path, *, clock: Callable[[], float] = tim
     pages = PolicyAwareSession(log, allowed_hosts=PAGE_HOSTS, underlying=underlying if underlying is not None else plain(), **pacing)
     documents = PolicyAwareSession(log, allowed_hosts=DOCUMENT_HOSTS, underlying=BinarySafeSession(underlying_documents if underlying_documents is not None else (underlying if underlying is not None else plain())),
                                    max_bytes=document_max_bytes, **pacing)
-    return SamsungAdapter(pages, documents_http=documents, clock=clock, pages_reader=pages_reader, recorded_documents=recorded_documents)
+    enabled = (underlying is None) if regional_search is None else regional_search
+    return SamsungAdapter(pages, documents_http=documents, clock=clock, pages_reader=pages_reader, recorded_documents=recorded_documents, regional_search=enabled, browser_search=browser_search)

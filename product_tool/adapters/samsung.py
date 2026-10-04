@@ -116,6 +116,14 @@ def extract_identity(html: str, url: str, catalog_article: str) -> Identity:
     if article and article in norm(url):
         identity.evidence.append("url_only_not_counted")
     content_evidence = [e for e in identity.evidence if e != "url_only_not_counted"]
+    sku = norm(identity.jsonld_sku)
+    if sku and sku != article and len(sku) >= 8 and sku in article and not ({"jsonld_name", "title"} & set(content_evidence)):
+        # Catalog display annotations (e.g. a family prefix or an inventory suffix)
+        # can contain a real Samsung SKU. That locates a candidate, not the annotated variant.
+        identity.level = "base_model"
+        identity.evidence.append("catalog_annotation_contains_page_sku")
+        identity.open_differences.append(f"Catalog article {catalog_article}; page SKU {identity.jsonld_sku}; annotation is not declared by Samsung.")
+        return identity
     if content_evidence:
         identity.level = "full_sku"
         identity.evidence_strength = "strong" if {"jsonld_sku", "jsonld_name", "title"} & set(content_evidence) else "text_only"
@@ -185,7 +193,7 @@ def spec_attributes(items: list[SpecItem], devices: dict[int, str] | None = None
         name = f"{name} ({item.group})" if grouped else name
         if (name, item.value) not in seen:
             seen.add((name, item.value))
-            result.append(RawAttribute(name, item.value))
+            result.append(RawAttribute(name, item.value, item.group))
     return result
 
 

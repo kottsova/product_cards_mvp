@@ -140,6 +140,13 @@ def effective_documents(path: Path, product_id: int, article: str) -> list[dict]
 
 
 def russian_status(path: Path, product_id: int, article: str, *, lg: bool = True) -> str:
+    product = jobs.get_product(path, product_id)
+    if product and product["brand"].strip().casefold() in {"samsung", "samsung electronics", "\u0441\u0430\u043c\u0441\u0443\u043d\u0433"}:
+        from . import samsung_readiness
+        if samsung_readiness.full_russian_instruction_confirmed(path, product_id):
+            return VERIFIED
+        search = completed_search(path, product_id)
+        return NOT_FOUND if search and search["article"] == article and search["outcome"] == "not_found" else UNCHECKED
     documents = effective_documents(path, product_id, article) if lg else jobs.get_documents(path, product_id)
     for document in documents:
         if document["language"] == VERIFIED_LANGUAGE and (not lg or document["identity_confirmed"]):

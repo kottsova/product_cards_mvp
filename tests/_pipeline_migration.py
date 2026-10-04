@@ -701,7 +701,25 @@ STAGE57_MIGRATION: dict[str, str] = {
     "product_tool/web.py": "Stage 57: Render inherited exact-article official manuals and search reasons.",
 }
 
-ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION, **STAGE54_1_MIGRATION, **STAGE56_MIGRATION, **STAGE57_MIGRATION}
+STAGE59_MIGRATION: dict[str, str] = {
+    "product_tool/resolution.py": "Stage 59: mark values from exact Samsung PDPs confirmed in the shared resolver; base-model page values remain unconfirmed.",
+    "product_tool/display.py": "Stage 59: label shared exact-official Samsung resolutions in Russian.",
+    "product_tool/attribute_projection.py": "Stage 59: apply the shared Russian canonical and dimensional presentation to Samsung while retaining Russian raw labels where available.",
+    "product_tool/card_presentation.py": "Stage 59: show a compact unconfirmed-variant status for weaker Samsung facts.",
+    ".gitignore": "Stage 59: retain local policy fetch JSON logs for live Samsung report replays without tracking machine-specific state.",
+    "product_tool/adapters/samsung.py": "Stage 59: preserve Samsung specification groups and keep catalog annotations around a page SKU at base-model evidence level.",
+    "product_tool/adapters/samsung_source.py": "Stage 59: content-validate official KZ/RU sitemap candidates, search the existing external browser only after official exact misses, and read typed manuals from exact linked support pages.",
+    "product_tool/samsung_pipeline.py": "Stage 59: store query, candidate, support, and typed manual evidence separately; record absent Russian manuals only after an exact official support list is completed.",
+    "product_tool/samsung_readiness.py": "Stage 59: expose accepted Samsung document and variant-bound photo checks for UI and export without changing readiness thresholds.",
+    "product_tool/normalization.py": "Stage 59: infer a missing unit only when the same canonical field on the same page supplies the identical number with one explicit unit; raw values remain intact.",
+    "product_tool/manual_status.py": "Stage 59: require the existing Samsung PDF acceptance decision for the verified Russian manual status.",
+    "product_tool/web.py": "Stage 59: label Samsung manual and photo candidates by their actual identity tie.",
+    "product_tool/exporter.py": "Stage 59: export Samsung manual statuses, excluded and unselected photo candidates, and verified identity labels.",
+    "tests/test_stage26_samsung_worker.py": "Stage 59: assert Samsung acceptance by column name so the dealer-dispute column can be omitted when unused.",
+    "tests/test_stage27_samsung_rules.py": "Stage 59: locate the Samsung instruction acceptance field by header after optional dealer-column removal.",
+}
+
+ALL_AUTHORIZED_CHANGES: dict[str, str] = {**PRODUCTION_CODE_MIGRATION, **TEST_FILE_MIGRATION, **STAGE41_DATA_MIGRATION, **STAGE42_DATA_MIGRATION, **STAGE42_TEST_MIGRATION, **STAGE43_DATA_MIGRATION, **STAGE46_DATA_MIGRATION, **STAGE47_DATA_MIGRATION, **STAGE48_DATA_MIGRATION, **STAGE48_MARKERS_DATA_MIGRATION, **STAGE49_DATA_MIGRATION, **STAGE52_1_DATA_MIGRATION, **STAGE53_MIGRATION, **STAGE53_UI_MIGRATION, **STAGE53_1_MIGRATION, **STAGE54_1_MIGRATION, **STAGE56_MIGRATION, **STAGE57_MIGRATION, **STAGE59_MIGRATION}
 
 
 def is_authorized_change(path: str) -> bool:
@@ -1077,6 +1095,25 @@ STAGE58_PINNED_SHA256: dict[str, str] = {
     'tests/test_stage58_bosch_official.py': 'e2120b82dfd5f2bb77e2e34f8c0080b8cb1d3616b20437b7cb53e0a9fed16157',
 }
 PINNED_SHA256.update(STAGE58_PINNED_SHA256)
+
+STAGE59_PINNED_SHA256: dict[str, str] = {
+    'tests/test_stage27_samsung_rules.py': '5d37abb4cb7ccefc1130c751e47203e4cacaab8cadbd19aff97e69c427920b86',
+    'tests/test_stage26_samsung_worker.py': '90fb57067191f36691703bb6fdbc30976991c8ee4fc84aada3146a50d6329f1d',
+    'product_tool/resolution.py': 'e23a552dbb2f6a383706878946d2dfccfeba89e53aca8309cf4614a54d5f461a',
+    'product_tool/display.py': '9c4c98570ed8c07ac09fe437131b7acfc4fe5046ad5518fc93b7e61393aff6a6',
+    'product_tool/attribute_projection.py': '33bebcf1445eb671d8fd7507744a507d522c6bf5497fed33ae751d6d14e444ae',
+    'product_tool/card_presentation.py': '292193f77160259aaa192ca332dff07c0a703c68a7fe9a459a9ba8de234227d8',
+    '.gitignore': '1e1adbcafa476817b335ca72ddf9ab6337796b4bf02f61bcd099b7a2f081d621',
+    'product_tool/adapters/samsung.py': 'bb106acdc06369700a5cd9b9067208e82799c171032dcf4c53c9f21a1ec80341',
+    'product_tool/adapters/samsung_source.py': '131cbe8cfb7e344899b207a93ce3c0e60d5c7dc924dd10a3d68bda89826145fa',
+    'product_tool/samsung_pipeline.py': '50249cfe8255ea312bd49f94e5f09f6435d9d1a4871768a3595080a1814b2d62',
+    'product_tool/samsung_readiness.py': '320d8dcd2bde904af2d36da9bac7c5274f7b44acfadf658fb4fb52a0a196c219',
+    'product_tool/normalization.py': '76292f6e8b8e222d34713c7e2ad5cba929893fbace53162d7a8256eb480df84b',
+    'product_tool/manual_status.py': 'cd40353696c7906ba0d851e988a1878ea12daa83202aa1bd9fd166160d3009af',
+    'product_tool/web.py': 'ee92e351e5698ea809f01d91d7528f228beec848bc103d273a97beaacc20e75e',
+    'product_tool/exporter.py': '7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf',
+}
+PINNED_SHA256.update(STAGE59_PINNED_SHA256)
 
 # Stage 54.1: this database is the live application state, not a fixture.
 # The Stage 53.1 digest remains an audit snapshot, while routine user uploads

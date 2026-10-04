@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import attribute_projection, bosch_presentation, bosch_readiness, card_evidence, card_presentation, exporter, jobs, lg_batch, manual_status, photo_metadata, product_description, storage
+from . import attribute_projection, bosch_presentation, bosch_readiness, card_evidence, card_presentation, exporter, jobs, lg_batch, manual_status, photo_metadata, product_description, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .adapters.policy_fetch import migrate_legacy_stop_log
 from .lg_identity import document_tied_to_article, photo_tied_to_article
@@ -391,13 +391,16 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                 photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
                 photo["size_label"] = photo_metadata.format_file_size(photo.get("verified_bytes"))
         else:
-            bosch_evidence = (card_evidence.load(database, product_id, "bosch_home")
-                              if product["brand"].strip().upper() == "BOSCH" else None)
+            brand = product["brand"].strip().upper()
+            bosch_evidence = card_evidence.load(database, product_id, "bosch_home") if brand == "BOSCH" else None
+            samsung_evidence = card_evidence.load(database, product_id, "samsung_documents") if brand == "SAMSUNG" else None
             for document in documents:
-                document["identity_confirmed"] = (bosch_presentation.document_verified(
-                    document, bosch_evidence, sources) if bosch_evidence is not None else True)
+                document["identity_confirmed"] = (bosch_presentation.document_verified(document, bosch_evidence, sources)
+                    if bosch_evidence is not None else samsung_readiness.document_verified(document, samsung_evidence)
+                    if brand == "SAMSUNG" else True)
             for photo in photos:
-                photo["identity_confirmed"] = True
+                photo["identity_confirmed"] = (samsung_readiness.photo_verified(photo, sources, product["search_code"])
+                    if brand == "SAMSUNG" else True)
                 photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
                 photo["size_label"] = photo_metadata.format_file_size(photo.get("verified_bytes"))
         retained_manual_sources = {
