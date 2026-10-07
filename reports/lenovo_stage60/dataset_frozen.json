@@ -1,0 +1,248 @@
+﻿{
+  "stage": 60,
+  "frozen_at": "2026-10-07",
+  "baseline_excluded": "21ML005BUS",
+  "freeze_policy": "Exactly 10 models; fixed before pipeline runs; no replacement on failures; source_urls are research seeds, never production hardcodes.",
+  "models": [
+    {
+      "id": "lenovo60_01",
+      "brand": "Lenovo",
+      "article": "21KC0029MH",
+      "name": "ThinkPad X1 Carbon Gen 12",
+      "category": "laptop",
+      "region": "Netherlands",
+      "coverage_slot": "ThinkPad",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/ThinkPad/ThinkPad_X1_Carbon_Gen_12?M=21KC0029MH",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/ThinkPad/ThinkPad_X1_Carbon_Gen_12",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "soldered memory; family weight/photo disclaimer"
+    },
+    {
+      "id": "lenovo60_02",
+      "brand": "Lenovo",
+      "article": "21KG0004AT",
+      "name": "ThinkBook 14 G6 IRL",
+      "category": "laptop",
+      "region": "Austria",
+      "coverage_slot": "ThinkBook",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/ThinkBook/ThinkBook_14_G6_IRL?M=21KG0004AT",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/ThinkBook/ThinkBook_14_G6_IRL",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "installed RAM versus max memory/storage support"
+    },
+    {
+      "id": "lenovo60_03",
+      "brand": "Lenovo",
+      "article": "83EM007FLK",
+      "name": "IdeaPad Slim 3 15IRH8",
+      "category": "laptop",
+      "region": "Sri Lanka",
+      "coverage_slot": "IdeaPad",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/IdeaPad_Slim_3_15IRH8?M=83EM007FLK",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/IdeaPad_Slim_3_15IRH8",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "TN exact display versus family IPS/touch options; starting-at weight"
+    },
+    {
+      "id": "lenovo60_04",
+      "brand": "Lenovo",
+      "article": "83LY0066PB",
+      "name": "Legion 5 15IRX10",
+      "category": "laptop",
+      "region": "Poland",
+      "coverage_slot": "Legion",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/Legion_5_15IRX10?M=83LY0066PB",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/Legion_5_15IRX10",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "RTX 5050 exact versus family 5060/5070 options"
+    },
+    {
+      "id": "lenovo60_05",
+      "brand": "Lenovo",
+      "article": "63A4ZAR1U1",
+      "name": "ThinkVision T27i-30 Monitor",
+      "category": "monitor",
+      "region": "unverified",
+      "coverage_slot": "monitor",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/thinkvision_t27i_30_monitor?M=63A4ZAR1U1",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/thinkvision_t27i_30_monitor",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "optional camera/accessories must not become included"
+    },
+    {
+      "id": "lenovo60_06",
+      "brand": "Lenovo",
+      "article": "62C1GAT6EU",
+      "name": "ThinkVision P40w-20 Monitor",
+      "category": "monitor",
+      "region": "Europe (EU suffix; country unverified)",
+      "coverage_slot": "monitor",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/ThinkVision_P40w_20?M=62C1GAT6EU",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/ThinkVision_P40w_20",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "regional cable/bundle differences; exact page may require hydration"
+    },
+    {
+      "id": "lenovo60_07",
+      "brand": "Lenovo",
+      "article": "12E4S96402",
+      "name": "ThinkCentre M70q Gen 4",
+      "category": "desktop",
+      "region": "unverified (Spanish OS; do not infer country)",
+      "coverage_slot": "desktop",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/ThinkCentre_M70q_Gen_4?M=12E4S96402",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/ThinkCentre_M70q_Gen_4",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "S-prefix configuration; full suffix 02 not ordinary country code"
+    },
+    {
+      "id": "lenovo60_08",
+      "brand": "Lenovo",
+      "article": "ZACH0134PL",
+      "name": "Tab P12",
+      "category": "tablet",
+      "region": "Poland",
+      "coverage_slot": "tablet",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/Lenovo_Tablets/Tab_P12?M=ZACH0134PL",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/Lenovo_Tablets/Tab_P12",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "bundled pen versus optional keyboard; platform TB code versus sales MTM"
+    },
+    {
+      "id": "lenovo60_09",
+      "brand": "Lenovo",
+      "article": "83EM00KVMX",
+      "name": "IdeaPad Slim 3 15IRH8",
+      "category": "laptop",
+      "region": "Nordics",
+      "coverage_slot": "complex_regional_sku",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/IdeaPad_Slim_3_15IRH8?M=83EM00KVMX",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/IdeaPad_Slim_3_15IRH8",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "complex regional SKU: MX suffix is Nordics in official metadata, not Mexico; different keyboard/display"
+    },
+    {
+      "id": "lenovo60_10",
+      "brand": "Lenovo",
+      "article": "83LY00JCRK",
+      "name": "Legion 5 15IRX10",
+      "category": "laptop",
+      "region": "unverified (Russian OS; country must be read)",
+      "coverage_slot": "complex_regional_sku",
+      "source_urls": [
+        {
+          "type": "psref",
+          "url": "https://psref.lenovo.com/Detail/Legion_5_15IRX10?M=83LY00JCRK",
+          "relation": "exact_mtm",
+          "verification": "official search index confirms Model heading; direct web open returns 0 text lines"
+        },
+        {
+          "type": "psref_product",
+          "url": "https://psref.lenovo.com/Product/Legion_5_15IRX10",
+          "relation": "family_model",
+          "verification": "derived candidate path; not an exact configuration claim"
+        }
+      ],
+      "risk": "regional RK suffix; RTX 5060 versus base sample RTX5050; cannot substitute MTM"
+    }
+  ]
+}

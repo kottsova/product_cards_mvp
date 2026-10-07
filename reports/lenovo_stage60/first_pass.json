@@ -1,0 +1,1386 @@
+{
+  "dataset_sha256": "968208f0640ce837e0e0a519b2b427274c4d7bb11eb9f16c1594c18df12607a9",
+  "pipeline": "unchanged production, no Lenovo adapter or research URL injection",
+  "results": [
+    {
+      "article": "21KC0029MH",
+      "job": {
+        "id": "40296e1485774569ab0519a611937947",
+        "product_id": 1,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo ThinkPad X1 Carbon Gen 12» (артикул 21KC0029MH). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo ThinkPad X1 Carbon Gen 12» (артикул 21KC0029MH). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 1,
+          "job_id": "40296e1485774569ab0519a611937947",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 2,
+          "job_id": "40296e1485774569ab0519a611937947",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 3,
+          "job_id": "40296e1485774569ab0519a611937947",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 4,
+          "job_id": "40296e1485774569ab0519a611937947",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo ThinkPad X1 Carbon Gen 12» (артикул 21KC0029MH). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 5,
+          "job_id": "40296e1485774569ab0519a611937947",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 6,
+          "job_id": "40296e1485774569ab0519a611937947",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 7,
+          "job_id": "40296e1485774569ab0519a611937947",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo ThinkPad X1 Carbon Gen 12» (артикул 21KC0029MH). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "21KG0004AT",
+      "job": {
+        "id": "46033f3b65044079a568a6cdeb95ad0e",
+        "product_id": 2,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo ThinkBook 14 G6 IRL» (артикул 21KG0004AT). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 2,
+          "product_id": 2,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo ThinkBook 14 G6 IRL» (артикул 21KG0004AT). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 8,
+          "job_id": "46033f3b65044079a568a6cdeb95ad0e",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 9,
+          "job_id": "46033f3b65044079a568a6cdeb95ad0e",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 10,
+          "job_id": "46033f3b65044079a568a6cdeb95ad0e",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 11,
+          "job_id": "46033f3b65044079a568a6cdeb95ad0e",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo ThinkBook 14 G6 IRL» (артикул 21KG0004AT). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 12,
+          "job_id": "46033f3b65044079a568a6cdeb95ad0e",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 13,
+          "job_id": "46033f3b65044079a568a6cdeb95ad0e",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 14,
+          "job_id": "46033f3b65044079a568a6cdeb95ad0e",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo ThinkBook 14 G6 IRL» (артикул 21KG0004AT). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "83EM007FLK",
+      "job": {
+        "id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+        "product_id": 3,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM007FLK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 3,
+          "product_id": 3,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM007FLK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 15,
+          "job_id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 16,
+          "job_id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 17,
+          "job_id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 18,
+          "job_id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM007FLK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 19,
+          "job_id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 20,
+          "job_id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 21,
+          "job_id": "c9dbe0d6bc3c4c8ead03153d11f8ef2e",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM007FLK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "83LY0066PB",
+      "job": {
+        "id": "428649ea44e944c38f849cb02b35309b",
+        "product_id": 4,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY0066PB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 4,
+          "product_id": 4,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY0066PB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 22,
+          "job_id": "428649ea44e944c38f849cb02b35309b",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 23,
+          "job_id": "428649ea44e944c38f849cb02b35309b",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 24,
+          "job_id": "428649ea44e944c38f849cb02b35309b",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 25,
+          "job_id": "428649ea44e944c38f849cb02b35309b",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY0066PB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 26,
+          "job_id": "428649ea44e944c38f849cb02b35309b",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 27,
+          "job_id": "428649ea44e944c38f849cb02b35309b",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 28,
+          "job_id": "428649ea44e944c38f849cb02b35309b",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY0066PB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "63A4ZAR1U1",
+      "job": {
+        "id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+        "product_id": 5,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo ThinkVision T27i-30 Monitor» (артикул 63A4ZAR1U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 5,
+          "product_id": 5,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo ThinkVision T27i-30 Monitor» (артикул 63A4ZAR1U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 29,
+          "job_id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 30,
+          "job_id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 31,
+          "job_id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 32,
+          "job_id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo ThinkVision T27i-30 Monitor» (артикул 63A4ZAR1U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 33,
+          "job_id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 34,
+          "job_id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 35,
+          "job_id": "05b8e979f5314b6ab2de7d0d1fc66f01",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo ThinkVision T27i-30 Monitor» (артикул 63A4ZAR1U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "62C1GAT6EU",
+      "job": {
+        "id": "608d88acf7744671af9b68278a34194c",
+        "product_id": 6,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo ThinkVision P40w-20 Monitor» (артикул 62C1GAT6EU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 6,
+          "product_id": 6,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo ThinkVision P40w-20 Monitor» (артикул 62C1GAT6EU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 36,
+          "job_id": "608d88acf7744671af9b68278a34194c",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 37,
+          "job_id": "608d88acf7744671af9b68278a34194c",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 38,
+          "job_id": "608d88acf7744671af9b68278a34194c",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 39,
+          "job_id": "608d88acf7744671af9b68278a34194c",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo ThinkVision P40w-20 Monitor» (артикул 62C1GAT6EU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 40,
+          "job_id": "608d88acf7744671af9b68278a34194c",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 41,
+          "job_id": "608d88acf7744671af9b68278a34194c",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 42,
+          "job_id": "608d88acf7744671af9b68278a34194c",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo ThinkVision P40w-20 Monitor» (артикул 62C1GAT6EU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "12E4S96402",
+      "job": {
+        "id": "60d515a341cc479b9ea8bbaaf25c07e7",
+        "product_id": 7,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo ThinkCentre M70q Gen 4» (артикул 12E4S96402). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 7,
+          "product_id": 7,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo ThinkCentre M70q Gen 4» (артикул 12E4S96402). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 43,
+          "job_id": "60d515a341cc479b9ea8bbaaf25c07e7",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 44,
+          "job_id": "60d515a341cc479b9ea8bbaaf25c07e7",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 45,
+          "job_id": "60d515a341cc479b9ea8bbaaf25c07e7",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 46,
+          "job_id": "60d515a341cc479b9ea8bbaaf25c07e7",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo ThinkCentre M70q Gen 4» (артикул 12E4S96402). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 47,
+          "job_id": "60d515a341cc479b9ea8bbaaf25c07e7",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 48,
+          "job_id": "60d515a341cc479b9ea8bbaaf25c07e7",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 49,
+          "job_id": "60d515a341cc479b9ea8bbaaf25c07e7",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo ThinkCentre M70q Gen 4» (артикул 12E4S96402). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "ZACH0134PL",
+      "job": {
+        "id": "d9df53a8bfd74263a70e0be63ac30d3c",
+        "product_id": 8,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo Tab P12» (артикул ZACH0134PL). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 8,
+          "product_id": 8,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo Tab P12» (артикул ZACH0134PL). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 50,
+          "job_id": "d9df53a8bfd74263a70e0be63ac30d3c",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 51,
+          "job_id": "d9df53a8bfd74263a70e0be63ac30d3c",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 52,
+          "job_id": "d9df53a8bfd74263a70e0be63ac30d3c",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 53,
+          "job_id": "d9df53a8bfd74263a70e0be63ac30d3c",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo Tab P12» (артикул ZACH0134PL). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 54,
+          "job_id": "d9df53a8bfd74263a70e0be63ac30d3c",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 55,
+          "job_id": "d9df53a8bfd74263a70e0be63ac30d3c",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 56,
+          "job_id": "d9df53a8bfd74263a70e0be63ac30d3c",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo Tab P12» (артикул ZACH0134PL). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "83EM00KVMX",
+      "job": {
+        "id": "2b327dd31cae4758806e1075fa5b155e",
+        "product_id": 9,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM00KVMX). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 9,
+          "product_id": 9,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM00KVMX). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 57,
+          "job_id": "2b327dd31cae4758806e1075fa5b155e",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 58,
+          "job_id": "2b327dd31cae4758806e1075fa5b155e",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 59,
+          "job_id": "2b327dd31cae4758806e1075fa5b155e",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 60,
+          "job_id": "2b327dd31cae4758806e1075fa5b155e",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM00KVMX). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 61,
+          "job_id": "2b327dd31cae4758806e1075fa5b155e",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 62,
+          "job_id": "2b327dd31cae4758806e1075fa5b155e",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 63,
+          "job_id": "2b327dd31cae4758806e1075fa5b155e",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo IdeaPad Slim 3 15IRH8» (артикул 83EM00KVMX). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    },
+    {
+      "article": "83LY00JCRK",
+      "job": {
+        "id": "518789369aba45cfad11d2a11334a35b",
+        "product_id": 10,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY00JCRK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T08:05:42+00:00",
+        "updated_at": "2026-10-07T08:05:42+00:00",
+        "started_at": "2026-10-07T08:05:42+00:00",
+        "finished_at": "2026-10-07T08:05:42+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 10,
+          "product_id": 10,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY00JCRK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T08:05:42+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 64,
+          "job_id": "518789369aba45cfad11d2a11334a35b",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 65,
+          "job_id": "518789369aba45cfad11d2a11334a35b",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 66,
+          "job_id": "518789369aba45cfad11d2a11334a35b",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Lenovo» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 67,
+          "job_id": "518789369aba45cfad11d2a11334a35b",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY00JCRK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 68,
+          "job_id": "518789369aba45cfad11d2a11334a35b",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 69,
+          "job_id": "518789369aba45cfad11d2a11334a35b",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        },
+        {
+          "id": 70,
+          "job_id": "518789369aba45cfad11d2a11334a35b",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Lenovo Legion 5 15IRX10» (артикул 83LY00JCRK). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T08:05:42+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Any, Iterable
 
 SUPPLIERS={"sulpak"}
-OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home"}
+OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support"}
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -83,6 +83,17 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
                 chosen = exact_lg[0]
                 site_name = chosen.get("site_name") or chosen["source_key"]
                 results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"], "full_sku_lg", f"Значение на официальной странице полного артикула {site_name}.", chosen["source_key"], False, True))
+            continue
+        exact_lenovo = [f for f in official if f["source_key"] == "lenovo_support"
+                        and pages.get("lenovo_support", {}).get("match_level") == "full_sku"
+                        and not pages.get("lenovo_support", {}).get("error")]
+        if exact_lenovo:
+            if _different(exact_lenovo) or any(_signature(v) != _signature(exact_lenovo[0]) for v in suppliers):
+                results.append(ResolvedValue(name, "", "", "needs_review", "Конфигурационные источники Lenovo расходятся.", "", True, False))
+            else:
+                chosen = exact_lenovo[0]
+                results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"],
+                    "full_sku_official", "Факт точного MTM из structured Lenovo configuration body.", "lenovo_support", False, True))
             continue
         exact_samsung = [f for f in official if f["source_key"] == "samsung"
                          and pages.get("samsung", {}).get("match_level") == "full_sku"

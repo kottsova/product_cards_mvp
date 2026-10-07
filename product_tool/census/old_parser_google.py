@@ -310,7 +310,11 @@ class OldParserGoogleBrowser:
         url = args.get("url", "")
         parsed = urlsplit(url)
         query = parse_qs(parsed.query).get("q", [""])[0]
-        if parsed.scheme != "https" or parsed.hostname != "www.google.com" or parsed.path != "/search" or not query.startswith("site:lg.com "):
+        site_match = re.match(r"site:([A-Za-z0-9.-]+)\s", query)
+        site = site_match.group(1).casefold() if site_match else ""
+        hosts = args.get("search_result_hosts") or ["www.lg.com"]
+        admitted_site = bool(site and any(host == site or host.endswith("." + site) for host in hosts))
+        if parsed.scheme != "https" or parsed.hostname != "www.google.com" or parsed.path != "/search" or not admitted_site:
             raise BrowserFailure("interaction_blocked", self.counts)
         self.rate_limit_url = ""
         self.last_status = None
@@ -322,10 +326,10 @@ class OldParserGoogleBrowser:
             raise BrowserFailure("rate_limited", dict(self.counts, rate_limit_url=self.rate_limit_url))
         if "/sorry/" in self.page.url:
             raise BrowserFailure("challenge_detected", self.counts)
-        match = re.fullmatch(r'site:lg\.com\s+"([^"]+)"', query)
+        match = re.fullmatch(r'site:[A-Za-z0-9.-]+\s+"([^"]+)"', query)
         fragments = []
         for link, title in links:
-            old_candidate = (self.candidate_function(link, title, "lg.com", "LG", "", match.group(1))
+            old_candidate = (self.candidate_function(link, title, site, "LG" if site == "lg.com" else "", "", match.group(1))
                              if match and self.candidate_function is not None else None)
             fragments.append({"type": "result_link", "url": link, "title": title,
                               "snippet": "", "old_parser_candidate": old_candidate})

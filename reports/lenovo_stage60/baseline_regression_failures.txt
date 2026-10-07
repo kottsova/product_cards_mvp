@@ -1,0 +1,186 @@
+======================================================================
+ERROR: test_stage54_2_projection (unittest.loader._FailedTest.test_stage54_2_projection)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_stage54_2_projection
+Traceback (most recent call last):
+  File "C:\Users\Julynce\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\unittest\loader.py", line 426, 
+in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\Julynce\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\unittest\loader.py", line 367, 
+in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "A:\work\dev\product_cards_mvp\tests\test_stage54_2_projection.py", line 6, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+
+
+======================================================================
+ERROR: test_literal_old_source_exact_result_screening 
+(test_stage54_3_old_parser_parity.OldParserParityTests.test_literal_old_source_exact_result_screening)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_stage54_3_old_parser_parity.py", line 118, in 
+test_literal_old_source_exact_result_screening
+    function, source = original_search_function()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "A:\work\dev\product_cards_mvp\product_tool\census\old_parser_google.py", line 35, in original_search_function
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "A:\work\dev\load_img\01_search_product_links\find_product_pages\find_product_pages.py", line 9, in <module>
+    import gspread
+ModuleNotFoundError: No module named 'gspread'
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_1.Stage81ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_1.py", line 45, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_2.Stage82ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_2.py", line 48, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_2_1.Stage821ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_2_1.py", line 44, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_2_2.Stage822ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_2_2.py", line 48, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_3.Stage83ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_3.py", line 46, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_4.Stage84ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_4.py", line 42, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_5.Stage85ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_5.py", line 41, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v8_6.Stage86ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v8_6.py", line 72, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v9.Stage9ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v9.py", line 41, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+======================================================================
+FAIL: test_stage2_to_8_files_byte_identical 
+(test_structural_census_v9_1.Stage9_1ProtectionTests.test_stage2_to_8_files_byte_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "A:\work\dev\product_cards_mvp\tests\test_structural_census_v9_1.py", line 41, in 
+test_stage2_to_8_files_byte_identical
+    self.assertTrue(ok, msg)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true : 'product_tool/exporter.py' no longer matches its pinned post-migration hash 
+(expected 7f7ae84839f491144c7af23e59959c53f938c8b7b3761d2d1462cfd202953eaf, got 
+4ec7878f33668393e9f04797056d57e70a4ec9dd86c178309223059e1cf8b0a9) -- this is a NEW, undocumented change made on top of 
+the authorized migration, and is not itself authorized just because the file was touched before.
+
+----------------------------------------------------------------------
+Ran 1428 tests in 669.394s
+
+FAILED (failures=10, errors=2)
+Visible Chrome opened for one Google search. Complete any challenge manually in this window.
+Google challenge is visible. Automation is paused; complete it yourself in Chrome.
+Visible Chrome opened for one Google search. Complete any challenge manually in this window.
+Visible Chrome opened for one Google search. Complete any challenge manually in this window.
+Visible Chrome opened for one Google search. Complete any challenge manually in this window.
+Google challenge is visible. Automation is paused; complete it yourself in Chrome.
+Visible Chrome opened for one Google search. Complete any challenge manually in this window.

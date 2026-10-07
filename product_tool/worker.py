@@ -9,7 +9,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Callable
 from urllib.parse import urlsplit
-from . import bosch_pipeline, discovery_trace, jobs, lg_discovery_pipeline, samsung_pipeline
+from . import bosch_pipeline, discovery_trace, jobs, lg_discovery_pipeline, samsung_pipeline, lenovo_pipeline
 from .adapters.common import ProductDocument, SourceDocument
 from .adapters.dns import DnsAdapter
 from .adapters.bosch_home import BoschHomeAdapter
@@ -147,6 +147,7 @@ def run_once(
     lg_support_adapter_factory: Callable[[], LGSupportAdapter] | None = None,
     lg_global_adapter_factory: Callable[[], LGGlobalAdapter] | None = None,
     lg_sitemap_discovery_factory: Callable[[], object] | None = None,
+    lenovo_adapter_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -160,6 +161,11 @@ def run_once(
             bosch_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],
                                    adapter_factory=bosch_adapter_factory,
                                    dns_adapter_factory=dns_adapter_factory, clock=clock)
+            return True
+        if product["brand"].strip().casefold() == "lenovo":
+            lenovo_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],
+                                    adapter_factory=lenovo_adapter_factory,
+                                    dns_adapter_factory=dns_adapter_factory, clock=clock)
             return True
         is_lg = product["brand"].strip().casefold() in LG_BRAND_ALIASES
         is_hyperx = product["brand"].strip().casefold() in HYPERX_BRAND_ALIASES

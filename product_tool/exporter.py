@@ -4,8 +4,8 @@ from io import BytesIO
 from pathlib import Path
 import re
 from openpyxl import Workbook
-from openpyxl.styles import Font
-from . import attribute_projection, bosch_presentation, bosch_readiness, card_evidence, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
+from openpyxl.styles import Font, Alignment
+from . import lenovo_pipeline, lenovo_presentation, attribute_projection, bosch_presentation, bosch_readiness, card_evidence, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .lg_identity import document_tied_to_article, photo_tied_to_article
 from .display import display_access_error, display_name_ru, display_source, display_status, display_value
@@ -48,7 +48,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
         for p in products:
             is_lg = lg_batch.is_lg(p)
             resolved = {r["normalized_name"]: value.get("display_value", "")
-                        if not (is_lg or p["brand"].strip().upper() == "SAMSUNG") or (value.get("full_sku_confirmed") and not value.get("conflict"))
+                        if not (is_lg or p["brand"].strip().upper() in {"SAMSUNG", "LENOVO"}) or (value.get("full_sku_confirmed") and not value.get("conflict"))
                         else ""
                         for r in rows[p["id"]] for value in [r.get("resolved") or {}]}
             sheet.append([p["row_number"],(p["name"] or p["search_code"]),p["brand"],p["search_code"],lg_base_model(p["search_code"]) if p["brand"].strip().upper()=="LG" else "",*[resolved.get(k,"") for k in keys]])
@@ -93,6 +93,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
         source_pages = jobs.get_source_pages(database, p["id"])
         lg = lg_batch.is_lg(p)
         samsung = p["brand"].strip().upper() == "SAMSUNG"
+        lenovo = p["brand"].strip().upper() == "LENOVO"
+        lenovo_evidence = card_evidence.load(database,p["id"],"lenovo") if lenovo else None
         saved_documents = (manual_status.effective_documents(database,p["id"],p["search_code"])
                            if lg else jobs.get_documents(database,p["id"]))
         for d in saved_documents:
@@ -100,7 +102,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                     bosch_presentation.document_verified(d, card_evidence.load(database,p["id"],"bosch_home"), source_pages)
                     if p["brand"].strip().upper() == "BOSCH" else
                     samsung_readiness.document_verified(d, card_evidence.load(database,p["id"],"samsung_documents"))
-                    if samsung else True)
+                    if samsung else lenovo_pipeline.document_verified(d, lenovo_evidence) if lenovo else True)
             docs.append([(p["name"] or p["search_code"]),d["title"],d["language"],d["document_date"],d["size"],"Да" if d["is_primary"] else "Нет",d["support_model"],d["source_url"],d["direct_url"],
                          "Подтверждена" if tied else "PDF проверен, связь с вариантом не подтверждена",
                          "LG" if d["source_key"].startswith("lg_") else display_source(
@@ -119,7 +121,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
-            tied = photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else True
+            tied = photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
@@ -139,12 +141,28 @@ def export_batch(database: Path,batch_id: str)->bytes:
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
                 photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],
                                          "Да" if item["selected"] else "Нет","Связь с артикулом не подтверждена",*_photo_cells(item)])
-            elif samsung and item["kind"] != "excluded":
+            elif (samsung or lenovo) and item["kind"] != "excluded":
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
                 photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],
                                          "Нет","Связь с артикулом не подтверждена" if not tied else "Не выбрано",*_photo_cells(item)])
+    lenovo_products = [p for p in batch["products"] if p["brand"].strip().upper() == "LENOVO"]
+    if lenovo_products:
+        candidates=book.create_sheet(_title("Конфигурации-кандидаты",used))
+        _headers(candidates,["Товар","Артикул","Раздел","Исходное поле","Значение","Связь","Причина"])
+        manual_candidates=book.create_sheet(_title("Документы-кандидаты Lenovo",used))
+        _headers(manual_candidates,["Товар","Артикул","Тип","Название","Язык","URL","Связь","Проверка"])
+        ready=book.create_sheet(_title("Готовность Lenovo",used))
+        _headers(ready,["Товар","Артикул","Готовность","Пробелы","Русская инструкция"])
+        for p in lenovo_products:
+            ev=card_evidence.load(database,p["id"],"lenovo") or {}
+            for c in ev.get("configuration_candidates",[]):
+                candidates.append([p["name"],p["search_code"],lenovo_presentation.section(c["section"]),c["raw_label"],c["value"],lenovo_presentation.SCOPES.get(c["scope"],c["scope"]),"Условное значение; требуется проверка для полного артикула"])
+            for d in ev.get("manuals",[]):
+                manual_candidates.append([p["name"],p["search_code"],d["type"],d["title"],d["language"],d["url"],lenovo_presentation.SCOPES.get(d["relation"],d["relation"]),"Проверена" if d["verified"] else "Не проверена"])
+            r=lenovo_pipeline.card_readiness(database,p["id"])
+            ready.append([p["name"],p["search_code"],lenovo_presentation.VERDICTS.get(r["verdict"],r["verdict"]),"; ".join(lenovo_presentation.gap_labels(r)),r["manual_status"]])
     if any(lg_batch.is_lg(p) for p in batch["products"]):
         ready=book.create_sheet(_title("Готовность LG",used))
         _headers(ready,["Товар","Полный артикул","Статус задания","Готовность карточки","Проверенные этапы","Причины пробелов","Справочно"])
@@ -183,4 +201,14 @@ def export_batch(database: Path,batch_id: str)->bytes:
             ready.append([(p["name"] or p["search_code"]),p["search_code"],status,r["verdict"],r["gtin"],r["page_enr"] or "",r["revision_status"],r["official_facts"],f"{r['official_photos_selected']} / {r['official_photos']}",r["manual_family"],"\u0414\u0430" if r["manual_exact_code_in_pdf"] else "\u041d\u0435\u0442",len(r["other_manuals_unverified"]),", ".join(r["blocking_gaps"]+r["advisory_gaps"])])
     for sheet in book.worksheets:
         for col in sheet.columns: sheet.column_dimensions[col[0].column_letter].width=min(60,max(12,max(len(str(c.value or "")) for c in col)+2))
+    if lenovo_products:
+        from math import ceil
+        for sheet in (candidates, manual_candidates, ready):
+            for row in sheet.iter_rows():
+                lines=1
+                for cell in row:
+                    cell.alignment=Alignment(wrap_text=True,vertical="top")
+                    width=sheet.column_dimensions[cell.column_letter].width or 12
+                    lines=max(lines,ceil(len(str(cell.value or ""))/max(8,width-2)))
+                sheet.row_dimensions[row[0].row].height=max(22,16*lines)
     output=BytesIO(); book.save(output); book.close(); return output.getvalue()
