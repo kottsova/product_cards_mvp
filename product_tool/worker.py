@@ -149,6 +149,7 @@ def run_once(
     lg_sitemap_discovery_factory: Callable[[], object] | None = None,
     lenovo_adapter_factory: Callable[[], object] | None = None,
     jbl_adapter_factory: Callable[[], object] | None = None,
+    apple_adapter_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -162,6 +163,10 @@ def run_once(
             bosch_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],
                                    adapter_factory=bosch_adapter_factory,
                                    dns_adapter_factory=dns_adapter_factory, clock=clock)
+            return True
+        if product["brand"].strip().casefold() == "apple":
+            from . import apple_pipeline
+            apple_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"], adapter_factory=apple_adapter_factory, dns_adapter_factory=dns_adapter_factory, clock=clock)
             return True
         if product["brand"].strip().casefold() == "lenovo":
             lenovo_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],

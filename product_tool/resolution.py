@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Any, Iterable
 
 SUPPLIERS={"sulpak"}
-OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl"}
+OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl","apple"}
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -104,6 +104,14 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             else:
                 chosen=exact_jbl[0]
                 results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"], "full_sku_official" if pages["jbl"]["match_level"]=="full_sku" else "model_confirmed_official", "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.", "jbl", False, pages["jbl"]["match_level"]=="full_sku"))
+            continue
+        exact_apple = [f for f in official if f["source_key"] == "apple" and pages.get("apple", {}).get("match_level") == "full_sku" and not pages.get("apple", {}).get("error")]
+        if exact_apple:
+            if _different(exact_apple):
+                results.append(ResolvedValue(name, "", "", "needs_review", "Конфликт параметров точного Apple order SKU.", "", True, False))
+            else:
+                chosen = exact_apple[0]
+                results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"], "full_sku_official", "Параметр точного коммерческого артикула Apple; family options исключены.", "apple", False, True))
             continue
         exact_samsung = [f for f in official if f["source_key"] == "samsung"
                          and pages.get("samsung", {}).get("match_level") == "full_sku"

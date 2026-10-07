@@ -554,6 +554,9 @@ def identification_status(source_pages: list[dict[str, Any]]) -> str:
     bosch = by_key.get("bosch_home", {})
     if bosch.get("url") and not bosch.get("error") and bosch.get("match_level") == "full_sku":
         return f"{bosch.get('site_name') or 'Bosch Home'}: catalog model confirmed; E-Nr revision unknown"
+    apple = by_key.get("apple", {})
+    if apple.get("url") and not apple.get("error"):
+        return "Найден точный коммерческий артикул Apple; параметры конфигурации проверяются отдельно" if apple.get("match_level") == "full_sku" else "Найден официальный источник Apple; точная конфигурация не подтверждена"
     jbl = by_key.get("jbl", {})
     if jbl.get("url") and not jbl.get("error"):
         return "Точная модель JBL подтверждена" if jbl.get("match_level") in {"full_sku","model_confirmed"} else "Найдено только семейство или другой вариант JBL"

@@ -41,6 +41,10 @@
   <div class="lightbox-controls"><button type="button" class="button lightbox-prev">← Предыдущее</button><button type="button" class="button lightbox-next">Следующее →</button></div>
 </dialog>
 {% else %}<p class="empty">Кандидаты появятся после этапа 4.</p>{% endif %}</section>
+{% if apple_evidence %}
+<section class="section"><h2>Конфигурация Apple</h2><p>Готовность: {{ 'Готова' if apple_card.verdict == 'export_ready' else 'Не готова' }}. Русская инструкция: {{ apple_card.manual_status }}.</p><p>Модель: {{ apple_card.identity.model }}; конфигурация: {{ apple_card.identity.configuration }}; вариант: {{ apple_card.identity.variant }}.</p><p>{{ apple_card.blocking_gaps | join('; ') }}</p>
+<h3>Параметры и варианты-кандидаты</h3><table><thead><tr><th>Раздел</th><th>Исходное поле</th><th>Значение</th><th>Причина</th></tr></thead><tbody>{% for c in apple_evidence.configuration_candidates %}<tr><td>{{ c.section }}</td><td>{{ c.raw_label }}</td><td>{{ c.value }}</td><td>{{ c.reason }}</td></tr>{% endfor %}</tbody></table>
+<h3>Фото-кандидаты</h3>{% for c in apple_evidence.photo_candidates %}<p><a href="{{ c.url }}">Источник изображения</a> — {{ c.reason }}</p>{% endfor %}</section>{% endif %}
 {% if jbl_evidence %}
 <section class="section"><h2>Проверка JBL</h2><p>Готовность: {{ jbl_verdicts.get(jbl_card.verdict, jbl_card.verdict) }}. Русская инструкция: {{ jbl_card.manual_status }}.</p><p>{% for gap in jbl_card.gaps %}{{ jbl_gaps.get(gap, gap) }}{% if not loop.last %}; {% endif %}{% endfor %}</p>
 <h3>Характеристики-кандидаты</h3><table><thead><tr><th>Раздел</th><th>Исходное поле</th><th>Значение</th><th>Причина</th></tr></thead><tbody>{% for c in jbl_evidence.rejected_specs %}<tr><td>{{ c.section }}</td><td>{{ c.raw_label }}</td><td>{{ c.value }}</td><td>{{ c.reason }}</td></tr>{% endfor %}</tbody></table>

@@ -1,0 +1,1406 @@
+{
+  "dataset_sha256": "8df1c4527b47f2c2103ff7fe70dc55e607dea50aa5cab20fb7ea6fcab5f41f81",
+  "pipeline": "unchanged run_once; unsupported Apple branch; no injected sources",
+  "results": [
+    {
+      "article": "MYAP3LL/A",
+      "job": {
+        "id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+        "product_id": 1,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB Black» (артикул MYAP3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB Black» (артикул MYAP3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 1,
+          "job_id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 2,
+          "job_id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 3,
+          "job_id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 4,
+          "job_id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple iPhone 16 128GB Black» (артикул MYAP3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 5,
+          "job_id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 6,
+          "job_id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 7,
+          "job_id": "7b7ffcf1f8c44ac69d0544b24cc00004",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB Black» (артикул MYAP3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "MYAQ3LL/A",
+      "job": {
+        "id": "7dd5405f361a4dd39d186f73956b1b17",
+        "product_id": 2,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB White» (артикул MYAQ3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 2,
+          "product_id": 2,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB White» (артикул MYAQ3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 8,
+          "job_id": "7dd5405f361a4dd39d186f73956b1b17",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 9,
+          "job_id": "7dd5405f361a4dd39d186f73956b1b17",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 10,
+          "job_id": "7dd5405f361a4dd39d186f73956b1b17",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 11,
+          "job_id": "7dd5405f361a4dd39d186f73956b1b17",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple iPhone 16 128GB White» (артикул MYAQ3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 12,
+          "job_id": "7dd5405f361a4dd39d186f73956b1b17",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 13,
+          "job_id": "7dd5405f361a4dd39d186f73956b1b17",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 14,
+          "job_id": "7dd5405f361a4dd39d186f73956b1b17",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB White» (артикул MYAQ3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "MYAR3LL/A",
+      "job": {
+        "id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+        "product_id": 3,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB Pink» (артикул MYAR3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 3,
+          "product_id": 3,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB Pink» (артикул MYAR3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 15,
+          "job_id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 16,
+          "job_id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 17,
+          "job_id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 18,
+          "job_id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple iPhone 16 128GB Pink» (артикул MYAR3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 19,
+          "job_id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 20,
+          "job_id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 21,
+          "job_id": "6b9fb7b30d62413e85e8c8fb773fc28a",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple iPhone 16 128GB Pink» (артикул MYAR3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "FW2U3LL/A",
+      "job": {
+        "id": "f78612d3aeb440ba9d4325b737c58147",
+        "product_id": 4,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple Refurbished MacBook Pro 14-inch M4 16GB 512GB Space Black» (артикул FW2U3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 4,
+          "product_id": 4,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple Refurbished MacBook Pro 14-inch M4 16GB 512GB Space Black» (артикул FW2U3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 22,
+          "job_id": "f78612d3aeb440ba9d4325b737c58147",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 23,
+          "job_id": "f78612d3aeb440ba9d4325b737c58147",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 24,
+          "job_id": "f78612d3aeb440ba9d4325b737c58147",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 25,
+          "job_id": "f78612d3aeb440ba9d4325b737c58147",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple Refurbished MacBook Pro 14-inch M4 16GB 512GB Space Black» (артикул FW2U3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 26,
+          "job_id": "f78612d3aeb440ba9d4325b737c58147",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 27,
+          "job_id": "f78612d3aeb440ba9d4325b737c58147",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 28,
+          "job_id": "f78612d3aeb440ba9d4325b737c58147",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple Refurbished MacBook Pro 14-inch M4 16GB 512GB Space Black» (артикул FW2U3LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "FC6U4LL/A",
+      "job": {
+        "id": "8d473d10e77a45899f5ab5f3aee14799",
+        "product_id": 5,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple Refurbished MacBook Air 13-inch M4 16GB 512GB Sky Blue» (артикул FC6U4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 5,
+          "product_id": 5,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple Refurbished MacBook Air 13-inch M4 16GB 512GB Sky Blue» (артикул FC6U4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 29,
+          "job_id": "8d473d10e77a45899f5ab5f3aee14799",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 30,
+          "job_id": "8d473d10e77a45899f5ab5f3aee14799",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 31,
+          "job_id": "8d473d10e77a45899f5ab5f3aee14799",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 32,
+          "job_id": "8d473d10e77a45899f5ab5f3aee14799",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple Refurbished MacBook Air 13-inch M4 16GB 512GB Sky Blue» (артикул FC6U4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 33,
+          "job_id": "8d473d10e77a45899f5ab5f3aee14799",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 34,
+          "job_id": "8d473d10e77a45899f5ab5f3aee14799",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 35,
+          "job_id": "8d473d10e77a45899f5ab5f3aee14799",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple Refurbished MacBook Air 13-inch M4 16GB 512GB Sky Blue» (артикул FC6U4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "FD3Y4LL/A",
+      "job": {
+        "id": "23005e5c691c40518e1bad03b30350ee",
+        "product_id": 6,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Silver» (артикул FD3Y4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 6,
+          "product_id": 6,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Silver» (артикул FD3Y4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 36,
+          "job_id": "23005e5c691c40518e1bad03b30350ee",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 37,
+          "job_id": "23005e5c691c40518e1bad03b30350ee",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 38,
+          "job_id": "23005e5c691c40518e1bad03b30350ee",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 39,
+          "job_id": "23005e5c691c40518e1bad03b30350ee",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Silver» (артикул FD3Y4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 40,
+          "job_id": "23005e5c691c40518e1bad03b30350ee",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 41,
+          "job_id": "23005e5c691c40518e1bad03b30350ee",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 42,
+          "job_id": "23005e5c691c40518e1bad03b30350ee",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Silver» (артикул FD3Y4LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "FWWU3LW/A",
+      "job": {
+        "id": "9074f28799894904b3bcdb49fb3d2117",
+        "product_id": 7,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple Refurbished Apple Watch Series 10 GPS 46mm Rose Gold M/L Light Blush» (артикул FWWU3LW/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 7,
+          "product_id": 7,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple Refurbished Apple Watch Series 10 GPS 46mm Rose Gold M/L Light Blush» (артикул FWWU3LW/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 43,
+          "job_id": "9074f28799894904b3bcdb49fb3d2117",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 44,
+          "job_id": "9074f28799894904b3bcdb49fb3d2117",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 45,
+          "job_id": "9074f28799894904b3bcdb49fb3d2117",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 46,
+          "job_id": "9074f28799894904b3bcdb49fb3d2117",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple Refurbished Apple Watch Series 10 GPS 46mm Rose Gold M/L Light Blush» (артикул FWWU3LW/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 47,
+          "job_id": "9074f28799894904b3bcdb49fb3d2117",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 48,
+          "job_id": "9074f28799894904b3bcdb49fb3d2117",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 49,
+          "job_id": "9074f28799894904b3bcdb49fb3d2117",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple Refurbished Apple Watch Series 10 GPS 46mm Rose Gold M/L Light Blush» (артикул FWWU3LW/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "MXP93LL/A",
+      "job": {
+        "id": "327d8c0fb66b4c12b288a7a67b221aa5",
+        "product_id": 8,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple AirPods 4 with Active Noise Cancellation White» (артикул MXP93LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 8,
+          "product_id": 8,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple AirPods 4 with Active Noise Cancellation White» (артикул MXP93LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 50,
+          "job_id": "327d8c0fb66b4c12b288a7a67b221aa5",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 51,
+          "job_id": "327d8c0fb66b4c12b288a7a67b221aa5",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 52,
+          "job_id": "327d8c0fb66b4c12b288a7a67b221aa5",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 53,
+          "job_id": "327d8c0fb66b4c12b288a7a67b221aa5",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple AirPods 4 with Active Noise Cancellation White» (артикул MXP93LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 54,
+          "job_id": "327d8c0fb66b4c12b288a7a67b221aa5",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 55,
+          "job_id": "327d8c0fb66b4c12b288a7a67b221aa5",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 56,
+          "job_id": "327d8c0fb66b4c12b288a7a67b221aa5",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple AirPods 4 with Active Noise Cancellation White» (артикул MXP93LL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "FTUV3ZD/A",
+      "job": {
+        "id": "fb00649ef50046d7b3f48b1dead8c709",
+        "product_id": 9,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple Refurbished iPhone 15 Pro 128GB Black Titanium UK» (артикул FTUV3ZD/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 9,
+          "product_id": 9,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple Refurbished iPhone 15 Pro 128GB Black Titanium UK» (артикул FTUV3ZD/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 57,
+          "job_id": "fb00649ef50046d7b3f48b1dead8c709",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 58,
+          "job_id": "fb00649ef50046d7b3f48b1dead8c709",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 59,
+          "job_id": "fb00649ef50046d7b3f48b1dead8c709",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 60,
+          "job_id": "fb00649ef50046d7b3f48b1dead8c709",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple Refurbished iPhone 15 Pro 128GB Black Titanium UK» (артикул FTUV3ZD/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 61,
+          "job_id": "fb00649ef50046d7b3f48b1dead8c709",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 62,
+          "job_id": "fb00649ef50046d7b3f48b1dead8c709",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 63,
+          "job_id": "fb00649ef50046d7b3f48b1dead8c709",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple Refurbished iPhone 15 Pro 128GB Black Titanium UK» (артикул FTUV3ZD/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    },
+    {
+      "article": "FD4A4CL/A",
+      "job": {
+        "id": "4dfc7e42725c4adf94af57ea23cf786f",
+        "product_id": 10,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Blue Canada» (артикул FD4A4CL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-07T13:53:11+00:00",
+        "updated_at": "2026-10-07T13:53:11+00:00",
+        "started_at": "2026-10-07T13:53:11+00:00",
+        "finished_at": "2026-10-07T13:53:11+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 10,
+          "product_id": 10,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Blue Canada» (артикул FD4A4CL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-07T13:53:11+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 64,
+          "job_id": "4dfc7e42725c4adf94af57ea23cf786f",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 65,
+          "job_id": "4dfc7e42725c4adf94af57ea23cf786f",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 66,
+          "job_id": "4dfc7e42725c4adf94af57ea23cf786f",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «Apple» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 67,
+          "job_id": "4dfc7e42725c4adf94af57ea23cf786f",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Blue Canada» (артикул FD4A4CL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 68,
+          "job_id": "4dfc7e42725c4adf94af57ea23cf786f",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 69,
+          "job_id": "4dfc7e42725c4adf94af57ea23cf786f",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        },
+        {
+          "id": 70,
+          "job_id": "4dfc7e42725c4adf94af57ea23cf786f",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «Apple Refurbished iPad A16 Wi-Fi 128GB Blue Canada» (артикул FD4A4CL/A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-07T13:53:11+00:00"
+        }
+      ],
+      "trace_available": false
+    }
+  ]
+}

@@ -12,6 +12,7 @@ from .adapters.policy_session import PolicyAwareSession, RequestBudget, request_
 
 MAX_IMAGE_BYTES = 8_000_000
 ALLOWED_BY_SOURCE = {
+    "apple": ("cdn-apple.com", "apple.com"),
     "jbl": ("jbl.com",),
     "lg": ("lg.com", "lge.com"),
     "lg_kz": ("lg.com", "lge.com"),

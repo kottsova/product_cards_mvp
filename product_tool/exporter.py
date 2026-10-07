@@ -214,6 +214,17 @@ def export_batch(database: Path,batch_id: str)->bytes:
             ready_jbl.append([p["name"],p["search_code"],jbl_pipeline.VERDICTS[r["verdict"]],"; ".join(jbl_pipeline.GAPS[g] for g in r["gaps"]),r["manual_status"],r["model_identity"],r["variant_identity"]])
             for c in ev.get("rejected_specs",[]):candidates_jbl.append([p["name"],c["section"],c["raw_label"],c["value"],c["reason"]])
             for d in ev.get("manuals",[]):documents_jbl.append([p["name"],d["type"],d["title"],d["url"],d["relation"],"Проверена" if d["verified"] else "Не проверена"])
+    apple_products = [p for p in batch["products"] if p["brand"].strip().upper() == "APPLE"]
+    if apple_products:
+        from . import apple_pipeline
+        ready_apple=book.create_sheet(_title("Готовность Apple",used))
+        _headers(ready_apple,["Товар","Артикул","Готовность","Модель","Конфигурация","Вариант","Русская инструкция","Пробелы"])
+        candidates_apple=book.create_sheet(_title("Варианты-кандидаты Apple",used))
+        _headers(candidates_apple,["Товар","Раздел","Исходное поле","Значение","Причина"])
+        for p in apple_products:
+            ev=card_evidence.load(database,p["id"],"apple") or {};r=apple_pipeline.card_readiness(database,p["id"]);ident=r["identity"]
+            ready_apple.append([p["name"],p["search_code"],"Готова" if r["verdict"]=="export_ready" else "Не готова",ident.get("model","unproven"),ident.get("configuration","unproven"),ident.get("variant","unproven"),r["manual_status"],"; ".join(r["blocking_gaps"])])
+            for c in ev.get("configuration_candidates",[]):candidates_apple.append([p["name"],c["section"],c["raw_label"],c["value"],c["reason"]])
     for sheet in book.worksheets:
         for col in sheet.columns: sheet.column_dimensions[col[0].column_letter].width=min(60,max(12,max(len(str(c.value or "")) for c in col)+2))
     if lenovo_products:

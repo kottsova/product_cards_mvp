@@ -1,0 +1,96 @@
+[
+  {
+    "scenario": "real same model, different commercial storage SKU",
+    "requested": "FC6U4LL/A",
+    "url": "https://www.apple.com/shop/product/fw123ll/a",
+    "match_level": "base_model",
+    "facts": 0,
+    "confirmed_photos": 0,
+    "identity": {
+      "model": "unproven",
+      "configuration": "unproven",
+      "variant": "unproven",
+      "part_number": "FC6U4LL/A",
+      "hardware_model_numbers": []
+    }
+  },
+  {
+    "scenario": "synthetic regional suffix against real US order page",
+    "requested": "FW123CL/A",
+    "url": "https://www.apple.com/shop/product/fw123ll/a",
+    "match_level": "base_model",
+    "facts": 0,
+    "confirmed_photos": 0,
+    "identity": {
+      "model": "unproven",
+      "configuration": "unproven",
+      "variant": "unproven",
+      "part_number": "FW123CL/A",
+      "hardware_model_numbers": []
+    }
+  },
+  {
+    "scenario": "real hardware model token, no commercial order relation",
+    "requested": "A3081",
+    "url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+    "match_level": "base_model",
+    "facts": 0,
+    "confirmed_photos": 0,
+    "identity": {
+      "model": "unproven",
+      "configuration": "unproven",
+      "variant": "unproven",
+      "part_number": "A3081",
+      "hardware_model_numbers": []
+    }
+  },
+  {
+    "scenario": "real family Tech Specs cannot prove configuration",
+    "requested": "MYAP3LL/A",
+    "url": "https://support.apple.com/en-us/121031",
+    "match_level": "unknown",
+    "facts": 0,
+    "confirmed_photos": 0,
+    "identity": {
+      "model": "unproven",
+      "configuration": "unproven",
+      "variant": "unproven",
+      "part_number": "MYAP3LL/A",
+      "hardware_model_numbers": []
+    }
+  },
+  {
+    "scenario": "real same-model color relation, storage unresolved",
+    "requested": "MYAP3LL/A",
+    "identity": {
+      "model": "model_from_order_record",
+      "configuration": "partial_order_record",
+      "variant": "color_from_order_record",
+      "part_number": "MYAP3LL/A",
+      "hardware_model_numbers": []
+    },
+    "selection": {
+      "dimensionColor": "black",
+      "dimensionScreensize": "6_1inch"
+    },
+    "facts": 0,
+    "photo": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-black-select-202409?wid=940&hei=1112&fmt=png-alpha&.v=Y1l1MmFiWkNUWmJ0WXkrVTNiMnhxZlFHMjdmeEI3ZzNwbjk3M1hjdHArTkVmYXROc2VyRmc4OUROSkdENVpoOTAzOVFHb3N0MkVmS01ZcFh0d1Y4R3NOVllIRERCYjlmaTdvMDdrWGVkSm8"
+  },
+  {
+    "scenario": "real same-model color relation, storage unresolved",
+    "requested": "MYAQ3LL/A",
+    "identity": {
+      "model": "model_from_order_record",
+      "configuration": "partial_order_record",
+      "variant": "color_from_order_record",
+      "part_number": "MYAQ3LL/A",
+      "hardware_model_numbers": []
+    },
+    "selection": {
+      "dimensionColor": "white",
+      "dimensionScreensize": "6_1inch"
+    },
+    "facts": 0,
+    "photo": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-white-select-202409?wid=940&hei=1112&fmt=png-alpha&.v=MkE3NkkvUnNnYkI2clJibUlEOUdsL1FHMjdmeEI3ZzNwbjk3M1hjdHArTkVmYXROc2VyRmc4OUROSkdENVpoOTAzOVFHb3N0MkVmS01ZcFh0d1Y4R3MwbnBaMVNXWi9NZWc5bnFQbm5ncFE"
+  }
+]

@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from openpyxl import load_workbook
 
-from . import jbl_pipeline, lenovo_pipeline, lenovo_presentation, attribute_projection, bosch_presentation, bosch_readiness, card_evidence, card_presentation, exporter, jobs, lg_batch, manual_status, photo_metadata, product_description, samsung_readiness, storage
+from . import apple_pipeline, jbl_pipeline, lenovo_pipeline, lenovo_presentation, attribute_projection, bosch_presentation, bosch_readiness, card_evidence, card_presentation, exporter, jobs, lg_batch, manual_status, photo_metadata, product_description, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .adapters.policy_fetch import migrate_legacy_stop_log
 from .lg_identity import document_tied_to_article, photo_tied_to_article
@@ -382,6 +382,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         sources = jobs.get_source_pages(database, product_id)
         documents = (manual_status.effective_documents(database, product_id, product["search_code"])
                      if lg_batch.is_lg(product) else jobs.get_documents(database, product_id))
+        apple_evidence = card_evidence.load(database, product_id, "apple") if product["brand"].strip().upper() == "APPLE" else None
         jbl_evidence = card_evidence.load(database, product_id, "jbl") if product["brand"].strip().upper() == "JBL" else None
         lenovo_evidence = card_evidence.load(database, product_id, "lenovo") if product["brand"].strip().upper() == "LENOVO" else None
         photos = jobs.get_photo_candidates(database, product_id)
@@ -438,6 +439,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                        "description": product_description.product_description(source["description"])
                        if lg_batch.is_lg(product) else source["description"]} for source in sources],
             bosch_card=bosch_readiness.card_readiness(database, product_id) if any(src["source_key"] == "bosch_home" for src in sources) else None,
+            apple_evidence=apple_evidence,
+            apple_card=apple_pipeline.card_readiness(database, product_id) if apple_evidence is not None else None,
             jbl_evidence=jbl_evidence,
             jbl_card=jbl_pipeline.card_readiness(database, product_id) if jbl_evidence is not None else None,
             jbl_gaps=jbl_pipeline.GAPS,
@@ -452,7 +455,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
-            manual_status=lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_status=apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
             manual_reason=manual_status.unchecked_reason(database, product_id, product["search_code"]) if lg_batch.is_lg(product) else "",
             manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,
