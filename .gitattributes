@@ -18,3 +18,7 @@ reports/samsung_stage59/dataset_frozen.json -text
 
 # Frozen Stage 60 dataset: preserve the pre-run bytes and published digest.
 reports/lenovo_stage60/dataset_frozen.json -text
+
+# Stage 61 response proofs are verified against captured byte hashes.
+reports/lenovo_stage61/psref_captures/** -text
+reports/lenovo_stage61/capture_smoke/** -text

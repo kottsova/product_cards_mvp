@@ -554,7 +554,7 @@ def identification_status(source_pages: list[dict[str, Any]]) -> str:
     bosch = by_key.get("bosch_home", {})
     if bosch.get("url") and not bosch.get("error") and bosch.get("match_level") == "full_sku":
         return f"{bosch.get('site_name') or 'Bosch Home'}: catalog model confirmed; E-Nr revision unknown"
-    lenovo = by_key.get("lenovo_support", {})
+    lenovo = by_key.get("lenovo_psref") or by_key.get("lenovo_support", {})
     if lenovo.get("url") and not lenovo.get("error"):
         return ("Точный MTM Lenovo подтверждён конфигурационными данными" if lenovo.get("match_level") == "full_sku"
                 else "Найден официальный источник Lenovo; точная конфигурация не подтверждена")

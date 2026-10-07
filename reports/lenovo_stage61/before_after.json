@@ -1,0 +1,2693 @@
+{
+  "dataset_sha256": "968208f0640ce837e0e0a519b2b427274c4d7bb11eb9f16c1594c18df12607a9",
+  "totals": {
+    "before_facts": 68,
+    "after_facts": 378,
+    "raw_rows": 440,
+    "candidates": 62,
+    "ready": 2
+  },
+  "results": [
+    {
+      "article": "21KC0029MH",
+      "before_facts": 9,
+      "after_facts": 42,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 9,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 42,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "21KC0029MH",
+        "model_row": [
+          "21KC0029MH"
+        ],
+        "configuration_resolved": true,
+        "product_key": "ThinkPad_X1_Carbon_Gen_12"
+      },
+      "raw_rows": 52,
+      "configuration_candidates": 10,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "Intel Core™ Ultra 7 155U, 12C (2P + 8E + 2LPE) / 14T, Max Turbo up to 4.8GHz, 12MB Intel® Smart Cache",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "Integrated Intel® Graphics",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "16GB Soldered LPDDR5X-6400",
+              "notes": "Installed memory is actually LPDDR5X-7500 but runs as LPDDR5X-6400 due to platform limitation. 0"
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory Slots",
+              "value": "Memory soldered to systemboard, no slots, 8-channel",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Memory",
+              "value": "16GB soldered memory, not upgradable",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "platform_capability"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "512GB SSD M.2 2280 PCIe® 4.0x4 Performance NVMe® Opal 2.0",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage Slot",
+              "value": "One M.2 2280 PCIe® 4.0 x4 slot",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Storage Support",
+              "value": "One drive, up to 2TB M.2 2280 SSD",
+              "notes": "The storage capacity supported is based on the test results with current Lenovo storage offerings. The storage capacity supported is based on the test results with current Lenovo storage offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Display",
+              "value": "14\" 2.8K (2880x1800) OLED 400nits Anti-glare / Anti-reflection / Anti-smudge, 100% DCI-P3, 120Hz, DisplayHDR™ True Black 500, Dolby Vision®, Touch",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Optional Ports (configured)",
+              "value": "1x Nano-SIM Card Slot",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Standard Ports",
+              "value": "1x USB-A (USB 5Gbps / USB 3.2 Gen 1); 1x USB-A (USB 5Gbps / USB 3.2 Gen 1), Always On; 2x USB-C® (Thunderbolt™ 4 / USB4® 40Gbps), with USB PD 3.0 and DisplayPort™ 2.1; 1x HDMI® 2.1, up to 4K/60Hz; 1x Headphone / microphone combo jack (3.5mm)",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "Intel® Wi-Fi® 6E AX211, 802.11ax 2x2 + BT5.3, vPro®",
+              "notes": "Intel vPro platform requires the hardware and software necessary to deliver the manageability use cases, security features, system performance, and stability that define the platform. For detailed vPro support information, please refer to the System Management section. 0"
+            }
+          ],
+          "candidates": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Ethernet",
+              "value": "No Onboard Ethernet",
+              "notes": "Ethernet support via optional Lenovo USB-C to Ethernet Adapter. 0",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Battery",
+              "value": "57Wh",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "65W USB-C® Slim (3-pin)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "312.80 x 214.75 x 14.96 mm (12.31 x 8.45 x 0.59 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Starting at 1.09 kg (2.40 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "UHD 8.0MP + IR Discrete with Privacy Shutter, MIPI, Computer Vision",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "Backlit, English (EU)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Windows® 11 Pro, WE (EN/FR/DE/NL/IT)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Black, Paint",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Bundled Software",
+              "value": "Intel® Connectivity Performance Suite",
+              "notes": ""
+            },
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://download.lenovo.com/pccbbs/mobiles_pdf/x1_carbon_gen12_2in1_gen9_ug_ru.pdf"
+      ],
+      "verified_color_photos": 0
+    },
+    {
+      "article": "21KG0004AT",
+      "before_facts": 9,
+      "after_facts": 40,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 9,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 40,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "21KG0004AT",
+        "model_row": [
+          "21KG0004AT"
+        ],
+        "configuration_resolved": true,
+        "product_key": "ThinkBook_14_G6_IRL"
+      },
+      "raw_rows": 47,
+      "configuration_candidates": 7,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "Intel Core™ i5-1335U, 10C (2P + 8E) / 12T, P-core up to 4.6GHz, E-core up to 3.4GHz, 12MB Intel® Smart Cache",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "Integrated Intel® Iris® Xe Graphics",
+              "notes": "Intel Iris Xe Graphics capability requires system to be configured with dual-channel memory. On the system with single-channel memory, Intel Iris Xe Graphics will function as Intel UHD Graphics. 0"
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "2x 8GB SODIMM DDR5-5200",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory Slots",
+              "value": "Two DDR5 SODIMM slots, dual-channel capable",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Memory",
+              "value": "Up to 64GB DDR5-5200",
+              "notes": "The max memory is based on the technical readiness of the system. Available memory to sell would vary. The max memory is based on the technical readiness of the system. Available memory to sell would vary.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "512GB SSD M.2 2242 PCIe® 4.0x4 NVMe®",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage Slot",
+              "value": "Two M.2 2280 PCIe® 4.0 x4 slots",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Storage Support",
+              "value": "Up to two drives, 2x M.2 SSD • M.2 2242 SSD up to 1TB • M.2 2280 SSD up to 2TB",
+              "notes": "The system supports dual SSD via two M.2 slots, but Lenovo offers only one SSD configuration with a second slot for user self-expansion. The max storage capacity is only technical readiness and may be different from current Lenovo storage offerings. The system supports dual SSD via two M.2 slots, but Lenovo offers only one SSD configuration with a second slot for user self-expansion. The max storage capacity is only technical readiness and may be different from current Lenovo storage offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Display",
+              "value": "14\" WUXGA (1920x1200) IPS 300nits Anti-glare, 45% NTSC",
+              "notes": "IPS (in-plane switching) technology may refer to IPS, PLS, ADS, AHVA, AAS. IPS (in-plane switching) technology may refer to IPS, PLS, ADS, AHVA, AAS."
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Standard Ports",
+              "value": "1x USB 3.2 Gen 1; 1x USB 3.2 Gen 1 (Always On); 1x USB-C® 3.2 Gen 2 (support data transfer, Power Delivery 3.0 and DisplayPort™ 1.4); 1x Thunderbolt™ 4 / USB4® 40Gbps (support data transfer, Power Delivery 3.0 and DisplayPort™ 1.4); 1x HDMI® 2.1, up to 4K/60Hz; 1x Headphone / microphone combo jack (3.5mm); 1x Ethernet (RJ-45); 1x SD card reader",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "Wi-Fi® 6, 802.11ax 2x2 + BT5.2",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Ethernet",
+              "value": "100/1000M (RJ-45)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Battery",
+              "value": "45Wh",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "65W USB-C® (3-pin)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "313.5 x 224 x 16.9 mm (12.34 x 8.82 x 0.67 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Starting at 1.38 kg (3.04 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "FHD 1080p + IR Hybrid with Privacy Shutter",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "Backlit, German",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Windows® 11 Pro, German",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Arctic Grey",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Bundled Software",
+              "value": "Office Trial",
+              "notes": ""
+            },
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://download.lenovo.com/consumer/mobiles_pub/lenovo_thinkbook_14_16_gen_6_ug_ru.pdf"
+      ],
+      "verified_color_photos": 0
+    },
+    {
+      "article": "83EM007FLK",
+      "before_facts": 8,
+      "after_facts": 38,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 8,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 38,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "83EM007FLK",
+        "model_row": [
+          "83EM007FLK"
+        ],
+        "configuration_resolved": true,
+        "product_key": "IdeaPad_Slim_3_15IRH8"
+      },
+      "raw_rows": 44,
+      "configuration_candidates": 6,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "Intel Core™ i5-13420H, 8C (4P + 4E) / 12T, P-core up to 4.6GHz, E-core up to 3.4GHz, 12MB Intel® Smart Cache",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "Integrated Intel® UHD Graphics",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "8GB Soldered LPDDR5-4800",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory Slots",
+              "value": "Memory soldered to systemboard, no slots, single-channel (8GB models)",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Memory",
+              "value": "8GB soldered memory, not upgradable",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "platform_capability"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "512GB SSD M.2 2242 PCIe® 4.0x4 NVMe®",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage Slot",
+              "value": "One M.2 PCIe® 4.0 x4 slot",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Storage Support",
+              "value": "One drive, up to 1TB M.2 2242 SSD",
+              "notes": "The storage capacity supported is based on the test results with current Lenovo storage offerings. The storage capacity supported is based on the test results with current Lenovo storage offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Display",
+              "value": "15.6\" FHD (1920x1080) TN 250nits Anti-glare",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Standard Ports",
+              "value": "2x USB 3.2 Gen 1; 1x USB-C® 3.2 Gen 1 (support data transfer, Power Delivery and DisplayPort™ 1.2); 1x HDMI® 1.4; 1x Headphone / microphone combo jack (3.5mm); 1x Card reader; 1x Round tip power connector",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "Wi-Fi® 6, 802.11ax 2x2 + BT5.2",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Ethernet",
+              "value": "No Onboard Ethernet",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Battery",
+              "value": "47Wh",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "65W Round Tip (3-pin)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "359.3 x 235 x 17.9 mm (14.15 x 9.25 x 0.70 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Starting at 1.62 kg (3.57 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "FHD 1080p with Privacy Shutter",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "Non-backlit, English (EU)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Arctic Grey",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Bundled Software",
+              "value": "None",
+              "notes": ""
+            },
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://support.lenovo.com/kz/ru/documentation/SG10252/read_first?language=ru"
+      ],
+      "verified_color_photos": 1
+    },
+    {
+      "article": "83LY0066PB",
+      "before_facts": 10,
+      "after_facts": 40,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 10,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 40,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "83LY0066PB",
+        "model_row": [
+          "83LY0066PB"
+        ],
+        "configuration_resolved": true,
+        "product_key": "Legion_5_15IRX10"
+      },
+      "raw_rows": 47,
+      "configuration_candidates": 7,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "Intel Core™ i7-13650HX, 14C (6P + 8E) / 20T, P-core up to 4.9GHz, E-core up to 3.6GHz, 24MB Intel® Smart Cache",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "NVIDIA GeForce RTX™ 5050 8GB GDDR7, Boost Clock 2662MHz, TGP 115W, 440 AI TOPS",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "2x 16GB SODIMM DDR5-4800",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory Slots",
+              "value": "Two DDR5 SODIMM slots, dual-channel capable",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Memory",
+              "value": "Up to 32GB DDR5-4800 offering",
+              "notes": "The max memory is based on the test results with current Lenovo memory offerings. The max memory is based on the test results with current Lenovo memory offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "1TB SSD M.2 2242 PCIe® 4.0x4 NVMe®",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage Slot",
+              "value": "Two M.2 2280 PCIe® 4.0 x4 slots",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Storage Support",
+              "value": "Up to two drives, 2x M.2 SSD • M.2 2242 SSD up to 1TB each",
+              "notes": "The storage capacity supported is based on the test results with current Lenovo storage offerings. The storage capacity supported is based on the test results with current Lenovo storage offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Display",
+              "value": "15.1\" WQXGA (2560x1600) OLED 1000nits (peak) / 500nits (typical) glossy, 100% DCI-P3, 165Hz, Dolby Vision®, DisplayHDR™ True Black 600",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Standard Ports",
+              "value": "2x USB-A (USB 5Gbps / USB 3.2 Gen 1); 1x USB-A (USB 5Gbps / USB 3.2 Gen 1), Always On; 1x USB-C® (USB 10Gbps / USB 3.2 Gen 2), with USB PD 95-100W and DisplayPort™ 2.1; 1x USB-C® (USB 10Gbps / USB 3.2 Gen 2), with DisplayPort™ 1.4; 1x HDMI® 2.1, up to 8K/60Hz; 1x Headphone / microphone combo jack (3.5mm); 1x Ethernet (RJ-45); 1x Slim tip (rectangle) power connector",
+              "notes": "Supports Lenovo protocol for 140W charging but requires a unique Lenovo adapter for operation. 2",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "Wi-Fi® 7, 802.11be 2x2 + BT5.4",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Ethernet",
+              "value": "100/1000M (RJ-45)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Battery",
+              "value": "80Wh",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "245W Slim Tip (3-pin)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "344.9 x 255.35 x 19.95-21.54 mm (13.58 x 10.05 x 0.79-0.85 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Starting at 1.9 kg (4.19 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "5.0MP with E-shutter",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "24-Zone RGB Backlit, English",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Windows® 11 Home, Polish",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Color Calibration",
+              "value": "Factory Color Calibration",
+              "notes": ""
+            },
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Eclipse Black (with 24-Zone RGB Backlit Keyboard)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Bundled Software",
+              "value": "Office Trial + Lenovo® AI Now",
+              "notes": ""
+            },
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://support.lenovo.com/kz/ru/documentation/SG10115"
+      ],
+      "verified_color_photos": 0
+    },
+    {
+      "article": "63A4ZAR1U1",
+      "before_facts": 0,
+      "after_facts": 35,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_configuration_not_resolved",
+          "exact_specifications_missing",
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_configuration_not_resolved",
+          "exact_specifications_missing",
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": false,
+        "exact_facts": 0,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 35,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "63A4ZAR1U1",
+        "model_row": [
+          "63A4ZAR1U1"
+        ],
+        "configuration_resolved": true,
+        "product_key": "ThinkVision_T27i_30_Monitor"
+      },
+      "raw_rows": 39,
+      "configuration_candidates": 4,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "GPU": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "RAM": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "storage": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Display Size",
+              "value": "27\"",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Rear Ports",
+              "value": "1x USB-B 3.2 Gen 1, USB upstream; 4x USB 3.2 Gen 1 (1x BC 1.2), USB downstream; 1x HDMI® 2.1 TMDS; 1x DisplayPort™ 1.2; 1x VGA; 1x Power Connector; 1x audio-out (3.5mm)",
+              "notes": "Supports 1920x1080@60Hz as specified in HDMI 2.1 2"
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "wireless": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Consumption (Typical / Maximum)",
+              "value": "24W / 65W",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "Integrated (special order with US 3-pin power cable)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Packaging Dimensions (WxDxH)",
+              "value": "690 x 148 x 525 mm (21.17 x 5.83 x 20.67 inches)",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "Head Only | 611.9 x 50.0 x 362.5 mm (24.08 x 1.97 x 14.27 inches); Lowest Position | 611.9 x 204.5 x 389.3 mm (24.09 x 8.05 x 15.33 inches); Highest Position | 611.9 x 204.5 x 544.3 mm (24.09 x 8.05 x 21.43 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "weight": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Packaging Weight",
+              "value": "10.1 kg (22.27 lbs)",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Monitor With Stand | 6.9 kg (15.2 lbs); Monitor Head Only | 4.9 kg (10.8 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "ThinkVision® MC 60 monitor webcam",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "OS": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Support Windows® 10, Windows® 11",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "platform_capability"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Color Support",
+              "value": "16.7 Million",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Color Gamut",
+              "value": "99% sRGB",
+              "notes": ""
+            },
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Black",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        }
+      },
+      "manuals": [
+        "https://download.lenovo.com/consumer/monitor/t27i_30_user_guide_ru.pdf"
+      ],
+      "verified_color_photos": 0
+    },
+    {
+      "article": "62C1GAT6EU",
+      "before_facts": 0,
+      "after_facts": 34,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_configuration_not_resolved",
+          "exact_specifications_missing",
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_configuration_not_resolved",
+          "exact_specifications_missing",
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": false,
+        "exact_facts": 0,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 34,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "62C1GAT6EU",
+        "model_row": [
+          "62C1GAT6EU"
+        ],
+        "configuration_resolved": true,
+        "product_key": "ThinkVision_P40w_20_Monitor"
+      },
+      "raw_rows": 39,
+      "configuration_candidates": 5,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "GPU": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "RAM": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "storage": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Display Size",
+              "value": "39.7\"",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Rear Ports",
+              "value": "1x USB-B 3.2 Gen 1, USB upstream; 2x Thunderbolt™ 4 (up to 100W PD, one USB upstream, one USB downstream); 1x USB-C® 3.2 Gen 1 (27W), USB downstream; 4x USB 3.2 Gen 1, USB downstream; 1x HDMI® 2.0; 1x DisplayPort™ 1.4; 1x Ethernet (RJ-45); 1x Power Connector; 1x audio-out (3.5mm)",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "wireless": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Consumption (Typical / Maximum)",
+              "value": "66W / 250W",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "Integrated",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Packaging Dimensions (WxDxH)",
+              "value": "1085 x 275 x 526 mm (42.71 x 10.82 x 20.70 inches)",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "Head Only | 947.6 x 100.8 x 428.7 mm (37.30 x 3.96 x 16.88 inches); Lowest Position | 947.6 x 279.4 x 511.2 mm (37.30 x 11.00 x 20.12 inches); Highest Position | 947.6 x 279.4 x 641.2 mm (37.30 x 11.00 x 25.24 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "weight": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Packaging Weight",
+              "value": "20 kg (44.09 lbs)",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Monitor With Stand | 14.6 kg (32.19 lbs); Monitor Head Only | 9.9 kg (21.83 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "OS": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Support Windows® 10, Windows® 11",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "platform_capability"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Color Support",
+              "value": "1.07 Billion",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Color Gamut",
+              "value": "99% sRGB, 98% DCI-P3",
+              "notes": ""
+            },
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Raven Black",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        }
+      },
+      "manuals": [
+        "https://download.lenovo.com/consumer/monitor/thinkvision_p40w_20_russian_user_guide_20240621.pdf"
+      ],
+      "verified_color_photos": 0
+    },
+    {
+      "article": "12E4S96402",
+      "before_facts": 6,
+      "after_facts": 43,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 6,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 43,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "12E4S96402",
+        "model_row": [
+          "12E4S96402"
+        ],
+        "configuration_resolved": true,
+        "product_key": "ThinkCentre_M70q_Gen_4"
+      },
+      "raw_rows": 49,
+      "configuration_candidates": 6,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "Intel Core™ i5-13400T, 10C (6P + 4E) / 16T, P-core 1.3 / 4.4GHz, E-core 1.0 / 3.0GHz, 20MB",
+              "notes": "Intel Max Turbo frequency will vary depending on application workload and the hardware and software configurations, see http://www.intel.com/technology/turboboost/ for more information. 0",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "Integrated Intel® UHD Graphics 730",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "1x 16GB SO-DIMM DDR4-3200",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory Slots",
+              "value": "Two DDR4 SO-DIMM slots, dual-channel capable",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Memory",
+              "value": "Up to 64GB DDR4-3200",
+              "notes": "The max memory is based on the test results with current Lenovo memory offerings. The max memory is based on the test results with current Lenovo memory offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "512GB SSD M.2 2280 PCIe® 4.0x4 NVMe® Opal 2.0",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "ports": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Front Ports",
+              "value": "1x USB-C® 3.2 Gen 1 (support data transfer and 5V@0.9A charging); 1x USB 3.2 Gen 2 (Always On and 5V@2.1A charging); 1x USB 3.2 Gen 2; 1x headphone / microphone combo jack (3.5mm)",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Optional Front Ports (configured)",
+              "value": "None",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Rear Ports",
+              "value": "1x USB 2.0; 1x USB 3.2 Gen 1; 2x USB 3.2 Gen 2; 1x HDMI® 2.1 TMDS; 1x DisplayPort™ 1.4a (HBR2, DSC); 1x Ethernet (RJ-45)",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Optional Rear Ports (configured)",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "None",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Ethernet",
+              "value": "Integrated 100/1000M",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Supply",
+              "value": "90W 89% Adapter",
+              "notes": "When work with TIO monitor, an appropriate power adapter is needed. Customer may need to: ? Order a Tiny for TIO MT (12E5, 12E6 or 12E8) models ? Or for Intel Core i5/i7 models order an additional 135W power adapter, for Intel Core i3 models order an additional 90W power adapter. If original power adapter is less than 135W (i5/i7 models) or 90W (i3 models). For detailed information, please refer to ThinkCentre M70q Gen 4 Adapter Matrix.pdf When work with TIO monitor, an appropriate power adapter is needed. Customer may need to: ? Order a Tiny for TIO MT (12E5, 12E6 or 12E8) models ? Or for Intel Core i5/i7 models order an additional 135W power adapter, for Intel Core i3 models order an additional 90W power adapter. If original power adapter is less than 135W (i5/i7 models) or 90W (i3 models). For detailed information, please refer to ThinkCentre M70q Gen 4 Adapter Matrix.pdf"
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "179 x 182.9 x 36.5 mm with rubber feet (7.05 x 7.2 x 1.44 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Around 1.25 kg (2.76 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [],
+          "candidates": [],
+          "status": "not_present_in_exact_source"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "USB Calliope Keyboard, Black, Spanish (LA)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Windows® 11 Pro, Spanish",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Black",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Bundled Software",
+              "value": "None",
+              "notes": ""
+            },
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://support.lenovo.com/kz/ru/documentation/SG10260/Read_this_first_RU?language=ru"
+      ],
+      "verified_color_photos": 0
+    },
+    {
+      "article": "ZACH0134PL",
+      "before_facts": 7,
+      "after_facts": 27,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 7,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 27,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "ZACH0134PL",
+        "model_row": [
+          "ZACH0134PL"
+        ],
+        "configuration_resolved": true,
+        "product_key": "Tab_P12"
+      },
+      "raw_rows": 32,
+      "configuration_candidates": 5,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "MediaTek Dimensity 7050 (8C, 2x A78 @2.6 GHz + 6x A55@2.0 GHz)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "Integrated Arm Mali-G68",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "8GB Soldered LPDDR4x",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "128GB UFS 2.2 (uMCP)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Display",
+              "value": "12.7\" 3K (2944x1840) LTPS 400nits Anti-fingerprint, 96% DCI-P3, 60Hz, Corning® Gorilla® Glass 3, Touch",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Standard Ports",
+              "value": "1x USB-C® 2.0 (support data transfer and charging); 1x microSD card slot; 1x Pogo pin connector (3-point)",
+              "notes": "3-point pogo pin connector is used to connect Lenovo Keyboard Pack for Tab P12 . Keyboard pack availability varies by country/region. 2",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "Wi-Fi® 6, 802.11ax 2x2 + BT5.1",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Battery",
+              "value": "10200mAh (Typical)",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "10V / 2A",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "293.37 x 190.76 x 6.9 mm with camera bump 8.42 mm (11.55 x 7.51 x 0.27 - 0.33 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Around 615 g (1.36 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "Front 13.0MP / Rear 8.0MP with Flashlight",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Android™ 13 or Later",
+              "notes": "For latest operating system and security patches deliver plan, please visit https://support.lenovo.com/solutions/ht501098 . For latest operating system and security patches deliver plan, please visit https://support.lenovo.com/solutions/ht501098 ."
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Storm Grey",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "Lenovo® Tab Pen Plus",
+              "notes": "For more compatible accessories, please check the file \"Lenovo Android Tablet - Option Compatibility Matrix\" from https://support.lenovo.com/solutions/accs-guide . For more compatible accessories, please check the file \"Lenovo Android Tablet - Option Compatibility Matrix\" from https://support.lenovo.com/solutions/accs-guide ."
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://download.lenovo.com/consumer/mobiles_pub/tab_p12_ug_ru.pdf"
+      ],
+      "verified_color_photos": 0
+    },
+    {
+      "article": "83EM00KVMX",
+      "before_facts": 9,
+      "after_facts": 38,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 9,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 38,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "83EM00KVMX",
+        "model_row": [
+          "83EM00KVMX"
+        ],
+        "configuration_resolved": true,
+        "product_key": "IdeaPad_Slim_3_15IRH8"
+      },
+      "raw_rows": 44,
+      "configuration_candidates": 6,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "Intel Core™ i7-13620H, 10C (6P + 4E) / 16T, P-core up to 4.9GHz, E-core up to 3.6GHz, 24MB Intel® Smart Cache",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "Integrated Intel® UHD Graphics",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "16GB Soldered LPDDR5-4800",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory Slots",
+              "value": "Memory soldered to systemboard, no slots, dual-channel (16GB models)",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Memory",
+              "value": "16GB soldered memory, not upgradable",
+              "notes": "",
+              "scope": "conditional_configuration",
+              "reason": "platform_capability"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "512GB SSD M.2 2242 PCIe® 4.0x4 NVMe®",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage Slot",
+              "value": "One M.2 PCIe® 4.0 x4 slot",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Storage Support",
+              "value": "One drive, up to 1TB M.2 2242 SSD",
+              "notes": "The storage capacity supported is based on the test results with current Lenovo storage offerings. The storage capacity supported is based on the test results with current Lenovo storage offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Display",
+              "value": "15.6\" FHD (1920x1080) TN 250nits Anti-glare",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Standard Ports",
+              "value": "2x USB 3.2 Gen 1; 1x USB-C® 3.2 Gen 1 (support data transfer, Power Delivery and DisplayPort™ 1.2); 1x HDMI® 1.4; 1x Headphone / microphone combo jack (3.5mm); 1x Card reader; 1x Round tip power connector",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "Wi-Fi® 6, 802.11ax 2x2 + BT5.2",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Ethernet",
+              "value": "No Onboard Ethernet",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Battery",
+              "value": "47Wh",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "65W Round Tip (3-pin)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "359.3 x 235 x 17.9 mm (14.15 x 9.25 x 0.70 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Starting at 1.62 kg (3.57 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "HD 720p with Privacy Shutter",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "Non-backlit, Nordic (DK/FI/NO/SV)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Windows® 11 Home, Nordic (DK/FI/SV/NO/EN)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Abyss Blue",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Bundled Software",
+              "value": "Office Trial",
+              "notes": ""
+            },
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://support.lenovo.com/kz/ru/documentation/SG10252/read_first?language=ru"
+      ],
+      "verified_color_photos": 1
+    },
+    {
+      "article": "83LY00JCRK",
+      "before_facts": 10,
+      "after_facts": 41,
+      "before_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed",
+          "russian_user_guide_not_verified"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 10,
+        "manual_status": "Не проверена"
+      },
+      "after_readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "blocking_gaps": [
+          "exact_gallery_not_confirmed"
+        ],
+        "real_conflicts": 0,
+        "exact_configuration": true,
+        "exact_facts": 41,
+        "manual_status": "Проверена"
+      },
+      "identity": {
+        "relation": "exact_mtm",
+        "returned_model": "83LY00JCRK",
+        "model_row": [
+          "83LY00JCRK"
+        ],
+        "configuration_resolved": true,
+        "product_key": "Legion_5_15IRX10"
+      },
+      "raw_rows": 47,
+      "configuration_candidates": 6,
+      "field_coverage": {
+        "CPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Processor",
+              "value": "Intel Core™ i7-14700HX, 20C (8P + 12E) / 28T, P-core 2.1 / 5.5GHz, E-core 1.5 / 3.9GHz, 33MB Intel® Smart Cache",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "GPU": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Graphics",
+              "value": "NVIDIA GeForce RTX™ 5060 8GB GDDR7, Boost Clock 2497MHz, TGP 115W, 572 AI TOPS",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "RAM": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory",
+              "value": "2x 16GB SODIMM DDR5-5600",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Memory Slots",
+              "value": "Two DDR5 SODIMM slots, dual-channel capable",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Memory",
+              "value": "Up to 32GB DDR5-5600 offering",
+              "notes": "The max memory is based on the test results with current Lenovo memory offerings. The max memory is based on the test results with current Lenovo memory offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "storage": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage",
+              "value": "1TB SSD M.2 2242 PCIe® 4.0x4 NVMe®",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Storage Slot",
+              "value": "Two M.2 2280 PCIe® 4.0 x4 slots",
+              "notes": ""
+            }
+          ],
+          "candidates": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Max Storage Support",
+              "value": "Up to two drives, 2x M.2 SSD • M.2 2242 SSD up to 1TB each",
+              "notes": "The storage capacity supported is based on the test results with current Lenovo storage offerings. The storage capacity supported is based on the test results with current Lenovo storage offerings.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "confirmed"
+        },
+        "display": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Display",
+              "value": "15.1\" WQXGA (2560x1600) OLED 1000nits (peak) / 500nits (typical) glossy, 100% DCI-P3, 165Hz, Dolby Vision®, DisplayHDR™ True Black 600",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "ports": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Standard Ports",
+              "value": "2x USB-A (USB 5Gbps / USB 3.2 Gen 1); 1x USB-A (USB 5Gbps / USB 3.2 Gen 1), Always On; 1x USB-C® (USB 10Gbps / USB 3.2 Gen 2), with USB PD 95-100W and DisplayPort™ 2.1; 1x USB-C® (USB 10Gbps / USB 3.2 Gen 2), with DisplayPort™ 1.4; 1x HDMI® 2.1, up to 8K/60Hz; 1x Headphone / microphone combo jack (3.5mm); 1x Ethernet (RJ-45); 1x Slim tip (rectangle) power connector",
+              "notes": "Supports Lenovo protocol for 140W charging but requires a unique Lenovo adapter for operation. 2",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "wireless": {
+          "confirmed": [
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "WLAN + Bluetooth",
+              "value": "Wi-Fi® 7, 802.11be 2x2 + BT5.4",
+              "notes": ""
+            },
+            {
+              "section": "CONNECTIVITY",
+              "raw_label": "Ethernet",
+              "value": "100/1000M (RJ-45)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "battery": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Battery",
+              "value": "80Wh",
+              "notes": ""
+            },
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Power Adapter",
+              "value": "245W Slim Tip (3-pin)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "dimensions": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Dimensions (WxDxH)",
+              "value": "344.9 x 255.35 x 19.95-21.54 mm (13.58 x 10.05 x 0.79-0.85 inches)",
+              "notes": "The system dimensions may vary depending on configurations. The system dimensions may vary depending on configurations.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "weight": {
+          "confirmed": [],
+          "candidates": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Weight",
+              "value": "Starting at 1.9 kg (4.19 lbs)",
+              "notes": "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model. The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model.",
+              "scope": "conditional_configuration",
+              "reason": "qualified_or_model_dependent"
+            }
+          ],
+          "status": "candidate_only"
+        },
+        "camera": {
+          "confirmed": [
+            {
+              "section": "PERFORMANCE",
+              "raw_label": "Camera",
+              "value": "5.0MP with E-shutter",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "keyboard": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Keyboard",
+              "value": "24-Zone RGB Backlit, Russian",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "OS": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Operating System",
+              "value": "Windows® 11 Home Single Language, Russian",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "color": {
+          "confirmed": [
+            {
+              "section": "DESIGN",
+              "raw_label": "Color Calibration",
+              "value": "Factory Color Calibration",
+              "notes": ""
+            },
+            {
+              "section": "DESIGN",
+              "raw_label": "Case Color",
+              "value": "Eclipse Black (with 24-Zone RGB Backlit Keyboard)",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        },
+        "accessories": {
+          "confirmed": [
+            {
+              "section": "SOFTWARE",
+              "raw_label": "Bundled Software",
+              "value": "Office Trial",
+              "notes": ""
+            },
+            {
+              "section": "ACCESSORIES",
+              "raw_label": "Bundled Accessories",
+              "value": "None",
+              "notes": ""
+            }
+          ],
+          "candidates": [],
+          "status": "confirmed"
+        }
+      },
+      "manuals": [
+        "https://support.lenovo.com/kz/ru/documentation/SG10115"
+      ],
+      "verified_color_photos": 0
+    }
+  ]
+}

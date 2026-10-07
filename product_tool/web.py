@@ -404,6 +404,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                     if brand == "SAMSUNG" else lenovo_pipeline.photo_verified(photo, lenovo_evidence) if brand == "LENOVO" else True)
                 photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
                 photo["size_label"] = photo_metadata.format_file_size(photo.get("verified_bytes"))
+                if brand == "LENOVO" and photo["identity_confirmed"]:
+                    photo["identity_note"] = "Цвет рендера подтверждён. Раскладка клавиатуры на изображении иллюстративная."
         retained_manual_sources = {
             d["source_key"] for d in documents
             if d["identity_confirmed"] and d["language"] == "Русский"

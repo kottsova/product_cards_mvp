@@ -9,7 +9,7 @@ from .display import display_name_ru, display_source, display_value
 from . import bosch_presentation
 
 
-OFFICIAL = ("lg_ru", "lg_kz", "lg_global", "lg", "samsung", "bosch_home", "lenovo_support")
+OFFICIAL = ("lg_ru", "lg_kz", "lg_global", "lg", "samsung", "bosch_home", "lenovo_psref", "lenovo_support")
 SUPPORT = ("lg_ru_support", "lg_kz_support")
 
 

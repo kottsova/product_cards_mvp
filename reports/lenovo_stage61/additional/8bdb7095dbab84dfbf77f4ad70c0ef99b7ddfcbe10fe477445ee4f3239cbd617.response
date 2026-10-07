@@ -1,0 +1,245 @@
+<div class="quickhelp-tile-repairmydevice hide">
+    <a href="/servicerequest">
+        <span class="icon icon-lh-repair"></span>
+        <p></p>
+    </a>
+</div><div class="quickhelp-tile-upgradewarranty">
+    <a>
+        <span class="icon icon-lh-warranty"></span>
+        <p t="warranty and services|Warranty & Services"></p>
+    </a>
+    <script>
+        $(function () {
+            if (window["ds_warranties"] && window["ds_warranties"].BaseWarranties && window["ds_warranties"].BaseWarranties.length > 0) {
+                $(".quickhelp-tile-upgradewarranty >a:first").on("click", function () {
+                    $(".quickhelp span.upgradewarranty-trigger").click();
+                    return false;
+                });
+            } else {
+                $(".quickhelp-tile-upgradewarranty >a:first").on("click", function () {
+                    toOtherTab('Upgrade Warranty', 'warranties');
+                });
+            }
+        });
+    </script>
+</div><div class="quickhelp-tile-commercial-vantage pcg-limit tablet-limit">
+    <a style="position: relative;" id="commercial-vantage-tile">
+        <img style="max-width: 40px; max-height: 40px; margin-bottom: 10px" class="quickhelp-tile-img"
+            src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiB2aWV3Qm94PSIwIDAgMTc2IDE3NiI+DQogIDxnIGlkPSJfMTc2WDE3NiIgZGF0YS1uYW1lPSIxNzZYMTc2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNTczMiAtMTE1MjMpIj4NCiAgICA8cmVjdCBpZD0i55+p5b2iXzUwODciIGRhdGEtbmFtZT0i55+p5b2iIDUwODciIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTU3MzIgMTE1MjMpIiBmaWxsPSIjZTEyNTFiIi8+DQogICAgPHBhdGggaWQ9Iui3r+W+hF8yODE5NCIgZGF0YS1uYW1lPSLot6/lvoQgMjgxOTQiIGQ9Ik0tMTU3OTkuMzUsMTE1MTYuNTk0bC0xNC4xNzgsMTA4Ljg4Niw4MS43NDItNy4xNjF2LTE5LjY2MWgtNTEuNDFsLjEzNy04Mi4wNjNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzEuNTM3IDM2LjcwMSkiIGZpbGw9IiM1OTA4MDQiLz4NCiAgICA8ZyBpZD0i57uEXzI0NTczIiBkYXRhLW5hbWU9Iue7hCAyNDU3MyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE1NjY4LjEyIDExNTUyLjY1OCkiPg0KICAgICAgPHJlY3QgaWQ9IuefqeW9ol81MDg4IiBkYXRhLW5hbWU9IuefqeW9oiA1MDg4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjEyIDAuMzQyKSIgZmlsbD0iI2ZmZiIvPg0KICAgICAgPHJlY3QgaWQ9IuefqeW9ol81MDg5IiBkYXRhLW5hbWU9IuefqeW9oiA1MDg5IiB3aWR0aD0iNjgiIGhlaWdodD0iMjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMTIgODIuMzQyKSIgZmlsbD0iI2ZmZiIvPg0KICAgIDwvZz4NCiAgPC9nPg0KPC9zdmc+DQo='/>
+        <p>
+            <span t="download lenovo commercial vantage|Download Lenovo Commercial Vantage"></span>
+        </p> 
+    </a>
+    <script>
+        $("#commercial-vantage-tile").on("click", function () {
+            window.open("https://apps.microsoft.com/store/detail/lenovo-commercial-vantage/9NR5B8GVVM13")
+        });
+        $('.quickhelp-tile-vantage').remove();
+    </script>
+</div><div class="quickhelp-tile-vantage pcg-limit tablet-limit">
+    <a style="position: relative;" id="vantage-tile">
+        <img style="max-width: 40px; max-height: 40px; margin-bottom: 10px" class="quickhelp-tile-img"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAYAAACvt+ReAAAACXBIWXMAAAsSAAALEgHS3X78AAADzklEQVR42u3dzU4TYRSA4dPS2kKUQAQTEjaagGHlDXhLxHgRrFzi2sSF7vAWTLyJupLEn7iQBOJPKULBBU7CoiIdSsthnidxa4S+OZ75Ou3UVrY6JwFJ1f0KEDAIGASMgEHAIGAQMAIGAYOAQcAIGAQMAkbAIGAQMAgYAYOAQcAgYAQMAgYBwxmNKv2w289exOPVpXj78umV/P2bnZ3Y7OyoygS+Gkd7P7ziAs5pf/uzV1vAeR3ufvdqC1jACNgKgYBNYCoVsBMIAad18PWbV1rA1gcEbAIjYAFTqYCP9qwQAk49gd1gI2DrAwIePycQAjaBEbCAEXAJx70Dr7KA89rf/uJVFrALOAQ8dt7AEHBq3Q9uYhewCYyA7cAIeGhOIARs+iJg+y8CHpITCAGn5i1kAafmJh4BJw/YpzAEnHh9sEII2PqAgAWMgIfkTQwBm8AIeHIBO4EQcFJOIARsfUDAAkbAJfT3rQ8CTszDXAScmjNgAafmYS4Ctj4gYOsDAhYwVggEbAIj4KvnBELA1gcEPAneQhZwam7iEbCAEfDkLuCcQAg49QT2MSIBWx8Q8Ph5A0PAJjACFjACLsEJhICTT2AnEAJ2AYeArQ8IeCge5iJgExgB24ERcAkeJytg0xcB238R8JCcQGACI2A7MAIuwT0QpA3Yw1xIHbB7gBEwAnYBh4BNYKoXsBMIkgbsBILUAVsfEDACnhQnEBQaJvDorK8txPrawo0IY/XNexPYBEbAA3iYC2kD9jAXUgdsfUDACNgKgYBNYKoWsBMI0gZsfSB1wNYHBIyAJ8VdaKQO2DfxkHwC+xgRSQO2PpA6YBdwmMAIWMAIuAQnEAyS5jNxozqB+LT7KzZevfPK/8/0vRT/zNrKVuckw/rw8fnry/2gzUbUpupx3PstzgtY2XhiAo/KZb+FZ2qmHf1uL04OhXme1tJC1NutaM7PWiFGqezDXGqNRkQtot/tudhpt6K1dPqR/+n7yxERMfNg+W+4i1Fvt+zA1+kCbur2TPR/dis5PRtzs9GcP/1zGu6ii7hJGuZNjHq7Fce9gxsV702dnpUJ+KKPk623b6X81sqqTs9KBHyR6VtcpF3HEwbTs+IBn7f/XoeLNNNTwKVOIMZxkWZ6CnjkE3iUF2nF9CxiLKZnMUkR8Eh34GEu0orpefa/8mJ6FtMUAY/lBGLQRZrpSYqA7zx6GM27c6Yngy/kM9zMA/9cFf0KEDAIGASMgEHAIGAQMAIGAYOAQcAIGAQMAkbAIGAQMAgYAYOAQcAgYAQMAgYBg4ARMAgYLucPyoKxmnmaXKEAAAAASUVORK5CYII=" />
+        <p>
+            <span t="download lenovo vantage|Download Lenovo Vantage"></span>
+            <span id="question-vantage-link" class="el-icon-warning-outline" style="font-size: 16px;position: absolute;right: 8px;top: 8px; transform: rotatex(180deg);"></span>
+        </p> 
+    </a>
+
+    <a style="position: relative;" id="lenovo-app-tile">
+        <img style="max-width: 40px; max-height: 40px; margin-bottom: 10px" class="quickhelp-tile-img"
+            src="data:image/png;base64,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" />
+        <p>
+            <span t="download lenovo app|Download Lenovo App"></span>
+        </p> 
+    </a>
+    <script>
+        $(".quickhelp-tile-vantage #vantage-tile").on("click", function () {
+            window.open("https://www.microsoft.com/p/lenovo-vantage/9wzdncrfj4mv?rtc=3&activetab=pivot:overviewtab")
+        });
+        $(".quickhelp-tile-vantage #lenovo-app-tile").on("click", function() {
+            window.open("/lenovoapp");
+        });
+        var documentLink = document.getElementById("question-vantage-link")
+        documentLink.addEventListener("click", function(e){
+            e.stopPropagation()
+            window.open("https://support.lenovo.com/solutions/ht505081")
+        },false);
+        if(config.product.Brand == "TABLET" 
+        &&(config.product.ID.indexOf("LYNX-SERIES")<0 && config.product.ID.indexOf("MIIX-SERIES")<0 && config.product.ID.indexOf("THINKPAD-TABLET-SERIES")<0 && !(config.product.ID.indexOf("YOGA-SERIES")>0 && (config.product.ID.indexOf("YOGA-BOOK")>0 || config.product.ID.indexOf("YOGA-BOOK-C930")>0)))) {
+            $("#vantage-tile").remove();
+            $("#lenovo-app-tile").show();
+        }else {
+            $("#lenovo-app-tile").remove();
+            $("#vantage-tile").show();
+        }
+    </script>
+</div><div class="quickhelp-tile-updatesys pcg-limit tablet-limit">
+    <a>
+        <span class="icon icon-lh-download"></span>
+        <p t="update my system|Update My System"></p>
+    </a>
+    <script>
+        $(".quickhelp-tile-updatesys >a:first").on("click", function () {
+            toOtherTab('Update My System', 'downloads');
+        });
+    </script>
+</div><div class="quickhelp-tile-download-lmsa pcg-limit tablet-limit" style="display:none;">
+    <a href="/downloads/ds101291">
+        <span class="icon icon-lh-download"></span>
+        <p t="download lmsa|Download Rescue and Smart Assistant"></p>
+    </a>
+</div><div class="quickhelp-tile-threesteps">
+    <a>
+        <span class="icon icon-lh-threesteps"></span>
+        <p t="my device isnt working properly|My Device Isn’t Working Properly"></p>
+    </a>
+<script>
+    $(".quickhelp-tile-threesteps").on("click",function(){
+        quickhelp_trackIntentSelection('My Device Isn’t Working Properly');
+        //this.$router.push({ name: "troubleshooting" });
+    });
+        $(".quickhelp-tile-threesteps >a:first").on("click", function(){
+            $(".quickhelp span.troubleshoteing-trigger").click();
+            return false;
+        });
+</script>
+</div>
+<div class="quickhelp-tile-chromebookorwin-help  tablet-limit">
+    <a class="sys-solution">
+        <span class="icon sys-solution-icon"></span>
+        <p class="sys-solution-desc"></p>
+    </a>
+    <script>
+        (function () {
+            function toHowto() {
+                let OSs = _.get(window, ['ds_productinfo', 'OSs'], []);
+                return OSs.some(function (item) { return item.Value.toLowerCase() === 'chrome os' });
+            }
+            var __isChrome = toHowto(), __productID = (l.Common.getProductId() || "").toLowerCase(), __sysolution = $(".quickhelp-tile-chromebookorwin-help >a.sys-solution");
+            __sysolution.attr("href", '/products/' + __productID + "/solutions/" + (__isChrome ? "ht509604" : "windows-support"));
+            __sysolution.find("span.sys-solution-icon").addClass(__isChrome ? 'icon-lh-chromebook' : 'icon-lh-windows');
+            __sysolution.find("p.sys-solution-desc").text(l.Translator.translate(__isChrome ? 'chromebook help|chromebook help' : 'windows support center|Windows Support Center'));
+        })();
+    </script>
+</div>
+
+<div class="quickhelp-tile-contactus">
+    <a>
+        <span class="icon icon-lh-contactus"></span>
+        <p t="contact us|Contact Us"></p>
+    </a>
+<script>
+    $(".quickhelp-tile-contactus >a:first").on("click",function(){
+        toOtherTab('Contact Us', 'contactus');
+    });
+</script>
+</div><div class="quickhelp-tile-parts pcg-limit tablet-limit">
+<a>
+<span class="icon icon-lh-parts"></span>
+<p t="purchase parts|Purchase Parts"></p>
+</a>
+<script>
+        $(".quickhelp-tile-parts >a:first").on("click", function () {
+          toOtherTab('Purchase Parts', 'parts');
+        });
+    </script>
+</div><div class="quickhelp-tile-repairstatus">
+    <a>
+        <span class="icon icon-lh-repair"></span>
+        <p class="tile-repairstatus-desc"></p>
+    </a>
+<script>
+    function repairStatusText(){
+        var str = "repair status|Repair Status";
+        if  (_.get(window, ['config', 'user', 'Language'], '').toLowerCase() === 'ja') {
+            str = "repair status check";
+        }
+        return l.Translator.translate(str);
+    }
+    var __repairstatus = $(".quickhelp-tile-repairstatus >a:first");
+    __repairstatus.find(".tile-repairstatus-desc").text(repairStatusText());
+    __repairstatus.on("click",function(){
+        toOtherTab('Repair Status', 'repair');
+    });
+</script>
+</div><div class="quickhelp-tile-register pcg-limit tablet-limit">
+<a href="/productregistration">
+<span class="icon icon-lh-register"></span>
+<p t="register products and services|Register Products & Services"></p>
+</a>
+</div><div class="quickhelp-tile-live pcg-limit tablet-limit">
+<a href="/warrantylookup#/llaservice">
+<span class="icon icon-lh-liveassistant option-contactus-liveassistant"></span>
+<p t="lenovo live assistant|Lenovo Live Assistant"></p>
+</a>
+<script>
+         $(".quickhelp-tile-live > a:first").on("click", function () {
+          const productId = window.config.product.ID
+          l.SessionStorageUtility.setSessionStorage("llaProductId",productId);
+         });
+    </script>
+</div>
+<script>
+    function quickhelp_switchToPspTab(tabName) {
+        if (typeof tabName == "undefined") tabName = 'producthome';
+        let isClick = false;
+        $(".mse-task-for-psp-section-" + tabName + " >a").each(function () {
+            if (
+                this.offsetWidth ||
+                this.offsetHeight ||
+                this.getClientRects().length
+            ) {
+                isClick = true;
+                this.click();
+            }
+        });
+        if (!isClick) {
+            // maybe mobile second nav show
+            const redirectNav = $(".main-navbar.moblieview .mse-task-for-psp-section-" + tabName + " >a");
+            if (redirectNav && redirectNav.length) redirectNav.click();
+        }
+    }
+
+    function quickhelp_isTaggedTablet() {
+        if (config.product.ParentGuids.indexOf("9F7C6031-B3EF-4B9C-AA60-404285C16BA4") > -1) {
+            if (config.product.ParentGuids.indexOf("17E8D05D-7E6F-49E1-A136-AC3EB6DE9800") > -1 
+            || config.product.ParentGuids.indexOf("70423EF5-2889-40D0-9D83-C9DE762517E0") > -1 
+            || config.product.ParentGuids.indexOf("C4BD8173-799E-44CA-843B-4613708B27B3") > -1) {
+                return false;
+            } else return true;
+        } else return false;
+    };
+
+    function quickhelp_trackIntentSelection(tileName) {
+        l.DTM.Lmd.unifiedCustomInteractionTrack("Intent Selection | " + tileName);
+        return true;
+    }
+    function toOtherTab(tileName, tabName) {
+        quickhelp_switchToPspTab(tabName);
+        quickhelp_trackIntentSelection(tileName);
+    }
+</script>
+<script>
+    $(".quickhelp-tile-upgradewarranty").remove()
+    if(l.Common.getCurrentRealm()==l.RealmType.Pcg) {
+        $(".pcg-limit").show();
+    }
+    var isTaggedTablet = quickhelp_isTaggedTablet();
+    if(isTaggedTablet){
+        $(".quickhelp-tile-updatesys").remove();
+        $(".quickhelp-tile-download-lmsa").show();
+        $(".quickhelp-tile-chromebookorwin-help").remove();
+        $(".quickhelp-tile-parts").remove();
+    }
+    else{
+        $(".quickhelp-tile-threesteps").remove();
+        $(".quickhelp-tile-contactus").remove();
+        $(".quickhelp-tile-updatesys").remove();
+        $(".quickhelp-tile-download-lmsa").remove();
+        $(".quickhelp-tile-chromebookorwin-help").show();
+    }
+    if(l.MobileDetectControl.mobileResource.mobile() && !l.MobileDetectControl.mobileResource.tablet()) {
+        $('.quickhelp-tile-vantage').remove();
+    }
+</script>

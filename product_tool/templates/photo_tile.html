@@ -11,4 +11,5 @@
   {% if p.can_inspect and not p.verified_width %}<button type="submit" formaction="/products/{{ product.id }}/photos/{{ p.id }}/inspect" formmethod="post" class="button">Проверить параметры</button>{% endif %}
   <small>{{ p.site_name }} · {% if p.identity_confirmed %}подтверждено{% else %}кандидат; связь с артикулом не подтверждена{% endif %}{% if p.kind == 'feature' %} · инфографика{% elif p.kind == 'marketing' %} · маркетинговый материал{% endif %}</small>
   <a href="{{ p.url }}" target="_blank" rel="noopener">Открыть URL</a>
+  {% if p.identity_note %}<small>{{ p.identity_note }}</small>{% endif %}
 </div>

@@ -19,6 +19,8 @@ ALLOWED_BY_SOURCE = {
     "sulpak": ("sulpak.kz",),
     "samsung": ("samsung.com", "samsungimages.com"),
     "bosch_home": ("bosch-home.com", "bosch-home.kz", "bsh-group.com"),
+    "lenovo_psref": ("psrefstuff.lenovo.com", "psref.lenovo.com", "download.lenovo.com", "static.pub"),
+    "lenovo_support": ("lenovo.com", "static.pub"),
 }
 
 

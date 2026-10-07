@@ -83,9 +83,10 @@ def typed_manual(title):
 class LenovoAdapter:
     source_key='lenovo_support'
     site_name='Lenovo Support'
-    def __init__(self,*,clock=time.monotonic,fetch_log_path=Path('data/lenovo_fetch_log.json'),session=None,trace_callback=None,search_provider=None):
+    def __init__(self,*,clock=time.monotonic,fetch_log_path=Path('data/lenovo_fetch_log.json'),session=None,trace_callback=None,search_provider=None,psref_capture_dir=None):
         self.clock=clock;self.http=session or PolicyAwareSession(fetch_log_path,allowed_hosts=HOSTS,clock=clock)
         self.trace_callback=trace_callback;self.search_provider=search_provider;self.reports={};self.documents=[]
+        self.psref_capture_dir=Path(psref_capture_dir) if psref_capture_dir else Path(fetch_log_path).parent/'psref_captures'
     def trace(self,**event):
         if self.trace_callback:self.trace_callback({'event':'lenovo_discovery','timestamp':utc_now(),**event})
     def get(self,url,article,kind,region,deadline):
@@ -95,18 +96,25 @@ class LenovoAdapter:
         self.trace(query=article,provider='official_http',url=url,final_url=r.url,region=region,source_type=kind,accepted=False,reason=r.marker or ('candidate_body_received' if r.ok else f'HTTP {r.status_code}'),identity_relation='unknown')
         return r if r.ok else None
     def find_source(self,article,*,name='',category='',deadline):
+        from .lenovo_psref import read_capture
+        article=code(article)
+        captured=read_capture(self.psref_capture_dir,article)
+        if captured and captured[0].match_level=='full_sku':
+            document,report=captured
+            report['query_variants']=queries(article,name)
+            self.reports[article]=report
+            self.trace(query=article,provider='attended_capture',url=document.url,region='global',source_type='psref',accepted=True,reason='Returned exact Model and MTM row; original hashed frontend responses',identity_relation='exact_mtm')
+            self.load_document_reviews(article,report)
+            return document
+        document=self.find_support_source(article,name=name,category=category,deadline=deadline)
+        self.load_document_reviews(article,self.reports[article])
+        return document
+    def find_support_source(self,article,*,name='',category='',deadline):
         article=code(article)
         report={'article':article,'query_variants':queries(article,name),'sources':[],'configuration_candidates':[],'manuals':[],'manual_status':'Не проверена','configuration_identity':{},'photos_relation':'family_model','gaps':[]}
         self.reports[article]=report;self.documents=[]
-        # Regional exact storefront route first. A redirect to family is not exact.
-        regional=f'https://www.lenovo.com/kz/ru/p/{quote(article.lower())}'
-        r=self.get(regional,article,'product','kz',deadline)
-        if r:
-            store=self.store_evidence(r,article)
-            report['sources'].append(store)
-            report['configuration_candidates']+=store.get('configuration_candidates',[])
-        # PSREF is an independent official specification reference, not automatically PDP.
-        psref=f'https://psref.lenovo.com/Detail/?M={quote(article)}'
+        # PSREF primary technical source, then Support, then storefront metadata.
+        psref=f'https://psref.lenovo.com/Detail/Model?M={quote(article)}'
         r=self.get(psref,article,'psref','global',deadline)
         if r:
             report['sources'].append({'url':r.url,'type':'psref','relation':'unknown','reason':'SPA shell or unparsed body; M parameter does not prove model relation'})
@@ -138,6 +146,12 @@ class LenovoAdapter:
             self.trace(query=article,provider='support_catalog',url=r.url,region=candidate['region'],source_type='support',accepted=identity['configuration_resolved'],reason=identity['reason'],identity_relation=identity['relation'])
             self.manual_candidates(base,candidate,article,deadline,report)
             if identity['configuration_resolved']:break
+        regional=f'https://www.lenovo.com/kz/ru/p/{quote(article.lower())}'
+        r=self.get(regional,article,'product','kz',deadline)
+        if r:
+            store=self.store_evidence(r,article)
+            report['sources'].append(store)
+            report['configuration_candidates']+=store.get('configuration_candidates',[])
         if best.match_level!='full_sku' and self.clock()<deadline:
             r=self.get(f'https://www.lenovo.com/us/en/p/{quote(article.lower())}',article,'product','us',deadline)
             if r:
@@ -230,4 +244,31 @@ class LenovoAdapter:
         walk(data)
         report["manuals"]=list({(x["type"],x["url"]):x for x in report["manuals"]}.values())
     def find_documents(self,document,article):
-        return [] # Typed unverified links remain in evidence, never verified instructions.
+        return self.documents
+    def load_document_reviews(self,article,report):
+        import hashlib
+        from .lenovo_documents import verify_sg,verify_pdf
+        self.documents=[]
+        path=self.psref_capture_dir/'manual_reviews.json'
+        if not path.is_file():return
+        review=json.loads(path.read_text(encoding='utf-8')).get(article)
+        if not review:return
+        report['manual_status']='Проверена, не найдена' if review.get('catalog_checked') and not review.get('technical_blocker') else 'Не проверена'
+        report['manual_review']=review
+        report['manuals']=review.get('candidates',report.get('manuals',[]))
+        report['verified_documents']=[]
+        for doc in review.get('documents',[]):
+            if doc.get('type')!='User Guide' or doc.get('language')!='Русский':continue
+            if any(urlsplit(doc.get(key,'')).scheme!='https' or urlsplit(doc.get(key,'')).hostname not in {'download.lenovo.com','support.lenovo.com','pcsupport.lenovo.com'} for key in ('url','source_url')):continue
+            proof=doc.get('proof_file','')
+            if not proof or Path(proof).name!=proof or not (self.psref_capture_dir/proof).is_file():continue
+            raw=(self.psref_capture_dir/proof).read_bytes()
+            if hashlib.sha256(raw).hexdigest()!=doc.get('proof_sha256'):continue
+            verified=verify_pdf(raw,article,doc['family']) if doc.get('format')=='pdf' else verify_sg(json.loads(raw),article,doc['source_url'],doc.get('type'))
+            if verified:
+                self.documents.append(ProductDocument(doc['title'],'Русский','','',doc['url'],doc['source_url'],article,doc['family'],doc['source_url'],True))
+                report['verified_documents'].append(doc['url'])
+                report['manual_status']='Проверена'
+        if review.get('documents') and not self.documents:
+            report['manual_status']='Не проверена'
+            report['manual_review_gap']='Saved Russian guide content missing or failed validation; technical verification blocker'

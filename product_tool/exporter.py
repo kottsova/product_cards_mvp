@@ -134,7 +134,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                                          "Исключённый кандидат",item["url"],"Нет",reason,*_photo_cells(item)])
                 continue
             if item["selected"] and tied:
-                photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Подтверждён",*_photo_cells(item)])
+                photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Цвет подтверждён" if lenovo else "Подтверждён",*_photo_cells(item)])
             elif item["selected"] and not tied:
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
