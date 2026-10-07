@@ -157,6 +157,9 @@ def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     if product and product["brand"].strip().upper() == "BOSCH" and any(
             page["source_key"] == "bosch_home" for page in jobs.get_source_pages(path, product_id)):
         return bosch_presentation.project(rows)
+    if product and product["brand"].strip().upper() == "JBL":
+        from .jbl_presentation import project
+        return project(rows)
     if product and product["brand"].strip().upper() == "LENOVO":
         from .lenovo_presentation import project
         return project(rows)

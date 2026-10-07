@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment
-from . import lenovo_pipeline, lenovo_presentation, attribute_projection, bosch_presentation, bosch_readiness, card_evidence, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
+from . import jbl_pipeline, lenovo_pipeline, lenovo_presentation, attribute_projection, bosch_presentation, bosch_readiness, card_evidence, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .lg_identity import document_tied_to_article, photo_tied_to_article
 from .display import display_access_error, display_name_ru, display_source, display_status, display_value
@@ -93,6 +93,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
         source_pages = jobs.get_source_pages(database, p["id"])
         lg = lg_batch.is_lg(p)
         samsung = p["brand"].strip().upper() == "SAMSUNG"
+        jbl = p["brand"].strip().upper() == "JBL"
+        jbl_evidence = card_evidence.load(database,p["id"],"jbl") if jbl else None
         lenovo = p["brand"].strip().upper() == "LENOVO"
         lenovo_evidence = card_evidence.load(database,p["id"],"lenovo") if lenovo else None
         saved_documents = (manual_status.effective_documents(database,p["id"],p["search_code"])
@@ -102,7 +104,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                     bosch_presentation.document_verified(d, card_evidence.load(database,p["id"],"bosch_home"), source_pages)
                     if p["brand"].strip().upper() == "BOSCH" else
                     samsung_readiness.document_verified(d, card_evidence.load(database,p["id"],"samsung_documents"))
-                    if samsung else lenovo_pipeline.document_verified(d, lenovo_evidence) if lenovo else True)
+                    if samsung else lenovo_pipeline.document_verified(d, lenovo_evidence) if lenovo else jbl_pipeline.document_verified(d, jbl_evidence) if jbl else True)
             docs.append([(p["name"] or p["search_code"]),d["title"],d["language"],d["document_date"],d["size"],"Да" if d["is_primary"] else "Нет",d["support_model"],d["source_url"],d["direct_url"],
                          "Подтверждена" if tied else "PDF проверен, связь с вариантом не подтверждена",
                          "LG" if d["source_key"].startswith("lg_") else display_source(
@@ -121,7 +123,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
-            tied = photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else True
+            tied = photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
@@ -141,7 +143,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
                 photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],
                                          "Да" if item["selected"] else "Нет","Связь с артикулом не подтверждена",*_photo_cells(item)])
-            elif (samsung or lenovo) and item["kind"] != "excluded":
+            elif (samsung or lenovo or jbl) and item["kind"] != "excluded":
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
@@ -199,6 +201,19 @@ def export_batch(database: Path,batch_id: str)->bytes:
             history=jobs.list_jobs(database,p["id"])
             status=history[0]["status"] if history else ""
             ready.append([(p["name"] or p["search_code"]),p["search_code"],status,r["verdict"],r["gtin"],r["page_enr"] or "",r["revision_status"],r["official_facts"],f"{r['official_photos_selected']} / {r['official_photos']}",r["manual_family"],"\u0414\u0430" if r["manual_exact_code_in_pdf"] else "\u041d\u0435\u0442",len(r["other_manuals_unverified"]),", ".join(r["blocking_gaps"]+r["advisory_gaps"])])
+    jbl_products = [p for p in batch["products"] if p["brand"].strip().upper() == "JBL"]
+    if jbl_products:
+        ready_jbl=book.create_sheet(_title("Готовность JBL",used))
+        _headers(ready_jbl,["Товар","Полный артикул","Готовность","Пробелы","Русская инструкция"])
+        candidates_jbl=book.create_sheet(_title("Характеристики-кандидаты JBL",used))
+        _headers(candidates_jbl,["Товар","Раздел","Исходное поле","Значение","Причина"])
+        documents_jbl=book.create_sheet(_title("Документы-кандидаты JBL",used))
+        _headers(documents_jbl,["Товар","Тип","Название","URL","Связь","Проверка"])
+        for p in jbl_products:
+            ev=card_evidence.load(database,p["id"],"jbl") or {};r=jbl_pipeline.card_readiness(database,p["id"])
+            ready_jbl.append([p["name"],p["search_code"],jbl_pipeline.VERDICTS[r["verdict"]],"; ".join(jbl_pipeline.GAPS[g] for g in r["gaps"]),r["manual_status"]])
+            for c in ev.get("rejected_specs",[]):candidates_jbl.append([p["name"],c["section"],c["raw_label"],c["value"],c["reason"]])
+            for d in ev.get("manuals",[]):documents_jbl.append([p["name"],d["type"],d["title"],d["url"],d["relation"],"Проверена" if d["verified"] else "Не проверена"])
     for sheet in book.worksheets:
         for col in sheet.columns: sheet.column_dimensions[col[0].column_letter].width=min(60,max(12,max(len(str(c.value or "")) for c in col)+2))
     if lenovo_products:

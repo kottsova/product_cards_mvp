@@ -148,6 +148,7 @@ def run_once(
     lg_global_adapter_factory: Callable[[], LGGlobalAdapter] | None = None,
     lg_sitemap_discovery_factory: Callable[[], object] | None = None,
     lenovo_adapter_factory: Callable[[], object] | None = None,
+    jbl_adapter_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -166,6 +167,11 @@ def run_once(
             lenovo_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],
                                     adapter_factory=lenovo_adapter_factory,
                                     dns_adapter_factory=dns_adapter_factory, clock=clock)
+            return True
+        if product["brand"].strip().casefold() == "jbl":
+            from . import jbl_pipeline
+            jbl_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],
+                adapter_factory=jbl_adapter_factory, dns_adapter_factory=dns_adapter_factory, clock=clock)
             return True
         is_lg = product["brand"].strip().casefold() in LG_BRAND_ALIASES
         is_hyperx = product["brand"].strip().casefold() in HYPERX_BRAND_ALIASES

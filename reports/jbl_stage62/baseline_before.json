@@ -1,0 +1,138 @@
+{
+  "article": "JBLFLIP6BLKEU",
+  "job": {
+    "id": "90d87e009c774e2ea980c2e6f24e95b0",
+    "product_id": 1,
+    "status": "error",
+    "current_stage": 6,
+    "message": "Нет проверенного дилерского URL для «JBL JBL Flip 6 Black» (артикул JBLFLIP6BLKEU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+    "created_at": "2026-10-07T10:39:13+00:00",
+    "updated_at": "2026-10-07T10:39:13+00:00",
+    "started_at": "2026-10-07T10:39:13+00:00",
+    "finished_at": "2026-10-07T10:39:13+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "sources": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "dealer_url_needed",
+      "evidence": "Нет проверенного дилерского URL для «JBL JBL Flip 6 Black» (артикул JBLFLIP6BLKEU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "fetched_at": "2026-10-07T10:39:13+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [],
+  "photos": [],
+  "documents": [],
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  },
+  "events": [
+    {
+      "id": 1,
+      "job_id": "90d87e009c774e2ea980c2e6f24e95b0",
+      "stage": null,
+      "level": "info",
+      "message": "Задание добавлено в очередь.",
+      "source_url": "",
+      "created_at": "2026-10-07T10:39:13+00:00"
+    },
+    {
+      "id": 2,
+      "job_id": "90d87e009c774e2ea980c2e6f24e95b0",
+      "stage": null,
+      "level": "info",
+      "message": "Worker начал обработку.",
+      "source_url": "",
+      "created_at": "2026-10-07T10:39:13+00:00"
+    },
+    {
+      "id": 3,
+      "job_id": "90d87e009c774e2ea980c2e6f24e95b0",
+      "stage": 1,
+      "level": "info",
+      "message": "Бренд «JBL» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+      "source_url": "",
+      "created_at": "2026-10-07T10:39:13+00:00"
+    },
+    {
+      "id": 4,
+      "job_id": "90d87e009c774e2ea980c2e6f24e95b0",
+      "stage": 1,
+      "level": "warning",
+      "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «JBL JBL Flip 6 Black» (артикул JBLFLIP6BLKEU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "source_url": "",
+      "created_at": "2026-10-07T10:39:13+00:00"
+    },
+    {
+      "id": 5,
+      "job_id": "90d87e009c774e2ea980c2e6f24e95b0",
+      "stage": 3,
+      "level": "info",
+      "message": "Нормализуем и сравниваем характеристики.",
+      "source_url": "",
+      "created_at": "2026-10-07T10:39:13+00:00"
+    },
+    {
+      "id": 6,
+      "job_id": "90d87e009c774e2ea980c2e6f24e95b0",
+      "stage": 6,
+      "level": "warning",
+      "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+      "source_url": "",
+      "created_at": "2026-10-07T10:39:13+00:00"
+    },
+    {
+      "id": 7,
+      "job_id": "90d87e009c774e2ea980c2e6f24e95b0",
+      "stage": null,
+      "level": "warning",
+      "message": "Нет проверенного дилерского URL для «JBL JBL Flip 6 Black» (артикул JBLFLIP6BLKEU). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "source_url": "",
+      "created_at": "2026-10-07T10:39:13+00:00"
+    }
+  ]
+}
