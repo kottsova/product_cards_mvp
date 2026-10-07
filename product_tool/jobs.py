@@ -556,7 +556,7 @@ def identification_status(source_pages: list[dict[str, Any]]) -> str:
         return f"{bosch.get('site_name') or 'Bosch Home'}: catalog model confirmed; E-Nr revision unknown"
     jbl = by_key.get("jbl", {})
     if jbl.get("url") and not jbl.get("error"):
-        return "Точный артикул JBL подтверждён" if jbl.get("match_level") == "full_sku" else "Найдено только семейство или другой вариант JBL"
+        return "Точная модель JBL подтверждена" if jbl.get("match_level") in {"full_sku","model_confirmed"} else "Найдено только семейство или другой вариант JBL"
     lenovo = by_key.get("lenovo_psref") or by_key.get("lenovo_support", {})
     if lenovo.get("url") and not lenovo.get("error"):
         return ("Точный MTM Lenovo подтверждён конфигурационными данными" if lenovo.get("match_level") == "full_sku"

@@ -1,0 +1,96 @@
+# Stage 63 — JBL model-level identity и recovery
+
+Дата: 2026-10-07. Исходный commit Stage62: `a62d05938a8736382d943a375eee1b42f04cb4f3`.
+
+**Stage 63: PASS.** Все 10 прежних SKU имеют подтверждённую модель и фото нужного цвета. JBL model/color evidence достаточны для controlled use; Git-публикация выполняется после полного regression.
+
+## 1. Новая identity model
+
+Model identity используется для общих technical specs, Bluetooth/ANC/IP, runtime, функций, размеров/веса самого изделия и product description. Variant identity отдельно отвечает за цвет, фото, regional suffix, bundle, комплектацию, включённые кабели/адаптеры и упаковку. Эти поля из model-only страницы другого региона сохраняются кандидатами. У Tune returned SKU не публикует региональный suffix; это не подтверждение EU-комплектации. Marketing family name или поисковый URL сами по себе не доказывают модель.
+
+Официальная PDP должна содержать один Product, product context и согласованные returned SKU/MPN/PID. Из SKU выделяется model code + известный color code + необязательный известный regional suffix; одинаковый оставшийся model code подтверждает `exact_model`. Неизвестный bundle/extra suffix и другая генерация не отрезаются. Это общие правила, без T520BT/Xtreme/Bar-specific resolver.
+
+Примеры: `JBLT520BTBLKEU` → `JBLT520BT` + Black + EU; `JBLT520BTWHTEU` → та же модель + White + EU; `JBLXTREME4BLUEP` → `JBLXTREME4` + Blue + EP. `JBLBAR500PROBLKEP` → model code `JBLBAR500PRO` + Black + EP. Официальное marketing name для последнего — **BAR 500**, не выдуманная отдельная модель «Bar 500 Pro».
+
+Facts из model-level PDP получают `model_confirmed_official`, с `full_sku_confirmed=false`. Полный SKU остаётся отдельным признаком; UI/Excel не называют model-only facts полным артикулом. Страна — приоритет поиска, не обязательный identity gate. Доказанные региональные differences остаются candidates.
+
+Фото требуют совпадения requested color с returned SKU color, согласованного PDP color и отсутствия противоречащего цвета в asset name. Неопределённая/противоречивая связь — candidate. Gallery чужого цвета не становится exact из-за совпадения модели.
+
+## 2–5. Четыре recovery и реальные региональные различия
+
+| Исходный SKU | Base model | Returned official SKU | Model relation | Photo color | Confirmed specs | Readiness |
+|---|---|---|---|---|---:|---|
+| `JBLXTREME4BLUEP` | `JBLXTREME4` / JBL Xtreme 4 | `JBLXTREME4BLUAS` | exact_model | Blue | 20 | Готова |
+| `JBLT520BTBLKEU` | `JBLT520BT` / JBL Tune 520BT | `JBLT520BTBLK` | exact_model | Black | 40 | Готова |
+| `JBLBAR500PROBLKEP` | `JBLBAR500PRO` / BAR 500 | `JBLBAR500PROBLKAS` | exact_model | Black | 23 | Готова |
+| `JBLT520BTWHTEU` | `JBLT520BT` / JBL Tune 520BT | `JBLT520BTWHT` | exact_model | White | 40 | Готова |
+
+Найденные и проверенные источники:
+
+- `JBLXTREME4BLUEP`: [official PDP](https://id.jbl.com/en/bluetooth-portables/XTREME-4.html). Variant relation `same_color_other_region`; полный requested SKU не объявляется совпавшим.
+- `JBLT520BTBLKEU`: [official PDP](https://id.jbl.com/en/over-ear-headphones/JBLT520BTBLK.html). Variant relation `same_color_other_region`; полный requested SKU не объявляется совпавшим.
+- `JBLBAR500PROBLKEP`: [official PDP](https://id.jbl.com/en/soundbars/BAR-500-.html). Variant relation `same_color_other_region`; полный requested SKU не объявляется совпавшим.
+- `JBLT520BTWHTEU`: [official PDP](https://id.jbl.com/en/over-ear-headphones/JBLT520BTWHT.html). Variant relation `same_color_other_region`; полный requested SKU не объявляется совпавшим.
+
+**Tune 520BT Black/White:** обе official PDP публикуют один model code и одинаковые общие specs; returned `JBLT520BTBLK` / `JBLT520BTWHT` без EU. Gallery hero отдельный для каждого цвета; raw bytes PNG визуально проверены. Не подтверждается EU packaging на основании отсутствующего EU suffix.
+
+**Xtreme 4:** Blue-APAC SKU `JBLXTREME4BLUAS` подтверждает модель и blue gallery для requested EP. BLUEP — разбор BLU+EP, не техническая конфигурация. Не утверждается, что региональная комплектация/packaging всегда одинаковы. Комплект и включённые аксессуары из ID остаются candidates для EP; box visual другого цвета не импортируется как blue product gallery.
+
+**Bar 500:** APAC `JBLBAR500PROBLKAS` и EP имеют общую модель BAR 500 и Black hardware gallery. Обнаружены реальные различия: USB playback зависит от региона; число power cords зависит от region SKUs; канализация Wi-Fi содержит региональные условия. Общие мощность, динамики, размеры/вес отдельных компонентов и Bluetooth подтверждены; USB/MP3-related fields, региональная частотная строка, packaging dimensions/weight и комплект сохраняются candidates. Упаковка не подменяет размеры самого изделия.
+
+## 6. External search
+
+Подключён существующий `LGBrowserSearch` / original old-parser Google provider. Отдельный JBL engine не создавался. Lazy запуск после official miss; запросы full SKU, нормализованный model code без color/region, descriptive model name. Для fallback зарезервированы 20 секунд из общего discovery deadline; BrowserBudget получает оставшийся срок. JBL request budget ограничен 24 на строку и не изменяет другие бренды.
+
+Diagnostics сохраняют query, returned result/outcome, URL, accepted/rejected reason, model relation и variant relation. URL от search provider затем проходит обычный official HTTP fetch и тот же parser. Интеграционный test запускает default provider после regional/sitemap miss, получает candidate, fetch/parses official model и проверяет separate photo evidence.
+
+Live smoke [external_search_smoke.json](external_search_smoke.json): 3 запроса, original search called/completed, **0 candidates / no_candidates**. Не выдаётся за успешный live recovery через Google. Initial recovery PDP найдены отдельным official research и сохранены с SHA-256; положительная default fallback цепочка дополнительно проверена offline transport. Fresh discovery без этих заранее выбранных captures отдельно в [fresh_discovery_final.json](fresh_discovery_final.json).
+
+Official native discovery: проверенный server-side `/en/search?q=…` использован внутри regional discovery. Название очищается от brand/color/region tokens; redirects и `.product-tile` links затем проходят обычную SKU/MPN model + photo validation. Ни один search tile не даёт specs напрямую. Это вызов существующего поиска сайта, без нового внешнего engine.
+
+Предыдущий cold probe без native lookup нашёл только Tune 520BT. Окончательный cold probe с пустой PDP capture_dir восстановил все четыре: Tune Black/White через коды без EU; Xtreme через official search redirect; Bar через observed official product link. Host stops сохранены. У cold Tune страницы локального языка — 36 source facts; основной повторный dataset использует audited English PDP с подтверждёнными полями, field count не объявляется универсальным для всех региональных шаблонов.
+
+Bing smoke: no_candidates; DuckDuckGo: challenge_detected, дальнейшие действия остановлены. Эти outcomes сохранены отдельно, не выдаются за успешный внешний search.
+
+## 7. Dataset Stage62 до / после
+
+Исходный файл не менялся: `reports/jbl_stage62/dataset_frozen.json`; SHA-256 `b6cd9ed36c3920aa176c3ac7ed3cb47ce17660f0899db247dc059ebe833a2634`. Те же 10 SKU; baseline Flip6 Black EU отдельно. Все прошли обычный worker `run_once()` через final shared pipeline. Предыдущий диагностический прогон сохранён в pre_box_pass.json; итог — [release_pass.json](release_pass.json).
+
+| SKU | Было | Model identity | Variant identity | Specs | Photos | RU manual | Стало |
+|---|---|---|---|---:|---:|---|---|
+| `JBLCHARGE5BLK` | Готова с пробелами | exact_model | exact_sku | 22 | 1 | Проверена, не найдена | Готова |
+| `JBLGO4BLK` | Готова с пробелами | exact_model | exact_sku | 25 | 1 | Не проверена | Готова |
+| `JBLXTREME4BLUEP` | Не готова | exact_model | same_color_other_region | 20 | 1 | Проверена | Готова |
+| `JBLT770NCBLK` | Готова | exact_model | exact_sku | 52 | 1 | Проверена | Готова |
+| `JBLLIVE770NCBLK` | Готова | exact_model | exact_sku | 52 | 1 | Проверена | Готова |
+| `JBLT520BTBLKEU` | Не готова | exact_model | same_color_other_region | 40 | 1 | Проверена | Готова |
+| `JBLBAR500PROBLKEP` | Не готова | exact_model | same_color_other_region | 23 | 1 | Проверена | Готова |
+| `JBLTBUDSBLK` | Готова | exact_model | exact_sku | 45 | 1 | Проверена | Готова |
+| `JBLFLIP6BLU` | Готова | exact_model | exact_sku | 21 | 1 | Проверена | Готова |
+| `JBLT520BTWHTEU` | Не готова | exact_model | same_color_other_region | 40 | 1 | Проверена | Готова |
+
+Dataset totals: 341 raw facts / 340 normalized confirmed; 6 exact SKU + 4 model-only sources; 10/10 ready, 0 conflicts. Комплектация exact legacy PDP теперь считывается из реального `.pdp-specs .box-contents`; regional/conditional contents не становятся confirmed. Raw source labels/values/sections остаются отдельно от русского presentation словаря.
+
+**Manual optional:** Charge5 остаётся `Проверена, не найдена` по реально проверенному QSG; Go4 — `Не проверена` из-за extracted model/title, несмотря на RU operations. Оба ready. Остальные 8 dataset RU guides проверены. Safety/Warranty не подменяют User/QSG. `manual_unverified` — advisory gap, не blocker и не причина dealer fallback. Exact model/specs, выбранное color-verified фото и отсутствие конфликтов обязательны только в JBL readiness; общие thresholds других брендов не ослаблены.
+
+## False confirmations / UI / Excel
+
+[identity_manual_review.json](identity_manual_review.json): реальная black PDP для white SKU даёт common specs, но 0 confirmed photos; тот же color с EP/EU даёт модель и color gallery без full-SKU flag; другая generation отклоняется. Family-only support и synthetic exact-gallery mismatch остаются неподтверждёнными. Synthetic cases явно обозначены, не выдаются за реальные support responses. 18 Stage63 tests покрывают эти границы и default fallback.
+
+Production UI: 11 страниц HTTP200, model-confirmed wording/count, русский canonical словарь для восстановленных Bar/Xtreme fields, отдельные candidates и manuals. Четыре исходных официальных PNG 1605×1605 проверены по файлам; 12 UI рендеров включают разные black/white lightboxes. [qa_ui_excel.json](qa_ui_excel.json), [photo_inspection.json](photo_inspection.json).
+
+Excel сформирован штатным exporter. 11 ready rows + header; отдельные model/variant columns; кандидаты specs/комплектов и typed docs. Spreadsheets artifact-tool только импортировал файл для read-only inspection/render. [excel_readiness.png](excel_readiness.png), [excel_identity.png](excel_identity.png), [excel_variant_candidates.png](excel_variant_candidates.png). В candidate audit намеренно сохраняются raw labels/values и machine-readable reason; длинные source strings доступны в cells, хотя рендер может обрезать их.
+
+## 8. Regression
+
+Targeted JBL: 23 Stage62 + 18 Stage63 — OK. Structural: 54 — OK. Полный offline regression: Ran 1505 tests in 837.739s; OK. [regression_release.json](regression_release.json) содержит source fingerprint unchanged и exit code. Перед release выполняется git diff --check.
+
+## 9. Verdict / controlled-use scope
+
+Verdict: **`JBL adapter production-ready for controlled use`** для подтверждённых model/color pairs после успешного final regression. Model-only docs/specs не подтверждают packaging или local bundle. Unknown suffix/generation, conflicting specs, неподтверждённое фото и family support переводят строку в review/not_ready. Live search может вернуть no_candidates или access stop; это сохраняется честно, не создаёт факты. Go4 visual/OCR manual review остаётся неблокирующим gap. Доступность сайтов и полнота Google не гарантируются.
+
+Reproduction: установить production requirements; `PYTHONPATH=. python reports/jbl_stage63/restore_manual_proofs.py`; затем run_release_pass.py из repo root без существующего release_pass.sqlite3 (защита от перезаписи). HTML/manifests сохраняются byte-exact через .gitattributes; PDF/DB/XLSX/profile/node_modules игнорируются. Fresh discovery smoke использует пустую capture_dir и переносит известные protection stops; не сбрасывает их ради нового результата.
+
+## 10. GitHub
+
+После PASS: commit `Stage 63`, push, HEAD==origin/main, clean working tree. Фактический hash сообщается в финальном ответе; self-referential hash в отчёт не записывается.

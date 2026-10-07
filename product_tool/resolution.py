@@ -97,13 +97,13 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
                 results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"],
                     "full_sku_official", "Факт точного MTM из официальной конфигурации Lenovo.", chosen['source_key'], False, True))
             continue
-        exact_jbl = [f for f in official if f["source_key"] == "jbl" and pages.get("jbl", {}).get("match_level") == "full_sku" and not pages.get("jbl", {}).get("error")]
+        exact_jbl = [f for f in official if f["source_key"] == "jbl" and pages.get("jbl", {}).get("match_level") in {"full_sku","model_confirmed"} and not pages.get("jbl", {}).get("error")]
         if exact_jbl:
             if _different(exact_jbl) or any(_signature(v) != _signature(exact_jbl[0]) for v in suppliers):
                 results.append(ResolvedValue(name, "", "", "needs_review", "Точная официальная страница JBL и дилер дали разные значения.", "", True, False))
             else:
                 chosen=exact_jbl[0]
-                results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"], "full_sku_official", "Факт точного артикула из официальной страницы JBL.", "jbl", False, True))
+                results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"], "full_sku_official" if pages["jbl"]["match_level"]=="full_sku" else "model_confirmed_official", "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.", "jbl", False, pages["jbl"]["match_level"]=="full_sku"))
             continue
         exact_samsung = [f for f in official if f["source_key"] == "samsung"
                          and pages.get("samsung", {}).get("match_level") == "full_sku"

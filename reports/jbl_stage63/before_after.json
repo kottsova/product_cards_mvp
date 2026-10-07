@@ -1,0 +1,916 @@
+{
+  "dataset_path": "reports/jbl_stage62/dataset_frozen.json",
+  "dataset_sha256": "b6cd9ed36c3920aa176c3ac7ed3cb47ce17660f0899db247dc059ebe833a2634",
+  "counts": {
+    "raw_specs": 341,
+    "confirmed_specs": 340,
+    "model_confirmed": 10,
+    "ready": 10,
+    "full_sku": 6,
+    "model_only": 4
+  },
+  "models": [
+    {
+      "sku": "JBLCHARGE5BLK",
+      "was": {
+        "verdict": "export_ready_with_gaps",
+        "gaps": [
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "manual_unverified"
+        ],
+        "exact_identity": true,
+        "confirmed_specs": 21,
+        "conflicts": 0,
+        "manual_status": "Проверена, не найдена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/bluetooth-portables/JBLCHARGE5BLK.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "exact_sku",
+        "requested_components": {
+          "model_code": "JBLCHARGE5",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLCHARGE5BLK"
+        },
+        "returned_components": {
+          "model_code": "JBLCHARGE5",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLCHARGE5BLK"
+        },
+        "exact_sku": true,
+        "model_confirmed": true,
+        "relation": "exact_sku",
+        "requested": "JBLCHARGE5BLK",
+        "returned_sku": "JBLCHARGE5BLK",
+        "returned_mpn": "JBLCHARGE5BLK",
+        "data_pid": "",
+        "model": "JBL Charge 5",
+        "reason": "Returned SKU + MPN + product context",
+        "color": "Black"
+      },
+      "specs": 22,
+      "confirmed_specs": 22,
+      "photos": 1,
+      "manual": "Проверена, не найдена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [
+          "manual_unverified"
+        ],
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "exact_sku_identity": true,
+        "model_identity": "exact_model",
+        "variant_identity": "exact_sku",
+        "exact_identity": true,
+        "confirmed_specs": 22,
+        "conflicts": 0,
+        "manual_status": "Проверена, не найдена"
+      },
+      "variant_candidates": []
+    },
+    {
+      "sku": "JBLGO4BLK",
+      "was": {
+        "verdict": "export_ready_with_gaps",
+        "gaps": [
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "manual_unverified"
+        ],
+        "exact_identity": true,
+        "confirmed_specs": 24,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/bluetooth-portables/JBLGO4BLK.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "exact_sku",
+        "requested_components": {
+          "model_code": "JBLGO4",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLGO4BLK"
+        },
+        "returned_components": {
+          "model_code": "JBLGO4",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLGO4BLK"
+        },
+        "exact_sku": true,
+        "model_confirmed": true,
+        "relation": "exact_sku",
+        "requested": "JBLGO4BLK",
+        "returned_sku": "JBLGO4BLK",
+        "returned_mpn": "JBLGO4BLK",
+        "data_pid": "",
+        "model": "JBL Go 4",
+        "reason": "Returned SKU + MPN + product context",
+        "color": "Black"
+      },
+      "specs": 25,
+      "confirmed_specs": 25,
+      "photos": 1,
+      "manual": "Не проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [
+          "manual_unverified"
+        ],
+        "blocking_gaps": [],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "exact_sku_identity": true,
+        "model_identity": "exact_model",
+        "variant_identity": "exact_sku",
+        "exact_identity": true,
+        "confirmed_specs": 25,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "variant_candidates": []
+    },
+    {
+      "sku": "JBLXTREME4BLUEP",
+      "was": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "exact_identity": false,
+        "confirmed_specs": 0,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/en/bluetooth-portables/XTREME-4.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "same_color_other_region",
+        "requested_components": {
+          "model_code": "JBLXTREME4",
+          "color": "Blue",
+          "region": "EP",
+          "full_code": "JBLXTREME4BLUEP"
+        },
+        "returned_components": {
+          "model_code": "JBLXTREME4",
+          "color": "Blue",
+          "region": "AS",
+          "full_code": "JBLXTREME4BLUAS"
+        },
+        "exact_sku": false,
+        "model_confirmed": true,
+        "relation": "other_variant",
+        "requested": "JBLXTREME4BLUEP",
+        "returned_sku": "JBLXTREME4BLUAS",
+        "returned_mpn": "JBLXTREME4BLUAS",
+        "data_pid": "",
+        "model": "JBL Xtreme 4",
+        "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+        "color": "Blue"
+      },
+      "specs": 20,
+      "confirmed_specs": 20,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": false,
+        "model_identity": "exact_model",
+        "variant_identity": "same_color_other_region",
+        "exact_identity": true,
+        "confirmed_specs": 20,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": [
+        {
+          "section": "Features",
+          "raw_label": "Charging cable",
+          "value": "Yes",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Комплектация",
+          "raw_label": "Комплектация",
+          "value": "1 x JBL Xtreme 4 1 x Shoulder Strap 1 x Quick start guide 1 x Warranty Card/Safety sheet",
+          "reason": "variant_specific_field"
+        }
+      ]
+    },
+    {
+      "sku": "JBLT770NCBLK",
+      "was": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "exact_identity": true,
+        "confirmed_specs": 51,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/over-ear-headphones/JBLT770NCBLK.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "exact_sku",
+        "requested_components": {
+          "model_code": "JBLT770NC",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLT770NCBLK"
+        },
+        "returned_components": {
+          "model_code": "JBLT770NC",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLT770NCBLK"
+        },
+        "exact_sku": true,
+        "model_confirmed": true,
+        "relation": "exact_sku",
+        "requested": "JBLT770NCBLK",
+        "returned_sku": "JBLT770NCBLK",
+        "returned_mpn": "JBLT770NCBLK",
+        "data_pid": "",
+        "model": "JBL Tune 770NC",
+        "reason": "Returned SKU + MPN + product context",
+        "color": "Black"
+      },
+      "specs": 52,
+      "confirmed_specs": 52,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": true,
+        "model_identity": "exact_model",
+        "variant_identity": "exact_sku",
+        "exact_identity": true,
+        "confirmed_specs": 52,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": []
+    },
+    {
+      "sku": "JBLLIVE770NCBLK",
+      "was": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "exact_identity": true,
+        "confirmed_specs": 51,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/over-ear-headphones/JBLLIVE770NCBLK.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "exact_sku",
+        "requested_components": {
+          "model_code": "JBLLIVE770NC",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLLIVE770NCBLK"
+        },
+        "returned_components": {
+          "model_code": "JBLLIVE770NC",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLLIVE770NCBLK"
+        },
+        "exact_sku": true,
+        "model_confirmed": true,
+        "relation": "exact_sku",
+        "requested": "JBLLIVE770NCBLK",
+        "returned_sku": "JBLLIVE770NCBLK",
+        "returned_mpn": "JBLLIVE770NCBLK",
+        "data_pid": "",
+        "model": "JBL Live 770NC",
+        "reason": "Returned SKU + MPN + product context",
+        "color": "Black"
+      },
+      "specs": 52,
+      "confirmed_specs": 52,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": true,
+        "model_identity": "exact_model",
+        "variant_identity": "exact_sku",
+        "exact_identity": true,
+        "confirmed_specs": 52,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": []
+    },
+    {
+      "sku": "JBLT520BTBLKEU",
+      "was": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "exact_identity": false,
+        "confirmed_specs": 0,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/en/over-ear-headphones/JBLT520BTBLK.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "same_color_other_region",
+        "requested_components": {
+          "model_code": "JBLT520BT",
+          "color": "Black",
+          "region": "EU",
+          "full_code": "JBLT520BTBLKEU"
+        },
+        "returned_components": {
+          "model_code": "JBLT520BT",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLT520BTBLK"
+        },
+        "exact_sku": false,
+        "model_confirmed": true,
+        "relation": "other_variant",
+        "requested": "JBLT520BTBLKEU",
+        "returned_sku": "JBLT520BTBLK",
+        "returned_mpn": "JBLT520BTBLK",
+        "data_pid": "",
+        "model": "JBL Tune 520BT",
+        "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+        "color": "Black"
+      },
+      "specs": 40,
+      "confirmed_specs": 40,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": false,
+        "model_identity": "exact_model",
+        "variant_identity": "same_color_other_region",
+        "exact_identity": true,
+        "confirmed_specs": 40,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": [
+        {
+          "section": "Dimensions",
+          "raw_label": "Audio Cable Length (ft)",
+          "value": "0.7",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Dimensions",
+          "raw_label": "Audio Cable Length (m)",
+          "value": "0.2",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Features",
+          "raw_label": "Charging cable",
+          "value": "Yes",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Комплектация",
+          "raw_label": "Комплектация",
+          "value": "1 x JBL Tune 520BT headphones 1 x USB-C Charging Cable 1 x Warranty/Warning 1 x Quick Start Guide",
+          "reason": "variant_specific_field"
+        }
+      ]
+    },
+    {
+      "sku": "JBLBAR500PROBLKEP",
+      "was": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "exact_identity": false,
+        "confirmed_specs": 0,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/en/soundbars/BAR-500-.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "same_color_other_region",
+        "requested_components": {
+          "model_code": "JBLBAR500PRO",
+          "color": "Black",
+          "region": "EP",
+          "full_code": "JBLBAR500PROBLKEP"
+        },
+        "returned_components": {
+          "model_code": "JBLBAR500PRO",
+          "color": "Black",
+          "region": "AS",
+          "full_code": "JBLBAR500PROBLKAS"
+        },
+        "exact_sku": false,
+        "model_confirmed": true,
+        "relation": "other_variant",
+        "requested": "JBLBAR500PROBLKEP",
+        "returned_sku": "JBLBAR500PROBLKAS",
+        "returned_mpn": "JBLBAR500PROBLKAS",
+        "data_pid": "",
+        "model": "BAR 500",
+        "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+        "color": "Black"
+      },
+      "specs": 23,
+      "confirmed_specs": 23,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": false,
+        "model_identity": "exact_model",
+        "variant_identity": "same_color_other_region",
+        "exact_identity": true,
+        "confirmed_specs": 23,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": [
+        {
+          "section": "Audio Specifications",
+          "raw_label": "Audio inputs",
+          "value": "1 Optical, Bluetooth, USB (USB playback is available in US version. For other versions, USB is for Service only.)",
+          "reason": "conditional_or_regional_option"
+        },
+        {
+          "section": "Dimensions",
+          "raw_label": "Packaging dimensions (W x H x D)",
+          "value": "1105 x 370 x 475 mm/ 43.5\" x 14.6\" x 18.7\"",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Dimensions",
+          "raw_label": "Packaging Weight",
+          "value": "16.2 kg / 35.6 lbs",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Control and Connection Specifications",
+          "raw_label": "USB port",
+          "value": "Type A",
+          "reason": "regional_technical_difference"
+        },
+        {
+          "section": "Control and Connection Specifications",
+          "raw_label": "USB rating",
+          "value": "5V DC, 0.5A",
+          "reason": "regional_technical_difference"
+        },
+        {
+          "section": "Control and Connection Specifications",
+          "raw_label": "Supporting file format",
+          "value": "MP3",
+          "reason": "regional_technical_difference"
+        },
+        {
+          "section": "Control and Connection Specifications",
+          "raw_label": "MP3 codec",
+          "value": "MPEG 1 Layer 2/3, MPEG 2 Layer 3, MPEG 2.5 Layer 3",
+          "reason": "regional_technical_difference"
+        },
+        {
+          "section": "Control and Connection Specifications",
+          "raw_label": "MP3 sampling rate",
+          "value": "16 - 48 kHz",
+          "reason": "regional_technical_difference"
+        },
+        {
+          "section": "Control and Connection Specifications",
+          "raw_label": "MP3 bitrate",
+          "value": "80 - 320 kpbs",
+          "reason": "regional_technical_difference"
+        },
+        {
+          "section": "Control and Connection Specifications",
+          "raw_label": "2.4G Wi-Fi transmitter frequency range",
+          "value": "2412 - 2472 MHz (2.4 GHz ISM Band, USA 11 Channels, Europe and others 13 Channels)",
+          "reason": "conditional_or_regional_option"
+        },
+        {
+          "section": "Комплектация",
+          "raw_label": "Комплектация",
+          "value": "1 x Main Soundbar 1 x Wireless subwoofer Remote control with 2 x batteries Power cords (up to 8pcs depending on region SKUs) 1 x HDMI cable 2 x L-shape wall-mount bracket with screws Quick start guide Safety Instruction and Warranty Card Wall mount template",
+          "reason": "variant_specific_field"
+        }
+      ]
+    },
+    {
+      "sku": "JBLTBUDSBLK",
+      "was": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "exact_identity": true,
+        "confirmed_specs": 44,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/in-ear-headphones/JBLTBUDSBLK.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "exact_sku",
+        "requested_components": {
+          "model_code": "JBLTBUDS",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLTBUDSBLK"
+        },
+        "returned_components": {
+          "model_code": "JBLTBUDS",
+          "color": "Black",
+          "region": "",
+          "full_code": "JBLTBUDSBLK"
+        },
+        "exact_sku": true,
+        "model_confirmed": true,
+        "relation": "exact_sku",
+        "requested": "JBLTBUDSBLK",
+        "returned_sku": "JBLTBUDSBLK",
+        "returned_mpn": "JBLTBUDSBLK",
+        "data_pid": "",
+        "model": "JBL Tune Buds",
+        "reason": "Returned SKU + MPN + product context",
+        "color": "Black"
+      },
+      "specs": 46,
+      "confirmed_specs": 45,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": true,
+        "model_identity": "exact_model",
+        "variant_identity": "exact_sku",
+        "exact_identity": true,
+        "confirmed_specs": 45,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": []
+    },
+    {
+      "sku": "JBLFLIP6BLU",
+      "was": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "exact_identity": true,
+        "confirmed_specs": 20,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/bluetooth-portables/JBLFLIP6BLU.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "exact_sku",
+        "requested_components": {
+          "model_code": "JBLFLIP6",
+          "color": "Blue",
+          "region": "",
+          "full_code": "JBLFLIP6BLU"
+        },
+        "returned_components": {
+          "model_code": "JBLFLIP6",
+          "color": "Blue",
+          "region": "",
+          "full_code": "JBLFLIP6BLU"
+        },
+        "exact_sku": true,
+        "model_confirmed": true,
+        "relation": "exact_sku",
+        "requested": "JBLFLIP6BLU",
+        "returned_sku": "JBLFLIP6BLU",
+        "returned_mpn": "JBLFLIP6BLU",
+        "data_pid": "",
+        "model": "JBL Flip 6",
+        "reason": "Returned SKU + MPN + product context",
+        "color": "Blue"
+      },
+      "specs": 21,
+      "confirmed_specs": 21,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": true,
+        "model_identity": "exact_model",
+        "variant_identity": "exact_sku",
+        "exact_identity": true,
+        "confirmed_specs": 21,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": []
+    },
+    {
+      "sku": "JBLT520BTWHTEU",
+      "was": {
+        "verdict": "not_ready",
+        "gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "exact_sku_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "exact_identity": false,
+        "confirmed_specs": 0,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "source_urls": [
+        "https://id.jbl.com/en/over-ear-headphones/JBLT520BTWHT.html"
+      ],
+      "identity": {
+        "model_relation": "exact_model",
+        "variant_relation": "same_color_other_region",
+        "requested_components": {
+          "model_code": "JBLT520BT",
+          "color": "White",
+          "region": "EU",
+          "full_code": "JBLT520BTWHTEU"
+        },
+        "returned_components": {
+          "model_code": "JBLT520BT",
+          "color": "White",
+          "region": "",
+          "full_code": "JBLT520BTWHT"
+        },
+        "exact_sku": false,
+        "model_confirmed": true,
+        "relation": "other_variant",
+        "requested": "JBLT520BTWHTEU",
+        "returned_sku": "JBLT520BTWHT",
+        "returned_mpn": "JBLT520BTWHT",
+        "data_pid": "",
+        "model": "JBL Tune 520BT",
+        "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+        "color": "White"
+      },
+      "specs": 40,
+      "confirmed_specs": 40,
+      "photos": 1,
+      "manual": "Проверена",
+      "now": {
+        "verdict": "export_ready",
+        "gaps": [],
+        "blocking_gaps": [],
+        "advisory_gaps": [],
+        "exact_sku_identity": false,
+        "model_identity": "exact_model",
+        "variant_identity": "same_color_other_region",
+        "exact_identity": true,
+        "confirmed_specs": 40,
+        "conflicts": 0,
+        "manual_status": "Проверена"
+      },
+      "variant_candidates": [
+        {
+          "section": "Dimensions",
+          "raw_label": "Audio Cable Length (ft)",
+          "value": "0.7",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Dimensions",
+          "raw_label": "Audio Cable Length (m)",
+          "value": "0.2",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Features",
+          "raw_label": "Charging cable",
+          "value": "Yes",
+          "reason": "variant_specific_field"
+        },
+        {
+          "section": "Комплектация",
+          "raw_label": "Комплектация",
+          "value": "1 x JBL Tune 520BT headphones 1 x USB-C Charging Cable 1 x Warranty/Warning 1 x Quick Start Guide",
+          "reason": "variant_specific_field"
+        }
+      ]
+    }
+  ],
+  "external_search": {
+    "duration_seconds": 7.87,
+    "queries": [
+      "site:jbl.com \"JBLT520BTBLKEU\"",
+      "site:jbl.com \"JBLT520BT\"",
+      "site:jbl.com JBL Tune 520BT"
+    ],
+    "candidates": [],
+    "trace": [
+      {
+        "timestamp": "2026-10-07T11:51:32.770770+00:00",
+        "event": "query",
+        "provider": "google_old_parser",
+        "query": "site:jbl.com \"JBLT520BTBLKEU\"",
+        "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BTBLKEU%22&hl=en",
+        "region": "global",
+        "mechanism": "old_parser_general_search",
+        "old_parser_source": "original_file"
+      },
+      {
+        "timestamp": "2026-10-07T11:51:34.824052+00:00",
+        "event": "query_outcome",
+        "provider": "google_old_parser",
+        "query": "site:jbl.com \"JBLT520BTBLKEU\"",
+        "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BTBLKEU%22&hl=en",
+        "region": "global",
+        "final_url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BTBLKEU%22&hl=en",
+        "outcome": "no_candidates",
+        "resource_capped": false,
+        "network_requests": 0,
+        "old_parser_source": "original_file",
+        "old_parser_called": true,
+        "old_parser_completed": true
+      },
+      {
+        "event": "jbl_discovery",
+        "timestamp": "2026-10-07T11:51:34+00:00",
+        "provider": "external_search",
+        "query": "site:jbl.com \"JBLT520BTBLKEU\"",
+        "url": "",
+        "region": "global",
+        "source_type": "search",
+        "accepted": false,
+        "reason": "no_candidates",
+        "model_relation": "discovery_only",
+        "variant_relation": "unproven"
+      },
+      {
+        "timestamp": "2026-10-07T11:51:34.824259+00:00",
+        "event": "query",
+        "provider": "google_old_parser",
+        "query": "site:jbl.com \"JBLT520BT\"",
+        "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BT%22&hl=en",
+        "region": "global",
+        "mechanism": "old_parser_general_search",
+        "old_parser_source": "original_file"
+      },
+      {
+        "timestamp": "2026-10-07T11:51:36.353110+00:00",
+        "event": "query_outcome",
+        "provider": "google_old_parser",
+        "query": "site:jbl.com \"JBLT520BT\"",
+        "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BT%22&hl=en",
+        "region": "global",
+        "final_url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BT%22&hl=en",
+        "outcome": "no_candidates",
+        "resource_capped": false,
+        "network_requests": 0,
+        "old_parser_source": "original_file",
+        "old_parser_called": true,
+        "old_parser_completed": true
+      },
+      {
+        "event": "jbl_discovery",
+        "timestamp": "2026-10-07T11:51:36+00:00",
+        "provider": "external_search",
+        "query": "site:jbl.com \"JBLT520BT\"",
+        "url": "",
+        "region": "global",
+        "source_type": "search",
+        "accepted": false,
+        "reason": "no_candidates",
+        "model_relation": "discovery_only",
+        "variant_relation": "unproven"
+      },
+      {
+        "timestamp": "2026-10-07T11:51:36.353296+00:00",
+        "event": "query",
+        "provider": "google_old_parser",
+        "query": "site:jbl.com JBL Tune 520BT",
+        "url": "https://www.google.com/search?q=site%3Ajbl.com+JBL+Tune+520BT&hl=en",
+        "region": "global",
+        "mechanism": "old_parser_general_search",
+        "old_parser_source": "original_file"
+      },
+      {
+        "timestamp": "2026-10-07T11:51:38.003401+00:00",
+        "event": "query_outcome",
+        "provider": "google_old_parser",
+        "query": "site:jbl.com JBL Tune 520BT",
+        "url": "https://www.google.com/search?q=site%3Ajbl.com+JBL+Tune+520BT&hl=en",
+        "region": "global",
+        "final_url": "https://www.google.com/search?q=site%3Ajbl.com+JBL+Tune+520BT&hl=en",
+        "outcome": "no_candidates",
+        "resource_capped": false,
+        "network_requests": 0,
+        "old_parser_source": "original_file",
+        "old_parser_called": true,
+        "old_parser_completed": true
+      },
+      {
+        "event": "jbl_discovery",
+        "timestamp": "2026-10-07T11:51:38+00:00",
+        "provider": "external_search",
+        "query": "site:jbl.com JBL Tune 520BT",
+        "url": "",
+        "region": "global",
+        "source_type": "search",
+        "accepted": false,
+        "reason": "no_candidates",
+        "model_relation": "discovery_only",
+        "variant_relation": "unproven"
+      }
+    ],
+    "contract": "Existing LGBrowserSearch/old-parser provider; candidate URL alone is not model/photo proof"
+  }
+}

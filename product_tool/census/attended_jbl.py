@@ -31,7 +31,7 @@ def capture(article,url,output,profile,*,playwright_factory=None):
    page.goto(url,wait_until='domcontentloaded',timeout=30000);page.wait_for_timeout(1200);html=page.content()
    if looks_like_challenge(page.url,html):state['stopped']=True
   except Exception as exc:notice=type(exc).__name__
-  final=page.url;doc,ev=parse_pdp(html,final,article);accepted=not state['stopped'] and events and events[-1]['status']==200 and doc.match_level=='full_sku'
+  final=page.url;doc,ev=parse_pdp(html,final,article);accepted=not state['stopped'] and events and events[-1]['status']==200 and doc.match_level in {'full_sku','model_confirmed'}
   result={'article':article,'flow':'ordinary visible attended capture','challenge_or_access_stop':state['stopped'],'accepted':bool(accepted),'events':events,'notice':notice,'identity':ev['identity']}
   if accepted:
    raw=html.encode('utf-8');name=article+'_attended.html';(output/name).write_bytes(raw)

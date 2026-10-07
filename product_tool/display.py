@@ -101,6 +101,10 @@ SAMSUNG_STATUS_NAMES = {"official_base_only": "Значение официаль
 
 
 def display_status(status: str, source: str = "") -> str:
+    if source == "jbl" and status == "model_confirmed_official":
+        return "Характеристика точной модели JBL; вариант проверяется отдельно"
+    if source == "jbl" and status == "full_sku_official":
+        return "Полный артикул на официальной странице JBL"
     if source == "samsung" and status in SAMSUNG_STATUS_NAMES:
         return SAMSUNG_STATUS_NAMES[status]
     return STATUS_NAMES.get(status, status.replace("_", " ").capitalize())

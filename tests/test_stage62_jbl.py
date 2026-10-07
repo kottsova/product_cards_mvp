@@ -13,7 +13,7 @@ class JBLTests(unittest.TestCase):
  def parse(self,html,code='JBLTESTBLKEU'):return parse_pdp(html,'https://uk.jbl.com/JBLTESTBLKEU.html',code)
  def test_exact_identity(self):self.assertEqual(self.parse(page())[0].match_level,'full_sku')
  def test_other_color_not_exact(self):
-  d,e=self.parse(page('JBLTESTBLUEU',specs=spec('Battery Life','40')));self.assertNotEqual(d.match_level,'full_sku');self.assertFalse(d.attributes);self.assertFalse(e['exact_photo_assets'])
+  d,e=self.parse(page('JBLTESTBLUEU',specs=spec('Battery Life','40')));self.assertNotEqual(d.match_level,'full_sku');self.assertTrue(d.attributes);self.assertFalse(e['exact_photo_assets'])
  def test_other_region_not_exact(self):self.assertNotEqual(self.parse(page('JBLTESTBLKAM'))[0].match_level,'full_sku')
  def test_base_name_not_sku(self):self.assertNotEqual(self.parse(page('JBLTEST'))[0].match_level,'full_sku')
  def test_mpn_disagreement(self):self.assertNotEqual(self.parse(page(mpn='JBLTESTBLKAM'))[0].match_level,'full_sku')

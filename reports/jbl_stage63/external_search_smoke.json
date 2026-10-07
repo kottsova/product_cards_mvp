@@ -1,0 +1,126 @@
+{
+  "duration_seconds": 7.87,
+  "queries": [
+    "site:jbl.com \"JBLT520BTBLKEU\"",
+    "site:jbl.com \"JBLT520BT\"",
+    "site:jbl.com JBL Tune 520BT"
+  ],
+  "candidates": [],
+  "trace": [
+    {
+      "timestamp": "2026-10-07T11:51:32.770770+00:00",
+      "event": "query",
+      "provider": "google_old_parser",
+      "query": "site:jbl.com \"JBLT520BTBLKEU\"",
+      "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BTBLKEU%22&hl=en",
+      "region": "global",
+      "mechanism": "old_parser_general_search",
+      "old_parser_source": "original_file"
+    },
+    {
+      "timestamp": "2026-10-07T11:51:34.824052+00:00",
+      "event": "query_outcome",
+      "provider": "google_old_parser",
+      "query": "site:jbl.com \"JBLT520BTBLKEU\"",
+      "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BTBLKEU%22&hl=en",
+      "region": "global",
+      "final_url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BTBLKEU%22&hl=en",
+      "outcome": "no_candidates",
+      "resource_capped": false,
+      "network_requests": 0,
+      "old_parser_source": "original_file",
+      "old_parser_called": true,
+      "old_parser_completed": true
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-07T11:51:34+00:00",
+      "provider": "external_search",
+      "query": "site:jbl.com \"JBLT520BTBLKEU\"",
+      "url": "",
+      "region": "global",
+      "source_type": "search",
+      "accepted": false,
+      "reason": "no_candidates",
+      "model_relation": "discovery_only",
+      "variant_relation": "unproven"
+    },
+    {
+      "timestamp": "2026-10-07T11:51:34.824259+00:00",
+      "event": "query",
+      "provider": "google_old_parser",
+      "query": "site:jbl.com \"JBLT520BT\"",
+      "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BT%22&hl=en",
+      "region": "global",
+      "mechanism": "old_parser_general_search",
+      "old_parser_source": "original_file"
+    },
+    {
+      "timestamp": "2026-10-07T11:51:36.353110+00:00",
+      "event": "query_outcome",
+      "provider": "google_old_parser",
+      "query": "site:jbl.com \"JBLT520BT\"",
+      "url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BT%22&hl=en",
+      "region": "global",
+      "final_url": "https://www.google.com/search?q=site%3Ajbl.com+%22JBLT520BT%22&hl=en",
+      "outcome": "no_candidates",
+      "resource_capped": false,
+      "network_requests": 0,
+      "old_parser_source": "original_file",
+      "old_parser_called": true,
+      "old_parser_completed": true
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-07T11:51:36+00:00",
+      "provider": "external_search",
+      "query": "site:jbl.com \"JBLT520BT\"",
+      "url": "",
+      "region": "global",
+      "source_type": "search",
+      "accepted": false,
+      "reason": "no_candidates",
+      "model_relation": "discovery_only",
+      "variant_relation": "unproven"
+    },
+    {
+      "timestamp": "2026-10-07T11:51:36.353296+00:00",
+      "event": "query",
+      "provider": "google_old_parser",
+      "query": "site:jbl.com JBL Tune 520BT",
+      "url": "https://www.google.com/search?q=site%3Ajbl.com+JBL+Tune+520BT&hl=en",
+      "region": "global",
+      "mechanism": "old_parser_general_search",
+      "old_parser_source": "original_file"
+    },
+    {
+      "timestamp": "2026-10-07T11:51:38.003401+00:00",
+      "event": "query_outcome",
+      "provider": "google_old_parser",
+      "query": "site:jbl.com JBL Tune 520BT",
+      "url": "https://www.google.com/search?q=site%3Ajbl.com+JBL+Tune+520BT&hl=en",
+      "region": "global",
+      "final_url": "https://www.google.com/search?q=site%3Ajbl.com+JBL+Tune+520BT&hl=en",
+      "outcome": "no_candidates",
+      "resource_capped": false,
+      "network_requests": 0,
+      "old_parser_source": "original_file",
+      "old_parser_called": true,
+      "old_parser_completed": true
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-07T11:51:38+00:00",
+      "provider": "external_search",
+      "query": "site:jbl.com JBL Tune 520BT",
+      "url": "",
+      "region": "global",
+      "source_type": "search",
+      "accepted": false,
+      "reason": "no_candidates",
+      "model_relation": "discovery_only",
+      "variant_relation": "unproven"
+    }
+  ],
+  "contract": "Existing LGBrowserSearch/old-parser provider; candidate URL alone is not model/photo proof"
+}

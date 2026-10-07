@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "provider": "bing",
+      "query": "site:jbl.com JBL Xtreme 4",
+      "outcome": "no_candidates",
+      "duration": 6.75,
+      "candidates": []
+    },
+    {
+      "provider": "duckduckgo",
+      "query": "site:jbl.com JBL Xtreme 4",
+      "outcome": "challenge_detected",
+      "duration": 2.68,
+      "candidates": []
+    }
+  ],
+  "trace": [
+    {
+      "timestamp": "2026-10-07T12:12:00.633396+00:00",
+      "event": "query",
+      "provider": "bing_browser",
+      "query": "site:jbl.com JBL Xtreme 4",
+      "url": "https://www.bing.com/search?q=site%3Ajbl.com%20JBL%20Xtreme%204",
+      "region": "global",
+      "mechanism": "browser_projection",
+      "old_parser_source": ""
+    },
+    {
+      "timestamp": "2026-10-07T12:12:05.857957+00:00",
+      "event": "query_outcome",
+      "provider": "bing_browser",
+      "query": "site:jbl.com JBL Xtreme 4",
+      "url": "https://www.bing.com/search?q=site%3Ajbl.com%20JBL%20Xtreme%204",
+      "region": "global",
+      "final_url": "https://www.bing.com/search?q=site%3Ajbl.com%20JBL%20Xtreme%204",
+      "outcome": "no_candidates",
+      "resource_capped": false,
+      "network_requests": 163,
+      "old_parser_source": "",
+      "old_parser_called": false,
+      "old_parser_completed": false
+    },
+    {
+      "timestamp": "2026-10-07T12:12:06.768347+00:00",
+      "event": "query",
+      "provider": "duckduckgo_browser",
+      "query": "site:jbl.com JBL Xtreme 4",
+      "url": "https://duckduckgo.com/?q=site%3Ajbl.com%20JBL%20Xtreme%204",
+      "region": "global",
+      "mechanism": "browser_projection",
+      "old_parser_source": ""
+    },
+    {
+      "timestamp": "2026-10-07T12:12:08.727154+00:00",
+      "event": "query_outcome",
+      "provider": "duckduckgo_browser",
+      "query": "site:jbl.com JBL Xtreme 4",
+      "url": "https://duckduckgo.com/?q=site%3Ajbl.com%20JBL%20Xtreme%204",
+      "outcome": "challenge_detected",
+      "blocked_host": "",
+      "response_url_path": "",
+      "old_parser_source": "",
+      "old_parser_called": false,
+      "old_parser_completed": false
+    }
+  ]
+}

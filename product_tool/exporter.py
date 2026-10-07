@@ -204,14 +204,14 @@ def export_batch(database: Path,batch_id: str)->bytes:
     jbl_products = [p for p in batch["products"] if p["brand"].strip().upper() == "JBL"]
     if jbl_products:
         ready_jbl=book.create_sheet(_title("Готовность JBL",used))
-        _headers(ready_jbl,["Товар","Полный артикул","Готовность","Пробелы","Русская инструкция"])
+        _headers(ready_jbl,["Товар","Полный артикул","Готовность","Пробелы","Русская инструкция","Связь модели","Связь варианта"])
         candidates_jbl=book.create_sheet(_title("Характеристики-кандидаты JBL",used))
         _headers(candidates_jbl,["Товар","Раздел","Исходное поле","Значение","Причина"])
         documents_jbl=book.create_sheet(_title("Документы-кандидаты JBL",used))
         _headers(documents_jbl,["Товар","Тип","Название","URL","Связь","Проверка"])
         for p in jbl_products:
             ev=card_evidence.load(database,p["id"],"jbl") or {};r=jbl_pipeline.card_readiness(database,p["id"])
-            ready_jbl.append([p["name"],p["search_code"],jbl_pipeline.VERDICTS[r["verdict"]],"; ".join(jbl_pipeline.GAPS[g] for g in r["gaps"]),r["manual_status"]])
+            ready_jbl.append([p["name"],p["search_code"],jbl_pipeline.VERDICTS[r["verdict"]],"; ".join(jbl_pipeline.GAPS[g] for g in r["gaps"]),r["manual_status"],r["model_identity"],r["variant_identity"]])
             for c in ev.get("rejected_specs",[]):candidates_jbl.append([p["name"],c["section"],c["raw_label"],c["value"],c["reason"]])
             for d in ev.get("manuals",[]):documents_jbl.append([p["name"],d["type"],d["title"],d["url"],d["relation"],"Проверена" if d["verified"] else "Не проверена"])
     for sheet in book.worksheets:
