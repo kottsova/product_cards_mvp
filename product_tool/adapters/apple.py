@@ -180,5 +180,110 @@ class AppleAdapter:
      self.emit(event='apple_external_candidate',query=q,provider='shared_google',url=z.url,region='global',source_type='pdp_or_support',accepted=accepted,reason=candidate.error or candidate.evidence,identity_relation=report.get('identity',{}))
      if accepted:best=candidate;self.reports[sku]=report;break
    finally:search.close()
+  if best.match_level!='full_sku' and not self.reports.get(sku,{}).get('selected_configuration') and self.clock()<deadline:
+   from ..apple_catalog import lookup
+   catalog=lookup(self,sku,deadline)
+   if catalog:best,report=catalog;self.reports[sku]=report
   ev=self.reports.setdefault(sku,{});ev['query_variants']=queries
+  self.enrich_model(best,ev,sku,deadline)
   return best
+
+ def enrich_model(self,doc,ev,sku,deadline):
+  """Order evidence establishes the model; its Tech Specs need not repeat the SKU."""
+  from ..apple_identity import identify,MODELS,parse_model,plain
+  b=BeautifulSoup(doc.html,'html.parser');matches=[x for x in selection(b).get('products',[]) if x.get('partNumber','').upper()==sku]
+  key=identify(doc.found_model) if doc.match_level=='full_sku' else ''
+  if matches and len({x.get('familyType') for x in matches})==1:
+   family=matches[0].get('familyType','');candidate=identify(re.sub(r'(iphone)(\d+)',r'\1 \2',family,flags=re.I))
+   if candidate and all(x.get('dimensionColor') for x in matches):key=candidate
+  if not key:return
+  ev['model_key']=key;ev['identity']['model']='model_confirmed';ev['model_name']=MODELS[key][0]
+  if MODELS[key][2]=='mac':
+   doc.attributes=[RawAttribute('Время беспроводной работы в интернете',a.value,section=a.section,value_cell=a.value_cell) if a.name=='Время работы в интернете' else a for a in doc.attributes]
+  config={};ev['configuration_fields']=config
+  def add(field,label,value,proof):
+   config[field]=value;ev.setdefault('configuration_proofs',[]).append(dict(field=field,value=value,url=doc.url,proof=proof))
+   if label:doc.attributes=[x for x in doc.attributes if x.name!=label];doc.attributes.append(RawAttribute(label,value,section='Configuration',value_cell=True))
+  if matches:
+   for field,label,read in [('color','Цвет',lambda x:x.get('dimensionColor','')),('storage','Объём накопителя',lambda x:(re.search(r'(?:^|-)(\d+(?:gb|tb))(?:-|$)',x.get('seoUrlToken',''),re.I) or [None,''])[1])]:
+    values={read(x).upper() if field=='storage' else read(x) for x in matches}
+    if len(values)==1 and '' not in values:add(field,label,next(iter(values)),'All exact partNumber records agree; no available-option inference')
+   if 'color' in config:ev['identity']['variant']='exact_model_color'
+   ev['identity']['configuration']='exact_order_record' if 'storage' in config else 'partial_order_record'
+   if config.get('storage') and config.get('color'):
+    doc.match_level='full_sku';doc.evidence='Exact partNumber selection records agree on model, color and storage; carrier choice remains separate'
+    ev['configuration_candidates']=[c for c in ev.get('configuration_candidates',[]) if c['section']!='Configuration']
+  if doc.match_level=='full_sku':
+   title=doc.found_model;t=plain(title)
+   capacity=re.search(r'\b(\d+\s*(?:GB|TB))\b',title,re.I)
+   if capacity and MODELS[key][2] in {'iphone','ipad'}:add('storage','Объём накопителя',capacity[1],'Exact single-SKU PDP title')
+   for attr in list(doc.attributes):
+    if attr.name=='Объём накопителя':config['storage']=attr.value
+    if attr.name=='Оперативная память':config['memory']=attr.value
+    if attr.name=='Ядра GPU':config['gpu']=attr.value
+   colors=['Black Titanium','White Titanium','Space Black','Space Gray','Sky Blue','Rose Gold','Midnight','Silver','Pink','Ultramarine','Teal','Blue','White','Black']
+   for c in colors:
+    if plain(c) in t:add('color','Цвет',c,'Exact single-SKU PDP title');break
+   if t.startswith('refurbished'):add('condition','Состояние товара','Refurbished','Official PDP explicitly says Refurbished')
+   if key=='watch10':
+    size=re.search(r'\b(42|46)mm\b',t.replace(' mm','mm'))
+    if size:add('case_size','Размер корпуса, мм',size[1],'Exact single-SKU PDP title')
+    if 'aluminum' in t:config['material']='aluminum'
+    elif 'titanium' in t:config['material']='titanium'
+    if 'gps + cellular' in t or 'gps+cellular' in t:config['connectivity']='GPS + Cellular'
+    elif 'gps' in t:config['connectivity']='GPS'
+    # Stage 64 order section mixes both body sizes. Route through scoped model tables.
+    doc.attributes=[x for x in doc.attributes if x.section!='Size and Weight']
+   if key=='ipada16':
+    if 'wi-fi + cellular' in t:config['connectivity']='Wi-Fi + Cellular'
+    elif 'wi-fi' in t:config['connectivity']='Wi-Fi'
+    doc.attributes=[x for x in doc.attributes if x.section not in {'Size and Weight','Power and Battery'}]
+  region=re.search(r'apple.com/(uk|ca)/',doc.url);ev['storefront_region']=region[1] if region else 'us';config['storefront_region']=ev['storefront_region']
+  # SKU suffix alone is never evidence of radio/SIM configuration or purchase condition.
+  u='https://support.apple.com/en-us/'+MODELS[key][1]
+  if self.clock()>=deadline:ev['model_fetch_error']='row_deadline';return
+  z=self.session.get(u,timeout=min(10,max(.1,deadline-self.clock())))
+  if z.ok:
+   file=hashlib.sha256(z.url.encode()).hexdigest()+'.html';(self.capture_dir/file).write_text(z.text,encoding='utf-8')
+   model,audit=parse_model(z.text,z.url,key,config);self.model_document=model;ev['model_evidence']=audit
+   if not model.error and key=='airpods4anc' and ev.get('catalog_identity'):
+    # Catalog does not assert a color. This asset depicts the exact ANC model,
+    # not a color-selected family render or a different generation.
+    for image in BeautifulSoup(z.text,'html.parser').select('img[src]'):
+     asset_url=image.get('src','')
+     if official(asset_url) and '121204-airpods-4-anc' in urlsplit(asset_url).path:
+      asset_key=hashlib.sha256(asset_url.encode()).hexdigest();model.photo_candidates.append(PhotoCandidate(asset_url,asset_key));model.photos.append(asset_url);ev['exact_photo_assets']=[asset_key];ev['photo_scope']='exact_model; catalog publishes no SKU color field'
+   ev['configuration_candidates']=ev.get('configuration_candidates',[])+audit['candidates']
+   self.emit(event='apple_model_specs',query=MODELS[key][0],provider='official_support_http',url=z.url,region='us',source_type='model_tech_specs',accepted=not model.error,reason=model.error or model.evidence,identity_relation='exact_model_generation')
+  else:ev['model_fetch_error']=z.marker or str(z.status_code)
+  ev['configuration_complete']=bool(config.get('storage')) if MODELS[key][2] in {'iphone','ipad','mac'} else bool(config.get('case_size') and config.get('connectivity')) if key=='watch10' else bool(ev.get('catalog_identity')) if key=='airpods4anc' else False
+  for candidate in ev.get('photo_candidates',[]):candidate.update(model_relation='exact_model' if key else 'unproven',color_relation='candidate')
+  if self.clock()<deadline:self.check_manual(ev,key,deadline)
+  from ..photo_metadata import inspect_saved_photo
+  for candidate in ev.get('photo_candidates',[]):
+   if self.clock()>=deadline:break
+   try:
+    measured=inspect_saved_photo(candidate['url'],'apple',self.log.with_name('apple_image_fetch.json'))
+    candidate.update(width=measured['width'],height=measured['height'],file_size=measured['size_bytes'],format=measured['format'])
+   except ValueError as exc:candidate['metadata_error']=str(exc)
+
+ def check_manual(self,ev,key,deadline):
+  from ..apple_identity import MODELS,plain
+  guide=MODELS[key][3];kind='ios' if guide=='iphone' else 'ipados' if guide=='ipad' else 'watchos' if guide=='watch' else 'web' if guide=='airpods' else 'mac'
+  u=f'https://support.apple.com/ru-ru/guide/{guide}/welcome/{kind}'
+  z=self.session.get(u,timeout=min(10,max(.1,deadline-self.clock())));report={'type':'User Guide' if guide not in {'macbook-air','macbook-pro'} else 'Getting Started Guide','url':z.url,'verified':False,'language':'Не проверена','model_relation':'unverified','status':z.status_code}
+  if z.ok:
+   b=BeautifulSoup(z.text,'html.parser');report['title']=clean_text(b.h1.get_text(' ',strip=True)) if b.h1 else '';report['language']='Русский' if (b.html and b.html.get('lang','').startswith('ru') and re.search('[А-Яа-я]{4}',b.get_text())) else 'Не проверена'
+   file=hashlib.sha256(z.url.encode()).hexdigest()+'.html';(self.capture_dir/file).write_text(z.text,encoding='utf-8')
+   # A model-specific chapter in the official guide is positive model coverage.
+   links=[(clean_text(a.get_text(' ',strip=True)),a.get('href','')) for a in b.select('a[href]')]
+   wanted=plain(MODELS[key][0]);matches=[(label,url) for label,url in links if plain(label)==wanted and '/guide/' in url]
+   if matches and self.clock()<deadline:
+    label,url=matches[0];chapter=self.session.get(url,timeout=min(10,max(.1,deadline-self.clock())))
+    if chapter.ok:
+     cb=BeautifulSoup(chapter.text,'html.parser');text=cb.get_text(' ',strip=True)
+     report.update(chapter_url=chapter.url,chapter_title=clean_text(cb.h1.get_text(' ',strip=True)) if cb.h1 else '')
+     if plain(report['chapter_title'])==plain(label) and plain(label) in plain(text) and re.search('[А-Яа-я]{4}',text) and cb.html and cb.html.get('lang','').startswith('ru'):
+      report.update(verified=True,model_relation='exact_model_chapter',language='Русский')
+     file=hashlib.sha256(chapter.url.encode()).hexdigest()+'.html';(self.capture_dir/file).write_text(chapter.text,encoding='utf-8')
+  ev['manuals']=[report];ev['manual_status']='Проверена' if report['verified'] else 'Не проверена'

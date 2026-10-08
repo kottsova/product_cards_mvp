@@ -159,6 +159,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
         _headers(ready,["Товар","Артикул","Готовность","Пробелы","Русская инструкция"])
         for p in lenovo_products:
             ev=card_evidence.load(database,p["id"],"lenovo") or {}
+            for d in ev.get("manuals",[]):
+                docs.append([p['name'],d.get('title',d['type']),d.get('language','Не проверена'),'','','Да' if d.get('verified') else 'Нет',ev.get('model_name',''),d['url'],d.get('chapter_url',d['url']),d.get('model_relation','unverified'),d['type'],'Проверена' if d.get('verified') else 'Не проверена'])
             for c in ev.get("configuration_candidates",[]):
                 candidates.append([p["name"],p["search_code"],lenovo_presentation.section(c["section"]),c["raw_label"],c["value"],lenovo_presentation.SCOPES.get(c["scope"],c["scope"]),"Условное значение; требуется проверка для полного артикула"])
             for d in ev.get("manuals",[]):
@@ -224,9 +226,33 @@ def export_batch(database: Path,batch_id: str)->bytes:
         for p in apple_products:
             ev=card_evidence.load(database,p["id"],"apple") or {};r=apple_pipeline.card_readiness(database,p["id"]);ident=r["identity"]
             ready_apple.append([p["name"],p["search_code"],"Готова" if r["verdict"]=="export_ready" else "Не готова",ident.get("model","unproven"),ident.get("configuration","unproven"),ident.get("variant","unproven"),r["manual_status"],"; ".join(r["blocking_gaps"])])
+            for d in ev.get("manuals",[]):
+                docs.append([p['name'],d.get('title',d['type']),d.get('language','Не проверена'),'','','Да' if d.get('verified') else 'Нет',ev.get('model_name',''),d['url'],d.get('chapter_url',d['url']),d.get('model_relation','unverified'),d['type'],'Проверена' if d.get('verified') else 'Не проверена'])
             for c in ev.get("configuration_candidates",[]):candidates_apple.append([p["name"],c["section"],c["raw_label"],c["value"],c["reason"]])
+            for c in ev.get("photo_candidates",[]):
+                if photo_candidates is None:
+                    photo_candidates=book.create_sheet(_title("Фото-кандидаты",used))
+                    _headers(photo_candidates,["SKU","Модель","URL","Причина candidate","Model relation","Color relation","Ширина, px","Высота, px","Размер файла, bytes","Формат"])
+                if photo_candidates.cell(1,1).value == 'SKU':
+                    photo_candidates.append([p["search_code"],ev.get("model_name",p["name"]),c["url"],c["reason"],c.get("model_relation","unproven"),c.get("color_relation","unproven"),c.get("width"),c.get("height"),c.get("file_size"),c.get("format")])
+                else:
+                    # Mixed-brand batches retain the existing candidate columns.
+                    for col,label in enumerate(['SKU','Модель','Причина candidate','Model relation','Color relation'],11):
+                        photo_candidates.cell(1,col,label).font=Font(bold=True)
+                    photo_candidates.append([p['name'],'Apple','candidate',c['url'],'Нет',c['reason'],c.get('width'),c.get('height'),c.get('file_size'),c.get('format'),p['search_code'],ev.get('model_name',p['name']),c['reason'],c.get('model_relation','unproven'),c.get('color_relation','unproven')])
+
     for sheet in book.worksheets:
         for col in sheet.columns: sheet.column_dimensions[col[0].column_letter].width=min(60,max(12,max(len(str(c.value or "")) for c in col)+2))
+    if apple_products:
+        from math import ceil
+        for sheet in (ready_apple,candidates_apple,*([photo_candidates] if photo_candidates is not None else [])):
+            for row in sheet.iter_rows():
+                lines=1
+                for cell in row:
+                    cell.alignment=Alignment(wrap_text=True,vertical='top')
+                    width=sheet.column_dimensions[cell.column_letter].width or 12
+                    lines=max(lines,ceil(len(str(cell.value or ''))/max(8,width-2)))
+                sheet.row_dimensions[row[0].row].height=max(22,16*lines)
     if lenovo_products:
         from math import ceil
         for sheet in (candidates, manual_candidates, ready):

@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Any, Iterable
 
 SUPPLIERS={"sulpak"}
-OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl","apple"}
+OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl","apple","apple_model"}
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -112,6 +112,14 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             else:
                 chosen = exact_apple[0]
                 results.append(ResolvedValue(name, chosen["normalized_value"], chosen["unit"], "full_sku_official", "Параметр точного коммерческого артикула Apple; family options исключены.", "apple", False, True))
+            continue
+        apple_model = [f for f in official if f["source_key"] == "apple_model" and pages.get("apple_model", {}).get("match_level") == "model_confirmed" and not pages.get("apple_model", {}).get("error")]
+        if apple_model:
+            if _different(apple_model):
+                results.append(ResolvedValue(name,"","","needs_review","Конфликт официальных параметров модели Apple.","",True,False))
+            else:
+                chosen=apple_model[0]
+                results.append(ResolvedValue(name,chosen['normalized_value'],chosen['unit'],"model_confirmed_official","Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.","apple_model",False,False))
             continue
         exact_samsung = [f for f in official if f["source_key"] == "samsung"
                          and pages.get("samsung", {}).get("match_level") == "full_sku"

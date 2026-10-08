@@ -101,6 +101,8 @@ SAMSUNG_STATUS_NAMES = {"official_base_only": "Значение официаль
 
 
 def display_status(status: str, source: str = "") -> str:
+    if source == "apple_model" and status == "model_confirmed_official":
+        return "Подтверждено для точной модели Apple"
     if source == "apple" and status == "full_sku_official":
         return "Параметр точного коммерческого артикула Apple"
     if source == "jbl" and status == "model_confirmed_official":

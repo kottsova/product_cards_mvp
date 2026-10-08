@@ -30,6 +30,12 @@ ADVISORY = ("dealer_cross_check_missing",)
 
 
 def card_readiness(database: Path, product_id: int) -> dict[str, Any]:
+    product = jobs.get_product(database, product_id) or {}
+    if product.get('brand','').strip().upper() == 'APPLE':
+        from . import apple_pipeline
+        result=apple_pipeline.card_readiness(database,product_id)
+        result.update(gaps=result['blocking_gaps']+result['advisory_gaps'],official_exact_regions=['apple_model'] if result['identity'].get('model')=='model_confirmed' else [],instruction={'russian':result['manual_status']=='Проверена'})
+        return result
     sources = jobs.get_source_pages(database, product_id)
     facts = jobs.get_facts(database, product_id)
     photos = jobs.get_photo_candidates(database, product_id, include_excluded=False)

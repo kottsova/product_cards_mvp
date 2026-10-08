@@ -8,17 +8,24 @@ from .adapters.common import utc_now
 
 def card_readiness(database,product_id):
  ev=card_evidence.load(database,product_id,'apple') or {};facts=jobs.get_resolved(database,product_id);gaps=[]
- if ev.get('identity',{}).get('configuration')!='exact_part_number':gaps.append('exact_commercial_configuration_missing')
+ if ev.get('identity',{}).get('model')!='model_confirmed':gaps.append('model_identity_missing')
  if not ev.get('configuration_complete'):gaps.append('configuration_fields_unresolved')
- if not any(x['full_sku_confirmed'] and not x['conflict'] for x in facts):gaps.append('specifications_missing')
+ from .apple_identity import MODELS
+ cat=MODELS.get(ev.get('model_key'),('','','',''))[2];config=ev.get('configuration_fields',{})
+ required={'iphone':('storage','color'),'ipad':('storage','color','connectivity'),'mac':('storage','memory','gpu','color'),'watch':('case_size','connectivity','material','color'),'airpods':()}.get(cat,())
+ if any(not config.get(field) for field in required):gaps.append('required_configuration_override_missing')
+ confirmed=[x for x in facts if (x['full_sku_confirmed'] or x['status']=='model_confirmed_official') and not x['conflict']]
+ if len(confirmed)<5:gaps.append('specifications_missing')
  if not any(x['selected'] and x['asset_key'] in ev.get('exact_photo_assets',[]) for x in jobs.get_photo_candidates(database,product_id)):gaps.append('exact_variant_photo_missing')
  if jobs.result_counts(database,product_id)['conflicts']:gaps.append('conflicts')
- return {'verdict':'not_ready' if gaps else 'export_ready','blocking_gaps':gaps,'advisory_gaps':['manual_unverified'] if ev.get('manual_status')!='Проверена' else [],'identity':ev.get('identity',{}),'manual_status':ev.get('manual_status','Не проверена'),'confirmed_specs':sum(x['full_sku_confirmed'] and not x['conflict'] for x in facts)}
+ return {'verdict':'not_ready' if gaps else 'export_ready','blocking_gaps':gaps,'advisory_gaps':['manual_unverified'] if ev.get('manual_status')!='Проверена' else [],'identity':ev.get('identity',{}),'manual_status':ev.get('manual_status','Не проверена'),'confirmed_specs':len(confirmed),'model_specs':sum(x['status']=='model_confirmed_official' for x in confirmed),'configuration_fields':ev.get('configuration_fields',{})}
 
 def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns_adapter_factory=None,clock=time.monotonic):
  discovery_trace.initialize(database);trace=lambda e:discovery_trace.record(database,job_id,product_id,e)
- adapter=(adapter_factory or (lambda:AppleAdapter(fetch_log_path=Path(database).parent/'apple_fetch.json',trace_callback=trace,clock=clock)))();article=product['search_code'];doc=adapter.find_source(article,name=product.get('name',''),category=product.get('category',''),deadline=clock()+45)
+ adapter=(adapter_factory or (lambda:AppleAdapter(fetch_log_path=Path(database).parent/'apple_fetch.json',trace_callback=trace,clock=clock)))();article=product['search_code'];doc=adapter.find_source(article,name=product.get('name',''),category=product.get('category',''),deadline=clock()+90)
  jobs.save_source_document(database,product_id,doc,update_description=2 in stages,update_attributes=3 in stages,update_photos=4 in stages)
+ model=getattr(adapter,'model_document',None)
+ if model:jobs.save_source_document(database,product_id,model,update_description=False,update_attributes=3 in stages,update_photos=4 in stages)
  ev=adapter.reports.get(article.upper(),{});card_evidence.save(database,product_id,'apple',ev)
  if 4 in stages and ev.get('exact_photo_assets'):jobs.set_photo_selection(database,product_id,ev['exact_photo_assets'],mode='exact')
  if 3 in stages:jobs.resolve_product(database,product_id)
