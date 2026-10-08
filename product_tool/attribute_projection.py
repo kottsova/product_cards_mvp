@@ -162,7 +162,7 @@ def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
             resolved=row.get('resolved')
             if resolved and resolved.get('display_value'):
                 value=resolved['display_value']
-                for pattern,replacement in ((r'\bgb\b','ГБ'),(r'\btb\b','ТБ'),(r'\bw\b','Вт'),(r'\bmah\b','мА·ч')):value=re.sub(pattern,replacement,value,flags=re.I)
+                for pattern,replacement in ((r'\bgb\b','ГБ'),(r'\btb\b','ТБ'),(r'\bw\b','Вт'),(r'\bmah\b','мА·ч'),(r'\bApprox\.?','Около'),(r'\bkg\b','кг'),(r'\bg\b','г'),(r'\bV\b','В'),(r'\bA\b','А'),(r'\b(?:hours?|hrs?)\b','ч'),(r'\bminutes?\b','мин')):value=re.sub(pattern,replacement,value,flags=re.I)
                 resolved['display_value']=value
         return rows
     if product and product["brand"].strip().upper() == "BOSCH" and any(

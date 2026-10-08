@@ -52,9 +52,11 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
         official=[f for f in values if f["source_key"] in OFFICIAL]
         ps=[f for f in official if f['source_key'].startswith('playstation') and not pages.get(f['source_key'],{}).get('error') and pages.get(f['source_key'],{}).get('match_level') in {'full_sku','model_confirmed','hardware_confirmed'}]
         if ps:
-            from .playstation_identity import configuration_sensitive
+            from .playstation_identity import configuration_sensitive,hardware_specific,retail_specific
             # Hardware facts are scoped to an exact CFI, never to a retail/bundle SKU.
-            eligible=[f for f in ps if f['source_key']!='playstation_model' or not configuration_sensitive(name)]
+            eligible=[f for f in ps if (f['source_key']!='playstation_model' or not configuration_sensitive(name) and not hardware_specific(name))
+                      and (not hardware_specific(name) or f['source_key']=='playstation_hardware')
+                      and (not retail_specific(name) or f['source_key']=='playstation')]
             exact=[f for f in eligible if f['source_key']=='playstation' and pages['playstation']['match_level']=='full_sku']
             chosen=(exact or eligible)
             if not chosen:

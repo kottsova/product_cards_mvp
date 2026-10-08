@@ -6,7 +6,21 @@
     const secret = /csrf|xsrf|token|session|password|auth|cookie|nonce|signature|secret/i;
     const url = (value, observedSearchResult=false) => {
         try {
-            const u = new URL(value, location.href);
+            let u = new URL(value, location.href);
+            // Public provider redirect links contain an observed destination. Decode
+            // before query redaction, then apply the ordinary URL/host checks below.
+            if (observedSearchResult && /(^|\.)bing\.com$/.test(u.hostname) && u.pathname === '/ck/a') {
+                const encoded = u.searchParams.get('u') || '';
+                if (encoded.startsWith('a1')) {
+                    const base64 = encoded.slice(2).replace(/-/g,'+').replace(/_/g,'/');
+                    const decoded = decodeURIComponent(Array.from(atob(base64), c => '%'+c.charCodeAt(0).toString(16).padStart(2,'0')).join(''));
+                    u = new URL(decoded);
+                }
+            }
+            if (observedSearchResult && /(^|\.)duckduckgo\.com$/.test(u.hostname) && u.pathname === '/l/') {
+                const target = u.searchParams.get('uddg');
+                if (target) u = new URL(target);
+            }
             if (!['http:','https:'].includes(u.protocol) || u.username || u.password || (u.port && !['80','443'].includes(u.port))) return '';
             if (!observedSearchResult && !policy.allowed_hosts.some(h => u.hostname === h || u.hostname.endsWith('.'+h))) return '';
             if (secret.test(u.pathname) || /[a-f0-9]{32,}/i.test(u.pathname)) return '';

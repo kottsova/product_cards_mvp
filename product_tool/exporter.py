@@ -225,21 +225,24 @@ def export_batch(database: Path,batch_id: str)->bytes:
     ps_products=[p for p in batch['products'] if p['brand'].strip().casefold() in PLAYSTATION_BRANDS]
     if ps_products:
         ps_ready=book.create_sheet(_title('Готовность PlayStation',used))
-        _headers(ps_ready,['Товар','Артикул','Готовность','Модель','CFI','Конфигурация','Пользовательская инструкция','Пробелы'])
+        _headers(ps_ready,['Товар','Артикул','Готовность','Модель','CFI','Конфигурация','Пользовательская инструкция','Пробелы','Область готовности','Розничный SKU','Confirmed specs','Quick Start'])
         ps_config=book.create_sheet(_title('Конфигурация PlayStation',used))
         _headers(ps_config,['Артикул','Поле','Значение','Официальный источник'])
         ps_candidates=book.create_sheet(_title('Кандидаты PlayStation',used))
         _headers(ps_candidates,['Артикул','Раздел','Исходное поле','Значение','Причина'])
         ps_documents=book.create_sheet(_title('Документы PlayStation',used))
-        _headers(ps_documents,['Артикул','Тип','Название','URL','Связь','Проверка'])
+        _headers(ps_documents,['Артикул','Тип','Название','URL','Связь','Проверка','Язык'])
+        ps_links=book.create_sheet(_title('Связь SKU и CFI',used))
+        _headers(ps_links,['Артикул','Розничный SKU','Опубликованный CFI','Связь','Официальный источник','Связь с запрошенным кодом','Применена к карточке'])
         for p in ps_products:
             ev=card_evidence.load(database,p['id'],'playstation') or {};r=playstation_pipeline.card_readiness(database,p['id']);i=r['identity']
-            ps_ready.append([p['name'],p['search_code'],'Готова' if r['verdict']=='export_ready' else 'Не готова',i.get('model','unproven'),ev.get('hardware_model',''),i.get('configuration','unproven'),r['manual_status'],'; '.join(playstation_pipeline.GAPS[g] for g in r['gaps'])])
+            ps_ready.append([p['name'],p['search_code'],'Готова' if r['verdict']=='export_ready' else 'Не готова',i.get('model','unproven'),ev.get('hardware_model',''),i.get('configuration','unproven'),r['manual_status'],'; '.join(playstation_pipeline.GAPS[g] for g in r['gaps']),'Оборудование CFI' if ev.get('configuration_scope')=='hardware_only' else 'Розничный вариант',ev.get('retail_sku',''),r['confirmed_specs'],ev.get('quick_start_status','Не проверена')])
             for key,value in r['configuration_fields'].items():
                 label={'storage':'Объём накопителя','color':'Цвет','disc':'Оптический привод','bundle':'Комплект','bundle_contents':'Комплектация','storefront':'Регион официального магазина'}.get(key,key)
                 ps_config.append([p['search_code'],label,value,ev.get('exact_official_pdp','')])
             for c in ev.get('configuration_candidates',[]):ps_candidates.append([p['search_code'],c['section'],c['raw_label'],c['value'],c['reason']])
-            for d in ev.get('manuals',[]):ps_documents.append([p['search_code'],d['type'],d['title'],d['url'],d['relation'],'Проверена' if d['verified'] else 'Не проверена'])
+            for d in ev.get('manuals',[]):ps_documents.append([p['search_code'],d['type'],d['title'],d['url'],d['relation'],'Проверена' if d['verified'] else 'Не проверена',d.get('language','Не проверена')])
+            for x in ev.get('sku_cfi_relations',[]):ps_links.append([p['search_code'],x.get('retail_sku',''),', '.join(x.get('published_cfi',[])),x.get('relation','unproven'),x.get('source_url',''),x.get('requested_relation','unproven'),'Да' if x.get('accepted_for_request') else 'Нет — candidate'])
             for c in ev.get('photo_candidates',[]):
                 if photo_candidates is None:
                     photo_candidates=book.create_sheet(_title('Фото-кандидаты',used));_headers(photo_candidates,['Товар','Источник','Тип','URL','Выбрано для просмотра','Статус',*photo_columns])
@@ -291,4 +294,15 @@ def export_batch(database: Path,batch_id: str)->bytes:
                     width=sheet.column_dimensions[cell.column_letter].width or 12
                     lines=max(lines,ceil(len(str(cell.value or ""))/max(8,width-2)))
                 sheet.row_dimensions[row[0].row].height=max(22,16*lines)
+    if ps_products:
+        from math import ceil
+        for sheet in (ps_ready,ps_config,ps_candidates,ps_documents,ps_links):
+            sheet.freeze_panes='A2';sheet.auto_filter.ref=sheet.dimensions
+            for row in sheet.iter_rows():
+                lines=1
+                for cell in row:
+                    cell.alignment=Alignment(wrap_text=True,vertical='top')
+                    width=sheet.column_dimensions[cell.column_letter].width or 12
+                    lines=max(lines,ceil(len(str(cell.value or ''))/max(8,width-2)))
+                sheet.row_dimensions[row[0].row].height=min(180,max(24,16*lines))
     output=BytesIO(); book.save(output); book.close(); return output.getvalue()

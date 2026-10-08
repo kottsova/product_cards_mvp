@@ -1,0 +1,1460 @@
+{
+  "stage": 67,
+  "dataset_sha256": "c2cac5f22132a2061c2ad114b1fa6030188f1ad26ddfc665734d0a75014d1422",
+  "rows": 10,
+  "confirmed_specs_before": 34,
+  "confirmed_specs_after": 128,
+  "export_ready": 4,
+  "selected_exact_photos": 13,
+  "photos_inspected": 15,
+  "verified_documents": [
+    {
+      "type": "Quick Start",
+      "language": "English",
+      "count": 5
+    },
+    {
+      "type": "Safety Guide",
+      "language": "English",
+      "count": 5
+    },
+    {
+      "type": "User Guide",
+      "language": "Русский",
+      "count": 2
+    },
+    {
+      "type": "User Guide",
+      "language": "English",
+      "count": 2
+    }
+  ],
+  "false_confirmed_configuration_claims": 0,
+  "confirmed_configuration_claims": [
+    {
+      "article": "1000050213-GB",
+      "name": "color",
+      "value": "черный (midnight black)",
+      "unit": "",
+      "source": "playstation"
+    },
+    {
+      "article": "1000050213-GB",
+      "name": "комплектация",
+      "value": "dualsense® wireless controller; user manual",
+      "unit": "",
+      "source": "playstation"
+    },
+    {
+      "article": "CFI-Y1016",
+      "name": "color",
+      "value": "белый",
+      "unit": "",
+      "source": "playstation"
+    },
+    {
+      "article": "CFI-Y1016",
+      "name": "комплектация",
+      "value": "playstation portal™ remote player; usb cable; user manual",
+      "unit": "",
+      "source": "playstation"
+    },
+    {
+      "article": "1000049849-GB",
+      "name": "комплектация",
+      "value": "playstation®5 digital edition console*; dualsense® wireless controller; fortnite flowering chaos bundle voucher**; florin outfit (with lego® style); blossom backpack back bling; floral finisher pickaxe; blue blossoms wrap; petal's edge guitar; blue bloom mic; petal steppers kicks; 1,000 v-bucks; 825 gb ssd (solid-state drive); 2 plastic stand feet to place the console horizontally; hdmi® cable; ac power cord; usb cable; user manual; astro's playroom (pre-installed game)***",
+      "unit": "",
+      "source": "playstation"
+    }
+  ],
+  "real_conflicts": 0,
+  "stage_acceptance": "PASS",
+  "adapter_verdict": "PlayStation adapter production-ready for controlled use",
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 870.8947538000066,
+    "result": [
+      "Ran 1584 tests in 867.710s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  },
+  "matrix": [
+    {
+      "id": 1,
+      "article": "CFI-1216A",
+      "name": "PlayStation 5 original Disc CFI-1216A",
+      "model": "ps5",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-1216A",
+      "retail_sku": "",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "haptic_feedback_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_dimensions__depth",
+            "value": "260",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__height",
+            "value": "104",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__width",
+            "value": "390",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_weight",
+            "value": "3.9",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "видеовыход",
+            "value": "hdmi™ out port*3",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "графический_процессор",
+            "value": "10 tflops, amd radeon™ rdna-based graphics engine",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "максимальная_потребляемая_мощность",
+            "value": "350 w",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "объем_накопителя",
+            "value": "825 gb custom ssd*1",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "оперативная_память",
+            "value": "gddr6 16 gb",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "питание",
+            "value": "220—240 v 1.65 a 50/60 hz",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "процессор",
+            "value": "x86-64-amd ryzen™ “zen2”, 8 cores/16 threads",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "рабочая_температура",
+            "value": "5 °c to 35 °c",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "разъемы",
+            "value": "usb type-a port (hi-speed usb) usb type-a port (superspeed usb 10gbps) ×2 usb type-c® port (superspeed usb 10gbps) expansion connector (key m)",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "сетевые_интерфейсы",
+            "value": "ethernet (10base-t, 100base-tx, 1000base-t) ieee 802.11 a/b/g/n/ac/ax bluetooth® 5.1",
+            "unit": "",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": []
+      },
+      "specs_before": 9,
+      "specs_after": 16,
+      "photos_before": 0,
+      "photos_after": 0,
+      "manual": "Не проверена",
+      "quick_start": "Проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "not_ready",
+      "readiness_scope": "hardware_only",
+      "blocking_gaps": [
+        "exact_photo_missing"
+      ],
+      "advisory_gaps": [
+        "manual_unverified",
+        "retail_configuration_unverified"
+      ],
+      "query_variants": [
+        "CFI-1216A",
+        "CFI1216A",
+        "PlayStation 5 original Disc CFI-1216A",
+        "CFI-1216A PlayStation",
+        "CFI-1216 PlayStation 5 original Disc CFI-1216A"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000049733-GB",
+          "published_cfi": [],
+          "relation": "family_only_not_exact_cfi",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-console-1-tb",
+          "published_family": [
+            "CFI-2100"
+          ],
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        },
+        {
+          "retail_sku": "1000049748-GB",
+          "published_cfi": [],
+          "relation": "family_only_not_exact_cfi",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-digital-edition-console-825-gb",
+          "published_family": [
+            "CFI-2100"
+          ],
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "article": "CFI-1216B",
+      "name": "PlayStation 5 original Digital CFI-1216B",
+      "model": "ps5",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-1216B",
+      "retail_sku": "",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "haptic_feedback_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_dimensions__depth",
+            "value": "260",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__height",
+            "value": "92",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__width",
+            "value": "390",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_weight",
+            "value": "3.4",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "видеовыход",
+            "value": "hdmi™ out port*3",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "графический_процессор",
+            "value": "10 tflops, amd radeon™ rdna-based graphics engine",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "максимальная_потребляемая_мощность",
+            "value": "340 w",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "объем_накопителя",
+            "value": "825 gb custom ssd*1",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "оперативная_память",
+            "value": "gddr6 16 gb",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "питание",
+            "value": "220–240 v 1.60 a 50/60 hz",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "процессор",
+            "value": "x86-64-amd ryzen™ “zen2”, 8 cores/16 threads",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "рабочая_температура",
+            "value": "5 °c to 35 °c",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "разъемы",
+            "value": "usb type-a port (hi-speed usb) usb type-a port (superspeed usb 10gbps) ×2 usb type-c® port (superspeed usb 10gbps) expansion connector (key m)",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "сетевые_интерфейсы",
+            "value": "ethernet (10base-t, 100base-tx, 1000base-t) ieee 802.11 a/b/g/n/ac/ax bluetooth® 5.1",
+            "unit": "",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": []
+      },
+      "specs_before": 9,
+      "specs_after": 16,
+      "photos_before": 0,
+      "photos_after": 0,
+      "manual": "Не проверена",
+      "quick_start": "Проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "not_ready",
+      "readiness_scope": "hardware_only",
+      "blocking_gaps": [
+        "exact_photo_missing"
+      ],
+      "advisory_gaps": [
+        "manual_unverified",
+        "retail_configuration_unverified"
+      ],
+      "query_variants": [
+        "CFI-1216B",
+        "CFI1216B",
+        "PlayStation 5 original Digital CFI-1216B",
+        "CFI-1216B PlayStation",
+        "CFI-1216 PlayStation 5 original Digital CFI-1216B"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000049748-GB",
+          "published_cfi": [],
+          "relation": "family_only_not_exact_cfi",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-digital-edition-console-825-gb",
+          "published_family": [
+            "CFI-2100"
+          ],
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        },
+        {
+          "retail_sku": "1000049733-GB",
+          "published_cfi": [],
+          "relation": "family_only_not_exact_cfi",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-console-1-tb",
+          "published_family": [
+            "CFI-2100"
+          ],
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "article": "CFI-2016B",
+      "name": "PlayStation 5 Slim Digital CFI-2016B",
+      "model": "ps5",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-2016B",
+      "retail_sku": "",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "haptic_feedback_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_dimensions__depth",
+            "value": "216",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__height",
+            "value": "80",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__width",
+            "value": "358",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_weight",
+            "value": "2.6",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "видеовыход",
+            "value": "hdmi™ out port*3",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "графический_процессор",
+            "value": "10 tflops, amd radeon™ rdna-based graphics engine",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "максимальная_потребляемая_мощность",
+            "value": "350 w",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "объем_накопителя",
+            "value": "1 tb custom ssd*1",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "оперативная_память",
+            "value": "gddr6 16 gb",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "оптический_привод",
+            "value": "без установленного привода",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "питание",
+            "value": "220–240 v 1.65 a 50/60 hz",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "процессор",
+            "value": "x86-64-amd ryzen™ “zen2”, 8 cores/16 threads",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "рабочая_температура",
+            "value": "5 °c to 35 °c",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "разъемы",
+            "value": "usb type-a port (superspeed usb 10gbps) ×2 usb type-c® port (hi-speed usb) usb type-c® port (superspeed usb 10gbps) expansion connector (key m) disc drive port",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "сетевые_интерфейсы",
+            "value": "ethernet (10base-t, 100base-tx, 1000base-t) ieee 802.11 a/b/g/n/ac/ax bluetooth® 5.1",
+            "unit": "",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": []
+      },
+      "specs_before": 0,
+      "specs_after": 17,
+      "photos_before": 0,
+      "photos_after": 0,
+      "manual": "Не проверена",
+      "quick_start": "Проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "not_ready",
+      "readiness_scope": "hardware_only",
+      "blocking_gaps": [
+        "exact_photo_missing"
+      ],
+      "advisory_gaps": [
+        "manual_unverified",
+        "retail_configuration_unverified"
+      ],
+      "query_variants": [
+        "CFI-2016B",
+        "CFI2016B",
+        "PlayStation 5 Slim Digital CFI-2016B",
+        "CFI-2016B PlayStation",
+        "CFI-2016 PlayStation 5 Slim Digital CFI-2016B"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000049748-GB",
+          "published_cfi": [],
+          "relation": "family_only_not_exact_cfi",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-digital-edition-console-825-gb",
+          "published_family": [
+            "CFI-2100"
+          ],
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        },
+        {
+          "retail_sku": "1000049733-GB",
+          "published_cfi": [],
+          "relation": "family_only_not_exact_cfi",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-console-1-tb",
+          "published_family": [
+            "CFI-2100"
+          ],
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "article": "CFI-7021",
+      "name": "PlayStation 5 Pro CFI-7021",
+      "model": "pro",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-7021",
+      "retail_sku": "",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "haptic_feedback_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "tempest_3d_audiotech",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "максимальная_частота_кадров",
+            "value": "до 120 fps",
+            "unit": "",
+            "source": "playstation_model"
+          },
+          {
+            "name": "поддержка_4k",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "поддержка_hdr",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "трассировка_лучей",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_dimensions__depth",
+            "value": "216",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__height",
+            "value": "89",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__width",
+            "value": "388",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_weight",
+            "value": "3.1",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "видеовыход",
+            "value": "hdmi™ out port*3",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "графический_процессор",
+            "value": "16.7 tflops, amd radeon™ rdna-based graphics engine",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "максимальная_потребляемая_мощность",
+            "value": "390 w",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "объем_накопителя",
+            "value": "2 tb custom ssd*1 *2",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "оперативная_память",
+            "value": "gddr6 16 gb ddr5 2 gb",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "питание",
+            "value": "220–240 v 1.9 a 50/60 hz",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "процессор",
+            "value": "x86-64-amd ryzen™ “zen2”, 8 cores/16 threads",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "рабочая_температура",
+            "value": "5 °c to 35 °c",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "разъемы",
+            "value": "usb type-a port (superspeed usb 10gbps) ×2 usb type-c® port (hi-speed usb) usb type-c® port (superspeed usb 10gbps) m.2 ssd expansion connector (key m) disc drive port",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "сетевые_интерфейсы",
+            "value": "ethernet (10base-t, 100base-tx, 1000base-t) ieee 802.11 a/b/g/n/ac/ax/be bluetooth® 5.1",
+            "unit": "",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": []
+      },
+      "specs_before": 9,
+      "specs_after": 21,
+      "photos_before": 0,
+      "photos_after": 0,
+      "manual": "Не проверена",
+      "quick_start": "Проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "not_ready",
+      "readiness_scope": "hardware_only",
+      "blocking_gaps": [
+        "exact_photo_missing"
+      ],
+      "advisory_gaps": [
+        "manual_unverified",
+        "retail_configuration_unverified"
+      ],
+      "query_variants": [
+        "CFI-7021",
+        "CFI7021",
+        "PlayStation 5 Pro CFI-7021",
+        "CFI-7021 PlayStation",
+        "CFI-7021 PlayStation 5 Pro CFI-7021"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000050725-GB",
+          "published_cfi": [],
+          "relation": "cfi_not_published",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-pro-console-2-tb",
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "article": "CFI-ZCT1W",
+      "name": "DualSense Wireless Controller White CFI-ZCT1W",
+      "model": "dualsense",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-ZCT1W",
+      "retail_sku": "",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "haptic_feedback",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_weight",
+            "value": "0.28",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "емкость_аккумулятора",
+            "value": "1 560 mah",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "питание",
+            "value": "5 v 1 500 ma",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "рабочая_температура",
+            "value": "5 °c to 35 °c",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "тип_аккумулятора",
+            "value": "built-in lithium-ion battery",
+            "unit": "",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": []
+      },
+      "specs_before": 4,
+      "specs_after": 7,
+      "photos_before": 0,
+      "photos_after": 0,
+      "manual": "Проверена",
+      "quick_start": "Не проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "not_ready",
+      "readiness_scope": "hardware_only",
+      "blocking_gaps": [
+        "exact_photo_missing"
+      ],
+      "advisory_gaps": [
+        "retail_configuration_unverified"
+      ],
+      "query_variants": [
+        "CFI-ZCT1W",
+        "CFIZCT1W",
+        "DualSense Wireless Controller White CFI-ZCT1W",
+        "CFI-ZCT1W PlayStation",
+        "CFI-ZCT1W DualSense Wireless Controller White CFI-ZCT1W"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000050212-GB",
+          "published_cfi": [
+            "CFI-ZCT2W"
+          ],
+          "relation": "explicit_own_pdp",
+          "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-white-for-ps5-pc-mac-mobile",
+          "accepted_for_request": false,
+          "requested_relation": "same_family"
+        },
+        {
+          "retail_sku": "1000048602-GB",
+          "published_cfi": [
+            "CFI-ZCT1W"
+          ],
+          "relation": "explicit_own_pdp",
+          "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-death-stranding-2-on-the-beach-limited-edition",
+          "accepted_for_request": false,
+          "requested_relation": "exact_cfi"
+        },
+        {
+          "retail_sku": "1000048237-GB",
+          "published_cfi": [
+            "CFI-ZCT1W"
+          ],
+          "relation": "explicit_own_pdp",
+          "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-ghost-of-yotei-black-limited-edition",
+          "accepted_for_request": false,
+          "requested_relation": "exact_cfi"
+        },
+        {
+          "retail_sku": "1000053188-GB",
+          "published_cfi": [
+            "CFI-ZCT2W"
+          ],
+          "relation": "explicit_own_pdp",
+          "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-icon-blue-special-edition-for-ps5-pc-mac-mobile",
+          "accepted_for_request": false,
+          "requested_relation": "same_family"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "article": "1000050213-GB",
+      "name": "DualSense Wireless Controller Midnight Black",
+      "model": "dualsense",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-ZCT2W",
+      "retail_sku": "1000050213-GB",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "haptic_feedback",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "микрофон",
+            "value": "встроенный",
+            "unit": "",
+            "source": "playstation"
+          }
+        ],
+        "hardware": [],
+        "retail": [
+          {
+            "name": "color",
+            "value": "черный (midnight black)",
+            "unit": "",
+            "source": "playstation"
+          },
+          {
+            "name": "комплектация",
+            "value": "dualsense® wireless controller; user manual",
+            "unit": "",
+            "source": "playstation"
+          }
+        ]
+      },
+      "specs_before": 1,
+      "specs_after": 3,
+      "photos_before": 2,
+      "photos_after": 3,
+      "manual": "Не проверена",
+      "quick_start": "Не проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "export_ready",
+      "readiness_scope": "retail_variant",
+      "blocking_gaps": [],
+      "advisory_gaps": [
+        "manual_unverified"
+      ],
+      "query_variants": [
+        "1000050213GB",
+        "1000050213-GB",
+        "DualSense Wireless Controller Midnight Black",
+        "1000050213-GB PlayStation",
+        " DualSense Wireless Controller Midnight Black"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000050213-GB",
+          "published_cfi": [
+            "CFI-ZCT2W"
+          ],
+          "relation": "explicit_own_pdp",
+          "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+          "accepted_for_request": true,
+          "requested_relation": "exact_order_sku"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "article": "CFI-Y1016",
+      "name": "PlayStation Portal Remote Player White CFI-Y1016",
+      "model": "portal",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-Y1016",
+      "retail_sku": "1000041537-GB",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "haptic_feedback",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_weight",
+            "value": "0.529",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "время_зарядки",
+            "value": "approx. 2 hours 30 minutes*",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "динамики",
+            "value": "built-in stereo speakers",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "емкость_аккумулятора",
+            "value": "4 370 mah",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "напряжение_аккумулятора",
+            "value": "3.87 v",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "питание",
+            "value": "5 v 3 a",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "рабочая_температура",
+            "value": "5 °c to 35 °c",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "разъемы",
+            "value": "usb port headset jack",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "сетевые_интерфейсы",
+            "value": "ieee 802.11 a/b/g/n/ac playstation linktm (2.4 ghz)",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "тип_аккумулятора",
+            "value": "built-in lithium-ion battery",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "экран",
+            "value": "8-inch full hd lcd touchscreen",
+            "unit": "",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": [
+          {
+            "name": "color",
+            "value": "белый",
+            "unit": "",
+            "source": "playstation"
+          },
+          {
+            "name": "комплектация",
+            "value": "playstation portal™ remote player; usb cable; user manual",
+            "unit": "",
+            "source": "playstation"
+          }
+        ]
+      },
+      "specs_before": 2,
+      "specs_after": 13,
+      "photos_before": 0,
+      "photos_after": 4,
+      "manual": "Проверена",
+      "quick_start": "Не проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "export_ready",
+      "readiness_scope": "retail_variant",
+      "blocking_gaps": [],
+      "advisory_gaps": [],
+      "query_variants": [
+        "CFI-Y1016",
+        "CFIY1016",
+        "PlayStation Portal Remote Player White CFI-Y1016",
+        "CFI-Y1016 PlayStation",
+        "CFI-Y1016 PlayStation Portal Remote Player White CFI-Y1016"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000041537-GB",
+          "published_cfi": [
+            "CFI-Y1016"
+          ],
+          "relation": "explicit_own_pdp",
+          "source_url": "https://direct.playstation.com/en-gb/buy-accessories/playstation-portal-remote-player",
+          "accepted_for_request": true,
+          "requested_relation": "exact_order_sku"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "article": "CFI-ZWH2EC",
+      "name": "PULSE Elite Wireless Headset White CFI-ZWH2EC",
+      "model": "elite",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-ZWH2EC",
+      "retail_sku": "",
+      "scopes": {
+        "model": [
+          {
+            "name": "playstation_link",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "время_работы_аккумулятора",
+            "value": "до 30 ч",
+            "unit": "",
+            "source": "playstation_model"
+          },
+          {
+            "name": "микрофон",
+            "value": "встроенный",
+            "unit": "",
+            "source": "playstation_model"
+          },
+          {
+            "name": "тип_излучателей",
+            "value": "планарные магнитные",
+            "unit": "",
+            "source": "playstation_model"
+          },
+          {
+            "name": "шумоподавление_микрофона",
+            "value": "с использованием ии",
+            "unit": "",
+            "source": "playstation_model"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_dimensions__depth",
+            "value": "214",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__height",
+            "value": "251",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__width",
+            "value": "147",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_weight",
+            "value": "0.4",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": []
+      },
+      "specs_before": 0,
+      "specs_after": 9,
+      "photos_before": 0,
+      "photos_after": 5,
+      "manual": "Не проверена",
+      "quick_start": "Не проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "export_ready",
+      "readiness_scope": "hardware_only",
+      "blocking_gaps": [],
+      "advisory_gaps": [
+        "manual_unverified",
+        "retail_configuration_unverified"
+      ],
+      "query_variants": [
+        "CFI-ZWH2EC",
+        "CFIZWH2EC",
+        "PULSE Elite Wireless Headset White CFI-ZWH2EC",
+        "CFI-ZWH2EC PlayStation",
+        "CFI-ZWH2EC PULSE Elite Wireless Headset White CFI-ZWH2EC"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000047820-GB",
+          "published_cfi": [
+            "CFI-ZWH2"
+          ],
+          "relation": "explicit_own_pdp",
+          "source_url": "https://direct.playstation.com/en-gb/buy-accessories/pulse-elite-wireless-headset-ps5",
+          "accepted_for_request": false,
+          "requested_relation": "different_hardware"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "article": "CFI-2015A",
+      "name": "PlayStation 5 Slim Disc US CFI-2015A",
+      "model": "ps5",
+      "model_identity": "model_confirmed",
+      "cfi": "CFI-2015A",
+      "retail_sku": "",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          },
+          {
+            "name": "haptic_feedback_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation_model"
+          }
+        ],
+        "hardware": [
+          {
+            "name": "product_dimensions__depth",
+            "value": "216",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__height",
+            "value": "96",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_dimensions__width",
+            "value": "358",
+            "unit": "mm",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "product_weight",
+            "value": "3.2",
+            "unit": "kg",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "видеовыход",
+            "value": "hdmi™ out port*4",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "графический_процессор",
+            "value": "10 tflops, amd radeon™ rdna-based graphics engine",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "максимальная_потребляемая_мощность",
+            "value": "350 w",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "объем_накопителя",
+            "value": "1 tb custom ssd*1 *2",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "оперативная_память",
+            "value": "gddr6 16 gb",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "оптический_привод",
+            "value": "ultra hd blu-ray",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "питание",
+            "value": "100–240 v 3.55 –1.5 a 50/60 hz",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "процессор",
+            "value": "x86-64-amd ryzen™ “zen2”, 8 cores/16 threads",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "рабочая_температура",
+            "value": "5 °c to 35 °c (41 °f to 95 °f)",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "разъемы",
+            "value": "usb type-a port (superspeed usb 10gbps) ×2 usb type-c® port (hi-speed usb) usb type-c® port (superspeed usb 10gbps) expansion connector (key m) disc drive port",
+            "unit": "",
+            "source": "playstation_hardware"
+          },
+          {
+            "name": "сетевые_интерфейсы",
+            "value": "ethernet (10base-t, 100base-tx, 1000base-t) ieee 802.11 a/b/g/n/ac/ax bluetooth® 5.1",
+            "unit": "",
+            "source": "playstation_hardware"
+          }
+        ],
+        "retail": []
+      },
+      "specs_before": 0,
+      "specs_after": 17,
+      "photos_before": 0,
+      "photos_after": 0,
+      "manual": "Не проверена",
+      "quick_start": "Проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "not_ready",
+      "readiness_scope": "hardware_only",
+      "blocking_gaps": [
+        "exact_photo_missing"
+      ],
+      "advisory_gaps": [
+        "manual_unverified",
+        "retail_configuration_unverified"
+      ],
+      "query_variants": [
+        "CFI-2015A",
+        "CFI2015A",
+        "PlayStation 5 Slim Disc US CFI-2015A",
+        "CFI-2015A PlayStation",
+        "CFI-2015 PlayStation 5 Slim Disc US CFI-2015A"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000058115",
+          "published_cfi": [],
+          "relation": "cfi_not_published",
+          "source_url": "https://direct.playstation.com/en-us/buy-accessories/8tb-sandisk-optimus-gx-pro-850p-nvme-ssd-for-ps5-consoles",
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        },
+        {
+          "retail_sku": "1000051594",
+          "published_cfi": [],
+          "relation": "cfi_not_published",
+          "source_url": "https://direct.playstation.com/en-us/buy-accessories/nacon-backpack-for-ps5",
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        },
+        {
+          "retail_sku": "1000050808",
+          "published_cfi": [],
+          "relation": "cfi_not_published",
+          "source_url": "https://direct.playstation.com/en-us/buy-accessories/powera-essentials-ps5-charge-connect-pack",
+          "accepted_for_request": false,
+          "requested_relation": "model_only_candidate"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "article": "1000049849-GB",
+      "name": "PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle",
+      "model": "ps5",
+      "model_identity": "model_confirmed",
+      "cfi": "",
+      "retail_sku": "1000049849-GB",
+      "scopes": {
+        "model": [
+          {
+            "name": "adaptive_triggers_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "haptic_feedback_контроллер_dualsense",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "tempest_3d_audiotech",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "максимальная_частота_кадров",
+            "value": "до 120 fps",
+            "unit": "",
+            "source": "playstation"
+          },
+          {
+            "name": "поддержка_4k",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "поддержка_hdr",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          },
+          {
+            "name": "трассировка_лучей",
+            "value": "true",
+            "unit": "bool",
+            "source": "playstation"
+          }
+        ],
+        "hardware": [],
+        "retail": [
+          {
+            "name": "комплектация",
+            "value": "playstation®5 digital edition console*; dualsense® wireless controller; fortnite flowering chaos bundle voucher**; florin outfit (with lego® style); blossom backpack back bling; floral finisher pickaxe; blue blossoms wrap; petal's edge guitar; blue bloom mic; petal steppers kicks; 1,000 v-bucks; 825 gb ssd (solid-state drive); 2 plastic stand feet to place the console horizontally; hdmi® cable; ac power cord; usb cable; user manual; astro's playroom (pre-installed game)***",
+            "unit": "",
+            "source": "playstation"
+          },
+          {
+            "name": "объем_накопителя",
+            "value": "825 gb",
+            "unit": "",
+            "source": "playstation"
+          },
+          {
+            "name": "оптический_привод",
+            "value": "digital",
+            "unit": "",
+            "source": "playstation"
+          }
+        ]
+      },
+      "specs_before": 0,
+      "specs_after": 9,
+      "photos_before": 0,
+      "photos_after": 1,
+      "manual": "Не проверена",
+      "quick_start": "Не проверена",
+      "readiness_before": "not_ready",
+      "readiness_after": "export_ready",
+      "readiness_scope": "retail_variant",
+      "blocking_gaps": [],
+      "advisory_gaps": [
+        "manual_unverified"
+      ],
+      "query_variants": [
+        "1000049849GB",
+        "1000049849-GB",
+        "PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle",
+        "1000049849-GB PlayStation",
+        " PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle"
+      ],
+      "relations": [
+        {
+          "retail_sku": "1000049849-GB",
+          "published_cfi": [],
+          "relation": "family_only_not_exact_cfi",
+          "source_url": "https://direct.playstation.com/en-gb/buy-consoles/playstation5-digital-edition-console-825-gb-fortnite-flowering-chaos-bundle",
+          "published_family": [
+            "CFI-2100"
+          ],
+          "accepted_for_request": true,
+          "requested_relation": "exact_order_sku"
+        }
+      ]
+    }
+  ]
+}

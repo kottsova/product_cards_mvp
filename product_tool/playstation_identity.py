@@ -3,11 +3,19 @@ import re
 from urllib.parse import urlsplit
 
 BRANDS = frozenset({'playstation', 'sony interactive entertainment', 'sie', 'sony playstation'})
+COLORS={'midnight black':'Чёрный (Midnight Black)','white':'Белый','cosmic red':'Красный (Cosmic Red)','cobalt blue':'Синий (Cobalt Blue)'}
 SENSITIVE = frozenset({'storage','color','комплектация','optical_drive','region','revision','width','height','depth','weight','product_weight','product_dimensions'})
 
 def configuration_sensitive(name):
     return (name in SENSITIVE or name in {'объем_накопителя','объём_накопителя','оптический_привод','оперативная_память'}
             or name.startswith(('product_dimensions__','color__','комплектация__','product_weight__')))
+
+def hardware_specific(name):
+    return (name in {'product_weight','product_dimensions','width','height','depth','weight','power','maximum_power','питание','максимальная_потребляемая_мощность','разъемы','разъёмы','battery_capacity','емкость_аккумулятора','ёмкость_аккумулятора'}
+            or name.startswith(('product_dimensions__','product_weight__')))
+
+def retail_specific(name):
+    return name in {'color','комплектация','bundle','region','storefront','packaging'} or name.startswith(('color__','комплектация__'))
 
 def official(url):
     p = urlsplit(url)
@@ -18,6 +26,8 @@ def official(url):
 
 def model_key(title):
     t = re.sub(r'[®™]', '', title).casefold()
+    # A compatibility mention of PS5 is not the accessory's product identity.
+    if any(x in t for x in ('disc drive for', 'vertical stand', 'console covers', 'charging station', 'pulse explore')): return ''
     if 'dualsense' in t and not any(x in t for x in ('edge','charging station')): return 'dualsense'
     if 'playstation portal' in t: return 'portal'
     if 'pulse elite' in t: return 'elite'

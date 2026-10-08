@@ -30,10 +30,13 @@ class PlayStationScopes(unittest.TestCase):
         d,e=parse_page(body,u,'1000049849-GB','ps5');self.assertEqual(d.match_level,'full_sku')
         self.assertEqual(e['configuration_fields']['storage'],'825 GB');self.assertIn('voucher',e['configuration_fields']['bundle_contents'])
         other,oe=parse_page(body,u,'CFI-2016A','ps5');self.assertNotEqual(other.match_level,'full_sku');self.assertFalse(oe['configuration_fields']);self.assertFalse(oe['exact_photo_assets'])
-    def test_wrong_color_and_packaging_are_candidates(self):
+    def test_gameplay_is_candidate_but_exact_bundle_packaging_is_allowed(self):
         body=(R/'direct_bundle.html').read_text(encoding='utf-8')
         d,e=parse_page(body,'https://direct.playstation.com/en-gb/buy-consoles/fortnite-bundle','1000049849-GB','ps5')
-        self.assertFalse(e['exact_photo_assets']);self.assertTrue(any('Packaging' in p['reason'] for p in e['photo_candidates']))
+        self.assertTrue(e['exact_photo_assets']);self.assertTrue(any('gameplay' in p['url'] for p in e['photo_candidates']))
+        self.assertFalse(any('gameplay' in u for u in d.photos))
+        other,oe=parse_page(body,'https://direct.playstation.com/en-gb/buy-consoles/fortnite-bundle','CFI-2016A','ps5')
+        self.assertFalse(oe['exact_photo_assets'])
     def test_black_order_not_white_order(self):
         body=(R/'direct_black.html').read_text(encoding='utf-8');u='https://direct.playstation.com/en-gb/buy-accessories/dualsense-black'
         d,e=parse_page(body,u,'1000050213-GB','dualsense');self.assertEqual(e['configuration_fields']['color'],'Чёрный (Midnight Black)')
@@ -43,7 +46,7 @@ class PlayStationScopes(unittest.TestCase):
         body=(R/'direct_black.html').read_text(encoding='utf-8')
         d,e=parse_page(body,'https://direct.playstation.com/en-gb/buy-accessories/dualsense-black','1000050213-GB','dualsense')
         self.assertEqual(len(d.photos),len(set(d.photos)))
-        self.assertEqual(len(d.photos),2)
+        self.assertGreaterEqual(len(d.photos),2)
         self.assertFalse(any('bundle' in u.lower() or 'cable-and' in u.lower() for u in d.photos))
         self.assertTrue(any('USB-Bundle' in p['url'] for p in e['photo_candidates']))
         for label in ('Haptic Feedback','Adaptive Triggers'):

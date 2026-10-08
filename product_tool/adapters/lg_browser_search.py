@@ -148,10 +148,12 @@ class LGBrowserSearch:
         preloaded_google_results: dict[str, BrowserSearchResult] | None = None,
         official_host: str = "www.lg.com",
         official_hosts: tuple[str, ...] | None = None,
+        candidate_classifier: Callable[[str], str] | None = None,
     ):
         self.log_path = Path(log_path)
         self.official_host = official_host
         self.official_hosts = official_hosts or (official_host,)
+        self.candidate_classifier = candidate_classifier
         self.allowed_hosts = allowed_hosts
         self.budget = budget or DEFAULT_BUDGET
         self._runtime = runtime
@@ -437,6 +439,8 @@ class LGBrowserSearch:
                 is_support = result_host in {"pcsupport.lenovo.com", "support.lenovo.com"} and "products" in parts
                 is_product = (result_host == "psref.lenovo.com" and parts and parts[0] in {"detail", "product"}) or (result_host == "www.lenovo.com" and "p" in parts)
             kind = "support" if is_support else "product" if is_product else "unknown"
+            if self.candidate_classifier is not None:
+                kind = self.candidate_classifier(candidate_url) if official else "unknown"
             old_rejected = legacy_google and fragment.get("old_parser_candidate") is False
             admitted = kind in {"support", "product"} and not old_rejected
             self._trace(event="result", provider=label, query=query,
