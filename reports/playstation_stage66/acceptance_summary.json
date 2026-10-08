@@ -1,0 +1,739 @@
+{
+  "stage": 66,
+  "baseline_article": "CFI-2016A",
+  "baseline_job": "error",
+  "baseline_facts": 0,
+  "first_pass_rows": 10,
+  "dataset_sha256": "c2cac5f22132a2061c2ad114b1fa6030188f1ad26ddfc665734d0a75014d1422",
+  "final_rows": 10,
+  "export_ready": 0,
+  "confirmed_configuration_claims": [
+    {
+      "article": "1000050213-GB",
+      "name": "color",
+      "value": "черный (midnight black)",
+      "source": "playstation"
+    },
+    {
+      "article": "1000050213-GB",
+      "name": "комплектация",
+      "value": "dualsense® wireless controller; user manual",
+      "source": "playstation"
+    }
+  ],
+  "false_confirmed_configuration_claims": 0,
+  "real_conflicts": 0,
+  "selected_exact_photos": 2,
+  "user_guides_verified": 2,
+  "adapter_verdict": "PlayStation adapter not ready",
+  "stage_acceptance": "PASS",
+  "hardware_resolution_layer": "Not justified; scoped CFI table routing fits the shared evidence contracts",
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 687.5653028999805,
+    "result": [
+      "Ran 1559 tests in 684.386s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  },
+  "matrix": [
+    {
+      "article": "CFI-1216A",
+      "name": "PlayStation 5 original Disc CFI-1216A",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-1216A",
+      "hardware_family": "ps5_original",
+      "exact_official_pdp": "",
+      "support": "https://www.playstation.com/en-gb/support/hardware/manuals/",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/1200a/CFI-12XXA_PS5_Safety_Guide$en-gb.pdf",
+          "relation": "hardware_confirmed",
+          "error": ""
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/ps5/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 105,
+      "facts": 9,
+      "confirmed_specs": 9,
+      "photo_candidates": 32,
+      "selected_photos": 0,
+      "manuals": [
+        {
+          "title": "CFI-1216A Quick Start Guide CFI-1216A Quick Start Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/1200a/CFI-12XXA_PS5_Quick_Start_Guide$en-gb.pdf",
+          "type": "Quick Start",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        },
+        {
+          "title": "CFI-1216A Safety Guide CFI-1216A Safety Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/1200a/CFI-12XXA_PS5_Safety_Guide$en-gb.pdf",
+          "type": "Safety Guide",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        }
+      ],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Disc CFI-1216A» (артикул CFI-1216A). Не хватает: configuration_unresolved, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "CFI-1216B",
+      "name": "PlayStation 5 original Digital CFI-1216B",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-1216B",
+      "hardware_family": "ps5_original",
+      "exact_official_pdp": "",
+      "support": "https://www.playstation.com/en-gb/support/hardware/manuals/",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/1200b/CFI-12XXB_PS5_Safety_Guide$en-gb.pdf",
+          "relation": "hardware_confirmed",
+          "error": ""
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/ps5/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 94,
+      "facts": 9,
+      "confirmed_specs": 9,
+      "photo_candidates": 32,
+      "selected_photos": 0,
+      "manuals": [
+        {
+          "title": "CFI-1216B Digital Edition Quick Start Guide CFI-1216B Digital Edition Quick Start Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/1200b/CFI-12XXB_PS5_Quick_Start_Guide$en-gb.pdf",
+          "type": "Quick Start",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        },
+        {
+          "title": "CFI-1216B Digital Edition Safety Guide CFI-1216B Digital Edition Safety Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/1200b/CFI-12XXB_PS5_Safety_Guide$en-gb.pdf",
+          "type": "Safety Guide",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        }
+      ],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Digital CFI-1216B» (артикул CFI-1216B). Не хватает: configuration_unresolved, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "CFI-2016B",
+      "name": "PlayStation 5 Slim Digital CFI-2016B",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-2016B",
+      "hardware_family": "ps5_slim",
+      "exact_official_pdp": "",
+      "support": "https://www.playstation.com/en-gb/support/hardware/manuals/",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en-gb.pdf",
+          "relation": "hardware_confirmed",
+          "error": ""
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/ps5/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 62,
+      "facts": 0,
+      "confirmed_specs": 0,
+      "photo_candidates": 32,
+      "selected_photos": 0,
+      "manuals": [
+        {
+          "title": "CFI-2016A/B Quick Start Guide CFI-2016A/B Quick Start Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Quick_Start_Guide_Web$en-gb.pdf",
+          "type": "Quick Start",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        },
+        {
+          "title": "CFI-2016A/B Safety Guide CFI-2016A/B Safety Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en-gb.pdf",
+          "type": "Safety Guide",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        }
+      ],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Digital CFI-2016B» (артикул CFI-2016B). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "specifications_missing",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "CFI-7021",
+      "name": "PlayStation 5 Pro CFI-7021",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-7021",
+      "hardware_family": "pro",
+      "exact_official_pdp": "",
+      "support": "https://www.playstation.com/en-gb/support/hardware/manuals/",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/7000/CFI-70XX_PS5_Safety_Guide_Web$en-gb.pdf",
+          "relation": "hardware_confirmed",
+          "error": ""
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/support/hardware/manuals/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 36,
+      "facts": 9,
+      "confirmed_specs": 9,
+      "photo_candidates": 0,
+      "selected_photos": 0,
+      "manuals": [
+        {
+          "title": "CFI-7021 Quick Start Guide CFI-7021 Quick Start Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/7000/CFI-70XX_PS5_Quick_Start_Guide_Web$en-gb.pdf",
+          "type": "Quick Start",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        },
+        {
+          "title": "CFI-7021 Safety Guide CFI-7021 Safety Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/7000/CFI-70XX_PS5_Safety_Guide_Web$en-gb.pdf",
+          "type": "Safety Guide",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        }
+      ],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Pro CFI-7021» (артикул CFI-7021). Не хватает: configuration_unresolved, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "CFI-ZCT1W",
+      "name": "DualSense Wireless Controller White CFI-ZCT1W",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-ZCT1W",
+      "hardware_family": "dualsense",
+      "exact_official_pdp": "",
+      "support": "https://www.playstation.com/ru-ru/support/hardware/manuals/",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/accessories/ps5-accessories/dualsense-wireless-controller-cfi-zct1w/CFI-ZCT1W_PS5_Wireless%20Controller_Instruction_Manual$en-gb.pdf",
+          "relation": "hardware_confirmed",
+          "error": ""
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/accessories/dualsense-wireless-controller/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 115,
+      "facts": 5,
+      "confirmed_specs": 4,
+      "photo_candidates": 81,
+      "selected_photos": 0,
+      "manuals": [
+        {
+          "title": "Руководство по эксплуатации CFI-ZCT1W",
+          "url": "https://www.playstation.com/content/dam/global_pdc/ru/corporate/support/manuals/accessories/ps5-accessories/dualsense-wireless-controller-cfi-zct1w/CFI-ZCT1W_PS5_Wireless%20Controller_Instruction_Manual$ru.pdf",
+          "type": "User Guide",
+          "relation": "official_hardware_model_code",
+          "verified": true,
+          "language": "Русский",
+          "source_url": "https://www.playstation.com/ru-ru/support/hardware/manuals/",
+          "sha256": "3c380d35fe013a17a5f127c46862239b29acef745929e05ae4b97df616d086ad"
+        }
+      ],
+      "manual_status": "Проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller White CFI-ZCT1W» (артикул CFI-ZCT1W). Не хватает: configuration_unresolved, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "1000050213-GB",
+      "name": "DualSense Wireless Controller Midnight Black",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "exact_order_sku",
+      "hardware_model": "",
+      "hardware_family": "",
+      "exact_official_pdp": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+      "support": "",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+          "relation": "full_sku",
+          "error": ""
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/accessories/dualsense-wireless-controller/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 160,
+      "facts": 4,
+      "confirmed_specs": 1,
+      "photo_candidates": 94,
+      "selected_photos": 2,
+      "manuals": [],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller Midnight Black» (артикул 1000050213-GB). Не хватает: specifications_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "specifications_missing"
+      ],
+      "configuration_fields": {
+        "bundle_contents": "DualSense® Wireless Controller; User manual",
+        "color": "Чёрный (Midnight Black)",
+        "storefront": "en-gb"
+      }
+    },
+    {
+      "article": "CFI-Y1016",
+      "name": "PlayStation Portal Remote Player White CFI-Y1016",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-Y1016",
+      "hardware_family": "portal",
+      "exact_official_pdp": "",
+      "support": "https://www.playstation.com/ru-ru/support/hardware/manuals/",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/accessories/ps5-accessories/playstation-portal-remote-player/CFI-Y1016_PS_Portal_Remote_Player_Instruction_Manual_Web$en-gb.pdf",
+          "relation": "hardware_confirmed",
+          "error": ""
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/accessories/playstation-portal-remote-player/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 114,
+      "facts": 2,
+      "confirmed_specs": 2,
+      "photo_candidates": 8,
+      "selected_photos": 0,
+      "manuals": [
+        {
+          "title": "Руководство по эксплуатации CFI-Y1016",
+          "url": "https://www.playstation.com/content/dam/global_pdc/ru/corporate/support/manuals/accessories/ps5-accessories/playstation-portal-remote-player/CFI-Y1016_PS_Portal_Remote_Player_Instruction_Manual_Web$ru.pdf",
+          "type": "User Guide",
+          "relation": "official_hardware_model_code",
+          "verified": true,
+          "language": "Русский",
+          "source_url": "https://www.playstation.com/ru-ru/support/hardware/manuals/",
+          "sha256": "cf8763b40952e7592c204b733607bc0051f2e17171069bd6646fb24dae3fb783"
+        }
+      ],
+      "manual_status": "Проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation Portal Remote Player White CFI-Y1016» (артикул CFI-Y1016). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "specifications_missing",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "CFI-ZWH2EC",
+      "name": "PULSE Elite Wireless Headset White CFI-ZWH2EC",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-ZWH2EC",
+      "hardware_family": "",
+      "exact_official_pdp": "",
+      "support": "",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/accessories/pulse-elite-wireless-headset/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 33,
+      "facts": 0,
+      "confirmed_specs": 0,
+      "photo_candidates": 0,
+      "selected_photos": 0,
+      "manuals": [],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PULSE Elite Wireless Headset White CFI-ZWH2EC» (артикул CFI-ZWH2EC). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "specifications_missing",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "CFI-2015A",
+      "name": "PlayStation 5 Slim Disc US CFI-2015A",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "CFI-2015A",
+      "hardware_family": "ps5_slim",
+      "exact_official_pdp": "",
+      "support": "https://www.playstation.com/en-us/support/hardware/manuals/",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en.pdf",
+          "relation": "hardware_confirmed",
+          "error": ""
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/ps5/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 62,
+      "facts": 0,
+      "confirmed_specs": 0,
+      "photo_candidates": 32,
+      "selected_photos": 0,
+      "manuals": [
+        {
+          "title": "CFI-2015A/B Quick Start Guide CFI-2015A/B Quick Start Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Quick_Start_Guide_Web$en.pdf",
+          "type": "Quick Start",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-us/support/hardware/manuals/"
+        },
+        {
+          "title": "CFI-2015A/B Safety Guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en.pdf",
+          "type": "Safety Guide",
+          "relation": "official_hardware_model_code",
+          "verified": false,
+          "language": "Не проверена",
+          "source_url": "https://www.playstation.com/en-us/support/hardware/manuals/"
+        }
+      ],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc US CFI-2015A» (артикул CFI-2015A). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "specifications_missing",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    },
+    {
+      "article": "1000049849-GB",
+      "name": "PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle",
+      "model_identity": "model_confirmed",
+      "configuration_identity": "unproven",
+      "hardware_model": "",
+      "hardware_family": "",
+      "exact_official_pdp": "",
+      "support": "",
+      "sources": [
+        {
+          "key": "dns",
+          "url": "",
+          "relation": "dealer_url_needed",
+          "error": ""
+        },
+        {
+          "key": "playstation",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_hardware",
+          "url": "",
+          "relation": "unknown",
+          "error": "Источник не подтверждён в текущем запуске"
+        },
+        {
+          "key": "playstation_model",
+          "url": "https://www.playstation.com/en-gb/ps5/",
+          "relation": "model_confirmed",
+          "error": ""
+        }
+      ],
+      "raw_specs": 62,
+      "facts": 0,
+      "confirmed_specs": 0,
+      "photo_candidates": 32,
+      "selected_photos": 0,
+      "manuals": [],
+      "manual_status": "Не проверена",
+      "dealer": {
+        "url": "",
+        "status": "dealer_url_needed",
+        "accepted": false,
+        "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle» (артикул 1000049849-GB). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "scope": "Dealer evidence requires separate exact configuration review"
+      },
+      "job_status": "needs_review",
+      "readiness": "not_ready",
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "specifications_missing",
+        "exact_photo_missing"
+      ],
+      "configuration_fields": {}
+    }
+  ]
+}

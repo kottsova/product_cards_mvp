@@ -382,6 +382,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         sources = jobs.get_source_pages(database, product_id)
         documents = (manual_status.effective_documents(database, product_id, product["search_code"])
                      if lg_batch.is_lg(product) else jobs.get_documents(database, product_id))
+        from . import playstation_pipeline
+        from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
+        playstation_evidence = card_evidence.load(database,product_id,"playstation") if product["brand"].strip().casefold() in PLAYSTATION_BRANDS else None
         apple_evidence = card_evidence.load(database, product_id, "apple") if product["brand"].strip().upper() == "APPLE" else None
         jbl_evidence = card_evidence.load(database, product_id, "jbl") if product["brand"].strip().upper() == "JBL" else None
         lenovo_evidence = card_evidence.load(database, product_id, "lenovo") if product["brand"].strip().upper() == "LENOVO" else None
@@ -392,6 +395,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             for photo in photos:
                 photo["identity_confirmed"] = photo_tied_to_article(photo, sources)
                 photo["can_inspect"] = photo["source_key"] in photo_metadata.ALLOWED_BY_SOURCE
+                if playstation_evidence is not None:
+                    photo['identity_confirmed']=playstation_pipeline.photo_verified(photo,playstation_evidence)
                 photo["size_label"] = photo_metadata.format_file_size(photo.get("verified_bytes"))
         else:
             brand = product["brand"].strip().upper()
@@ -439,6 +444,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                        "description": product_description.product_description(source["description"])
                        if lg_batch.is_lg(product) else source["description"]} for source in sources],
             bosch_card=bosch_readiness.card_readiness(database, product_id) if any(src["source_key"] == "bosch_home" for src in sources) else None,
+            playstation_evidence=playstation_evidence,
+            playstation_card=playstation_pipeline.card_readiness(database,product_id) if playstation_evidence is not None else None,
+            playstation_gaps=playstation_pipeline.GAPS,
             apple_evidence=apple_evidence,
             apple_card=apple_pipeline.card_readiness(database, product_id) if apple_evidence is not None else None,
             jbl_evidence=jbl_evidence,
@@ -455,7 +463,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
-            manual_status=apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_status=playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
             manual_reason=manual_status.unchecked_reason(database, product_id, product["search_code"]) if lg_batch.is_lg(product) else "",
             manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,

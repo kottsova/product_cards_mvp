@@ -12,6 +12,8 @@ from .adapters.policy_session import PolicyAwareSession, RequestBudget, request_
 
 MAX_IMAGE_BYTES = 8_000_000
 ALLOWED_BY_SOURCE = {
+    "playstation": ("playstation.com",),
+    "playstation_model": ("playstation.com",),
     "apple": ("cdn-apple.com", "apple.com"),
     "apple_model": ("cdn-apple.com", "apple.com"),
     "jbl": ("jbl.com",),

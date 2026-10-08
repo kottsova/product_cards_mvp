@@ -1,0 +1,1255 @@
+{
+  "mode": "baseline_final",
+  "dataset_sha256": "c2cac5f22132a2061c2ad114b1fa6030188f1ad26ddfc665734d0a75014d1422",
+  "results": [
+    {
+      "input": {
+        "id": 1,
+        "batch_id": "ps66",
+        "row_number": 1,
+        "name": "PlayStation 5 Slim Disc 1TB CFI-2016A",
+        "brand": "PlayStation",
+        "search_code": "CFI-2016A",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "0148d81aa7894012881aca678b5ce07c",
+        "product_id": 1,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "PlayStation: Конфигурация, цвет или комплект не подтверждены; Не хватает проверенных характеристик; Нет подтверждённого фото варианта",
+        "created_at": "2026-10-08T11:51:06+00:00",
+        "updated_at": "2026-10-08T11:51:06+00:00",
+        "started_at": "2026-10-08T11:51:06+00:00",
+        "finished_at": "2026-10-08T11:51:06+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 4,
+          "product_id": 1,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc 1TB CFI-2016A» (артикул CFI-2016A). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:51:06+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        },
+        {
+          "id": 3,
+          "product_id": 1,
+          "source_key": "playstation",
+          "site_name": "PlayStation",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-08T11:51:06+00:00",
+          "error": "Источник не подтверждён в текущем запуске",
+          "description": "",
+          "photos": []
+        },
+        {
+          "id": 2,
+          "product_id": 1,
+          "source_key": "playstation_hardware",
+          "site_name": "PlayStation hardware guide",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en-gb.pdf",
+          "found_model": "CFI-2016A",
+          "match_level": "hardware_confirmed",
+          "evidence": "",
+          "fetched_at": "2026-10-08T11:51:06+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        },
+        {
+          "id": 1,
+          "product_id": 1,
+          "source_key": "playstation_model",
+          "site_name": "PlayStation",
+          "url": "https://www.playstation.com/en-gb/ps5/",
+          "found_model": "PlayStation®5",
+          "match_level": "model_confirmed",
+          "evidence": "Exact family PDP; configuration and CFI revision checked separately",
+          "fetched_at": "2026-10-08T11:51:06+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "configuration_unresolved",
+          "specifications_missing",
+          "exact_photo_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "identity": {
+          "model": "model_confirmed",
+          "configuration": "unproven",
+          "hardware": "official_hardware_model_code"
+        },
+        "configuration_fields": {},
+        "manual_status": "Не проверена",
+        "confirmed_specs": 0,
+        "gaps": [
+          "configuration_unresolved",
+          "specifications_missing",
+          "exact_photo_missing",
+          "manual_unverified"
+        ],
+        "official_exact_regions": [],
+        "instruction": {
+          "russian": false
+        }
+      },
+      "events": [
+        {
+          "id": 1,
+          "job_id": "0148d81aa7894012881aca678b5ce07c",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:51:06+00:00"
+        },
+        {
+          "id": 2,
+          "job_id": "0148d81aa7894012881aca678b5ce07c",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:51:06+00:00"
+        },
+        {
+          "id": 3,
+          "job_id": "0148d81aa7894012881aca678b5ce07c",
+          "stage": null,
+          "level": "warning",
+          "message": "PlayStation: Конфигурация, цвет или комплект не подтверждены; Не хватает проверенных характеристик; Нет подтверждённого фото варианта",
+          "source_url": "",
+          "created_at": "2026-10-08T11:51:06+00:00"
+        }
+      ],
+      "trace": [
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "CFI-2016A",
+          "reason": "Fetched; identity evaluated separately",
+          "region": "ru-ru",
+          "source_type": "product",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/ru-ru/support/"
+        },
+        {
+          "accepted": false,
+          "event": "playstation_discovery",
+          "identity_relation": "mismatch",
+          "provider": "regional_exact",
+          "query": "CFI-2016A",
+          "reason": "Returned page model differs or is support/help content",
+          "region": "ru-ru",
+          "source_type": "product",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/ru-ru/support/"
+        },
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "CFI-2016A",
+          "reason": "Fetched; identity evaluated separately",
+          "region": "en-gb",
+          "source_type": "product",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/en-gb/ps5/"
+        },
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "model_confirmed",
+          "provider": "other_official_regions",
+          "query": "CFI-2016A",
+          "reason": "Exact family PDP; configuration and CFI revision checked separately",
+          "region": "en-gb",
+          "source_type": "product",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/en-gb/ps5/"
+        },
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_sitemap",
+          "query": "CFI-2016A",
+          "reason": "Fetched; identity evaluated separately",
+          "region": "sitemap_index.xml",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/sitemap_index.xml"
+        },
+        {
+          "accepted": false,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_sitemap",
+          "query": "CFI-2016A",
+          "reason": "Index discovered; gpdc sitemap disallowed by robots, no inferred exact SKU URL",
+          "region": "",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/sitemap_index.xml"
+        },
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "support",
+          "query": "CFI-2016A",
+          "reason": "Fetched; identity evaluated separately",
+          "region": "ru-ru",
+          "source_type": "support",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/ru-ru/support/hardware/manuals/"
+        },
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "support",
+          "query": "CFI-2016A",
+          "reason": "Fetched; identity evaluated separately",
+          "region": "en-gb",
+          "source_type": "support",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        },
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "official_hardware_model_code",
+          "provider": "support",
+          "query": "CFI-2016A",
+          "reason": "Exact CFI in official linked guide label; retail SKU remains separate",
+          "region": "en-gb",
+          "source_type": "support",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+        },
+        {
+          "accepted": true,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_manual",
+          "query": "CFI-2016A",
+          "reason": "Fetched; identity evaluated separately",
+          "region": "content",
+          "source_type": "manual",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en-gb.pdf"
+        },
+        {
+          "accepted": false,
+          "event": "playstation_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_search",
+          "query": "CFI-2016A",
+          "reason": "No external search provider configured; no search snippet accepted as evidence",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "playstation_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "CFI-2016A",
+          "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc 1TB CFI-2016A» (артикул CFI-2016A). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-08T11:51:06+00:00",
+          "url": ""
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "model": "model_confirmed",
+          "configuration": "unproven",
+          "hardware": "official_hardware_model_code"
+        },
+        "query_variants": [
+          "CFI-2016A",
+          "PlayStation 5 Slim Disc 1TB CFI-2016A",
+          "CFI-2016A PlayStation"
+        ],
+        "raw_specs": [
+          {
+            "section": "Play like never before ®",
+            "raw_label": "Play like never before ®",
+            "value": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback 1 , adaptive triggers 1 and 3D Audio 1 , and an incredible collection of PlayStation games."
+          },
+          {
+            "section": "Play like never before ®",
+            "raw_label": "Play like never before ®",
+            "value": "\"Enable Javascript on browser\""
+          },
+          {
+            "section": "Stunning games",
+            "raw_label": "Stunning games",
+            "value": "Explore spectacular new worlds in generation-defining games exclusive to PlayStation consoles."
+          },
+          {
+            "section": "Lightning speed",
+            "raw_label": "Lightning speed",
+            "value": "Jump into the action and keep play moving with ultra-fast, integrated console technology."
+          },
+          {
+            "section": "Breathtaking immersion",
+            "raw_label": "Breathtaking immersion",
+            "value": "Put yourself at the heart of the game with responsive controls, 360-degree audio 1 , and intricate graphical detail."
+          },
+          {
+            "section": "Stunning games on PS5",
+            "raw_label": "Stunning games on PS5",
+            "value": "Immerse yourself in games that look and sound stunning, including console exclusives from PlayStation Studios and full backwards compatibility for your PS4 library."
+          },
+          {
+            "section": "PS5 console exclusives",
+            "raw_label": "PS5 console exclusives",
+            "value": "Experience generation-defining games from PlayStation Studios."
+          },
+          {
+            "section": "Play the biggest games on PlayStation",
+            "raw_label": "Play the biggest games on PlayStation",
+            "value": "Join millions of players in legendary titles like Fortnite, Monster Hunter Wilds, and Grand Theft Auto V."
+          },
+          {
+            "section": "Backwards compatible with PS4®",
+            "raw_label": "Backwards compatible with PS4®",
+            "value": "Play over 8,500 PS4 games 3 on PS5 consoles. Enjoy faster and smoother frame rates in select PS4 games with PS5’s Game Boost technology."
+          },
+          {
+            "section": "On-demand games with PlayStation Plus",
+            "raw_label": "On-demand games with PlayStation Plus",
+            "value": "Join PlayStation Plus and enjoy instant access to a huge library of PS5 and PS4 games that evolves every month, with a choice of membership plans 2 to suit how you play."
+          },
+          {
+            "section": "Hundreds of games ready to play",
+            "raw_label": "Hundreds of games ready to play",
+            "value": "Choose your next adventure from a vast library of PS5 and PS4 titles including recent releases, innovative indies, big-budget hits, and Ubisoft+ Classics."
+          },
+          {
+            "section": "All-time classics",
+            "raw_label": "All-time classics",
+            "value": "Step back in time to enjoy hundreds of much-loved games from the original PlayStation, PS2, and PS3 consoles, and PSP (PlayStation®Portable)."
+          },
+          {
+            "section": "New gaming experiences every month",
+            "raw_label": "New gaming experiences every month",
+            "value": "Expand your collection with monthly games delivered straight to your console, yours to play as long as you remain a member."
+          },
+          {
+            "section": "Spectacular visuals at lightning speed",
+            "raw_label": "Spectacular visuals at lightning speed",
+            "value": "Harness the might of a custom CPU, GPU and SSD that deliver breathtaking graphics and smooth gameplay."
+          },
+          {
+            "section": "Near instant load times",
+            "raw_label": "Near instant load times",
+            "value": "An ultra-high-speed SSD maximises your play sessions for installed PS5 games."
+          },
+          {
+            "section": "Next level game design",
+            "raw_label": "Next level game design",
+            "value": "The custom integration of the PS5 console’s systems lets creators pull data from the SSD so quickly that they can design games in ways never before possible."
+          },
+          {
+            "section": "Explore lifelike environments with Ray Tracing",
+            "raw_label": "Explore lifelike environments with Ray Tracing",
+            "value": "Ray Tracing brings new levels of realism with natural shadows and reflections in supported PS5 games."
+          },
+          {
+            "section": "Vibrant colours & crisp 4K graphics",
+            "raw_label": "Vibrant colours & crisp 4K graphics",
+            "value": "Intricate details come to life with your 4K TV and compatible PS5 games. With an HDR TV, supported PS5 games pop with an unbelievable range of colours."
+          },
+          {
+            "section": "Navigate game worlds with incredible responsiveness",
+            "raw_label": "Navigate game worlds with incredible responsiveness",
+            "value": "Smooth and fluid high-frame-rate gameplay for compatible games."
+          },
+          {
+            "section": "Immersive play with the DualSense® wireless controller",
+            "raw_label": "Immersive play with the DualSense® wireless controller",
+            "value": "Discover a deeper gaming experience* with the incredibly tactile features of the innovative PS5 controller."
+          },
+          {
+            "section": "Immersive play with the DualSense® wireless controller",
+            "raw_label": "Immersive play with the DualSense® wireless controller",
+            "value": "*Compared to DUALSHOCK®4 wireless controller"
+          },
+          {
+            "section": "Adaptive Triggers 1",
+            "raw_label": "Adaptive Triggers 1",
+            "value": "Dynamic resistance mimics the tension of interactions with in-game gear and objects in select PS5 games. From pulling back an increasingly tight bowstring to hitting the brakes on a speeding car, feel physically connected to your on-screen actions."
+          },
+          {
+            "section": "Haptic Feedback 1",
+            "raw_label": "Haptic Feedback 1",
+            "value": "Responsive vibrations react to your in-game choices and simulate environmental factors in select PS5 games. In your hands, these dynamic vibrations can simulate the feeling of everything from environments to the recoil of different weapons."
+          },
+          {
+            "section": "Enhance your perception with 3D Audio 1",
+            "raw_label": "Enhance your perception with 3D Audio 1",
+            "value": "From the distant calls of teammates to the nearby approach of sneaking predators, your surroundings come alive with Tempest 3D AudioTech through TV speakers or compatible headphones in supported games."
+          },
+          {
+            "section": "PS5 accessories",
+            "raw_label": "PS5 accessories",
+            "value": "Build your ultimate PS5 setup with additional controllers and matching console covers, audio headsets and more."
+          },
+          {
+            "section": "Controllers",
+            "raw_label": "Controllers",
+            "value": "Discover a range of vibrant DualSense wireless controller colours, raise your game with the ultra-customisable DualSense Edge™ wireless controller, explore a world of possibilities for players with diverse needs with the Access™ controller, and elevate your arcade or simulator game with wheels, fight sticks and other specialist controllers."
+          },
+          {
+            "section": "Gaming audio",
+            "raw_label": "Gaming audio",
+            "value": "Studio-inspired planar magnetic drivers enable our new headset and earbuds to reproduce PS5 3D Audio 1 with astonishing accuracy. Pinpoint threats with razor-sharp precision and pick out subtle details, all delivered to you at lightning-fast speed using new PlayStation Link™ wireless technology."
+          },
+          {
+            "section": "Perfect your setup",
+            "raw_label": "Perfect your setup",
+            "value": "Change up your style with a PS5 console cover in a range of colours, add extra storage, a removable disc drive*, vertical stand**, and a charging station for your controllers."
+          },
+          {
+            "section": "Perfect your setup",
+            "raw_label": "Perfect your setup",
+            "value": "*This product is only for PS5 Digital Edition consoles (CFI-2000 model group – slim). Drive will play 4K Ultra HD Blu ray™ discs, Blu-ray discs, and DVDs. Internet connection required to pair Disc Drive and PS5 console upon setup. **Compatible Hardware: PS5® CFI-1000 model group, PS5® CFI-2000 model group - slim."
+          },
+          {
+            "section": "Perfect your setup",
+            "raw_label": "Perfect your setup",
+            "value": "Screen image simulated"
+          },
+          {
+            "section": "PlayStation Portal™ remote player",
+            "raw_label": "PlayStation Portal™ remote player",
+            "value": "Feel the power of PlayStation in the palm of your hand as you play your PS5 console over your home Wi-Fi 4 with console-quality controls and a gorgeous 8-inch built-in display."
+          },
+          {
+            "section": "Stay connected with PlayStation™ App",
+            "raw_label": "Stay connected with PlayStation™ App",
+            "value": "Bring your PS5 experience with you wherever you go with the companion PlayStation App. Stay in touch with PlayStation friends via text and voice chat, view your media gallery with Game Captures, purchase games via PlayStation™ Store, and more, all from the free app for Apple and Android devices."
+          },
+          {
+            "section": "Which PS5 console is right for you?",
+            "raw_label": "Which PS5 console is right for you?",
+            "value": "Choose how you play with a choice of Blu-ray Disc and all-digital consoles."
+          },
+          {
+            "section": "PS5 console - 1TB",
+            "raw_label": "PS5 console - 1TB",
+            "value": "Play PS5 and PS4 games on Blu-ray discs. You can also download digital PS5 and PS4 games from PlayStation Store."
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "An all-digital version of the PS5 console with no disc drive. Download and play digital games from PlayStation Store, with an option to extend your play with an additional disc drive* (sold separately)."
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "* This product is intended only for PS5 Digital Edition consoles (CFI-2000 and CFI 2100 model groups – slim). Drive will play 4K Ultra HD Blu ray™ discs, Blu-ray discs, and DVDs. Internet connection required to pair Disc Drive and PS5 console upon setup. For more details visit PlayStation.com/accessories ."
+          },
+          {
+            "section": "Which PS5 console is right for you?",
+            "raw_label": "Which PS5 console is right for you?",
+            "value": "Choose how you play with a choice of Blu-ray Disc and all-digital consoles."
+          },
+          {
+            "section": "PS5 Console - 1TB",
+            "raw_label": "PS5 Console - 1TB",
+            "value": "PS5 Console - 1TB"
+          },
+          {
+            "section": "PS5 Console - 1TB",
+            "raw_label": "PS5 Console - 1TB",
+            "value": "Play PS5 and PS4 games on Blu-ray discs. You can also download digital PS5 and PS4 games from PlayStation Store."
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "PS5 Digital Edition - 825GB"
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "An all-digital version of the PS5 console with no disc drive. Download and play digital games from PlayStation Store, with an option to extend your play with an additional disc drive* (sold separately). * This product is intended only for PS5 Digital Edition consoles (CFI-2000 and CFI 2100 model groups – slim). Drive will play 4K Ultra HD Blu ray™ discs, Blu-ray discs, and DVDs. Internet connection required to pair Disc Drive and PS5 console upon setup. For more details visit PlayStation.com/accessories ."
+          },
+          {
+            "section": "Your PlayStation®5 stats",
+            "raw_label": "Your PlayStation®5 stats",
+            "value": "Track your PS5 journey with info on your total play time, games you own and more."
+          },
+          {
+            "section": "View your stats",
+            "raw_label": "View your stats",
+            "value": "Sign-in with your account for PlayStation to check all the stats on your personalised dashboard."
+          },
+          {
+            "section": "It looks like you’re not a PS Plus member yet",
+            "raw_label": "It looks like you’re not a PS Plus member yet",
+            "value": "We don’t have any stats to show you. Join PlayStation Plus today - once you’re a member come back to see how your journey is progressing."
+          },
+          {
+            "section": "Uh, oh...",
+            "raw_label": "Uh, oh...",
+            "value": "Sorry, it looks like we had a problem finding your data. Try refreshing, or come back later."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "See what else your PS5 console can do."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Your favourite streaming services, together on PS5."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "How we make play more accessible on PS5 consoles and in our games."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Controllers, gaming audio, additional storage and much more."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Yes. PS5 consoles are backwards compatible with PS4 games, with over 4000 titles ready to play. Find out more here: PS4 games playable on PS5 consoles."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "PS5 consoles launched in select territories on 12 November 2020, with a full global launch soon after on 19 November 2020."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Yes, you can link your account for PlayStation and your Discord account to share your gaming activity, use voice chat and more. Get full details here: How to link your Discord account to PlayStation."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "PS5 consoles are available in a range of digital and disc-based editions, as well as with different controller options and as software bundles. Check online retailers for availability and price details."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Players in the US, UK, Germany, Austria, France, Luxembourg, Belgium, Netherlands, Spain, Portugal and Italy can shop direct with PlayStation and enjoy additional benefits including free delivery on every order, from direct.playstation.com ."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Visit PlayStation.com/support for assistance with a range of console, subscription and game issues."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "The same features that make PS5 the best place to play have been packed into a smaller form factor, with a 1TB SSD for more internal storage. The new PS5 has been reduced in volume by more than 30%, and weight by 18% and 24% compared to the previous models."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "© 2026 MARVEL © 2026 Sony Interactive Entertainment LLC Developed by Insomniac Games, Inc"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "1. Available when feature is supported by game. 3D audio via built-in TV speakers or analogue/USB stereo headphones. Set up required."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "2. PlayStation Plus subscription fees recur until cancelled. Age restrictions apply. Full terms: www.playstation.com/legal/ps-plus-usage-terms . See playstation.com/ps-plus for details and updates on PS Plus offerings."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "3. Upgrade may be offered at no additional cost or for a fee and may be available for a limited time. To upgrade eligible PS4 disc titles to digital PS5 versions, you need a PS5™ console with a disc drive. Streaming services may require paid subscription and may not be available in all countries. Internet and account for PlayStation required. Account holders must be 7+, under 18s require parental consent. Full terms apply: playstation.com/Terms."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "4. PlayStation Portal remote player can stream compatible games installed on your PS5 console. PlayStation Portal remote player requires broadband internet Wi-Fi with at least 5Mbps for use. For a better play experience, a high-speed connection of at least 15Mbps is recommended. The quality and connectivity of your play experience may vary depending on your network environment. A PS5 console and account for PlayStation is required. The PS5 console must be connected to a broadband internet connection, powered on fully or in Rest Mode, and it must be paired with your PlayStation PlayStation Portal remote player."
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "5. A portion of the SSD is reserved for system software and other functions so the available SSD capacity may vary."
+          }
+        ],
+        "configuration_candidates": [
+          {
+            "section": "Play like never before ®",
+            "raw_label": "Play like never before ®",
+            "value": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback 1 , adaptive triggers 1 and 3D Audio 1 , and an incredible collection of PlayStation games.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Play like never before ®",
+            "raw_label": "Play like never before ®",
+            "value": "\"Enable Javascript on browser\"",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Stunning games",
+            "raw_label": "Stunning games",
+            "value": "Explore spectacular new worlds in generation-defining games exclusive to PlayStation consoles.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Lightning speed",
+            "raw_label": "Lightning speed",
+            "value": "Jump into the action and keep play moving with ultra-fast, integrated console technology.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Breathtaking immersion",
+            "raw_label": "Breathtaking immersion",
+            "value": "Put yourself at the heart of the game with responsive controls, 360-degree audio 1 , and intricate graphical detail.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Stunning games on PS5",
+            "raw_label": "Stunning games on PS5",
+            "value": "Immerse yourself in games that look and sound stunning, including console exclusives from PlayStation Studios and full backwards compatibility for your PS4 library.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 console exclusives",
+            "raw_label": "PS5 console exclusives",
+            "value": "Experience generation-defining games from PlayStation Studios.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Play the biggest games on PlayStation",
+            "raw_label": "Play the biggest games on PlayStation",
+            "value": "Join millions of players in legendary titles like Fortnite, Monster Hunter Wilds, and Grand Theft Auto V.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Backwards compatible with PS4®",
+            "raw_label": "Backwards compatible with PS4®",
+            "value": "Play over 8,500 PS4 games 3 on PS5 consoles. Enjoy faster and smoother frame rates in select PS4 games with PS5’s Game Boost technology.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "On-demand games with PlayStation Plus",
+            "raw_label": "On-demand games with PlayStation Plus",
+            "value": "Join PlayStation Plus and enjoy instant access to a huge library of PS5 and PS4 games that evolves every month, with a choice of membership plans 2 to suit how you play.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Hundreds of games ready to play",
+            "raw_label": "Hundreds of games ready to play",
+            "value": "Choose your next adventure from a vast library of PS5 and PS4 titles including recent releases, innovative indies, big-budget hits, and Ubisoft+ Classics.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "All-time classics",
+            "raw_label": "All-time classics",
+            "value": "Step back in time to enjoy hundreds of much-loved games from the original PlayStation, PS2, and PS3 consoles, and PSP (PlayStation®Portable).",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "New gaming experiences every month",
+            "raw_label": "New gaming experiences every month",
+            "value": "Expand your collection with monthly games delivered straight to your console, yours to play as long as you remain a member.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Spectacular visuals at lightning speed",
+            "raw_label": "Spectacular visuals at lightning speed",
+            "value": "Harness the might of a custom CPU, GPU and SSD that deliver breathtaking graphics and smooth gameplay.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Near instant load times",
+            "raw_label": "Near instant load times",
+            "value": "An ultra-high-speed SSD maximises your play sessions for installed PS5 games.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Next level game design",
+            "raw_label": "Next level game design",
+            "value": "The custom integration of the PS5 console’s systems lets creators pull data from the SSD so quickly that they can design games in ways never before possible.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Explore lifelike environments with Ray Tracing",
+            "raw_label": "Explore lifelike environments with Ray Tracing",
+            "value": "Ray Tracing brings new levels of realism with natural shadows and reflections in supported PS5 games.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Vibrant colours & crisp 4K graphics",
+            "raw_label": "Vibrant colours & crisp 4K graphics",
+            "value": "Intricate details come to life with your 4K TV and compatible PS5 games. With an HDR TV, supported PS5 games pop with an unbelievable range of colours.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Navigate game worlds with incredible responsiveness",
+            "raw_label": "Navigate game worlds with incredible responsiveness",
+            "value": "Smooth and fluid high-frame-rate gameplay for compatible games.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Immersive play with the DualSense® wireless controller",
+            "raw_label": "Immersive play with the DualSense® wireless controller",
+            "value": "Discover a deeper gaming experience* with the incredibly tactile features of the innovative PS5 controller.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Immersive play with the DualSense® wireless controller",
+            "raw_label": "Immersive play with the DualSense® wireless controller",
+            "value": "*Compared to DUALSHOCK®4 wireless controller",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Adaptive Triggers 1",
+            "raw_label": "Adaptive Triggers 1",
+            "value": "Dynamic resistance mimics the tension of interactions with in-game gear and objects in select PS5 games. From pulling back an increasingly tight bowstring to hitting the brakes on a speeding car, feel physically connected to your on-screen actions.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Haptic Feedback 1",
+            "raw_label": "Haptic Feedback 1",
+            "value": "Responsive vibrations react to your in-game choices and simulate environmental factors in select PS5 games. In your hands, these dynamic vibrations can simulate the feeling of everything from environments to the recoil of different weapons.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Enhance your perception with 3D Audio 1",
+            "raw_label": "Enhance your perception with 3D Audio 1",
+            "value": "From the distant calls of teammates to the nearby approach of sneaking predators, your surroundings come alive with Tempest 3D AudioTech through TV speakers or compatible headphones in supported games.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 accessories",
+            "raw_label": "PS5 accessories",
+            "value": "Build your ultimate PS5 setup with additional controllers and matching console covers, audio headsets and more.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Controllers",
+            "raw_label": "Controllers",
+            "value": "Discover a range of vibrant DualSense wireless controller colours, raise your game with the ultra-customisable DualSense Edge™ wireless controller, explore a world of possibilities for players with diverse needs with the Access™ controller, and elevate your arcade or simulator game with wheels, fight sticks and other specialist controllers.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Gaming audio",
+            "raw_label": "Gaming audio",
+            "value": "Studio-inspired planar magnetic drivers enable our new headset and earbuds to reproduce PS5 3D Audio 1 with astonishing accuracy. Pinpoint threats with razor-sharp precision and pick out subtle details, all delivered to you at lightning-fast speed using new PlayStation Link™ wireless technology.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Perfect your setup",
+            "raw_label": "Perfect your setup",
+            "value": "Change up your style with a PS5 console cover in a range of colours, add extra storage, a removable disc drive*, vertical stand**, and a charging station for your controllers.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Perfect your setup",
+            "raw_label": "Perfect your setup",
+            "value": "*This product is only for PS5 Digital Edition consoles (CFI-2000 model group – slim). Drive will play 4K Ultra HD Blu ray™ discs, Blu-ray discs, and DVDs. Internet connection required to pair Disc Drive and PS5 console upon setup. **Compatible Hardware: PS5® CFI-1000 model group, PS5® CFI-2000 model group - slim.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Perfect your setup",
+            "raw_label": "Perfect your setup",
+            "value": "Screen image simulated",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PlayStation Portal™ remote player",
+            "raw_label": "PlayStation Portal™ remote player",
+            "value": "Feel the power of PlayStation in the palm of your hand as you play your PS5 console over your home Wi-Fi 4 with console-quality controls and a gorgeous 8-inch built-in display.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Stay connected with PlayStation™ App",
+            "raw_label": "Stay connected with PlayStation™ App",
+            "value": "Bring your PS5 experience with you wherever you go with the companion PlayStation App. Stay in touch with PlayStation friends via text and voice chat, view your media gallery with Game Captures, purchase games via PlayStation™ Store, and more, all from the free app for Apple and Android devices.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Which PS5 console is right for you?",
+            "raw_label": "Which PS5 console is right for you?",
+            "value": "Choose how you play with a choice of Blu-ray Disc and all-digital consoles.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 console - 1TB",
+            "raw_label": "PS5 console - 1TB",
+            "value": "Play PS5 and PS4 games on Blu-ray discs. You can also download digital PS5 and PS4 games from PlayStation Store.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "An all-digital version of the PS5 console with no disc drive. Download and play digital games from PlayStation Store, with an option to extend your play with an additional disc drive* (sold separately).",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "* This product is intended only for PS5 Digital Edition consoles (CFI-2000 and CFI 2100 model groups – slim). Drive will play 4K Ultra HD Blu ray™ discs, Blu-ray discs, and DVDs. Internet connection required to pair Disc Drive and PS5 console upon setup. For more details visit PlayStation.com/accessories .",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Which PS5 console is right for you?",
+            "raw_label": "Which PS5 console is right for you?",
+            "value": "Choose how you play with a choice of Blu-ray Disc and all-digital consoles.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 Console - 1TB",
+            "raw_label": "PS5 Console - 1TB",
+            "value": "PS5 Console - 1TB",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 Console - 1TB",
+            "raw_label": "PS5 Console - 1TB",
+            "value": "Play PS5 and PS4 games on Blu-ray discs. You can also download digital PS5 and PS4 games from PlayStation Store.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "PS5 Digital Edition - 825GB",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "PS5 Digital Edition - 825GB",
+            "raw_label": "PS5 Digital Edition - 825GB",
+            "value": "An all-digital version of the PS5 console with no disc drive. Download and play digital games from PlayStation Store, with an option to extend your play with an additional disc drive* (sold separately). * This product is intended only for PS5 Digital Edition consoles (CFI-2000 and CFI 2100 model groups – slim). Drive will play 4K Ultra HD Blu ray™ discs, Blu-ray discs, and DVDs. Internet connection required to pair Disc Drive and PS5 console upon setup. For more details visit PlayStation.com/accessories .",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Your PlayStation®5 stats",
+            "raw_label": "Your PlayStation®5 stats",
+            "value": "Track your PS5 journey with info on your total play time, games you own and more.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "View your stats",
+            "raw_label": "View your stats",
+            "value": "Sign-in with your account for PlayStation to check all the stats on your personalised dashboard.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "It looks like you’re not a PS Plus member yet",
+            "raw_label": "It looks like you’re not a PS Plus member yet",
+            "value": "We don’t have any stats to show you. Join PlayStation Plus today - once you’re a member come back to see how your journey is progressing.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Uh, oh...",
+            "raw_label": "Uh, oh...",
+            "value": "Sorry, it looks like we had a problem finding your data. Try refreshing, or come back later.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "See what else your PS5 console can do.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Your favourite streaming services, together on PS5.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "How we make play more accessible on PS5 consoles and in our games.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Controllers, gaming audio, additional storage and much more.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Yes. PS5 consoles are backwards compatible with PS4 games, with over 4000 titles ready to play. Find out more here: PS4 games playable on PS5 consoles.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "PS5 consoles launched in select territories on 12 November 2020, with a full global launch soon after on 19 November 2020.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Yes, you can link your account for PlayStation and your Discord account to share your gaming activity, use voice chat and more. Get full details here: How to link your Discord account to PlayStation.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "PS5 consoles are available in a range of digital and disc-based editions, as well as with different controller options and as software bundles. Check online retailers for availability and price details.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Players in the US, UK, Germany, Austria, France, Luxembourg, Belgium, Netherlands, Spain, Portugal and Italy can shop direct with PlayStation and enjoy additional benefits including free delivery on every order, from direct.playstation.com .",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "Visit PlayStation.com/support for assistance with a range of console, subscription and game issues.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "The same features that make PS5 the best place to play have been packed into a smaller form factor, with a 1TB SSD for more internal storage. The new PS5 has been reduced in volume by more than 30%, and weight by 18% and 24% compared to the previous models.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "© 2026 MARVEL © 2026 Sony Interactive Entertainment LLC Developed by Insomniac Games, Inc",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "1. Available when feature is supported by game. 3D audio via built-in TV speakers or analogue/USB stereo headphones. Set up required.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "2. PlayStation Plus subscription fees recur until cancelled. Age restrictions apply. Full terms: www.playstation.com/legal/ps-plus-usage-terms . See playstation.com/ps-plus for details and updates on PS Plus offerings.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "3. Upgrade may be offered at no additional cost or for a fee and may be available for a limited time. To upgrade eligible PS4 disc titles to digital PS5 versions, you need a PS5™ console with a disc drive. Streaming services may require paid subscription and may not be available in all countries. Internet and account for PlayStation required. Account holders must be 7+, under 18s require parental consent. Full terms apply: playstation.com/Terms.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "4. PlayStation Portal remote player can stream compatible games installed on your PS5 console. PlayStation Portal remote player requires broadband internet Wi-Fi with at least 5Mbps for use. For a better play experience, a high-speed connection of at least 15Mbps is recommended. The quality and connectivity of your play experience may vary depending on your network environment. A PS5 console and account for PlayStation is required. The PS5 console must be connected to a broadband internet connection, powered on fully or in Rest Mode, and it must be paired with your PlayStation PlayStation Portal remote player.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Where will play take you?",
+            "raw_label": "Where will play take you?",
+            "value": "5. A portion of the SSD is reserved for system software and other functions so the available SSD capacity may vary.",
+            "reason": "Configuration option or marketing; requires scoped canonical extraction"
+          },
+          {
+            "section": "Specifications",
+            "raw_label": "Combined hardware table",
+            "value": "\nDesign and specifications are subject to change without notice� Depending  \non the software version in use, the console may operate differently than described  \nin this manual�\nPlayStation®5 console\nConsole with the disc drive \ninstalled\nConsole without a disc drive \ninstalled\nMain Processor\nSingle-chip custom processor\nCPU: x86-64-AMD Ryzen™ “Zen2”, 8 cores/16 threads\nGPU:  10 TFL OPS, AMD Radeon™ RDNA-based graphics \nengine\nMemory GDDR6 16 GB\nStorage 1 TB Custom SSD*1 \nInput/output*2\nUSB Type-A port (SuperSpeed USB 10Gbps) ×2\nUSB Type-C® port (Hi-Speed USB)\nUSB Type-C® port (SuperSpeed USB 10Gbps) \nExpansion connector (Key M)\nDisc drive port\nNetworking\nEthernet (10BASE-T, 100BASE-TX, 1000BASE-T)\nIEEE 802�11 a/b/g/n/ac/ax\nBluetooth® 5�1\nAV output HDMI™ OUT port*3\nElectrical rating 220–240 V  1�65 A\n50/60 Hz\nMaximum rated power 350 W\nExternal dimensions\n(excluding projecting parts)\nApprox� 358 × 96 × 2 16 mm \n(width × height × depth)\nApprox� 358 × 80 × 2 16 mm \n(width × height × depth)\nMass Approx� 3� 2 kg Approx� 2 �6 kg\nOperating temperature 5 °C to 35 °C\n*1 A portion of the SSD capacity is reserved for use in connection with console administration, \nmaintenance and additional options� As a r esult, the availability of SSD capacity may vary�\n*2 Usability of all connected devices is not guaranteed�\n*3 Use the included HDMI cable�\n14\n",
+            "reason": "Combined Disc/Digital table requires row-level revision routing"
+          }
+        ],
+        "photo_candidates": [
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-evergreen-hero-desktop-video-thumb-01-en-16oct25?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-hero-evergreen-desktop-video-thumb-01-en-03jul24?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-rift-background-desktop-01-en-17jun24?$100px--t$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/PS5-stunning-games-image-block-mobile-03-en-28aug26?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-lightning-speed-image-block-01-en-17jun24?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-breath-taking-immersion-image-block-en-27aug26?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-stunning-games-video-desktop-thumbnail-01-en-20jun24?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-blue-momentum-background-desktop-02-en-05nov25?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/Wolverine-ps5-overview-image-block-02-en-28aug26?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/fortnite-ps5-overview-image-block-01-en-21jul25?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/God-of-War-ps5-overview-image-block-01-en-05aug24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/fortnite-packshot-01-en-19jun24?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/saros-key-art-01-ps5-26sept25?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-console-blue-background-desktop-03-en-05nov25?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/gt7-ps5-overview-image-block-01-en-19jun24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ratchet-and-clank-rift-apart-ps5-overview-image-block-01-en-19jun24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/spider-man-2-ps5-overview-image-block-02-en-27jun24?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-immersive_controller-internals-widescreen-0071?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-blue-momentum-background-desktop-02-en-18jun24?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-controllers-image-block-01-en-09jul24?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-headsets-image-block-01-en-09jul24?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-accessories-image-block-01-en-21jun24?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-dualsense-grey-gradient-background-block-desktop-01-en-30aug23?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-slim-edition-left-image-block-01-en-24jun24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-slim-digital-edition-right-image-block-01-en-24jun24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-slim-edition-left-mobile-image-block-01-en-24jun24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-slim-digital-edition-right-mobile-image-block-01-en-24jun24?$100px$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-blue-gradient-background-desktop-01-en-21jun24?$100px$",
+            "reason": "Packaging, game, feature or accessory image"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-shapes-image-block-01-en-21jun24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-more-features-challenges-image-block-04-en-21oct20?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-entertainment-keyart-01-en-04oct23?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          },
+          {
+            "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-overview-accessories-image-block-01-en-24jun24?$100px--t$",
+            "reason": "Model image; exact revision/color/bundle relation unproven"
+          }
+        ],
+        "manuals": [
+          {
+            "title": "CFI-2016A/B Quick Start Guide CFI-2016A/B Quick Start Guide",
+            "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Quick_Start_Guide_Web$en-gb.pdf",
+            "type": "Quick Start",
+            "relation": "official_hardware_model_code",
+            "verified": false,
+            "language": "Не проверена",
+            "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+          },
+          {
+            "title": "CFI-2016A/B Safety Guide CFI-2016A/B Safety Guide",
+            "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en-gb.pdf",
+            "type": "Safety Guide",
+            "relation": "official_hardware_model_code",
+            "verified": false,
+            "language": "Не проверена",
+            "source_url": "https://www.playstation.com/en-gb/support/hardware/manuals/"
+          }
+        ],
+        "manual_status": "Не проверена",
+        "configuration_fields": {},
+        "exact_photo_assets": [],
+        "support_url": "https://www.playstation.com/en-gb/support/hardware/manuals/",
+        "exact_official_pdp": "",
+        "structured_identity": [],
+        "sitemap_children": [
+          "https://www.playstation.com/es-ar/sitemap.xml",
+          "https://www.playstation.com/en-au/sitemap.xml",
+          "https://www.playstation.com/de-at/sitemap.xml",
+          "https://www.playstation.com/fr-be/sitemap.xml",
+          "https://www.playstation.com/nl-be/sitemap.xml",
+          "https://www.playstation.com/pt-br/sitemap.xml",
+          "https://www.playstation.com/en-ca/sitemap.xml",
+          "https://www.playstation.com/fr-ca/sitemap.xml",
+          "https://www.playstation.com/zh-hans-cn/sitemap.xml",
+          "https://www.playstation.com/cs-cz/sitemap.xml",
+          "https://www.playstation.com/en-cz/sitemap.xml",
+          "https://www.playstation.com/da-dk/sitemap.xml",
+          "https://www.playstation.com/en-dk/sitemap.xml",
+          "https://www.playstation.com/en-fi/sitemap.xml",
+          "https://www.playstation.com/fi-fi/sitemap.xml",
+          "https://www.playstation.com/fr-fr/sitemap.xml",
+          "https://www.playstation.com/de-de/sitemap.xml",
+          "https://www.playstation.com/en-hk/sitemap.xml",
+          "https://www.playstation.com/zh-hans-hk/sitemap.xml",
+          "https://www.playstation.com/zh-hant-hk/sitemap.xml",
+          "https://www.playstation.com/en-hu/sitemap.xml",
+          "https://www.playstation.com/hu-hu/sitemap.xml",
+          "https://www.playstation.com/en-is/sitemap.xml",
+          "https://www.playstation.com/it-it/sitemap.xml",
+          "https://www.playstation.com/ja-jp/sitemap.xml",
+          "https://www.playstation.com/de-lu/sitemap.xml",
+          "https://www.playstation.com/fr-lu/sitemap.xml",
+          "https://www.playstation.com/es-mx/sitemap.xml",
+          "https://www.playstation.com/nl-nl/sitemap.xml",
+          "https://www.playstation.com/en-no/sitemap.xml",
+          "https://www.playstation.com/no-no/sitemap.xml",
+          "https://www.playstation.com/en-pl/sitemap.xml",
+          "https://www.playstation.com/pl-pl/sitemap.xml",
+          "https://www.playstation.com/ru-ru/sitemap.xml",
+          "https://www.playstation.com/ar-sa/sitemap.xml",
+          "https://www.playstation.com/en-sa/sitemap.xml",
+          "https://www.playstation.com/es-es/sitemap.xml",
+          "https://www.playstation.com/en-se/sitemap.xml",
+          "https://www.playstation.com/sv-se/sitemap.xml",
+          "https://www.playstation.com/de-ch/sitemap.xml",
+          "https://www.playstation.com/fr-ch/sitemap.xml",
+          "https://www.playstation.com/it-ch/sitemap.xml",
+          "https://www.playstation.com/ar-ae/sitemap.xml",
+          "https://www.playstation.com/en-ae/sitemap.xml",
+          "https://www.playstation.com/en-gb/sitemap.xml",
+          "https://www.playstation.com/en-us/sitemap.xml",
+          "https://www.playstation.com/sitemap-ar.xml",
+          "https://www.playstation.com/sitemap-bg.xml",
+          "https://www.playstation.com/sitemap-el.xml",
+          "https://www.playstation.com/sitemap-en.xml",
+          "https://www.playstation.com/sitemap-es.xml",
+          "https://www.playstation.com/sitemap-he.xml",
+          "https://www.playstation.com/sitemap-hr.xml",
+          "https://www.playstation.com/sitemap-ro.xml",
+          "https://www.playstation.com/sitemap-ru.xml",
+          "https://www.playstation.com/sitemap-sk.xml",
+          "https://www.playstation.com/sitemap-sl.xml",
+          "https://www.playstation.com/sitemap-sr.xml",
+          "https://www.playstation.com/sitemap-th.xml",
+          "https://www.playstation.com/sitemap-tr.xml",
+          "https://www.playstation.com/sitemap-uk.xml",
+          "https://www.playstation.com/ko-kr/sitemap.xml",
+          "https://www.playstation.com/zh-hant-tw/sitemap.xml",
+          "https://www.playstation.com/en-tw/sitemap.xml",
+          "https://www.playstation.com/pt-pt/sitemap.xml"
+        ],
+        "hardware_model": "CFI-2016A",
+        "hardware_family": "ps5_slim",
+        "pdf_audit": {
+          "url": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en-gb.pdf",
+          "sha256": "9135b13e168bfda15c10c7fa3052c9c118af1bff511b3bb0ce55eadda9c76c0d",
+          "pages": 20,
+          "type": "Safety Guide",
+          "text_model_codes": [
+            "CFI-2016"
+          ]
+        },
+        "revision_scope": "CFI-2016A",
+        "hardware_spec_source": "https://www.playstation.com/content/dam/global_pdc/en-gb/corporate/support/manuals/ps5-docs/2000ab/CFI-20XX_PS5_Safety_Guide_Web$en-gb.pdf",
+        "model_key": "ps5",
+        "configuration_complete": false,
+        "dealer_fallback": {
+          "url": "",
+          "status": "dealer_url_needed",
+          "accepted": false,
+          "reason": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc 1TB CFI-2016A» (артикул CFI-2016A). Не хватает: configuration_unresolved, specifications_missing, exact_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "scope": "Dealer evidence requires separate exact configuration review"
+        }
+      }
+    }
+  ]
+}

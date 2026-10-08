@@ -150,6 +150,7 @@ def run_once(
     lenovo_adapter_factory: Callable[[], object] | None = None,
     jbl_adapter_factory: Callable[[], object] | None = None,
     apple_adapter_factory: Callable[[], object] | None = None,
+    playstation_adapter_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -159,6 +160,11 @@ def run_once(
         product=jobs.get_product(database,product_id)
         if not product:
             jobs.finish(database,job_id,"error","Подтверждённый товар не найден."); return True
+        from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
+        if product["brand"].strip().casefold() in PLAYSTATION_BRANDS:
+            from . import playstation_pipeline
+            playstation_pipeline.run_job(database,job_id,product_id,product,stages=job["stages"],adapter_factory=playstation_adapter_factory,dns_adapter_factory=dns_adapter_factory,clock=clock)
+            return True
         if product["brand"].strip().casefold() in BOSCH_HOME_BRAND_ALIASES:
             bosch_pipeline.run_job(database, job_id, product_id, product, stages=job["stages"],
                                    adapter_factory=bosch_adapter_factory,

@@ -89,8 +89,12 @@ def export_batch(database: Path,batch_id: str)->bytes:
     photo_columns=["Ширина, px","Высота, px","Размер файла","Формат"]
     photos=book.create_sheet(_title("Фотографии",used)); _headers(photos,["Товар","Источник","Тип","URL","Подтверждение варианта",*photo_columns])
     photo_candidates = None
+    from . import playstation_pipeline
+    from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
     for p in batch["products"]:
         source_pages = jobs.get_source_pages(database, p["id"])
+        ps=p['brand'].strip().casefold() in PLAYSTATION_BRANDS
+        ps_evidence=card_evidence.load(database,p['id'],'playstation') if ps else None
         lg = lg_batch.is_lg(p)
         samsung = p["brand"].strip().upper() == "SAMSUNG"
         jbl = p["brand"].strip().upper() == "JBL"
@@ -123,7 +127,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
-            tied = photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
+            tied = playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
@@ -216,6 +220,30 @@ def export_batch(database: Path,batch_id: str)->bytes:
             ready_jbl.append([p["name"],p["search_code"],jbl_pipeline.VERDICTS[r["verdict"]],"; ".join(jbl_pipeline.GAPS[g] for g in r["gaps"]),r["manual_status"],r["model_identity"],r["variant_identity"]])
             for c in ev.get("rejected_specs",[]):candidates_jbl.append([p["name"],c["section"],c["raw_label"],c["value"],c["reason"]])
             for d in ev.get("manuals",[]):documents_jbl.append([p["name"],d["type"],d["title"],d["url"],d["relation"],"Проверена" if d["verified"] else "Не проверена"])
+    from . import playstation_pipeline
+    from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
+    ps_products=[p for p in batch['products'] if p['brand'].strip().casefold() in PLAYSTATION_BRANDS]
+    if ps_products:
+        ps_ready=book.create_sheet(_title('Готовность PlayStation',used))
+        _headers(ps_ready,['Товар','Артикул','Готовность','Модель','CFI','Конфигурация','Пользовательская инструкция','Пробелы'])
+        ps_config=book.create_sheet(_title('Конфигурация PlayStation',used))
+        _headers(ps_config,['Артикул','Поле','Значение','Официальный источник'])
+        ps_candidates=book.create_sheet(_title('Кандидаты PlayStation',used))
+        _headers(ps_candidates,['Артикул','Раздел','Исходное поле','Значение','Причина'])
+        ps_documents=book.create_sheet(_title('Документы PlayStation',used))
+        _headers(ps_documents,['Артикул','Тип','Название','URL','Связь','Проверка'])
+        for p in ps_products:
+            ev=card_evidence.load(database,p['id'],'playstation') or {};r=playstation_pipeline.card_readiness(database,p['id']);i=r['identity']
+            ps_ready.append([p['name'],p['search_code'],'Готова' if r['verdict']=='export_ready' else 'Не готова',i.get('model','unproven'),ev.get('hardware_model',''),i.get('configuration','unproven'),r['manual_status'],'; '.join(playstation_pipeline.GAPS[g] for g in r['gaps'])])
+            for key,value in r['configuration_fields'].items():
+                label={'storage':'Объём накопителя','color':'Цвет','disc':'Оптический привод','bundle':'Комплект','bundle_contents':'Комплектация','storefront':'Регион официального магазина'}.get(key,key)
+                ps_config.append([p['search_code'],label,value,ev.get('exact_official_pdp','')])
+            for c in ev.get('configuration_candidates',[]):ps_candidates.append([p['search_code'],c['section'],c['raw_label'],c['value'],c['reason']])
+            for d in ev.get('manuals',[]):ps_documents.append([p['search_code'],d['type'],d['title'],d['url'],d['relation'],'Проверена' if d['verified'] else 'Не проверена'])
+            for c in ev.get('photo_candidates',[]):
+                if photo_candidates is None:
+                    photo_candidates=book.create_sheet(_title('Фото-кандидаты',used));_headers(photo_candidates,['Товар','Источник','Тип','URL','Выбрано для просмотра','Статус',*photo_columns])
+                photo_candidates.append([p['name'],'PlayStation','Кандидат',c['url'],'Нет',c['reason'],'не определено','не определено','не определено','не определено'])
     apple_products = [p for p in batch["products"] if p["brand"].strip().upper() == "APPLE"]
     if apple_products:
         from . import apple_pipeline

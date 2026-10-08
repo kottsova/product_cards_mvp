@@ -101,6 +101,8 @@ SAMSUNG_STATUS_NAMES = {"official_base_only": "Значение официаль
 
 
 def display_status(status: str, source: str = "") -> str:
+    if source.startswith('playstation'):
+        return {'full_sku_official':'Параметр точного коммерческого артикула PlayStation','model_confirmed_official':'Общая характеристика модели PlayStation','hardware_confirmed_official':'Характеристика оборудования с подтверждённым CFI'}.get(status,STATUS_NAMES.get(status,status))
     if source == "apple_model" and status == "model_confirmed_official":
         return "Подтверждено для точной модели Apple"
     if source == "apple" and status == "full_sku_official":

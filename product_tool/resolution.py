@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Any, Iterable
 
 SUPPLIERS={"sulpak"}
-OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl","apple","apple_model"}
+OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl","apple","apple_model","playstation","playstation_model","playstation_hardware"}
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -50,6 +50,21 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             if f["source_key"] in SUPPLIERS and pages.get(f["source_key"],{}).get("match_level")=="full_sku" and f["source_key"] not in seen:
                 suppliers.append(f); seen.add(f["source_key"])
         official=[f for f in values if f["source_key"] in OFFICIAL]
+        ps=[f for f in official if f['source_key'].startswith('playstation') and not pages.get(f['source_key'],{}).get('error') and pages.get(f['source_key'],{}).get('match_level') in {'full_sku','model_confirmed','hardware_confirmed'}]
+        if ps:
+            from .playstation_identity import configuration_sensitive
+            # Hardware facts are scoped to an exact CFI, never to a retail/bundle SKU.
+            eligible=[f for f in ps if f['source_key']!='playstation_model' or not configuration_sensitive(name)]
+            exact=[f for f in eligible if f['source_key']=='playstation' and pages['playstation']['match_level']=='full_sku']
+            chosen=(exact or eligible)
+            if not chosen:
+                results.append(ResolvedValue(name,'','','needs_review','Параметр модели не подтверждает конфигурацию PlayStation.','',False,False))
+            elif _different(chosen):
+                results.append(ResolvedValue(name,'','','needs_review','Конфликт параметров оборудования PlayStation.','',True,False))
+            else:
+                fact=chosen[0];scope='full_sku_official' if exact else 'hardware_confirmed_official' if fact['source_key']=='playstation_hardware' else 'model_confirmed_official'
+                results.append(ResolvedValue(name,fact['normalized_value'],fact['unit'],scope,'Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.',fact['source_key'],False,bool(exact)))
+            continue
         if (name == "color" or name.startswith("color__") or name.startswith("\u043e\u0442\u0434\u0435\u043b\u043a\u0430_")) and any(key in pages for key in ("lg", "lg_kz", "lg_ru", "lg_global")):
             exact = [f for f in values if pages.get(f["source_key"], {}).get("match_level") in {"full_sku", "model_and_code_confirmed"}]
             if not exact:

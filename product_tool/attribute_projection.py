@@ -154,6 +154,17 @@ def project_final_rows(rows: list[dict[str, Any]], *, exact_ru: bool = False) ->
 def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     rows = jobs.comparison_rows(path, product_id)
     product = jobs.get_product(path, product_id)
+    from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
+    if product and product['brand'].strip().casefold() in PLAYSTATION_BRANDS:
+        labels={'product_dimensions__width':'Ширина','product_dimensions__height':'Высота','product_dimensions__depth':'Глубина','product_weight':'Вес','объем_накопителя':'Объём накопителя'}
+        for row in rows:
+            row['display_name']=labels.get(row['normalized_name'],row['display_name'])
+            resolved=row.get('resolved')
+            if resolved and resolved.get('display_value'):
+                value=resolved['display_value']
+                for pattern,replacement in ((r'\bgb\b','ГБ'),(r'\btb\b','ТБ'),(r'\bw\b','Вт'),(r'\bmah\b','мА·ч')):value=re.sub(pattern,replacement,value,flags=re.I)
+                resolved['display_value']=value
+        return rows
     if product and product["brand"].strip().upper() == "BOSCH" and any(
             page["source_key"] == "bosch_home" for page in jobs.get_source_pages(path, product_id)):
         return bosch_presentation.project(rows)

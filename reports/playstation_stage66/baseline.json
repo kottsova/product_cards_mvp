@@ -1,0 +1,160 @@
+{
+  "mode": "baseline",
+  "dataset_sha256": null,
+  "results": [
+    {
+      "input": {
+        "id": 1,
+        "batch_id": "ps66",
+        "row_number": 1,
+        "name": "PlayStation 5 Slim Disc 1TB CFI-2016A",
+        "brand": "PlayStation",
+        "search_code": "CFI-2016A",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "f7f82a3b473246af9a2a6896cd1abe7b",
+        "product_id": 1,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc 1TB CFI-2016A» (артикул CFI-2016A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:29:26+00:00",
+        "updated_at": "2026-10-08T11:29:26+00:00",
+        "started_at": "2026-10-08T11:29:26+00:00",
+        "finished_at": "2026-10-08T11:29:26+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc 1TB CFI-2016A» (артикул CFI-2016A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:29:26+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 1,
+          "job_id": "f7f82a3b473246af9a2a6896cd1abe7b",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:29:26+00:00"
+        },
+        {
+          "id": 2,
+          "job_id": "f7f82a3b473246af9a2a6896cd1abe7b",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:29:26+00:00"
+        },
+        {
+          "id": 3,
+          "job_id": "f7f82a3b473246af9a2a6896cd1abe7b",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:29:26+00:00"
+        },
+        {
+          "id": 4,
+          "job_id": "f7f82a3b473246af9a2a6896cd1abe7b",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc 1TB CFI-2016A» (артикул CFI-2016A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:29:26+00:00"
+        },
+        {
+          "id": 5,
+          "job_id": "f7f82a3b473246af9a2a6896cd1abe7b",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:29:26+00:00"
+        },
+        {
+          "id": 6,
+          "job_id": "f7f82a3b473246af9a2a6896cd1abe7b",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:29:26+00:00"
+        },
+        {
+          "id": 7,
+          "job_id": "f7f82a3b473246af9a2a6896cd1abe7b",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc 1TB CFI-2016A» (артикул CFI-2016A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:29:26+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    }
+  ]
+}

@@ -1,0 +1,1546 @@
+{
+  "mode": "first_pass",
+  "dataset_sha256": "c2cac5f22132a2061c2ad114b1fa6030188f1ad26ddfc665734d0a75014d1422",
+  "results": [
+    {
+      "input": {
+        "id": 1,
+        "batch_id": "ps66",
+        "row_number": 1,
+        "name": "PlayStation 5 original Disc CFI-1216A",
+        "brand": "PlayStation",
+        "search_code": "CFI-1216A",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "4ec64cb9b7604d778419090f150ab2de",
+        "product_id": 1,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Disc CFI-1216A» (артикул CFI-1216A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Disc CFI-1216A» (артикул CFI-1216A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 1,
+          "job_id": "4ec64cb9b7604d778419090f150ab2de",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 2,
+          "job_id": "4ec64cb9b7604d778419090f150ab2de",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 3,
+          "job_id": "4ec64cb9b7604d778419090f150ab2de",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 4,
+          "job_id": "4ec64cb9b7604d778419090f150ab2de",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Disc CFI-1216A» (артикул CFI-1216A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 5,
+          "job_id": "4ec64cb9b7604d778419090f150ab2de",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 6,
+          "job_id": "4ec64cb9b7604d778419090f150ab2de",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 7,
+          "job_id": "4ec64cb9b7604d778419090f150ab2de",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Disc CFI-1216A» (артикул CFI-1216A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 2,
+        "batch_id": "ps66",
+        "row_number": 2,
+        "name": "PlayStation 5 original Digital CFI-1216B",
+        "brand": "PlayStation",
+        "search_code": "CFI-1216B",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+        "product_id": 2,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Digital CFI-1216B» (артикул CFI-1216B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 2,
+          "product_id": 2,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Digital CFI-1216B» (артикул CFI-1216B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 8,
+          "job_id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 9,
+          "job_id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 10,
+          "job_id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 11,
+          "job_id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Digital CFI-1216B» (артикул CFI-1216B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 12,
+          "job_id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 13,
+          "job_id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 14,
+          "job_id": "f5e4f5faced24f7bbb3a911ce517dcd5",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 original Digital CFI-1216B» (артикул CFI-1216B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 3,
+        "batch_id": "ps66",
+        "row_number": 3,
+        "name": "PlayStation 5 Slim Digital CFI-2016B",
+        "brand": "PlayStation",
+        "search_code": "CFI-2016B",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "abbb2dbef541463b959b7bc6b99b810f",
+        "product_id": 3,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Digital CFI-2016B» (артикул CFI-2016B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 3,
+          "product_id": 3,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Digital CFI-2016B» (артикул CFI-2016B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 15,
+          "job_id": "abbb2dbef541463b959b7bc6b99b810f",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 16,
+          "job_id": "abbb2dbef541463b959b7bc6b99b810f",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 17,
+          "job_id": "abbb2dbef541463b959b7bc6b99b810f",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 18,
+          "job_id": "abbb2dbef541463b959b7bc6b99b810f",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Digital CFI-2016B» (артикул CFI-2016B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 19,
+          "job_id": "abbb2dbef541463b959b7bc6b99b810f",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 20,
+          "job_id": "abbb2dbef541463b959b7bc6b99b810f",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 21,
+          "job_id": "abbb2dbef541463b959b7bc6b99b810f",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Digital CFI-2016B» (артикул CFI-2016B). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 4,
+        "batch_id": "ps66",
+        "row_number": 4,
+        "name": "PlayStation 5 Pro CFI-7021",
+        "brand": "PlayStation",
+        "search_code": "CFI-7021",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "bdb9f8048d554e129d16575dab5846df",
+        "product_id": 4,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Pro CFI-7021» (артикул CFI-7021). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 4,
+          "product_id": 4,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Pro CFI-7021» (артикул CFI-7021). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 22,
+          "job_id": "bdb9f8048d554e129d16575dab5846df",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 23,
+          "job_id": "bdb9f8048d554e129d16575dab5846df",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 24,
+          "job_id": "bdb9f8048d554e129d16575dab5846df",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 25,
+          "job_id": "bdb9f8048d554e129d16575dab5846df",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation 5 Pro CFI-7021» (артикул CFI-7021). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 26,
+          "job_id": "bdb9f8048d554e129d16575dab5846df",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 27,
+          "job_id": "bdb9f8048d554e129d16575dab5846df",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 28,
+          "job_id": "bdb9f8048d554e129d16575dab5846df",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Pro CFI-7021» (артикул CFI-7021). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 5,
+        "batch_id": "ps66",
+        "row_number": 5,
+        "name": "DualSense Wireless Controller White CFI-ZCT1W",
+        "brand": "PlayStation",
+        "search_code": "CFI-ZCT1W",
+        "alternate_code": "",
+        "category": "controllers",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "5cf4f415a9dc4f11ab7500b415b21dad",
+        "product_id": 5,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller White CFI-ZCT1W» (артикул CFI-ZCT1W). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 5,
+          "product_id": 5,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller White CFI-ZCT1W» (артикул CFI-ZCT1W). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 29,
+          "job_id": "5cf4f415a9dc4f11ab7500b415b21dad",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 30,
+          "job_id": "5cf4f415a9dc4f11ab7500b415b21dad",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 31,
+          "job_id": "5cf4f415a9dc4f11ab7500b415b21dad",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 32,
+          "job_id": "5cf4f415a9dc4f11ab7500b415b21dad",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller White CFI-ZCT1W» (артикул CFI-ZCT1W). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 33,
+          "job_id": "5cf4f415a9dc4f11ab7500b415b21dad",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 34,
+          "job_id": "5cf4f415a9dc4f11ab7500b415b21dad",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 35,
+          "job_id": "5cf4f415a9dc4f11ab7500b415b21dad",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller White CFI-ZCT1W» (артикул CFI-ZCT1W). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 6,
+        "batch_id": "ps66",
+        "row_number": 6,
+        "name": "DualSense Wireless Controller Midnight Black",
+        "brand": "PlayStation",
+        "search_code": "1000050213-GB",
+        "alternate_code": "",
+        "category": "controllers",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "0bfabe5606bc4a069ea5d06147389838",
+        "product_id": 6,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller Midnight Black» (артикул 1000050213-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 6,
+          "product_id": 6,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller Midnight Black» (артикул 1000050213-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 36,
+          "job_id": "0bfabe5606bc4a069ea5d06147389838",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 37,
+          "job_id": "0bfabe5606bc4a069ea5d06147389838",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 38,
+          "job_id": "0bfabe5606bc4a069ea5d06147389838",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 39,
+          "job_id": "0bfabe5606bc4a069ea5d06147389838",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller Midnight Black» (артикул 1000050213-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 40,
+          "job_id": "0bfabe5606bc4a069ea5d06147389838",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 41,
+          "job_id": "0bfabe5606bc4a069ea5d06147389838",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 42,
+          "job_id": "0bfabe5606bc4a069ea5d06147389838",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation DualSense Wireless Controller Midnight Black» (артикул 1000050213-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 7,
+        "batch_id": "ps66",
+        "row_number": 7,
+        "name": "PlayStation Portal Remote Player White CFI-Y1016",
+        "brand": "PlayStation",
+        "search_code": "CFI-Y1016",
+        "alternate_code": "",
+        "category": "remote_players",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "e51832122acc4d2698fed79b37b402df",
+        "product_id": 7,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation Portal Remote Player White CFI-Y1016» (артикул CFI-Y1016). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 7,
+          "product_id": 7,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation Portal Remote Player White CFI-Y1016» (артикул CFI-Y1016). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 43,
+          "job_id": "e51832122acc4d2698fed79b37b402df",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 44,
+          "job_id": "e51832122acc4d2698fed79b37b402df",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 45,
+          "job_id": "e51832122acc4d2698fed79b37b402df",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 46,
+          "job_id": "e51832122acc4d2698fed79b37b402df",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation Portal Remote Player White CFI-Y1016» (артикул CFI-Y1016). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 47,
+          "job_id": "e51832122acc4d2698fed79b37b402df",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 48,
+          "job_id": "e51832122acc4d2698fed79b37b402df",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 49,
+          "job_id": "e51832122acc4d2698fed79b37b402df",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation Portal Remote Player White CFI-Y1016» (артикул CFI-Y1016). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 8,
+        "batch_id": "ps66",
+        "row_number": 8,
+        "name": "PULSE Elite Wireless Headset White CFI-ZWH2EC",
+        "brand": "PlayStation",
+        "search_code": "CFI-ZWH2EC",
+        "alternate_code": "",
+        "category": "headsets",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "85634b78649146328efecbf9ae570284",
+        "product_id": 8,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PULSE Elite Wireless Headset White CFI-ZWH2EC» (артикул CFI-ZWH2EC). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 8,
+          "product_id": 8,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PULSE Elite Wireless Headset White CFI-ZWH2EC» (артикул CFI-ZWH2EC). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 50,
+          "job_id": "85634b78649146328efecbf9ae570284",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 51,
+          "job_id": "85634b78649146328efecbf9ae570284",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 52,
+          "job_id": "85634b78649146328efecbf9ae570284",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 53,
+          "job_id": "85634b78649146328efecbf9ae570284",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PULSE Elite Wireless Headset White CFI-ZWH2EC» (артикул CFI-ZWH2EC). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 54,
+          "job_id": "85634b78649146328efecbf9ae570284",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 55,
+          "job_id": "85634b78649146328efecbf9ae570284",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 56,
+          "job_id": "85634b78649146328efecbf9ae570284",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PULSE Elite Wireless Headset White CFI-ZWH2EC» (артикул CFI-ZWH2EC). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 9,
+        "batch_id": "ps66",
+        "row_number": 9,
+        "name": "PlayStation 5 Slim Disc US CFI-2015A",
+        "brand": "PlayStation",
+        "search_code": "CFI-2015A",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "8f26544f63d34fc4a4f9ba971c9887a6",
+        "product_id": 9,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc US CFI-2015A» (артикул CFI-2015A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 9,
+          "product_id": 9,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc US CFI-2015A» (артикул CFI-2015A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 57,
+          "job_id": "8f26544f63d34fc4a4f9ba971c9887a6",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 58,
+          "job_id": "8f26544f63d34fc4a4f9ba971c9887a6",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 59,
+          "job_id": "8f26544f63d34fc4a4f9ba971c9887a6",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 60,
+          "job_id": "8f26544f63d34fc4a4f9ba971c9887a6",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc US CFI-2015A» (артикул CFI-2015A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 61,
+          "job_id": "8f26544f63d34fc4a4f9ba971c9887a6",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 62,
+          "job_id": "8f26544f63d34fc4a4f9ba971c9887a6",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 63,
+          "job_id": "8f26544f63d34fc4a4f9ba971c9887a6",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Slim Disc US CFI-2015A» (артикул CFI-2015A). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    },
+    {
+      "input": {
+        "id": 10,
+        "batch_id": "ps66",
+        "row_number": 10,
+        "name": "PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle",
+        "brand": "PlayStation",
+        "search_code": "1000049849-GB",
+        "alternate_code": "",
+        "category": "consoles",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{}",
+        "identity_json": "{}"
+      },
+      "job": {
+        "id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+        "product_id": 10,
+        "status": "error",
+        "current_stage": 6,
+        "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle» (артикул 1000049849-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+        "created_at": "2026-10-08T11:32:34+00:00",
+        "updated_at": "2026-10-08T11:32:34+00:00",
+        "started_at": "2026-10-08T11:32:34+00:00",
+        "finished_at": "2026-10-08T11:32:34+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 10,
+          "product_id": 10,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle» (артикул 1000049849-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-08T11:32:34+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing"
+        ],
+        "advisory_gaps": [
+          "dealer_cross_check_missing"
+        ],
+        "gaps": [
+          "no_official_full_sku_page",
+          "no_official_specifications",
+          "no_official_gallery_photo",
+          "instruction_missing",
+          "dealer_cross_check_missing"
+        ],
+        "official_exact_regions": [],
+        "official_facts": 0,
+        "official_facts_from_exact_pages": 0,
+        "official_gallery_selected": 0,
+        "official_gallery_from_exact_pages": 0,
+        "real_conflicts": 0,
+        "instruction": {
+          "found": 0,
+          "languages": [],
+          "russian": false,
+          "russian_file_found": false,
+          "verified_for_article": 0
+        },
+        "dealer_confirmed": []
+      },
+      "events": [
+        {
+          "id": 64,
+          "job_id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 65,
+          "job_id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 66,
+          "job_id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+          "stage": 1,
+          "level": "info",
+          "message": "Бренд «PlayStation» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 67,
+          "job_id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «PlayStation PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle» (артикул 1000049849-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 68,
+          "job_id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 69,
+          "job_id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        },
+        {
+          "id": 70,
+          "job_id": "d262a9a4e6de4a9dbed26f3ae7f9577e",
+          "stage": null,
+          "level": "warning",
+          "message": "Нет проверенного дилерского URL для «PlayStation PlayStation 5 Digital Edition 825 GB Fortnite Flowering Chaos Bundle» (артикул 1000049849-GB). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-08T11:32:34+00:00"
+        }
+      ],
+      "trace": [],
+      "evidence": null
+    }
+  ]
+}
