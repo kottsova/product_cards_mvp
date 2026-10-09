@@ -1,13 +1,15 @@
 """Expiring, auditable host stops shared by policy HTTP and browser paths.
 
-Historical fetch-log entries stay immutable.  A stop is effective only while
-its reason-specific cooldown is active; an attended success resolves only
-challenge stops.  Manual and fatal stops require an explicit operator action.
+Historical fetch-log entries stay immutable. A stop is effective only while
+its reason-specific cooldown is active. Legacy attended resolution clears
+only challenge; a proved newer attended response can clear temporary challenge
+and rate-limit stops. HTTP denial, manual and fatal stops remain independent.
 """
 
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
+import re
 from typing import Any, Iterable, Mapping
 from urllib.parse import urlsplit
 
@@ -104,6 +106,21 @@ def active_stops(entries: Iterable[Mapping[str, Any]], *, now: datetime | None =
             continue
         if entry.get("event") == "legacy_stop_migrated":
             # Migration annotations are audit records, never fresh stops.
+            continue
+        if entry.get('event') == 'attended_response_success':
+            proof = entry.get('proof', {})
+            domain = str(entry.get('domain') or '').casefold()
+            observed = _utc(proof.get('captured_at'))
+            if (proof.get('status_code') == 200 and proof.get('protection_status') == 'ordinary_page'
+                    and (urlsplit(str(proof.get('url') or '')).hostname or '').casefold() == domain
+                    and re.fullmatch(r'[0-9a-f]{64}',str(proof.get('sha256') or '')) and entry.get('source_session')
+                    and proof.get('source_session') == entry.get('source_session')
+                    and observed is not None and observed <= current):
+                for temporary in (CHALLENGE, RATE_LIMIT):
+                    previous = state.get((domain, temporary))
+                    created = _utc((previous or {}).get('created_at') or (previous or {}).get('checked_at'))
+                    if created is not None and created <= observed:
+                        state.pop((domain, temporary), None)
             continue
         reason = stop_reason(entry)
         if not reason:

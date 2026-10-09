@@ -1,0 +1,43 @@
+{
+  "stage": 71,
+  "audit": "PASS",
+  "verdict": "Razer adapter production-ready for controlled use",
+  "controlled_scope": "Fresh public navigation in a user-authorized visible persistent Chrome session supplied through the existing adapter_factory/browser_session. HTTP-only and headless access are not claimed as recovered. CAPTCHA or current denial remains a stop.",
+  "live_official_models": 10,
+  "ready_ids": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    8,
+    9
+  ],
+  "not_ready_ids": [
+    4,
+    7,
+    10
+  ],
+  "confirmed_specs_before_capture": 130,
+  "confirmed_specs_after_live": 208,
+  "second_live_models": 6,
+  "second_live_stable": true,
+  "offline_parser_equal": true,
+  "manual_positions_verified": 10,
+  "distinct_ru_guides": 8,
+  "verified_photo_positions": 8,
+  "verified_photo_links": 19,
+  "prior_log_prefix_preserved": true,
+  "active_stops": {},
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 603.7768160999985,
+    "result": [
+      "Ran 1691 tests in 600.112s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  }
+}

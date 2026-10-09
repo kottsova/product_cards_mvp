@@ -16,8 +16,9 @@ HOSTS=('razer.com','razerzone.com')
 # Public catalog endpoint declared in the official robots.txt, never product seeds.
 SITEMAP='https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml'
 class RazerAdapter:
- def __init__(self,*,clock=time.monotonic,fetch_log_path=Path('data/razer_fetch_log.json'),session=None,trace_callback=None,capture_dir=None,search_provider=None,browser_factory=None):
+ def __init__(self,*,clock=time.monotonic,fetch_log_path=Path('data/razer_fetch_log.json'),session=None,trace_callback=None,capture_dir=None,search_provider=None,browser_factory=None,browser_session=None):
   self.clock=clock;self.log=Path(fetch_log_path);self.http=session or PolicyAwareSession(self.log,allowed_hosts=HOSTS,clock=clock,underlying=BinarySafeSession(requests.Session()),max_bytes=15_000_000);self.trace_callback=trace_callback;self.reports={};self.capture_dir=Path(capture_dir) if capture_dir else self.log.parent/'razer_captures';self.search_provider=search_provider;self.browser_factory=browser_factory
+  self.browser_session=browser_session;self._owned_browser=None
  def trace(self,**item):
   if self.trace_callback:self.trace_callback({'event':'razer_discovery','timestamp':utc_now(),'identity_relation':'unproven',**item})
  def capture(self,url,html,provider):
@@ -28,35 +29,60 @@ class RazerAdapter:
   from . import policy_fetch,access_stop
   if (urlsplit(url).hostname or '') in access_stop.active_stops(policy_fetch.read_log(self.log)):
    self.trace(provider='official_support_browser',query=query,url=url,region='global',source_type='render',accepted=False,reason='host_stopped');return None
-  driver=(self.browser_factory() if self.browser_factory else PlaywrightBrowser(discover_runtime(),BrowserBudget(deadline_seconds=20,operation_timeout_seconds=8),('mysupport.razer.com','assets2.razerzone.com','assets.razerzone.com')))
+  if self.browser_session:driver=self.browser_session
+  elif self.browser_factory:driver=self.browser_factory()
+  else:
+   from ..census.public_browser import PublicBrowserSession
+   if self._owned_browser is None:self._owned_browser=PublicBrowserSession(allowed_hosts=HOSTS,fetch_log_path=self.log)
+   driver=self._owned_browser
   try:
    driver.start();driver.call('goto',url=url,queries=[query],render_mode='render_existing_search_result',search_result_hosts=['mysupport.razer.com']);state=driver.call('document_snapshot');html=state.pop('html');self.trace(provider='official_support_browser',query=query,url=state['url'],region='global',source_type='render',accepted=False,reason='Public JS document rendered; identity checked separately',browser=state);return state['url'],html,self.capture(state['url'],html,'live_browser')
   except BrowserFailure as exc:
    reason=str(exc)
-   if reason in {'rate_limited','challenge_detected'}:
+   if reason in {'rate_limited','challenge_detected'} and not (self.browser_session or self._owned_browser):
     blocked_url=str(exc.counts.get('rate_limit_url') or url);policy_fetch.append_log_entry(self.log,{'url':blocked_url,'final_url':blocked_url,'status_code':429 if reason=='rate_limited' else 200,'checked_at':utc_now(),'access_status':'rate_limited' if reason=='rate_limited' else 'captcha_or_blocked','protection_status':'ordinary_page' if reason=='rate_limited' else 'challenge_confirmed','source_session':'razer_shared_browser'})
    self.trace(provider='official_support_browser',query=query,url=url,region='global',source_type='render',accepted=False,reason=reason,counts=exc.counts);return None
-  finally:driver.close()
+  finally:
+   if self.browser_factory and not self.browser_session:driver.close()
  def find_source(self,article,*,name='',category='',deadline=None):
-  article=article.upper().strip();deadline=deadline or self.clock()+90;proofs=[];best=None;query=model_name(name)
+  try:return self._find_source(article,name=name,category=category,deadline=deadline)
+  finally:
+   if self._owned_browser:self._owned_browser.close();self._owned_browser=None
+ def _find_source(self,article,*,name='',category='',deadline=None):
+  article=article.upper().strip();deadline=deadline or self.clock()+90;proofs=[];best=None;catalog_pages=[];query=model_name(name)
   if not components(article)['family_prefix']:return SourceDocument('razer_model','Razer Official','',error='Invalid RZ code')
   # No route generated from a product slug or a known audit reference URL.
   self.trace(provider='regional_exact',query=article,url='https://www.razer.com/',region='requested',source_type='catalog',accepted=False,reason='No published exact-SKU search route; continue with official catalog')
-  cache=self.capture_dir/'catalog.json';urls=[];observation='live_http'
+  cache=self.capture_dir/'catalog.json';urls=[];observation='live_http';catalog_version=2
   try:
    saved=json.loads(cache.read_text(encoding='utf8'))
-   if time.time()-saved['timestamp']<86400 and saved['sitemap']==SITEMAP:urls=saved['urls'];observation='catalog_cache'
+   if time.time()-saved['timestamp']<86400 and saved['sitemap']==SITEMAP and saved.get('version')==catalog_version:urls=saved['urls'];observation='catalog_cache'
   except (OSError,ValueError,KeyError):pass
   if not urls:
    z=self.http.get(SITEMAP,timeout=min(10,max(1,deadline-self.clock())))
    if z.ok and not z.truncated:
-    _,urls=parse_sitemap(z.text.encode('utf8'),SITEMAP);proofs.append(self.capture(SITEMAP,z.text,'live_http'));cache.write_text(json.dumps({'timestamp':time.time(),'sitemap':SITEMAP,'urls':urls}),encoding='utf8')
+    _,urls=parse_sitemap(z.text.encode('utf8'),SITEMAP)
+    from xml.etree import ElementTree as ET
+    for link in ET.fromstring(z.text).iter('{http://www.w3.org/1999/xhtml}link'):
+     target=link.get('href','');parts=urlsplit(target).path.split('/')[1:]
+     if official(target) and sum(bool(re.fullmatch('[a-z]{2}-[a-z]{2}',p)) for p in parts)<=1:urls.append(target)
+    urls=list(dict.fromkeys(urls));proofs.append(self.capture(SITEMAP,z.text,'live_http'));cache.write_text(json.dumps({'timestamp':time.time(),'sitemap':SITEMAP,'urls':urls,'version':catalog_version}),encoding='utf8')
    else:self.trace(provider='official_sitemap',query=query,url=SITEMAP,region='global',source_type='sitemap',accepted=False,reason=z.marker or str(z.status_code))
-  candidates=[u for u in urls if official(u) and key(urlsplit(u).path.rsplit('/',1)[-1])==key(query)]
+  catalog_query=re.sub(r'\s*\(\d{4}\)\s*$','',query)
+  candidates=[u for u in urls if official(u) and key(urlsplit(u).path.rsplit('/',1)[-1]) in {key(query),key(catalog_query)}]
+  from ..razer_identity import requested_configuration
+  region=requested_configuration(name).get('region','en-US').casefold();language,country=region.split('-',1);locale=country+'-'+language
+  candidates.sort(key=lambda u:(0 if '/'+locale+'/' in u.casefold() else 1 if region=='en-us' and urlsplit(u).path.split('/')[1] in {'gaming-mice','gaming-keyboards','gaming-headsets','gaming-controllers','gaming-laptops'} else 2,len(u)))
   self.trace(provider='official_sitemap',query=query,url=SITEMAP,region='global',source_type='sitemap',accepted=False,reason='Catalog candidates require page identity',observation=observation,candidates=candidates[:8])
   # Actual loc URLs first; other official regional locs come next, bounded.
   for url in candidates[:3]:
    if self.clock()>=deadline-45:break
+   if self.browser_session:
+    rendered=self.render_support(url,query)
+    if rendered:
+     final,html,proof=rendered;proofs.append(proof);catalog_pages.append((final,html));doc,ev=parse_page(html,final,article,name,category)
+     if ev['identity']['model_confirmed']:best=(doc,ev);break
+    continue
    z=self.http.get(url,timeout=6)
    self.trace(provider='official_catalog' if urlsplit(url).path.count('/')<=2 else 'other_official_regions',query=query,url=url,region=urlsplit(url).path.split('/')[1],source_type='pdp',accepted=False,reason=z.marker or str(z.status_code))
    if z.ok and not z.truncated:
@@ -79,7 +105,15 @@ class RazerAdapter:
    rendered=self.render_support(url,article)
    if rendered:
     final,html,proof=rendered;proofs.append(proof);doc,ev=parse_page(html,final,article,name,category);accept=ev['identity']['model_confirmed'];self.trace(provider='official_support',query=article,url=final,region='global',source_type='support',accepted=accept,reason=ev['identity']['reason'],identity_relation=ev['identity']['model_relation'])
-    if accept:best=(doc,ev)
+    if accept:
+     if not best or not best[1].get('retail_relations'):
+      for catalog_url,catalog_html in catalog_pages:
+       pdp,pdp_ev=parse_page(catalog_html,catalog_url,article,name,category,model_evidence=ev['identity'])
+       if pdp_ev['identity']['model_confirmed'] and pdp_ev.get('retail_relations'):
+        best=(pdp,pdp_ev);break
+     if best and best[1].get('retail_relations'):
+      best[1].update(manuals=ev['manuals'],support_extraction={'source_url':final,'raw_specs':ev['raw_specs'],'accepted_specs':ev['accepted_specs'],'rejected_specs':ev['rejected_specs']})
+     else:best=(doc,ev)
   if not support_urls and self.clock()<deadline-25:
    # Broaden the official query before external fallback; never guess article IDs.
    broadened=self.render_support('https://mysupport.razer.com/app/answers/list/kw/'+quote(query,safe=''),query)
@@ -119,7 +153,7 @@ class RazerAdapter:
   from pypdf import PdfReader
   ev=self.reports[article];found=[];checked=ev['identity'].get('model_confirmed',False)
   for item in ev.get('manuals',[]):
-   if item['language']!='Русский' or item['type'] not in {'User Guide','Quick Start'}:continue
+   if item['language']!='Русский' or item['type'] not in {'User Guide','Master Guide','Quick Start'}:continue
    try:
     z=self.http.get(item['url'],timeout=10)
     if not z.ok or z.truncated:checked=False;item['error']=z.marker or str(z.status_code);continue

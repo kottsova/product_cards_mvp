@@ -156,14 +156,40 @@ def extract_dom_spec_table(html: str, page_url: str) -> list[ExtractedField]:
             add(name, value, f"<dl><dt>{name}</dt><dd>{value}</dd></dl>", CONFIRMED)
 
     section, block = "", 0
+    carried = {}
+    previous_table = None
     for row in soup.select("table tr"):
+        table = row.find_parent("table")
+        if table is not previous_table:
+            carried = {}
+            previous_table = table
         cells = row.find_all(["th", "td"], recursive=False)
-        if len(cells) == 1 or (len(cells) >= 1 and cells[0].get("colspan")):
-            # A single spanning cell is a heading row: it opens a new block even when the same heading text comes again.
-            section, block = cells[0].get_text(" ", strip=True), block + 1
+        # Expand only this table's explicitly declared grid. A one-cell row
+        # under rowspan is a value continuation, not a new section heading.
+        grid = {column: cell for column, (cell, remaining) in carried.items()}
+        carried = {column: (cell, remaining-1) for column, (cell, remaining) in carried.items() if remaining > 1}
+        column = 0
+        for cell in cells:
+            while column in grid:
+                column += 1
+            def span(name):
+                try: return min(100, max(1, int(cell.get(name, 1))))
+                except (ValueError, TypeError): return 1
+            width, height = span("colspan"), span("rowspan")
+            for offset in range(width):
+                grid[column+offset] = cell
+                if height > 1:
+                    carried[column+offset] = (cell, height-1)
+            column += width
+        expanded = [grid[column] for column in sorted(grid)]
+        if not expanded:
             continue
-        if len(cells) >= 2:
-            name, value = cells[0].get_text(" ", strip=True), cells[-1].get_text(" ", strip=True)
+        if len({id(cell) for cell in expanded}) == 1:
+            # A single spanning cell is a heading row: it opens a new block even when the same heading text comes again.
+            section, block = expanded[0].get_text(" ", strip=True), block + 1
+            continue
+        if len(expanded) >= 2:
+            name, value = expanded[0].get_text(" ", strip=True), expanded[-1].get_text(" ", strip=True)
             add(name, value, f"<table><tr><th>{name}</th><td>{value}</td></tr></table>", CONFIRMED, section, block)
 
     # Stage 19: the same "Technical Specifications" tab is also published as headings + <ul><li><strong>Name: </strong>value</li>

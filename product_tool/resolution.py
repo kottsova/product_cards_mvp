@@ -55,11 +55,11 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
         rz=[f for f in official if f['source_key'] in {'razer_model','razer_configuration'}]
         if rz:
             from .razer_identity import configuration_sensitive
-            eligible=[f for f in rz if not pages.get(f['source_key'],{}).get('error') and pages.get(f['source_key'],{}).get('match_level') in {'full_sku','model_confirmed'} and (f['source_key']=='razer_configuration' or not configuration_sensitive(name))]
+            eligible=[f for f in rz if not pages.get(f['source_key'],{}).get('error') and pages.get(f['source_key'],{}).get('match_level') in {'full_sku','model_confirmed','configuration_confirmed'} and (f['source_key']=='razer_configuration' or not configuration_sensitive(name))]
             exact=[f for f in eligible if f['source_key']=='razer_configuration'];chosen=exact or eligible
             if not chosen or _different(chosen):results.append(ResolvedValue(name,'','','needs_review','Конфигурация Razer не подтверждена или значения конфликтуют.','',_different(chosen),False))
             else:
-                f=chosen[0];results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if exact else 'model_confirmed_official','Официальный факт Razer; модель и конфигурация проверены отдельно.',f['source_key'],False,bool(exact)))
+                f=chosen[0];full=bool(exact and pages['razer_configuration']['match_level']=='full_sku');results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if full else 'configuration_confirmed_official' if exact else 'model_confirmed_official','Официальный факт Razer; модель и конфигурация проверены отдельно.',f['source_key'],False,full))
             continue
         xb=[f for f in official if f['source_key'] in {'xbox_model','xbox_configuration','xbox_hardware'}]
         if xb:
