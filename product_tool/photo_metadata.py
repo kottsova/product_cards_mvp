@@ -12,6 +12,8 @@ from .adapters.policy_session import PolicyAwareSession, RequestBudget, request_
 
 MAX_IMAGE_BYTES = 8_000_000
 ALLOWED_BY_SOURCE = {
+    'razer_model': ('razer.com','razerzone.com'),
+    'razer_configuration': ('razer.com','razerzone.com'),
     'xbox_hardware': ('microsoft.com','xboxservices.com','xbox.com','img-prod-cms-rt-microsoft-com.akamaized.net'),
     'xbox_configuration': ('microsoft.com','xboxservices.com','xbox.com','img-prod-cms-rt-microsoft-com.akamaized.net'),
     "playstation": ("playstation.com",),

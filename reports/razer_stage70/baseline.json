@@ -1,0 +1,170 @@
+{
+  "stage": 70,
+  "phase": "unmodified ordinary run_once baseline",
+  "head_before": "39f5b3868e5916f0711995468a32b0b34de9f239",
+  "worker_sha256": "904dfaac0d389970b6b5789930cf91e9f76424dcd5790e3e748c156df97ac2a3",
+  "worker_unchanged": true,
+  "input": {
+    "id": 1,
+    "batch_id": "rz70baseline",
+    "row_number": 1,
+    "name": "Razer DeathAdder V3 Black",
+    "brand": "Razer",
+    "search_code": "RZ01-04640100-R3U1",
+    "alternate_code": "",
+    "category": "mice",
+    "needs_confirmation": 0,
+    "issues_json": "[]",
+    "original_values_json": "{\"requested_region\": \"en-US\"}",
+    "identity_json": "{}"
+  },
+  "commercial_model": "Razer DeathAdder V3",
+  "part_number": "RZ01-04640100-R3U1",
+  "generation": "V3",
+  "color": "Black (research reference only; not pipeline confirmed)",
+  "regional_suffix": "R3U1 (opaque until official evidence)",
+  "reference_url": "https://www.razer.com/gaming-mice/razer-deathadder-v3/RZ01-04640100-R3U1",
+  "reference_support": "https://mysupport.razer.com/app/answers/detail/a_id/6124",
+  "reference_not_given_to_worker": true,
+  "query_variants_requested": [
+    "RZ01-04640100-R3U1",
+    "Razer DeathAdder V3 Black"
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "dealer_url_needed",
+      "evidence": "Нет проверенного дилерского URL для «Razer Razer DeathAdder V3 Black» (артикул RZ01-04640100-R3U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "fetched_at": "2026-10-09T12:00:05+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [],
+  "resolved": [],
+  "photos": [],
+  "documents": [],
+  "job": {
+    "id": "d97d436d87714d5b819b76f6fd2434e8",
+    "product_id": 1,
+    "status": "error",
+    "current_stage": 6,
+    "message": "Нет проверенного дилерского URL для «Razer Razer DeathAdder V3 Black» (артикул RZ01-04640100-R3U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+    "created_at": "2026-10-09T12:00:05+00:00",
+    "updated_at": "2026-10-09T12:00:05+00:00",
+    "started_at": "2026-10-09T12:00:05+00:00",
+    "finished_at": "2026-10-09T12:00:05+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "events": [
+    {
+      "id": 1,
+      "job_id": "d97d436d87714d5b819b76f6fd2434e8",
+      "stage": null,
+      "level": "info",
+      "message": "Задание добавлено в очередь.",
+      "source_url": "",
+      "created_at": "2026-10-09T12:00:05+00:00"
+    },
+    {
+      "id": 2,
+      "job_id": "d97d436d87714d5b819b76f6fd2434e8",
+      "stage": null,
+      "level": "info",
+      "message": "Worker начал обработку.",
+      "source_url": "",
+      "created_at": "2026-10-09T12:00:05+00:00"
+    },
+    {
+      "id": 3,
+      "job_id": "d97d436d87714d5b819b76f6fd2434e8",
+      "stage": 1,
+      "level": "info",
+      "message": "Бренд «Razer» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+      "source_url": "",
+      "created_at": "2026-10-09T12:00:05+00:00"
+    },
+    {
+      "id": 4,
+      "job_id": "d97d436d87714d5b819b76f6fd2434e8",
+      "stage": 1,
+      "level": "warning",
+      "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Razer Razer DeathAdder V3 Black» (артикул RZ01-04640100-R3U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "source_url": "",
+      "created_at": "2026-10-09T12:00:05+00:00"
+    },
+    {
+      "id": 5,
+      "job_id": "d97d436d87714d5b819b76f6fd2434e8",
+      "stage": 3,
+      "level": "info",
+      "message": "Нормализуем и сравниваем характеристики.",
+      "source_url": "",
+      "created_at": "2026-10-09T12:00:05+00:00"
+    },
+    {
+      "id": 6,
+      "job_id": "d97d436d87714d5b819b76f6fd2434e8",
+      "stage": 6,
+      "level": "warning",
+      "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+      "source_url": "",
+      "created_at": "2026-10-09T12:00:05+00:00"
+    },
+    {
+      "id": 7,
+      "job_id": "d97d436d87714d5b819b76f6fd2434e8",
+      "stage": null,
+      "level": "warning",
+      "message": "Нет проверенного дилерского URL для «Razer Razer DeathAdder V3 Black» (артикул RZ01-04640100-R3U1). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "source_url": "",
+      "created_at": "2026-10-09T12:00:05+00:00"
+    }
+  ],
+  "trace": [],
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  }
+}

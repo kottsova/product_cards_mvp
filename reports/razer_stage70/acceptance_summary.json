@@ -1,0 +1,38 @@
+{
+  "stage": 70,
+  "audit": "PASS",
+  "verdict": "Razer adapter not ready",
+  "frozen_input_sha256": "3165106f1f0ef283c7002d399f5096d4688c20463dd5137cc22f430aae9b08cd",
+  "first_pass_rows": 10,
+  "first_pass_job_errors": 10,
+  "corrected_partial_live_rows": 10,
+  "guarded_live_rows": 10,
+  "guarded_live_ready": 0,
+  "capture_replay_models": 8,
+  "capture_replay_confirmed_specs": 130,
+  "capture_replay_ready": 0,
+  "verified_manual_positions": 8,
+  "verified_distinct_manual_pdfs": 6,
+  "configuration_facts_confirmed": 0,
+  "ui_http_200": 10,
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 628.9239197000279,
+    "result": [
+      "Ran 1660 tests in 625.162s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  },
+  "blockers": [
+    "Storefront HTTP 403; exact PDP/color/layout/region evidence unavailable",
+    "Support HTTP 429; bounded browser cooldown now persisted and respected",
+    "No verified gallery asset for any frozen input",
+    "Huntsman Mini and Barracuda X have discovered candidates but no admitted captured exact article",
+    "Blade hidden selector values are candidates; exact retail GPU/RAM/storage mapping unavailable",
+    "Generic parser misses continuation/rowspan headset facts and SSR hydration is not live-validated",
+    "Regional exact route/ranking and commercial SKU suffix mapping remain unproven"
+  ]
+}

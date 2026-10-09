@@ -1,0 +1,2497 @@
+{
+  "phase": "first adapted ordinary worker, live sources; catalog cache explicitly traced",
+  "input_sha256": "3165106f1f0ef283c7002d399f5096d4688c20463dd5137cc22f430aae9b08cd",
+  "rows": [
+    {
+      "id": 1,
+      "input": {
+        "id": 1,
+        "batch_id": "rz70",
+        "row_number": 1,
+        "name": "Razer Viper V3 Pro",
+        "brand": "Razer",
+        "search_code": "RZ01-0512",
+        "alternate_code": "",
+        "category": "Мыши",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.059349199989810586,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ01-0512",
+          "Razer Viper V3 Pro"
+        ],
+        "requested_configuration": {},
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Viper V3 Pro» (артикул RZ01-0512). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ01-0512",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [
+            "https://www.razer.com/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/sg-en/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/au-en/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/hk-en/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/hk-zh/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/jp-jp/gaming-mice/razer-viper-v3-pro"
+          ],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer Viper V3 Pro",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Razer Viper V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "gaming-mice",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/gaming-mice/razer-viper-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Viper V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "sg-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/sg-en/gaming-mice/razer-viper-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Viper V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "au-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/au-en/gaming-mice/razer-viper-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ01-0512",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ01-0512"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer Viper V3 Pro",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20Viper%20V3%20Pro"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.433849+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+Viper+V3+Pro%22+%22RZ01-0512%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.437428+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20Viper%20V3%20Pro%22%20%22RZ01-0512%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ01-0512",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Viper V3 Pro» (артикул RZ01-0512). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "573c58ea13a14598a3aef4aa0bc5f73f",
+        "product_id": 1,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 2,
+      "input": {
+        "id": 2,
+        "batch_id": "rz70",
+        "row_number": 2,
+        "name": "Razer DeathAdder V3 HyperSpeed",
+        "brand": "Razer",
+        "search_code": "RZ01-0514",
+        "alternate_code": "",
+        "category": "Мыши",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.05370270001003519,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ01-0514",
+          "Razer DeathAdder V3 HyperSpeed"
+        ],
+        "requested_configuration": {},
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer DeathAdder V3 HyperSpeed» (артикул RZ01-0514). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 2,
+          "product_id": 2,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ01-0514",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [
+            "https://www.razer.com/gaming-mice/razer-deathadder-v3-hyperspeed",
+            "https://www.razer.com/sg-en/gaming-mice/razer-deathadder-v3-hyperspeed",
+            "https://www.razer.com/au-en/gaming-mice/razer-deathadder-v3-hyperspeed",
+            "https://www.razer.com/hk-en/gaming-mice/razer-deathadder-v3-hyperspeed",
+            "https://www.razer.com/hk-zh/gaming-mice/razer-deathadder-v3-hyperspeed",
+            "https://www.razer.com/jp-jp/gaming-mice/razer-deathadder-v3-hyperspeed"
+          ],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer DeathAdder V3 HyperSpeed",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Razer DeathAdder V3 HyperSpeed",
+          "reason": "[policy_host_stopped]",
+          "region": "gaming-mice",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/gaming-mice/razer-deathadder-v3-hyperspeed"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer DeathAdder V3 HyperSpeed",
+          "reason": "[policy_host_stopped]",
+          "region": "sg-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/sg-en/gaming-mice/razer-deathadder-v3-hyperspeed"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer DeathAdder V3 HyperSpeed",
+          "reason": "[policy_host_stopped]",
+          "region": "au-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/au-en/gaming-mice/razer-deathadder-v3-hyperspeed"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ01-0514",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ01-0514"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer DeathAdder V3 HyperSpeed",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20DeathAdder%20V3%20HyperSpeed"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer DeathAdder V3 HyperSpeed\" \"RZ01-0514\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.498468+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+DeathAdder+V3+HyperSpeed%22+%22RZ01-0514%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer DeathAdder V3 HyperSpeed\" \"RZ01-0514\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer DeathAdder V3 HyperSpeed\" \"RZ01-0514\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.501794+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20DeathAdder%20V3%20HyperSpeed%22%20%22RZ01-0514%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer DeathAdder V3 HyperSpeed\" \"RZ01-0514\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ01-0514",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer DeathAdder V3 HyperSpeed» (артикул RZ01-0514). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "1bdbd2a6e86741fb838dc9d3431f3e06",
+        "product_id": 2,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 3,
+      "input": {
+        "id": 3,
+        "batch_id": "rz70",
+        "row_number": 3,
+        "name": "Razer BlackWidow V4 75% [switch=Orange; layout=US]",
+        "brand": "Razer",
+        "search_code": "RZ03-0500",
+        "alternate_code": "",
+        "category": "Клавиатуры",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {\"switch\": \"Orange\", \"layout\": \"US\"}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.056211199960671365,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ03-0500",
+          "Razer BlackWidow V4 75%"
+        ],
+        "requested_configuration": {
+          "switch": "Orange",
+          "layout": "US"
+        },
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer BlackWidow V4 75% [switch=Orange; layout=US]» (артикул RZ03-0500). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 3,
+          "product_id": 3,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ03-0500",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [
+            "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/sg-en/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/au-en/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/hk-en/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/hk-zh/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/jp-jp/gaming-keyboards/razer-blackwidow-v4-75"
+          ],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "[policy_host_stopped]",
+          "region": "gaming-keyboards",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-75"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "[policy_host_stopped]",
+          "region": "sg-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/sg-en/gaming-keyboards/razer-blackwidow-v4-75"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "[policy_host_stopped]",
+          "region": "au-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/au-en/gaming-keyboards/razer-blackwidow-v4-75"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ03-0500",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ03-0500"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20BlackWidow%20V4%2075%25"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.558656+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+BlackWidow+V4+75%25%22+%22RZ03-0500%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.562272+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20BlackWidow%20V4%2075%25%22%20%22RZ03-0500%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ03-0500",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer BlackWidow V4 75% [switch=Orange; layout=US]» (артикул RZ03-0500). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "2a5c4e60227845c0842ff7e654e5cb15",
+        "product_id": 3,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Запрошенная конфигурация не подтверждена; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 4,
+      "input": {
+        "id": 4,
+        "batch_id": "rz70",
+        "row_number": 4,
+        "name": "Razer Huntsman Mini [switch=Linear; layout=US]",
+        "brand": "Razer",
+        "search_code": "RZ03-0339",
+        "alternate_code": "",
+        "category": "Клавиатуры",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {\"switch\": \"Linear\", \"layout\": \"US\"}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.05416140001034364,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ03-0339",
+          "Razer Huntsman Mini"
+        ],
+        "requested_configuration": {
+          "switch": "Linear",
+          "layout": "US"
+        },
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Huntsman Mini [switch=Linear; layout=US]» (артикул RZ03-0339). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 4,
+          "product_id": 4,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ03-0339",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [
+            "https://www.razer.com/gaming-keyboards/razer-huntsman-mini",
+            "https://www.razer.com/sg-en/gaming-keyboards/razer-huntsman-mini",
+            "https://www.razer.com/au-en/gaming-keyboards/razer-huntsman-mini",
+            "https://www.razer.com/hk-en/gaming-keyboards/razer-huntsman-mini",
+            "https://www.razer.com/hk-zh/gaming-keyboards/razer-huntsman-mini",
+            "https://www.razer.com/jp-jp/gaming-keyboards/razer-huntsman-mini"
+          ],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer Huntsman Mini",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Razer Huntsman Mini",
+          "reason": "[policy_host_stopped]",
+          "region": "gaming-keyboards",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/gaming-keyboards/razer-huntsman-mini"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Huntsman Mini",
+          "reason": "[policy_host_stopped]",
+          "region": "sg-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/sg-en/gaming-keyboards/razer-huntsman-mini"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Huntsman Mini",
+          "reason": "[policy_host_stopped]",
+          "region": "au-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/au-en/gaming-keyboards/razer-huntsman-mini"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ03-0339",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ03-0339"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer Huntsman Mini",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20Huntsman%20Mini"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer Huntsman Mini\" \"RZ03-0339\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.621188+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+Huntsman+Mini%22+%22RZ03-0339%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer Huntsman Mini\" \"RZ03-0339\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer Huntsman Mini\" \"RZ03-0339\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.625078+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20Huntsman%20Mini%22%20%22RZ03-0339%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer Huntsman Mini\" \"RZ03-0339\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ03-0339",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Huntsman Mini [switch=Linear; layout=US]» (артикул RZ03-0339). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "cddf802fec594c75a625c9a2847801af",
+        "product_id": 4,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Запрошенная конфигурация не подтверждена; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 5,
+      "input": {
+        "id": 5,
+        "batch_id": "rz70",
+        "row_number": 5,
+        "name": "Razer BlackShark V2 Pro (2023)",
+        "brand": "Razer",
+        "search_code": "RZ04-0453",
+        "alternate_code": "",
+        "category": "Гарнитуры",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.04943169996840879,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ04-0453",
+          "Razer BlackShark V2 Pro (2023)"
+        ],
+        "requested_configuration": {},
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer BlackShark V2 Pro (2023)» (артикул RZ04-0453). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 5,
+          "product_id": 5,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ04-0453",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer BlackShark V2 Pro (2023)",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ04-0453",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ04-0453"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer BlackShark V2 Pro (2023)",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20BlackShark%20V2%20Pro%20%282023%29"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer BlackShark V2 Pro (2023)\" \"RZ04-0453\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.677152+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+BlackShark+V2+Pro+%282023%29%22+%22RZ04-0453%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer BlackShark V2 Pro (2023)\" \"RZ04-0453\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer BlackShark V2 Pro (2023)\" \"RZ04-0453\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.681682+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20BlackShark%20V2%20Pro%20%282023%29%22%20%22RZ04-0453%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer BlackShark V2 Pro (2023)\" \"RZ04-0453\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ04-0453",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer BlackShark V2 Pro (2023)» (артикул RZ04-0453). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "084c953be30841499a8af428c7b279b6",
+        "product_id": 5,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 6,
+      "input": {
+        "id": 6,
+        "batch_id": "rz70",
+        "row_number": 6,
+        "name": "Razer Barracuda X (2022) [color=Quartz]",
+        "brand": "Razer",
+        "search_code": "RZ04-0443",
+        "alternate_code": "",
+        "category": "Гарнитуры",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {\"color\": \"Quartz\"}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.047200199973303825,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ04-0443",
+          "Razer Barracuda X (2022)"
+        ],
+        "requested_configuration": {
+          "color": "Quartz"
+        },
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Barracuda X (2022) [color=Quartz]» (артикул RZ04-0443). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 6,
+          "product_id": 6,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ04-0443",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer Barracuda X (2022)",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ04-0443",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ04-0443"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer Barracuda X (2022)",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20Barracuda%20X%20%282022%29"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer Barracuda X (2022)\" \"RZ04-0443\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.733665+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+Barracuda+X+%282022%29%22+%22RZ04-0443%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer Barracuda X (2022)\" \"RZ04-0443\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer Barracuda X (2022)\" \"RZ04-0443\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.737211+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20Barracuda%20X%20%282022%29%22%20%22RZ04-0443%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer Barracuda X (2022)\" \"RZ04-0443\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ04-0443",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Barracuda X (2022) [color=Quartz]» (артикул RZ04-0443). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "6217a69f249d4f7c94cfb482c086b0b1",
+        "product_id": 6,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Запрошенная конфигурация не подтверждена; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 7,
+      "input": {
+        "id": 7,
+        "batch_id": "rz70",
+        "row_number": 7,
+        "name": "Razer Blade 16 (2025) [GPU=RTX 5080; RAM=32 GB; storage=1 TB]",
+        "brand": "Razer",
+        "search_code": "RZ09-0528",
+        "alternate_code": "",
+        "category": "Ноутбуки",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {\"GPU\": \"RTX 5080\", \"RAM\": \"32 GB\", \"storage\": \"1 TB\"}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.04923389997566119,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ09-0528",
+          "Razer Blade 16 (2025)"
+        ],
+        "requested_configuration": {
+          "GPU": "RTX 5080",
+          "RAM": "32 GB",
+          "storage": "1 TB"
+        },
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Blade 16 (2025) [GPU=RTX 5080; RAM=32 GB; storage=1 TB]» (артикул RZ09-0528). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 7,
+          "product_id": 7,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ09-0528",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer Blade 16 (2025)",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ09-0528",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ09-0528"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer Blade 16 (2025)",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20Blade%2016%20%282025%29"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer Blade 16 (2025)\" \"RZ09-0528\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.788514+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+Blade+16+%282025%29%22+%22RZ09-0528%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer Blade 16 (2025)\" \"RZ09-0528\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer Blade 16 (2025)\" \"RZ09-0528\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.792647+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20Blade%2016%20%282025%29%22%20%22RZ09-0528%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer Blade 16 (2025)\" \"RZ09-0528\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ09-0528",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Blade 16 (2025) [GPU=RTX 5080; RAM=32 GB; storage=1 TB]» (артикул RZ09-0528). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "b51213ec7e92496aa3c9d611c10d19ef",
+        "product_id": 7,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Запрошенная конфигурация не подтверждена; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 8,
+      "input": {
+        "id": 8,
+        "batch_id": "rz70",
+        "row_number": 8,
+        "name": "Razer Wolverine V3 Pro",
+        "brand": "Razer",
+        "search_code": "RZ06-0520",
+        "alternate_code": "",
+        "category": "Контроллеры",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.057343399967066944,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ06-0520",
+          "Razer Wolverine V3 Pro"
+        ],
+        "requested_configuration": {},
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Wolverine V3 Pro» (артикул RZ06-0520). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 8,
+          "product_id": 8,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ06-0520",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [
+            "https://www.razer.com/console-controllers/razer-wolverine-v3-pro",
+            "https://www.razer.com/sg-en/console-controllers/razer-wolverine-v3-pro",
+            "https://www.razer.com/au-en/console-controllers/razer-wolverine-v3-pro",
+            "https://www.razer.com/hk-en/console-controllers/razer-wolverine-v3-pro",
+            "https://www.razer.com/hk-zh/console-controllers/razer-wolverine-v3-pro"
+          ],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer Wolverine V3 Pro",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Razer Wolverine V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "console-controllers",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/console-controllers/razer-wolverine-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Wolverine V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "sg-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/sg-en/console-controllers/razer-wolverine-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Wolverine V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "au-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/au-en/console-controllers/razer-wolverine-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ06-0520",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ06-0520"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer Wolverine V3 Pro",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20Wolverine%20V3%20Pro"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer Wolverine V3 Pro\" \"RZ06-0520\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.848941+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+Wolverine+V3+Pro%22+%22RZ06-0520%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer Wolverine V3 Pro\" \"RZ06-0520\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer Wolverine V3 Pro\" \"RZ06-0520\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.853634+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20Wolverine%20V3%20Pro%22%20%22RZ06-0520%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer Wolverine V3 Pro\" \"RZ06-0520\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ06-0520",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Wolverine V3 Pro» (артикул RZ06-0520). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "ddf6d786852e4e79a8cb01556733bf46",
+        "product_id": 8,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 9,
+      "input": {
+        "id": 9,
+        "batch_id": "rz70",
+        "row_number": 9,
+        "name": "Razer Viper V3 Pro [color=White]",
+        "brand": "Razer",
+        "search_code": "RZ01-0512",
+        "alternate_code": "",
+        "category": "Мыши",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-US\", \"configuration\": {\"color\": \"White\"}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.05366929998854175,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ01-0512",
+          "Razer Viper V3 Pro"
+        ],
+        "requested_configuration": {
+          "color": "White"
+        },
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Viper V3 Pro [color=White]» (артикул RZ01-0512). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 9,
+          "product_id": 9,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ01-0512",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [
+            "https://www.razer.com/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/sg-en/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/au-en/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/hk-en/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/hk-zh/gaming-mice/razer-viper-v3-pro",
+            "https://www.razer.com/jp-jp/gaming-mice/razer-viper-v3-pro"
+          ],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer Viper V3 Pro",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Razer Viper V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "gaming-mice",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/gaming-mice/razer-viper-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Viper V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "sg-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/sg-en/gaming-mice/razer-viper-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer Viper V3 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "au-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/au-en/gaming-mice/razer-viper-v3-pro"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ01-0512",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ01-0512"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer Viper V3 Pro",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20Viper%20V3%20Pro"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.912777+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+Viper+V3+Pro%22+%22RZ01-0512%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.916189+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20Viper%20V3%20Pro%22%20%22RZ01-0512%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer Viper V3 Pro\" \"RZ01-0512\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ01-0512",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer Viper V3 Pro [color=White]» (артикул RZ01-0512). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "8b50ae75ee5748eab94dfbd1dc96d7be",
+        "product_id": 9,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Запрошенная конфигурация не подтверждена; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:48+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:48+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    },
+    {
+      "id": 10,
+      "input": {
+        "id": 10,
+        "batch_id": "rz70",
+        "row_number": 10,
+        "name": "Razer BlackWidow V4 75% [switch=Orange; layout=UK; region=en-GB; color=White]",
+        "brand": "Razer",
+        "search_code": "RZ03-0500",
+        "alternate_code": "",
+        "category": "Клавиатуры",
+        "needs_confirmation": 0,
+        "issues_json": "[]",
+        "original_values_json": "{\"requested_region\": \"en-GB\", \"configuration\": {\"switch\": \"Orange\", \"layout\": \"UK\", \"region\": \"en-GB\", \"color\": \"White\"}}",
+        "identity_json": "{}"
+      },
+      "elapsed": 0.061586499970871955,
+      "evidence": {
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "photos": [],
+        "exact_photo_assets": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "proofs": [],
+        "query_variants": [
+          "RZ03-0500",
+          "Razer BlackWidow V4 75%"
+        ],
+        "requested_configuration": {
+          "switch": "Orange",
+          "layout": "UK",
+          "region": "en-GB",
+          "color": "White"
+        },
+        "manual_check_complete": false,
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer BlackWidow V4 75% [switch=Orange; layout=UK; region=en-GB; color=White]» (артикул RZ03-0500). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "sources": [
+        {
+          "id": 10,
+          "product_id": 10,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-09T12:47:48+00:00",
+          "error": "Official exact model not discovered",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "trace": [
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "regional_exact",
+          "query": "RZ03-0500",
+          "reason": "No published exact-SKU search route; continue with official catalog",
+          "region": "requested",
+          "source_type": "catalog",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/"
+        },
+        {
+          "accepted": false,
+          "candidates": [
+            "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/sg-en/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/au-en/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/hk-en/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/hk-zh/gaming-keyboards/razer-blackwidow-v4-75",
+            "https://www.razer.com/jp-jp/gaming-keyboards/razer-blackwidow-v4-75"
+          ],
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "observation": "catalog_cache",
+          "provider": "official_sitemap",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "Catalog candidates require page identity",
+          "region": "global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "[policy_host_stopped]",
+          "region": "gaming-keyboards",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-75"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "[policy_host_stopped]",
+          "region": "sg-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/sg-en/gaming-keyboards/razer-blackwidow-v4-75"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "other_official_regions",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "[policy_host_stopped]",
+          "region": "au-en",
+          "source_type": "pdp",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://www.razer.com/au-en/gaming-keyboards/razer-blackwidow-v4-75"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "RZ03-0500",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/RZ03-0500"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_support_browser",
+          "query": "Razer BlackWidow V4 75%",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "render",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": "https://mysupport.razer.com/app/answers/list/kw/Razer%20BlackWidow%20V4%2075%25"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.979717+00:00",
+          "url": "https://www.google.com/search?q=site%3Arazer.com+%22Razer+BlackWidow+V4+75%25%22+%22RZ03-0500%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "google",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "bing_browser",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-09T12:47:48.983442+00:00",
+          "url": "https://www.bing.com/search?q=site%3Arazer.com%20%22Razer%20BlackWidow%20V4%2075%25%22%20%22RZ03-0500%22"
+        },
+        {
+          "accepted": false,
+          "event": "razer_discovery",
+          "identity_relation": "unproven",
+          "provider": "bing",
+          "query": "site:razer.com \"Razer BlackWidow V4 75%\" \"RZ03-0500\"",
+          "reason": "host_stopped",
+          "region": "global",
+          "source_type": "external_search",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "razer_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "RZ03-0500",
+          "reason": "Нет проверенного дилерского URL для «Razer Razer BlackWidow V4 75% [switch=Orange; layout=UK; region=en-GB; color=White]» (артикул RZ03-0500). Не хватает: model_missing, specifications_missing, gallery_missing, configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-09T12:47:48+00:00",
+          "url": ""
+        }
+      ],
+      "job": {
+        "id": "3749282940d745319e6d405d69379b03",
+        "product_id": 10,
+        "status": "needs_review",
+        "current_stage": 1,
+        "message": "Razer: Не готова. Точная модель не подтверждена; Недостаточно подтверждённых характеристик; Нет фото подтверждённого цвета и раскладки; Запрошенная конфигурация не подтверждена; Русская инструкция не проверена",
+        "created_at": "2026-10-09T12:47:48+00:00",
+        "updated_at": "2026-10-09T12:47:49+00:00",
+        "started_at": "2026-10-09T12:47:48+00:00",
+        "finished_at": "2026-10-09T12:47:49+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "readiness": {
+        "verdict": "not_ready",
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing",
+          "manual_unverified"
+        ],
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "configuration_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model_relation": "unproven",
+          "configuration_relation": "unproven",
+          "exact_sku": false
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      }
+    }
+  ]
+}

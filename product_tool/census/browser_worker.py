@@ -136,6 +136,15 @@ def command(cmd):
         page.wait_for_timeout(min(600,timeout()))
         return state()
     if kind=='state':return state()
+    if kind=='document_snapshot':
+        # Opt-in read-only capture of an already admitted public document.
+        # The same challenge, host, navigation and DOM budgets apply.
+        if policy.get('render_mode')!='render_existing_search_result':raise RuntimeError('interaction_blocked')
+        result=state()
+        content=page.content()
+        if len(content.encode('utf-8'))>policy['max_dom_bytes']:raise RuntimeError('projection_budget_exhausted')
+        result['html']=content
+        return result
     if kind=='dismiss_cookies':
         dialogs=cookie_dialogs();buttons=[]
         for dialog in dialogs:

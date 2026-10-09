@@ -31,6 +31,9 @@ ADVISORY = ("dealer_cross_check_missing",)
 
 def card_readiness(database: Path, product_id: int) -> dict[str, Any]:
     product = jobs.get_product(database, product_id) or {}
+    if product.get('brand','').strip().casefold() == 'razer':
+        from . import razer_pipeline
+        return razer_pipeline.card_readiness(database,product_id)
     from .xbox_identity import BRANDS as XBOX_BRANDS
     if product.get('brand','').strip().casefold() in XBOX_BRANDS:
         from . import xbox_pipeline

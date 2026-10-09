@@ -386,6 +386,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         from . import xbox_pipeline
         from .xbox_identity import BRANDS as XBOX_BRANDS
         xbox_evidence = card_evidence.load(database,product_id,'xbox') if product['brand'].strip().casefold() in XBOX_BRANDS else None
+        from . import razer_pipeline
+        razer_evidence = card_evidence.load(database,product_id,'razer') if product['brand'].strip().casefold() == 'razer' else None
         from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
         playstation_evidence = card_evidence.load(database,product_id,"playstation") if product["brand"].strip().casefold() in PLAYSTATION_BRANDS else None
         apple_evidence = card_evidence.load(database, product_id, "apple") if product["brand"].strip().upper() == "APPLE" else None
@@ -422,6 +424,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         }
         if xbox_evidence is not None:
             for photo in photos:photo['identity_confirmed']=xbox_pipeline.photo_verified(photo,xbox_evidence)
+        if razer_evidence is not None:
+            for photo in photos:photo['identity_confirmed']=razer_pipeline.photo_verified(photo,razer_evidence)
+            for document in documents:document['identity_confirmed']=razer_pipeline.document_verified(document,razer_evidence)
         events = []
         for event in jobs.list_events(database, latest["id"]) if latest else []:
             message = _display_access_stop(event["message"])
@@ -453,6 +458,11 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             playstation_card=playstation_pipeline.card_readiness(database,product_id) if playstation_evidence is not None else None,
             playstation_gaps=playstation_pipeline.GAPS,
             xbox_evidence=xbox_evidence,
+            razer_evidence=razer_evidence,
+            razer_card=razer_pipeline.card_readiness(database,product_id) if razer_evidence is not None else None,
+            razer_gaps=razer_pipeline.GAPS,
+            razer_reasons=__import__('product_tool.razer_presentation',fromlist=['REASONS']).REASONS,
+            razer_config_labels=__import__('product_tool.razer_presentation',fromlist=['CONFIG_LABELS']).CONFIG_LABELS,
             xbox_card=xbox_pipeline.card_readiness(database,product_id) if xbox_evidence is not None else None,
             xbox_gaps=xbox_pipeline.GAPS,
             xbox_scopes=xbox_pipeline.SCOPES,
@@ -472,7 +482,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
-            manual_status=xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_status=razer_evidence.get('manual_status','Не проверена') if razer_evidence is not None else xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
             manual_reason=manual_status.unchecked_reason(database, product_id, product["search_code"]) if lg_batch.is_lg(product) else "",
             manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,

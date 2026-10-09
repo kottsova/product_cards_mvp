@@ -658,7 +658,9 @@ class ComputeMissingFieldsTests(unittest.TestCase):
         # run once with a genuine gap (dealer_url_needed fires), close the
         # gap the same way an official/dealer source would, run again --
         # the second run must not repeat the same ask.
-        product = seed_product(self.database, brand="Razer", sku="RZ-TEST", name="DeathAdder V3")
+        # Stage 70: Razer now has an official adapter. This test concerns
+        # generic dealer supplementation, so its fixture must remain generic.
+        product = seed_product(self.database, brand="Generic", sku="GEN-TEST", name="Test Mouse")
         jobs.enqueue(self.database, product, [1, 3])
         real_dns = DnsAdapter(FakeSession({}), clock=_fake_clock())
         worker.run_once(self.database, clock=lambda: 0, dns_adapter_factory=lambda: real_dns)

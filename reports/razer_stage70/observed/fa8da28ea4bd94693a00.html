@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Oracle B2C Service</title>
+        <style>
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+        .loading-icon-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .loading-icon {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+<style type='text/css'>
+ <!-- 
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none !important;}
+ --></style>
+<base href='https://mysupport.razer.com/euf/generated/optimized/1791529826/themes/standard/'/>
+
+</head>
+<body>
+     <div class="loading-icon-container">
+        <div class="loading-icon"></div>
+    </div>
+    <div id="result"></div>
+    <script>
+        // Function to detect browser environment
+        function browserEnvironmentDetection() {
+            try {
+                // Check if window and document objects are available
+                if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+                    return 1; // Likely a real browser
+                } else {
+                    return 0; // Not a real browser
+                }
+            } catch (e) {
+                return 0; // Error occurred, likely not a real browser
+            }
+        }
+        // Function to simulate mouse movement
+        function mouseMovementSimulation() {
+            try {
+                // Generate random mouse coordinates
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.floor(Math.random() * window.innerHeight);
+                // Dispatch a mousemove event
+                let event = new MouseEvent('mousemove', {
+                    'view': window,
+                    'bubbles': true,
+                    'cancelable': true,
+                    'clientX': x,
+                    'clientY': y
+                });
+                document.dispatchEvent(event);
+                return 1; // Mouse movement simulated successfully
+            } catch (e) {
+                return 0; // Error occurred, likely a bot
+            }
+        }
+        // Function to perform WebGL fingerprinting
+        function webGLFingerprinting() {
+            try {
+                // Get the WebGL rendering context
+                let canvas = document.createElement('canvas');
+                let gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (gl) {
+                    // Get the WebGL renderer and vendor
+                    let renderer = gl.getParameter(gl.RENDERER);
+                    let vendor = gl.getParameter(gl.VENDOR);
+                    // Check if the renderer and vendor are valid
+                    if (renderer && vendor) {
+                        return 1; // WebGL fingerprinting successful
+                    } else {
+                        return 0; // WebGL fingerprinting failed
+                    }
+                } else {
+                    return 0; // WebGL not supported
+                }
+            } catch (e) {
+                return 0; // Error occurred, likely a bot
+            }
+        }
+        // Function to perform canvas fingerprinting
+        function canvasFingerprinting() {
+            try {
+                // Create a canvas element
+                let canvas = document.createElement('canvas');
+                let ctx = canvas.getContext('2d');
+                // Draw something on the canvas
+                ctx.textBaseline = 'top';
+                ctx.font = '14px Arial';
+                ctx.textBaseline = 'alphabetic';
+                ctx.fillStyle = '#f60';
+                ctx.fillRect(125, 1, 62, 20);
+                ctx.fillStyle = '#069';
+                ctx.fillText('{', 2, 15);
+                ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+                ctx.fillText('{', 4, 17);
+                // Get the canvas fingerprint
+                let fingerprint = canvas.toDataURL();
+                // Check if the fingerprint is valid
+                if (fingerprint) {
+                    return 1; // Canvas fingerprinting successful
+                } else {
+                    return 0; // Canvas fingerprinting failed
+                }
+            } catch (e) {
+                return 0; // Error occurred, likely a bot
+            }
+        }
+        // Function to perform timing analysis
+        function timingAnalysis() {
+            try {
+                // Measure the time taken to perform some operations
+                let startTime = performance.now();
+                for (let i = 0; i < 100000; i++) {
+                    // Perform some dummy operations
+                }
+                let endTime = performance.now();
+                // Check if the time taken is within a reasonable range
+                if (endTime - startTime > 0 && endTime - startTime < 100) {
+                    return 1; // Timing analysis successful
+                } else {
+                    return 0; // Timing analysis failed
+                }
+            } catch (e) {
+                return 0; // Error occurred, likely a bot
+            }
+        }
+        // Function to perform DOM interaction
+        function domInteraction() {
+            try {
+                // Create a dummy DOM element
+                let element = document.createElement('div');
+                // Dispatch a click event on the element
+                let event = new MouseEvent('click', {
+                    'view': window,
+                    'bubbles': true,
+                    'cancelable': true
+                });
+                element.dispatchEvent(event);
+                return 1; // DOM interaction successful
+            } catch (e) {
+                return 0; // Error occurred, likely a bot
+            }
+        }
+        // Function to test JavaScript obfuscation
+        function javascriptObfuscationTest() {
+            try {
+                // Check if the JavaScript code is obfuscated
+                // For simplicity, this example just checks for a specific string
+                if (navigator.userAgent.includes('Mozilla')) {
+                    return 1; // JavaScript obfuscation test successful
+                } else {
+                    return 0; // JavaScript obfuscation test failed
+                }
+            } catch (e) {
+                return 0; // Error occurred, likely a bot
+            }
+        }
+        // User Agent Validation
+        function userAgentValidation() {
+            let userAgent = navigator.userAgent;
+            // Check if the User Agent string is valid and matches the browser type and version
+            if (userAgent.includes('Mozilla')) {
+                return 1; // Valid User Agent
+            } else {
+                return 0; // Invalid User Agent
+            }
+        }
+        // Screen Resolution and Color Depth
+        function screenResolutionValidation() {
+            let screenWidth = screen.width;
+            let screenHeight = screen.height;
+            let colorDepth = screen.colorDepth;
+            // Check if the screen resolution and color depth are within a reasonable range
+            if (screenWidth > 0 && screenHeight > 0 && colorDepth > 0) {
+                return 1; // Valid screen resolution and color depth
+            } else {
+                return 0; // Invalid screen resolution and color depth
+            }
+        }
+        // Browser Plugin Detection
+        function browserPluginDetection() {
+            let plugins = navigator.plugins;
+            // Check if the browser has plugins installed
+            if (plugins.length > 0) {
+                return 1; // Plugins detected
+            } else {
+                return 0; // No plugins detected
+            }
+        }
+        // Main function to evaluate the score
+        function evaluateScore() {
+            let score = 0;
+            let results = [];
+            // Perform the challenges
+            let browserEnvironmentDetectionResult = browserEnvironmentDetection();
+            results.push(`Browser Environment Detection: ${browserEnvironmentDetectionResult}`);
+            score += browserEnvironmentDetectionResult;
+            let mouseMovementSimulationResult = mouseMovementSimulation();
+            results.push(`Mouse Movement Simulation: ${mouseMovementSimulationResult}`);
+            score += mouseMovementSimulationResult;
+            let webGLFingerprintingResult = webGLFingerprinting();
+            results.push(`WebGL Fingerprinting: ${webGLFingerprintingResult}`);
+            score += webGLFingerprintingResult;
+            let canvasFingerprintingResult = canvasFingerprinting();
+            results.push(`Canvas Fingerprinting: ${canvasFingerprintingResult}`);
+            score += canvasFingerprintingResult;
+            let timingAnalysisResult = timingAnalysis();
+            results.push(`Timing Analysis: ${timingAnalysisResult}`);
+            score += timingAnalysisResult;
+            let domInteractionResult = domInteraction();
+            results.push(`DOM Interaction: ${domInteractionResult}`);
+            score += domInteractionResult;
+            let javascriptObfuscationTestResult = javascriptObfuscationTest();
+            results.push(`JavaScript Obfuscation Test: ${javascriptObfuscationTestResult}`);
+            score += javascriptObfuscationTestResult;
+            let userAgentValidationResult = userAgentValidation();
+            results.push(`User Agent Validation: ${userAgentValidationResult}`);
+            score += userAgentValidationResult;
+            let screenResolutionValidationResult = screenResolutionValidation();
+            results.push(`Screen Resolution Validation: ${screenResolutionValidationResult}`);
+            score += screenResolutionValidationResult;
+            let browserPluginDetectionResult = browserPluginDetection();
+            results.push(`Browser Plugin Detection: ${browserPluginDetectionResult}`);
+            score += browserPluginDetectionResult;
+            // Display the result
+            let resultElement = document.getElementById('result');
+            let loadingIconContainer = document.querySelector('.loading-icon-container');
+            if (score < 9) {
+                const captchaRedirectUrl = "%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F6124 ";
+                const captchaRedirectPath = "/app/captcha_load/redirect/"+captchaRedirectUrl;
+                window.location.href = captchaRedirectPath;
+            } else {
+                const originalPageUrl = "/app/answers/detail/a_id/6124 ";
+                window.location.href = originalPageUrl;
+            }
+        }
+        // Call the main function
+        evaluateScore();
+    </script>
+<script>var YUI_config={"fetchCSS":false,"modules":{"RightNowTreeView":"/euf/core/3.11/js/2.293/min/modules/ui/treeview.js","RightNowTreeViewDialog":"/euf/core/3.11/js/2.293/min/modules/ui/treeviewdialog.js","RightNowTreeViewDropdown":"/euf/core/3.11/js/2.293/min/modules/ui/treeviewdropdown.js"},"lang":["en-US","en-US"],"injected":true,"comboBase":"//razer.widget.custhelp.com/ci/cache/yuiCombo/","groups":{"gallery-treeview":{"base":"/rnt/rnw/yui_3.18/gallery-treeview/","modules":{"gallery-treeview":{"path":"gallery-treeview-min.js"}}}}};</script>
+<script type="text/javascript" src="/euf/core/3.11/js/2.293/min/RightNow.js"></script>
+<script>
+/* <![CDATA[ */
+RightNow.Env=(function(){var _props={module:'standard',coreAssets:'/euf/core/3.11/',yuiCore:'/rnt/rnw/yui_3.18/',profileData:{"isLoggedIn":false,"previouslySeenEmail":null}};return function(prop){return _props[prop];};})();RightNow.Interface.setMessagebase(function(){return {"ATTRIBUTES_LC_LBL":"attributes","ATTRIBUTE_HAVENT_SPECIFIED_VALID_IT_LBL":"  Value for '%s' attribute is a number and you haven't specified a valid value for it.","BACK_LBL":"Back","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Beginning of dialog, please dismiss dialog before continuing","CHANGED_LBL":"Changed","CLOSE_CMD":"Close","COL_SAVE_ED_ERR_L_INV_E_PERMISSIONS_MSG":"Widget changes could not be saved due to errors while saving. Please check the file permissions.","DIALOG_LBL":"dialog","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"dialog, please read above text for dialog message","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"End of dialog, please dismiss dialog before continuing","ERROR_LBL":"Error","ERRORS_LBL":"Errors","ERROR_PCT_S_LBL":"Error: %s","ERROR_REQUEST_ACTION_COMPLETED_MSG":"There was an error with the request and the action could not be completed.","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"There was an error submitting the form due to invalid input","ERR_SUBMITTING_SEARCH_MSG":"There was a problem with your request.  Please change your search terms and try again.","HELP_LBL":"Help","INFORMATION_LBL":"Information","INFORMATION_S_LBL":"Information: %s","OK_LBL":"OK","PCT_S_ATTRIB_REQD_HAVENT_VALUE_MSG":"The '%s' attribute is required and you haven't specified a value for it.","PG_COL_SAVE_ED_ERR_L_INV_E_PERMISSIONS_MSG":"Widget changes of page could not be saved due to errors while saving. Please check the page file permissions.","REVEALED_DISP_TB_DD_OP_ADDTL_T_EXPOSED_MSG":"Note: The widget, when revealed, can be inspected, but you may need to perform additional actions for it to be exposed.","SOME_INST_ID_BUT_SEE_ITS_SATTRIBUTESS_MSG":"Some or all instances of this widget are hidden, but you can see its %sattributes%s.","SUCCESS_S_LBL":"Success: %s","TEMPL_COL_SAVE_ED_ERR_INV_TEMPL_PRMSSNS_MSG":"Widget changes of template could not be saved due to errors while saving. Please check the template file permissions.","THIS_WIDGET_HAS_NO_ATTRIBUTES_MSG":"This widget has no attributes.","THIS_WIDGET_HAS_NO_VIEW_LBL":"This widget has no view","VAL_PCT_S_ATTRIB_MINIMUM_VAL_ACCD_MSG":"Value for '%s' attribute is too small. The minimum value accepted is %s but the value received was %s.","VAL_PCT_S_ATTRIB_MAX_VAL_ACCD_PCT_S_MSG":"Value for '%s' attribute is too large. The maximum value accepted is %s but the value received was %s.","VIEW_ATTRIBUTES_LBL":"View Attributes","WARNING_LBL":"Warning","WARNING_S_LBL":"Warning: %s","WIDGET_CHANGES_ERRORS_WILL_IGNORED_MSG":"Widget changes with errors will be ignored."};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[; ]*)$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"mysupport.razer.com","SUBMIT_TOKEN_EXP":30};});
+RightNow.Url.setParameterSegment(4);
+RightNow.Interface.Constants = 
+{"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+([.][-_!#$%&'*+\/=?^~`{|}\\w]*)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+YUI().use('event-base',function(Y){Y.on('domready',function(){})});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"ozvioAJr","uh":"7cb23bbb","uc":"mysupport.razer.com\/app\/pre_page_check","b":"ca185657","i":"razer:razer","f":"rnw","p":"Customer Portal","v":"26.5.0.1-b293-sp2","th":"www.rnengage.com"}),function(r){function e(r){var e=document.createElement("script");e.src=r,e.async=!0,e.onload=function(){console.log("Script loaded:",r)},e.onerror=function(){console.error("Failed to load script:",r)},document.head.appendChild(e)}for(;r.length;)e(r.pop())}(["https://www.rnengage.com/api/e/ca185657/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script></body>
+</html>

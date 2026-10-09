@@ -193,6 +193,9 @@ def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     if product and product["brand"].strip().upper() == "JBL":
         from .jbl_presentation import project
         return project(rows)
+    if product and product['brand'].strip().casefold() == 'razer':
+        from .razer_presentation import project
+        return project(rows)
     if product and product["brand"].strip().upper() == "LENOVO":
         from .lenovo_presentation import project
         return project(rows)

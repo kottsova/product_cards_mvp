@@ -1,0 +1,8 @@
+The first completed full regression ran 1659 tests with one failure in
+tests.test_dns_fallback.ComputeMissingFieldsTests.test_worker_stops_asking_once_the_gap_is_filled_elsewhere.
+The old generic-DNS worker test used Razer/RZ-TEST and expected generic error behavior.
+Stage 70 introduced official Razer dispatch, so the fixture was migrated to Generic/GEN-TEST.
+All previous assertions were retained. A dedicated Razer run_once dispatch test was added.
+Focused verification: 27 Razer tests OK; 52 generic DNS tests OK.
+The previous regression_fixture_failure.json is retained independently of the final regression result.
+An earlier in-progress regression was interrupted before completion to correct axis parsing and RAM substring filtering.

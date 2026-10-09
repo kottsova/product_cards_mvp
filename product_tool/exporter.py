@@ -93,6 +93,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
     from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
     from . import xbox_pipeline
     from .xbox_identity import BRANDS as XBOX_BRANDS
+    from . import razer_pipeline
     for p in batch["products"]:
         source_pages = jobs.get_source_pages(database, p["id"])
         ps=p['brand'].strip().casefold() in PLAYSTATION_BRANDS
@@ -101,6 +102,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
         xb_evidence=card_evidence.load(database,p['id'],'xbox') if xb else None
         lg = lg_batch.is_lg(p)
         samsung = p["brand"].strip().upper() == "SAMSUNG"
+        rz = p['brand'].strip().casefold() == 'razer'
+        rz_evidence=card_evidence.load(database,p['id'],'razer') if rz else None
         jbl = p["brand"].strip().upper() == "JBL"
         jbl_evidence = card_evidence.load(database,p["id"],"jbl") if jbl else None
         lenovo = p["brand"].strip().upper() == "LENOVO"
@@ -131,7 +134,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
-            tied = xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
+            tied = razer_pipeline.photo_verified(item,rz_evidence) if rz else xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
@@ -151,7 +154,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
                 photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],
                                          "Да" if item["selected"] else "Нет","Связь с артикулом не подтверждена",*_photo_cells(item)])
-            elif (samsung or lenovo or jbl) and item["kind"] != "excluded":
+            elif (samsung or lenovo or jbl or rz) and item["kind"] != "excluded":
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
@@ -211,6 +214,23 @@ def export_batch(database: Path,batch_id: str)->bytes:
             history=jobs.list_jobs(database,p["id"])
             status=history[0]["status"] if history else ""
             ready.append([(p["name"] or p["search_code"]),p["search_code"],status,r["verdict"],r["gtin"],r["page_enr"] or "",r["revision_status"],r["official_facts"],f"{r['official_photos_selected']} / {r['official_photos']}",r["manual_family"],"\u0414\u0430" if r["manual_exact_code_in_pdf"] else "\u041d\u0435\u0442",len(r["other_manuals_unverified"]),", ".join(r["blocking_gaps"]+r["advisory_gaps"])])
+    razer_products=[p for p in batch['products'] if p['brand'].strip().casefold()=='razer']
+    if razer_products:
+        rr=book.create_sheet(_title('Готовность Razer',used));_headers(rr,['Товар','Код','Готовность','Модель','Конфигурация','Русская инструкция','Характеристики','Пробелы'])
+        rc=book.create_sheet(_title('Кандидаты Razer',used));_headers(rc,['Товар','Раздел','Исходное поле','Значение','Причина'])
+        rv=book.create_sheet(_title('Варианты Razer',used));_headers(rv,['Товар','Запрошенное поле','Значение','Подтверждение'])
+        rd=book.create_sheet(_title('Документы Razer',used));_headers(rd,['Товар','Тип','Название','URL','Язык','Проверка'])
+        raw=book.create_sheet(_title('Исходные факты Razer',used));_headers(raw,['Товар','Раздел','Исходное поле','Значение','URL'])
+        from .razer_presentation import REASONS,CONFIG_LABELS
+        for p in razer_products:
+            ev=card_evidence.load(database,p['id'],'razer') or {};r=razer_pipeline.card_readiness(database,p['id']);i=r['identity'];rr.append([p['name'],p['search_code'],'Готова' if r['verdict']=='export_ready' else 'Не готова',i.get('model','Не подтверждена'),'Полный артикул' if i.get('exact_sku') else 'Не подтверждена',r['manual_status'],r['confirmed_specs'],'; '.join(razer_pipeline.GAPS[g] for g in r['gaps'])])
+            for c in ev.get('rejected_specs',[]):rc.append([p['name'],c['section'],c['raw_label'],c['value'],REASONS.get(c['reason'],c['reason'])])
+            for k,v in ev.get('requested_configuration',{}).items():rv.append([p['name'],CONFIG_LABELS.get(k,k),v,'Требует точного источника'])
+            for c in ev.get('raw_specs',[]):raw.append([p['name'],c['section'],c['raw_label'],c['value'],ev.get('source_url','')])
+            for d in ev.get('manuals',[]):rd.append([p['name'],d['type'],d['title'],d['url'],d['language'],'Проверена' if d.get('verified') else 'Не проверена'])
+        for sheet in (rr,rc,rv,rd,raw):
+            sheet.freeze_panes='A2';sheet.auto_filter.ref=sheet.dimensions
+            for column in sheet.columns:sheet.column_dimensions[column[0].column_letter].width=38
     jbl_products = [p for p in batch["products"] if p["brand"].strip().upper() == "JBL"]
     if jbl_products:
         ready_jbl=book.create_sheet(_title("Готовность JBL",used))

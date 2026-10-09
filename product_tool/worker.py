@@ -152,6 +152,7 @@ def run_once(
     apple_adapter_factory: Callable[[], object] | None = None,
     playstation_adapter_factory: Callable[[], object] | None = None,
     xbox_adapter_factory: Callable[[], object] | None = None,
+    razer_adapter_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -161,6 +162,10 @@ def run_once(
         product=jobs.get_product(database,product_id)
         if not product:
             jobs.finish(database,job_id,"error","Подтверждённый товар не найден."); return True
+        if product['brand'].strip().casefold() == 'razer':
+            from . import razer_pipeline
+            razer_pipeline.run_job(database,job_id,product_id,product,stages=job['stages'],adapter_factory=razer_adapter_factory,dns_adapter_factory=dns_adapter_factory,clock=clock)
+            return True
         from .xbox_identity import BRANDS as XBOX_BRANDS
         if product['brand'].strip().casefold() in XBOX_BRANDS:
             from . import xbox_pipeline

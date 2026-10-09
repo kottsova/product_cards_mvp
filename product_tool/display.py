@@ -51,6 +51,7 @@ DISPLAY_NAME_RU = {
 }
 
 SOURCE_NAMES = {
+    'razer_model': 'Razer — модель', 'razer_configuration': 'Razer — конфигурация',
     "lg": "LG Казахстан", "lg_kz": "LG Казахстан", "lg_ru": "LG Россия",
     "lg_global": "LG official other region",
     "sulpak": "Sulpak", "manual": "Ручное решение", "dns": "DNS", "bosch_home": "Bosch Home Казахстан", "samsung": "Samsung Казахстан",
@@ -101,6 +102,8 @@ SAMSUNG_STATUS_NAMES = {"official_base_only": "Значение официаль
 
 
 def display_status(status: str, source: str = "") -> str:
+    if source.startswith('razer_'):
+        return {'model_confirmed_official':'Подтверждено для модели Razer','full_sku_official':'Подтверждено для артикула Razer','needs_review':'Требует проверки'}.get(status,STATUS_NAMES.get(status,status))
     if source.startswith('xbox_'):
         return {'full_sku_official':'Параметр точного SKU Microsoft Store','configuration_confirmed_official':'Параметр конфигурации Store Product ID','hardware_confirmed_official':'Параметр опубликованного оборудования Xbox','model_confirmed_official':'Общая характеристика модели Xbox'}.get(status,STATUS_NAMES.get(status,status))
     if source.startswith('playstation'):
