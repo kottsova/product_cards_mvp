@@ -154,6 +154,28 @@ def project_final_rows(rows: list[dict[str, Any]], *, exact_ru: bool = False) ->
 def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     rows = jobs.comparison_rows(path, product_id)
     product = jobs.get_product(path, product_id)
+    from .xbox_identity import BRANDS as XBOX_BRANDS
+    if product and product['brand'].strip().casefold() in XBOX_BRANDS:
+        for row in rows:
+            fact=next(iter(row.get('sources',{}).values()),{})
+            row['display_name']=fact.get('raw_name') or row['display_name']
+            if row['normalized_name']=='product_weight':row['display_name']='Вес товара, кг'
+            axes={'product_dimensions__width':'Ширина товара, мм','product_dimensions__height':'Высота товара, мм','product_dimensions__depth':'Глубина товара, мм'}
+            if row['normalized_name'] in axes:row['display_name']=axes[row['normalized_name']]
+            resolved=row.get('resolved')
+            if resolved and resolved.get('selected_unit')=='g' and row['normalized_name']=='product_weight':
+                from decimal import Decimal
+                resolved['selected_value']=str(Decimal(resolved['selected_value'])/1000);resolved['selected_unit']='kg';resolved['display_value']=resolved['selected_value']+' кг'
+            elif resolved and resolved.get('display_value'):
+                resolved['display_value']=re.sub(r'\b(?:hours?|hrs?)\b','ч',resolved['display_value'],flags=re.I)
+            if resolved and row['normalized_name'] in axes and resolved.get('selected_unit')=='cm':
+                from decimal import Decimal
+                resolved['selected_value']=str(Decimal(resolved['selected_value'])*10);resolved['selected_unit']='mm';resolved['display_value']=resolved['selected_value']+' мм'
+            branded=('Xbox Velocity Architecture','Quick Resume','Smart Delivery','Xbox Wireless','Dolby Atmos','Spatial Sound','Windows Sonic','DTS Headphone:X','RDNA 2','Zen 2','Game Pass Ultimate','Robot White','Carbon Black','Arctic Camo','Galaxy Black','Xbox Series X','Xbox Series S','Xbox One','USB-C','Bluetooth','HDMI','NVME','GDDR6')
+            for value in ([resolved] if resolved else [])+list(row.get('sources',{}).values()):
+                if value.get('display_value'):
+                    for term in branded:value['display_value']=re.sub(re.escape(term),term,value['display_value'],flags=re.I)
+        return rows
     from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
     if product and product['brand'].strip().casefold() in PLAYSTATION_BRANDS:
         labels={'product_dimensions__width':'Ширина','product_dimensions__height':'Высота','product_dimensions__depth':'Глубина','product_weight':'Вес','объем_накопителя':'Объём накопителя'}

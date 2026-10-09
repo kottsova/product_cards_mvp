@@ -1,0 +1,139 @@
+{
+  "stage": 68,
+  "frozen_dataset_sha256": "556dfe669181b1959e1d21dd52ed491f78719744bdbdab3442bef981de76191c",
+  "baseline_complete": true,
+  "dataset_rows": 10,
+  "first_pass_ready": 0,
+  "live_final_ready": 2,
+  "captured_final_ready": 6,
+  "false_confirmed_configuration_facts": 0,
+  "identifier_checks": [
+    {
+      "article": "Xbox Series X",
+      "model": "model_confirmed",
+      "configuration": "unproven",
+      "hardware": "unproven",
+      "confirmed_configurations": false,
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ]
+    },
+    {
+      "article": "Xbox Series S 512GB",
+      "model": "model_confirmed",
+      "configuration": "unproven",
+      "hardware": "unproven",
+      "confirmed_configurations": false,
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ]
+    },
+    {
+      "article": "8R02LKF9Q26R",
+      "model": "model_confirmed",
+      "configuration": "exact_store_product",
+      "hardware": "unproven",
+      "confirmed_configurations": true,
+      "blocking_gaps": []
+    },
+    {
+      "article": "8XN59CRBSQGZ/KPRJ",
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven",
+      "confirmed_configurations": true,
+      "blocking_gaps": []
+    },
+    {
+      "article": "8QRF79K7JSR6/ZHP2",
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven",
+      "confirmed_configurations": true,
+      "blocking_gaps": []
+    },
+    {
+      "article": "8RSN7J6375GG/99WM",
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven",
+      "confirmed_configurations": true,
+      "blocking_gaps": []
+    },
+    {
+      "article": "9203Q8W23LHN/HFXZ",
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven",
+      "confirmed_configurations": true,
+      "blocking_gaps": []
+    },
+    {
+      "article": "8N1BB8DSBKNT",
+      "model": "model_confirmed",
+      "configuration": "unproven",
+      "hardware": "unproven",
+      "confirmed_configurations": false,
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ]
+    },
+    {
+      "article": "8ZB8Z8MM10V0",
+      "model": "model_confirmed",
+      "configuration": "exact_store_product",
+      "hardware": "unproven",
+      "confirmed_configurations": true,
+      "blocking_gaps": []
+    },
+    {
+      "article": "1883",
+      "model": "model_confirmed",
+      "configuration": "unproven",
+      "hardware": "official_hardware_model_number",
+      "confirmed_configurations": false,
+      "blocking_gaps": [
+        "configuration_unresolved",
+        "exact_photo_missing"
+      ]
+    }
+  ],
+  "edge_cases": [
+    "Series X vs Series S: own H1 mismatch rejected",
+    "512 GB vs 1 TB: per-own Store published storage; no usable capacity invented",
+    "Controller color: QP6M black gallery excluded for KPRJ white",
+    "Base vs bundle: Diablo game / Starter Game Pass only from own bundle; no inherited second controller or packaging fact",
+    "Regional SKU: en-US response does not confirm en-GB SKU; current KPRJ differs from catalog LK4W",
+    "Revision: 1883 has hardware number; no borrowed weight/dimensions/clock/runtime/radio"
+  ],
+  "adapter_verdict": "Xbox adapter not ready",
+  "audit_verdict": "PASS",
+  "native_ui_10_http_200": true,
+  "native_excel_valid": true,
+  "artifact_tool": {
+    "previews_written": 5,
+    "process_exit_code": -1073740791,
+    "native_runtime_error": true,
+    "exporter_affected": false,
+    "final_shell_exit_code": 1,
+    "note": "Five final previews written and independently decoded; renderer process failed after output. Earlier native exit -1073740791 retained; no renderer success claim."
+  },
+  "pdf_limitation": "Legacy Microsoft PDF ToUnicode maps do not expose Cyrillic correctly in pypdf/PDFium; Russian Safety cover visually reviewed; no User Guide claimed",
+  "captured_final_file": "acceptance_release_final.json",
+  "configuration_description_scope_verified": true,
+  "source_hashes_current": true,
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 583.8488266000059,
+    "result": [
+      "Ran 1610 tests in 580.946s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "stage": 68,
+  "phase": "unmodified ordinary run_once baseline",
+  "head_before": "aba854121464779dccf909d817d50d315a31018e",
+  "worker_sha256": "d671ce0baaaf64fae244b9e34a7b83127bac54425fdfee3e6f62e7a0e3f254a3",
+  "worker_unchanged": true,
+  "input": {
+    "id": 1,
+    "batch_id": "xb68baseline",
+    "row_number": 1,
+    "name": "Xbox Series X",
+    "brand": "Xbox",
+    "search_code": "1882",
+    "alternate_code": "",
+    "category": "consoles",
+    "needs_confirmation": 0,
+    "issues_json": "[]",
+    "original_values_json": "{}",
+    "identity_json": "{}"
+  },
+  "identifier_type": "hardware_model_number",
+  "identifier_grounding": "Microsoft Learn official device identification page explicitly names Xbox Series X Model 1882; reference was not supplied to run_once",
+  "identifier_reference": "https://learn.microsoft.com/en-us/xbox/service-guides/series-x-console/series-x-device-id-and-disassembly",
+  "requested_region": "en-us",
+  "retail_sku": null,
+  "color": null,
+  "storage_configuration": null,
+  "query_variants": [
+    "1882",
+    "Xbox Series X 1882",
+    "Xbox Series X"
+  ],
+  "query_variants_executed": "Only ordinary generic dealer fallback; no Xbox official discovery dispatch exists",
+  "sources": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "dealer_url_needed",
+      "evidence": "Нет проверенного дилерского URL для «Xbox Xbox Series X» (артикул 1882). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "fetched_at": "2026-10-08T15:27:15+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [],
+  "resolved": [],
+  "photos": [],
+  "documents": [],
+  "job": {
+    "id": "c628a68f73324802bed2b6f4cfc7062e",
+    "product_id": 1,
+    "status": "error",
+    "current_stage": 6,
+    "message": "Нет проверенного дилерского URL для «Xbox Xbox Series X» (артикул 1882). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+    "created_at": "2026-10-08T15:27:15+00:00",
+    "updated_at": "2026-10-08T15:27:15+00:00",
+    "started_at": "2026-10-08T15:27:15+00:00",
+    "finished_at": "2026-10-08T15:27:15+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "events": [
+    {
+      "id": 1,
+      "job_id": "c628a68f73324802bed2b6f4cfc7062e",
+      "stage": null,
+      "level": "info",
+      "message": "Задание добавлено в очередь.",
+      "source_url": "",
+      "created_at": "2026-10-08T15:27:15+00:00"
+    },
+    {
+      "id": 2,
+      "job_id": "c628a68f73324802bed2b6f4cfc7062e",
+      "stage": null,
+      "level": "info",
+      "message": "Worker начал обработку.",
+      "source_url": "",
+      "created_at": "2026-10-08T15:27:15+00:00"
+    },
+    {
+      "id": 3,
+      "job_id": "c628a68f73324802bed2b6f4cfc7062e",
+      "stage": 1,
+      "level": "info",
+      "message": "Бренд «Xbox» вне конвейера официальных источников; проверяем только резервный источник DNS.",
+      "source_url": "",
+      "created_at": "2026-10-08T15:27:15+00:00"
+    },
+    {
+      "id": 4,
+      "job_id": "c628a68f73324802bed2b6f4cfc7062e",
+      "stage": 1,
+      "level": "warning",
+      "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «Xbox Xbox Series X» (артикул 1882). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "source_url": "",
+      "created_at": "2026-10-08T15:27:15+00:00"
+    },
+    {
+      "id": 5,
+      "job_id": "c628a68f73324802bed2b6f4cfc7062e",
+      "stage": 3,
+      "level": "info",
+      "message": "Нормализуем и сравниваем характеристики.",
+      "source_url": "",
+      "created_at": "2026-10-08T15:27:15+00:00"
+    },
+    {
+      "id": 6,
+      "job_id": "c628a68f73324802bed2b6f4cfc7062e",
+      "stage": 6,
+      "level": "warning",
+      "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+      "source_url": "",
+      "created_at": "2026-10-08T15:27:15+00:00"
+    },
+    {
+      "id": 7,
+      "job_id": "c628a68f73324802bed2b6f4cfc7062e",
+      "stage": null,
+      "level": "warning",
+      "message": "Нет проверенного дилерского URL для «Xbox Xbox Series X» (артикул 1882). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "source_url": "",
+      "created_at": "2026-10-08T15:27:15+00:00"
+    }
+  ],
+  "trace": [],
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  }
+}

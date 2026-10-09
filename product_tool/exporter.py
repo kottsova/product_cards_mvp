@@ -91,10 +91,14 @@ def export_batch(database: Path,batch_id: str)->bytes:
     photo_candidates = None
     from . import playstation_pipeline
     from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
+    from . import xbox_pipeline
+    from .xbox_identity import BRANDS as XBOX_BRANDS
     for p in batch["products"]:
         source_pages = jobs.get_source_pages(database, p["id"])
         ps=p['brand'].strip().casefold() in PLAYSTATION_BRANDS
         ps_evidence=card_evidence.load(database,p['id'],'playstation') if ps else None
+        xb=p['brand'].strip().casefold() in XBOX_BRANDS
+        xb_evidence=card_evidence.load(database,p['id'],'xbox') if xb else None
         lg = lg_batch.is_lg(p)
         samsung = p["brand"].strip().upper() == "SAMSUNG"
         jbl = p["brand"].strip().upper() == "JBL"
@@ -127,7 +131,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
-            tied = playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
+            tied = xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
@@ -247,6 +251,24 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 if photo_candidates is None:
                     photo_candidates=book.create_sheet(_title('Фото-кандидаты',used));_headers(photo_candidates,['Товар','Источник','Тип','URL','Выбрано для просмотра','Статус',*photo_columns])
                 photo_candidates.append([p['name'],'PlayStation','Кандидат',c['url'],'Нет',c['reason'],'не определено','не определено','не определено','не определено'])
+    xbox_products=[p for p in batch['products'] if p['brand'].strip().casefold() in XBOX_BRANDS]
+    xbox_sheets=[]
+    if xbox_products:
+        for title,headers in [('Готовность Xbox',['Товар','Артикул','Готовность','Модель','Конфигурация','Оборудование','Пользовательская инструкция','Пробелы','Подтверждённых характеристик']),('Конфигурация Xbox',['Артикул','Поле','Значение','Официальный источник']),('Идентификаторы Xbox',['Артикул','Тип идентификатора','Значение','Регион','Источник']),('Кандидаты Xbox',['Артикул','Раздел','Исходное поле','Значение','Причина']),('Документы Xbox',['Артикул','Тип','Название','URL','Связь','Проверка','Язык'])]:
+            sheet=book.create_sheet(_title(title,used));_headers(sheet,headers);xbox_sheets.append(sheet)
+        xr,xc,xi,xk,xd=xbox_sheets
+        for p in xbox_products:
+            ev=card_evidence.load(database,p['id'],'xbox') or {};r=xbox_pipeline.card_readiness(database,p['id']);i=r['identity']
+            xr.append([p['name'],p['search_code'],'Готова' if r['verdict']=='export_ready' else 'Не готова',*[xbox_pipeline.SCOPES.get(i.get(k,'unproven'),'Не подтверждено') for k in ('model','configuration','hardware')],r['manual_status'],'; '.join(xbox_pipeline.GAPS[g] for g in r['gaps']),r['confirmed_specs']])
+            for k,v in r['configuration_fields'].items():xc.append([p['search_code'],{'storage':'Встроенный накопитель','color':'Цвет','disc':'Оптический привод','bundle':'Название комплекта','bundle_contents':'Комплектация','included_game':'Игра в комплекте','game_pass':'Game Pass в комплекте','storefront':'Регион официального магазина'}.get(k,k),v,ev.get('exact_official_pdp','')])
+            for k,v in ev.get('identifiers',{}).items():xi.append([p['search_code'],k,v or 'Не подтверждён',ev.get('requested_region',''),ev.get('exact_official_pdp','') or ev.get('support_url','')])
+            for c in ev.get('configuration_candidates',[]):xk.append([p['search_code'],c['section'],c['raw_label'],c['value'],c['reason']])
+            for d in ev.get('manuals',[]):xd.append([p['search_code'],d['type'],d['title'],d['url'],d['relation'],'Проверена' if d['verified'] else 'Не проверена',d.get('language','Не проверена')])
+            for c in ev.get('photo_candidates',[]):
+                if photo_candidates is None:
+                    photo_candidates=book.create_sheet(_title('Фото-кандидаты',used));_headers(photo_candidates,['Товар','Источник','Тип','URL','Выбрано для просмотра','Статус',*photo_columns])
+                if photo_candidates.cell(1,1).value=='SKU':photo_candidates.append([p['search_code'],p['name'],c['url'],c['reason'],'candidate','unproven',None,None,None,None])
+                else:photo_candidates.append([p['name'],'Xbox / Microsoft','Кандидат',c['url'],'Нет',c['reason'],None,None,None,None])
     apple_products = [p for p in batch["products"] if p["brand"].strip().upper() == "APPLE"]
     if apple_products:
         from . import apple_pipeline
@@ -274,6 +296,12 @@ def export_batch(database: Path,batch_id: str)->bytes:
 
     for sheet in book.worksheets:
         for col in sheet.columns: sheet.column_dimensions[col[0].column_letter].width=min(60,max(12,max(len(str(c.value or "")) for c in col)+2))
+    for sheet in xbox_sheets:
+        from math import ceil
+        sheet.freeze_panes='A2';sheet.auto_filter.ref=sheet.dimensions
+        for row in sheet.iter_rows():
+            for cell in row:cell.alignment=Alignment(wrap_text=True,vertical='top')
+            sheet.row_dimensions[row[0].row].height=min(180,max(24,16*max(ceil(len(str(c.value or ''))/max(8,(sheet.column_dimensions[c.column_letter].width or 12)-2)) for c in row)))
     if apple_products:
         from math import ceil
         for sheet in (ready_apple,candidates_apple,*([photo_candidates] if photo_candidates is not None else [])):

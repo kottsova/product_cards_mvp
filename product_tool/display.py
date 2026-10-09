@@ -101,6 +101,8 @@ SAMSUNG_STATUS_NAMES = {"official_base_only": "Значение официаль
 
 
 def display_status(status: str, source: str = "") -> str:
+    if source.startswith('xbox_'):
+        return {'full_sku_official':'Параметр точного SKU Microsoft Store','configuration_confirmed_official':'Параметр конфигурации Store Product ID','model_confirmed_official':'Общая характеристика модели Xbox'}.get(status,STATUS_NAMES.get(status,status))
     if source.startswith('playstation'):
         return {'full_sku_official':'Параметр точного коммерческого артикула PlayStation','model_confirmed_official':'Общая характеристика модели PlayStation','hardware_confirmed_official':'Характеристика оборудования с подтверждённым CFI'}.get(status,STATUS_NAMES.get(status,status))
     if source == "apple_model" and status == "model_confirmed_official":

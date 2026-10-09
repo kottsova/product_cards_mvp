@@ -1,0 +1,2512 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Xbox Series X Console Safety &amp; Repair Instructions | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Repair Instructions for Xbox Series X Console." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/xbox/service-guides/series-x-console/series-x-device-id-and-disassembly" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Xbox Series X Console Safety &amp; Repair Instructions" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/xbox/service-guides/series-x-console/series-x-device-id-and-disassembly" />
+			<meta property="og:description" content="Repair Instructions for Xbox Series X Console." />
+			<meta name="platform_id" content="6af1067f-6021-4517-731a-20b6cbac8d13" /> 
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-Xbox-service-guides" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="breadcrumb_path" content="../breadcrumb/xbox-service-guides/toc.json" />
+	
+		<meta name="permissioned-type" content="public" />
+	
+		<meta name="author" content="adanpinonlmc" />
+	
+		<meta name="ms.author" content="adanpinon" />
+	
+		<meta name="manager" content="coravens" />
+	
+		<meta name="ms.reviewer" content="zadvorshivangisahu" />
+	
+		<meta name="ms.date" content="2026-08-03T00:00:00Z" />
+	
+		<meta name="ms.topic" content="concept-article" />
+	
+		<meta name="ms.service" content="xbox" />
+	
+		<meta name="ms.localizationpriority" content="high" />
+	
+		<meta name="document_id" content="0a55acdc-f5a2-8e1b-ba2f-8702c066aad5" />
+	
+		<meta name="document_version_independent_id" content="0a55acdc-f5a2-8e1b-ba2f-8702c066aad5" />
+	
+		<meta name="updated_at" content="2026-08-19T20:43:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/xbox-pr/blob/live/service-guides/series-x-console/series-x-device-id-and-disassembly.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/xbox-pr/blob/563402704ed8ca0f202e1e1e56313f43a6c18871/service-guides/series-x-console/series-x-device-id-and-disassembly.md" />
+	
+		<meta name="git_commit_id" content="563402704ed8ca0f202e1e1e56313f43a6c18871" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="Learn.xbox-service-guides" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toc.json" />
+	
+		<meta name="feedback_product_url" content="" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="6536" />
+	
+		<meta name="asset_id" content="series-x-console/series-x-device-id-and-disassembly" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="service-guides/series-x-console/series-x-device-id-and-disassembly.md" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/xbox-pr/blob/live/service-guides/series-x-console/series-x-device-id-and-disassembly.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/xbox/service-guides/series-x-console/series-x-device-id-and-disassembly?accept=text/markdown" />
+	 
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03564.8276-6f650523/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": true,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03564.8276-6f650523/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					aria-expanded="false"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			hidden
+			href=""
+			data-original_content_git_url="https://github.com/MicrosoftDocs/xbox-pr/blob/live/service-guides/series-x-console/series-x-device-id-and-disassembly.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/service-guides/series-x-console/series-x-device-id-and-disassembly.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="xbox-series-x-service-guide">Xbox Series X Service Guide</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><h3 id="disclaimer-of-warranties-and-limitation-of-damages">Disclaimer of Warranties and Limitation of Damages</h3>
+<p>All information, content, materials, and products made available in or in conjunction with this Guide are provided by Microsoft on âas-isâ and âas availableâ basis, unless otherwise specified by Microsoft in writing.</p>
+<p>Microsoft makes no representations or warranties of any kind, express or implied, as to the information, content, materials, and products included or otherwise made available to you or accompanying this Guide unless specified in writing. You expressly agree that your use of the information, content, materials, and product in or accompanying this Guide is at your sole risk.</p>
+<p>To the fullest extent permissible by law, Microsoft disclaims all warranties, express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose. To the fullest extent permissible by law, Microsoft shall not be liable for damages of any kind arising from the use of information, content, materials, or product made available in or in conjunction with this Guide, including but not limited to direct, indirect, incidental, consequential, and/or punitive damages unless otherwise specified in writing.</p>
+<h3 id="notice">Notice</h3>
+<p>Microsoft and its suppliers may have patents, patent applications, trademarks, copyrights, trade secrets and/or other intellectual property rights covering subject matter in this document. Microsoftâs furnishing of this document to recipient does not grant or imply any license to any patents, trademarks, copyrights, trade secrets or other intellectual property rights, and recipientâs permitted use of any such intellectual property rights, if any, is solely governed by the Agreements.</p>
+<p>This document and the information it contains are subject to change without notice. You can find the latest information on XBOX device servicing and repair at <a href="https://support.xbox.com/help/hardware-network/warranty-service/getting-your-product-serviced" data-linktype="external">XBOX Servicing</a> . Always consult the most up-to-date information available before performing device service or repair.</p>
+<p>Â©2024 Microsoft Corporation. All rights reserved.</p>
+<p>Document Part Number: M1340631</p>
+<h2 id="introduction">Introduction</h2>
+<p>This Service Guide provides instructions for repairing XBOX devices using genuine Microsoft parts. It is intended for technically inclined individuals with the knowledge, experience, and specialized tools required to repair Microsoft devices.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Read this Guide in its entirety before starting any repairs. If at any point you are unsure or uncomfortable about performing the repairs, as detailed in this Guide, DO NOT proceed. Contact Microsoft for additional support options.</p>
+</div>
+<div class="WARNING">
+<p>Warning</p>
+<p>Failure to follow the instructions in this Guide; use of non-Microsoft (non-genuine), incompatible, or modified replacement parts; and/or failure to use proper tools could result in serious personal injury, death, and/or damage to the product or other property.</p>
+</div>
+<p>What are some things to consider before deciding to self-repair?</p>
+<ul>
+<li>Does the device support self-repair?</li>
+<li>Will the replacement part fix the issue?</li>
+<li>Do you have the technical skills to complete the repair?</li>
+<li>Do you have the correct tools for the repair process as explained in the service guides?</li>
+</ul>
+<p>If the answer is no to any of the above questions, we suggest taking the device into an authorized service provider or setting up an out-of-warranty repair order. More information can be found on <a href="https://support.xbox.com/help/hardware-network/browse" data-linktype="external">XBOX Repair Site</a>.</p>
+<p>If the answer is yes to the above questions, you can purchase from <a href="https://www.microsoft.com/en-us/store/b/xbox-repair-parts?msockid=1d86c35dec8160d72f5bd759ed3f6199" data-linktype="external">Microsoft XBOX Repair &amp; Replacement</a> or <a href="https://www.ifixit.com/collaborations/microsoft" data-linktype="external">iFixit.</a></p>
+<h2 id="device-identity-information">Device Identity Information</h2>
+<p>Supported Models â</p>
+<ul>
+<li><p>XBOX Series X Model 1882 with 14-digit SN. Units with 12-digit SN are not supported.</p>
+</li>
+<li><p>The model and serial number for the XBOX Series X are on the label on the back right of the device.</p>
+</li>
+<li><p>Information regarding the componentâs Product ID (batch code) for many of the spare parts can be found on its packaging. It is recommended that customers retain the bag labels for each part for later reference.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p05-02.png" alt="Photo of the Xbox Series X rear label showing the model and serial number on the back right of the device." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ul>
+<h2 id="general-information-precautions-and-warnings">General Information, Precautions, and Warnings</h2>
+<h2 id="tools">Tools</h2>
+<p>This section documents the tools recommended or required by Microsoft to successfully complete a repair on an XBOX device. Microsoft Service Tools (recommended and required) are sold by iFixit in partnership with Microsoft. Items under Electronic Repair Hardware and Tools can be commonly purchased from electronic repair retailers. Lastly, items under standard tools and misc. items on this list can be commonly purchased from consumer retailers.</p>
+<p><strong>Required Electronic Service Tools</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p06-03.png" alt="Photo of the electronic service tools required to complete an Xbox Series X repair." data-linktype="relative-path">
+</span>
+</p>
+<p><strong>Required Standard Tools and Misc Items</strong></p>
+<ul>
+<li>T8 Driver</li>
+<li>Metal Tweezers</li>
+<li>Isopropyl alcohol dispenser bottle (use 70% IPA)</li>
+<li>Cleaning swabs</li>
+<li>Microfiber Cloth</li>
+<li>Lint free cleaning cloth</li>
+<li>Commercially available leakage tester</li>
+</ul>
+<p><strong>Recommended Standard Tools and Miscellaneous Items</strong></p>
+<ul>
+<li>Protective eyewear</li>
+<li>Protective gloves</li>
+</ul>
+<h2 id="general-safety-precautions">General Safety Precautions</h2>
+<p>Always observe the following general safety precautions:</p>
+<ul>
+<li>Opening and/or repairing any device can present electric shock, device damage, fire, and/or personal injury risks and other hazards. Exercise caution when undertaking these activities as described in this guide. Microsoft recommends a familiarity with repair and troubleshooting of consumer electronics equivalent to an <a href="https://www.comptia.org/certifications/a" data-linktype="external">CompTIA A+ Certification</a> for the best chance of success in the execution of a device repair.</li>
+<li>Always select and use a genuine AC power supply and AC power cord for your Microsoft device. A genuine Microsoft power supply unit is provided with every device. Failure to take the following steps during device repair or component replacement can result in serious personal injury or death from electric shock or in damage to your device.</li>
+<li>Use only AC power provided by a standard (mains) wall outlet. Do not use non-standard power sources, such as generators or inverters, even if the voltage and frequency appear acceptable.</li>
+<li>Do not dispose of your old device in a household garbage can or recycling bin.</li>
+<li>While working on devices, avoid the use of clothing accessories such as bracelets or watches that can cause electrical shorts For additional product safety information, including information about</li>
+<li>Hearing conservation</li>
+<li>Heat related concerns</li>
+<li>Choking hazard/small parts</li>
+<li>Interference with medical devices</li>
+<li>Photosensitive seizures</li>
+<li>Musculoskeletal disorders</li>
+</ul>
+<p>See <a href="https://aka.ms/xbox-safety" data-linktype="external">https://aka.ms/xbox-safety</a></p>
+<h2 id="repair-specific-precautions-and-warnings">Repair-Specific Precautions and Warnings</h2>
+<p><strong>Before opening the device</strong>, ensure that:</p>
+<ul>
+<li>The device has powered off and disconnected from power for at least 30 seconds.</li>
+</ul>
+<p><strong>Personal protective equipment</strong></p>
+<ul>
+<li>We recommend wearing protective eyewear and gloves when disassembling/re-assembling a device.</li>
+<li>While working on devices, avoid the use of clothing accessories such as bracelets, rings, or watches that can cause electrical shorts.</li>
+<li>Before opening device, always check that an anti-static wrist strap is worn, and work area is properly grounded to ensure electrostatic discharge (ESD) safe environment.</li>
+<li>Check to make sure that general guidelines and ESD compliance steps are followed prior to starting activities. Refer to Prerequisite Steps section for details.</li>
+</ul>
+<p><strong>Workspace</strong></p>
+<ul>
+<li>Clean your work surface regularly to remove debris and abrasive particles. As you remove each subassembly from the device, place the subassembly (and all accompanying screws) away from the work area to prevent damage to the device or to the subassembly.</li>
+</ul>
+<h3 id="electro-static-discharge-esd-prevention">Electro-Static Discharge (ESD) Prevention</h3>
+<ul>
+<li>Review and follow the general guidelines and ESD prevention steps in this Guide prior to beginning work.</li>
+<li>Ensure your work XBOX is level/flat and covered with ESD-safe, soft, non-marring material.</li>
+<li>Before opening a device, always wear an anti-static wrist strap and confirm your work area is properly grounded to protect vulnerable electronics from electrostatic discharge (ESD).</li>
+<li>Parts removed from a device during the repair process should be stored in ESD-safe bags and packaged for return or recycling in the same packaging that the new replacement part came in.</li>
+</ul>
+<h2 id="watch-for-indicators-of-potential-problems--if-observed-stop-repair-and-contact-microsoft">Watch for Indicators of potential problems â If Observed, Stop Repair and Contact Microsoft</h2>
+<p>Before and during repair of any Microsoft device, watch for the following indicators of a potential problem. If you see any of these, stop repairing. Visit <a href="https://aka.ms/productsafety" data-linktype="external">https://aka.ms/productsafety</a> to report and obtain next steps:</p>
+<ul>
+<li>Any burned or melted components, traces, or plastic parts on the <strong>outside</strong> of the device, or which otherwise exhibits heat damage, including charring seen in charging or other ports.</li>
+<li>Any burned or melted components, traces, or plastic parts on the <strong>inside</strong> of the device, or which otherwise exhibits heat damage.</li>
+<li>Any accessories exhibiting melting or heat damage that are included with the Microsoft device such as power supplies, keyboards, mice, cables, charging connectors, etc. included with the Microsoft device.</li>
+<li>Any devices that exhibit a case that has separated apart or opened for reasons other than impact damage from dropping or evidence of tampering,</li>
+<li>Any other finding that may constitute a potential safety hazard to the user, such as sharp edges on plastics.</li>
+</ul>
+<p>The following information is required for reporting:</p>
+<ul>
+<li>The model and serial number of the affected Microsoft Xbox device and/or accessory(ies).</li>
+<li>A description of the damage found.</li>
+<li>Clear photographs depicting the symptoms observed.</li>
+</ul>
+<h2 id="illustrated-service-parts-list">Illustrated Service Parts List</h2>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p09-04.png" alt="Diagram of the Xbox Series X illustrated service parts list showing each serviceable component." data-linktype="relative-path">
+</span>
+</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Repair workflows may require multiple parts to be ordered to complete the repair successfully.</p>
+</div>
+<p>Please check the Required Components section in each repair workflow to ensure you have all required parts before beginning your repair.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Component</th>
+<th>SKU Part No.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Rear Enclosure</td>
+<td>EP2-18844</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Foot</td>
+<td>EP2-18842</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fan</td>
+<td>EP2-18850</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Front Enclosure Module</td>
+<td>EP2-18843</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Network Board</td>
+<td>EP2-18848</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Accessory Board</td>
+<td>EP2-18847</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Power Supply Unit</td>
+<td>EP2-18849</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Motherboard Module (US/CA)</td>
+<td>EP2-18841</td>
+</tr>
+<tr>
+<td></td>
+<td>Motherboard Module (Mexico)</td>
+<td>EP2-24880</td>
+</tr>
+<tr>
+<td></td>
+<td>Motherboard Module (EMEA)</td>
+<td>EP2-24881</td>
+</tr>
+<tr>
+<td></td>
+<td>Motherboard Module (AU/NZ)</td>
+<td>EP2-24882</td>
+</tr>
+</tbody>
+</table>
+<h2 id="genuine-microsoft-replacement-parts">Genuine Microsoft Replacement Parts</h2>
+<ul>
+<li>Genuine Microsoft replacement parts can be obtained directly from Microsoft on <a href="https://www.microsoft.com/en-us/store/b/xbox-repair-parts?msockid=1d86c35dec8160d72f5bd759ed3f6199" data-linktype="external">Microsoft XBOX Repair</a> <a href="https://www.microsoft.com/en-us/store/b/xbox-repair-parts?msockid=1d86c35dec8160d72f5bd759ed3f6199" data-linktype="external">&amp; Replacement Parts - Microsoft Store</a></li>
+<li>Genuine Microsoft replacement parts are also available on the partner sites below:
+<ul>
+<li><a href="https://www.ifixit.com/collaborations/microsoft" data-linktype="external">iFixit</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="general-support">General Support</h2>
+<ul>
+<li>To watch a teardown video of this device, visit <a href="https://aka.ms/XBOXSeriesXRepairVideo" data-linktype="external">XBOX Series X Video</a></li>
+<li>For general XBOX support, visit <a href="https://support.xbox.com" data-linktype="external">XBOX Support</a></li>
+<li>To troubleshoot device feature/function problems or learn more about XBOX visit <a href="https://support.xbox.com/help/hardware-network/browse" data-linktype="external">Hardware &amp; networking</a> <a href="https://support.xbox.com/en-US/help/hardware-network/browse" data-linktype="external">| XBOX Support</a></li>
+<li>To learn more about the accessibility features of the XBOX, go to the online user guide at <a href="https://support.xbox.com/help/accessible-gaming" data-linktype="external">Accessible</a> <a href="https://support.xbox.com/help/accessible-gaming" data-linktype="external">gaming on XBOX and Windows | XBOX Support</a></li>
+</ul>
+<h2 id="hardware-troubleshooting-approach">Hardware Troubleshooting Approach</h2>
+<p>Microsoft recommends checking for any device updates before troubleshooting XBOX</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Ensuring your device is fully up to date is important for ensuring the issue you are experiencing is not fixed by a software update prior to conducting a hardware repair.</p>
+</div>
+<h2 id="cleaning-process">Cleaning Process</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Power off and disconnect your XBOX console from the wall before cleaning it. Don't apply liquids directly to your console or controllers.</p>
+</div>
+<p>We recommend cleaning your XBOX regularly to remove debris and abrasive particles. This can be done with a soft lint-free cloth (microfiber cloths work great) dampened with a little bit of mild soap and water, or premoistened disinfectant wipes. Clean every 3-6 months or whenever needed.</p>
+<p>To learn more about the cleaning and care of your XBOX, go to <a href="https://support.xbox.com" data-linktype="external">XBOX Support</a></p>
+<h2 id="component-removal-and-replacement-procedures">Component Removal and Replacement Procedures</h2>
+<h2 id="prerequisite-steps-all-repairs">Prerequisite Steps (All Repairs)</h2>
+<p>Steps outlined in this section should be conducted prior to starting any repair on a XBOX device.</p>
+<ul>
+<li><strong>Power off device â</strong> Ensure device is powered off and has been disconnected from a power supply for at least 30 seconds.</li>
+<li><strong>General Safety â</strong> Check to make sure that general guidelines and ESD compliance steps are followed prior to opening the device.</li>
+<li><strong>Position Device â</strong> Place device onto a clean surface free of debris with the screen face down on an ESD mat and the base of the unit facing the technician.</li>
+</ul>
+<h2 id="perform-leakage-test--before-returning-the-device-to-the-user-after-reassembly">Perform leakage test â Before returning the device to the user after reassembly</h2>
+<ul>
+<li><p>A leakage test must be performed after the device is reassembled and before it is returned to the user.</p>
+</li>
+<li><p>After the repair process, any device which incorporates an internal power supply that connects to AC mains, may present a shock hazard to the user. This may be caused by conditions such as improper cable routing, pinched wires, foreign objects, solder bridges, debris, etc.</p>
+</li>
+<li><p>If the device fails any portion of this test, remove the PSU and inspect the cables. If the cables are damaged or if the PSU continues to fail, replace the PSU.</p>
+</li>
+<li><p>The AC leakage (leakage current) test shall be performed from any exposed metal part to earth ground and must not exceed 0.1 mA (100 micro-amperes).</p>
+</li>
+<li><p>Leakage current can be measured by the following methods:</p>
+<div class="NOTE">
+<p>Note</p>
+<p>The outer ground shell of a USB cable can be inserted into a USB port as a good contact point for an exposed metal part of the device.</p>
+</div>
+</li>
+</ul>
+<ol>
+<li><p>A commercially available leakage tester such as the Simpson 229, or equivalent. The leakage tester shall incorporate an input current measuring network consisting of a 1500 ohm resistor with a parallel 0.15uF capacitor to represent the human body resistance. Follow the manufactures instructions.</p>
+</li>
+<li><p>Measure the voltage drop across a 1500 ohm resistor with a 0.15uF capacitor in parallel using a digital multimeter (DMM). The AC voltage measured across the resistor/capacitor network shall not exceed 0.75VAC.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-leakage-test-dmm.png" alt="Using a DMM to check AC leakage: one probe to exposed metal parts on the device and one to earth ground, through a 0.15 ÂµF capacitor in parallel with a 1.5 kÎ© resistor." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<h2 id="xbox-testing-process--before-returning-the-device-to-the-user-after-reassembly">XBOX Testing Process â Before returning the device to the user after reassembly</h2>
+<p><strong>Standard Tools for Testing:</strong> HDMI Cable, Display, XBOX Controller, Wi-fi connection, Ethernet cable, XBOX game (disc and/or digital), Audio output device, USB connection</p>
+<h3 id="initial-inspection">Initial Inspection</h3>
+<ul>
+<li>Ensure the XBOX console is clean and free of any visible damage.</li>
+<li>Check all ports and connectors for any signs of wear or damage.</li>
+</ul>
+<h3 id="power-on">Power On</h3>
+<ul>
+<li>Connect the XBOX to a power source and press the power button.</li>
+<li>Verify that the console powers on and the power indicator light is functioning correctly.</li>
+<li>Ensure the fan turns on and is operating without any unusual noises.</li>
+</ul>
+<h3 id="display-check">Display Check</h3>
+<ul>
+<li>Connect the XBOX to a display using an HDMI cable.</li>
+<li>Ensure the display is set to the correct input source.</li>
+<li>Verify that the XBOX logo appears on the screen and the display is clear and free of artifacts.</li>
+</ul>
+<h3 id="controller-connection">Controller Connection</h3>
+<ul>
+<li>Connect an XBOX controller to the console.</li>
+<li>Verify that the controller syncs with the console and is responsive.</li>
+</ul>
+<h3 id="network-connectivity">Network Connectivity</h3>
+<ul>
+<li>Connect the XBOX to a Wi-Fi network or use an Ethernet cable for a wired connection.</li>
+<li>Verify that the console connects to the network and can access online services.</li>
+<li>Test WiFi connectivity on both 2.5G and 5G networks.</li>
+</ul>
+<h3 id="system-update">System Update</h3>
+<ul>
+<li>Check for any available system updates and install them.</li>
+<li>Verify that the update process completes successfully without errors.</li>
+</ul>
+<h3 id="game-test">Game Test</h3>
+<ul>
+<li>Insert a game disc or launch a digital game from the console's library.</li>
+<li>Verify that the game loads and runs without issues.</li>
+<li>Play an online game on a 4K TV to ensure the console handles high-resolution graphics smoothly.</li>
+<li>Play a disc game on a 4K TV to check for any performance issues.</li>
+<li>Test gameplay with the console in both horizontal and vertical positions.</li>
+</ul>
+<h3 id="audio-check">Audio Check</h3>
+<ul>
+<li>Connect headphones or speakers to the console.</li>
+<li>Verify that the audio output is clear and free of distortion.</li>
+</ul>
+<h3 id="peripheral-test">Peripheral Test</h3>
+<ul>
+<li>Connect any additional peripherals (e.g., external hard drive) to the console.</li>
+<li>Verify that the console recognizes and interacts with the peripherals correctly.</li>
+<li>Test the USB ports to ensure they are functioning properly.</li>
+</ul>
+<h3 id="button-test">Button Test</h3>
+<ul>
+<li>Test the eject and power buttons to ensure they are responsive and functioning correctly.</li>
+</ul>
+<h3 id="final-inspection">Final Inspection</h3>
+<ul>
+<li>Perform a final check to ensure all components are functioning as expected.</li>
+<li>Document any issues or irregularities found during the testing process.</li>
+<li>Check for any unusual noises from the fan, coil, or other components.</li>
+<li>Find recommendations for specific Error Codes here <a href="https://support.xbox.com/help/errors/error-code-search-guide" data-linktype="external">Find your error code | Xbox</a> <a href="https://support.xbox.com/help/errors/error-code-search-guide" data-linktype="external">Support</a></li>
+</ul>
+<h2 id="rear-enclosure-replacement-process">Rear Enclosure Replacement Process</h2>
+<p>This is the back panel of the XBOX's casing. It provides structural support and protection for the internal components</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Rear Enclosure (Refer to Illustrated Service Parts List)
+<ul>
+<li>2 x Screws (Rear Enclosure)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+<li>Blank SN Label
+<ul>
+<li>P/N: M1285386-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Procedure â Removal (Rear Enclosure)1. Disengage snaps â</strong> Put the device in position with foot up so that the bottom of the device is accessible. Use a Nylon Spudger/Probing Tool/ Plastic Opening Tool to remove the 2 snap covers.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p14-05.png" alt="Photo of removing the two snap covers from the bottom of the device with a nylon spudger, with the foot facing up." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Expose rear enclosure screws â</strong> Use a Nylon Spudger/Probing Tool/ Plastic Opening Tool to remove the cosmetic cover (P/N: M1296016-001) which covers 1 of the rear enclosure screws. Either use a screwdriver to puncture the SN label or the use the same tool as before to pull back the SN label which covers the other of the rear enclosure screw.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p14-06.png" alt="Photo of removing the cosmetic cover that hides one of the two rear enclosure screws." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p14-07.png" alt="Photo of lifting the serial number label to expose the second rear enclosure screw." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p15-08.png" alt="Photo of both rear enclosure screws exposed after the cosmetic cover and serial number label are lifted." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Unfasten screws</strong> â Use a T8 Torx driver to unfasten the 2 rear enclosure screws (P/N: M1097276-001).</p>
+</li>
+<li><p><strong>Remove the Rear Enclosure</strong> â Use a Nylon Spudger/Probing Tool/ Plastic Opening Tool to lift the RIO housing cover along the bottom side to disengage the snaps there. Disengage the snaps along the 2 sides by moving the tool along the bottom edge. When all snaps are disengaged, grip the RIO housing cover and remove it from the device.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p15-09.png" alt="Photo of lifting the RIO housing cover with a nylon spudger to disengage the snaps and remove the rear enclosure." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<p><strong>Procedure â Installation (Rear Enclosure)</strong></p>
+<ol>
+<li><p><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</p>
+</li>
+<li><p><strong>Install Rear Enclosure-</strong> Align the retention tabs along the top of Rear Enclosure and slide tabs into the recesses. Firmly press along the 2 sides to engage the snaps. <strong>Be careful not to use excessive force to avoid damaging the snaps</strong>. Press along the bottom side to completely install the Rear Enclosure. Check for alignment gaps to ensure connection ports are not obstructed.</p>
+</li>
+<li><p><strong>Fasten Screws â</strong> Use a T8 Torx driver to fasten the 2 rear enclosure screws (P/N: M1097276-001). Screws should be fastened until just snug and seated, and then turn another 60 degrees (1/6 turn). Do not overtighten.</p>
+</li>
+<li><p><strong>Install Blank SN label</strong> â Record the Serial Number from the old Rear Enclosure onto the blank SN label provided. Clean the marked label area with 70% IPA. When the area is dry, align and paste the SN label making sure not to block the security lock port.</p>
+</li>
+<li><p><strong>Install the cosmetic cover -</strong> Align and paste the cosmetic cover.</p>
+</li>
+<li><p><strong>Test unit</strong> â Flip the device right side up and reconnect cables. Perform leakage test prescribed above. Power up the device and ensure that the unit is running correctly.</p>
+</li>
+</ol>
+<h2 id="foot-replacement-process">Foot Replacement Process</h2>
+<p>This is the plastic disc foot attached to the bottom of the XBOX. It provides stability and prevents the console from sliding or scratching surfaces.</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Anti-static wrist strap (1 MOhm resistance)</li>
+<li>Soft ESD-safe mat</li>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Foot (Refer to Illustrated Service Parts List)
+<ul>
+<li>2 x Screws (Rear Enclosure)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Procedure â Removal (Foot)1. Remove Rear Enclosure-</strong> Remove the Rear Enclosure as prescribed above</p>
+</li>
+<li><p><strong>Remove Footâ</strong> Use a flat plastic spudger to lift the locking snap while rotating the Foot counterclockwise to disassemble from the unit</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p17-10.png" alt="Photo of lifting the locking snap with a flat plastic spudger to release the foot." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p17-11.png" alt="Photo of rotating the foot counterclockwise to disassemble it from the unit." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<p><strong>Procedure â Installation (Foot)</strong></p>
+<ol>
+<li><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</li>
+<li><strong>Install Foot</strong> â Align the Foot to the Front Enclosure Module. Rotate clockwise while pressing the Foot against the Front Enclosure Module to engage the snaps. There will be a sound upon proper engagement.</li>
+<li><strong>Install Rear Enclosure -</strong> Install the Rear Enclosure as prescribed above.</li>
+<li><strong>Test unit</strong> â Flip the device right side up and reconnect cables. Perform leakage test prescribed above. Power up the device and ensure that the unit is running correctly</li>
+</ol>
+<h2 id="fan-replacement-process">Fan Replacement Process</h2>
+<p>The fan is used to cool the internal components of the XBOX, preventing overheating and ensuring device optimal performance.</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Anti-static wrist strap (1 MOhm resistance)</li>
+<li>Soft ESD-safe mat</li>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Fan (Refer to Illustrated Service Parts List)
+<ul>
+<li>2 x Screws (Rear Enclosure)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+<li>Screw (Fan â Large screw)
+<ul>
+<li>P/N: M1104855-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Procedure â Removal (Fan)1. Remove Rear Enclosure-</strong> Remove the Rear Enclosure as prescribed above</p>
+</li>
+<li><p><strong>Unfasten screws â</strong> Use a T8 Torx driver to unfasten all three screws that hold the fan assembly in place. <strong>Place the 2 outer screws to the side as they will be used to install the new fan.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p19-12.png" alt="Photo of unfastening the three fan assembly screws with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Disconnect the Fan â</strong> Using ESD-safe tweezers or your fingers, unplug the fan connector from the Motherboard Module. <strong>Be sure to pull on the connector and not the cable as well as pull the connector straight out of the Motherboard Module to avoid damage.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p19-13.png" alt="Photo of unplugging the fan connector from the motherboard module by pulling the connector straight out." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Remove Fan â</strong> Gently grip the fan and slide it directly out of the Front Enclosure Module.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p20-14.png" alt="Photo of sliding the fan directly out of the front enclosure module." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<p><strong>Procedure â Installation (Fan)</strong></p>
+<ol>
+<li><p><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</p>
+</li>
+<li><p><strong>Install Fan Assembly</strong> â Slide the Fan into the slots of the Front Enclosure Module and connect the fan cable to the Motherboard Module. <strong>Be sure to route the cable under the cable guide when reconnecting the fan.</strong></p>
+</li>
+<li><p><strong>Fasten Screws â</strong> Using a T8 Torx driver and the 2 screws previously set aside, fasten each side of the Fan to the Front Enclosure Module. Then install the last screw (P/N: M1104855-001) in the center of the fan. <strong>Screws should be fastened until just snug and seated, and then turn another 60 degrees (1/6 turn). Do not overtighten.</strong></p>
+</li>
+<li><p><strong>Install Rear Enclosure -</strong> Install the Rear Enclosure as prescribed above.</p>
+</li>
+<li><p><strong>Test unit</strong> â Flip the device right side up and reconnect cables. Perform leakage test prescribed above. Power up the device and ensure that the unit is running correctly</p>
+</li>
+</ol>
+<h2 id="front-enclosure-module-replacement-process">Front Enclosure Module Replacement Process</h2>
+<p>This is the top and sides of the XBOX's casing as well as the circuit boards for the buttons. It also provides structural support and protection for the internal components</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Anti-static wrist strap (1 MOhm resistance)</li>
+<li>Soft ESD-safe mat</li>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Front Enclosure Module (Refer to Illustrated Service Parts List)
+<ul>
+<li>5 x Screws (Rear Enclosure and Base)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+<li>Screw (Fan â Large screw)
+<ul>
+<li>P/N: M1104855-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Procedure â Removal (Front Enclosure Module)</strong></p>
+<ol>
+<li><p><strong>Remove Rear Enclosure-</strong> Remove the Rear Enclosure as prescribed above</p>
+</li>
+<li><p><strong>Remove Foot-</strong> Remove the Foot as prescribed above</p>
+</li>
+<li><p><strong>Remove Fan â</strong> Remove the Fan as prescribed above.</p>
+</li>
+<li><p><strong>Unscrew ODD-</strong> Use a T8 Torx driver to unfasten the 1 ODD Base screws that hold the ODD to the Front Enclosure Module. <strong>Set screw to the side to be used in the reassembly and keep track of which screw goes to which part.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p21-15.png" alt="Photo of unfastening the ODD base screw that holds the ODD to the front enclosure module with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Unscrew ODD Cover-</strong> Use a T8 Torx driver to unfasten the 1 ODD cover screws that hold the ODD cover to the Main Enclosure Module. <strong>Set screw to the side to be used in the reassembly and keep track of which screw goes to which part.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p22-16.png" alt="Photo of unfastening the ODD cover screw that holds the ODD cover to the main enclosure module with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Disconnect and Remove ODD â</strong> Disconnect the power and data cables from the ODD. <strong>Be sure to pull on the connector and not the cable as well as pull the connector straight out to avoid damage</strong>. Gently grip the ODD and lift directly out of the Main Enclosure Module.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p22-17.png" alt="Photo of disconnecting the ODD power and data cables and lifting the ODD out of the main enclosure module." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Disconnect FFCs â</strong> Disconnect the FIO-W FFC (narrower one) by pressing on the metal tab to release the FFC. Disconnect the FIO-E (wider one) by flipping down the metal latch to release the FFC.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p23-18.png" alt="Photo of releasing the narrower FIO-W flexible flat cable by pressing the metal tab." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p23-19.png" alt="Photo of releasing the wider FIO-E flexible flat cable by flipping down the metal latch." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Detach FFCs â</strong> Lift up each of the FFCs to detach them from the Core assembly. <strong>Be sure to pull the FFC straight out to avoid damage.</strong></p>
+</li>
+<li><p><strong>Unfasten Screws â</strong> Use a T8 Torx driver to unfasten the three Base screws that hold the Motherboard Module to the Front Enclosure Module.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p23-20.png" alt="Photo of unfastening the three base screws that hold the motherboard module to the front enclosure module with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Remove Motherboard Module â</strong> Slide the Motherboard Module in the shown direction for about 10mm to disengage the Motherboard Module from the Front Enclosure Module. Lift the Motherboard Module out and place on a soft ESD safe location to avoid physical or ESD damage.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p24-21.png" alt="Photo of sliding the motherboard module about 10 mm to disengage it from the front enclosure module before lifting it out." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<p><strong>Procedure â Installation (Front Enclosure Module)</strong></p>
+<ol>
+<li><p><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</p>
+</li>
+<li><p><strong>Install Motherboard Module â</strong> Align Motherboard Module such that the 3 bosses on the Front Enclosure Module are inserted into the bigger holes. Slide the Motherboard Module in the direction so that the 3 bosses are now engaged in the smaller holes.</p>
+</li>
+<li><p><strong>Reconnect FIO FFCs â</strong> Use 70% IPA to clean the area on the Heatsink and PSU where the FFCs will be adhered. Remove liners from the adhesive patches of both FFCs. Insert the FIO-E FFC and flip up the latch to secure the FFC. Press on the adhesive area of this FFC to ensure proper adhesion. Add the clear yellow Kapton tape for reinforcement. Press on the metal tab for the FIO-W connector and insert the FFC. Release the metal tab to secure this FFC. Press on each adhesive area of this FFCs to ensure proper adhesion.</p>
+</li>
+<li><p><strong>Install ODD â</strong> Gently slide ODD into place. It will sit flat in the Main Enclosure Module once it is fully seated. Reconnect the power and data cables to the ODD.</p>
+</li>
+<li><p><strong>Fasten ODD screw -</strong> Use a T8 Torx driver to fasten the 1 ODD Base screw that hold the ODD to the Front Enclosure Module. <strong>If the screw is unable to seat fully, check the alignment of the ODD in the Main Enclosure Module.</strong></p>
+</li>
+<li><p><strong>Fasten ODD cover screw</strong> - Use a T8 Torx driver to fasten the 1 ODD cover screws that hold the ODD cover to the Main Enclosure Module.</p>
+</li>
+<li><p><strong>Fasten Enclosure Screws â</strong> Use a T8 Torx driver to fasten the 3 Base screws (P/N: M1097276-001) to secure the Motherboard Module in place. <strong>Screws should be fastened until just snug and seated, and then turn another 60 degrees (1/6 turn). Do not overtighten.</strong></p>
+</li>
+<li><p><strong>Install Fan â</strong> Install the Fan as prescribed above.</p>
+</li>
+<li><p><strong>Install Foot -</strong> Install the Foot as prescribed above.</p>
+</li>
+<li><p><strong>Inspection â</strong> Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</p>
+</li>
+<li><p><strong>Install Rear Enclosure -</strong> Install the Rear Enclosure as prescribed above.</p>
+</li>
+<li><p><strong>Test unit â</strong> Flip the device right side up and reconnect cables. <strong>Perform leakage test prescribed above.</strong> Power up the device and ensure that the unit is running correctly.</p>
+</li>
+</ol>
+<h2 id="accessory-board-replacement-process">Accessory Board Replacement Process</h2>
+<p>This board connects various accessories to the XBOX, such as controllers, ensuring proper communication with the console.</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section. See Prerequisite Steps (All Repairs) section before beginning repair.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Anti-static wrist strap (1 MOhm resistance)</li>
+<li>Soft ESD-safe mat</li>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Accessory Board (Refer to Illustrated Service Parts List)
+<ul>
+<li>5 x Screws (Rear Enclosure and Base)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+<li>Screw (Fan â Large screw)
+<ul>
+<li>P/N: M1104855-001</li>
+</ul>
+</li>
+<li>3 x Screw (Accessory Board)
+<ul>
+<li>P/N: M1104853-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Procedure â Removal (Accessory Board)</strong></p>
+<ol>
+<li><p><strong>Remove Rear Enclosure-</strong> Remove the Rear Enclosure as prescribed above</p>
+</li>
+<li><p><strong>Remove Foot-</strong> Remove the Foot as prescribed above</p>
+</li>
+<li><p><strong>Remove Fan â</strong> Remove the Fan as prescribed above.</p>
+</li>
+<li><p><strong>Remove ODD â</strong> Remove the ODD as prescribed above.</p>
+</li>
+<li><p><strong>Remove Motherboard Module -</strong> Remove the Motherboard Module as prescribed above.</p>
+</li>
+<li><p><strong>Remove Accessory Board</strong> â Use a T8 Torx driver to unfasten the 3 Accessory Board screws. Gently remove the Accessory Board. <strong>Be sure to pull the board straight out to avoid damage to the Motherboard Module.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p26-22.png" alt="Photo of unfastening the three accessory board screws and pulling the accessory board straight out of the motherboard module." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<p><strong>Procedure â Installation (Accessory Board)</strong></p>
+<ol>
+<li><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</li>
+<li><strong>Install Accessory Board â</strong> Align the Accessory Board with the top PCBA connector and insert firmly.Use a T8 Torx driver to fasten the 3 Accessory Board screws (P/N: M1104853-001). <strong>Screws should be fastened until just snug and seated. Do not overtighten or PCBA may warp.</strong></li>
+<li><strong>Install Motherboard Module â</strong> Install the Motherboard Module as prescribed above.</li>
+<li><strong>Install ODD â</strong> Install the ODD as prescribed above.</li>
+<li><strong>Install Fan â</strong> Install the Fan as prescribed above.</li>
+<li><strong>Install Foot -</strong> Install the Foot as prescribed above.</li>
+<li><strong>Inspection â</strong> Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</li>
+<li><strong>Install Rear Enclosure -</strong> Install the Rear Enclosure as prescribed above.</li>
+<li><strong>Test unit â</strong> Flip the device right side up and reconnect cables. <strong>Perform leakage test prescribed above.</strong> Power up the device and ensure that the unit is running correctly.</li>
+</ol>
+<h2 id="power-supply-unit-psu-replacement-process">Power Supply Unit (PSU) Replacement Process</h2>
+<p>This component converts electrical power from an outlet into the appropriate voltage and current needed to power the XBOX.</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Anti-static wrist strap (1 MOhm resistance)</li>
+<li>Soft ESD-safe mat</li>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Power Supply Unit (Refer to Illustrated Service Parts List)
+<ul>
+<li>5 x Screws (Rear Enclosure and Base)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+<li>Screw (Fan â Large screw)
+<ul>
+<li>P/N: M1104855-001</li>
+</ul>
+</li>
+<li>3 x Screw (Accessory Board)
+<ul>
+<li>P/N: M1104853-001</li>
+</ul>
+</li>
+<li>3 x Screw (Board Shield)
+<ul>
+<li>P/N: M1097165-002</li>
+</ul>
+</li>
+<li>6 x Screw (Board Shield)
+<ul>
+<li>P/N: M1097224-003</li>
+</ul>
+</li>
+<li>8 x Screw (Board Shield)
+<ul>
+<li>P/N: M1097195-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Procedure â Removal (PSU)</strong></p>
+<ol>
+<li><p><strong>Remove Rear Enclosure</strong> - Remove the Rear Enclosure as prescribed above</p>
+</li>
+<li><p><strong>Remove Foot</strong> - Remove the Foot as prescribed above</p>
+</li>
+<li><p><strong>Remove Fan</strong> - Remove the Fan as prescribed above.</p>
+</li>
+<li><p><strong>Remove ODD â</strong> Remove the ODD as prescribed above.</p>
+</li>
+<li><p><strong>Remove Motherboard Module -</strong> Remove the Motherboard Module as prescribed above.</p>
+</li>
+<li><p><strong>Remove Accessory Board</strong> â Remove the Accessory Board as prescribed above.</p>
+</li>
+<li><p><strong>Remove Corner Shield</strong> â Use a T8 Torx driver to unfasten the corner shield screw</p>
+</li>
+<li><p><strong>Unfasten Socket Screws</strong> â Use a T8 Torx driver to unfasten the 3 screws holding the A/C socket.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p28-23.png" alt="Photo of unfastening the three screws that hold the A/C socket with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Release Cable</strong> â Unbuckle the clip holding the cable. <strong>Do not use a metal tool.</strong> If necessary, use a flat plastic spudger. Lift cable to allow access to unfastening screws.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p28-24.png" alt="Photo of unbuckling the clip that holds the A/C cable, using a flat plastic spudger rather than a metal tool." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p29-25.png" alt="Photo of lifting the released A/C cable to allow access to the screws underneath." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Remove Board Shield</strong> â Use a T8 Torx driver to unfasten all 9 screws holding down the board shield. Remove the shield. <strong>Be careful not to damage the A/C cable.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p29-26.png" alt="Photo of unfastening the nine board shield screws with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p30-27.png" alt="Photo of removing the board shield while avoiding damage to the A/C cable." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Disconnect power to Motherboard Module</strong> â Unbuckle the clip holding the power cable connecting to the lower board. <strong>Do not use a metal tool.</strong> If necessary, use a flat plastic spudger. Press on the retention tab and disconnect this cable. Disconnect the other cable supplying power to the upper PCBA. <strong>Be sure to pull the connectors straight out to avoid damage to the Motherboard Module.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p30-28.png" alt="Photo of unbuckling the clip that holds the power cable to the lower board and pressing the retention tab to disconnect it." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p31-29.png" alt="Photo of disconnecting the cable that supplies power to the upper PCBA by pulling the connector straight out." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Unfasten screws</strong> - Use a T8 Torx driver to unfasten all 4 screws holding the Power Supply Unit (PSU).</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p31-30.png" alt="Photo of unfastening the four screws that hold the power supply unit with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>Remove PSU</strong>- Unbuckle the rubber baffle that holds the PSU to the Motherboard Module and remove the PSU.</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p32-31.png" alt="Photo of unbuckling the rubber baffle that holds the power supply unit to the motherboard module." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p32-32.png" alt="Photo of removing the power supply unit from the motherboard module." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<p><strong>Procedure â Installation (PSU)</strong></p>
+<ol>
+<li><p><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</p>
+</li>
+<li><p><strong>Install Power Supply Unit</strong> â Place and align the PSU on the Motherboard Module. Connect both cables supplying to the two PCBAs. Align and buckle the plastic clip to secure the cable connecting to the lower PCBA. Use a T8 Torx driver to fasten the 4 PSU (1 â M1097195-001 and 3 â M1097195-001) screws. Be sure to use the correct screw for each location. Screws should be fastened until just snug and seated, and then turn another 90 degrees (1/4 turn). <strong>Do not overtighten.</strong> Buckle the rubble baffle to further secure the power. <strong>Inspect the cables of the PSU to confirm that there is nodamage to any of the cables.</strong></p>
+</li>
+<li><p><strong>Install Board Shield</strong> â Lift up the A/C power cable to place the board shield. Align the shield and use a T8 Torx driver to fasten all 9 (6 -M1097195-001, 2 -M1097224-003 and 1 â M1097165-002) board shield screws. Be sure to use the correct screw for each location. Screws should be fastened until they are just snug and seated, and then turn another 90 degrees (1/4 turn). <strong>Do not overtighten.</strong></p>
+</li>
+<li><p><strong>Install A/C socket</strong> â Align the A/C socket and fasten all 3 screws (1 - P/N: M1097224-003 and 2 - P/N: M1097165-002). Be sure to use the correct screw for each location. Screws should be fastened until just snug and seated, and then turn another 180 degrees (1/2 turn). <strong>Do not overtighten.</strong> Buckle the plastic clip to secure the A/C socket cable.</p>
+</li>
+<li><p><strong>Install Corner Shield</strong> â Align the corner shield and fasten the screw (P/N: M1097195-001) to secure it. Screw should be fastened until just snug and seated, and then turn another 90 degrees (1/6 turn). <strong>Do not overtighten.</strong></p>
+</li>
+<li><p><strong>Install Accessory Board â</strong> Install the Accessory Board as prescribed above.</p>
+</li>
+<li><p><strong>Install Motherboard Module â</strong> Install the Motherboard Module as prescribed above.</p>
+</li>
+<li><p><strong>Install ODD â</strong> Install the ODD as prescribed above.</p>
+</li>
+<li><p><strong>Install Fan â</strong> Install the Fan as prescribed above.</p>
+</li>
+<li><p><strong>Install Foot -</strong> Install the Foot as prescribed above.</p>
+</li>
+<li><p><strong>Inspection â</strong> Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</p>
+</li>
+<li><p><strong>Install Rear Enclosure -</strong> Install the Rear Enclosure as prescribed above.</p>
+</li>
+<li><p><strong>Test unit â</strong> Flip the device right side up and reconnect cables. <strong>Perform leakage test prescribed above.</strong> Power up the device and ensure that the unit is running correctly.</p>
+</li>
+</ol>
+<h2 id="network-board-replacement-process">Network Board Replacement Process</h2>
+<p>This component handles the network connectivity of the XBOX, including Wi-Fi and Ethernet connections.</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Anti-static wrist strap (1 MOhm resistance)</li>
+<li>Soft ESD-safe mat</li>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Network Board (Refer to Illustrated Service Parts List)
+<ul>
+<li>5 x Screws (Rear Enclosure and Base)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+<li>Screw (Fan â Large screw)
+<ul>
+<li>P/N: M1104855-001</li>
+</ul>
+</li>
+<li>3 x Screw (Accessory Board)
+<ul>
+<li>P/N: M1104853-001</li>
+</ul>
+</li>
+<li>3 x Screw (Board Shield)
+<ul>
+<li>P/N: M1097165-002</li>
+</ul>
+</li>
+<li>6 x Screw (Board Shield)
+<ul>
+<li>P/N: M1097224-003</li>
+</ul>
+</li>
+<li>11 x Screw (Board Shield and Network Screws)
+<ul>
+<li>P/N: M1097195-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Procedure â Removal (Network Board)</strong></p>
+<ol>
+<li><p><strong>Remove Rear Enclosure-</strong> Remove the Rear Enclosure as prescribed above</p>
+</li>
+<li><p><strong>Remove Foot-</strong> Remove the Foot as prescribed above</p>
+</li>
+<li><p><strong>Remove Fan â</strong> Remove the Fan as prescribed above.</p>
+</li>
+<li><p><strong>Remove ODD â</strong> Remove the ODD as prescribed above.</p>
+</li>
+<li><p><strong>Remove Motherboard Module -</strong> Remove the Motherboard Module as prescribed above.</p>
+</li>
+<li><p><strong>Remove Accessory Board</strong> â Remove the Accessory Board as prescribed above.</p>
+</li>
+<li><p><strong>Remove PSU</strong>- Remove the PSU as prescribed above.</p>
+</li>
+<li><p><strong>Remove Network Board</strong> â Use a T8 Torx driver to unfasten the 3 Network Board screws. Gently remove the Network Board. <strong>Be sure to pull the board straight out to avoid damage to the Motherboard Module. Only lift out once the board is clear of the Motherboard Module.</strong></p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p34-33.png" alt="Photo of unfastening the three network board screws with a T8 Torx driver." data-linktype="relative-path">
+</span>
+</p>
+<p><span class="mx-imgBorder">
+<img src="images/xbox-series-x-device-id-and-disassembly/image-p35-34.png" alt="Photo of pulling the network board straight out, lifting it only once it is clear of the motherboard module." data-linktype="relative-path">
+</span>
+</p>
+</li>
+</ol>
+<p><strong>Procedure â Installation (Network Board)</strong></p>
+<ol>
+<li><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</li>
+<li><strong>Install Network Board â</strong> Align the Network Board with the PCBA connector and insert firmly. Use a T8 Torx driver to fasten the 3 Network Board screws (P/N: M1097195-001). <strong>Screws should be fastened until just snug and seated. Do not overtighten or PCBA may warp.</strong></li>
+<li><strong>Install PSU â</strong> Install the PSU as prescribed above.</li>
+<li><strong>Install Accessory Board â</strong> Install the Accessory Board as prescribed above.</li>
+<li><strong>Install Motherboard Module â</strong> Install the Motherboard Module as prescribed above.</li>
+<li><strong>Install ODD â</strong> Install the ODD as prescribed above.</li>
+<li><strong>Install Fan â</strong> Install the Fan as prescribed above.</li>
+<li><strong>Install Foot -</strong> Install the Foot as prescribed above.</li>
+<li><strong>Inspection â</strong> Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</li>
+<li><strong>Install Rear Enclosure -</strong> Install the Rear Enclosure as prescribed above.</li>
+<li><strong>Test unit â</strong> Flip the device right side up and reconnect cables. <strong>Perform leakage test prescribed above.</strong> Power up the device and ensure that the unit is running correctly.</li>
+</ol>
+<h2 id="motherboard-module-replacement-process">Motherboard Module Replacement Process</h2>
+<p>This component is the main circuit board in the XBOX, containing the CPU, GPU, memory, and other essential components, responsible for the overall functioning of the console.</p>
+<p><strong>Preliminary Requirements</strong></p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Be sure to follow all special (bolded) notes of caution within each process section.</p>
+</div>
+<ul>
+<li>See Prerequisite Steps (All Repairs) section before beginning repair.</li>
+</ul>
+<p><strong>Required Tools</strong></p>
+<ul>
+<li>Anti-static wrist strap (1 MOhm resistance)</li>
+<li>Soft ESD-safe mat</li>
+<li>Isopropyl Alcohol (70% IPA)</li>
+<li>Cleaning Swabs</li>
+<li>Microfiber Cloth</li>
+<li>Nylon Spudger/Probing Tool/ Plastic Opening Tool</li>
+<li>ESD-safe Tweezers</li>
+<li>T8 (Torx) Driver</li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li>Motherboard Module (Refer to Illustrated Service Parts List)
+<ul>
+<li>5 x Screws (Rear Enclosure and Base)
+<ul>
+<li>P/N: M1097276-001</li>
+</ul>
+</li>
+<li>Cosmetic Screw Cover
+<ul>
+<li>P/N: M1296016-001</li>
+</ul>
+</li>
+<li>Screw (Fan â Large screw)
+<ul>
+<li>P/N: M1104855-001</li>
+</ul>
+</li>
+<li>3 x Screw (Accessory Board)
+<ul>
+<li>P/N: M1104853-001</li>
+</ul>
+</li>
+<li>11 x Screw (Board Shield)
+<ul>
+<li>P/N: M1097195-001</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Procedure â Removal (Motherboard Module)</strong></p>
+<ol>
+<li><strong>Remove Rear Enclosure-</strong> Remove the Rear Enclosure as prescribed above</li>
+<li><strong>Remove Foot-</strong> Remove the Foot as prescribed above</li>
+<li><strong>Remove Fan â</strong> Remove the Fan as prescribed above.</li>
+<li><strong>Remove ODD â</strong> Remove the ODD as prescribed above.</li>
+<li><strong>Remove Motherboard Module -</strong> Remove the Motherboard Module as prescribed above.</li>
+<li><strong>Remove Accessory Board</strong> â Remove the Accessory Board as prescribed above.</li>
+<li><strong>Remove PSU</strong>- Remove the PSU as prescribed above.</li>
+<li><strong>Remove Network Board</strong> â Remove the Network Board as prescribed above.</li>
+</ol>
+<p><strong>Procedure â Installation (Network Board)</strong></p>
+<ol>
+<li><strong>Inspection</strong> â Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</li>
+<li><strong>Install Network Board â</strong> Install the Network Board as prescribed above on the new Motherboard Module.</li>
+<li><strong>Install PSU â</strong> Install the PSU as prescribed above on the new Motherboard Module.</li>
+<li><strong>Install Accessory Board â</strong> Install the Accessory Board as prescribed above on the new Motherboard Module.</li>
+<li><strong>Install Motherboard Module â</strong> Install the Motherboard Module as prescribed above.</li>
+<li><strong>Install ODD â</strong> Install the ODD as prescribed above.</li>
+<li><strong>Install Fan â</strong> Install the Fan as prescribed above.</li>
+<li><strong>Install Foot -</strong> Install the Foot as prescribed above.</li>
+<li><strong>Inspection â</strong> Prior to continuing with the re-assembly, inspect the device internals to ensure no screws, foams, tape, or other foreign material has been misplaced inside the unit.</li>
+<li><strong>Install Rear Enclosure -</strong> Install the Rear Enclosure as prescribed above.</li>
+<li><strong>Test unit â</strong> Flip the device right side up and reconnect cables. <strong>Perform leakage test prescribed above.</strong> Power up the device and ensure that the unit is running correctly.</li>
+</ol>
+<h2 id="environmental-compliance-requirements">Environmental Compliance Requirements</h2>
+<p>All waste electrical and electronic equipment (WEEE), waste electronic components, waste batteries, and electronic waste residuals must be managed according to applicable laws and regulations. and H09117, âConformance Standards for Environmentally Sound Management of Waste Electrical and Electronic Equipment (WEEE)â which is available at this link: <a href="https://www.microsoft.com/en-pk/download/details.aspx?id=11691" data-linktype="external">https://www.microsoft.com/en-</a> <a href="https://www.microsoft.com/en-pk/download/details.aspx?id=11691" data-linktype="external">pk/download/details.aspx?id=11691</a> . In case of questions, please contact <a href="mailto:AskECT@microsoft.com" data-linktype="external">AskECT@microsoft.com</a> .</p>
+<p>Â©2024 Microsoft.</p>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-08-19T20:43:00.000Z"
+		data-article-date-source="git"
+		class="is-invisible"
+	>
+		2026-08-19
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>

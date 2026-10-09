@@ -1,0 +1,27 @@
+$(document).ready(function() {
+    var specsButton = $(".specs .specs-drawer .drawer-toggle");
+    $(specsButton).find(".specs-drawer-text-control").attr({"role" : "heading", "aria-level" : "2" })
+    var specsAriaLabel = $(specsButton).attr("aria-label");
+    var defaultText = $(specsButton).find('.specs-drawer-text-control').text();
+
+    var closeText;
+
+    $(specsButton).click(function() {
+        
+        var theDrawer = $(this).next(".specs-drawer-panel");
+
+        if ($(this).attr("data-collapse-aria")) {
+            closeText = $(this).attr("data-collapse-aria");
+        } else {
+            closeText = "close all tech specs";
+        }
+        
+        if (!$(theDrawer).hasClass("open")) {
+            $(theDrawer).addClass("open");
+            $(this).attr({ "aria-expanded": "true", "aria-label": closeText }).addClass("c-glyph glyph-cancel").find(".specs-drawer-text-control").text($(this).attr("data-drawer-collapse")).removeAttr("role aria-level");
+        } else {
+            $(theDrawer).removeClass("open");
+            $(this).attr({ "aria-expanded": "false", "aria-label": specsAriaLabel }).removeAttr("role aria-level").removeClass("c-glyph glyph-cancel").find(".specs-drawer-text-control").text(defaultText).attr({"role" : "heading", "aria-level" : "2" });
+        }
+    });
+});

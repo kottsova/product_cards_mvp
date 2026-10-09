@@ -7,6 +7,7 @@ from typing import Any, Iterable
 
 SUPPLIERS={"sulpak"}
 OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl","apple","apple_model","playstation","playstation_model","playstation_hardware"}
+OFFICIAL.update({'xbox_model','xbox_configuration'})
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -50,6 +51,20 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             if f["source_key"] in SUPPLIERS and pages.get(f["source_key"],{}).get("match_level")=="full_sku" and f["source_key"] not in seen:
                 suppliers.append(f); seen.add(f["source_key"])
         official=[f for f in values if f["source_key"] in OFFICIAL]
+        xb=[f for f in official if f['source_key'] in {'xbox_model','xbox_configuration'}]
+        if xb:
+            from .xbox_identity import configuration_sensitive
+            eligible=[f for f in xb if not pages.get(f['source_key'],{}).get('error') and pages.get(f['source_key'],{}).get('match_level') in {'full_sku','model_confirmed','configuration_confirmed'} and (f['source_key']!='xbox_model' or not configuration_sensitive(name))]
+            exact=[f for f in eligible if f['source_key']=='xbox_configuration']
+            chosen=exact or eligible
+            if not chosen:
+                results.append(ResolvedValue(name,'','','needs_review','Модель Xbox не подтверждает SKU, цвет, накопитель, комплект или ревизию.','',False,False))
+            elif _different(chosen):
+                results.append(ResolvedValue(name,'','','needs_review','Конфликт фактов Xbox в одной области identity.','',True,False))
+            else:
+                f=chosen[0];full=bool(exact and pages['xbox_configuration']['match_level']=='full_sku')
+                results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if full else 'configuration_confirmed_official' if exact else 'model_confirmed_official','Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.',f['source_key'],False,full))
+            continue
         ps=[f for f in official if f['source_key'].startswith('playstation') and not pages.get(f['source_key'],{}).get('error') and pages.get(f['source_key'],{}).get('match_level') in {'full_sku','model_confirmed','hardware_confirmed'}]
         if ps:
             from .playstation_identity import configuration_sensitive,hardware_specific,retail_specific
