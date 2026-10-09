@@ -1,0 +1,1238 @@
+{
+  "stage": 69,
+  "audit": "PASS",
+  "verdict": "Xbox adapter production-ready for controlled use",
+  "dataset_sha256": "556dfe669181b1959e1d21dd52ed491f78719744bdbdab3442bef981de76191c",
+  "rows": [
+    {
+      "id": 1,
+      "article": "Xbox Series X",
+      "was_live": "not_ready",
+      "was_replay": "not_ready",
+      "root_cause": "Catalog PID/SKU relation отсутствовала; имя не является SKU",
+      "specs_before": 17,
+      "specs": 21,
+      "photos": 2,
+      "identity": "published_catalog_configuration",
+      "now": "export_ready"
+    },
+    {
+      "id": 2,
+      "article": "Xbox Series S 512GB",
+      "was_live": "not_ready",
+      "was_replay": "not_ready",
+      "root_cause": "Catalog PID/SKU relation отсутствовала; отдельный controller был фото-кандидатом",
+      "specs_before": 16,
+      "specs": 18,
+      "photos": 2,
+      "identity": "published_catalog_configuration",
+      "now": "export_ready"
+    },
+    {
+      "id": 3,
+      "article": "8R02LKF9Q26R",
+      "was_live": "not_ready",
+      "was_replay": "export_ready",
+      "root_cause": "Live fetch/ranking; одиночный Store PID и фото",
+      "specs_before": 17,
+      "specs": 18,
+      "photos": 2,
+      "identity": "exact_store_product",
+      "now": "export_ready"
+    },
+    {
+      "id": 4,
+      "article": "8XN59CRBSQGZ/KPRJ",
+      "was_live": "export_ready",
+      "was_replay": "export_ready",
+      "root_cause": "Региональный own SKU/цвет; готовность сохранена",
+      "specs_before": 5,
+      "specs": 5,
+      "photos": 1,
+      "identity": "exact_store_sku",
+      "now": "export_ready"
+    },
+    {
+      "id": 5,
+      "article": "8QRF79K7JSR6/ZHP2",
+      "was_live": "not_ready",
+      "was_replay": "export_ready",
+      "root_cause": "Региональная фильтрация/цвет; общий retry",
+      "specs_before": 5,
+      "specs": 5,
+      "photos": 1,
+      "identity": "exact_store_sku",
+      "now": "export_ready"
+    },
+    {
+      "id": 6,
+      "article": "8RSN7J6375GG/99WM",
+      "was_live": "export_ready",
+      "was_replay": "export_ready",
+      "root_cause": "Табличное extraction: buttons/app/compatibility/kit",
+      "specs_before": 7,
+      "specs": 10,
+      "photos": 2,
+      "identity": "exact_store_sku",
+      "now": "export_ready"
+    },
+    {
+      "id": 7,
+      "article": "9203Q8W23LHN/HFXZ",
+      "was_live": "not_ready",
+      "was_replay": "export_ready",
+      "root_cause": "Официальный CDN/own PID; готовность сохранена",
+      "specs_before": 7,
+      "specs": 7,
+      "photos": 1,
+      "identity": "exact_store_sku",
+      "now": "export_ready"
+    },
+    {
+      "id": 8,
+      "article": "8N1BB8DSBKNT",
+      "was_live": "not_ready",
+      "was_replay": "not_ready",
+      "root_cause": "Дубли URL съедали budget; SearchAction отсутствовал",
+      "specs_before": 17,
+      "specs": 21,
+      "photos": 1,
+      "identity": "exact_store_product",
+      "now": "export_ready"
+    },
+    {
+      "id": 9,
+      "article": "8ZB8Z8MM10V0",
+      "was_live": "not_ready",
+      "was_replay": "export_ready",
+      "root_cause": "Временный fetch miss; повтор и exact PID",
+      "specs_before": 17,
+      "specs": 18,
+      "photos": 1,
+      "identity": "exact_store_product",
+      "now": "export_ready"
+    },
+    {
+      "id": 10,
+      "article": "1883",
+      "was_live": "not_ready",
+      "was_replay": "not_ready",
+      "root_cause": "Hardware ошибочно требовал retail SKU; UK search declaration",
+      "specs_before": 15,
+      "specs": 15,
+      "photos": 2,
+      "identity": "official_hardware_model_number",
+      "now": "export_ready"
+    }
+  ],
+  "extraction": [
+    {
+      "id": 1,
+      "raw_before": 51,
+      "raw_after": 49,
+      "accepted_after": 45,
+      "rejected_after": 7,
+      "confirmed_before": 17,
+      "confirmed_after": 21
+    },
+    {
+      "id": 2,
+      "raw_before": 48,
+      "raw_after": 48,
+      "accepted_after": 79,
+      "rejected_after": 10,
+      "confirmed_before": 16,
+      "confirmed_after": 18
+    },
+    {
+      "id": 3,
+      "raw_before": 44,
+      "raw_after": 44,
+      "accepted_after": 41,
+      "rejected_after": 6,
+      "confirmed_before": 17,
+      "confirmed_after": 18
+    },
+    {
+      "id": 4,
+      "raw_before": 5,
+      "raw_after": 5,
+      "accepted_after": 11,
+      "rejected_after": 0,
+      "confirmed_before": 5,
+      "confirmed_after": 5
+    },
+    {
+      "id": 5,
+      "raw_before": 8,
+      "raw_after": 8,
+      "accepted_after": 16,
+      "rejected_after": 0,
+      "confirmed_before": 5,
+      "confirmed_after": 5
+    },
+    {
+      "id": 6,
+      "raw_before": 13,
+      "raw_after": 13,
+      "accepted_after": 21,
+      "rejected_after": 5,
+      "confirmed_before": 7,
+      "confirmed_after": 10
+    },
+    {
+      "id": 7,
+      "raw_before": 17,
+      "raw_after": 17,
+      "accepted_after": 11,
+      "rejected_after": 7,
+      "confirmed_before": 7,
+      "confirmed_after": 7
+    },
+    {
+      "id": 8,
+      "raw_before": 51,
+      "raw_after": 57,
+      "accepted_after": 109,
+      "rejected_after": 13,
+      "confirmed_before": 17,
+      "confirmed_after": 21
+    },
+    {
+      "id": 9,
+      "raw_before": 44,
+      "raw_after": 44,
+      "accepted_after": 42,
+      "rejected_after": 5,
+      "confirmed_before": 17,
+      "confirmed_after": 18
+    },
+    {
+      "id": 10,
+      "raw_before": 26,
+      "raw_after": 49,
+      "accepted_after": 54,
+      "rejected_after": 17,
+      "confirmed_before": 15,
+      "confirmed_after": 15
+    }
+  ],
+  "confirmed_before": 123,
+  "confirmed_after": 138,
+  "photos_selected": 15,
+  "hardware_relations": [
+    {
+      "type": "store_product",
+      "product_id": "942J774TP9JN",
+      "sku_ids": [
+        "24K9"
+      ],
+      "hardware_model_numbers": [
+        "1883"
+      ],
+      "manufacturer_parts": [],
+      "region": "en-gb",
+      "url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn",
+      "relation": "hardware_model_to_retail_candidates",
+      "unique_hardware_configuration": false
+    }
+  ],
+  "manuals": [
+    {
+      "id": 1,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Новая Зеландия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - AU NZ.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN NL FR DE IT PT ES- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN FR ES - US CA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Китай - Китайский упрощенный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ZH - CHINA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Турция - Турецкий",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN CS EL IW HU PL SK TR- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN ZH KO - SI TW HK KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Индия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - INDIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Япония - Японский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL JA - JAPAN.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Мексика - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ES - LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Объединенные Арабские Эмираты - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN AR - MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Россия – Русский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL RU - RUSSIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S",
+          "sha256": "7b5efdaddca84ec16e99be6a9d5314186b13fcc5a30adca61913b5ab148cee5a",
+          "pages": 16,
+          "cover_text": "ǟȂ/u505ǽǱǽǳȀȁǱǽ\u0003Ǿǽ\u0003ǾǿǽǳȂ/u505ȁȂ\u0003\u0003 /u503\u0003Ǽǽǿǻǯȁ/u503ǱǼȊǻ\u0003ǯ/u505ȁǯǻ\u000f\u0003ǽǲǿǯǼ/u503ȆǴǼǼǯȎ\u0003 ǲǯǿǯǼȁ/u503Ȏ\u0003/u503\u0003ȀǽǲǺǯȇǴǼ/u503Ǵ"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Новая Зеландия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - AU NZ.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN NL FR DE IT PT ES- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN FR ES - US CA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Китай - Китайский упрощенный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ZH - CHINA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Турция - Турецкий",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN CS EL IW HU PL SK TR- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN ZH KO - SI TW HK KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Индия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - INDIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Япония - Японский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL JA - JAPAN.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Мексика - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ES - LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Объединенные Арабские Эмираты - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN AR - MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Россия – Русский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL RU - RUSSIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S",
+          "sha256": "7b5efdaddca84ec16e99be6a9d5314186b13fcc5a30adca61913b5ab148cee5a",
+          "pages": 16,
+          "cover_text": "ǟȂ/u505ǽǱǽǳȀȁǱǽ\u0003Ǿǽ\u0003ǾǿǽǳȂ/u505ȁȂ\u0003\u0003 /u503\u0003Ǽǽǿǻǯȁ/u503ǱǼȊǻ\u0003ǯ/u505ȁǯǻ\u000f\u0003ǽǲǿǯǼ/u503ȆǴǼǼǯȎ\u0003 ǲǯǿǯǼȁ/u503Ȏ\u0003/u503\u0003ȀǽǲǺǯȇǴǼ/u503Ǵ"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Новая Зеландия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - AU NZ.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN NL FR DE IT PT ES- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN FR ES - US CA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Китай - Китайский упрощенный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ZH - CHINA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Турция - Турецкий",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN CS EL IW HU PL SK TR- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN ZH KO - SI TW HK KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Индия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - INDIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Япония - Японский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL JA - JAPAN.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Мексика - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ES - LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Объединенные Арабские Эмираты - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN AR - MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Россия – Русский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL RU - RUSSIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S",
+          "sha256": "7b5efdaddca84ec16e99be6a9d5314186b13fcc5a30adca61913b5ab148cee5a",
+          "pages": 16,
+          "cover_text": "ǟȂ/u505ǽǱǽǳȀȁǱǽ\u0003Ǿǽ\u0003ǾǿǽǳȂ/u505ȁȂ\u0003\u0003 /u503\u0003Ǽǽǿǻǯȁ/u503ǱǼȊǻ\u0003ǯ/u505ȁǯǻ\u000f\u0003ǽǲǿǯǼ/u503ȆǴǼǼǯȎ\u0003 ǲǯǿǯǼȁ/u503Ȏ\u0003/u503\u0003ȀǽǲǺǯȇǴǼ/u503Ǵ"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox"
+        },
+        {
+          "type": "Safety/Regulatory",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20AR%20CS%20DA%20NL%20FI%20FR%20DE%20EL%20IW%20HU%20IT%20NO%20PL%20PT%20RU%20SK%20ES%20SV%20TR.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox",
+          "sha256": "2fa7b8f69115ff666a96b30502511ab4b61eb1c1d853a3a8dc834a2db809ffe6",
+          "pages": 132,
+          "cover_text": "Product and Regulatory Guide, Limited Warranty & Agreement"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20PT%20FR%20ES%20-%20US%20CA%20LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox"
+        },
+        {
+          "type": "Safety/Regulatory",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20AR%20CS%20DA%20NL%20FI%20FR%20DE%20EL%20IW%20HU%20IT%20NO%20PL%20PT%20RU%20SK%20ES%20SV%20TR.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox",
+          "sha256": "2fa7b8f69115ff666a96b30502511ab4b61eb1c1d853a3a8dc834a2db809ffe6",
+          "pages": 132,
+          "cover_text": "Product and Regulatory Guide, Limited Warranty & Agreement"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20PT%20FR%20ES%20-%20US%20CA%20LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Австралия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Контроллеры Xbox Elite"
+        },
+        {
+          "type": "Safety/Regulatory",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ELITE%20CONTROLLER%20EN%20AR%20CS%20DA%20NL%20FI%20FR%20DE%20EL%20IW%20HU%20IT%20NO%20PL%20PT%20RU%20SK%20ES%20SV%20TR.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Контроллеры Xbox Elite",
+          "sha256": "8953d7488138de8c3574e88f4a2656ebcbee6bf4ca2c16b91ecfc45cff5339c4",
+          "pages": 88,
+          "cover_text": "Product and Regulatory Guide, Limited Warranty & Agreement"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ELITE%20CONTROLLER%20EN%20PT%20FR%20ES%20-%20US%20CA%20LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Контроллеры Xbox Elite"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ELITE%20CONTROLLER%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Контроллеры Xbox Elite"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox"
+        },
+        {
+          "type": "Safety/Regulatory",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20AR%20CS%20DA%20NL%20FI%20FR%20DE%20EL%20IW%20HU%20IT%20NO%20PL%20PT%20RU%20SK%20ES%20SV%20TR.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox",
+          "sha256": "2fa7b8f69115ff666a96b30502511ab4b61eb1c1d853a3a8dc834a2db809ffe6",
+          "pages": 132,
+          "cover_text": "Product and Regulatory Guide, Limited Warranty & Agreement"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20PT%20FR%20ES%20-%20US%20CA%20LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Аксессуары Xbox"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Новая Зеландия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - AU NZ.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN NL FR DE IT PT ES- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN FR ES - US CA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Китай - Китайский упрощенный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ZH - CHINA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Турция - Турецкий",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN CS EL IW HU PL SK TR- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN ZH KO - SI TW HK KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Индия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - INDIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Япония - Японский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL JA - JAPAN.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Мексика - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ES - LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Объединенные Арабские Эмираты - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN AR - MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Россия – Русский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL RU - RUSSIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S",
+          "sha256": "7b5efdaddca84ec16e99be6a9d5314186b13fcc5a30adca61913b5ab148cee5a",
+          "pages": 16,
+          "cover_text": "ǟȂ/u505ǽǱǽǳȀȁǱǽ\u0003Ǿǽ\u0003ǾǿǽǳȂ/u505ȁȂ\u0003\u0003 /u503\u0003Ǽǽǿǻǯȁ/u503ǱǼȊǻ\u0003ǯ/u505ȁǯǻ\u000f\u0003ǽǲǿǯǼ/u503ȆǴǼǼǯȎ\u0003 ǲǯǿǯǼȁ/u503Ȏ\u0003/u503\u0003ȀǽǲǺǯȇǴǼ/u503Ǵ"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Новая Зеландия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - AU NZ.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN NL FR DE IT PT ES- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN FR ES - US CA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Китай - Китайский упрощенный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ZH - CHINA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Турция - Турецкий",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN CS EL IW HU PL SK TR- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN ZH KO - SI TW HK KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Индия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - INDIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Япония - Японский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL JA - JAPAN.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Мексика - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ES - LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Объединенные Арабские Эмираты - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN AR - MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Россия – Русский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL RU - RUSSIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S",
+          "sha256": "7b5efdaddca84ec16e99be6a9d5314186b13fcc5a30adca61913b5ab148cee5a",
+          "pages": 16,
+          "cover_text": "ǟȂ/u505ǽǱǽǳȀȁǱǽ\u0003Ǿǽ\u0003ǾǿǽǳȂ/u505ȁȂ\u0003\u0003 /u503\u0003Ǽǽǿǻǯȁ/u503ǱǼȊǻ\u0003ǯ/u505ȁǯǻ\u000f\u0003ǽǲǿǯǼ/u503ȆǴǼǼǯȎ\u0003 ǲǯǿǯǼȁ/u503Ȏ\u0003/u503\u0003ȀǽǲǺǯȇǴǼ/u503Ǵ"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "status": "Не проверена",
+      "manual_search_complete": false,
+      "manuals": [
+        {
+          "type": "Unclassified document",
+          "title": "Новая Зеландия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - AU NZ.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Великобритания - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN NL FR DE IT PT ES- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "США - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN FR ES - US CA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Китай - Китайский упрощенный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ZH - CHINA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Турция - Турецкий",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN CS EL IW HU PL SK TR- EU MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Тайвань - Китайский традиционный",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN ZH KO - SI TW HK KO.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Индия - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - INDIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Япония - Японский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL JA - JAPAN.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Мексика - Испанский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ES - LATAM.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Объединенные Арабские Эмираты - Английский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN AR - MEA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S"
+        },
+        {
+          "type": "Unclassified document",
+          "title": "Россия – Русский",
+          "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL RU - RUSSIA.pdf",
+          "language": "Не проверена",
+          "verified": false,
+          "relation": "official_family_manual_index",
+          "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+          "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+          "section": "Консоли Xbox Series X|S",
+          "sha256": "7b5efdaddca84ec16e99be6a9d5314186b13fcc5a30adca61913b5ab148cee5a",
+          "pages": 16,
+          "cover_text": "ǟȂ/u505ǽǱǽǳȀȁǱǽ\u0003Ǿǽ\u0003ǾǿǽǳȂ/u505ȁȂ\u0003\u0003 /u503\u0003Ǽǽǿǻǯȁ/u503ǱǼȊǻ\u0003ǯ/u505ȁǯǻ\u000f\u0003ǽǲǿǯǼ/u503ȆǴǼǼǯȎ\u0003 ǲǯǿǯǼȁ/u503Ȏ\u0003/u503\u0003ȀǽǲǺǯȇǴǼ/u503Ǵ"
+        },
+        {
+          "type": "Support article",
+          "title": "XBOX Series S Service Guide",
+          "url": "https://learn.microsoft.com/en-us/xbox/service-guides/series-s-console/series-s-device-id-and-disassembly",
+          "language": "English",
+          "verified": true,
+          "relation": "hardware_model_number"
+        }
+      ]
+    }
+  ],
+  "old_live_replay_source_changes": [
+    "product_tool\\attribute_projection.py",
+    "product_tool\\photo_metadata.py",
+    "product_tool\\xbox_documents.py",
+    "product_tool\\xbox_identity.py",
+    "product_tool\\xbox_page.py",
+    "product_tool\\adapters\\xbox.py"
+  ],
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 684.5296449000016,
+    "result": [
+      "Ran 1633 tests in 680.832s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  }
+}

@@ -11,7 +11,7 @@ from . import bosch_presentation
 
 OFFICIAL = ("lg_ru", "lg_kz", "lg_global", "lg", "samsung", "bosch_home", "lenovo_psref", "lenovo_support", "jbl", "apple", "apple_model")
 SUPPORT = ("lg_ru_support", "lg_kz_support")
-OFFICIAL += ('xbox_model','xbox_configuration')
+OFFICIAL += ('xbox_model','xbox_configuration','xbox_hardware')
 
 
 def _clean_label(raw: str) -> str:

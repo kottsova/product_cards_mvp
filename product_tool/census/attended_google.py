@@ -9,6 +9,7 @@ from __future__ import annotations
 from dataclasses import asdict
 from datetime import datetime, timezone
 import json
+import re
 from pathlib import Path
 import time
 from urllib.parse import parse_qs, urlsplit
@@ -22,12 +23,14 @@ PROJECTION_SCRIPT = Path(__file__).with_name("browser_projection.js").read_text(
 GOOGLE_HOST = "www.google.com"
 
 
-def google_search_url(url: str) -> bool:
+def google_search_url(url: str, official_hosts=("www.lg.com",)) -> bool:
     parsed = urlsplit(url)
     query = parse_qs(parsed.query).get("q", [""])[0]
+    site=re.match(r'site:([a-z0-9.-]+)\s',query,re.I)
+    admitted=bool(site and any(h==site[1].casefold() or h.endswith('.'+site[1].casefold()) for h in official_hosts))
     return (parsed.scheme == "https" and parsed.hostname == GOOGLE_HOST
             and not parsed.username and not parsed.password and parsed.port is None
-            and parsed.path == "/search" and query.startswith("site:lg.com "))
+            and parsed.path == "/search" and admitted)
 
 
 class AttendedGoogleBrowser:
@@ -37,7 +40,7 @@ class AttendedGoogleBrowser:
                  output_dir: Path, fetch_log_path: Path,
                  max_wait_seconds: int = 480, max_navigations: int = 6,
                  max_resources: int = 150, playwright_factory=None,
-                 clock=time.monotonic, pause=time.sleep, announce=print):
+                 clock=time.monotonic, pause=time.sleep, announce=print, official_hosts=("www.lg.com",)):
         self.runtime = runtime
         self.budget = budget
         self.allowed_hosts = tuple(allowed_hosts)
@@ -51,6 +54,7 @@ class AttendedGoogleBrowser:
         self.clock = clock
         self.pause = pause
         self.announce = announce
+        self.official_hosts=tuple(official_hosts)
         self._playwright_cm = None
         self._playwright = None
         self.context = None
@@ -137,9 +141,9 @@ class AttendedGoogleBrowser:
     def _projection(self, *, query_term: str):
         # Projection may read official LG result URLs; the route still admits
         # network traffic only to the explicitly allowed Google hosts.
-        result_hosts = tuple(dict.fromkeys((*self.allowed_hosts, "www.lg.com")))
+        result_hosts = tuple(dict.fromkeys((*self.allowed_hosts, *self.official_hosts)))
         policy = {**asdict(self.budget), "allowed_hosts": result_hosts,
-                  "queries": [query_term], "search_result_hosts": ["www.lg.com"],
+                  "queries": [query_term], "search_result_hosts": list(self.official_hosts),
                   "render_mode": "render_existing_search_result"}
         return self.page.evaluate(PROJECTION_SCRIPT, policy)
 
@@ -147,7 +151,7 @@ class AttendedGoogleBrowser:
         if command == "close":
             self.close()
             return {"closed": True, "counts": dict(self.counts)}
-        if command != "goto" or self.page is None or not google_search_url(args.get("url", "")):
+        if command != "goto" or self.page is None or not google_search_url(args.get("url", ""),self.official_hosts):
             raise BrowserFailure("interaction_blocked", self.counts)
         url = args["url"]
         term = (args.get("queries") or [""])[0]

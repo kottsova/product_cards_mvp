@@ -254,9 +254,9 @@ def export_batch(database: Path,batch_id: str)->bytes:
     xbox_products=[p for p in batch['products'] if p['brand'].strip().casefold() in XBOX_BRANDS]
     xbox_sheets=[]
     if xbox_products:
-        for title,headers in [('Готовность Xbox',['Товар','Артикул','Готовность','Модель','Конфигурация','Оборудование','Пользовательская инструкция','Пробелы','Подтверждённых характеристик']),('Конфигурация Xbox',['Артикул','Поле','Значение','Официальный источник']),('Идентификаторы Xbox',['Артикул','Тип идентификатора','Значение','Регион','Источник']),('Кандидаты Xbox',['Артикул','Раздел','Исходное поле','Значение','Причина']),('Документы Xbox',['Артикул','Тип','Название','URL','Связь','Проверка','Язык'])]:
+        for title,headers in [('Готовность Xbox',['Товар','Артикул','Готовность','Модель','Конфигурация','Оборудование','Пользовательская инструкция','Пробелы','Подтверждённых характеристик']),('Конфигурация Xbox',['Артикул','Поле','Значение','Официальный источник']),('Идентификаторы Xbox',['Артикул','Тип идентификатора','Значение','Регион','Источник']),('Кандидаты Xbox',['Артикул','Раздел','Исходное поле','Значение','Причина']),('Документы Xbox',['Артикул','Тип','Название','URL','Связь','Проверка','Язык']),('Связи Xbox',['Артикул','Product ID / catalog ID','SKU-кандидаты','Hardware number','Manufacturer part','Регион','Связь','Источник']),('Принятые факты Xbox',['Артикул','Раздел','Поле','Значение','Область','Источник'])]:
             sheet=book.create_sheet(_title(title,used));_headers(sheet,headers);xbox_sheets.append(sheet)
-        xr,xc,xi,xk,xd=xbox_sheets
+        xr,xc,xi,xk,xd,xrel,xa=xbox_sheets
         for p in xbox_products:
             ev=card_evidence.load(database,p['id'],'xbox') or {};r=xbox_pipeline.card_readiness(database,p['id']);i=r['identity']
             xr.append([p['name'],p['search_code'],'Готова' if r['verdict']=='export_ready' else 'Не готова',*[xbox_pipeline.SCOPES.get(i.get(k,'unproven'),'Не подтверждено') for k in ('model','configuration','hardware')],r['manual_status'],'; '.join(xbox_pipeline.GAPS[g] for g in r['gaps']),r['confirmed_specs']])
@@ -264,6 +264,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
             for k,v in ev.get('identifiers',{}).items():xi.append([p['search_code'],k,v or 'Не подтверждён',ev.get('requested_region',''),ev.get('exact_official_pdp','') or ev.get('support_url','')])
             for c in ev.get('configuration_candidates',[]):xk.append([p['search_code'],c['section'],c['raw_label'],c['value'],c['reason']])
             for d in ev.get('manuals',[]):xd.append([p['search_code'],d['type'],d['title'],d['url'],d['relation'],'Проверена' if d['verified'] else 'Не проверена',d.get('language','Не проверена')])
+            for relation in ev.get('identity_relations',[]):xrel.append([p['search_code'],relation.get('product_id') or relation.get('value'),', '.join(relation.get('sku_ids',[])),', '.join(relation.get('hardware_model_numbers',[])),', '.join(relation.get('manufacturer_parts',[])),relation.get('region'),relation.get('relation'),relation.get('url') or relation.get('source_url')])
+            for fact in ev.get('accepted_specs',[]):xa.append([p['search_code'],fact['section'],fact['label'],fact['value'],{'model':'Модель','hardware_configuration':'Оборудование / конфигурация','retail':'Retail вариант'}.get(fact['scope'],fact['scope']),fact['source_url']])
             for c in ev.get('photo_candidates',[]):
                 if photo_candidates is None:
                     photo_candidates=book.create_sheet(_title('Фото-кандидаты',used));_headers(photo_candidates,['Товар','Источник','Тип','URL','Выбрано для просмотра','Статус',*photo_columns])

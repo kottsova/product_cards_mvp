@@ -69,7 +69,7 @@ class XboxIdentityTests(unittest.TestCase):
         d,e=page('e39314409941dfa9650b.html','https://www.microsoft.com/en-us/d/xbox-series-x-diablo-iv-bundle/8n1bb8dsbknt','8N1BB8DSBKNT','series_x')
         self.assertIn('Diablo',e['configuration_fields']['included_game']);self.assertNotIn('game_pass',e['configuration_fields'])
         self.assertNotIn('second_controller',e['configuration_fields']);self.assertNotIn('packaging',e['configuration_fields'])
-        self.assertFalse(d.photos);self.assertTrue(e['photo_candidates'])
+        self.assertTrue(d.photos);self.assertTrue(all(e['photo_scopes'][p]['kind']=='bundle_gallery' for p in e['exact_photo_assets']))
         base,be=page('22045379f986be6093bc.html','https://www.xbox.com/en-US/consoles/xbox-series-x','Xbox Series X','series_x')
         self.assertNotIn('bundle_contents',be['configuration_fields'])
     def test_revision_physical_values_withheld(self):
