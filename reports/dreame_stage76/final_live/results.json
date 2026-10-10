@@ -1,0 +1,3099 @@
+{
+  "dataset_sha256": "7872d84dabdda9b716cd594276273b5560832b2720709cb6610ed1ecbb521afd",
+  "rows": [
+    {
+      "id": 1,
+      "input": {
+        "id": 1,
+        "brand": "Dreame",
+        "article": "L60 Ultra",
+        "model": "Dreame L60 Ultra",
+        "name": "Dreame L60 Ultra [region=Global]",
+        "category": "Роботы-пылесосы",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.11,
+      "job": {
+        "id": "e52b5e8a287b4261906d6367cc569f40",
+        "product_id": 1,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:37+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:37+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:37+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame L60 Ultra",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame L60 Ultra",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global"
+        },
+        "requested_configuration": {
+          "region": "Global"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "L60 Ultra",
+          "Dreame L60 Ultra [region=Global]",
+          "Роботы-пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame L60 Ultra [region=Global]» (артикул L60 ULTRA). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "L60 ULTRA",
+          "query_variants": [
+            "L60 ULTRA",
+            "Dreame L60 Ultra",
+            "L60 Ultra"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame L60 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame L60 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame L60 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame L60 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame L60 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame L60 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame L60 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame L60 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame L60 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"L60 Ultra\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:37.271328+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22L60+Ultra%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"L60 Ultra\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "L60 ULTRA",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame L60 Ultra [region=Global]» (артикул L60 ULTRA). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "input": {
+        "id": 2,
+        "brand": "Dreame",
+        "article": "L10s Pro Gen 2",
+        "model": "Dreame L10s Pro Gen 2",
+        "name": "Dreame L10s Pro Gen 2 [region=EEA]",
+        "category": "Роботы-пылесосы",
+        "input_configuration": {
+          "region": "EEA"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.1,
+      "job": {
+        "id": "fc8a906850a84640b7953c6ac49d6808",
+        "product_id": 2,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:37+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:37+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 2,
+          "product_id": 2,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:37+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame L10s Pro Gen 2",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "EEA"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame L10s Pro Gen 2",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "EEA"
+        },
+        "requested_configuration": {
+          "region": "EEA"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "L10s Pro Gen 2",
+          "Dreame L10s Pro Gen 2 [region=EEA]",
+          "Роботы-пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame L10s Pro Gen 2 [region=EEA]» (артикул L10S PRO GEN 2). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "region": "EEA"
+          },
+          "provider": "normalization",
+          "query": "L10S PRO GEN 2",
+          "query_variants": [
+            "L10S PRO GEN 2",
+            "Dreame L10s Pro Gen 2",
+            "L10s Pro Gen 2"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame L10s Pro Gen 2",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"L10s Pro Gen 2\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:37.384675+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22L10s+Pro+Gen+2%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"L10s Pro Gen 2\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "L10S PRO GEN 2",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame L10s Pro Gen 2 [region=EEA]» (артикул L10S PRO GEN 2). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "input": {
+        "id": 3,
+        "brand": "Dreame",
+        "article": "D30 Ultra",
+        "model": "Dreame D30 Ultra",
+        "name": "Dreame D30 Ultra [region=Global]",
+        "category": "Роботы-пылесосы",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.1,
+      "job": {
+        "id": "b4ba1239a81b4264bbb6c3e1ad145621",
+        "product_id": 3,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:37+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:37+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 3,
+          "product_id": 3,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:37+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame D30 Ultra",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame D30 Ultra",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global"
+        },
+        "requested_configuration": {
+          "region": "Global"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "D30 Ultra",
+          "Dreame D30 Ultra [region=Global]",
+          "Роботы-пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame D30 Ultra [region=Global]» (артикул D30 ULTRA). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "D30 ULTRA",
+          "query_variants": [
+            "D30 ULTRA",
+            "Dreame D30 Ultra",
+            "D30 Ultra"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame D30 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame D30 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame D30 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame D30 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame D30 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame D30 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame D30 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame D30 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame D30 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"D30 Ultra\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:37.497784+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22D30+Ultra%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"D30 Ultra\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "D30 ULTRA",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame D30 Ultra [region=Global]» (артикул D30 ULTRA). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "input": {
+        "id": 4,
+        "brand": "Dreame",
+        "article": "X50 Ultra",
+        "model": "Dreame X50 Ultra",
+        "name": "Dreame X50 Ultra [region=Global;bundle=Complete]",
+        "category": "Роботы-пылесосы",
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Complete"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.09,
+      "job": {
+        "id": "4cb218238e094bc8aabf99e9ff859d1b",
+        "product_id": 4,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:37+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:37+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 4,
+          "product_id": 4,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:37+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame X50 Ultra",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Complete"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame X50 Ultra",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Complete"
+        },
+        "requested_configuration": {
+          "region": "Global",
+          "bundle": "Complete"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "X50 Ultra",
+          "Dreame X50 Ultra [region=Global;bundle=Complete]",
+          "Роботы-пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame X50 Ultra [region=Global;bundle=Complete]» (артикул X50 ULTRA). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "bundle": "Complete",
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "X50 ULTRA",
+          "query_variants": [
+            "X50 ULTRA",
+            "Dreame X50 Ultra",
+            "X50 Ultra"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame X50 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame X50 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame X50 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame X50 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame X50 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame X50 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame X50 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame X50 Ultra",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame X50 Ultra",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"X50 Ultra\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:37.597888+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22X50+Ultra%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"X50 Ultra\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "X50 ULTRA",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame X50 Ultra [region=Global;bundle=Complete]» (артикул X50 ULTRA). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "input": {
+        "id": 5,
+        "brand": "Dreame",
+        "article": "H14 Pro",
+        "model": "Dreame H14 Pro",
+        "name": "Dreame H14 Pro [region=Global]",
+        "category": "Вертикальные моющие пылесосы",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.11,
+      "job": {
+        "id": "8c5cda21a5e04f018126e9e0685b4730",
+        "product_id": 5,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:37+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:37+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 5,
+          "product_id": 5,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:37+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame H14 Pro",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame H14 Pro",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global"
+        },
+        "requested_configuration": {
+          "region": "Global"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "H14 Pro",
+          "Dreame H14 Pro [region=Global]",
+          "Вертикальные моющие пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H14 Pro [region=Global]» (артикул H14 PRO). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "H14 PRO",
+          "query_variants": [
+            "H14 PRO",
+            "Dreame H14 Pro",
+            "H14 Pro"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H14 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H14 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H14 Pro",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H14 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H14 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H14 Pro",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H14 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H14 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H14 Pro",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"H14 Pro\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:37.704696+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22H14+Pro%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"H14 Pro\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "H14 PRO",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H14 Pro [region=Global]» (артикул H14 PRO). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "input": {
+        "id": 6,
+        "brand": "Dreame",
+        "article": "H13 Pro",
+        "model": "Dreame H13 Pro",
+        "name": "Dreame H13 Pro [region=RU]",
+        "category": "Вертикальные моющие пылесосы",
+        "input_configuration": {
+          "region": "RU"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.09,
+      "job": {
+        "id": "73eb53e12c7f4db185b4e59d394d89ac",
+        "product_id": 6,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:37+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:37+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 6,
+          "product_id": 6,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:37+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame H13 Pro",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "RU"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame H13 Pro",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "RU"
+        },
+        "requested_configuration": {
+          "region": "RU"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "H13 Pro",
+          "Dreame H13 Pro [region=RU]",
+          "Вертикальные моющие пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H13 Pro [region=RU]» (артикул H13 PRO). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "region": "RU"
+          },
+          "provider": "normalization",
+          "query": "H13 PRO",
+          "query_variants": [
+            "H13 PRO",
+            "Dreame H13 Pro",
+            "H13 Pro"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H13 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H13 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H13 Pro",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H13 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H13 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H13 Pro",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H13 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H13 Pro",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H13 Pro",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"H13 Pro\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:37.805587+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22H13+Pro%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"H13 Pro\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "H13 PRO",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H13 Pro [region=RU]» (артикул H13 PRO). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "input": {
+        "id": 7,
+        "brand": "Dreame",
+        "article": "H15 Pro Heat",
+        "model": "Dreame H15 Pro Heat",
+        "name": "Dreame H15 Pro Heat [region=Global]",
+        "category": "Вертикальные моющие пылесосы",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.1,
+      "job": {
+        "id": "59bc40de3daf4607ab451a50eb71530d",
+        "product_id": 7,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:37+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:37+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 7,
+          "product_id": 7,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:37+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame H15 Pro Heat",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame H15 Pro Heat",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global"
+        },
+        "requested_configuration": {
+          "region": "Global"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "H15 Pro Heat",
+          "Dreame H15 Pro Heat [region=Global]",
+          "Вертикальные моющие пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H15 Pro Heat [region=Global]» (артикул H15 PRO HEAT). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "H15 PRO HEAT",
+          "query_variants": [
+            "H15 PRO HEAT",
+            "Dreame H15 Pro Heat",
+            "H15 Pro Heat"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H15 Pro Heat",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"H15 Pro Heat\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:37.903311+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22H15+Pro+Heat%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"H15 Pro Heat\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "H15 PRO HEAT",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H15 Pro Heat [region=Global]» (артикул H15 PRO HEAT). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "input": {
+        "id": 8,
+        "brand": "Dreame",
+        "article": "Z30",
+        "model": "Dreame Z30",
+        "name": "Dreame Z30 [region=Global]",
+        "category": "Вертикальные пылесосы",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.1,
+      "job": {
+        "id": "4928938169df45a79d48859b36dd6613",
+        "product_id": 8,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:37+00:00",
+        "updated_at": "2026-10-10T23:17:38+00:00",
+        "started_at": "2026-10-10T23:17:37+00:00",
+        "finished_at": "2026-10-10T23:17:38+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 8,
+          "product_id": 8,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:38+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame Z30",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame Z30",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global"
+        },
+        "requested_configuration": {
+          "region": "Global"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "Z30",
+          "Dreame Z30 [region=Global]",
+          "Вертикальные пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame Z30 [region=Global]» (артикул Z30). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "Z30",
+          "query_variants": [
+            "Z30",
+            "Dreame Z30"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame Z30",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame Z30",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame Z30",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame Z30",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame Z30",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame Z30",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame Z30",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame Z30",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:37+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame Z30",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"Z30\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:38.006415+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22Z30%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"Z30\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "Z30",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame Z30 [region=Global]» (артикул Z30). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "input": {
+        "id": 9,
+        "brand": "Dreame",
+        "article": "H12 Dual",
+        "model": "Dreame H12 Dual",
+        "name": "Dreame H12 Dual [region=Global;bundle=Dual]",
+        "category": "Вертикальные моющие пылесосы",
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Dual"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.1,
+      "job": {
+        "id": "2c4fb46f693240199e0bc56f6589d045",
+        "product_id": 9,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:38+00:00",
+        "updated_at": "2026-10-10T23:17:38+00:00",
+        "started_at": "2026-10-10T23:17:38+00:00",
+        "finished_at": "2026-10-10T23:17:38+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 9,
+          "product_id": 9,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:38+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame H12 Dual",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Dual"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame H12 Dual",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Dual"
+        },
+        "requested_configuration": {
+          "region": "Global",
+          "bundle": "Dual"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "H12 Dual",
+          "Dreame H12 Dual [region=Global;bundle=Dual]",
+          "Вертикальные моющие пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H12 Dual [region=Global;bundle=Dual]» (артикул H12 DUAL). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "bundle": "Dual",
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "H12 DUAL",
+          "query_variants": [
+            "H12 DUAL",
+            "Dreame H12 Dual",
+            "H12 Dual"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H12 Dual",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H12 Dual",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H12 Dual",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H12 Dual",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H12 Dual",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H12 Dual",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame H12 Dual",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame H12 Dual",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame H12 Dual",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"H12 Dual\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:38.107214+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22H12+Dual%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"H12 Dual\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "H12 DUAL",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame H12 Dual [region=Global;bundle=Dual]» (артикул H12 DUAL). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "input": {
+        "id": 10,
+        "brand": "Dreame",
+        "article": "X40 Master",
+        "model": "Dreame X40 Master",
+        "name": "Dreame X40 Master [region=Global;bundle=Water hookup station]",
+        "category": "Роботы-пылесосы",
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Water hookup station"
+        },
+        "supplier_sku": null,
+        "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+      },
+      "observation": "actual_live_worker",
+      "seconds": 0.1,
+      "job": {
+        "id": "ee456f732df24c54a684c5af7077e2a4",
+        "product_id": 10,
+        "status": "needs_review",
+        "current_stage": null,
+        "message": "Dreame: Не готова. Точная модель не подтверждена; Недостаточно официальных характеристик; Нет фото с подтверждённым внешним видом; Инструкция не проверена",
+        "created_at": "2026-10-10T23:17:38+00:00",
+        "updated_at": "2026-10-10T23:17:38+00:00",
+        "started_at": "2026-10-10T23:17:38+00:00",
+        "finished_at": "2026-10-10T23:17:38+00:00",
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      },
+      "sources": [
+        {
+          "id": 10,
+          "product_id": 10,
+          "source_key": "dreame_model",
+          "site_name": "Dreame Official",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "",
+          "fetched_at": "2026-10-10T23:17:38+00:00",
+          "error": "Exact official Dreame model not proven",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "facts": [],
+      "resolved": [],
+      "photos": [],
+      "documents": [],
+      "readiness": {
+        "verdict": "not_ready",
+        "blocking_gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing"
+        ],
+        "advisory_gaps": [
+          "manual_unverified"
+        ],
+        "gaps": [
+          "model_missing",
+          "specifications_missing",
+          "gallery_missing",
+          "manual_unverified"
+        ],
+        "confirmed_specs": 0,
+        "identity": {
+          "model": "Dreame X40 Master",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "readiness_scope": "model",
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Water hookup station"
+        },
+        "exact_identity": false,
+        "conflicts": 0,
+        "manual_status": "Не проверена"
+      },
+      "evidence": {
+        "identity": {
+          "model": "Dreame X40 Master",
+          "model_relation": "unproven",
+          "readiness_scope": "model",
+          "source_region": "",
+          "retail_sku": null,
+          "configuration_relation": "input_only",
+          "identifier_kind": "marketing_model"
+        },
+        "input_configuration": {
+          "region": "Global",
+          "bundle": "Water hookup station"
+        },
+        "requested_configuration": {
+          "region": "Global",
+          "bundle": "Water hookup station"
+        },
+        "raw_specs": [],
+        "original_raw_specs": [],
+        "accepted_specs": [],
+        "rejected_specs": [],
+        "model_gallery_candidates": [],
+        "model_numbers": [],
+        "manuals": [],
+        "verified_documents": [],
+        "manual_status": "Не проверена",
+        "published_identity_fields": [],
+        "pdp_url": "",
+        "captures": [],
+        "live_success": false,
+        "observation": "live_http",
+        "manual_inventory_reason": "Official support navigation inaccessible",
+        "input_configuration_original_values": [
+          "Dreame",
+          "X40 Master",
+          "Dreame X40 Master [region=Global;bundle=Water hookup station]",
+          "Роботы-пылесосы"
+        ],
+        "image_measurements": [],
+        "model_gallery_assets": [],
+        "dealer_fallback": {
+          "accepted": false,
+          "url": "",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame X40 Master [region=Global;bundle=Water hookup station]» (артикул X40 MASTER). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "match_level": "dealer_url_needed"
+        }
+      },
+      "trace": [
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "input_configuration": {
+            "bundle": "Water hookup station",
+            "region": "Global"
+          },
+          "provider": "normalization",
+          "query": "X40 MASTER",
+          "query_variants": [
+            "X40 MASTER",
+            "Dreame X40 Master",
+            "X40 Master"
+          ],
+          "reason": "Supplier identifier separate from exact model query",
+          "region": "",
+          "source_type": "query_variants",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame X40 Master",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame X40 Master",
+          "reason": "[policy_host_stopped]",
+          "region": "Global",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://global.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame X40 Master",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "Global",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://global.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame X40 Master",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame X40 Master",
+          "reason": "[policy_host_stopped]",
+          "region": "US",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://www.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame X40 Master",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "US",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://www.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "regional_catalog",
+          "query": "Dreame X40 Master",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "catalog",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "observation": "policy_refusal",
+          "provider": "official_sitemap",
+          "query": "Dreame X40 Master",
+          "reason": "[policy_host_stopped]",
+          "region": "DE",
+          "source_type": "sitemap",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://de.dreametech.com/sitemap.xml"
+        },
+        {
+          "accepted": false,
+          "candidates": [],
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "official_catalog",
+          "query": "Dreame X40 Master",
+          "reason": "Published links rank only; Product/title proves model",
+          "region": "DE",
+          "source_type": "candidate_inventory",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": "https://de.dreametech.com/"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "host_stopped",
+          "provider": "google_old_parser",
+          "query": "site:dreametech.com \"X40 Master\"",
+          "reason": "lg_access_stop",
+          "timestamp": "2026-10-10T23:17:38.225188+00:00",
+          "url": "https://www.google.com/search?q=site%3Adreametech.com+%22X40+Master%22&hl=en"
+        },
+        {
+          "accepted": false,
+          "event": "dreame_discovery",
+          "identity_relation": "unproven",
+          "provider": "external_browser",
+          "query": "site:dreametech.com \"X40 Master\"",
+          "reason": "host_stopped",
+          "region": "",
+          "source_type": "search",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        },
+        {
+          "accepted": false,
+          "event": "dreame_dealer",
+          "identity_relation": "unproven",
+          "provider": "dns",
+          "query": "X40 MASTER",
+          "reason": "Нет проверенного дилерского URL для «Dreame Dreame X40 Master [region=Global;bundle=Water hookup station]» (артикул X40 MASTER). Не хватает: model_missing, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "region": "ru",
+          "source_type": "dealer",
+          "timestamp": "2026-10-10T23:17:38+00:00",
+          "url": ""
+        }
+      ]
+    }
+  ]
+}

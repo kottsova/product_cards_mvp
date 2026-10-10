@@ -388,7 +388,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         xbox_evidence = card_evidence.load(database,product_id,'xbox') if product['brand'].strip().casefold() in XBOX_BRANDS else None
         from . import xiaomi_pipeline
         from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
-        xiaomi_evidence = card_evidence.load(database,product_id,'xiaomi') if product['brand'].strip().casefold() in XIAOMI_BRANDS else None
+        model_family = 'dreame' if product['brand'].strip().casefold()=='dreame' else 'xiaomi'
+        xiaomi_evidence = card_evidence.load(database,product_id,model_family) if model_family=='dreame' or product['brand'].strip().casefold() in XIAOMI_BRANDS else None
         from . import razer_pipeline
         razer_evidence = card_evidence.load(database,product_id,'razer') if product['brand'].strip().casefold() == 'razer' else None
         hyperx_evidence = card_evidence.load(database,product_id,'hyperx') if product['brand'].strip().casefold() == 'hyperx' else None
@@ -468,7 +469,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             playstation_gaps=playstation_pipeline.GAPS,
             xbox_evidence=xbox_evidence,
             xiaomi_evidence=xiaomi_evidence,
-            xiaomi_card=xiaomi_pipeline.card_readiness(database,product_id) if xiaomi_evidence is not None else None,
+            xiaomi_card=xiaomi_pipeline.card_readiness(database,product_id,family=model_family) if xiaomi_evidence is not None else None,
+            model_family_label=model_family.title(),
             xiaomi_gaps=xiaomi_pipeline.GAPS,
             razer_evidence=razer_evidence,
             hyperx_evidence=hyperx_evidence,

@@ -10,6 +10,7 @@ OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","leno
 OFFICIAL.update({'xbox_model','xbox_configuration','xbox_hardware'})
 OFFICIAL.update({'razer_model','razer_configuration'})
 OFFICIAL.update({'xiaomi_model','xiaomi_region','xiaomi_configuration'})
+OFFICIAL.add('dreame_model')
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -65,6 +66,14 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
                 results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if exact else 'model_confirmed_official','Официальный факт HyperX; модель и коммерческий вариант разделены.','hyperx',False,exact))
             continue
         xm=[f for f in official if f['source_key'].startswith('xiaomi_')]
+        dr=[f for f in official if f['source_key']=='dreame_model']
+        if dr:
+            from .xiaomi_identity import fact_scope
+            eligible=[f for f in dr if not pages.get('dreame_model',{}).get('error') and pages.get('dreame_model',{}).get('match_level')=='model_confirmed' and fact_scope(f.get('raw_name',name),f.get('raw_value',''),f.get('section',''))=='model' and f.get('section') not in {'Комплектация','Упаковка'}]
+            if not eligible or _different(eligible):results.append(ResolvedValue(name,'','','needs_review','Модель/компонент Dreame не подтверждён.','',_different(eligible),False))
+            else:
+                f=eligible[0];results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'model_confirmed_official','Официальный факт exact model Dreame; компонент указан в исходном разделе.','dreame_model',False,False))
+            continue
         if xm:
             from .xiaomi_identity import fact_scope
             eligible=[f for f in xm if not pages.get(f['source_key'],{}).get('error') and ((f['source_key']=='xiaomi_model' and pages[f['source_key']].get('match_level')=='model_confirmed' and fact_scope(f.get('raw_name',name),f.get('raw_value',''),f.get('section',''))=='model') or (f['source_key']=='xiaomi_region' and pages[f['source_key']].get('match_level')=='configuration_confirmed' and fact_scope(f.get('raw_name',name),f.get('raw_value',''),f.get('section',''))!='configuration') or (f['source_key']=='xiaomi_configuration' and pages[f['source_key']].get('match_level')=='full_sku'))]

@@ -154,6 +154,7 @@ def run_once(
     xbox_adapter_factory: Callable[[], object] | None = None,
     razer_adapter_factory: Callable[[], object] | None = None,
     xiaomi_adapter_factory: Callable[[], object] | None = None,
+    dreame_adapter_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -164,6 +165,12 @@ def run_once(
         if not product:
             jobs.finish(database,job_id,"error","Подтверждённый товар не найден."); return True
         from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
+        if product['brand'].strip().casefold() == 'dreame':
+            from . import xiaomi_pipeline
+            from .adapters.dreame import DreameAdapter
+            factory=dreame_adapter_factory or (lambda:DreameAdapter(clock=clock,fetch_log_path=Path(database).parent/'dreame_fetch_log.json'))
+            xiaomi_pipeline.run_job(database,job_id,product_id,product,stages=job['stages'],adapter_factory=factory,dns_adapter_factory=dns_adapter_factory,clock=clock,family='dreame')
+            return True
         if product['brand'].strip().casefold() in XIAOMI_BRANDS:
             from . import xiaomi_pipeline
             xiaomi_pipeline.run_job(database,job_id,product_id,product,stages=job['stages'],adapter_factory=xiaomi_adapter_factory,dns_adapter_factory=dns_adapter_factory,clock=clock)

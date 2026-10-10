@@ -52,6 +52,7 @@ DISPLAY_NAME_RU = {
 
 SOURCE_NAMES = {
     'xiaomi_model':'Xiaomi — модель','xiaomi_region':'Xiaomi — рынок','xiaomi_configuration':'Xiaomi — конфигурация',
+    'dreame_model':'Dreame — модель',
     'razer_model': 'Razer — модель', 'razer_configuration': 'Razer — конфигурация',
     "lg": "LG Казахстан", "lg_kz": "LG Казахстан", "lg_ru": "LG Россия",
     "lg_global": "LG official other region",

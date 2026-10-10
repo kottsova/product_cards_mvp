@@ -69,3 +69,24 @@ reports/xiaomi_stage74/** -text
 
 # User-requested Xiaomi model-first policy evidence keeps capture/export hashes.
 reports/xiaomi_model_first/** -text
+
+# Stage 76 public response/PDF/export evidence preserves exact bytes.
+reports/dreame_stage76/** -text
+
+# Stage 76 pinned sources retain their tested checkout newline representation.
+product_tool/adapters/dreame.py text eol=lf
+product_tool/attribute_projection.py text eol=crlf
+product_tool/card_presentation.py text eol=crlf
+product_tool/display.py text eol=crlf
+product_tool/dreame_page.py text eol=lf
+product_tool/dreame_presentation.py text eol=lf
+product_tool/exporter.py text eol=crlf
+product_tool/normalization.py text eol=crlf
+product_tool/photo_metadata.py text eol=crlf
+product_tool/readiness.py text eol=crlf
+product_tool/resolution.py text eol=crlf
+product_tool/templates/product.html text eol=lf
+product_tool/web.py text eol=crlf
+product_tool/worker.py text eol=crlf
+product_tool/xiaomi_pipeline.py text eol=lf
+tests/test_dreame_stage76.py text eol=lf

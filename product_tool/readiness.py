@@ -31,6 +31,9 @@ ADVISORY = ("dealer_cross_check_missing",)
 
 def card_readiness(database: Path, product_id: int) -> dict[str, Any]:
     product = jobs.get_product(database, product_id) or {}
+    if product.get('brand','').strip().casefold()=='dreame':
+        from .xiaomi_pipeline import card_readiness as model_readiness
+        return model_readiness(database,product_id,family='dreame')
     from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
     if product.get('brand','').strip().casefold() in XIAOMI_BRANDS:
         from .xiaomi_pipeline import card_readiness as xiaomi_readiness

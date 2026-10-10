@@ -34,7 +34,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
     batch=storage.get_batch(database,batch_id)
     if not batch: raise ValueError("Партия не найдена.")
     from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
-    xiaomi_only=all(p['brand'].strip().casefold() in XIAOMI_BRANDS for p in batch['products'])
+    xiaomi_only=all(p['brand'].strip().casefold() in XIAOMI_BRANDS or p['brand'].strip().casefold()=='dreame' for p in batch['products'])
     book=Workbook(); book.remove(book.active); used=set(); groups={}
     for p in batch["products"]: groups.setdefault(p["category"] or "Категория не определена",[]).append(p)
     for category,products in groups.items():
@@ -53,7 +53,17 @@ def export_batch(database: Path,batch_id: str)->bytes:
                         if not (is_lg or p["brand"].strip().upper() in {"SAMSUNG", "LENOVO"}) or (value.get("full_sku_confirmed") and not value.get("conflict"))
                         else ""
                         for r in rows[p["id"]] for value in [r.get("resolved") or {}]}
-            sheet.append([p["row_number"],(p["name"] or p["search_code"]),p["brand"],p["search_code"],lg_base_model(p["search_code"]) if p["brand"].strip().upper()=="LG" else "",*[resolved.get(k,"") for k in keys]])
+            model=lg_base_model(p["search_code"]) if p["brand"].strip().upper()=="LG" else ""
+            if p['brand'].strip().casefold()=='dreame':
+                identity=(card_evidence.load(database,p['id'],'dreame') or {}).get('identity',{})
+                model=identity.get('model','') if identity.get('model_relation')=='model_confirmed' else ''
+            sheet.append([p["row_number"],(p["name"] or p["search_code"]),p["brand"],p["search_code"],model,*[resolved.get(k,"") for k in keys]])
+        if any(p['brand'].strip().casefold()=='dreame' for p in products):
+            for column in sheet.columns:
+                sheet.column_dimensions[column[0].column_letter].width=min(60,max(14,max(len(str(c.value or '')) for c in column)+2))
+            for row in sheet.iter_rows():
+                for cell in row:cell.alignment=Alignment(wrap_text=True,vertical='top')
+                sheet.row_dimensions[row[0].row].height=48
     has_lg=any(lg_batch.is_lg(p) for p in batch["products"])
     has_lg_global=any(s["source_key"]=="lg_global" for p in batch["products"] for s in jobs.get_source_pages(database,p["id"]))
     has_sulpak_facts=any(f["source_key"]=="sulpak" for p in batch["products"] for f in jobs.get_facts(database,p["id"]))
@@ -106,8 +116,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
         xb_evidence=card_evidence.load(database,p['id'],'xbox') if xb else None
         lg = lg_batch.is_lg(p)
         samsung = p["brand"].strip().upper() == "SAMSUNG"
-        xm = p['brand'].strip().casefold() in XIAOMI_BRANDS
-        xm_evidence=card_evidence.load(database,p['id'],'xiaomi') if xm else None
+        xm = p['brand'].strip().casefold() in XIAOMI_BRANDS or p['brand'].strip().casefold()=='dreame'
+        xm_evidence=card_evidence.load(database,p['id'],'dreame' if p['brand'].strip().casefold()=='dreame' else 'xiaomi') if xm else None
         rz = p['brand'].strip().casefold() == 'razer'
         rz_evidence=card_evidence.load(database,p['id'],'razer') if rz else None
         jbl = p["brand"].strip().upper() == "JBL"
@@ -376,31 +386,39 @@ def export_batch(database: Path,batch_id: str)->bytes:
             for f in ev.get('rejected_specs',[]):rejected.append([p['name'],f['section'],f['raw_label'],f['value'],f['reason'],f['url']])
             for d in ev.get('manuals',[]):manuals.append([p['name'],d['type'],d['title'],d['url'],'Проверена' if d['verified'] else 'Не проверена'])
             for photo in jobs.get_photo_candidates(database,p['id']):photo_audit.append([p['name'],photo['kind'],photo['url'],bool(photo['selected']),'Подтверждена' if photo['asset_key'] in ev.get('exact_photo_assets',[]) else 'Кандидат',photo['excluded_reason']])
-    xiaomi_products=[p for p in batch['products'] if p['brand'].strip().casefold() in XIAOMI_BRANDS]
-    if xiaomi_products:
-        from .xiaomi_presentation import label
-        photos.cell(1,5,'Область подтверждения')
-        summary=book.create_sheet(_title('Xiaomi готовность',used));_headers(summary,['Товар','Поисковая модель','Модель','Рынок источника','Конфигурация','SKU','Инструкция','Характеристики','Готовность','Пробелы'])
-        config=book.create_sheet(_title('Xiaomi конфигурация',used));_headers(config,['Товар','Поле','Запрошено','Статус'])
-        raw=book.create_sheet(_title('Xiaomi кандидаты',used));_headers(raw,['Товар','Раздел','Исходное поле','Русское поле','Значение','Область','Причина'])
-        gallery=book.create_sheet(_title('Xiaomi фото-кандидаты',used));_headers(gallery,['Товар','URL','Статус','Ширина','Высота','Размер','Формат'])
-        model_codes=book.create_sheet(_title('Xiaomi номера моделей',used));_headers(model_codes,['Товар','Номер устройства','Тип','Источник','Связь с SKU'])
-        for p in xiaomi_products:
-            ev=card_evidence.load(database,p['id'],'xiaomi') or {};r=xiaomi_pipeline.card_readiness(database,p['id']);i=r['identity'];summary.append([p['name'],p['search_code'],'Подтверждена' if r['exact_identity'] else 'Не подтверждена',i.get('source_region',''),'Данные входного файла; не блокируют готовность',i.get('retail_sku') or 'Не подтверждён',r['manual_status'],r['confirmed_specs'],'Готова' if r['verdict']=='export_ready' else 'Не готова','; '.join(xiaomi_pipeline.GAPS[g] for g in r['gaps'])])
-            for k,v in r['input_configuration'].items():config.append([p['name'],{'RAM':'Оперативная память','storage':'Накопитель','color':'Цвет','region':'Региональная маркировка','supplier_part_number':'Артикул поставщика','bundle':'Комплект поставщика'}.get(k,k),v,'Данные входного файла; не официальный факт'])
-            for f in ev.get('rejected_specs',[]):raw.append([p['name'],f.get('section',''),f['name'],label(f['name']),f['value'],f['scope'],f['reason']])
-            for photo in jobs.get_photo_candidates(database,p['id']):gallery.append([p['name'],photo['url'],'Фото модели; цвет поставщика не подтверждён' if xiaomi_pipeline.photo_verified(photo,ev) else 'Кандидат: product gallery не подтверждена',*_photo_cells(photo)])
-            for c in ev.get('model_numbers',[]):model_codes.append([p['name'],c['value'],'Номер модели устройства',c['source_url'],'Не подтверждена'])
-            if not jobs.get_documents(database,p['id']):docs.append([p['name'],'','','','','','','','','Официальный support inventory','Xiaomi',r['manual_status']])
-        from math import ceil
-        for sheet in (summary,config,raw,gallery,model_codes,photos):
-            for column in sheet.columns:
-                sheet.column_dimensions[column[0].column_letter].width=min(60,max(14,max(len(str(c.value or '')) for c in column)+2))
-            for row in sheet.iter_rows():
-                lines=1
-                for cell in row:
-                    cell.alignment=Alignment(wrap_text=True,vertical='top')
-                    width=sheet.column_dimensions[cell.column_letter].width or 14
-                    lines=max(lines,ceil(len(str(cell.value or ''))/max(8,width-2)))
-                sheet.row_dimensions[row[0].row].height=min(180,max(24,16*lines))
+    for family in ('xiaomi','dreame'):
+        xiaomi_products=[p for p in batch['products'] if p['brand'].strip().casefold()=='dreame'] if family=='dreame' else [p for p in batch['products'] if p['brand'].strip().casefold() in XIAOMI_BRANDS]
+        if xiaomi_products:
+            from .xiaomi_presentation import label
+            if family=='dreame':
+                from .dreame_presentation import label
+            photos.cell(1,5,'Область подтверждения')
+            summary=book.create_sheet(_title(family.title()+' готовность',used));_headers(summary,['Товар','Поисковая модель','Модель','Рынок источника','Конфигурация','SKU','Инструкция','Характеристики','Готовность','Пробелы'])
+            config=book.create_sheet(_title(family.title()+' конфигурация',used));_headers(config,['Товар','Поле','Запрошено','Статус'])
+            raw=book.create_sheet(_title(family.title()+' кандидаты',used));_headers(raw,['Товар','Раздел','Исходное поле','Русское поле','Значение','Область','Причина'])
+            gallery=book.create_sheet(_title(family.title()+' фото-кандидаты',used));_headers(gallery,['Товар','URL','Статус','Ширина','Высота','Размер','Формат'])
+            model_codes=book.create_sheet(_title(family.title()+' номера моделей',used));_headers(model_codes,['Товар','Номер устройства','Тип','Источник','Связь с SKU'])
+            components=None
+            if family=='dreame':
+                components=book.create_sheet(_title('Dreame компоненты',used));_headers(components,['Товар','Раздел источника','Компонент','Исходное поле','Исходное значение','Область','Решение','Источник'])
+            for p in xiaomi_products:
+                ev=card_evidence.load(database,p['id'],family) or {};r=xiaomi_pipeline.card_readiness(database,p['id'],family=family);i=r['identity'];summary.append([p['name'],p['search_code'],'Подтверждена' if r['exact_identity'] else 'Не подтверждена',i.get('source_region',''),'Данные входного файла; не блокируют готовность',i.get('retail_sku') or 'Не подтверждён',r['manual_status'],r['confirmed_specs'],'Готова' if r['verdict']=='export_ready' else 'Не готова','; '.join(xiaomi_pipeline.GAPS[g] for g in r['gaps'])])
+                for k,v in r['input_configuration'].items():config.append([p['name'],{'RAM':'Оперативная память','storage':'Накопитель','color':'Цвет','region':'Региональная маркировка','supplier_part_number':'Артикул поставщика','bundle':'Комплект поставщика'}.get(k,k),v,'Данные входного файла; не официальный факт'])
+                for f in ev.get('rejected_specs',[]):raw.append([p['name'],f.get('section',''),f['name'],label(f['name']),f['value'],f['scope'],f['reason']])
+                if components is not None:
+                    for f in ev.get('raw_specs',[]):components.append([p['name'],f.get('source_section',''),f.get('section',''),f['name'],f['value'],f.get('scope',''),'Кандидат' if f.get('reason') else 'Характеристика модели' if any(all(a.get(k)==f.get(k) for k in ('name','value','component')) for a in ev.get('accepted_specs',[])) else 'Исходные данные',ev.get('pdp_url','')])
+                for photo in jobs.get_photo_candidates(database,p['id']):gallery.append([p['name'],photo['url'],'Фото модели; цвет поставщика не подтверждён' if xiaomi_pipeline.photo_verified(photo,ev) else 'Кандидат: product gallery не подтверждена',*_photo_cells(photo)])
+                for c in ev.get('model_numbers',[]):model_codes.append([p['name'],c['value'],'Номер модели устройства',c['source_url'],'Не подтверждена'])
+                if not jobs.get_documents(database,p['id']):docs.append([p['name'],'','','','','','','','','Официальный support inventory',family.title(),r['manual_status']])
+            from math import ceil
+            for sheet in (summary,config,raw,gallery,model_codes,photos,*([components] if components is not None else [])):
+                for column in sheet.columns:
+                    sheet.column_dimensions[column[0].column_letter].width=min(60,max(14,max(len(str(c.value or '')) for c in column)+2))
+                for row in sheet.iter_rows():
+                    lines=1
+                    for cell in row:
+                        cell.alignment=Alignment(wrap_text=True,vertical='top')
+                        width=sheet.column_dimensions[cell.column_letter].width or 14
+                        lines=max(lines,ceil(len(str(cell.value or ''))/max(8,width-2)))
+                    sheet.row_dimensions[row[0].row].height=min(180,max(24,16*lines))
     output=BytesIO(); book.save(output); book.close(); return output.getvalue()

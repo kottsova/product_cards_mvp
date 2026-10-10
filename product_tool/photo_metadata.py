@@ -13,6 +13,7 @@ from .adapters.policy_session import PolicyAwareSession, RequestBudget, request_
 
 MAX_IMAGE_BYTES = 8_000_000
 ALLOWED_BY_SOURCE = {
+    'dreame_model': ('dreametech.com','dreame.tech','cdn.shopify.com'),
     'xiaomi_model': ('appmifile.com',),
     'hyperx': ('hyperx.com',),
     'razer_model': ('razer.com','razerzone.com'),
@@ -112,14 +113,14 @@ def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying
         raise ValueError("Image exceeds the 8 MB measurement limit.")
     data = response.text.encode("latin-1")
     content_type=next((v for k,v in response.headers.items() if k.casefold()=='content-type'),'').split(';',1)[0].strip().lower()
-    binary_image=content_type=='application/octet-stream' and source_key in {'hyperx','xiaomi_model'}
+    binary_image=content_type=='application/octet-stream' and source_key in {'hyperx','xiaomi_model','dreame_model'}
     if content_type not in {'image/png','image/jpeg','image/webp'} and not binary_image:
         raise ValueError('Image response has an unsupported content-type.')
     dimensions = image_dimensions(data)
     if not dimensions:
         raise ValueError("Image bytes do not contain a supported PNG, JPG or WEBP header.")
     width, height, image_format = dimensions
-    if source_key not in {'hyperx','xiaomi_model'}:
+    if source_key not in {'hyperx','xiaomi_model','dreame_model'}:
         return {"width":width,"height":height,"size_bytes":len(data),"format":image_format}
     from PIL import Image
     try:

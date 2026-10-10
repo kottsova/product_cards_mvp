@@ -14,9 +14,9 @@ def photo_verified(photo, ev):
 def document_verified(doc, ev):
     return bool(ev and doc['direct_url'] in ev.get('verified_documents',[]))
 
-def card_readiness(database, product_id):
-    ev=card_evidence.load(database,product_id,'xiaomi') or {};identity=ev.get('identity',{})
-    facts=[f for f in jobs.get_resolved(database,product_id) if f['selected_source'].startswith('xiaomi_') and f['status'] in {'model_confirmed_official','configuration_confirmed_official'} and not f['conflict']]
+def card_readiness(database, product_id, *, family='xiaomi'):
+    ev=card_evidence.load(database,product_id,family) or {};identity=ev.get('identity',{})
+    facts=[f for f in jobs.get_resolved(database,product_id) if f['selected_source'].startswith(family+'_') and f['status'] in {'model_confirmed_official','configuration_confirmed_official'} and not f['conflict']]
     gaps=[];conflicts=jobs.result_counts(database,product_id)['conflicts']
     if identity.get('model_relation')!='model_confirmed':gaps.append('model_missing')
     if len(facts)<3:gaps.append('specifications_missing')
@@ -26,7 +26,7 @@ def card_readiness(database, product_id):
     blocking=[g for g in gaps if g!='manual_unverified']
     return {'verdict':'not_ready' if blocking else 'export_ready','blocking_gaps':blocking,'advisory_gaps':[g for g in gaps if g not in blocking],'gaps':gaps,'confirmed_specs':len(facts),'identity':identity,'readiness_scope':'model','input_configuration':ev.get('input_configuration',ev.get('requested_configuration',{})),'exact_identity':identity.get('model_relation')=='model_confirmed','conflicts':conflicts,'manual_status':ev.get('manual_status','Не проверена')}
 
-def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns_adapter_factory=None,clock=time.monotonic):
+def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns_adapter_factory=None,clock=time.monotonic,family='xiaomi'):
     discovery_trace.initialize(database);trace=lambda e:discovery_trace.record(database,job_id,product_id,{'timestamp':utc_now(),**e})
     adapter=(adapter_factory or (lambda:XiaomiAdapter(clock=clock,fetch_log_path=Path(database).parent/'xiaomi_fetch_log.json')))();adapter.trace_callback=trace
     article=product['search_code'].strip().upper();budget=RequestBudget(max_per_row=24,max_total=24);budget.begin_row(str(product_id))
@@ -46,7 +46,7 @@ def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns
         eligible={x['asset_key'] for x in ev.get('model_gallery_candidates',[]) if x.get('model_relation')=='model_confirmed'}|set(ev.get('exact_photo_assets',[]))
         for photo in [p for p in jobs.get_photo_candidates(database,product_id) if p['kind']=='product_gallery' and p['asset_key'] in eligible][:4]:
             try:
-                measured=photo_metadata.inspect_saved_photo(photo['url'],photo['source_key'],Path(database).parent/'xiaomi_image_fetch_log.json')
+                measured=photo_metadata.inspect_saved_photo(photo['url'],photo['source_key'],Path(database).parent/(family+'_image_fetch_log.json'))
                 if measured['width']<400 or measured['height']<300 or not 0.2<=measured['width']/measured['height']<=5:raise ValueError('Logo/icon or insufficient product image dimensions')
                 jobs.save_photo_metadata(database,product_id,photo['id'],photo['url'],width=measured['width'],height=measured['height'],size_bytes=measured['size_bytes'],image_format=measured['format'])
                 verified.append(photo['asset_key']);measurements.append({'url':photo['url'],'accepted_identity':True,'identity_scope':'model','supplier_color_relation':'unproven',**measured})
@@ -57,13 +57,13 @@ def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns
             relation['accepted']=relation['asset_key'] in verified
             if relation['accepted']:relation['reason']='Official exact-model gallery; bytes verified; no supplier color claim'
         jobs.set_photo_selection(database,product_id,verified)
-    card_evidence.save(database,product_id,'xiaomi',ev)
+    card_evidence.save(database,product_id,family,ev)
     if 3 in stages:jobs.resolve_product(database,product_id)
-    r=card_readiness(database,product_id)
+    r=card_readiness(database,product_id,family=family)
     if r['blocking_gaps']:
         dealer=(dns_adapter_factory or (lambda:DnsAdapter(clock=clock,fetch_log_path=Path(database).parent/'dns_fetch_log.json')))().find_source(article,deadline=clock()+10,model_tokens=[article],brand=product['brand'],name=product.get('name') or article,missing_fields=r['blocking_gaps'])
         # A marketing model input cannot prove a retail part through a dealer title.
         ev['dealer_fallback']={'accepted':False,'url':dealer.url,'reason':dealer.error or dealer.evidence,'match_level':dealer.match_level}
-        trace({'event':'xiaomi_dealer','query':article,'provider':'dns','url':dealer.url,'region':'ru','source_type':'dealer','accepted':False,'reason':dealer.error or dealer.evidence,'identity_relation':'unproven'})
-    card_evidence.save(database,product_id,'xiaomi',ev)
-    jobs.finish(database,job_id,'done' if r['exact_identity'] and not r['conflicts'] else 'needs_review','Xiaomi: '+('Готова' if r['verdict']=='export_ready' else 'Не готова')+'. '+'; '.join(GAPS[g] for g in r['gaps']))
+        trace({'event':family+'_dealer','query':article,'provider':'dns','url':dealer.url,'region':'ru','source_type':'dealer','accepted':False,'reason':dealer.error or dealer.evidence,'identity_relation':'unproven'})
+    card_evidence.save(database,product_id,family,ev)
+    jobs.finish(database,job_id,'done' if r['exact_identity'] and not r['conflicts'] else 'needs_review',family.title()+': '+('Готова' if r['verdict']=='export_ready' else 'Не готова')+'. '+'; '.join(GAPS[g] for g in r['gaps']))

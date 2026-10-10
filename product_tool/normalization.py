@@ -163,6 +163,8 @@ def _section_scope(section: str) -> str:
     title = _cleaned(section)
     if title in {'база / станция', 'omni station', 'all-in-one station'}:
         return 'station'
+    if title in {'робот','устройство','ручной пылесос','упаковка'}:
+        return {'робот':'robot','устройство':'device','ручной пылесос':'handheld','упаковка':'packaging'}[title]
     if re.search(r"сушильн|программ\w*\s+сушк", title):
         return "drying"
     if re.search(r"стиральн|программ\w*\s+стирк", title):
