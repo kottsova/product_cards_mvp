@@ -134,13 +134,17 @@ def extract_dom_spec_table(html: str, page_url: str) -> list[ExtractedField]:
     heading, not a structured pair, so it can carry more than one fact."""
     soup = BeautifulSoup(html, "html.parser")
     fields: list[ExtractedField] = []
-    seen: set[tuple[str, str]] = set()
+    seen: set[tuple[str, str, str]] = set()
 
     def add(name: str, value: str, evidence: str, confirmation: str, section: str = "", block: int = 0) -> None:
         name, value = clean_text(name), clean_text(value)
         if not name or not value or name == value:
             return
-        key = (name, value)  # an identical repeat is dropped; a different value under the same name is kept, with its block
+        # An explicitly named boom/built-in mic owns the fact even when a
+        # vendor repeats it under both specs and connections. Unqualified
+        # fields still belong to their component section.
+        owner = 'named_component' if re.search(r'\b(?:boom|built[- ]in)\s+mic\b', name, re.I) else section
+        key = (owner, name, value)
         if key in seen:
             return
         seen.add(key)

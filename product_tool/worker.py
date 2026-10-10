@@ -423,6 +423,11 @@ def run_once(
             if getattr(hyperx,'discovery_enabled',False):
                 from . import card_evidence
                 ev=hyperx.reports.get(hyperx_code,{})
+                previous_hyperx=card_evidence.load(database,product_id,'hyperx') or {}
+                if previous_hyperx.get('manual_status')=='Проверена':
+                    ev['previous_manual_evidence']={k:previous_hyperx[k] for k in ('manual_status','manuals','manual_checks','manual_reason') if k in previous_hyperx}
+                if previous_hyperx.get('byte_verified_gallery'):
+                    ev['byte_verified_gallery']=previous_hyperx['byte_verified_gallery']
                 card_evidence.save(database,product_id,'hyperx',ev)
                 if 4 in stages and not had_photos and ev.get('exact_photo_assets'):
                     jobs.set_photo_selection(database,product_id,ev['exact_photo_assets'],mode='exact')
@@ -544,7 +549,13 @@ def run_once(
                 # is never turned into a document (see adapters/hyperx.py
                 # and adapters/structured_page.py's dom-table extraction).
                 hyperx_documents, hyperx_doc_reason = hyperx.find_documents(hyperx_code, deadline=total_deadline)
-                jobs.save_documents(database, product_id, "hyperx", hyperx_documents)
+                hx_report=hyperx.reports.get(hyperx_code,{}) if getattr(hyperx,'discovery_enabled',False) else {}
+                retained_hx=[d for d in jobs.get_documents(database,product_id) if d['source_key']=='hyperx']
+                previous_hx=hx_report.get('previous_manual_evidence',{})
+                if not hyperx_documents and retained_hx and previous_hx.get('manual_status')=='Проверена':
+                    hx_report['manual_current_attempt']={k:hx_report.get(k) for k in ('manual_status','manuals','manual_checks','manual_reason','manual_technical_limitations')}
+                    hx_report.update(previous_hx)
+                else:jobs.save_documents(database, product_id, "hyperx", hyperx_documents)
                 jobs.progress(
                     database,job_id,6,f"HyperX: {hyperx_doc_reason}",
                     level="info" if hyperx_documents else "warning",

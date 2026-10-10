@@ -4,6 +4,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from html.parser import HTMLParser
+import json
 import re
 from typing import Any, Mapping
 from urllib.parse import unquote, parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
@@ -223,6 +224,31 @@ def detect_routes(html: str, base_url: str, *, allowed_hosts=None, configured_en
         query_fields = [k for k, _ in parse_qsl(parsed.query, keep_blank_values=True) if k.lower() in QUERY_NAMES]
         rejection = 'javascript_handler' if any(k.lower().startswith('on') for k in link['attrs']) else ''
         routes.append(make_route(href, base_url=base_url, allowed_hosts=hosts, query_parameter=query_fields[0] if len(set(query_fields)) == 1 else '', source='first_party_search_link', rejection=rejection))
+    # A published schema.org SearchAction declares a query parameter even
+    # when a JS search UI has no HTML form. Admit only one explicit placeholder.
+    def actions(value, depth=0):
+        if depth>8:return
+        if isinstance(value,dict):
+            if value.get('@type')=='SearchAction':yield value
+            for child in value.values():yield from actions(child,depth+1)
+        elif isinstance(value,list):
+            for child in value[:100]:yield from actions(child,depth+1)
+    for script in parser.scripts:
+        if script['attrs'].get('type')!='application/ld+json':continue
+        try:data=json.loads(script['text'])
+        except (ValueError,TypeError):continue
+        for action in actions(data):
+            target=action.get('target','')
+            if isinstance(target,dict):target=target.get('urlTemplate','')
+            if not isinstance(target,str):continue
+            placeholders=re.findall(r'\{([a-zA-Z_][a-zA-Z0-9_]*)\}',target)
+            if len(placeholders)!=1:continue
+            declaration=action.get('query-input','')
+            if declaration!='required name='+placeholders[0]:continue
+            query_fields=[k for k,v in parse_qsl(urlsplit(target).query) if v=='{'+placeholders[0]+'}']
+            if len(query_fields)!=1:continue
+            target=target.replace('{'+placeholders[0]+'}','')
+            routes.append(make_route(target,base_url=base_url,allowed_hosts=hosts,query_parameter=query_fields[0],source='json_ld_search_action'))
     unique = {}
     for route in routes:
         key = (route.action_url, route.method, route.query_parameter, route.constant_parameters, route.rejection_reason)

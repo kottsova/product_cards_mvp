@@ -342,6 +342,7 @@ class HyperXAdapter:
         discovery_enabled: bool = False,
         capture_dir: Path | None = None,
         trace_callback=None,
+        browser_session=None,
     ):
         self.clock = clock
         self.urls = urls if urls is not None else KNOWN_URLS
@@ -349,6 +350,8 @@ class HyperXAdapter:
         self.discovery_enabled = discovery_enabled
         self.capture_dir = capture_dir
         self.trace_callback = trace_callback
+        self.browser_session = browser_session
+        self._catalog_cache = {}
         self.reports = {}
         self._last_name = ''
         self._last_document = None
@@ -416,6 +419,8 @@ class HyperXAdapter:
         import hashlib
         if self.request_count >= 18 or self.clock() >= deadline:
             return ''
+        if self.browser_session:
+            return self._browser_html(url, deadline, catalog_cache=True)
         self.request_count += 1
         r=self._fetcher.get(url,allowed_hosts=HOSTS,deadline=deadline)
         if r.access_status in {AccessStatus.CAPTCHA_OR_BLOCKED,AccessStatus.RATE_LIMITED}:
@@ -427,6 +432,42 @@ class HyperXAdapter:
             (self.capture_dir/(digest+'.html')).write_text(text,encoding='utf8')
         self._emit(dict(event='hyperx_fetch',query='',provider='official_http',url=url,final_url=r.final_url,region=_host_of(url),source_type='public_response',accepted=bool(text),reason=r.error or r.access_status.value,http_status=r.http_status,identity_relation='not_checked'))
         return text
+
+    def _browser_html(self, url, deadline, *, catalog_cache=False):
+        """Existing public browser transport, one caller-owned context per batch."""
+        import hashlib
+        from .policy_fetch import read_log
+        from .access_stop import active_stops
+        from ..census.browser_runtime import BrowserFailure
+        if self.clock() >= deadline or _host_of(url) in active_stops(read_log(self._fetcher.log_path)):
+            return ''
+        path=urlsplit(url).path
+        cacheable=catalog_cache and (path in {'/','/robots.txt'} or path.endswith('.xml'))
+        if cacheable and url in self._catalog_cache:
+            self._emit(dict(event='hyperx_catalog_cache',provider='session_catalog_cache',url=url,accepted=False,reason='same-session navigation metadata only; PDP always fresh',source_type='catalog_cache'))
+            return self._catalog_cache[url]
+        self.request_count += 1
+        try:
+            self.browser_session.start()
+            self.browser_session.call('goto',url=url)
+            if _host_of(url)=='supportcenter.hyperx.com' and '/conversations/search' in path:
+                self.browser_session.page.wait_for_timeout(1500)
+            state=self.browser_session.call('document_snapshot')
+            text=state.pop('html')
+            if path.endswith(('.xml','.txt')):
+                pre=BeautifulSoup(text,'html.parser').find('pre')
+                if pre:text=pre.get_text()
+            if self.capture_dir:
+                self.capture_dir.mkdir(parents=True,exist_ok=True)
+                digest=hashlib.sha256(text.encode()).hexdigest()
+                (self.capture_dir/(digest+'.html')).write_text(text,encoding='utf8')
+            self._emit(dict(event='hyperx_fetch',provider='official_live_browser',url=url,final_url=state['url'],region=_host_of(url),source_type='fresh_dom',accepted=True,reason='ordinary visible persistent session; identity checked separately',http_status=state['status_code'],browser=state,identity_relation='not_checked'))
+            if cacheable:self._catalog_cache[url]=text
+            return text
+        except BrowserFailure as exc:
+            self._last_access_issue={'url':url,'status':str(exc),'counts':exc.counts}
+            self._emit(dict(event='hyperx_fetch',provider='official_live_browser',url=url,accepted=False,reason=str(exc),source_type='access_limitation',counts=exc.counts))
+            return ''
 
     def _discover_source(self, code, name, category, deadline):
         from .hyperx_discovery import HyperXDiscovery
@@ -564,6 +605,7 @@ class HyperXAdapter:
             report=self.reports.get(normalized,{})
             def fetch(url):
                 if self.clock()>=deadline:return ''
+                if self.browser_session:return self._browser_html(url,deadline)
                 result=self._fetcher.get(url,allowed_hosts=('supportcenter.hyperx.com',),deadline=deadline)
                 text=(result.diagnostic_text or '') if result.http_status==200 and result.access_status==AccessStatus.DIRECT_ACCESS else ''
                 self._emit(dict(event='hyperx_manual_check',query=self._last_name,provider='official_support',url=url,region=_host_of(url),source_type='support',accepted=bool(text),reason=result.error or result.access_status.value,identity_relation='guide_content_unverified',http_status=result.http_status))
@@ -571,6 +613,27 @@ class HyperXAdapter:
             if self._last_document:
                 guides,checks,reason=inspect_guides(self._last_document,self._last_name,self._last_category,fetch)
                 report.update(manuals=guides,manual_checks=checks,manual_reason=reason,manual_status='Не проверена')
+                if self.browser_session:
+                    from .hyperx_support import verify_guides
+                    from .policy_session import PolicyAwareSession
+                    from .lg_documents import BinarySafeSession
+                    import hashlib
+                    transport=self.browser_session.binary_transport(max_bytes=15_000_000)
+                    session=PolicyAwareSession(self._fetcher.log_path,allowed_hosts=('files.hyperx.com','supportcenter.hyperx.com'),underlying=BinarySafeSession(transport),max_bytes=15_000_000)
+                    def download(url):
+                        if self.clock()>=deadline:raise ValueError('manual time budget exhausted')
+                        try:response=session.get(url,timeout=min(10,max(0.1,deadline-self.clock())))
+                        except Exception as exc:raise ValueError(str(exc)+'; '+transport.last_error) from exc
+                        if not response.ok or response.marker or response.truncated:raise ValueError('official PDF access/budget limitation')
+                        if response.headers.get('Content-Type','').split(';',1)[0].lower() not in {'application/pdf','application/x-pdf','application/octet-stream'}:raise ValueError('PDF content-type mismatch')
+                        data=response.text.encode('latin1');digest=hashlib.sha256(data).hexdigest()
+                        if self.capture_dir:
+                            self.capture_dir.mkdir(parents=True,exist_ok=True);(self.capture_dir/(digest+'.pdf')).write_bytes(data)
+                        return data,{'status':response.status_code,'content_type':response.headers.get('Content-Type',''),'size_bytes':len(data),'sha256':digest,'origin':'actual live binary GET sharing browser context cookies'}
+                    documents,status,technical=verify_guides(guides,self._last_name,normalized,download)
+                    if not guides and reason=='inventory_complete:no_primary_manual':status='Проверена, не найдена'
+                    report.update(manuals=guides,manual_status=status,manual_technical_limitations=technical)
+                    return documents,reason
             else:reason='Official PDP/support model relation missing'
             return [],reason
         url = self.urls.get(normalized, "")

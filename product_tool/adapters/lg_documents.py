@@ -57,7 +57,7 @@ RU_INSTRUCTION_LETTERS = 2500  # Russian INSTRUCTION text, not a legal notice re
 RU_INSTRUCTION_MARKERS = 2     # ... and this many instruction words in it
 
 _INSTRUCTION_MARKERS = ("руководств", "инструкц", "меры предосторожности", "безопасност", "перед использованием", "эксплуатац", "внимательно прочит", "owner's manual", "user manual",
-                        "please read this manual", "safety instructions", "installing", "нұсқау", "қауіпсіздік")
+                        "please read this manual", "user guide", "quick start guide", "safety instructions", "installing", "нұсқау", "қауіпсіздік")
 _RU_INSTRUCTION_WORDS = ("руководств", "инструкц", "безопасност", "перед использованием", "эксплуатац", "внимательно прочит", "меры предосторожности", "подключ", "нажмите", "не допускайте")
 _REGULATORY_HEADING = re.compile(r"декларац\w*\s+о?\s*соответств|declaration of conformity|сертификат\s+соответств|certificate of conformity|заявление о соответствии", re.I)
 

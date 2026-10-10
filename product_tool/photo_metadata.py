@@ -1,6 +1,7 @@
 """Measured image metadata for a saved photo URL; never infer pixels from HTML hints."""
 from __future__ import annotations
 
+from io import BytesIO
 import struct
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -109,8 +110,30 @@ def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying
     if response.truncated:
         raise ValueError("Image exceeds the 8 MB measurement limit.")
     data = response.text.encode("latin-1")
+    content_type=response.headers.get('Content-Type','').split(';',1)[0].strip().lower()
+    if content_type not in {'image/png','image/jpeg','image/webp'}:
+        raise ValueError('Image response has an unsupported content-type.')
     dimensions = image_dimensions(data)
     if not dimensions:
         raise ValueError("Image bytes do not contain a supported PNG, JPG or WEBP header.")
     width, height, image_format = dimensions
-    return {"width": width, "height": height, "size_bytes": len(data), "format": image_format}
+    if source_key!='hyperx':
+        return {"width":width,"height":height,"size_bytes":len(data),"format":image_format}
+    from PIL import Image
+    try:
+        with Image.open(BytesIO(data)) as decoded:
+            decoded.verify()
+            if decoded.size!=(width,height) or decoded.format not in {'PNG','JPEG','WEBP'}:raise ValueError('Image header/content mismatch')
+        with Image.open(BytesIO(data)) as decoded:
+            decoded.load()
+            extrema=decoded.convert('RGB').getextrema()
+            if all(lo==hi for lo,hi in extrema):raise ValueError('Blank placeholder image')
+            if decoded.mode=='RGBA' and decoded.getchannel('A').getextrema()[1]==0:raise ValueError('Transparent placeholder image')
+    except Exception as exc:
+        raise ValueError('Image bytes failed decoding verification.') from exc
+    if width<64 or height<64:
+        raise ValueError('Image is too small to be a product render.')
+    if {'PNG':'image/png','JPG':'image/jpeg','WEBP':'image/webp'}[image_format]!=content_type:
+        raise ValueError('Image format/content-type mismatch.')
+    import hashlib
+    return {"width": width, "height": height, "size_bytes": len(data), "format": image_format, "content_type":content_type,"sha256":hashlib.sha256(data).hexdigest()}

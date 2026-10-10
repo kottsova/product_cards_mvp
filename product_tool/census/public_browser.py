@@ -4,6 +4,8 @@ No challenge interaction, stealth settings, cookie import, or access-stop bypass
 The same context serves search and discovered article; HTML is always fresh DOM.
 """
 import hashlib,re,time
+import json
+import os
 from datetime import datetime,timezone
 from dataclasses import asdict
 from pathlib import Path
@@ -19,11 +21,14 @@ from .attended_support import looks_like_challenge
 
 class PublicBrowserSession:
  def __init__(self, *, allowed_hosts, fetch_log_path, profile_dir=None, visible=False,
-              budget=None, max_document_bytes=3000000, playwright_factory=None, clock=time.monotonic, pause=time.sleep):
+              budget=None, max_document_bytes=3000000, playwright_factory=None, clock=time.monotonic, pause=time.sleep, resource_hosts=(), allow_readonly_graphql=False, readonly_graphql_paths=('/graphql',), use_system_ca=False):
   if not 1<=max_document_bytes<=3000000:raise ValueError('Invalid document budget')
   self.max_document_bytes=max_document_bytes
   if profile_dir is not None and not visible:raise ValueError('Persistent profile requires explicit visible mode')
   self.hosts=tuple(allowed_hosts);self.log=Path(fetch_log_path);self.profile=Path(profile_dir) if profile_dir else None;self.visible=visible
+  self.resource_hosts=tuple(resource_hosts);self.allow_readonly_graphql=allow_readonly_graphql
+  self.readonly_graphql_paths=tuple(readonly_graphql_paths)
+  self.use_system_ca=use_system_ca
   self.budget=budget or BrowserBudget(deadline_seconds=30,operation_timeout_seconds=10,max_dom_bytes=1000000)
   self.factory=playwright_factory;self.clock=clock;self.pause=pause;self.session_id='public_browser:'+uuid4().hex
   self.context=self.page=self.browser=self.cm=None;self.counts={};self.events=[];self.status=None;self.signal='';self.started=0;self.total_navigations=0;self.created=0
@@ -37,7 +42,15 @@ class PublicBrowserSession:
   if self.factory is None:
    from playwright.sync_api import sync_playwright
    self.factory=sync_playwright
-  self.cm=self.factory();p=self.cm.__enter__();self.created=self.clock()
+  previous=os.environ.get('NODE_USE_SYSTEM_CA')
+  try:
+   if self.use_system_ca:os.environ['NODE_USE_SYSTEM_CA']='1'
+   self.cm=self.factory();p=self.cm.__enter__()
+  finally:
+   if self.use_system_ca:
+    if previous is None:os.environ.pop('NODE_USE_SYSTEM_CA',None)
+    else:os.environ['NODE_USE_SYSTEM_CA']=previous
+  self.created=self.clock()
   if self.profile:
    self.profile.mkdir(parents=True,exist_ok=True)
    self.context=p.chromium.launch_persistent_context(str(self.profile),channel='chrome',headless=False,accept_downloads=False,service_workers='block',viewport={'width':1400,'height':900})
@@ -51,7 +64,17 @@ class PublicBrowserSession:
   self.context.on('page',lambda p:p.close() if p is not self.page else None)
  def route(self,route):
   r=route.request;nav=r.is_navigation_request() and r.frame==self.page.main_frame
-  if not self.allowed(r.url) or re.search(r'/(?:login|register|account|cart|checkout|contact)(?:[/.]|$)',urlsplit(r.url).path,re.I) or r.method not in {'GET','HEAD'}:
+  resource_allowed=self.allowed(r.url) or (not nav and urlsplit(r.url).scheme=='https' and urlsplit(r.url).hostname in self.resource_hosts)
+  readonly_post=False
+  if self.allow_readonly_graphql and not nav and self.allowed(r.url) and r.method=='POST' and urlsplit(r.url).path in self.readonly_graphql_paths:
+   try:
+    body=json.loads(r.post_data or '{}');query=body.get('query','')
+    readonly_post=isinstance(query,str) and len(query)<100000 and bool(re.match(r'\s*(?:query\b|\{)',query)) and not re.search(r'\b(?:mutation|subscription)\b',query)
+   except (ValueError,TypeError,AttributeError):pass
+  if not resource_allowed or re.search(r'/(?:login|register|account|cart|checkout|contact)(?:[/.]|$)',urlsplit(r.url).path,re.I) or (r.method not in {'GET','HEAD'} and not readonly_post):
+   from .search_routes import redact_url
+   rejected=self.counts.setdefault('rejected_requests',[])
+   if len(rejected)<30:rejected.append({'url':redact_url(r.url),'method':r.method,'resource_type':r.resource_type,'reason':'host_not_allowed' if not resource_allowed else 'method_or_account_flow'})
    if nav:self.signal='interaction_blocked'
    route.abort();return
   if self.signal or self.clock()-self.started>=self.budget.deadline_seconds:
@@ -116,3 +139,38 @@ class PublicBrowserSession:
   if self.context:self.context.close();self.context=None
   if self.browser:self.browser.close();self.browser=None
   if self.cm:self.cm.__exit__(None,None,None);self.cm=None
+
+ def binary_transport(self,max_bytes=8000000):
+  """Requests-compatible public GET facade sharing this context's cookies.
+
+  Existing PolicyAwareSession checks hosts, redirects, cooldown and pacing.
+  Playwright's API response is buffered: reject oversized declared bodies
+  before reading, and enforce the byte cap on undeclared bodies afterwards.
+  """
+  if not 1<=max_bytes<=15000000:raise ValueError('Invalid binary budget')
+  owner=self
+  class Transport:
+   headers={}
+   last_error=''
+   def get(self,url,timeout=10,**kwargs):
+    import requests
+    if not owner.allowed(url):raise requests.ConnectionError('foreign binary URL')
+    if (urlsplit(url).hostname or '') in access_stop.active_stops(policy_fetch.read_log(owner.log)):
+     raise requests.ConnectionError('host_stopped')
+    owner.start()
+    try:
+     result=owner.context.request.get(url,timeout=min(10,timeout)*1000,max_redirects=0,fail_on_status_code=False,headers={'Accept-Encoding':'identity'})
+     length=result.headers.get('content-length','')
+     if length.isdigit() and int(length)>max_bytes:raise ValueError('binary declared size exceeds budget')
+     data=result.body()
+     if len(data)>max_bytes:raise ValueError('binary size exceeds budget')
+     response=requests.Response();response.status_code=result.status;response.url=result.url
+     response.headers.update(result.headers);response._content=data;response._content_consumed=True
+     response.encoding='utf-8'
+     return response
+    except Exception as exc:
+     self.last_error=str(exc)
+     raise requests.ConnectionError(str(exc)) from exc
+    finally:
+     if 'result' in locals():result.dispose()
+  return Transport()

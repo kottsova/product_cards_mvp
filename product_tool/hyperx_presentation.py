@@ -11,9 +11,14 @@ LABELS={
  'Width':'Ширина','Height':'Высота','Depth':'Глубина','Length':'Длина','Weight':'Вес (с сохранением состава измерения)','Cable Type':'Тип кабеля','Cable Length (imperial) and type':'Длина и тип кабеля','SNR':'Отношение сигнал/шум','Self-noise (RMS)':'Собственный шум (RMS)','Color':'Цвет','Layout':'Раскладка клавиатуры','SKU':'Коммерческий SKU',
 }
 SECTIONS={'Headphone Specifications':'Наушники','Microphone Specifications':'Микрофон','Microphone Specification':'Микрофон','Keyboard Specifications':'Клавиатура','Switch Specifications':'Переключатели','Mouse Specifications':'Мышь','Physical Specifications':'Габариты и вес','Connections and Features':'Подключение и функции','Battery Specifications':'Аккумулятор','Wireless Specifications':'Беспроводная связь','Variant configuration':'Конфигурация'}
+SECTIONS.update({'Battery runtime modes':'Автономность по режимам','Microphone recording':'Запись микрофона'})
 GAPS={'model_identity_missing':'Модель не подтверждена','specifications_missing':'Недостаточно подтверждённых характеристик','gallery_missing':'Нет подтверждённого фото нужного варианта','configuration_unproven':'Коммерческий вариант не подтверждён','conflicts':'Есть конфликт фактов'}
 
 def label(raw):
+    if raw=='Recording Bit-Depth':return 'Разрядность записи'
+    if raw=='Recording Sample Rate':return 'Частота дискретизации записи'
+    if raw.startswith('Battery Life'):
+        return {'Battery Life':'Автономность (режим не указан)', 'Battery Life (2.4GHz)':'Автономность в режиме 2,4 ГГц (заявленный максимум)', 'Battery Life (Bluetooth)':'Автономность Bluetooth (заявленный максимум)', 'Battery Life (simultaneous connection)':'Автономность при одновременном подключении'}.get(raw,raw)
     if raw in LABELS:
         return LABELS[raw]
     base=raw.split(' (',1)[0];result=LABELS.get(base,base)
