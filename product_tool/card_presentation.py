@@ -169,6 +169,10 @@ def present_card_rows(
                                    or (_clean_label(chosen["raw_name"]) if official_russian else "")
                                    or display_name_ru(row["normalized_name"], row.get("raw_names", [])))
             section = chosen.get("section") or "Другие характеристики"
+            if row.get('hyperx_presentation'):
+                from .hyperx_presentation import label,SECTIONS
+                row['display_name']=label(chosen.get('raw_name','') or row['display_name'])
+                section=SECTIONS.get(section,section)
         else:
             section = "Другие характеристики"
         if row.get("lg_presentation"):
@@ -188,6 +192,8 @@ def present_card_rows(
             section = jbl_section(section)
         row["section_name"] = section.strip().lower().capitalize() if section.isupper() and not section.startswith("SMART") else section.strip()
         row["role"] = _role(category, row)
+        if row.get('hyperx_presentation') and (chosen or {}).get('raw_name') in {'Game Mode','Backlight','Light Effects','Audio Controls'}:
+            row['role']='feature'
         row["compact_status"] = _compact_status(row)
         row["evidence_facts"] = []
         seen_fact_ids: set[int] = set()

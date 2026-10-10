@@ -1,0 +1,71 @@
+{
+  "stage": 72,
+  "audit": "PASS",
+  "adapter_verdict": "HyperX adapter not ready",
+  "baseline_parent_commit": "0d1a03bac1bf65ca15723f67a51e4dff1432e2bd",
+  "frozen_input_sha256": "0e82e7604f60203f41ae326de0fc76e224f78a614f2123c1bf3e474c6707615f",
+  "baseline": {
+    "job": "done",
+    "source_identity": "exact_variant",
+    "raw_facts": 13,
+    "old_readiness": "not_ready"
+  },
+  "first_pass_live_official_models": 1,
+  "early_actual_live_official_models": 10,
+  "early_actual_ready_models": 9,
+  "last_actual_live_official_models": 5,
+  "last_ready_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "last_not_ready_ids": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "last_confirmed_specs": 100,
+  "offline_parser_confirmed_specs": 157,
+  "raw_partition_verified": true,
+  "manual_cards_status": "Не проверена",
+  "quick_start_candidate_ids": [
+    4
+  ],
+  "document_download_error": "Network request failed",
+  "image_byte_verified": 0,
+  "guarded_network_requests": 0,
+  "active_stops": {
+    "hyperx.com": [
+      {
+        "url": "https://hyperx.com/products/hyperx-pulsefire-haste-2-gaming-mouse?variant=43416224006301",
+        "status_code": 429,
+        "final_url": "https://hyperx.com/products/hyperx-pulsefire-haste-2-gaming-mouse?variant=43416224006301",
+        "checked_at": "2026-10-10T11:34:27+00:00",
+        "access_status": "rate_limited",
+        "protection_status": "challenge_suspected",
+        "source_session": "e369d4500c9742f1a6fe51aaccfe975e",
+        "domain": "hyperx.com",
+        "reason": "rate_limit",
+        "created_at": "2026-10-10T11:34:27+00:00",
+        "last_attempt_at": "2026-10-10T11:34:27+00:00",
+        "scope": "domain",
+        "expires_at": "2026-10-10T12:34:27+00:00"
+      }
+    ]
+  },
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 565.5959577000003,
+    "result": [
+      "Ran 1714 tests in 562.934s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  }
+}

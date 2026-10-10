@@ -388,6 +388,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         xbox_evidence = card_evidence.load(database,product_id,'xbox') if product['brand'].strip().casefold() in XBOX_BRANDS else None
         from . import razer_pipeline
         razer_evidence = card_evidence.load(database,product_id,'razer') if product['brand'].strip().casefold() == 'razer' else None
+        hyperx_evidence = card_evidence.load(database,product_id,'hyperx') if product['brand'].strip().casefold() == 'hyperx' else None
         from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
         playstation_evidence = card_evidence.load(database,product_id,"playstation") if product["brand"].strip().casefold() in PLAYSTATION_BRANDS else None
         apple_evidence = card_evidence.load(database, product_id, "apple") if product["brand"].strip().upper() == "APPLE" else None
@@ -459,6 +460,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             playstation_gaps=playstation_pipeline.GAPS,
             xbox_evidence=xbox_evidence,
             razer_evidence=razer_evidence,
+            hyperx_evidence=hyperx_evidence,
+            hyperx_card=__import__('product_tool.hyperx_audit',fromlist=['card_readiness']).card_readiness(database,product_id) if hyperx_evidence is not None else None,
+            hyperx_gaps=__import__('product_tool.hyperx_presentation',fromlist=['GAPS']).GAPS,
             razer_card=razer_pipeline.card_readiness(database,product_id) if razer_evidence is not None else None,
             razer_gaps=razer_pipeline.GAPS,
             razer_reasons=__import__('product_tool.razer_presentation',fromlist=['REASONS']).REASONS,
@@ -482,7 +486,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
-            manual_status=razer_evidence.get('manual_status','Не проверена') if razer_evidence is not None else xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_status=hyperx_evidence.get('manual_status','Не проверена') if hyperx_evidence is not None else razer_evidence.get('manual_status','Не проверена') if razer_evidence is not None else xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
             manual_reason=manual_status.unchecked_reason(database, product_id, product["search_code"]) if lg_batch.is_lg(product) else "",
             manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,

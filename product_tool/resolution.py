@@ -52,6 +52,17 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             if f["source_key"] in SUPPLIERS and pages.get(f["source_key"],{}).get("match_level")=="full_sku" and f["source_key"] not in seen:
                 suppliers.append(f); seen.add(f["source_key"])
         official=[f for f in values if f["source_key"] in OFFICIAL]
+        hx=[f for f in official if f['source_key']=='hyperx']
+        if hx:
+            from .adapters.hyperx import parse_attribute_scope
+            page=pages.get('hyperx',{});scope=parse_attribute_scope(page.get('evidence',''))
+            eligible=[f for f in hx if not page.get('error') and page.get('match_level') in {'exact_variant','model_confirmed','base_code_confirmed'} and (page.get('match_level')=='exact_variant' or f.get('raw_name') in scope['model'])]
+            if not eligible or _different(eligible):
+                results.append(ResolvedValue(name,'','','needs_review','Факт HyperX не подтверждён в соответствующей области identity.','',_different(eligible),False))
+            else:
+                f=eligible[0];variant=f.get('raw_name') in scope['variant'];exact=variant and page.get('match_level')=='exact_variant'
+                results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if exact else 'model_confirmed_official','Официальный факт HyperX; модель и коммерческий вариант разделены.','hyperx',False,exact))
+            continue
         rz=[f for f in official if f['source_key'] in {'razer_model','razer_configuration'}]
         if rz:
             from .razer_identity import configuration_sensitive

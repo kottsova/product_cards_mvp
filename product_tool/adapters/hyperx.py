@@ -339,10 +339,20 @@ class HyperXAdapter:
         urls: dict[str, str] | None = None,
         fetch_log_path: Path | None = None,
         policy: ProbePolicy | None = None,
+        discovery_enabled: bool = False,
+        capture_dir: Path | None = None,
+        trace_callback=None,
     ):
         self.clock = clock
         self.urls = urls if urls is not None else KNOWN_URLS
         self.request_count = 0
+        self.discovery_enabled = discovery_enabled
+        self.capture_dir = capture_dir
+        self.trace_callback = trace_callback
+        self.reports = {}
+        self._last_name = ''
+        self._last_document = None
+        self._last_access_issue = None
         # Stage 16: every ordinary fetch goes through PolicyAwareFetcher
         # (ProbePolicy, host allowlist, redirect-chain checks, 401/403/429/
         # challenge detection, and -- via fetch_log_path -- a host-stop
@@ -352,11 +362,13 @@ class HyperXAdapter:
         # None, exactly like every other adapter in this project.
         self._fetcher = PolicyAwareFetcher(
             fetch_log_path or DEFAULT_FETCH_LOG_PATH,
-            session=session, policy=policy, clock=clock,
+            session=session, policy=policy or (ProbePolicy(max_bytes=3_000_000) if discovery_enabled else None), clock=clock,
         )
 
-    def find_source(self, search_code: str, *, deadline: float) -> SourceDocument:
+    def find_source(self, search_code: str, *, deadline: float, name: str = '', category: str = '') -> SourceDocument:
         normalized = (search_code or "").strip().upper()
+        if self.discovery_enabled:
+            return self._discover_source(normalized, name, category, deadline)
         url = self.urls.get(normalized, "")
         if not url:
             return SourceDocument(
@@ -393,6 +405,71 @@ class HyperXAdapter:
 
         html = (result.diagnostic_text or "")[:900_000]
         return self.parse_page(html, result.final_url or url, catalog_code=normalized).document
+
+    def _emit(self, event):
+        if self.trace_callback:
+            from .common import utc_now
+            self.trace_callback({'timestamp': utc_now(), **event})
+
+    def _public_html(self, url, deadline):
+        from .hyperx_discovery import HOSTS
+        import hashlib
+        if self.request_count >= 18 or self.clock() >= deadline:
+            return ''
+        self.request_count += 1
+        r=self._fetcher.get(url,allowed_hosts=HOSTS,deadline=deadline)
+        if r.access_status in {AccessStatus.CAPTCHA_OR_BLOCKED,AccessStatus.RATE_LIMITED}:
+            self._last_access_issue={'url':url,'http_status':r.http_status,'status':r.access_status.value,'error':r.error}
+        text=(r.diagnostic_text or '') if r.http_status==200 and r.access_status in {AccessStatus.DIRECT_ACCESS,AccessStatus.JAVASCRIPT_REQUIRED} else ''
+        if self.capture_dir and text:
+            self.capture_dir.mkdir(parents=True,exist_ok=True)
+            digest=hashlib.sha256(text.encode()).hexdigest()
+            (self.capture_dir/(digest+'.html')).write_text(text,encoding='utf8')
+        self._emit(dict(event='hyperx_fetch',query='',provider='official_http',url=url,final_url=r.final_url,region=_host_of(url),source_type='public_response',accepted=bool(text),reason=r.error or r.access_status.value,http_status=r.http_status,identity_relation='not_checked'))
+        return text
+
+    def _discover_source(self, code, name, category, deadline):
+        from .hyperx_discovery import HyperXDiscovery
+        from ..hyperx_page import refine_page
+        self.request_count=0
+        self._last_access_issue=None
+        self._last_name=name
+        self._last_category=category
+        self._last_document=None
+        from .policy_fetch import read_log
+        from .access_stop import active_stops
+        stops=active_stops(read_log(self._fetcher.log_path))
+        if 'hyperx.com' in stops:
+            self._last_access_issue={'url':'https://hyperx.com/','status':'host_cooldown','active_stops':stops['hyperx.com']}
+            self._emit(dict(event='hyperx_active_stop',query=code,provider='official_http',url='https://hyperx.com/',region='hyperx.com',source_type='access_stop',accepted=False,reason='active host cooldown; no request made',identity_relation='unverified',active_stops=stops['hyperx.com']))
+            return self._blocked_source(code)
+        best=None
+        for url,query,provider,region in HyperXDiscovery(self._public_html,self._emit).candidates(code,name,category,deadline):
+            html=self._public_html(url,deadline)
+            if self._last_access_issue:break
+            if not html:continue
+            parsed=self.parse_page(html,url,catalog_code=code)
+            doc,report=refine_page(parsed,html,url,code,name)
+            accepted=report['model_relation']=='model_confirmed'
+            self._emit(dict(event='hyperx_identity',query=query,provider=provider,url=url,region=region,source_type='official_pdp',accepted=accepted,reason=report['reason'],identity_relation=doc.match_level,model_identity=report['model_relation'],configuration_identity=report['configuration_relation']))
+            if accepted and (best is None or doc.match_level=='exact_variant'):
+                best=doc;self.reports[code]=report
+            if doc.match_level=='exact_variant':
+                self._last_document=doc
+                return doc
+        if best:
+            self._last_document=best
+            return best
+        if self._last_access_issue:return self._blocked_source(code)
+        report={'model_relation':'unverified','configuration_relation':'unverified','reason':'official discovery miss or budget/access limitation','manual_status':'Не проверена','raw_specs':[],'accepted_specs':[],'rejected_specs':[],'identity_relations':[]}
+        self.reports[code]=report
+        return SourceDocument(self.source_key,self.site_name,'',match_level='official_url_needed',evidence=report['reason'])
+
+    def _blocked_source(self,code):
+        issue=self._last_access_issue or {}
+        reason='Официальный доступ HyperX остановлен: '+str(issue.get('status','blocked'))+'. Повторный запрос не выполнялся.'
+        self.reports[code]={'model_relation':'unverified','configuration_relation':'unverified','reason':reason,'access_limitation':issue,'manual_status':'Не проверена','raw_specs':[],'accepted_specs':[],'rejected_specs':[],'identity_relations':[]}
+        return SourceDocument(self.source_key,self.site_name,issue.get('url',''),match_level='blocked',error=reason,evidence=reason)
 
     def parse_page(self, html: str, page_url: str, *, catalog_code: str) -> HyperXPageResult:
         """Split out from find_source() so tests (and offline replay) can
@@ -482,6 +559,20 @@ class HyperXAdapter:
         'Quick Start Guide' as an included accessory is not evidence of an
         online document; only an actual link counts."""
         normalized = (search_code or "").strip().upper()
+        if self.discovery_enabled:
+            from .hyperx_support import inspect_guides
+            report=self.reports.get(normalized,{})
+            def fetch(url):
+                if self.clock()>=deadline:return ''
+                result=self._fetcher.get(url,allowed_hosts=('supportcenter.hyperx.com',),deadline=deadline)
+                text=(result.diagnostic_text or '') if result.http_status==200 and result.access_status==AccessStatus.DIRECT_ACCESS else ''
+                self._emit(dict(event='hyperx_manual_check',query=self._last_name,provider='official_support',url=url,region=_host_of(url),source_type='support',accepted=bool(text),reason=result.error or result.access_status.value,identity_relation='guide_content_unverified',http_status=result.http_status))
+                return text
+            if self._last_document:
+                guides,checks,reason=inspect_guides(self._last_document,self._last_name,self._last_category,fetch)
+                report.update(manuals=guides,manual_checks=checks,manual_reason=reason,manual_status='Не проверена')
+            else:reason='Official PDP/support model relation missing'
+            return [],reason
         url = self.urls.get(normalized, "")
         if not url:
             return [], "Нет проверенного официального URL HyperX для этого артикула."

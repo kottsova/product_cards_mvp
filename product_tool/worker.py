@@ -408,14 +408,24 @@ def run_once(
             # call, not just this one's lifetime -- see adapters/hyperx.py
             # and adapters/policy_fetch.py.
             hyperx = (hyperx_adapter_factory or (
-                lambda: HyperXAdapter(clock=clock, fetch_log_path=database.parent / "hyperx_fetch_log.json")
+                lambda: HyperXAdapter(clock=clock, fetch_log_path=database.parent / "hyperx_fetch_log.json", discovery_enabled=True)
             ))()
+            if getattr(hyperx,'discovery_enabled',False):
+                discovery_trace.initialize(database)
+                hyperx.trace_callback=lambda e:discovery_trace.record(database,job_id,product_id,e)
             hyperx_deadline = min(total_deadline, start+OFFICIAL_BUDGET_SECONDS)
             if clock()>=hyperx_deadline:
                 hyperx_doc=SourceDocument(hyperx.source_key,hyperx.site_name,"",error="Товар не проверен: исчерпан общий 20-секундный бюджет официального поиска.")
             else:
-                hyperx_doc=hyperx.find_source(hyperx_code,deadline=hyperx_deadline)
+                hyperx_doc=hyperx.find_source(hyperx_code,deadline=hyperx_deadline,**({'name':product['name'],'category':product['category']} if getattr(hyperx,'discovery_enabled',False) else {}))
+            had_photos=any(p['source_key']=='hyperx' for p in jobs.get_photo_candidates(database,product_id))
             official_docs.append(hyperx_doc); _save(database,product_id,hyperx_doc,stages)
+            if getattr(hyperx,'discovery_enabled',False):
+                from . import card_evidence
+                ev=hyperx.reports.get(hyperx_code,{})
+                card_evidence.save(database,product_id,'hyperx',ev)
+                if 4 in stages and not had_photos and ev.get('exact_photo_assets'):
+                    jobs.set_photo_selection(database,product_id,ev['exact_photo_assets'],mode='exact')
             jobs.progress(
                 database,job_id,1,f"{hyperx_doc.site_name}: {hyperx_doc.match_level}. {hyperx_doc.error or hyperx_doc.evidence}",
                 level="warning" if hyperx_doc.error or hyperx_doc.match_level!="exact_variant" else "info",
@@ -540,6 +550,11 @@ def run_once(
                     level="info" if hyperx_documents else "warning",
                     source_url=hyperx_doc.url,
                 )
+            if is_hyperx and getattr(hyperx,'discovery_enabled',False):
+                from . import card_evidence
+                ev=hyperx.reports.get(hyperx_code,{})
+                ev['dealer_fallback']={'url':dns_doc.url,'accepted':dns_doc.match_level=='model_and_code_confirmed' and not dns_doc.error,'reason':dns_doc.error or dns_doc.evidence,'match_level':dns_doc.match_level}
+                card_evidence.save(database,product_id,'hyperx',ev)
             # DNS documents: full-content verification before acceptance --
             # a matching filename/label is never enough (see adapters/
             # document_verification.py). This is where the Stage 11.3

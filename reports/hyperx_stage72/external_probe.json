@@ -1,0 +1,38 @@
+{
+  "origin": "actual live common browser fallback after official exact miss",
+  "result": {
+    "region": "global",
+    "query": "site:hyperx.com \"4P5D6AX#ACB\"",
+    "outcome": "no_candidates",
+    "candidates": [],
+    "note": ""
+  },
+  "trace": [
+    {
+      "timestamp": "2026-10-10T11:29:46.417538+00:00",
+      "event": "query",
+      "provider": "google_old_parser",
+      "query": "site:hyperx.com \"4P5D6AX#ACB\"",
+      "url": "https://www.google.com/search?q=site%3Ahyperx.com+%224P5D6AX%23ACB%22&hl=en",
+      "region": "global",
+      "mechanism": "old_parser_general_search",
+      "old_parser_source": "original_file"
+    },
+    {
+      "timestamp": "2026-10-10T11:29:47.986769+00:00",
+      "event": "query_outcome",
+      "provider": "google_old_parser",
+      "query": "site:hyperx.com \"4P5D6AX#ACB\"",
+      "url": "https://www.google.com/search?q=site%3Ahyperx.com+%224P5D6AX%23ACB%22&hl=en",
+      "region": "global",
+      "final_url": "https://www.google.com/search?q=site%3Ahyperx.com+%224P5D6AX%23ACB%22&hl=en",
+      "outcome": "no_candidates",
+      "resource_capped": false,
+      "network_requests": 0,
+      "old_parser_source": "original_file",
+      "old_parser_called": true,
+      "old_parser_completed": true
+    }
+  ],
+  "no_captcha_bypass": true
+}

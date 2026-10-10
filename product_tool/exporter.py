@@ -355,4 +355,19 @@ def export_batch(database: Path,batch_id: str)->bytes:
                     width=sheet.column_dimensions[cell.column_letter].width or 12
                     lines=max(lines,ceil(len(str(cell.value or ''))/max(8,width-2)))
                 sheet.row_dimensions[row[0].row].height=min(180,max(24,16*lines))
+    hx=[p for p in batch['products'] if p['brand'].strip().casefold()=='hyperx']
+    if hx:
+        from . import hyperx_audit,hyperx_presentation
+        sheet=book.create_sheet(_title('Готовность HyperX',used));_headers(sheet,['Товар','Артикул','Готовность','Модель','Вариант','Инструкция','Характеристики','Пробелы'])
+        variants=book.create_sheet(_title('Варианты HyperX',used));_headers(variants,['Товар','Тип идентификатора','Значение','Региональный суффикс','Опции','Связь с запросом','Источник'])
+        rejected=book.create_sheet(_title('Кандидаты HyperX',used));_headers(rejected,['Товар','Раздел','Raw label','Значение','Причина','Источник'])
+        manuals=book.create_sheet(_title('Документы HyperX',used));_headers(manuals,['Товар','Тип','Название','URL','Проверка'])
+        photo_audit=book.create_sheet(_title('Фото HyperX',used));_headers(photo_audit,['Товар','Тип','URL','Выбрано','Связь с вариантом','Причина исключения'])
+        for p in hx:
+            ev=card_evidence.load(database,p['id'],'hyperx') or {};r=hyperx_audit.card_readiness(database,p['id'])
+            sheet.append([p['name'],p['search_code'],'Готова' if r['verdict']=='export_ready' else 'Не готова',ev.get('model_name',''),ev.get('configuration_relation','unverified'),r['manual_status'],r['confirmed_specs'],'; '.join(hyperx_presentation.GAPS[g] for g in r['gaps'])])
+            for rel in ev.get('identity_relations',[]):variants.append([p['name'],rel['type'],rel['value'],rel.get('regional_suffix',''),str(rel.get('options',{})),'Подтверждён' if rel.get('accepted') else 'Кандидат',rel.get('url','')])
+            for f in ev.get('rejected_specs',[]):rejected.append([p['name'],f['section'],f['raw_label'],f['value'],f['reason'],f['url']])
+            for d in ev.get('manuals',[]):manuals.append([p['name'],d['type'],d['title'],d['url'],'Проверена' if d['verified'] else 'Не проверена'])
+            for photo in jobs.get_photo_candidates(database,p['id']):photo_audit.append([p['name'],photo['kind'],photo['url'],bool(photo['selected']),'Подтверждена' if photo['asset_key'] in ev.get('exact_photo_assets',[]) else 'Кандидат',photo['excluded_reason']])
     output=BytesIO(); book.save(output); book.close(); return output.getvalue()
