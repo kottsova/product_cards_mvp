@@ -11,7 +11,7 @@ from .lg_documents import BinarySafeSession, document_bytes, assess_document, do
 from .published_page import published_links
 from bs4 import BeautifulSoup
 from ..xiaomi_identity import model_name, key, requested_configuration, region
-from ..xiaomi_page import parse_page
+from ..xiaomi_page import parse_page, model_gallery
 HOSTS = ('mi.com', 'appmifile.com', 'mi-fds.com', 'fds.api.xiaomi.com')
 
 def official(url):
@@ -104,7 +104,9 @@ class XiaomiAdapter:
                         parsed, evidence = parse_page(z[0],z[1],article,name,category)
                         if evidence['identity']['model_relation']=='model_confirmed':
                             doc, ev = parsed, evidence; ev['pdp_url']=p[1]
-                # Published PDP images remain candidates until their appearance relation is proven.
+                gallery,relations=model_gallery(p[0],p[1],wanted)
+                doc.photo_candidates.extend(gallery);ev['model_gallery_candidates']=relations
+                # Other diagrams/lifestyle/navigation remain candidates, not gallery by proximity.
                 soup=BeautifulSoup(p[0],'html.parser')
                 for img in soup.select('img.xm-img')[:80]:
                     image=img.get('src') or img.get('data-src') or ''
@@ -147,6 +149,7 @@ class XiaomiAdapter:
         return doc
 
     def find_documents(self, doc, article):
+        self.deadline=min(self.deadline,self.clock()+12)
         ev=self.reports[article.upper()];wanted=ev['identity']['model'];documents=[];technical=False;seen=set()
         for root in ('https://www.mi.com/ru/support/user-guide/','https://www.mi.com/uk/support/user-guide/'):
             p=self.fetch(root,query=wanted,provider='official_support',source_type='manual_inventory',cache=True)
@@ -160,7 +163,7 @@ class XiaomiAdapter:
                 if not any(h==a or h.endswith('.'+a) for a in HOSTS):continue
                 if self.clock()>=self.deadline:technical=True;continue
                 try:
-                    r=self.http.get(u,timeout=15);raw=document_bytes(r)
+                    r=self.http.get(u,timeout=min(8,max(1,self.deadline-self.clock())));raw=document_bytes(r)
                     if not r.ok or r.marker or r.truncated or not raw.startswith(b'%PDF-'):technical=True;continue
                     import pymupdf
                     with pymupdf.open(stream=raw,filetype='pdf') as pdf:

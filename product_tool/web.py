@@ -432,7 +432,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             for photo in photos:photo['identity_confirmed']=razer_pipeline.photo_verified(photo,razer_evidence)
             for document in documents:document['identity_confirmed']=razer_pipeline.document_verified(document,razer_evidence)
         if xiaomi_evidence is not None:
-            for photo in photos:photo['identity_confirmed']=xiaomi_pipeline.photo_verified(photo,xiaomi_evidence)
+            for photo in photos:
+                photo['identity_confirmed']=xiaomi_pipeline.photo_verified(photo,xiaomi_evidence)
+                photo['identity_note']='Фото официальной модели; цвет поставщика не подтверждается.' if photo['identity_confirmed'] else 'Кандидат: принадлежность к product gallery не подтверждена.'
             for document in documents:document['identity_confirmed']=xiaomi_pipeline.document_verified(document,xiaomi_evidence)
         events = []
         for event in jobs.list_events(database, latest["id"]) if latest else []:

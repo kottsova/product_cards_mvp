@@ -5,12 +5,12 @@
 {% if xiaomi_evidence %}
 <section class="section" id="xiaomi-readiness"><h2>Модель и конфигурация Xiaomi</h2>
 <p>{{ xiaomi_evidence.identity.model }}. Готовность: <strong>{{ 'Готова' if xiaomi_card.verdict == 'export_ready' else 'Не готова' }}</strong>. Инструкция: {{ xiaomi_card.manual_status }}.</p>
-<p>Модель: {{ 'Подтверждена' if xiaomi_card.exact_identity else 'Не подтверждена' }}. Коммерческий SKU: {{ xiaomi_evidence.identity.retail_sku or 'Не подтверждён' }}. Конфигурация: {{ 'Подтверждена' if xiaomi_evidence.identity.configuration_relation == 'configuration_confirmed' else 'Частично подтверждена' }}.</p>
+<p>Модель: {{ 'Подтверждена' if xiaomi_card.exact_identity else 'Не подтверждена' }}. Готовность проверяется для модели. Данные поставщика не подтверждают коммерческий SKU Xiaomi.</p>
 <p>{% for gap in xiaomi_card.gaps %}{{ xiaomi_gaps.get(gap,gap) }}{% if not loop.last %}; {% endif %}{% endfor %}</p>
-<h3>Запрошенная конфигурация</h3>{% for k,v in xiaomi_evidence.requested_configuration.items() %}<p>{{ {'RAM':'Оперативная память','storage':'Накопитель','color':'Цвет','region':'Рынок','bundle':'Комплект'}.get(k,k) }}: {{ v }}</p>{% endfor %}
+<h3>Конфигурация из входного файла</h3><p>Эти данные сохранены отдельно от официальных характеристик модели и не блокируют её готовность.</p>{% for k,v in xiaomi_card.input_configuration.items() %}<p>{{ {'RAM':'Оперативная память','storage':'Накопитель','color':'Цвет','region':'Региональная маркировка','supplier_part_number':'Артикул поставщика','bundle':'Комплект поставщика'}.get(k,k) }}: {{ v }} — данные входного файла</p>{% endfor %}
 <h3>Номера моделей устройств</h3>{% for r in xiaomi_evidence.model_numbers %}<p>{{ r.value }} — <a href="{{ r.source_url }}">официальный источник</a>. Связь с коммерческим SKU не подтверждена.</p>{% endfor %}
 <details><summary>Характеристики-кандидаты</summary><table><thead><tr><th>Раздел</th><th>Исходное поле</th><th>Значение</th><th>Причина</th></tr></thead><tbody>{% for f in xiaomi_evidence.rejected_specs %}<tr><td>{{ f.section }}</td><td>{{ f.name }}</td><td>{{ f.value }}</td><td>Область конфигурации или рынка требует отдельного подтверждения.</td></tr>{% endfor %}</tbody></table></details>
-<h3>Фото-кандидаты</h3><p>Изображения официальной страницы требуют подтверждения цвета, внешнего вида и комплекта.</p>
+<h3>Фото модели</h3><p>Официальные gallery-фото относятся к точной модели. Совпадение с цветом поставщика не заявляется. Диаграммы, логотипы и непроверенные изображения остаются кандидатами.</p>
 <h3>Документы по типам</h3>{% for d in xiaomi_evidence.manuals %}<p><a href="{{ d.url }}">{{ d.label or 'Документ' }}</a> — {{ 'Инструкция / краткое руководство' if d.assessment and d.assessment.accepted else 'Безопасность, гарантия или непроверенный документ' }}.</p>{% endfor %}
 </section>
 {% endif %}
@@ -57,10 +57,10 @@
 {% if photos %}<p>Отметка выбора сохраняет фото для работы с карточкой. Она не подтверждает его связь с артикулом; кандидаты показаны отдельно.</p>
 <form action="/products/{{ product.id }}/photos" method="post">
 <div class="form-actions"><button class="button" name="action" value="official">Выбрать фото официальных страниц</button><button class="button" name="action" value="none">Снять выбор</button>{% for key,label in [('lg_kz','LG Казахстан'),('lg_ru','LG Россия'),('sulpak','Sulpak')] %}<button class="button" name="action" value="source:{{ key }}">Выбрать товарные фото {{ label }}</button>{% endfor %}</div>
-<h3>Фото с подтверждённой связью с товаром</h3>
+<h3>{{ 'Подтверждённые фото модели' if xiaomi_card else 'Фото с подтверждённой связью с товаром' }}</h3>
 <div class="photo-grid">{% for p in photos if p.kind != 'excluded' and p.identity_confirmed %}{% include "photo_tile.html" %}{% endfor %}</div>
 {% if photos|rejectattr('identity_confirmed')|list %}
-<h3>Фото-кандидаты: вариант не подтверждён</h3>
+<h3>{{ 'Фото-кандидаты: product gallery не подтверждена' if xiaomi_card else 'Фото-кандидаты: вариант не подтверждён' }}</h3>
 <div class="photo-grid">{% for p in photos if p.kind != 'excluded' and not p.identity_confirmed %}{% include "photo_tile.html" %}{% endfor %}</div>
 {% endif %}
 <button class="button primary" name="action" value="exact">Сохранить выбор</button><details><summary>Исключённые изображения</summary><ul>{% for p in photos if p.kind == 'excluded' %}<li>{{ p.site_name }} — {{ p.excluded_reason }} — <a href="{{ p.url }}" target="_blank" rel="noopener">URL</a></li>{% endfor %}</ul></details></form>

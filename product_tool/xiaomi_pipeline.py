@@ -9,7 +9,7 @@ from .adapters.common import utc_now
 GAPS={'model_missing':'Точная модель не подтверждена','specifications_missing':'Недостаточно официальных характеристик','gallery_missing':'Нет фото с подтверждённым внешним видом','configuration_missing':'Конфигурация подтверждена частично','conflicts':'Конфликт характеристик','manual_unverified':'Инструкция не проверена'}
 
 def photo_verified(photo, ev):
-    return bool(ev and photo['asset_key'] in ev.get('exact_photo_assets',[]) and photo['kind']=='product_gallery')
+    return bool(ev and photo['asset_key'] in ev.get('model_gallery_assets',ev.get('exact_photo_assets',[])) and photo['kind']=='product_gallery')
 
 def document_verified(doc, ev):
     return bool(ev and doc['direct_url'] in ev.get('verified_documents',[]))
@@ -21,11 +21,10 @@ def card_readiness(database, product_id):
     if identity.get('model_relation')!='model_confirmed':gaps.append('model_missing')
     if len(facts)<3:gaps.append('specifications_missing')
     if not any(p['selected'] and photo_verified(p,ev) for p in jobs.get_photo_candidates(database,product_id)):gaps.append('gallery_missing')
-    if identity.get('configuration_relation')!='configuration_confirmed':gaps.append('configuration_missing')
     if conflicts:gaps.append('conflicts')
     if ev.get('manual_status','Не проверена')=='Не проверена':gaps.append('manual_unverified')
     blocking=[g for g in gaps if g!='manual_unverified']
-    return {'verdict':'not_ready' if blocking else 'export_ready','blocking_gaps':blocking,'advisory_gaps':[g for g in gaps if g not in blocking],'gaps':gaps,'confirmed_specs':len(facts),'identity':identity,'exact_identity':identity.get('model_relation')=='model_confirmed','conflicts':conflicts,'manual_status':ev.get('manual_status','Не проверена')}
+    return {'verdict':'not_ready' if blocking else 'export_ready','blocking_gaps':blocking,'advisory_gaps':[g for g in gaps if g not in blocking],'gaps':gaps,'confirmed_specs':len(facts),'identity':identity,'readiness_scope':'model','input_configuration':ev.get('input_configuration',ev.get('requested_configuration',{})),'exact_identity':identity.get('model_relation')=='model_confirmed','conflicts':conflicts,'manual_status':ev.get('manual_status','Не проверена')}
 
 def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns_adapter_factory=None,clock=time.monotonic):
     discovery_trace.initialize(database);trace=lambda e:discovery_trace.record(database,job_id,product_id,{'timestamp':utc_now(),**e})
@@ -37,16 +36,27 @@ def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns
         for extra in adapter.extra_sources:jobs.save_source_document(database,product_id,extra,update_description=False,update_attributes=3 in stages,update_photos=False)
         if 6 in stages:jobs.save_documents(database,product_id,doc.source_key,adapter.find_documents(doc,article))
     ev=adapter.reports.get(article,{})
+    import json
+    ev.setdefault('input_configuration',dict(ev.get('requested_configuration',{})))
+    if ev.get('identity',{}).get('identifier_kind')=='opaque_code':ev['input_configuration']['supplier_part_number']=product['search_code']
+    ev['input_configuration_original_values']=json.loads(product.get('original_values_json') or '[]')
     if 4 in stages:
         jobs.set_photo_selection(database,product_id,[],mode='none')
-        measurements=[]
-        for photo in jobs.get_photo_candidates(database,product_id)[:2]:
+        measurements=[];verified=[]
+        eligible={x['asset_key'] for x in ev.get('model_gallery_candidates',[]) if x.get('model_relation')=='model_confirmed'}|set(ev.get('exact_photo_assets',[]))
+        for photo in [p for p in jobs.get_photo_candidates(database,product_id) if p['kind']=='product_gallery' and p['asset_key'] in eligible][:4]:
             try:
                 measured=photo_metadata.inspect_saved_photo(photo['url'],photo['source_key'],Path(database).parent/'xiaomi_image_fetch_log.json')
+                if measured['width']<400 or measured['height']<300 or not 0.2<=measured['width']/measured['height']<=5:raise ValueError('Logo/icon or insufficient product image dimensions')
                 jobs.save_photo_metadata(database,product_id,photo['id'],photo['url'],width=measured['width'],height=measured['height'],size_bytes=measured['size_bytes'],image_format=measured['format'])
-                measurements.append({'url':photo['url'],'accepted_identity':False,**measured})
+                verified.append(photo['asset_key']);measurements.append({'url':photo['url'],'accepted_identity':True,'identity_scope':'model','supplier_color_relation':'unproven',**measured})
             except ValueError as exc:measurements.append({'url':photo['url'],'error':str(exc)})
         ev['image_measurements']=measurements
+        ev['model_gallery_assets']=verified
+        for relation in ev.get('model_gallery_candidates',[]):
+            relation['accepted']=relation['asset_key'] in verified
+            if relation['accepted']:relation['reason']='Official exact-model gallery; bytes verified; no supplier color claim'
+        jobs.set_photo_selection(database,product_id,verified)
     card_evidence.save(database,product_id,'xiaomi',ev)
     if 3 in stages:jobs.resolve_product(database,product_id)
     r=card_readiness(database,product_id)

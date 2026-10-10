@@ -7,7 +7,7 @@ from unittest.mock import patch
 from product_tool.adapters.published_page import embedded_objects,published_links,two_column_specs
 from product_tool.adapters.xiaomi import XiaomiAdapter,manual_assessment
 from product_tool.adapters.common import SourceDocument,RawAttribute,PhotoCandidate
-from product_tool.xiaomi_page import parse_page,charging_fields
+from product_tool.xiaomi_page import parse_page,charging_fields,model_gallery
 from product_tool.xiaomi_identity import model_matches,region_matches,fact_scope
 from product_tool.normalization import normalize_facts
 from product_tool import jobs,card_evidence,worker,readiness
@@ -37,13 +37,37 @@ class Stage74Tests(unittest.TestCase):
     def test_color_and_color_dependent_dimensions_require_relation(self):
         for color in ['Black','White']:
             d,e=parsed(row('Color','Black White')+row('Dimensions','Black 191g Liquid Silver 192g'),'color='+color+';region=Global');self.assertFalse(d.attributes);self.assertEqual(len(e['rejected_specs']),2)
-    def test_global_cn_and_eea_never_transfer_nfc_bands_charger(self):
+    def test_other_regions_are_valid_model_sources_without_proven_variation(self):
         body=row('NFC','Yes')+row('Network & Connectivity','LTE B20')+row('Package Contents','Adapter included')+row('Processor','Snapdragon')
         for market in ['CN','EEA','de']:
-            d,e=parsed(body,'region='+market);self.assertEqual([x.name for x in d.attributes],['Processor']);self.assertEqual(len(e['rejected_specs']),3)
+            d,e=parsed(body,'region='+market);self.assertEqual(len(d.attributes),4);self.assertFalse(e['rejected_specs'])
         self.assertFalse(region_matches('EEA','global'));self.assertFalse(region_matches('EEA','de'))
     def test_explicit_vary_by_markets_is_candidate(self):
         d,e=parsed(row('Broadcasting system','DVB-T2 *Vary by markets'));self.assertFalse(d.attributes)
+        for label,value in [('Network & Connectivity','eSIM availability may vary depending on country/region and carrier.'),('Package Contents','Adapter *Contents may differ across different regions.'),('Wireless Networks','Wi-Fi 7 capability may vary based on regional availability.')]:
+            d,e=parsed(row(label,value));self.assertFalse(d.attributes);self.assertEqual(e['raw_specs'][0]['scope'],'region')
+    def test_sim_and_wifi_variation_does_not_discard_common_bluetooth(self):
+        value='Dual SIM\n*eSIM may vary depending on country/region.\nNetwork bands\n5G n1/2/3\nWireless Networks\nWi-Fi 7 may vary based on regional availability.\nBluetooth 6.0\nSupports SBC/AAC'
+        d,e=parsed(row('Network & Connectivity',value),'region=EEA');self.assertEqual([a.name for a in d.attributes],['Network bands','Bluetooth','Audio codecs']);self.assertEqual([a['name'] for a in e['rejected_specs']],['SIM','Wireless Networks']);self.assertEqual(e['original_raw_specs'][0]['value'],value)
+    def test_missing_region_and_supplier_part_do_not_restrict_model_specs(self):
+        d,e=parse_page(page(row('NFC','Yes')+row('Processor','Chip')),'https://www.mi.com/uk/product/xiaomi-15/specs/','SUPPLIER-123','Xiaomi 15 [RAM=16GB;color=White]')
+        self.assertEqual(len(d.attributes),2);self.assertEqual(e['input_configuration']['supplier_part_number'],'SUPPLIER-123');self.assertIsNone(e['identity']['retail_sku'])
+    def test_gallery_scope_keeps_model_and_official_color_separate(self):
+        html='<main><div class="section"><img src="https://i02.appmifile.com/hero.jpg" alt="Xiaomi 15"><img src="https://i02.appmifile.com/logo.png" alt="Xiaomi 15"></div><div class="product-gallery" data-color="White"><img src="https://i02.appmifile.com/white.jpg" alt="Xiaomi 15 White"></div><div><img src="https://i02.appmifile.com/chart.jpg" alt="Xiaomi 15"></div></main>'
+        photos,ev=model_gallery(html,'https://www.mi.com/uk/product/xiaomi-15/','Xiaomi 15');self.assertEqual(len(photos),2);self.assertEqual(ev[1]['official_color'],'White');self.assertTrue(all(x['supplier_color_relation']=='unproven' for x in ev));self.assertFalse(any('chart' in x.url or 'logo' in x.url for x in photos))
+    def test_image_content_type_header_is_case_insensitive(self):
+        from PIL import Image,ImageDraw
+        from types import SimpleNamespace
+        from product_tool.photo_metadata import inspect_saved_photo
+        image=Image.new('RGB',(800,600),'white');ImageDraw.Draw(image).rectangle((100,100,500,400),fill='black');stream=BytesIO();image.save(stream,format='PNG')
+        response=SimpleNamespace(ok=True,marker='',truncated=False,text=stream.getvalue().decode('latin1'),headers={'content-type':'image/png'})
+        with tempfile.TemporaryDirectory() as temp,patch('product_tool.photo_metadata.PolicyAwareSession') as session:
+            session.return_value.get.return_value=response
+            result=inspect_saved_photo('https://i02.appmifile.com/photo.png','xiaomi_model',Path(temp)/'log.json');self.assertEqual(result['content_type'],'image/png');self.assertEqual(result['width'],800)
+            response.headers={'Content-Type':'application/octet-stream'}
+            result=inspect_saved_photo('https://i02.appmifile.com/photo.jpg','xiaomi_model',Path(temp)/'log.json');self.assertEqual(result['format'],'PNG');self.assertEqual(result['effective_content_type'],'image/png');self.assertEqual(result['content_type'],'application/octet-stream')
+            response.text='<html>Not an image</html>'
+            with self.assertRaises(ValueError):inspect_saved_photo('https://i02.appmifile.com/photo.jpg','xiaomi_model',Path(temp)/'log.json')
     def test_display_color_count_is_not_retail_color(self):
         d,e=parsed(row('Colours','16.7 million')+row('Color gamut','DCI-P3 94%'));self.assertEqual(len(d.attributes),2)
     def test_opaque_number_not_promoted_to_sku(self):
@@ -92,14 +116,14 @@ class Stage74Tests(unittest.TestCase):
                 extra_sources=[]
                 def __init__(self,**kwargs):pass
                 def find_source(self,article,**kw):
-                    self.reports={article:{'identity':{'model':'Xiaomi 15','model_relation':'model_confirmed','configuration_relation':'configuration_confirmed'},'exact_photo_assets':['render'],'manual_status':'Проверена, не найдена'}}
+                    self.reports={article:{'identity':{'model':'Xiaomi 15','model_relation':'model_confirmed','configuration_relation':'partial','retail_sku':None},'input_configuration':{'RAM':'16GB','color':'White','supplier_part_number':'SUPPLIER-123'},'exact_photo_assets':['render'],'manual_status':'Не проверена'}}
                     return SourceDocument('xiaomi_model','Xiaomi Official','https://www.mi.com/global/product/test/specs/',found_model='Xiaomi 15',match_level='model_confirmed',attributes=[RawAttribute('Processor','Chip'),RawAttribute('Display','AMOLED'),RawAttribute('Battery capacity','5000mAh')],photo_candidates=[PhotoCandidate('https://i02.appmifile.com/render.jpg','render',kind='product_gallery')])
                 def find_documents(self,*args):return []
             # Test selection evidence is explicitly controlled; no real requests.
             with patch('product_tool.xiaomi_pipeline.XiaomiAdapter',Adapter),patch('product_tool.xiaomi_pipeline.photo_metadata.inspect_saved_photo',return_value={'width':800,'height':800,'size_bytes':2000,'format':'PNG'}),patch('product_tool.xiaomi_pipeline.DnsAdapter') as dealer:
                 dealer.return_value.find_source.return_value=SourceDocument('dns','DNS','',error='Not found')
                 jobs.enqueue(db,1,[1,3,4,6]);worker.run_once(db)
-            self.assertEqual(jobs.list_jobs(db,1)[0]['status'],'done');self.assertNotIn('manual_unverified',card_readiness(db,1)['blocking_gaps'])
+            self.assertEqual(jobs.list_jobs(db,1)[0]['status'],'done');self.assertEqual(card_readiness(db,1)['verdict'],'export_ready');self.assertNotIn('manual_unverified',card_readiness(db,1)['blocking_gaps']);self.assertNotIn('configuration_missing',card_readiness(db,1)['blocking_gaps']);self.assertEqual(card_readiness(db,1)['input_configuration']['supplier_part_number'],'SUPPLIER-123')
     def test_ui_excel_show_candidates_and_russian_groups(self):
         from fastapi.testclient import TestClient
         from product_tool.web import create_app
@@ -121,5 +145,5 @@ class Stage74Tests(unittest.TestCase):
                     jobs.save_source_document(db,r['id'],doc)
                 jobs.set_photo_selection(db,r['id'],[],mode='none');card_evidence.save(db,r['id'],'xiaomi',r['evidence']);jobs.resolve_product(db,r['id'])
             with TestClient(create_app(path,start_worker=False)) as client:
-                response=client.get('/products/1');self.assertEqual(response.status_code,200);self.assertIn('Модель и конфигурация Xiaomi',response.text);self.assertIn('Аккумулятор',response.text);self.assertIn('Коммерческий SKU',response.text)
-            book=load_workbook(BytesIO(export_batch(path/'batches.sqlite3','xm74')));self.assertIn('Xiaomi конфигурация',book.sheetnames);self.assertGreater(book['Xiaomi фото-кандидаты'].max_row,1);self.assertEqual(book['Фотографии'].max_row,1);book.close()
+                response=client.get('/products/1');self.assertEqual(response.status_code,200);self.assertIn('Модель и конфигурация Xiaomi',response.text);self.assertIn('Аккумулятор',response.text);self.assertIn('Конфигурация из входного файла',response.text);self.assertIn('не блокируют её готовность',response.text)
+            book=load_workbook(BytesIO(export_batch(path/'batches.sqlite3','xm74')));self.assertIn('Xiaomi конфигурация',book.sheetnames);self.assertGreater(book['Xiaomi фото-кандидаты'].max_row,1);self.assertEqual(book['Фотографии'].max_row,1);self.assertEqual(book['Фотографии']['E1'].value,'Область подтверждения');book.close()

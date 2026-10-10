@@ -111,8 +111,9 @@ def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying
     if response.truncated:
         raise ValueError("Image exceeds the 8 MB measurement limit.")
     data = response.text.encode("latin-1")
-    content_type=response.headers.get('Content-Type','').split(';',1)[0].strip().lower()
-    if content_type not in {'image/png','image/jpeg','image/webp'}:
+    content_type=next((v for k,v in response.headers.items() if k.casefold()=='content-type'),'').split(';',1)[0].strip().lower()
+    binary_image=content_type=='application/octet-stream' and source_key in {'hyperx','xiaomi_model'}
+    if content_type not in {'image/png','image/jpeg','image/webp'} and not binary_image:
         raise ValueError('Image response has an unsupported content-type.')
     dimensions = image_dimensions(data)
     if not dimensions:
@@ -134,7 +135,8 @@ def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying
         raise ValueError('Image bytes failed decoding verification.') from exc
     if width<64 or height<64:
         raise ValueError('Image is too small to be a product render.')
-    if {'PNG':'image/png','JPG':'image/jpeg','WEBP':'image/webp'}[image_format]!=content_type:
+    effective_type={'PNG':'image/png','JPG':'image/jpeg','WEBP':'image/webp'}[image_format]
+    if effective_type!=content_type and not binary_image:
         raise ValueError('Image format/content-type mismatch.')
     import hashlib
-    return {"width": width, "height": height, "size_bytes": len(data), "format": image_format, "content_type":content_type,"sha256":hashlib.sha256(data).hexdigest()}
+    return {"width": width, "height": height, "size_bytes": len(data), "format": image_format, "content_type":content_type,"effective_content_type":effective_type,"sha256":hashlib.sha256(data).hexdigest()}

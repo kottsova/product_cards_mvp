@@ -29,12 +29,13 @@ def region_matches(requested, source):
     # EEA is not interchangeable with Global or one unspecified EU market.
     return requested.casefold() == source.casefold()
 
-def fact_scope(label):
+def fact_scope(label, value='', section=''):
     text = label.casefold()
-    if text in {'display colours', 'display colors', 'color gamut', 'color depth'}:
+    if text in {'display colours', 'display colors', 'color gamut', 'color depth','storage temperature'}:
         return 'model'
-    if re.search(r'storage|\bram\b|memory|colour|color|package|contents|bundle|edition|sku|part number|комплект|цвет|памят', text):
+    if re.search(r'storage|\bram\b|memory|colour|color|bundle|edition|sku|part number|цвет|памят', text):
         return 'configuration'
-    if re.search(r'\bnfc\b|esim|network|connectivity|band|operating system|software|charger|wireless networks|прошив|диапазон|сим', text):
+    # A field name is not evidence that this model differs between markets.
+    if re.search(r'\b(?:var(?:y|ies|iation)|differ(?:s|ent)?)\b[^\n.]{0,100}\b(?:regions?|regional|countries|country|markets?)\b|depends? on (?:the )?(?:region|market)|region[- ]dependent|only (?:available|supported) in', value, re.I):
         return 'region'
     return 'model'

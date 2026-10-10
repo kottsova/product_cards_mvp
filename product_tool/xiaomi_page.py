@@ -7,6 +7,26 @@ from .adapters.common import SourceDocument, RawAttribute, PhotoCandidate
 from .adapters.published_page import two_column_specs
 from .xiaomi_identity import model_name, model_matches, requested_configuration, region, region_matches, fact_scope
 
+def model_gallery(html, url, wanted):
+    """Published product gallery/hero only; model photos never assert supplier color."""
+    import hashlib
+    soup=BeautifulSoup(html,'html.parser');main=soup.select_one('main')
+    if not main:return [],[]
+    hero=main.select_one('.section');nodes=list(hero.select('img')) if hero else []
+    nodes+=main.select('.product-gallery img, [data-gallery] img, .product-render img')
+    photos=[];relations=[];seen=set()
+    for img in nodes:
+        image=img.get('src') or img.get('data-src') or '';host=urlsplit(image).hostname or '';alt=img.get('alt','').strip()
+        colored=img if img.has_attr('data-color') else img.find_parent(attrs={'data-color':True})
+        color=colored.get('data-color','') if colored else ''
+        if urlsplit(image).scheme!='https' or not host.endswith('.appmifile.com') or image.lower().endswith('.svg') or image in seen:continue
+        if alt and not model_matches(wanted,re.sub(re.escape(color),'',alt,flags=re.I).strip() if color else alt):continue
+        if re.search(r'logo|icon|title|slogan|solgon|name_\d',urlsplit(image).path,re.I):continue
+        seen.add(image);asset=hashlib.sha256(image.encode()).hexdigest()[:24]
+        photos.append(PhotoCandidate(image,asset,kind='product_gallery'))
+        relations.append({'url':image,'asset_key':asset,'source_url':url,'role':'official_model_hero' if hero and hero in img.parents else 'official_product_gallery','model_relation':'model_confirmed','official_color':color,'supplier_color_relation':'unproven','accepted':False,'reason':'Exact model PDP gallery; byte verification pending, supplier appearance not asserted'})
+    return photos,relations
+
 def charging_fields(attr):
     """Split only explicitly printed capacities/rates; never infer mode from a wattage."""
     fields=[]
@@ -22,6 +42,20 @@ def charging_fields(attr):
         else:label=''
         if label:fields.append(RawAttribute(label,line,'Питание и аккумулятор'))
     return fields
+
+def connectivity_fields(attr):
+    """Keep SIM/Wi-Fi caveats with their component, not unrelated Bluetooth/codecs."""
+    if attr.name!='Network & Connectivity':return []
+    groups=[];label='SIM';lines=[]
+    for line in attr.value.splitlines():
+        next_label='Network bands' if re.fullmatch(r'Network bands:?',line.strip(),re.I) else 'Wireless Networks' if line.strip()=='Wireless Networks' else 'Bluetooth' if re.match(r'^Bluetooth\s+\d',line.strip(),re.I) else 'Audio codecs' if re.match(r'^Supports SBC',line.strip()) else ''
+        if next_label:
+            if lines:groups.append(RawAttribute(label,'\n'.join(lines),attr.section))
+            label=next_label;lines=[]
+            if next_label in {'Network bands','Wireless Networks'}:continue
+        lines.append(line)
+    if lines:groups.append(RawAttribute(label,'\n'.join(lines),attr.section))
+    return groups if len(groups)>1 else []
 
 def parse_page(html, url, article, name, category=''):
     soup = BeautifulSoup(html, 'html.parser')
@@ -41,10 +75,12 @@ def parse_page(html, url, article, name, category=''):
     if '/specs' not in url:
         return doc, ev
     raw = two_column_specs(html, text_selector='span.xm-text[data-key^="spec_"]')
+    ev['original_raw_specs']=[asdict(a) for a in raw]
+    raw=[a for parent in raw for a in (connectivity_fields(parent) or [parent])]
     repeated={x.name for x in raw if len({a.section for a in raw if a.name==x.name})>1}
     for attr in raw:
         if attr.name == 'Colours': attr = RawAttribute('Display colours', attr.value, attr.section)
-        row = asdict(attr); scope = 'configuration' if 'package' in attr.section.casefold() else fact_scope(attr.name); row['scope'] = scope
+        row = asdict(attr); scope = fact_scope(attr.name, attr.value, attr.section); row['scope'] = scope
         ev['raw_specs'].append(row)
         if re.fullmatch(r'(?:Product )?Model(?: Number)?', attr.name, re.I) and re.fullmatch(r'[A-Z0-9-]+', attr.value.strip()):
             ev['model_numbers'].append({'kind': 'hardware_model_number', 'value': attr.value, 'model': wanted, 'source_url': url, 'retail_sku_relation': 'unproven'})
@@ -52,7 +88,7 @@ def parse_page(html, url, article, name, category=''):
             ev['model_numbers'].append({'kind':'hardware_model_number','component':'station','value':attr.value,'model':wanted,'source_url':url,'retail_sku_relation':'unproven'})
         reason = ''
         if scope == 'configuration': reason = 'Family options/package inventory do not prove requested retail configuration'
-        elif scope == 'region' and not region_matches(opts.get('region', ''), source_region): reason = 'Source market does not prove requested market'
+        elif scope == 'region': reason = 'Official value explicitly varies by market; model source does not prove a local supplier variant'
         elif re.search(r'\bvary by markets\b', attr.value, re.I): reason = 'Explicit market-dependent value needs a local configuration relation'
         elif re.search(r'\bdimensions\b|\bweight\b', attr.name, re.I) and re.search(r'Black|White|Green|Silver|Leather|colour|color', attr.value, re.I): reason = 'Dimensions/weight vary by appearance; exact color relation required'
         elif re.search(r'station|dock|base', attr.name+' '+attr.section, re.I) and opts.get('bundle'): reason = 'Station/base revision requires exact bundle evidence'
@@ -66,6 +102,9 @@ def parse_page(html, url, article, name, category=''):
             if derived:row['derived_fields']=[asdict(x) for x in derived]
             ev['accepted_specs'].append({**row, 'section': section})
     ev['identity']['configuration_relation'] = 'configuration_confirmed' if ev['identity']['identifier_kind']=='marketing_model' and set(opts) <= {'region'} and region_matches(opts.get('region', ''), source_region) else 'partial'
+    ev['identity']['readiness_scope']='model'
+    ev['input_configuration']=dict(opts)
+    if ev['identity']['identifier_kind']=='opaque_code':ev['input_configuration']['supplier_part_number']=article
     # Image URLs on a specs page are model-bound candidates; color/layout/bundle still needs evidence.
     for img in soup.select('img'):
         image = img.get('data-src') or img.get('src') or ''

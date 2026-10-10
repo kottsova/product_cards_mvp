@@ -67,7 +67,7 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
         xm=[f for f in official if f['source_key'].startswith('xiaomi_')]
         if xm:
             from .xiaomi_identity import fact_scope
-            eligible=[f for f in xm if not pages.get(f['source_key'],{}).get('error') and ((f['source_key']=='xiaomi_model' and pages[f['source_key']].get('match_level')=='model_confirmed' and fact_scope(f.get('raw_name',name))=='model') or (f['source_key']=='xiaomi_region' and pages[f['source_key']].get('match_level')=='configuration_confirmed' and fact_scope(f.get('raw_name',name))=='region') or (f['source_key']=='xiaomi_configuration' and pages[f['source_key']].get('match_level')=='full_sku'))]
+            eligible=[f for f in xm if not pages.get(f['source_key'],{}).get('error') and ((f['source_key']=='xiaomi_model' and pages[f['source_key']].get('match_level')=='model_confirmed' and fact_scope(f.get('raw_name',name),f.get('raw_value',''),f.get('section',''))=='model') or (f['source_key']=='xiaomi_region' and pages[f['source_key']].get('match_level')=='configuration_confirmed' and fact_scope(f.get('raw_name',name),f.get('raw_value',''),f.get('section',''))!='configuration') or (f['source_key']=='xiaomi_configuration' and pages[f['source_key']].get('match_level')=='full_sku'))]
             if not eligible or _different(eligible):
                 results.append(ResolvedValue(name,'','','needs_review','Область модели/рынка/конфигурации Xiaomi не подтверждена.','',_different(eligible),False))
             else:
