@@ -161,6 +161,8 @@ def _qualifier(cleaned: str, base: str) -> str:
 def _section_scope(section: str) -> str:
     """Only component-specific LG headings change the fact's identity."""
     title = _cleaned(section)
+    if title in {'база / станция', 'omni station', 'all-in-one station'}:
+        return 'station'
     if re.search(r"сушильн|программ\w*\s+сушк", title):
         return "drying"
     if re.search(r"стиральн|программ\w*\s+стирк", title):

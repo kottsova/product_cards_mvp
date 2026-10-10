@@ -9,6 +9,7 @@ SUPPLIERS={"sulpak"}
 OFFICIAL={"lg","lg_kz","lg_ru","lg_global","hyperx","samsung","bosch_home","lenovo_support","lenovo_psref","jbl","apple","apple_model","playstation","playstation_model","playstation_hardware"}
 OFFICIAL.update({'xbox_model','xbox_configuration','xbox_hardware'})
 OFFICIAL.update({'razer_model','razer_configuration'})
+OFFICIAL.update({'xiaomi_model','xiaomi_region','xiaomi_configuration'})
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -62,6 +63,15 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
             else:
                 f=eligible[0];variant=f.get('raw_name') in scope['variant'];exact=variant and page.get('match_level')=='exact_variant'
                 results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if exact else 'model_confirmed_official','Официальный факт HyperX; модель и коммерческий вариант разделены.','hyperx',False,exact))
+            continue
+        xm=[f for f in official if f['source_key'].startswith('xiaomi_')]
+        if xm:
+            from .xiaomi_identity import fact_scope
+            eligible=[f for f in xm if not pages.get(f['source_key'],{}).get('error') and ((f['source_key']=='xiaomi_model' and pages[f['source_key']].get('match_level')=='model_confirmed' and fact_scope(f.get('raw_name',name))=='model') or (f['source_key']=='xiaomi_region' and pages[f['source_key']].get('match_level')=='configuration_confirmed' and fact_scope(f.get('raw_name',name))=='region') or (f['source_key']=='xiaomi_configuration' and pages[f['source_key']].get('match_level')=='full_sku'))]
+            if not eligible or _different(eligible):
+                results.append(ResolvedValue(name,'','','needs_review','Область модели/рынка/конфигурации Xiaomi не подтверждена.','',_different(eligible),False))
+            else:
+                f=eligible[0];full=f['source_key']=='xiaomi_configuration';results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if full else 'configuration_confirmed_official' if f['source_key']=='xiaomi_region' else 'model_confirmed_official','Официальный факт Xiaomi с проверенной областью модели или рынка.',f['source_key'],False,full))
             continue
         rz=[f for f in official if f['source_key'] in {'razer_model','razer_configuration'}]
         if rz:

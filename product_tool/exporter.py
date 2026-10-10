@@ -33,6 +33,8 @@ def _photo_cells(item: dict) -> list[str | int]:
 def export_batch(database: Path,batch_id: str)->bytes:
     batch=storage.get_batch(database,batch_id)
     if not batch: raise ValueError("Партия не найдена.")
+    from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
+    xiaomi_only=all(p['brand'].strip().casefold() in XIAOMI_BRANDS for p in batch['products'])
     book=Workbook(); book.remove(book.active); used=set(); groups={}
     for p in batch["products"]: groups.setdefault(p["category"] or "Категория не определена",[]).append(p)
     for category,products in groups.items():
@@ -44,7 +46,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
         for key in keys:
             if labels[key] in repeated:
                 labels[key] += f" ({key.replace('_', ' ')})"
-        _headers(sheet,["Строка","Название","Бренд","Полный артикул","Базовая модель",*[labels[k] for k in keys]])
+        _headers(sheet,["Строка","Название","Бренд","Поисковый идентификатор" if xiaomi_only else "Полный артикул","Модель" if xiaomi_only else "Базовая модель",*[labels[k] for k in keys]])
         for p in products:
             is_lg = lg_batch.is_lg(p)
             resolved = {r["normalized_name"]: value.get("display_value", "")
@@ -93,6 +95,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
     from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
     from . import xbox_pipeline
     from .xbox_identity import BRANDS as XBOX_BRANDS
+    from . import xiaomi_pipeline
+    from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
     from . import razer_pipeline
     for p in batch["products"]:
         source_pages = jobs.get_source_pages(database, p["id"])
@@ -102,6 +106,8 @@ def export_batch(database: Path,batch_id: str)->bytes:
         xb_evidence=card_evidence.load(database,p['id'],'xbox') if xb else None
         lg = lg_batch.is_lg(p)
         samsung = p["brand"].strip().upper() == "SAMSUNG"
+        xm = p['brand'].strip().casefold() in XIAOMI_BRANDS
+        xm_evidence=card_evidence.load(database,p['id'],'xiaomi') if xm else None
         rz = p['brand'].strip().casefold() == 'razer'
         rz_evidence=card_evidence.load(database,p['id'],'razer') if rz else None
         jbl = p["brand"].strip().upper() == "JBL"
@@ -111,7 +117,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
         saved_documents = (manual_status.effective_documents(database,p["id"],p["search_code"])
                            if lg else jobs.get_documents(database,p["id"]))
         for d in saved_documents:
-            tied = (d.get("identity_confirmed", False) if lg else
+            tied = (xiaomi_pipeline.document_verified(d,xm_evidence) if xm else d.get("identity_confirmed", False) if lg else
                     bosch_presentation.document_verified(d, card_evidence.load(database,p["id"],"bosch_home"), source_pages)
                     if p["brand"].strip().upper() == "BOSCH" else
                     samsung_readiness.document_verified(d, card_evidence.load(database,p["id"],"samsung_documents"))
@@ -134,7 +140,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
-            tied = razer_pipeline.photo_verified(item,rz_evidence) if rz else xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
+            tied = xiaomi_pipeline.photo_verified(item,xm_evidence) if xm else razer_pipeline.photo_verified(item,rz_evidence) if rz else xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
@@ -370,4 +376,30 @@ def export_batch(database: Path,batch_id: str)->bytes:
             for f in ev.get('rejected_specs',[]):rejected.append([p['name'],f['section'],f['raw_label'],f['value'],f['reason'],f['url']])
             for d in ev.get('manuals',[]):manuals.append([p['name'],d['type'],d['title'],d['url'],'Проверена' if d['verified'] else 'Не проверена'])
             for photo in jobs.get_photo_candidates(database,p['id']):photo_audit.append([p['name'],photo['kind'],photo['url'],bool(photo['selected']),'Подтверждена' if photo['asset_key'] in ev.get('exact_photo_assets',[]) else 'Кандидат',photo['excluded_reason']])
+    xiaomi_products=[p for p in batch['products'] if p['brand'].strip().casefold() in XIAOMI_BRANDS]
+    if xiaomi_products:
+        from .xiaomi_presentation import label
+        summary=book.create_sheet(_title('Xiaomi готовность',used));_headers(summary,['Товар','Поисковая модель','Модель','Рынок источника','Конфигурация','SKU','Инструкция','Характеристики','Готовность','Пробелы'])
+        config=book.create_sheet(_title('Xiaomi конфигурация',used));_headers(config,['Товар','Поле','Запрошено','Статус'])
+        raw=book.create_sheet(_title('Xiaomi кандидаты',used));_headers(raw,['Товар','Раздел','Исходное поле','Русское поле','Значение','Область','Причина'])
+        gallery=book.create_sheet(_title('Xiaomi фото-кандидаты',used));_headers(gallery,['Товар','URL','Статус','Ширина','Высота','Размер','Формат'])
+        model_codes=book.create_sheet(_title('Xiaomi номера моделей',used));_headers(model_codes,['Товар','Номер устройства','Тип','Источник','Связь с SKU'])
+        for p in xiaomi_products:
+            ev=card_evidence.load(database,p['id'],'xiaomi') or {};r=xiaomi_pipeline.card_readiness(database,p['id']);i=r['identity'];summary.append([p['name'],p['search_code'],'Подтверждена' if r['exact_identity'] else 'Не подтверждена',i.get('source_region',''),'Подтверждена' if i.get('configuration_relation')=='configuration_confirmed' else 'Частично подтверждена',i.get('retail_sku') or 'Не подтверждён',r['manual_status'],r['confirmed_specs'],'Готова' if r['verdict']=='export_ready' else 'Не готова','; '.join(xiaomi_pipeline.GAPS[g] for g in r['gaps'])])
+            for k,v in ev.get('requested_configuration',{}).items():config.append([p['name'],{'RAM':'Оперативная память','storage':'Накопитель','color':'Цвет','region':'Рынок','bundle':'Комплект'}.get(k,k),v,'Подтверждена' if i.get('configuration_relation')=='configuration_confirmed' else 'Частично подтверждена'])
+            for f in ev.get('rejected_specs',[]):raw.append([p['name'],f.get('section',''),f['name'],label(f['name']),f['value'],f['scope'],f['reason']])
+            for photo in jobs.get_photo_candidates(database,p['id']):gallery.append([p['name'],photo['url'],'Кандидат: внешний вид не подтверждён',*_photo_cells(photo)])
+            for c in ev.get('model_numbers',[]):model_codes.append([p['name'],c['value'],'Номер модели устройства',c['source_url'],'Не подтверждена'])
+            if not jobs.get_documents(database,p['id']):docs.append([p['name'],'','','','','','','','','Официальный support inventory','Xiaomi',r['manual_status']])
+        from math import ceil
+        for sheet in (summary,config,raw,gallery,model_codes):
+            for column in sheet.columns:
+                sheet.column_dimensions[column[0].column_letter].width=min(60,max(14,max(len(str(c.value or '')) for c in column)+2))
+            for row in sheet.iter_rows():
+                lines=1
+                for cell in row:
+                    cell.alignment=Alignment(wrap_text=True,vertical='top')
+                    width=sheet.column_dimensions[cell.column_letter].width or 14
+                    lines=max(lines,ceil(len(str(cell.value or ''))/max(8,width-2)))
+                sheet.row_dimensions[row[0].row].height=min(180,max(24,16*lines))
     output=BytesIO(); book.save(output); book.close(); return output.getvalue()

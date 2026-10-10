@@ -1,0 +1,37 @@
+{
+  "stage": 74,
+  "audit_verdict": "PASS",
+  "adapter_verdict": "Xiaomi adapter not ready",
+  "production_ready": false,
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 677.5760886999997,
+    "result": [
+      "Ran 1762 tests in 674.149s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  },
+  "live_models": 10,
+  "repeated_live_models": 5,
+  "live_specs": 172,
+  "false_confirmed_configuration": 0,
+  "duplicates": 0,
+  "frozen_sha256": "97007516b15fe88718a754b6c527da3646ebeb0f9dd911bbc727a315ed884c36",
+  "known_limitations": [
+    "No confirmed appearance gallery.",
+    "Four partial phone configurations; no bound dynamic regional retail payload.",
+    "X20 Max PDF size cap; A27Qi image-only guide classifier false-negative.",
+    "Incomplete actual vacuum runtime mode extraction.",
+    "Frozen category labels damaged at creation; category presentation QA limited."
+  ],
+  "runtime_files_excluded": [
+    "SQLite databases",
+    "Python caches",
+    "browser profiles",
+    "data/node_modules"
+  ],
+  "source_captures_are_public": true
+}

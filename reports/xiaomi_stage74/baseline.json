@@ -1,0 +1,85 @@
+{
+  "origin": "ordinary actual worker.run_once, no Xiaomi adapter/factory or seeded URL",
+  "input": {
+    "article": "Xiaomi 14",
+    "name": "Xiaomi 14 [RAM=12GB;storage=256GB;color=Black;region=Global]",
+    "brand": "Xiaomi",
+    "category": "Смартфоны",
+    "article_kind": "marketing model search identifier, not claimed retail SKU",
+    "model_number": "unknown before official relation",
+    "retail_sku": "unknown",
+    "generation": "14",
+    "official_pdp_observed_separately": "https://www.mi.com/global/product/xiaomi-14/"
+  },
+  "job": {
+    "id": "fe8dcf34a9534f5ea80ec3625e28ce03",
+    "product_id": 1,
+    "status": "error",
+    "current_stage": 6,
+    "message": "Нет проверенного дилерского URL для «Xiaomi Xiaomi 14 [RAM=12GB;storage=256GB;color=Black;region=Global]» (артикул XIAOMI 14). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+    "created_at": "2026-10-10T15:26:31+00:00",
+    "updated_at": "2026-10-10T15:26:31+00:00",
+    "started_at": "2026-10-10T15:26:31+00:00",
+    "finished_at": "2026-10-10T15:26:31+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "sources": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "dealer_url_needed",
+      "evidence": "Нет проверенного дилерского URL для «Xiaomi Xiaomi 14 [RAM=12GB;storage=256GB;color=Black;region=Global]» (артикул XIAOMI 14). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "fetched_at": "2026-10-10T15:26:31+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [],
+  "photos": [],
+  "documents": [],
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  },
+  "trace": []
+}

@@ -386,6 +386,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         from . import xbox_pipeline
         from .xbox_identity import BRANDS as XBOX_BRANDS
         xbox_evidence = card_evidence.load(database,product_id,'xbox') if product['brand'].strip().casefold() in XBOX_BRANDS else None
+        from . import xiaomi_pipeline
+        from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
+        xiaomi_evidence = card_evidence.load(database,product_id,'xiaomi') if product['brand'].strip().casefold() in XIAOMI_BRANDS else None
         from . import razer_pipeline
         razer_evidence = card_evidence.load(database,product_id,'razer') if product['brand'].strip().casefold() == 'razer' else None
         hyperx_evidence = card_evidence.load(database,product_id,'hyperx') if product['brand'].strip().casefold() == 'hyperx' else None
@@ -428,6 +431,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         if razer_evidence is not None:
             for photo in photos:photo['identity_confirmed']=razer_pipeline.photo_verified(photo,razer_evidence)
             for document in documents:document['identity_confirmed']=razer_pipeline.document_verified(document,razer_evidence)
+        if xiaomi_evidence is not None:
+            for photo in photos:photo['identity_confirmed']=xiaomi_pipeline.photo_verified(photo,xiaomi_evidence)
+            for document in documents:document['identity_confirmed']=xiaomi_pipeline.document_verified(document,xiaomi_evidence)
         events = []
         for event in jobs.list_events(database, latest["id"]) if latest else []:
             message = _display_access_stop(event["message"])
@@ -459,6 +465,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             playstation_card=playstation_pipeline.card_readiness(database,product_id) if playstation_evidence is not None else None,
             playstation_gaps=playstation_pipeline.GAPS,
             xbox_evidence=xbox_evidence,
+            xiaomi_evidence=xiaomi_evidence,
+            xiaomi_card=xiaomi_pipeline.card_readiness(database,product_id) if xiaomi_evidence is not None else None,
+            xiaomi_gaps=xiaomi_pipeline.GAPS,
             razer_evidence=razer_evidence,
             hyperx_evidence=hyperx_evidence,
             hyperx_card=__import__('product_tool.hyperx_audit',fromlist=['card_readiness']).card_readiness(database,product_id) if hyperx_evidence is not None else None,
@@ -486,7 +495,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
-            manual_status=hyperx_evidence.get('manual_status','Не проверена') if hyperx_evidence is not None else razer_evidence.get('manual_status','Не проверена') if razer_evidence is not None else xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_status=xiaomi_evidence.get('manual_status','Не проверена') if xiaomi_evidence is not None else hyperx_evidence.get('manual_status','Не проверена') if hyperx_evidence is not None else razer_evidence.get('manual_status','Не проверена') if razer_evidence is not None else xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
             manual_reason=manual_status.unchecked_reason(database, product_id, product["search_code"]) if lg_batch.is_lg(product) else "",
             manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,

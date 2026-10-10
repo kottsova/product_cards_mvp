@@ -154,6 +154,10 @@ def project_final_rows(rows: list[dict[str, Any]], *, exact_ru: bool = False) ->
 def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     rows = jobs.comparison_rows(path, product_id)
     product = jobs.get_product(path, product_id)
+    from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
+    if product and product['brand'].strip().casefold() in XIAOMI_BRANDS:
+        from .xiaomi_presentation import project
+        return project(rows)
     if product and product['brand'].strip().casefold()=='hyperx':
         from .hyperx_presentation import project
         return project(rows)

@@ -13,6 +13,7 @@ OFFICIAL = ("lg_ru", "lg_kz", "lg_global", "lg", "samsung", "bosch_home", "lenov
 SUPPORT = ("lg_ru_support", "lg_kz_support")
 OFFICIAL += ('xbox_model','xbox_configuration','xbox_hardware')
 OFFICIAL += ('razer_model','razer_configuration')
+OFFICIAL += ('xiaomi_model','xiaomi_region','xiaomi_configuration')
 
 
 def _clean_label(raw: str) -> str:
@@ -81,6 +82,8 @@ def _role(category: str, row: dict[str, Any]) -> str:
     """Category-aware presentation role. It does not change quality gates."""
     name = (row["normalized_name"] + " " + row["display_name"]).casefold()
     cat = category.casefold()
+    if row.get('xiaomi_presentation') and re.search(r'hyperai|функци|технологи|режим', name):
+        return 'feature'
     if row.get('razer_presentation'):
         return 'core' if re.search(r'сенсор|чувствитель|частота|кнопк|переключ|подключ|динамик|сопротив|диапазон|микрофон|процессор|видеокарт|память|габарит|ширин|высот|глубин|вес|время работы',name) else 'feature'
     core_terms = ("размер", "габарит", "вес", "масса", "мощност", "емкост", "объем",
@@ -165,7 +168,7 @@ def present_card_rows(
         chosen = _preferred_fact(row, pages)
         if chosen:
             official_russian = bool(re.search(r"[а-яё]", chosen.get("raw_name") or "", re.I))
-            row["display_name"] = (row["display_name"] if row.get("lg_presentation") or row.get("bosch_presentation") or row.get("lenovo_presentation") or row.get("jbl_presentation") or row.get('razer_presentation') else _related_ru_label(row, rows, pages)
+            row["display_name"] = (row["display_name"] if row.get("lg_presentation") or row.get("bosch_presentation") or row.get("lenovo_presentation") or row.get("jbl_presentation") or row.get('razer_presentation') or row.get('xiaomi_presentation') else _related_ru_label(row, rows, pages)
                                    or (_clean_label(chosen["raw_name"]) if official_russian else "")
                                    or display_name_ru(row["normalized_name"], row.get("raw_names", [])))
             section = chosen.get("section") or "Другие характеристики"
