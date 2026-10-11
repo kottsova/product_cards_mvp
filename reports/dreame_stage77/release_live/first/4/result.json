@@ -1,0 +1,2477 @@
+{
+  "id": 4,
+  "input": {
+    "id": 4,
+    "brand": "Dreame",
+    "article": "X50 Ultra",
+    "model": "Dreame X50 Ultra",
+    "name": "Dreame X50 Ultra [region=Global;bundle=Complete]",
+    "category": "Роботы-пылесосы",
+    "input_configuration": {
+      "region": "Global",
+      "bundle": "Complete"
+    },
+    "supplier_sku": null,
+    "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+  },
+  "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46",
+  "seconds": 35.55,
+  "job": {
+    "id": "dc8c464b845c40fbbb6b8b972e0060ab",
+    "product_id": 4,
+    "status": "done",
+    "current_stage": null,
+    "message": "Dreame: Готова. Инструкция не проверена",
+    "created_at": "2026-10-11T00:28:36+00:00",
+    "updated_at": "2026-10-11T00:29:12+00:00",
+    "started_at": "2026-10-11T00:28:36+00:00",
+    "finished_at": "2026-10-11T00:29:12+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "sources": [
+    {
+      "id": 4,
+      "product_id": 4,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+      "found_model": "Dreame X50 Ultra",
+      "match_level": "model_confirmed",
+      "evidence": "Exact official model; supplier configuration separate",
+      "fetched_at": "2026-10-11T00:28:59+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 49,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Dimensions",
+      "raw_value": "350 x 350 x 89mm(VersaLift Sensor Retracted)\n350 x 350 x 111mm(VersaLift Sensor Lift）",
+      "section": "Робот",
+      "value_cell": null,
+      "normalized_name": "product_dimensions__robot",
+      "normalized_value": "350 x 350 x 89mm(versalift sensor retracted) 350 x 350 x 111mm(versalift sensor lift）",
+      "unit": ""
+    },
+    {
+      "id": 51,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Dimensions",
+      "raw_value": "457 x 340 x 590mm",
+      "section": "База / станция",
+      "value_cell": null,
+      "normalized_name": "product_dimensions__station",
+      "normalized_value": "457 x 340 x 590mm",
+      "unit": ""
+    },
+    {
+      "id": 50,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Weight",
+      "raw_value": "4.53kg",
+      "section": "Робот",
+      "value_cell": null,
+      "normalized_name": "weight__robot__weight",
+      "normalized_value": "4.53",
+      "unit": "kg"
+    },
+    {
+      "id": 52,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Weight",
+      "raw_value": "9.09kg",
+      "section": "База / станция",
+      "value_cell": null,
+      "normalized_name": "weight__station__weight",
+      "normalized_value": "9.09",
+      "unit": "kg"
+    }
+  ],
+  "resolved": [
+    {
+      "id": 49,
+      "product_id": 4,
+      "normalized_name": "product_dimensions__robot",
+      "selected_value": "350 x 350 x 89mm(versalift sensor retracted) 350 x 350 x 111mm(versalift sensor lift）",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:29:12+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 50,
+      "product_id": 4,
+      "normalized_name": "product_dimensions__station",
+      "selected_value": "457 x 340 x 590mm",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:29:12+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 51,
+      "product_id": 4,
+      "normalized_name": "weight__robot__weight",
+      "selected_value": "4.53",
+      "selected_unit": "kg",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:29:12+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 52,
+      "product_id": 4,
+      "normalized_name": "weight__station__weight",
+      "selected_value": "9.09",
+      "selected_unit": "kg",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:29:12+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "photos": [
+    {
+      "id": 45,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/Robot-135_-_-_-LDS_1600x.png?v=1746585578",
+      "asset_key": "808f246650393a4fc1cd33cf",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 46,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_x1_e2f26b98-e0c9-44de-bab8-310c1592e8f3_1600x.png?v=1746675384",
+      "asset_key": "ee3e58c3396a68797042b78a",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 47,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_3_1600x.webp?v=1736319919",
+      "asset_key": "be52c1af95a69c93162eb86f",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 48,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_4_1600x.webp?v=1736319919",
+      "asset_key": "c2eda79d34fd10fda3a69eb4",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 49,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_5_1600x.webp?v=1736319931",
+      "asset_key": "cce18747b5646c0da0970f99",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 50,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_6_1600x.webp?v=1736319931",
+      "asset_key": "59e292f97e7a82c72735001d",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 51,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_7_1600x.webp?v=1736319931",
+      "asset_key": "cb8a82a5121b591538b62895",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 52,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_8_1600x.webp?v=1736319931",
+      "asset_key": "7f05a09084f1df4ce0f424f5",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 53,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_9_1600x.webp?v=1736319931",
+      "asset_key": "0e644181f920a31fa043b9a4",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 54,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_10_1600x.webp?v=1736319931",
+      "asset_key": "72339cfd6ebd15431ed5ca20",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 55,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_11_1600x.webp?v=1736319931",
+      "asset_key": "1db4a25e136dd0816406c46f",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 56,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_Ramp_Extensionx1_1600x.png?v=1746675382",
+      "asset_key": "caeb8a65b1ded6d9ebdcf33c",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 57,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_15_1600x.webp?v=1736319931",
+      "asset_key": "379366763bb4e008f8cccd6a",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 58,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_16_1600x.webp?v=1736319931",
+      "asset_key": "86b4371f9b9fb25da9218278",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 42,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/Total-Right-_-_02_305956a9-5703-475a-acd6-12ec42753ed4_600x.jpg?v=1746535540",
+      "asset_key": "18da0b63ad1e27cc98798962",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": 600,
+      "verified_height": 600,
+      "verified_bytes": 17076,
+      "verified_format": "JPG",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 43,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/20250116-133454_600x.jpg?v=1746535540",
+      "asset_key": "c82e739e745c52c1f5df83bf",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": 600,
+      "verified_height": 600,
+      "verified_bytes": 25367,
+      "verified_format": "JPG",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 44,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "dreame_model",
+      "url": "https://global.dreametech.com/cdn/shop/files/5_eb839655-a260-4f00-9ff3-ac9f915b04db_600x.png?v=1746535540",
+      "asset_key": "7f46c5c4e9ee73bd9dca7294",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T00:29:00+00:00",
+      "verified_width": 600,
+      "verified_height": 600,
+      "verified_bytes": 132300,
+      "verified_format": "PNG",
+      "site_name": "Dreame Official"
+    }
+  ],
+  "documents": [],
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "confirmed_specs": 4,
+    "identity": {
+      "model": "Dreame X50 Ultra",
+      "model_relation": "model_confirmed",
+      "readiness_scope": "model",
+      "source_region": "Global",
+      "retail_sku": null,
+      "configuration_relation": "input_only",
+      "identifier_kind": "marketing_model"
+    },
+    "readiness_scope": "model",
+    "input_configuration": {
+      "region": "Global",
+      "bundle": "Complete"
+    },
+    "exact_identity": true,
+    "conflicts": 0,
+    "manual_status": "Не проверена"
+  },
+  "evidence": {
+    "identity": {
+      "model": "Dreame X50 Ultra",
+      "model_relation": "model_confirmed",
+      "readiness_scope": "model",
+      "source_region": "Global",
+      "retail_sku": null,
+      "configuration_relation": "input_only",
+      "identifier_kind": "marketing_model"
+    },
+    "input_configuration": {
+      "region": "Global",
+      "bundle": "Complete"
+    },
+    "requested_configuration": {
+      "region": "Global",
+      "bundle": "Complete"
+    },
+    "raw_specs": [
+      {
+        "name": "Dimensions",
+        "value": "350 x 350 x 89mm(VersaLift Sensor Retracted)\n350 x 350 x 111mm(VersaLift Sensor Lift）",
+        "section": "Робот",
+        "source_section": "Robot Vacuum",
+        "component": "robot",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Weight",
+        "value": "4.53kg",
+        "section": "Робот",
+        "source_section": "Robot Vacuum",
+        "component": "robot",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Dimensions",
+        "value": "457 x 340 x 590mm",
+        "section": "База / станция",
+        "source_section": "Base Station",
+        "component": "station",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Weight",
+        "value": "9.09kg",
+        "section": "База / станция",
+        "source_section": "Base Station",
+        "component": "station",
+        "scope": "model",
+        "reason": ""
+      }
+    ],
+    "original_raw_specs": [
+      {
+        "name": "Dimensions",
+        "value": "350 x 350 x 89mm(VersaLift Sensor Retracted)\n350 x 350 x 111mm(VersaLift Sensor Lift）",
+        "section": "Robot Vacuum"
+      },
+      {
+        "name": "Weight",
+        "value": "4.53kg",
+        "section": "Robot Vacuum"
+      },
+      {
+        "name": "Dimensions",
+        "value": "457 x 340 x 590mm",
+        "section": "Base Station"
+      },
+      {
+        "name": "Weight",
+        "value": "9.09kg",
+        "section": "Base Station"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "name": "Dimensions",
+        "value": "350 x 350 x 89mm(VersaLift Sensor Retracted)\n350 x 350 x 111mm(VersaLift Sensor Lift）",
+        "section": "Робот",
+        "source_section": "Robot Vacuum",
+        "component": "robot",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Dimensions",
+            "value": "350 x 350 x 89mm(VersaLift Sensor Retracted)\n350 x 350 x 111mm(VersaLift Sensor Lift）",
+            "section": "Робот",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Weight",
+        "value": "4.53kg",
+        "section": "Робот",
+        "source_section": "Robot Vacuum",
+        "component": "robot",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Weight",
+            "value": "4.53kg",
+            "section": "Робот",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Dimensions",
+        "value": "457 x 340 x 590mm",
+        "section": "База / станция",
+        "source_section": "Base Station",
+        "component": "station",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Dimensions",
+            "value": "457 x 340 x 590mm",
+            "section": "База / станция",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Weight",
+        "value": "9.09kg",
+        "section": "База / станция",
+        "source_section": "Base Station",
+        "component": "station",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Weight",
+            "value": "9.09kg",
+            "section": "База / станция",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      }
+    ],
+    "rejected_specs": [],
+    "model_gallery_candidates": [
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Total-Right-_-_02_305956a9-5703-475a-acd6-12ec42753ed4_600x.jpg?v=1746535540",
+        "asset_key": "18da0b63ad1e27cc98798962",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "model_confirmed",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "model_metadata_gallery",
+        "accepted": true,
+        "reason": "Official exact-model gallery; bytes verified; no supplier color claim"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/20250116-133454_600x.jpg?v=1746535540",
+        "asset_key": "c82e739e745c52c1f5df83bf",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "model_confirmed",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "model_metadata_gallery",
+        "accepted": true,
+        "reason": "Official exact-model gallery; bytes verified; no supplier color claim"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_eb839655-a260-4f00-9ff3-ac9f915b04db_600x.png?v=1746535540",
+        "asset_key": "7f46c5c4e9ee73bd9dca7294",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "model_confirmed",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "model_metadata_gallery",
+        "accepted": true,
+        "reason": "Official exact-model gallery; bytes verified; no supplier color claim"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Robot-135_-_-_-LDS_1600x.png?v=1746585578",
+        "asset_key": "808f246650393a4fc1cd33cf",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_x1_e2f26b98-e0c9-44de-bab8-310c1592e8f3_1600x.png?v=1746675384",
+        "asset_key": "ee3e58c3396a68797042b78a",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_3_1600x.webp?v=1736319919",
+        "asset_key": "be52c1af95a69c93162eb86f",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_4_1600x.webp?v=1736319919",
+        "asset_key": "c2eda79d34fd10fda3a69eb4",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_5_1600x.webp?v=1736319931",
+        "asset_key": "cce18747b5646c0da0970f99",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_6_1600x.webp?v=1736319931",
+        "asset_key": "59e292f97e7a82c72735001d",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_7_1600x.webp?v=1736319931",
+        "asset_key": "cb8a82a5121b591538b62895",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_8_1600x.webp?v=1736319931",
+        "asset_key": "7f05a09084f1df4ce0f424f5",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_9_1600x.webp?v=1736319931",
+        "asset_key": "0e644181f920a31fa043b9a4",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_10_1600x.webp?v=1736319931",
+        "asset_key": "72339cfd6ebd15431ed5ca20",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_11_1600x.webp?v=1736319931",
+        "asset_key": "1db4a25e136dd0816406c46f",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_Ramp_Extensionx1_1600x.png?v=1746675382",
+        "asset_key": "caeb8a65b1ded6d9ebdcf33c",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_15_1600x.webp?v=1736319931",
+        "asset_key": "379366763bb4e008f8cccd6a",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_16_1600x.webp?v=1736319931",
+        "asset_key": "86b4371f9b9fb25da9218278",
+        "source_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      }
+    ],
+    "model_numbers": [],
+    "manuals": [],
+    "verified_documents": [],
+    "manual_status": "Не проверена",
+    "published_identity_fields": [],
+    "pdp_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+    "native_media_inventory": [
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-banner.webp?v=1746585599&width=3048",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-update-banner.png?v=1747107125&width=954",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_HyperStream_Detangling_DuoBrush_Minimizes_Tangles_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_03_KSP_MOB_HyperStream_Detangling_DuoBrush_Minimizes_Tangles_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Industry-First_ProLeap_System_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_01_KSP_MOB_Industry-First_ProLeap_System_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_VersaLift_Navigation_for_Low_Space_Cleaning_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_02_KSP_MOB_VersaLift_Navigation_for_Low_Space_Cleaning_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Upgraded_AceClean_DryBoard_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_05_KSP_MOB_Upgraded_AceClean_DryBoard_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Dual_Flex_Arm_Technology_for_Tricky_Corners_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_04_KSP_MOB_Dual_Flex_Arm_Technology_for_Tricky_Corners_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Adaptive_Intelligent_PowerDock_x1_fb26575a-f883-4917-88be-80f4c3fd5faa_1600x.png?v=1746675382",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_06_KSP_MOB_Adaptive_Intelligent_PowerDock_x1_bc771314-cb4d-4359-a8fb-159b6d0c3b96_1600x.png?v=1746675383",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Powerful_Suction_Grants_Impeccable_Results_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_07_KSP_MOB_Powerful_Suction_Grants_Impeccable_Results_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Seamless_App_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_08_KSP_MOB_Seamless_App_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Voice_Control_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_09_KSP_MOB_Voice_Control_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_HyperStream_Detangling_DuoBrush_Minimizes_Tangles_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_03_KSP_MOB_HyperStream_Detangling_DuoBrush_Minimizes_Tangles_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Industry-First_ProLeap_System_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_01_KSP_MOB_Industry-First_ProLeap_System_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_VersaLift_Navigation_for_Low_Space_Cleaning_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_02_KSP_MOB_VersaLift_Navigation_for_Low_Space_Cleaning_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Upgraded_AceClean_DryBoard_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_05_KSP_MOB_Upgraded_AceClean_DryBoard_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Dual_Flex_Arm_Technology_for_Tricky_Corners_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_04_KSP_MOB_Dual_Flex_Arm_Technology_for_Tricky_Corners_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Adaptive_Intelligent_PowerDock_x1_fb26575a-f883-4917-88be-80f4c3fd5faa_1600x.png?v=1746675382",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_06_KSP_MOB_Adaptive_Intelligent_PowerDock_x1_bc771314-cb4d-4359-a8fb-159b6d0c3b96_1600x.png?v=1746675383",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Powerful_Suction_Grants_Impeccable_Results_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_07_KSP_MOB_Powerful_Suction_Grants_Impeccable_Results_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Seamless_App_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_08_KSP_MOB_Seamless_App_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_KSP_PC_Voice_Control_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_09_KSP_MOB_Voice_Control_1600x.webp?v=1746585588",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/08ef46de2aaf611a2499e827e9ea002f_1600x.webp?v=1746675383",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/08ef46de2aaf611a2499e827e9ea002f_fff165bb-cb16-4ee4-8c5c-9272e8cb4c0c_1600x.webp?v=1746675382",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/1_05_Obstacles_Don_t_Stand_a_Chance_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/1_06_Light_the_Way.webp?v=1746585563&width=2560",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/1_06_Light_the_Way_e7d3ba72-553c-46ee-973f-ff004d0b72e4.webp?v=1747105360&width=780",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-master-20000pa-point_8e312288-77e9-45f6-8693-3472b2981c7b.webp?v=1746675383&width=2560",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-master-20000pa-point-m_529da369-3def-4754-b159-67f1db772132.webp?v=1746675382&width=780",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/2_03_01_Bristled_Rubber_Brush_1600x.webp?v=1746585564",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/2_03_02_TPU_Rubber_Brush_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/2_04_Reach_More_with_SideReach.webp?v=1746585563&width=2560",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/2_04_Reach_More_with_SideReach_fa51a793-2317-482d-a6dd-c9c03cf37331.webp?v=1747107217&width=780",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/2_05_01_Keep_Brushes_Dry_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/2_05_02_Protect_Your_Carpets_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/The_8-in-1_PowerDock-8_1.png?v=1746585570&width=1920",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/0_3_06_KSP_MOB_Adaptive_Intelligent_PowerDock_x1_bc771314-cb4d-4359-a8fb-159b6d0c3b96.png?v=1746675383&width=320",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-icon3.webp?v=1734612203",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_02_UV_Light_Fights_Bacteria_a4af9e0e-511c-4457-8d4b-100f379619f3.webp?v=1746675382&width=4576",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_02_UV_Light_Fights_Bacteria_x1_c8c8dba3-85cb-4202-b6df-15c0ac28f77e.png?v=1746675383&width=390",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_01_Embrace_Hot_Water_Auto-Washing_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-icon_1.png?v=1734486581",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-icon_2.png?v=1734486582",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_02_100-Days_of_Hands-Free_Emptying_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_02_100-Days_of_Hands-Free_Emptying_6d86586b-9b1b-4b2d-89aa-6d7a3a0abb4d_1600x.webp?v=1747105797",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_03_Refill_Solutions_Autonomously_x1_1_4e932ed7-b1b8-4152-9bdc-d01d20f4f64b_1600x.png?v=1747105926",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_03_Refill_Solutions_Autonomously_x1_1_1600x.png?v=1746585568",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_04_Hot_Air_Mop_Drying_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_04_Hot_Air_Mop_Drying_3c8b36a8-dfaa-47d4-a88a-08294da03f7c_1600x.webp?v=1747105926",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_05_Hands-Off_Water_Tank_Refilling_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_06_Refilling_and_Draining_Made_Easy_x1_c17a41cd-d65a-4bbf-91c6-19ce86dd0a71_1600x.png?v=1747106008",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_06_Refilling_and_Draining_Made_Easy_x1_1_1600x.png?v=1746585567",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_01_Embrace_Hot_Water_Auto-Washing_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-icon_1.png?v=1734486581",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-icon_2.png?v=1734486582",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_02_100-Days_of_Hands-Free_Emptying_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_02_100-Days_of_Hands-Free_Emptying_6d86586b-9b1b-4b2d-89aa-6d7a3a0abb4d_1600x.webp?v=1747105797",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_03_Refill_Solutions_Autonomously_x1_1_4e932ed7-b1b8-4152-9bdc-d01d20f4f64b_1600x.png?v=1747105926",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_03_Refill_Solutions_Autonomously_x1_1_1600x.png?v=1746585568",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_04_Hot_Air_Mop_Drying_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_04_Hot_Air_Mop_Drying_3c8b36a8-dfaa-47d4-a88a-08294da03f7c_1600x.webp?v=1747105926",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_05_Hands-Off_Water_Tank_Refilling_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_06_Refilling_and_Draining_Made_Easy_x1_c17a41cd-d65a-4bbf-91c6-19ce86dd0a71_1600x.png?v=1747106008",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_03_06_Refilling_and_Draining_Made_Easy_x1_1_1600x.png?v=1746585567",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_04_Dirt_Can_t_Hide.webp?v=1746585562&width=2560",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_04_Dirt_Can_t_Hide_f86b4b45-0e50-4826-b052-c30f8192351e.webp?v=1747105926&width=780",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_05_Re-Wash_Mops_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_05_Re-Mop_for_Improved_Results_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_05_Re-Wash_Mops_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/3_05_Re-Mop_for_Improved_Results_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/7b6f79ce2b108351f25c0725299468d3.webp?v=1746585564&width=2880",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/4_02_01__Mop_Lifting_1600x.webp?v=1746585562",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/4_02_02_Intensive_Cleaning_1600x.webp?v=1746585564",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/4_02_03_Carpet_Cleaning_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/4_02_04_Carpet_Avoidance_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_00_Dreamehome.webp?v=1746585562&width=2560",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_00_Dreamehome_221a6575-dc75-47ec-8eba-11f91d662352.webp?v=1747106144&width=780",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_01_01Dynamic_Spot-Cleaning_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_01_02Find_Your_Pets_with_Ease_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_01_03Keep_an_Eye_on_Your_Pets_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_01_04Select_Pet-Friendly_Cleaning_Strategies_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_01_05Boost_Suction_for_Each_Cleaning_Need_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_02_Avoid_Curtains_Like_a_Pro_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_03_Adapt_with_4_Cleaning_Modes_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_04_Say__Ok_Dreame__to_Start_Cleaning_1600x.webp?v=1746585564",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_05_Matter_Protocol_Supported_1600x.webp?v=1746585564",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_06_01_Apple_Watch_Compatibility_X50UC_x1_556e4dff-80e8-4c7a-9066-900e5edccf04_1600x.png?v=1746675383",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_06_01_Apple_Watch_Compatibility_X50U_WH_x1_9038b446-05f9-4d01-99f4-21b02b1f2feb_1600x.png?v=1746675382",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-frame26_1600x.webp?v=1736319932",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-pc-frame1_43.webp?v=1734401885",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-pc-frame1_42.webp?v=1734401885",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-pc-frame1_44.webp?v=1734401886",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/x50-ultra-pc-frame1_45.webp?v=1734401885",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_06_03_One-Click_Access_with_Widgets_X50UC_x1_451b4d8b-fb62-4d8b-8ba6-2a957c2d3c61_1600x.png?v=1746675382",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_06_03_One-Click_Access_with_Widgets_X50U_WH_x1_d11198bd-7e55-43fc-b241-2105013c6dc7_1600x.png?v=1746675382",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_07_Charge_Faster_Clean_Longer_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/X40_Ultra_f3f5684c-ecdb-46c7-ba8f-7db80e025c5a_1600x.png?v=1746675384",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Robot-135_-_-_-LDS_1200x.png?v=1746585578",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_x1_e2f26b98-e0c9-44de-bab8-310c1592e8f3_1200x.png?v=1746675384",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_3_1200x.webp?v=1736319919",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_4_1200x.webp?v=1736319919",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_5_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_6_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_7_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_8_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_9_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_10_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_11_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_Ramp_Extension2x_1200x.png?v=1746675383",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_15_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_16_1200x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Robot-135_-_-_-LDS_1600x.png?v=1746585578",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_x1_e2f26b98-e0c9-44de-bab8-310c1592e8f3_1600x.png?v=1746675384",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_3_1600x.webp?v=1736319919",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_4_1600x.webp?v=1736319919",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_5_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_6_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_7_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_8_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_9_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_10_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_11_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_Ramp_Extensionx1_1600x.png?v=1746675382",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_15_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_16_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Robot-135_-_-_-LDS_1600x.png?v=1746585578",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_x1_e2f26b98-e0c9-44de-bab8-310c1592e8f3_1600x.png?v=1746675384",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_3_1600x.webp?v=1736319919",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_4_1600x.webp?v=1736319919",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_5_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_6_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_7_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_8_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_9_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_10_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_11_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Base_Station_Ramp_Extensionx1_1600x.png?v=1746675382",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_15_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-big-accessory_16_1600x.webp?v=1736319931",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-smallframe_1_1600x.webp?v=1736319986",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-smallframe_2_1600x.webp?v=1736319986",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-smallframe_3_1600x.webp?v=1736319985",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-smallframe_4_1600x.webp?v=1736319994",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-smallframe_5_1600x.webp?v=1736319995",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/x50-ultra-smallframe_6_1600x.webp?v=1736319995",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/6_Specifications_WH_PC_1600x.webp?v=1746585563",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/6_Specifications_WH_M_1600x.png?v=1746585564",
+        "role": "feature_visual",
+        "accepted": false
+      }
+    ],
+    "native_feature_headings": [
+      "Quietly Conquer Ledges and More",
+      "360° Smart Mapping & Low-Profile Cleaning",
+      "Double the Brushes, Double the Results",
+      "Reach More with SideReach™",
+      "Carve Out Dirty Corners",
+      "Protect Your Pets with Customizable Features",
+      "A Truly Connected Clean",
+      "What's in the Box",
+      "X50 Ultra Complete"
+    ],
+    "captures": [
+      {
+        "url": "https://global.dreametech.com/sitemap.xml",
+        "final_url": "https://global.dreametech.com/sitemap.xml",
+        "sha256": "e97cb428173cf11226e6acf8d4763a6db1cbfb89058e6cf90cfb2db27ed58c74",
+        "file": "e97cb428173cf11226e6acf8d4763a6db1cbfb89058e6cf90cfb2db27ed58c74.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46"
+      },
+      {
+        "url": "https://global.dreametech.com/sitemap_products_1.xml?from=6745399034013&to=10000833872117",
+        "final_url": "https://global.dreametech.com/sitemap_products_1.xml?from=6745399034013&to=10000833872117",
+        "sha256": "d4a6f91ddf82ce606769a99f75dcf3433f4ef4848ed99c496ab30e193312a950",
+        "file": "d4a6f91ddf82ce606769a99f75dcf3433f4ef4848ed99c496ab30e193312a950.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46"
+      },
+      {
+        "url": "https://global.dreametech.com/fr/sitemap_products_1.xml?from=6745399034013&to=10000833872117",
+        "final_url": "https://global.dreametech.com/fr/sitemap_products_1.xml?from=6745399034013&to=10000833872117",
+        "sha256": "c74d66032a44f85e24383b9b79d05d06f8aa512258c3d6d4c63e53211f5845d2",
+        "file": "c74d66032a44f85e24383b9b79d05d06f8aa512258c3d6d4c63e53211f5845d2.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46"
+      },
+      {
+        "url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "final_url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "sha256": "b72410d7793f9927d0c0d7237d22724953b14e36be205346a517f2539dd41568",
+        "file": "b72410d7793f9927d0c0d7237d22724953b14e36be205346a517f2539dd41568.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46"
+      },
+      {
+        "url": "https://global.dreametech.com/pages/x50-ultra-x50-ultra-complete-user-manual",
+        "final_url": "https://global.dreametech.com/pages/x50-ultra-x50-ultra-complete-user-manual",
+        "sha256": "a84309c6dc5cd7384a36988b697d3921dd97d66bd5ac43b792c35bfb92c049b2",
+        "file": "a84309c6dc5cd7384a36988b697d3921dd97d66bd5ac43b792c35bfb92c049b2.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46"
+      }
+    ],
+    "live_success": true,
+    "observation": "live_browser",
+    "access_issues": [],
+    "manual_inventory_reason": "Published PDF check limited: Network request failed",
+    "input_configuration_original_values": [
+      "Dreame",
+      "X50 Ultra",
+      "Dreame X50 Ultra [region=Global;bundle=Complete]",
+      "Роботы-пылесосы"
+    ],
+    "image_measurements": [
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/Total-Right-_-_02_305956a9-5703-475a-acd6-12ec42753ed4_600x.jpg?v=1746535540",
+        "accepted_identity": true,
+        "identity_scope": "model",
+        "supplier_color_relation": "unproven",
+        "width": 600,
+        "height": 600,
+        "size_bytes": 17076,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "5706f686d0c05844206c14f5c43aa4ee89bdee9819efe291c172abe024a74239"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/20250116-133454_600x.jpg?v=1746535540",
+        "accepted_identity": true,
+        "identity_scope": "model",
+        "supplier_color_relation": "unproven",
+        "width": 600,
+        "height": 600,
+        "size_bytes": 25367,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "585e5da3283e8f5a2576d29a888c624e38d68ffb8fe48a9adc4d0ada0825290a"
+      },
+      {
+        "url": "https://global.dreametech.com/cdn/shop/files/5_eb839655-a260-4f00-9ff3-ac9f915b04db_600x.png?v=1746535540",
+        "accepted_identity": true,
+        "identity_scope": "model",
+        "supplier_color_relation": "unproven",
+        "width": 600,
+        "height": 600,
+        "size_bytes": 132300,
+        "format": "PNG",
+        "content_type": "image/png",
+        "effective_content_type": "image/png",
+        "sha256": "c2bf2f3f7849a4b9a889b342545b54091509a3c6da1df05525881fdc224b209a"
+      }
+    ],
+    "model_gallery_assets": [
+      "18da0b63ad1e27cc98798962",
+      "c82e739e745c52c1f5df83bf",
+      "7f46c5c4e9ee73bd9dca7294"
+    ]
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "input_configuration": {
+        "bundle": "Complete",
+        "region": "Global"
+      },
+      "provider": "normalization",
+      "query": "X50 ULTRA",
+      "query_variants": [
+        "X50 ULTRA",
+        "Dreame X50 Ultra",
+        "X50 Ultra"
+      ],
+      "reason": "Supplier identifier separate from exact model query",
+      "region": "",
+      "source_type": "query_variants",
+      "timestamp": "2026-10-11T00:28:36+00:00",
+      "url": ""
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "regional_catalog",
+      "query": "Dreame X50 Ultra",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "catalog",
+      "timestamp": "2026-10-11T00:28:36+00:00",
+      "url": "https://global.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:28:40+00:00",
+        "counts": {
+          "document_bytes": 14917,
+          "document_requests": 1,
+          "document_status": 200,
+          "javascript_errors": 1,
+          "navigations": 1,
+          "network_requests": 7,
+          "other_requests": 6,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            }
+          ],
+          "resource_attempts": 7
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/sitemap.xml"
+          }
+        ],
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46",
+        "sha256": "e97cb428173cf11226e6acf8d4763a6db1cbfb89058e6cf90cfb2db27ed58c74",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/sitemap.xml",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_sitemap",
+      "query": "Dreame X50 Ultra",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-11T00:28:40+00:00",
+      "url": "https://global.dreametech.com/sitemap.xml"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:28:45+00:00",
+        "counts": {
+          "document_bytes": 283790,
+          "document_requests": 1,
+          "document_status": 200,
+          "navigations": 1,
+          "network_requests": 1,
+          "resource_attempts": 1
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/sitemap_products_1.xml?from=6745399034013&to=10000833872117"
+          }
+        ],
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46",
+        "sha256": "d4a6f91ddf82ce606769a99f75dcf3433f4ef4848ed99c496ab30e193312a950",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/sitemap_products_1.xml?from=6745399034013&to=10000833872117",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_sitemap",
+      "query": "Dreame X50 Ultra",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "product_sitemap",
+      "timestamp": "2026-10-11T00:28:46+00:00",
+      "url": "https://global.dreametech.com/sitemap_products_1.xml?from=6745399034013&to=10000833872117"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:28:51+00:00",
+        "counts": {
+          "document_bytes": 244035,
+          "document_requests": 1,
+          "document_status": 200,
+          "navigations": 1,
+          "network_requests": 1,
+          "resource_attempts": 1
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/fr/sitemap_products_1.xml?from=6745399034013&to=10000833872117"
+          }
+        ],
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46",
+        "sha256": "c74d66032a44f85e24383b9b79d05d06f8aa512258c3d6d4c63e53211f5845d2",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/fr/sitemap_products_1.xml?from=6745399034013&to=10000833872117",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_sitemap",
+      "query": "Dreame X50 Ultra",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "product_sitemap",
+      "timestamp": "2026-10-11T00:28:51+00:00",
+      "url": "https://global.dreametech.com/fr/sitemap_products_1.xml?from=6745399034013&to=10000833872117"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "https://global.dreametech.com/products/x50-ultra",
+        "https://global.dreametech.com/fr/products/x50-ultra",
+        "https://global.dreametech.com/fr/products/dreame-x50-ultra-complete"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_catalog",
+      "query": "Dreame X50 Ultra",
+      "reason": "Published links rank only; Product/title proves model",
+      "region": "Global",
+      "source_type": "candidate_inventory",
+      "timestamp": "2026-10-11T00:28:51+00:00",
+      "url": "https://global.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:28:58+00:00",
+        "counts": {
+          "blocked_font_requests": 13,
+          "blocked_image_requests": 178,
+          "blocked_media_requests": 15,
+          "document_bytes": 1280618,
+          "document_requests": 4,
+          "document_status": 200,
+          "javascript_errors": 20,
+          "navigations": 1,
+          "network_requests": 90,
+          "other_requests": 3,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&display=swap"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.ads-twitter.com/uwt.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_4c1518eb-cdc3-48d0-bc6f-6077ed1bb357.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_a6d7fa39-5e8d-41c0-bf7f-bd6f5e56d265.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/85b81cf2d66ba83fce4d04281053bbc4.png?v=1657594215"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/4A236476-B972-4dca-82A7-C6BDE4202C4D.png?v=1640164720"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://jsonip.com/?callback=jQuery33107699652966206243_1791678534563&_=1791678534564"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.youtube.com/iframe_api"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/OPPOSans-M.ttf?v=1648111015"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-697091658"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "ping",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_install_check?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-Q497ZQTEZG"
+            }
+          ],
+          "resource_attempts": 296,
+          "script_xhr_fetch_requests": 55,
+          "stylesheet_requests": 28
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+          }
+        ],
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46",
+        "sha256": "b72410d7793f9927d0c0d7237d22724953b14e36be205346a517f2539dd41568",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_pdp",
+      "query": "Dreame X50 Ultra",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "pdp",
+      "timestamp": "2026-10-11T00:28:58+00:00",
+      "url": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    {
+      "accepted": true,
+      "event": "dreame_discovery",
+      "identity_relation": "model_confirmed",
+      "provider": "official_pdp",
+      "query": "Dreame X50 Ultra",
+      "reason": "Exact official model; supplier configuration separate",
+      "region": "Global",
+      "source_type": "identity",
+      "timestamp": "2026-10-11T00:29:00+00:00",
+      "url": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_support",
+      "query": "Dreame X50 Ultra",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "manual_inventory",
+      "timestamp": "2026-10-11T00:29:00+00:00",
+      "url": "https://global.dreametech.com/pages/user-manuals-and-faqs"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:29:06+00:00",
+        "counts": {
+          "blocked_font_requests": 8,
+          "blocked_image_requests": 152,
+          "document_bytes": 730839,
+          "document_requests": 4,
+          "document_status": 200,
+          "javascript_errors": 20,
+          "navigations": 1,
+          "network_requests": 92,
+          "other_requests": 8,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/fec/produce"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&display=swap"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_4c1518eb-cdc3-48d0-bc6f-6077ed1bb357.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_a6d7fa39-5e8d-41c0-bf7f-bd6f5e56d265.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/85b81cf2d66ba83fce4d04281053bbc4.png?v=1657594215"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/4A236476-B972-4dca-82A7-C6BDE4202C4D.png?v=1640164720"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.ads-twitter.com/uwt.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://jsonip.com/?callback=jQuery331012160563229949051_1791678543987&_=1791678543988"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://init.grizzlyapps.com/9e32c84f0db4f7b1eb40c32bdb0bdea9"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/logs"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-697091658"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            }
+          ],
+          "resource_attempts": 252,
+          "script_xhr_fetch_requests": 53,
+          "stylesheet_requests": 27
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/pages/x50-ultra-x50-ultra-complete-user-manual"
+          }
+        ],
+        "session_id": "public_browser:bd4993ce75b64a4fbde9ad2a72a69e46",
+        "sha256": "a84309c6dc5cd7384a36988b697d3921dd97d66bd5ac43b792c35bfb92c049b2",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/pages/x50-ultra-x50-ultra-complete-user-manual",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_support",
+      "query": "Dreame X50 Ultra",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "model_manual_page",
+      "timestamp": "2026-10-11T00:29:06+00:00",
+      "url": "https://global.dreametech.com/pages/x50-ultra-x50-ultra-complete-user-manual"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2489_X50_Ultra_Series_KO_JA_ZH-TW_ZH-HK_FI_DA_MS_KK_UZ.pdf?v=1737615984",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2489_X50_Ultra_Series_EN_DE_FR_IT_ES_PL_NL_NO_SV.pdf?v=1737615984",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2489_X50_Ultra_Series_EL_PT_HE_PT_HE_AR_TR_VI_TH_ID_RU.pdf?v=1737615983",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2489_X50_Ultra_Series_UA_CS_SK_SL_HU_SR_LT_LV_RO.pdf?v=1737615984"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support",
+      "query": "Dreame X50 Ultra",
+      "reason": "Exact model labels; type/language from document",
+      "region": "Global",
+      "source_type": "manual_inventory",
+      "timestamp": "2026-10-11T00:29:07+00:00",
+      "url": "https://global.dreametech.com/pages/user-manuals-and-faqs"
+    }
+  ],
+  "total_navigations": 12,
+  "active_stops_after": {}
+}

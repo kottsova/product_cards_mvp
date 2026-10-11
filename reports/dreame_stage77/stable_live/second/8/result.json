@@ -1,0 +1,3194 @@
+{
+  "id": 8,
+  "input": {
+    "id": 8,
+    "brand": "Dreame",
+    "article": "Z30",
+    "model": "Dreame Z30",
+    "name": "Dreame Z30 [region=Global]",
+    "category": "Вертикальные пылесосы",
+    "input_configuration": {
+      "region": "Global"
+    },
+    "supplier_sku": null,
+    "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+  },
+  "session_id": "public_browser:58a7b5f6ade24d4f938f0935ce298b6f",
+  "seconds": 29.95,
+  "job": {
+    "id": "4668955cb7b34ed88375c3c4576742b3",
+    "product_id": 8,
+    "status": "done",
+    "current_stage": null,
+    "message": "Dreame: Готова. ",
+    "created_at": "2026-10-11T00:45:20+00:00",
+    "updated_at": "2026-10-11T00:45:50+00:00",
+    "started_at": "2026-10-11T00:45:20+00:00",
+    "finished_at": "2026-10-11T00:45:50+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "sources": [
+    {
+      "id": 8,
+      "product_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+      "found_model": "Dreame Z30",
+      "match_level": "model_confirmed",
+      "evidence": "Exact official model; supplier configuration separate",
+      "fetched_at": "2026-10-11T00:45:35+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 190,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Battery Capacity",
+      "raw_value": "8 x 3,000mAh",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "battery_capacity__device",
+      "normalized_value": "8 x 3,000mah",
+      "unit": ""
+    },
+    {
+      "id": 191,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Charging Time",
+      "raw_value": "4hrs",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "charging_time__device",
+      "normalized_value": "4hrs",
+      "unit": ""
+    },
+    {
+      "id": 188,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Dust Cup Capacity",
+      "raw_value": "0.16 gallons",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "dust_cup_capacity__device",
+      "normalized_value": "0.16 gallons",
+      "unit": ""
+    },
+    {
+      "id": 187,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Filtration Efficiency",
+      "raw_value": "99.99% (0.1µm)",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "filtration_efficiency__device",
+      "normalized_value": "99.99% (0.1μm)",
+      "unit": ""
+    },
+    {
+      "id": 189,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Maximum Runtime",
+      "raw_value": "90min",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "maximum_runtime__device",
+      "normalized_value": "90min",
+      "unit": ""
+    },
+    {
+      "id": 186,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Motor Speed",
+      "raw_value": "150,000 RPM",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "motor_speed__device",
+      "normalized_value": "150",
+      "unit": "rpm"
+    },
+    {
+      "id": 185,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Suction Power",
+      "raw_value": "310AW",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "suction_power__device",
+      "normalized_value": "310aw",
+      "unit": ""
+    },
+    {
+      "id": 184,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "raw_name": "Vacuum Body Weight",
+      "raw_value": "4.85lbs",
+      "section": "Устройство",
+      "value_cell": null,
+      "normalized_name": "vacuum_body_weight__device",
+      "normalized_value": "4.85lbs",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 184,
+      "product_id": 8,
+      "normalized_name": "battery_capacity__device",
+      "selected_value": "8 x 3,000mah",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 185,
+      "product_id": 8,
+      "normalized_name": "charging_time__device",
+      "selected_value": "4hrs",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 186,
+      "product_id": 8,
+      "normalized_name": "dust_cup_capacity__device",
+      "selected_value": "0.16 gallons",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 187,
+      "product_id": 8,
+      "normalized_name": "filtration_efficiency__device",
+      "selected_value": "99.99% (0.1μm)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 188,
+      "product_id": 8,
+      "normalized_name": "maximum_runtime__device",
+      "selected_value": "90min",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 189,
+      "product_id": 8,
+      "normalized_name": "motor_speed__device",
+      "selected_value": "150",
+      "selected_unit": "rpm",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 190,
+      "product_id": 8,
+      "normalized_name": "suction_power__device",
+      "selected_value": "310aw",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 191,
+      "product_id": 8,
+      "normalized_name": "vacuum_body_weight__device",
+      "selected_value": "4.85lbs",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт exact model Dreame; компонент указан в исходном разделе.",
+      "selected_source": "dreame_model",
+      "conflict": 0,
+      "updated_at": "2026-10-11T00:45:50+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "photos": [
+    {
+      "id": 209,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_9_1600x.png?v=1718078211",
+      "asset_key": "c87d19da1a0dd647e6615c3d",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 210,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_5_1600x.png?v=1718078202",
+      "asset_key": "63ac58575530dadf6fe607e4",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 211,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_8_1600x.png?v=1718611019",
+      "asset_key": "70241494b8c0a266437462d4",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 212,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_10_1600x.png?v=1718078203",
+      "asset_key": "ebc031d51a2cb4de057738d1",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 213,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_1_1600x.png?v=1718078211",
+      "asset_key": "451380a5054fec15e3648a35",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 214,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_6_1600x.png?v=1718360078",
+      "asset_key": "ceed29fbcb3fbc03f6c59228",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 215,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_9_1600x.png?v=1718078202",
+      "asset_key": "321972395e0bc8884796fc0d",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 216,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_11_1600x.png?v=1718360096",
+      "asset_key": "a14ed7e6035741053d3d93ad",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 217,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_4_1600x.png?v=1718078202",
+      "asset_key": "e633c53799b6f24184fd3169",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 218,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_7_1600x.png?v=1718078202",
+      "asset_key": "17b68c60990d45dfe68ebbb4",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 219,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_5_1600x.png?v=1718078211",
+      "asset_key": "87886c62a3938f6813a41ed0",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 220,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_12_1600x.png?v=1718078202",
+      "asset_key": "f650cccbac1721e078b875cb",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 221,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.png?v=1718689657",
+      "asset_key": "d60edad5f29da40c94774183",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 222,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.jpg?v=1718689658",
+      "asset_key": "af1e312db1e48d8ff6efe064",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 223,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.png?v=1718689658",
+      "asset_key": "7215aff1cf1d810ee7c8be72",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 224,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.jpg?v=1718689657",
+      "asset_key": "06ff837ee18641298682001f",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 225,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_6_1600x.png?v=1718689657",
+      "asset_key": "50abc6ee4581b7876e98930e",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 226,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_7_1600x.png?v=1718689658",
+      "asset_key": "05d3d66b0bded60ac3e5eb88",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 227,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_5_1600x.png?v=1718689658",
+      "asset_key": "2db7f28cabf030bc1a9a178e",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 228,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_4_1600x.png?v=1718689658",
+      "asset_key": "8fa56cadfe1c50a216ebf102",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 229,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_3_1600x.png?v=1718689658",
+      "asset_key": "6d865060acacdd59b275f3ad",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 230,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_8_1600x.png?v=1718689658",
+      "asset_key": "e3f604a55bae5e4510d980c2",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 231,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_9_1600x.png?v=1718689657",
+      "asset_key": "92fa536af73b9c1dcabf0848",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 232,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_10_1600x.png?v=1718689658",
+      "asset_key": "acb58bf75cfc0005cb8dfb9b",
+      "kind": "candidate",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Accessory/bundle-specific image",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 205,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/Z30_e8f26088-6f43-4ead-a2e9-922ac46f7b07.jpg?v=1746613200&width=1024",
+      "asset_key": "ff6c94a8e5e4db6894ec8f80",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": 1024,
+      "verified_height": 1024,
+      "verified_bytes": 58210,
+      "verified_format": "JPG",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 206,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/Z30_e8f26088-6f43-4ead-a2e9-922ac46f7b07_1200x1200.jpg?v=1746613200",
+      "asset_key": "ec6c1f990a8e2bb952110bf4",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": 1200,
+      "verified_height": 1200,
+      "verified_bytes": 78604,
+      "verified_format": "JPG",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 207,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/1-_-800-800-2_1200x1200.jpg?v=1749199464",
+      "asset_key": "83f4dcc74f5aa73e89af7766",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": 800,
+      "verified_height": 800,
+      "verified_bytes": 70017,
+      "verified_format": "JPG",
+      "site_name": "Dreame Official"
+    },
+    {
+      "id": 208,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "url": "https://www.dreametech.com/cdn/shop/files/2-UnleashRemarkable310AWSuction_a10a9328-e309-4496-9b89-72e4daccec9a_1200x1200.jpg?v=1749199464",
+      "asset_key": "b2696c651f186883ad746805",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T00:45:36+00:00",
+      "verified_width": 800,
+      "verified_height": 800,
+      "verified_bytes": 73724,
+      "verified_format": "JPG",
+      "site_name": "Dreame Official"
+    }
+  ],
+  "documents": [
+    {
+      "id": 2,
+      "product_id": 8,
+      "source_page_id": 8,
+      "source_key": "dreame_model",
+      "title": "Z30 User Manual",
+      "language": "Английский, Русский",
+      "document_date": "",
+      "size": "8657519",
+      "direct_url": "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/Z30_Cordless_Stick_Vacuum.pdf?v=1743129525",
+      "source_url": "https://global.dreametech.com/pages/user-manuals-and-faqs",
+      "product_model": "Dreame Z30",
+      "support_model": "Dreame Z30",
+      "relation_url": "https://global.dreametech.com/pages/user-manuals-and-faqs",
+      "is_primary": 1,
+      "fetched_at": "2026-10-11T00:45:46+00:00"
+    }
+  ],
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [],
+    "gaps": [],
+    "confirmed_specs": 8,
+    "identity": {
+      "model": "Dreame Z30",
+      "model_relation": "model_confirmed",
+      "readiness_scope": "model",
+      "source_region": "US",
+      "retail_sku": null,
+      "configuration_relation": "input_only",
+      "identifier_kind": "marketing_model"
+    },
+    "readiness_scope": "model",
+    "input_configuration": {
+      "region": "Global"
+    },
+    "exact_identity": true,
+    "conflicts": 0,
+    "manual_status": "Проверена"
+  },
+  "evidence": {
+    "identity": {
+      "model": "Dreame Z30",
+      "model_relation": "model_confirmed",
+      "readiness_scope": "model",
+      "source_region": "US",
+      "retail_sku": null,
+      "configuration_relation": "input_only",
+      "identifier_kind": "marketing_model"
+    },
+    "input_configuration": {
+      "region": "Global"
+    },
+    "requested_configuration": {
+      "region": "Global"
+    },
+    "raw_specs": [
+      {
+        "name": "Vacuum Body Weight",
+        "value": "4.85lbs",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Suction Power",
+        "value": "310AW",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Motor Speed",
+        "value": "150,000 RPM",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Filtration Efficiency",
+        "value": "99.99% (0.1µm)",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Dust Cup Capacity",
+        "value": "0.16 gallons",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Maximum Runtime",
+        "value": "90min",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Battery Capacity",
+        "value": "8 x 3,000mAh",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      },
+      {
+        "name": "Charging Time",
+        "value": "4hrs",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": ""
+      }
+    ],
+    "original_raw_specs": [
+      {
+        "name": "Vacuum Body Weight",
+        "value": "4.85lbs",
+        "section": "Specifications"
+      },
+      {
+        "name": "Suction Power",
+        "value": "310AW",
+        "section": "Specifications"
+      },
+      {
+        "name": "Motor Speed",
+        "value": "150,000 RPM",
+        "section": "Specifications"
+      },
+      {
+        "name": "Filtration Efficiency",
+        "value": "99.99% (0.1µm)",
+        "section": "Specifications"
+      },
+      {
+        "name": "Dust Cup Capacity",
+        "value": "0.16 gallons",
+        "section": "Specifications"
+      },
+      {
+        "name": "Maximum Runtime",
+        "value": "90min",
+        "section": "Specifications"
+      },
+      {
+        "name": "Battery Capacity",
+        "value": "8 x 3,000mAh",
+        "section": "Specifications"
+      },
+      {
+        "name": "Charging Time",
+        "value": "4hrs",
+        "section": "Specifications"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "name": "Vacuum Body Weight",
+        "value": "4.85lbs",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Vacuum Body Weight",
+            "value": "4.85lbs",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Suction Power",
+        "value": "310AW",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Suction Power",
+            "value": "310AW",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Motor Speed",
+        "value": "150,000 RPM",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Motor Speed",
+            "value": "150,000 RPM",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Filtration Efficiency",
+        "value": "99.99% (0.1µm)",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Filtration Efficiency",
+            "value": "99.99% (0.1µm)",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Dust Cup Capacity",
+        "value": "0.16 gallons",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Dust Cup Capacity",
+            "value": "0.16 gallons",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Maximum Runtime",
+        "value": "90min",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Maximum Runtime",
+            "value": "90min",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Battery Capacity",
+        "value": "8 x 3,000mAh",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Battery Capacity",
+            "value": "8 x 3,000mAh",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      },
+      {
+        "name": "Charging Time",
+        "value": "4hrs",
+        "section": "Устройство",
+        "source_section": "Specifications",
+        "component": "device",
+        "scope": "model",
+        "reason": "",
+        "derived_fields": [
+          {
+            "name": "Charging Time",
+            "value": "4hrs",
+            "section": "Устройство",
+            "value_cell": null
+          }
+        ],
+        "duplicate_presentation": false
+      }
+    ],
+    "rejected_specs": [],
+    "model_gallery_candidates": [
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/Z30_e8f26088-6f43-4ead-a2e9-922ac46f7b07.jpg?v=1746613200&width=1024",
+        "asset_key": "ff6c94a8e5e4db6894ec8f80",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "model_confirmed",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "official_product_gallery",
+        "accepted": true,
+        "reason": "Official exact-model gallery; bytes verified; no supplier color claim"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/Z30_e8f26088-6f43-4ead-a2e9-922ac46f7b07_1200x1200.jpg?v=1746613200",
+        "asset_key": "ec6c1f990a8e2bb952110bf4",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "model_confirmed",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "model_metadata_gallery",
+        "accepted": true,
+        "reason": "Official exact-model gallery; bytes verified; no supplier color claim"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/1-_-800-800-2_1200x1200.jpg?v=1749199464",
+        "asset_key": "83f4dcc74f5aa73e89af7766",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "model_confirmed",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "model_metadata_gallery",
+        "accepted": true,
+        "reason": "Official exact-model gallery; bytes verified; no supplier color claim"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/2-UnleashRemarkable310AWSuction_a10a9328-e309-4496-9b89-72e4daccec9a_1200x1200.jpg?v=1749199464",
+        "asset_key": "b2696c651f186883ad746805",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "model_confirmed",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "model_metadata_gallery",
+        "accepted": true,
+        "reason": "Official exact-model gallery; bytes verified; no supplier color claim"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_9_1600x.png?v=1718078211",
+        "asset_key": "c87d19da1a0dd647e6615c3d",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_5_1600x.png?v=1718078202",
+        "asset_key": "63ac58575530dadf6fe607e4",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_8_1600x.png?v=1718611019",
+        "asset_key": "70241494b8c0a266437462d4",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_10_1600x.png?v=1718078203",
+        "asset_key": "ebc031d51a2cb4de057738d1",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_1_1600x.png?v=1718078211",
+        "asset_key": "451380a5054fec15e3648a35",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_6_1600x.png?v=1718360078",
+        "asset_key": "ceed29fbcb3fbc03f6c59228",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_9_1600x.png?v=1718078202",
+        "asset_key": "321972395e0bc8884796fc0d",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_11_1600x.png?v=1718360096",
+        "asset_key": "a14ed7e6035741053d3d93ad",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_4_1600x.png?v=1718078202",
+        "asset_key": "e633c53799b6f24184fd3169",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_7_1600x.png?v=1718078202",
+        "asset_key": "17b68c60990d45dfe68ebbb4",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_5_1600x.png?v=1718078211",
+        "asset_key": "87886c62a3938f6813a41ed0",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_12_1600x.png?v=1718078202",
+        "asset_key": "f650cccbac1721e078b875cb",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.png?v=1718689657",
+        "asset_key": "d60edad5f29da40c94774183",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.jpg?v=1718689658",
+        "asset_key": "af1e312db1e48d8ff6efe064",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.png?v=1718689658",
+        "asset_key": "7215aff1cf1d810ee7c8be72",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.jpg?v=1718689657",
+        "asset_key": "06ff837ee18641298682001f",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_6_1600x.png?v=1718689657",
+        "asset_key": "50abc6ee4581b7876e98930e",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_7_1600x.png?v=1718689658",
+        "asset_key": "05d3d66b0bded60ac3e5eb88",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_5_1600x.png?v=1718689658",
+        "asset_key": "2db7f28cabf030bc1a9a178e",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_4_1600x.png?v=1718689658",
+        "asset_key": "8fa56cadfe1c50a216ebf102",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_3_1600x.png?v=1718689658",
+        "asset_key": "6d865060acacdd59b275f3ad",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_8_1600x.png?v=1718689658",
+        "asset_key": "e3f604a55bae5e4510d980c2",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_9_1600x.png?v=1718689657",
+        "asset_key": "92fa536af73b9c1dcabf0848",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_10_1600x.png?v=1718689658",
+        "asset_key": "acb58bf75cfc0005cb8dfb9b",
+        "source_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "model_relation": "unproven",
+        "official_color": "",
+        "supplier_color_relation": "unproven",
+        "role": "accessory_or_bundle",
+        "accepted": false,
+        "reason": "Accessory/bundle inventory; candidate only"
+      }
+    ],
+    "model_numbers": [],
+    "manuals": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/Z30_Cordless_Stick_Vacuum.pdf?v=1743129525",
+        "source_url": "https://global.dreametech.com/pages/user-manuals-and-faqs",
+        "label": "Z30 User Manual",
+        "assessment": {
+          "accepted": true,
+          "kind": "instruction_confirmed",
+          "regulatory": false,
+          "names_model": [
+            "Z30"
+          ],
+          "model_masks": [],
+          "model_evidence": "exact",
+          "conflicting_models": [],
+          "instruction_markers": [
+            "installing",
+            "safety instructions",
+            "user manual",
+            "безопасност",
+            "внимательно прочит",
+            "инструкц",
+            "меры предосторожности",
+            "перед использованием",
+            "руководств",
+            "эксплуатац"
+          ],
+          "languages": {
+            "pages": 199,
+            "letters_by_language": {
+              "en": 22880,
+              "ru": 19515
+            },
+            "present": [
+              "en",
+              "ru"
+            ],
+            "russian_present": true,
+            "russian_instruction_markers": 10,
+            "russian_instruction": true
+          },
+          "text_chars": 363048,
+          "instruction_page_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            14,
+            15,
+            21,
+            86,
+            90,
+            92,
+            94,
+            95
+          ],
+          "guide_languages": {
+            "pages": 13,
+            "letters_by_language": {
+              "en": 3862,
+              "ru": 8677
+            },
+            "present": [
+              "en",
+              "ru"
+            ],
+            "russian_present": true,
+            "russian_instruction_markers": 8,
+            "russian_instruction": true
+          }
+        },
+        "sha256": "dc8b236b5d26e53d912fbdc4e06c2cbe7b9abe9a9a31a0ce4f70d090f902fd9b",
+        "file": "dc8b236b5d26e53d912fbdc4e06c2cbe7b9abe9a9a31a0ce4f70d090f902fd9b.pdf",
+        "guide_headings": [
+          "User Manual",
+          "User Manual"
+        ]
+      }
+    ],
+    "verified_documents": [
+      "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/Z30_Cordless_Stick_Vacuum.pdf?v=1743129525"
+    ],
+    "manual_status": "Проверена",
+    "published_identity_fields": [
+      {
+        "name": "Dreame Z30 Cordless Stick Vacuum",
+        "model": null,
+        "sku": "010101AH000469",
+        "productID": 8876469092557
+      }
+    ],
+    "pdp_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+    "native_media_inventory": [
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/Z30_e8f26088-6f43-4ead-a2e9-922ac46f7b07_800x.jpg?v=1746613200",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/1-_-800-800-2_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/2-UnleashRemarkable310AWSuction_a10a9328-e309-4496-9b89-72e4daccec9a_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/3-99.99_Whole-MachineHEPA_a563edf3-b93b-4a24-ad4d-f50889333cca_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/4-SmartDirtDetection_538b20b6-4235-4ad6-a492-0fad6fcca564_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/5-CelesTect_Exposes_d1ab978a-3480-406f-9f00-784ffc26ddf6_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/6-Dual-FunctionPetDesheddingTool_db12e41c-ec8f-448e-ac13-b11986e1215b_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/7-ConsistentWholeHouseCleaning_38ed6c3e-af76-47fb-a242-5eded63833bd_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/8-What_sintheBox_d0f14d2b-5df9-4394-8e25-98da7237c28b_4x4.jpg?v=1749199464",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/extensions/01a0cf82-6169-7e5e-8360-6f8485a2070f/pay-with-flex-52/assets/illustration-pay-another-way.svg",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/extensions/01a0cf82-6169-7e5e-8360-6f8485a2070f/pay-with-flex-52/assets/illustration-payment-selector.svg",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/extensions/01a0cf82-6169-7e5e-8360-6f8485a2070f/pay-with-flex-52/assets/illustration-eligibility.svg",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/extensions/01a0cf82-6169-7e5e-8360-6f8485a2070f/pay-with-flex-52/assets/illustration-card-form.svg",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/image_1_1600x.png?v=1742809971",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/output_0c970791-79e7-485b-9710-e33ffd1d2752_1600x.png?v=1747819898",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/DreameZ20Z30RotatingSoftDustingBrushKit_1600x.png?v=1747820083",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/image_1_1600x.png?v=1742809971",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/output_0c970791-79e7-485b-9710-e33ffd1d2752_1600x.png?v=1747819898",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/DreameZ20Z30RotatingSoftDustingBrushKit_1600x.png?v=1747820083",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0584/7508/6033/files/Arrow_Forward_1.png?v=1691656973",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/image_1_1600x.png?v=1742809971",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/output_0c970791-79e7-485b-9710-e33ffd1d2752_1600x.png?v=1747819898",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/DreameZ20Z30RotatingSoftDustingBrushKit_1600x.png?v=1747820083",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/Group_3859.svg?v=1692259672",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/Group_3885.png?v=1695007421",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/Group_3889.svg?v=1692259672",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/Frame_1_75a85c19-05f7-4879-9a78-e6b8b4c8a79d.png?v=1720685602",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_2_1600x.png?v=1718078226",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_5_1600x.png?v=1718186202",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_4_1600x.png?v=1718078214",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_1_1600x.jpg?v=1718186186",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_6_1600x.png?v=1718078212",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_2_1600x.jpg?v=1718186186",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_10_1600x.png?v=1718681737",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_3_1600x.jpg?v=1718186189",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_16_1600x.png?v=1718078205",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_4_1600x.jpg?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_13_1600x.png?v=1718681656",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_5_1600x.jpg?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_14_1600x.png?v=1718681202",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_6_1600x.jpg?v=1718186188",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_1_1600x.png?v=1718078198",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_7_1600x.jpg?v=1718186188",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_13_1600x.png?v=1718681131",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_8_1600x.jpg?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_4_1600x.png?v=1718078214",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_1_1600x.jpg?v=1718186186",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_6_1600x.png?v=1718078212",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_2_1600x.jpg?v=1718186186",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_10_1600x.png?v=1718681737",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_3_1600x.jpg?v=1718186189",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_16_1600x.png?v=1718078205",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_4_1600x.jpg?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_13_1600x.png?v=1718681656",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_5_1600x.jpg?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_14_1600x.png?v=1718681202",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_6_1600x.jpg?v=1718186188",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_1_1600x.png?v=1718078198",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_7_1600x.jpg?v=1718186188",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_13_1600x.png?v=1718681131",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_8_1600x.jpg?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-lp-frame1_1600x.webp?v=1739178570",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-lp-frame_1600x.webp?v=1739178570",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-lp-frame1_1600x.webp?v=1739178570",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-lp-frame_1600x.webp?v=1739178570",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/z30-icon3.png?v=1718096174",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/HEPA_14.png?v=1718097367",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_3_1600x.png?v=1718078217",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_16_1_1600x.png?v=1718186201",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/z30-vector1_3.png?v=1718353291",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/z30-vector1_1.png?v=1718353292",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/z30-vector1_2.png?v=1718353292",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_2_1600x.png?v=1718078221",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_2_1600x.png?v=1718186193",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1600x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1600x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1600x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1600x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1600x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1600x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_7_1600x.png?v=1718078212",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_10_1600x.jpg?v=1718186192",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_1_1600x.png?v=1718078204",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_11_1600x.jpg?v=1718186193",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_8_1600x.png?v=1718078212",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_9_1600x.jpg?v=1718186193",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/z30-icon2.png?v=1718096168",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/z30-icon1.png?v=1718096161",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_3_1600x.png?v=1718078219",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_12_1600x.png?v=1718186202",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_9_1600x.png?v=1718078220",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_8_1600x.png?v=1718186194",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_6_1600x.png?v=1718078220",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_4_1600x.png?v=1718186195",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_7_1600x.png?v=1720165518",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_14_1_1600x.png?v=1718186197",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_7_1600x.png?v=1720165518",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_14_1_1600x.png?v=1718186197",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_3_1600x.png?v=1720165585",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_3_1600x.png?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_3_1600x.png?v=1720165585",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_3_1600x.png?v=1718186190",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_4_1600x.png?v=1718078210",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_15_1600x.png?v=1718186202",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_2_1600x.png?v=1718078204",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_10_1600x.png?v=1718186201",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_5_1600x.png?v=1718078203",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_7_1600x.png?v=1718186191",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_15_1600x.png?v=1718078204",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_13_1600x.png?v=1718186202",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_11_1600x.png?v=1718078204",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_9_1600x.png?v=1718186201",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame1_1600x.png?v=1718086379",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_11_1600x.png?v=1718186202",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_14_1600x.png?v=1718078205",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_12_1600x.jpg?v=1718186193",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0553/1320/3405/files/484eacd4c8e88883ca44675021e6ba83.png?v=1719909659",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_12_1600x.png?v=1718078201",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_13_1600x.jpg?v=1718186194",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_8_1600x.png?v=1718078203",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_14_1600x.jpg?v=1718186196",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_15_1600x.png?v=1718078226",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-frame_1_1600x.png?v=1718186199",
+        "role": "feature_visual",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_16_1600x.png?v=1720168245",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_9_1600x.png?v=1718078211",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_5_1600x.png?v=1718078202",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_8_1600x.png?v=1718611019",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_10_1600x.png?v=1718078203",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_1_1600x.png?v=1718078211",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_6_1600x.png?v=1718360078",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_9_1600x.png?v=1718078202",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_11_1600x.png?v=1718360096",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_4_1600x.png?v=1718078202",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_7_1600x.png?v=1718078202",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame3_5_1600x.png?v=1718078211",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame2_12_1600x.png?v=1718078202",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-pc-frame_16_1600x.png?v=1720168245",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shopifycloud/storefront/assets/no-image-2048-a2addb12_1200x.gif",
+        "role": "placeholder",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.png?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.png?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.jpg?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.jpg?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_2_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.jpg?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_1_1600x.jpg?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_6_1600x.png?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_6_1600x.png?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_7_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_7_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_5_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_5_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_4_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_4_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_3_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_3_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_8_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_8_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_9_1600x.png?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_9_1600x.png?v=1718689657",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_10_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/z30-m-framea1_10_1600x.png?v=1718689658",
+        "role": "package_inventory",
+        "accepted": false
+      }
+    ],
+    "native_feature_headings": [
+      "Checkout With Your HSA/FSA",
+      "Z30",
+      "Unleash Remarkable 310AW* Suction",
+      "HEPA Filtration \nLocks in Dust and viruses",
+      "Smart Reaction for \nEvery Cleaning Track",
+      "Effective Whole House Cleaning",
+      "Clean-to-Edge™ Soft Roller \nBrush with CelesTect™",
+      "Comb and Clean \nBefore Deshedding",
+      "Easy Operation and Maintenance",
+      "One Press to Dump Dirt",
+      "Removable\nDust Cup",
+      "Washable \nComponents",
+      "Hassle-Free Storage",
+      "Package List",
+      "Z30",
+      "Package List",
+      "Z30",
+      "Frequently Asked Questions",
+      "Customer Reviews"
+    ],
+    "captures": [
+      {
+        "url": "https://global.dreametech.com/products/z30",
+        "final_url": "https://global.dreametech.com/products/z30",
+        "sha256": "05bb50108b91cef920affcadca973f4a4a8a284cae7c0415b4043d8954921c41",
+        "file": "05bb50108b91cef920affcadca973f4a4a8a284cae7c0415b4043d8954921c41.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:58a7b5f6ade24d4f938f0935ce298b6f"
+      },
+      {
+        "url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "final_url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "sha256": "94533fd5aed9cb02d08cdeda46fbb807cba126bda8c3ac09ca0c8479707247e0",
+        "file": "94533fd5aed9cb02d08cdeda46fbb807cba126bda8c3ac09ca0c8479707247e0.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:58a7b5f6ade24d4f938f0935ce298b6f"
+      }
+    ],
+    "live_success": true,
+    "observation": "live_browser",
+    "access_issues": [],
+    "input_configuration_original_values": [
+      "Dreame",
+      "Z30",
+      "Dreame Z30 [region=Global]",
+      "Вертикальные пылесосы"
+    ],
+    "image_measurements": [
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/Z30_e8f26088-6f43-4ead-a2e9-922ac46f7b07.jpg?v=1746613200&width=1024",
+        "accepted_identity": true,
+        "identity_scope": "model",
+        "supplier_color_relation": "unproven",
+        "width": 1024,
+        "height": 1024,
+        "size_bytes": 58210,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "f5779e651486c1ad2782c5f5be047c5a35641b25d783b93d51cd6fb9bd6ecee0"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/Z30_e8f26088-6f43-4ead-a2e9-922ac46f7b07_1200x1200.jpg?v=1746613200",
+        "accepted_identity": true,
+        "identity_scope": "model",
+        "supplier_color_relation": "unproven",
+        "width": 1200,
+        "height": 1200,
+        "size_bytes": 78604,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "fb22fa758f7f8f90d4e40b63a9acf892a05e25696222398c3b5fe778568218bd"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/1-_-800-800-2_1200x1200.jpg?v=1749199464",
+        "accepted_identity": true,
+        "identity_scope": "model",
+        "supplier_color_relation": "unproven",
+        "width": 800,
+        "height": 800,
+        "size_bytes": 70017,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "1c29d30f71fd55c9179e67b2a4198b3a095c2b2bfb3127c3a082f9e9eab77f24"
+      },
+      {
+        "url": "https://www.dreametech.com/cdn/shop/files/2-UnleashRemarkable310AWSuction_a10a9328-e309-4496-9b89-72e4daccec9a_1200x1200.jpg?v=1749199464",
+        "accepted_identity": true,
+        "identity_scope": "model",
+        "supplier_color_relation": "unproven",
+        "width": 800,
+        "height": 800,
+        "size_bytes": 73724,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "c6f9bac8dbdf68d39af47f6b472212705eb5aeb39d928fc3af8cc0b8a17d888e"
+      }
+    ],
+    "model_gallery_assets": [
+      "ff6c94a8e5e4db6894ec8f80",
+      "ec6c1f990a8e2bb952110bf4",
+      "83f4dcc74f5aa73e89af7766",
+      "b2696c651f186883ad746805"
+    ]
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "input_configuration": {
+        "region": "Global"
+      },
+      "provider": "normalization",
+      "query": "Z30",
+      "query_variants": [
+        "Z30",
+        "Dreame Z30"
+      ],
+      "reason": "Supplier identifier separate from exact model query",
+      "region": "",
+      "source_type": "query_variants",
+      "timestamp": "2026-10-11T00:45:20+00:00",
+      "url": ""
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "regional_catalog",
+      "query": "Dreame Z30",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "catalog",
+      "timestamp": "2026-10-11T00:45:20+00:00",
+      "url": "https://global.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://global.dreametech.com/products/z30"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_catalog",
+      "query": "Dreame Z30",
+      "reason": "Published links rank only; Product/title proves model",
+      "region": "Global",
+      "source_type": "candidate_inventory",
+      "timestamp": "2026-10-11T00:45:21+00:00",
+      "url": "https://global.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:45:26+00:00",
+        "counts": {
+          "blocked_font_requests": 11,
+          "blocked_image_requests": 165,
+          "document_bytes": 1081236,
+          "document_requests": 4,
+          "document_status": 200,
+          "javascript_errors": 19,
+          "navigations": 1,
+          "network_requests": 113,
+          "other_requests": 26,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&display=swap"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.ads-twitter.com/uwt.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_4c1518eb-cdc3-48d0-bc6f-6077ed1bb357.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_a6d7fa39-5e8d-41c0-bf7f-bd6f5e56d265.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/85b81cf2d66ba83fce4d04281053bbc4.png?v=1657594215"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/4A236476-B972-4dca-82A7-C6BDE4202C4D.png?v=1640164720"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://jsonip.com/?callback=jQuery33109873073461868086_1791679523358&_=1791679523359"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://unpkg.com/swiper@8.4.7/swiper-bundle.esm.browser.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://unpkg.com/gsap@3.12.5/index.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://unpkg.com/gsap@3.12.5/ScrollTrigger.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://init.grizzlyapps.com/9e32c84f0db4f7b1eb40c32bdb0bdea9"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-697091658"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_install_check?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/logs"
+            }
+          ],
+          "resource_attempts": 289,
+          "script_xhr_fetch_requests": 55,
+          "stylesheet_requests": 28
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/products/z30"
+          }
+        ],
+        "session_id": "public_browser:58a7b5f6ade24d4f938f0935ce298b6f",
+        "sha256": "05bb50108b91cef920affcadca973f4a4a8a284cae7c0415b4043d8954921c41",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/products/z30",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "navigation_warning": "",
+      "observation": "live_browser",
+      "provider": "official_pdp",
+      "query": "Dreame Z30",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "pdp",
+      "timestamp": "2026-10-11T00:45:26+00:00",
+      "url": "https://global.dreametech.com/products/z30"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_pdp",
+      "query": "Dreame Z30",
+      "reason": "Exact official Dreame model not proven",
+      "region": "Global",
+      "source_type": "identity",
+      "timestamp": "2026-10-11T00:45:27+00:00",
+      "url": "https://global.dreametech.com/products/z30"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "regional_catalog",
+      "query": "Dreame Z30",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "US",
+      "source_type": "catalog",
+      "timestamp": "2026-10-11T00:45:27+00:00",
+      "url": "https://www.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_sitemap",
+      "query": "Dreame Z30",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "US",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-11T00:45:27+00:00",
+      "url": "https://www.dreametech.com/sitemap.xml"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_sitemap",
+      "query": "Dreame Z30",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "US",
+      "source_type": "product_sitemap",
+      "timestamp": "2026-10-11T00:45:27+00:00",
+      "url": "https://www.dreametech.com/sitemap_products_1.xml?from=6964937097421&to=15352534434164"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://www.dreametech.com/products/z30-cordless-stick-vacuum"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_catalog",
+      "query": "Dreame Z30",
+      "reason": "Published links rank only; Product/title proves model",
+      "region": "US",
+      "source_type": "candidate_inventory",
+      "timestamp": "2026-10-11T00:45:27+00:00",
+      "url": "https://www.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:45:34+00:00",
+        "counts": {
+          "blocked_font_requests": 17,
+          "blocked_image_requests": 96,
+          "blocked_media_requests": 8,
+          "document_bytes": 2640369,
+          "document_requests": 17,
+          "document_status": 200,
+          "javascript_errors": 49,
+          "navigations": 1,
+          "network_requests": 200,
+          "other_requests": 44,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/fec/produce"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://asset.fwcdn3.com/js/module/integrations/shopify.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://asset.fwcdn3.com/js/module/fwn.js?business_id=gM2mKv"
+            },
+            {
+              "method": "GET",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/cart.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://shop.app/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=10846413&shop_id=55313203405"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://app-cdn.productcustomizer.com/assets/storefront/product-customizer-v2-7a947db4b8ccdea29d3c7ba133b8b0772622fea3a73b473997357e4d12e8aa8e.js?shop=dreame-us.myshopify.com"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://d1v2u6by4izioz.cloudfront.net/e99ca47bc67c5a965f2a79618180ba22.min.js?o=Njg3OQ%3D%3D"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://limits.minmaxify.com/dreame-us.myshopify.com?v=142c&r=20260311081544"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.zdassets.com/ekr/snippet.js?key=598ae28a-4932-4d4c-a755-43c5f132ee89"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=ThvPey"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://a.klaviyo.com/media/js/onsite/onsite.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.afterpay.com/shopify-afterpay-javascript.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.loloyal.com/loloyal-cend/widget/boom-cend-widget.js?v=1790753915340"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-MRWTNSKM"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://bundler.nice-team.net/app/shop/status/dreame-us.myshopify.com.js?1791679531="
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.hotjar.com/c/hotjar-5134786.js?sv=6"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.growave.io/growave-build/main.2de350f8.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://shop.app/[redacted]"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.notify-me.io/sdk.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://cdnwidget.judge.me/loader.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://dtc.mblock.cc/shopify/ip"
+            },
+            {
+              "method": "GET",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/cart.js"
+            }
+          ],
+          "resource_attempts": 455,
+          "script_xhr_fetch_requests": 112,
+          "stylesheet_requests": 27
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum"
+          }
+        ],
+        "session_id": "public_browser:58a7b5f6ade24d4f938f0935ce298b6f",
+        "sha256": "94533fd5aed9cb02d08cdeda46fbb807cba126bda8c3ac09ca0c8479707247e0",
+        "status_code": 200,
+        "url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "navigation_warning": "",
+      "observation": "live_browser",
+      "provider": "official_pdp",
+      "query": "Dreame Z30",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "US",
+      "source_type": "pdp",
+      "timestamp": "2026-10-11T00:45:34+00:00",
+      "url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum"
+    },
+    {
+      "accepted": true,
+      "event": "dreame_discovery",
+      "identity_relation": "model_confirmed",
+      "provider": "official_pdp",
+      "query": "Dreame Z30",
+      "reason": "Exact official model; supplier configuration separate",
+      "region": "US",
+      "source_type": "identity",
+      "timestamp": "2026-10-11T00:45:36+00:00",
+      "url": "https://www.dreametech.com/products/z30-cordless-stick-vacuum"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_support",
+      "query": "Dreame Z30",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "manual_inventory",
+      "timestamp": "2026-10-11T00:45:36+00:00",
+      "url": "https://global.dreametech.com/pages/user-manuals-and-faqs"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_support",
+      "query": "Dreame Z30",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "model_manual_page",
+      "timestamp": "2026-10-11T00:45:37+00:00",
+      "url": "https://global.dreametech.com/pages/z30-user-manual"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/Z30_Cordless_Stick_Vacuum.pdf?v=1743129525",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/V2406-_-_UKRAINIAN.pdf?v=1748421149",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/V2406.pdf?v=1754641943",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/Z30_8e55b63d-2cce-438c-8093-87c7f723d04a.pdf?v=1776502329",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/V2406_7a89a2e7-24fc-49d8-9c22-26ed61203a42.pdf?v=1778219959"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support",
+      "query": "Dreame Z30",
+      "reason": "Exact model labels; type/language from document",
+      "region": "Global",
+      "source_type": "manual_inventory",
+      "timestamp": "2026-10-11T00:45:37+00:00",
+      "url": "https://global.dreametech.com/pages/user-manuals-and-faqs"
+    }
+  ],
+  "total_navigations": 33,
+  "active_stops_after": {}
+}

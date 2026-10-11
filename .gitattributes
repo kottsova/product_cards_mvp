@@ -90,3 +90,10 @@ product_tool/web.py text eol=crlf
 product_tool/worker.py text eol=crlf
 product_tool/xiaomi_pipeline.py text eol=lf
 tests/test_dreame_stage76.py text eol=lf
+
+# Stage 77 public live DOM/gallery/manual artifacts retain exact bytes.
+reports/dreame_stage77/** -text
+tests/test_dreame_stage77.py text eol=lf
+
+# Native DOM captures are byte evidence, not hand-authored diffs.
+reports/dreame_stage77/**/captures/*.html -diff

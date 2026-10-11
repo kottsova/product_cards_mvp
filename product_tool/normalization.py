@@ -289,6 +289,11 @@ def normalize_value(name: str, value: str, *, value_cell: bool | None = None) ->
                                   (canonical_name in {"true_steam", "smart_diagnosis"} or
                                    re.search(r"налич|функц|поддерж", name, re.I))):
         return "false", "bool"
+    # A grouped comma before an explicit RPM unit denotes thousands. Keep
+    # decimal commas (1,5 RPM), zero-leading fractions and other units intact.
+    grouped_rpm = re.fullmatch(r"([1-9]\d{0,2}(?:,\d{3})+(?:\.\d+)?)\s*rpm", folded)
+    if grouped_rpm:
+        return _format_decimal(Decimal(grouped_rpm.group(1).replace(",", ""))), "rpm"
     if canonical_name == "max_rpm":
         rpm = re.search(r"\d+(?:[.,]\d+)?", folded)
         if rpm:

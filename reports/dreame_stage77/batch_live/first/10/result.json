@@ -1,0 +1,1504 @@
+{
+  "id": 10,
+  "input": {
+    "id": 10,
+    "brand": "Dreame",
+    "article": "X40 Master",
+    "model": "Dreame X40 Master",
+    "name": "Dreame X40 Master [region=Global;bundle=Water hookup station]",
+    "category": "Роботы-пылесосы",
+    "input_configuration": {
+      "region": "Global",
+      "bundle": "Water hookup station"
+    },
+    "supplier_sku": null,
+    "source_of_input": "Stage 76 model audit inputs chosen from official published navigation; not a supplied commercial order"
+  },
+  "session_id": "public_browser:ee6b8970c7354edc8a34190700f84ea8",
+  "seconds": 36.31,
+  "job": {
+    "id": "b087181b4abb45f1b79e944bd75e1e80",
+    "product_id": 10,
+    "status": "needs_review",
+    "current_stage": null,
+    "message": "Dreame: Не готова. Инструкция не проверена; Проверка официального источника остановлена техническим ограничением доступа; отсутствие товара или данных не установлено",
+    "created_at": "2026-10-11T00:12:20+00:00",
+    "updated_at": "2026-10-11T00:12:56+00:00",
+    "started_at": "2026-10-11T00:12:20+00:00",
+    "finished_at": "2026-10-11T00:12:56+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "sources": [
+    {
+      "id": 10,
+      "product_id": 10,
+      "source_key": "dreame_model",
+      "site_name": "Dreame Official",
+      "url": "",
+      "found_model": "",
+      "match_level": "unknown",
+      "evidence": "",
+      "fetched_at": "2026-10-11T00:12:48+00:00",
+      "error": "Official source check stopped by a technical access limitation; product absence not established",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [],
+  "resolved": [],
+  "photos": [],
+  "documents": [],
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "official_access_limited"
+    ],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified",
+      "official_access_limited"
+    ],
+    "confirmed_specs": 0,
+    "identity": {
+      "model": "Dreame X40 Master",
+      "model_relation": "unproven",
+      "readiness_scope": "model",
+      "source_region": "",
+      "retail_sku": null,
+      "configuration_relation": "input_only",
+      "identifier_kind": "marketing_model"
+    },
+    "readiness_scope": "model",
+    "input_configuration": {
+      "region": "Global",
+      "bundle": "Water hookup station"
+    },
+    "exact_identity": false,
+    "conflicts": 0,
+    "manual_status": "Не проверена"
+  },
+  "evidence": {
+    "identity": {
+      "model": "Dreame X40 Master",
+      "model_relation": "unproven",
+      "readiness_scope": "model",
+      "source_region": "",
+      "retail_sku": null,
+      "configuration_relation": "input_only",
+      "identifier_kind": "marketing_model"
+    },
+    "input_configuration": {
+      "region": "Global",
+      "bundle": "Water hookup station"
+    },
+    "requested_configuration": {
+      "region": "Global",
+      "bundle": "Water hookup station"
+    },
+    "raw_specs": [],
+    "original_raw_specs": [],
+    "accepted_specs": [],
+    "rejected_specs": [],
+    "model_gallery_candidates": [],
+    "model_numbers": [],
+    "manuals": [],
+    "verified_documents": [],
+    "manual_status": "Не проверена",
+    "published_identity_fields": [],
+    "pdp_url": "",
+    "captures": [
+      {
+        "url": "https://global.dreametech.com/products/x40-master",
+        "final_url": "https://global.dreametech.com/products/x40-master",
+        "sha256": "1759cdda08031ad3e06aa2fafd87052e229ce4a972c263792749b23824d0f039",
+        "file": "1759cdda08031ad3e06aa2fafd87052e229ce4a972c263792749b23824d0f039.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:ee6b8970c7354edc8a34190700f84ea8"
+      },
+      {
+        "url": "https://www.dreametech.com/products/x40-master-robot-vacuum",
+        "final_url": "https://www.dreametech.com/products/x40-master-robot-vacuum",
+        "sha256": "ff619e125e733175b6af330142bd8ff927f6746aa1a5354c081e36a5b3295038",
+        "file": "ff619e125e733175b6af330142bd8ff927f6746aa1a5354c081e36a5b3295038.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:ee6b8970c7354edc8a34190700f84ea8"
+      },
+      {
+        "url": "https://global.dreametech.com/pages/x40-master-user-manual-1",
+        "final_url": "https://global.dreametech.com/pages/x40-master-user-manual-1",
+        "sha256": "c63e79ccef2d958c40a3b125aafc1548da71446d939e786d25026f632b967118",
+        "file": "c63e79ccef2d958c40a3b125aafc1548da71446d939e786d25026f632b967118.html",
+        "observation": "live_browser",
+        "session_id": "public_browser:ee6b8970c7354edc8a34190700f84ea8"
+      }
+    ],
+    "live_success": false,
+    "observation": "live_browser",
+    "access_issues": [
+      {
+        "url": "https://de.dreametech.com/",
+        "host": "de.dreametech.com",
+        "status": "projection_budget_exhausted",
+        "counts": {
+          "resource_attempts": 337,
+          "network_requests": 200,
+          "other_requests": 58,
+          "rejected_requests": [
+            {
+              "url": "https://www.dreametech.com/api/collect",
+              "method": "POST",
+              "resource_type": "fetch",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+              "method": "POST",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.dreametech.com/.well-known/shopify/fec/produce",
+              "method": "POST",
+              "resource_type": "ping",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch",
+              "method": "POST",
+              "resource_type": "fetch",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://www.dreametech.com/api/collect",
+              "method": "POST",
+              "resource_type": "fetch",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch",
+              "method": "POST",
+              "resource_type": "ping",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://extensions.shopifycdn.com/shopifycloud/checkout-web/assets/c1/polyfills-entry-modern.70q66_NX.worker.js",
+              "method": "GET",
+              "resource_type": "other",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://fonts.googleapis.com/css2?family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&display=swap",
+              "method": "GET",
+              "resource_type": "stylesheet",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://ds0wlyksfn0sb.cloudfront.net/redirect.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://de.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch",
+              "method": "POST",
+              "resource_type": "ping",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://de.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch",
+              "method": "POST",
+              "resource_type": "ping",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://static.zdassets.com/ekr/snippet.js?key=d3bf0310-24f8-414a-b913-95d2ef28b92f",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://ad4m.at/bice7ao1.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://static.afterpay.com/shopify-afterpay-javascript.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-11275959485",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-10777706706",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-330842527",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://tools.luckyorange.com/core/lo.js?site-id=efd67023",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.codeblackbelt.com/widgets/frequently-bought-together/bootstrap.min.js?version=2026101102+0200",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.codeblackbelt.com/widgets/also-bought/bootstrap.min.js?version=2026101102+0200",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://static.klaviyo.com/onsite/js/YbASGz/klaviyo.js?company_id=YbASGz",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.506.io/eg/script.js?shop=dreame-germany.myshopify.com&v=12",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.dwin1.com/19038.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.clarity.ms/tag/wn9fvguhrp",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P9LDQ5Z",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "navigations": 1,
+          "document_requests": 13,
+          "script_xhr_fetch_requests": 91,
+          "stylesheet_requests": 38,
+          "blocked_image_requests": 92,
+          "javascript_errors": 43,
+          "blocked_font_requests": 9,
+          "blocked_media_requests": 16,
+          "document_status": 200,
+          "document_bytes": 6231184
+        }
+      }
+    ],
+    "manual_inventory_reason": "Published PDF check limited: Network request failed",
+    "input_configuration_original_values": [
+      "Dreame",
+      "X40 Master",
+      "Dreame X40 Master [region=Global;bundle=Water hookup station]",
+      "Роботы-пылесосы"
+    ],
+    "image_measurements": [],
+    "model_gallery_assets": [],
+    "dealer_fallback": {
+      "accepted": false,
+      "url": "",
+      "reason": "Нет проверенного дилерского URL для «Dreame Dreame X40 Master [region=Global;bundle=Water hookup station]» (артикул X40 MASTER). Не хватает: official_access_limited. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "match_level": "dealer_url_needed"
+    }
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "input_configuration": {
+        "bundle": "Water hookup station",
+        "region": "Global"
+      },
+      "provider": "normalization",
+      "query": "X40 MASTER",
+      "query_variants": [
+        "X40 MASTER",
+        "Dreame X40 Master",
+        "X40 Master"
+      ],
+      "reason": "Supplier identifier separate from exact model query",
+      "region": "",
+      "source_type": "query_variants",
+      "timestamp": "2026-10-11T00:12:20+00:00",
+      "url": ""
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "regional_catalog",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "catalog",
+      "timestamp": "2026-10-11T00:12:20+00:00",
+      "url": "https://global.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://global.dreametech.com/products/x40-master"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_catalog",
+      "query": "Dreame X40 Master",
+      "reason": "Published links rank only; Product/title proves model",
+      "region": "Global",
+      "source_type": "candidate_inventory",
+      "timestamp": "2026-10-11T00:12:20+00:00",
+      "url": "https://global.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:12:25+00:00",
+        "counts": {
+          "blocked_font_requests": 12,
+          "blocked_image_requests": 173,
+          "blocked_media_requests": 8,
+          "document_bytes": 1118417,
+          "document_requests": 4,
+          "document_status": 200,
+          "javascript_errors": 20,
+          "navigations": 1,
+          "network_requests": 99,
+          "other_requests": 11,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&display=swap"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.ads-twitter.com/uwt.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_4c1518eb-cdc3-48d0-bc6f-6077ed1bb357.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_a6d7fa39-5e8d-41c0-bf7f-bd6f5e56d265.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/85b81cf2d66ba83fce4d04281053bbc4.png?v=1657594215"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/4A236476-B972-4dca-82A7-C6BDE4202C4D.png?v=1640164720"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://jsonip.com/?callback=jQuery331006504388544097495_1791677543024&_=1791677543025"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.youtube.com/iframe_api"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/OPPOSans-M.ttf?v=1648111015"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/Roboto-Light.ttf?v=1648111015"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/OPPOSans-H.ttf?v=1648111015"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/Roboto-Regular.ttf?v=1648111015"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/Roboto-Bold.ttf?v=1664525932"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-697091658"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            }
+          ],
+          "resource_attempts": 292,
+          "script_xhr_fetch_requests": 56,
+          "stylesheet_requests": 28
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/products/x40-master"
+          }
+        ],
+        "session_id": "public_browser:ee6b8970c7354edc8a34190700f84ea8",
+        "sha256": "1759cdda08031ad3e06aa2fafd87052e229ce4a972c263792749b23824d0f039",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/products/x40-master",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_pdp",
+      "query": "Dreame X40 Master",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "pdp",
+      "timestamp": "2026-10-11T00:12:25+00:00",
+      "url": "https://global.dreametech.com/products/x40-master"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_pdp",
+      "query": "Dreame X40 Master",
+      "reason": "Exact official Dreame model not proven",
+      "region": "Global",
+      "source_type": "identity",
+      "timestamp": "2026-10-11T00:12:26+00:00",
+      "url": "https://global.dreametech.com/products/x40-master"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "regional_catalog",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "US",
+      "source_type": "catalog",
+      "timestamp": "2026-10-11T00:12:26+00:00",
+      "url": "https://www.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_sitemap",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "US",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-11T00:12:27+00:00",
+      "url": "https://www.dreametech.com/sitemap.xml"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_sitemap",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "US",
+      "source_type": "product_sitemap",
+      "timestamp": "2026-10-11T00:12:27+00:00",
+      "url": "https://www.dreametech.com/sitemap_products_1.xml?from=6964937097421&to=15352534434164"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://www.dreametech.com/products/x40-master-robot-vacuum"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_catalog",
+      "query": "Dreame X40 Master",
+      "reason": "Published links rank only; Product/title proves model",
+      "region": "US",
+      "source_type": "candidate_inventory",
+      "timestamp": "2026-10-11T00:12:27+00:00",
+      "url": "https://www.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:12:35+00:00",
+        "counts": {
+          "blocked_font_requests": 16,
+          "blocked_image_requests": 51,
+          "blocked_media_requests": 4,
+          "document_bytes": 2584488,
+          "document_requests": 17,
+          "document_status": 200,
+          "javascript_errors": 48,
+          "navigations": 1,
+          "network_requests": 200,
+          "other_requests": 51,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/fec/produce"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://asset.fwcdn3.com/js/module/integrations/shopify.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://asset.fwcdn3.com/js/module/fwn.js?business_id=gM2mKv"
+            },
+            {
+              "method": "GET",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/cart.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://shop.app/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=10846413&shop_id=55313203405"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://app-cdn.productcustomizer.com/assets/storefront/product-customizer-v2-7a947db4b8ccdea29d3c7ba133b8b0772622fea3a73b473997357e4d12e8aa8e.js?shop=dreame-us.myshopify.com"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://d1v2u6by4izioz.cloudfront.net/e99ca47bc67c5a965f2a79618180ba22.min.js?o=Njg3OQ%3D%3D"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://limits.minmaxify.com/dreame-us.myshopify.com?v=142c&r=20260311081544"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.zdassets.com/ekr/snippet.js?key=598ae28a-4932-4d4c-a755-43c5f132ee89"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=ThvPey"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://a.klaviyo.com/media/js/onsite/onsite.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.afterpay.com/shopify-afterpay-javascript.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.loloyal.com/loloyal-cend/widget/boom-cend-widget.js?v=1790753915340"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-MRWTNSKM"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://bundler.nice-team.net/app/shop/status/dreame-us.myshopify.com.js?1791677550="
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.hotjar.com/c/hotjar-5134786.js?sv=6"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=GT-5NTRMF5V"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.growave.io/growave-build/main.2de350f8.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            }
+          ],
+          "resource_attempts": 392,
+          "script_xhr_fetch_requests": 110,
+          "stylesheet_requests": 22
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://www.dreametech.com/products/x40-master-robot-vacuum"
+          }
+        ],
+        "session_id": "public_browser:ee6b8970c7354edc8a34190700f84ea8",
+        "sha256": "ff619e125e733175b6af330142bd8ff927f6746aa1a5354c081e36a5b3295038",
+        "status_code": 200,
+        "url": "https://www.dreametech.com/products/x40-master-robot-vacuum",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_pdp",
+      "query": "Dreame X40 Master",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "US",
+      "source_type": "pdp",
+      "timestamp": "2026-10-11T00:12:35+00:00",
+      "url": "https://www.dreametech.com/products/x40-master-robot-vacuum"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_pdp",
+      "query": "Dreame X40 Master",
+      "reason": "Exact official Dreame model not proven",
+      "region": "US",
+      "source_type": "identity",
+      "timestamp": "2026-10-11T00:12:36+00:00",
+      "url": "https://www.dreametech.com/products/x40-master-robot-vacuum"
+    },
+    {
+      "accepted": false,
+      "access_issue": {
+        "counts": {
+          "blocked_font_requests": 9,
+          "blocked_image_requests": 92,
+          "blocked_media_requests": 16,
+          "document_bytes": 6231184,
+          "document_requests": 13,
+          "document_status": 200,
+          "javascript_errors": 43,
+          "navigations": 1,
+          "network_requests": 200,
+          "other_requests": 58,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/fec/produce"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://www.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://www.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "other",
+              "url": "https://extensions.shopifycdn.com/shopifycloud/checkout-web/assets/c1/polyfills-entry-modern.70q66_NX.worker.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://ds0wlyksfn0sb.cloudfront.net/redirect.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://de.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://de.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.zdassets.com/ekr/snippet.js?key=d3bf0310-24f8-414a-b913-95d2ef28b92f"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://ad4m.at/bice7ao1.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.afterpay.com/shopify-afterpay-javascript.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-11275959485"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-10777706706"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtag/js?id=AW-330842527"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://tools.luckyorange.com/core/lo.js?site-id=efd67023"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.codeblackbelt.com/widgets/frequently-bought-together/bootstrap.min.js?version=2026101102+0200"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.codeblackbelt.com/widgets/also-bought/bootstrap.min.js?version=2026101102+0200"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.klaviyo.com/onsite/js/YbASGz/klaviyo.js?company_id=YbASGz"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.506.io/eg/script.js?shop=dreame-germany.myshopify.com&v=12"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.dwin1.com/19038.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.clarity.ms/tag/wn9fvguhrp"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P9LDQ5Z"
+            }
+          ],
+          "resource_attempts": 337,
+          "script_xhr_fetch_requests": 91,
+          "stylesheet_requests": 38
+        },
+        "host": "de.dreametech.com",
+        "status": "projection_budget_exhausted",
+        "url": "https://de.dreametech.com/"
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser_failure",
+      "provider": "regional_catalog",
+      "query": "Dreame X40 Master",
+      "reason": "projection_budget_exhausted",
+      "region": "DE",
+      "source_type": "catalog",
+      "timestamp": "2026-10-11T00:12:48+00:00",
+      "url": "https://de.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_sitemap",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "DE",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-11T00:12:48+00:00",
+      "url": "https://de.dreametech.com/sitemap.xml"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_sitemap",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "DE",
+      "source_type": "product_sitemap",
+      "timestamp": "2026-10-11T00:12:48+00:00",
+      "url": "https://de.dreametech.com/sitemap_products_1.xml?from=6689598898385&to=7809479704785"
+    },
+    {
+      "accepted": false,
+      "candidates": [],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_catalog",
+      "query": "Dreame X40 Master",
+      "reason": "Published links rank only; Product/title proves model",
+      "region": "DE",
+      "source_type": "candidate_inventory",
+      "timestamp": "2026-10-11T00:12:48+00:00",
+      "url": "https://de.dreametech.com/"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_support",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "manual_inventory",
+      "timestamp": "2026-10-11T00:12:48+00:00",
+      "url": "https://global.dreametech.com/pages/user-manuals-and-faqs"
+    },
+    {
+      "event": "query_outcome",
+      "outcome": "runtime_unavailable",
+      "provider": "google_old_parser",
+      "query": "site:dreametech.com \"X40 Master\"",
+      "reason": "Error",
+      "timestamp": "2026-10-11T00:12:48.123257+00:00",
+      "url": "https://www.google.com/search?q=site%3Adreametech.com+%22X40+Master%22&hl=en"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "external_browser",
+      "query": "site:dreametech.com \"X40 Master\"",
+      "reason": "runtime_unavailable",
+      "region": "",
+      "source_type": "search",
+      "timestamp": "2026-10-11T00:12:48+00:00",
+      "url": ""
+    },
+    {
+      "accepted": false,
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "catalog_cache",
+      "provider": "official_support",
+      "query": "Dreame X40 Master",
+      "reason": "Same-session navigation cache; PDP always fresh",
+      "region": "Global",
+      "source_type": "manual_inventory",
+      "timestamp": "2026-10-11T00:12:48+00:00",
+      "url": "https://global.dreametech.com/pages/user-manuals-and-faqs"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-11T00:12:53+00:00",
+        "counts": {
+          "blocked_font_requests": 8,
+          "blocked_image_requests": 158,
+          "document_bytes": 732072,
+          "document_requests": 4,
+          "document_status": 200,
+          "javascript_errors": 19,
+          "navigations": 1,
+          "network_requests": 121,
+          "other_requests": 37,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://settings.luckyorange.com/efd67023"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/cart.js"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tracking.aws.judge.me/widgets/track_bulk_events?_events_count=2"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/apps/bloop-gateway/analytic/ingest-events"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/cart.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/apps/bloop-gateway/analytic/ingest-events"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://de.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/logs"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/logs"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&display=swap"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_4c1518eb-cdc3-48d0-bc6f-6077ed1bb357.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/2_a6d7fa39-5e8d-41c0-bf7f-bd6f5e56d265.png?v=1657593950"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/85b81cf2d66ba83fce4d04281053bbc4.png?v=1657594215"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopifycdn.net/s/files/1/0302/5276/1220/files/4A236476-B972-4dca-82A7-C6BDE4202C4D.png?v=1640164720"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.enormapps.com/faq-v2/frontend/js/embed.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://static.ads-twitter.com/uwt.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://jsonip.com/?callback=jQuery33108015525811805487_1791677571273&_=1791677571274"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://tms.hextom.com/tms_load_data?shop=dreame-technology.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://global.dreametech.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://global.dreametech.com/.well-known/shopify/monorail/unstable/produce_batch"
+            }
+          ],
+          "resource_attempts": 287,
+          "script_xhr_fetch_requests": 53,
+          "stylesheet_requests": 27
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://global.dreametech.com/pages/x40-master-user-manual-1"
+          }
+        ],
+        "session_id": "public_browser:ee6b8970c7354edc8a34190700f84ea8",
+        "sha256": "c63e79ccef2d958c40a3b125aafc1548da71446d939e786d25026f632b967118",
+        "status_code": 200,
+        "url": "https://global.dreametech.com/pages/x40-master-user-manual-1",
+        "visible": true
+      },
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_browser",
+      "provider": "official_support",
+      "query": "Dreame X40 Master",
+      "reason": "Fresh visible persistent Chrome DOM; identity checked separately",
+      "region": "Global",
+      "source_type": "model_manual_page",
+      "timestamp": "2026-10-11T00:12:53+00:00",
+      "url": "https://global.dreametech.com/pages/x40-master-user-manual-1"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2465A-X40_Master-EN_DE_FR_IT.pdf?v=1746771616",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2465A-X40_Master-ES_PL_NL.pdf?v=1746771616",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2465A-X40_Master-HE_AR.pdf?v=1746771616",
+        "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R2465A-X40_Master-NO_SV_PT.pdf?v=1746771616"
+      ],
+      "event": "dreame_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support",
+      "query": "Dreame X40 Master",
+      "reason": "Exact model labels; type/language from document",
+      "region": "Global",
+      "source_type": "manual_inventory",
+      "timestamp": "2026-10-11T00:12:54+00:00",
+      "url": "https://global.dreametech.com/pages/user-manuals-and-faqs"
+    },
+    {
+      "accepted": false,
+      "event": "dreame_dealer",
+      "identity_relation": "unproven",
+      "provider": "dns",
+      "query": "X40 MASTER",
+      "reason": "Нет проверенного дилерского URL для «Dreame Dreame X40 Master [region=Global;bundle=Water hookup station]» (артикул X40 MASTER). Не хватает: official_access_limited. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "region": "ru",
+      "source_type": "dealer",
+      "timestamp": "2026-10-11T00:12:56+00:00",
+      "url": ""
+    }
+  ],
+  "total_navigations": 34,
+  "active_stops_after": {}
+}
