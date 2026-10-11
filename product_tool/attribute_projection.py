@@ -154,6 +154,12 @@ def project_final_rows(rows: list[dict[str, Any]], *, exact_ru: bool = False) ->
 def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     rows = jobs.comparison_rows(path, product_id)
     product = jobs.get_product(path, product_id)
+    if product and product['brand'].strip().casefold()=='electrolux':
+        for row in rows:
+            fact=row.get('sources',{}).get('electrolux',{})
+            row['display_name']=fact.get('raw_name') or row['display_name']
+            row['electrolux_presentation']=True
+        return rows
     if product and product['brand'].strip().casefold()=='dreame':
         from .dreame_presentation import project
         return project(rows)

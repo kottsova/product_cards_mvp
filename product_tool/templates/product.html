@@ -2,6 +2,15 @@
 {% block title %}{{ product.name or product.search_code }} · Карточки товаров{% endblock %}
 {% block head %}{% if active %}<meta http-equiv="refresh" content="5">{% endif %}<script src="/static/photo_lightbox.js" defer></script>{% endblock %}
 {% block content %}
+{% if electrolux_evidence %}
+<section class="section" id="electrolux-readiness"><h2>Модель и PNC Electrolux</h2>
+<p>{{ electrolux_evidence.identity.model }}. Готовность: <strong>{{ 'Готова' if electrolux_card.verdict == 'export_ready' else 'Не готова' }}</strong>. Инструкция: {{ electrolux_card.manual_status }}.</p>
+<p>Product code / PNC: {{ electrolux_evidence.identity.product_code or 'Не подтверждён' }}. Регион: {{ electrolux_evidence.identity.region or 'Не подтверждён' }}. Запрошенный PNC: {{ electrolux_evidence.identity.requested_pnc or 'Не задан' }}. Revision: {{ electrolux_evidence.identity.revision or 'Не опубликована' }}.</p>
+<p>{% for gap in electrolux_card.gaps %}{{ electrolux_gaps.get(gap,gap) }}{% if not loop.last %}; {% endif %}{% endfor %}</p>
+<h3>Документы по типам</h3>{% for d in electrolux_evidence.document_inventory %}<p><a href="{{ d.url }}">{{ d.type }}</a> — {{ d.language }}; PNC {{ d.product_code }}; {{ 'Проверен' if d.verified else 'Кандидат / не проверен' }}.</p>{% endfor %}
+<details><summary>Исходные характеристики и кандидаты</summary><table><thead><tr><th>Раздел</th><th>Исходное поле</th><th>Значение</th><th>Область</th></tr></thead><tbody>{% for f in electrolux_evidence.raw_facts %}<tr><td>{{ f.section }}</td><td>{{ f.label }}</td><td>{{ f.value }}</td><td>{{ f.scope }} / {{ f.product_code }}</td></tr>{% endfor %}</tbody></table></details>
+<p>Монтажные чертежи, lifestyle и неподтверждённые варианты остаются фото-кандидатами. Product Fiche и Energy Label сохраняются отдельно; их шкала не переносится между стандартами.</p></section>
+{% endif %}
 {% if xiaomi_evidence %}
 <section class="section" id="xiaomi-readiness"><h2>Модель и конфигурация {{ model_family_label }}</h2>
 <p>{{ xiaomi_evidence.identity.model }}. Готовность: <strong>{{ 'Готова' if xiaomi_card.verdict == 'export_ready' else 'Не готова' }}</strong>. Инструкция: {{ xiaomi_card.manual_status }}.</p>

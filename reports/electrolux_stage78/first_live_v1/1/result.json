@@ -1,0 +1,1071 @@
+{
+  "input": {
+    "id": 1,
+    "brand": "Electrolux",
+    "article": "EFI61141B",
+    "model": "EFI61141B",
+    "name": "Electrolux EFI61141B",
+    "category": "Стиральные машины",
+    "region": "UK",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "Official catalog/search model; published 9-digit PNC for row 9; row 10 explicit synthetic revision-00 request for conservative identity edge test, not a supplier assertion"
+  },
+  "observation": "actual live",
+  "seconds": 75.0,
+  "job": {
+    "id": "89aee92a9ef446e5a992a4bcf3fb205b",
+    "product_id": 1,
+    "status": "needs_review",
+    "current_stage": null,
+    "message": "Electrolux: not_ready; Точная модель не подтверждена; PNC / revision / регион / отделка подтверждены частично; Недостаточно официальных характеристик; Нет byte-verified фото подходящего варианта; Инструкция не проверена (не блокирует готовность)",
+    "created_at": "2026-10-11T16:26:55+00:00",
+    "updated_at": "2026-10-11T16:28:10+00:00",
+    "started_at": "2026-10-11T16:26:55+00:00",
+    "finished_at": "2026-10-11T16:28:10+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "sources": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "url": "",
+      "found_model": "",
+      "match_level": "unknown",
+      "evidence": "Exact official PDP not found",
+      "fetched_at": "2026-10-11T16:26:55+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [],
+  "resolved": [],
+  "photos": [],
+  "documents": [],
+  "evidence": {
+    "identity": {
+      "model": "EFI61141B",
+      "model_relation": "unproven",
+      "requested_pnc": "",
+      "requested_region": "UK"
+    },
+    "manual_status": "Не проверена",
+    "model_gallery_assets": [],
+    "verified_documents": [],
+    "query_variants": [
+      "EFI61141B",
+      ""
+    ],
+    "captures": [
+      {
+        "url": "https://www.electrolux.co.uk/",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 111,
+          "network_requests": 65,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 14,
+          "blocked_image_requests": 42,
+          "rejected_requests": [
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 50,
+          "document_status": 200,
+          "document_bytes": 800579
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:00+00:00",
+        "sha256": "b5a6ff992dd215ae3d8995d0b97c37a9062694a7dafdd80985c225556b92ddbe",
+        "file": "dec214ec7f78bfa27bdf96bf15e35364cdedf33c05a36e8ccaafe8bb73feb399.html",
+        "requested_url": "https://www.electrolux.co.uk/",
+        "observation": "actual_live",
+        "original_response_sha256": "dec214ec7f78bfa27bdf96bf15e35364cdedf33c05a36e8ccaafe8bb73feb399",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 129,
+          "blocked_image_requests": 35,
+          "navigations": 1,
+          "network_requests": 89,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 22,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 66,
+          "blocked_media_requests": 1,
+          "document_status": 200,
+          "document_bytes": 783630
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:05+00:00",
+        "sha256": "80455ea267cc83c49c26aec4e7a6869a6db0c82cc5e605fc21bd16e91b9d47e3",
+        "file": "fc6aa2a2761b185f14dc5aca18943213d544fb9a12d424afa3d31148823e0195.html",
+        "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+        "observation": "actual_live",
+        "original_response_sha256": "fc6aa2a2761b185f14dc5aca18943213d544fb9a12d424afa3d31148823e0195",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 122,
+          "network_requests": 89,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 22,
+          "blocked_image_requests": 29,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 66,
+          "document_status": 200,
+          "document_bytes": 751470
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/",
+            "status": 301,
+            "main_document": true
+          },
+          {
+            "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:10+00:00",
+        "sha256": "9a45e277e4fe013528e6ba7ef68c286fe595c0f266a851b43e14c1923a6e4cd9",
+        "file": "1b666ba9bafe52c311ee36afb50f1d33f372f6de31900a3d98735532ec4f3eef.html",
+        "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/",
+        "observation": "actual_live",
+        "original_response_sha256": "1b666ba9bafe52c311ee36afb50f1d33f372f6de31900a3d98735532ec4f3eef",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.co.uk/robots.txt",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 1,
+          "network_requests": 1,
+          "document_requests": 1,
+          "document_status": 200,
+          "document_bytes": 748
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/robots.txt",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:14+00:00",
+        "sha256": "3d598beab6eed772365ce47dc8a779521d778af0829161951add375872af6b88",
+        "file": "3d598beab6eed772365ce47dc8a779521d778af0829161951add375872af6b88.html",
+        "requested_url": "https://www.electrolux.co.uk/robots.txt",
+        "observation": "actual_live"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/globalassets/sitemaps/www.electrolux.co.uk/sitemapindex.xml",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 1,
+          "network_requests": 1,
+          "document_requests": 1,
+          "document_status": 200,
+          "document_bytes": 5199
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/globalassets/sitemaps/www.electrolux.co.uk/sitemapindex.xml",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:18+00:00",
+        "sha256": "33f7da6d14db209b9371d7c348d37ae6344b46ef695708eef9b285c39501f46f",
+        "file": "33f7da6d14db209b9371d7c348d37ae6344b46ef695708eef9b285c39501f46f.html",
+        "requested_url": "https://www.electrolux.co.uk/globalassets/sitemaps/www.electrolux.co.uk/sitemapindex.xml",
+        "observation": "actual_live"
+      },
+      {
+        "url": "https://www.electrolux.se/",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 119,
+          "network_requests": 66,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 14,
+          "blocked_image_requests": 49,
+          "rejected_requests": [
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.electrolux.se/akam/13/pixel_631e3205",
+              "method": "POST",
+              "resource_type": "xhr",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-T2MQ9T&gtg_health=1",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 50,
+          "document_status": 200,
+          "document_bytes": 924903,
+          "other_requests": 1
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.se/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:25+00:00",
+        "sha256": "23bb00e23b6df64bf2b7ea213c950fd24abd1347ec26491fd7ab03302aa7093e",
+        "file": "c1c165fcf1befdcf631548c995b2b44d068253b46778ced6e4e4734f33379e37.html",
+        "requested_url": "https://www.electrolux.se/",
+        "observation": "actual_live",
+        "original_response_sha256": "c1c165fcf1befdcf631548c995b2b44d068253b46778ced6e4e4734f33379e37",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.se/laundry/laundry/washing-machines/?d2cSellable=true",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 135,
+          "network_requests": 91,
+          "other_requests": 1,
+          "blocked_image_requests": 40,
+          "navigations": 1,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 20,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://static.youreko.com/js/partners/se/electrolux/youreko.energy-review.electrolux.all.min.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.electrolux.se/akam/13/pixel_631e3205",
+              "method": "POST",
+              "resource_type": "xhr",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://t1electrolux.eluxmkt.com/siteassets/regional-assets/emea/nordics/07.-local/gfk/washing-machines/elx-no1-washing-machines-se.jpg?width=768&quality=70&mode=crop",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 69,
+          "document_status": 200,
+          "document_bytes": 1283715
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.se/laundry/laundry/washing-machines/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:32+00:00",
+        "sha256": "64b79cea759416582949c27cfef174c5a90a7b7e6581419674be83125ab4fe4c",
+        "file": "84ecaa10e974078d93b37f50db65a0ad9784036c6f36e766710be6d850aa20fa.html",
+        "requested_url": "https://www.electrolux.se/laundry/laundry/washing-machines/",
+        "observation": "actual_live",
+        "original_response_sha256": "84ecaa10e974078d93b37f50db65a0ad9784036c6f36e766710be6d850aa20fa",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.se/laundry/laundry/washing-machines/top-loader-washing-machine/?d2cSellable=true",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 181,
+          "blocked_image_requests": 90,
+          "rejected_requests": [
+            {
+              "url": "https://t1electrolux.eluxmkt.com/siteassets/regional-assets/emea/nordics/07.-local/gfk/washing-machines/elx-no1-washing-machines-mobile-se.jpg?width=568",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://static.youreko.com/js/partners/se/electrolux/youreko.energy-review.electrolux.all.min.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://t1electrolux.eluxmkt.com/siteassets/regional-assets/emea/nordics/07.-local/gfk/washing-machines/elx-no1-washing-machines-se.jpg?width=768&quality=70&mode=crop",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://t1electrolux.eluxmkt.com/siteassets/regional-assets/emea/nordics/07.-local/gfk/washing-machines/elx-no1-washing-machines-mobile-se.jpg?width=568",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "navigations": 1,
+          "network_requests": 87,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 22,
+          "script_xhr_fetch_requests": 64,
+          "document_status": 200,
+          "document_bytes": 1217443
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.se/laundry/laundry/washing-machines/top-loader-washing-machine/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:39+00:00",
+        "sha256": "728c013096f6c163f38f908fe209fd3746886bdd07753e85661b411ae17c9584",
+        "file": "e350cf62214019e546e45dd2bd3f0ad6544b4f7cbb3aabba6c18cd78df58cf4b.html",
+        "requested_url": "https://www.electrolux.se/laundry/laundry/washing-machines/top-loader-washing-machine/",
+        "observation": "actual_live",
+        "original_response_sha256": "e350cf62214019e546e45dd2bd3f0ad6544b4f7cbb3aabba6c18cd78df58cf4b",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.se/robots.txt",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 4,
+          "blocked_image_requests": 3,
+          "navigations": 1,
+          "network_requests": 1,
+          "document_requests": 1,
+          "document_status": 200,
+          "document_bytes": 790
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.se/robots.txt",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:44+00:00",
+        "sha256": "9959de28ab979667dd574bdf2b846588138a08868fca368f860c96f25cb5cf48",
+        "file": "9959de28ab979667dd574bdf2b846588138a08868fca368f860c96f25cb5cf48.html",
+        "requested_url": "https://www.electrolux.se/robots.txt",
+        "observation": "actual_live"
+      },
+      {
+        "url": "https://www.electrolux.se/globalassets/sitemaps/www.electrolux.se/sitemapindex.xml",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 1,
+          "network_requests": 1,
+          "document_requests": 1,
+          "document_status": 200,
+          "document_bytes": 5163
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.se/globalassets/sitemaps/www.electrolux.se/sitemapindex.xml",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:48+00:00",
+        "sha256": "95a6cfe044d1c987a4758ecb3ca7d3318faec99ae4adf1b5a49e93613dd77fa8",
+        "file": "95a6cfe044d1c987a4758ecb3ca7d3318faec99ae4adf1b5a49e93613dd77fa8.html",
+        "requested_url": "https://www.electrolux.se/globalassets/sitemaps/www.electrolux.se/sitemapindex.xml",
+        "observation": "actual_live"
+      },
+      {
+        "url": "https://www.electrolux.de/",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 85,
+          "network_requests": 51,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 12,
+          "blocked_image_requests": 30,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.electrolux.de/akam/13/pixel_4e46e3e6",
+              "method": "POST",
+              "resource_type": "xhr",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-T2MQ9T&gtg_health=1",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 37,
+          "other_requests": 1,
+          "document_status": 200,
+          "document_bytes": 632026
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.de/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:54+00:00",
+        "sha256": "f17f296bd79c355acc4d228560e1cf3089e468ccd746c33aea05f513ce186d55",
+        "file": "1c440647003fa4005d102705c56797fe4f9db41863f2d852b975894538c0445b.html",
+        "requested_url": "https://www.electrolux.de/",
+        "observation": "actual_live",
+        "original_response_sha256": "1c440647003fa4005d102705c56797fe4f9db41863f2d852b975894538c0445b",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.de/robots.txt",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 4,
+          "network_requests": 2,
+          "other_requests": 1,
+          "navigations": 1,
+          "document_requests": 1,
+          "blocked_image_requests": 2,
+          "document_status": 200,
+          "document_bytes": 278
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.de/robots.txt",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:27:58+00:00",
+        "sha256": "be33215ce6f838fde6110180b25073a3d8cba82fd92568a460fa704060d31997",
+        "file": "be33215ce6f838fde6110180b25073a3d8cba82fd92568a460fa704060d31997.html",
+        "requested_url": "https://www.electrolux.de/robots.txt",
+        "observation": "actual_live"
+      },
+      {
+        "url": "https://www.electrolux.de/globalassets/sitemaps/www.electrolux.de/sitemapindex.xml",
+        "status_code": 200,
+        "session_id": "public_browser:d277b903c4294affa5c1c9383b49b8ad",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 1,
+          "network_requests": 1,
+          "document_requests": 1,
+          "document_status": 200,
+          "document_bytes": 5163
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.de/globalassets/sitemaps/www.electrolux.de/sitemapindex.xml",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T16:28:02+00:00",
+        "sha256": "5fb2f8ac3f781bef32f2bc0e0e0da11aa2d1124a82f491526f54bf70393e310b",
+        "file": "5fb2f8ac3f781bef32f2bc0e0e0da11aa2d1124a82f491526f54bf70393e310b.html",
+        "requested_url": "https://www.electrolux.de/globalassets/sitemaps/www.electrolux.de/sitemapindex.xml",
+        "observation": "actual_live"
+      }
+    ],
+    "live_success": false,
+    "access_error": "",
+    "image_measurements": [],
+    "dealer_fallback": {
+      "url": "",
+      "accepted": false,
+      "reason": "Нет проверенного дилерского URL для «Electrolux Electrolux EFI61141B» (артикул EFI61141B). Не хватает: model_missing, product_relation_partial, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "match_level": "dealer_url_needed"
+    }
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "model_missing",
+      "product_relation_partial",
+      "specifications_missing",
+      "gallery_missing"
+    ],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "model_missing",
+      "product_relation_partial",
+      "specifications_missing",
+      "gallery_missing",
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "EFI61141B",
+      "model_relation": "unproven",
+      "requested_pnc": "",
+      "requested_region": "UK"
+    },
+    "confirmed_specs": 0,
+    "manual_status": "Не проверена",
+    "conflicts": 0,
+    "exact_identity": false,
+    "readiness_scope": "published regional product / exact supplied PNC when present"
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "input",
+      "provider": "normalization",
+      "query": "EFI61141B",
+      "reason": "Model and PNC are separate queries; revision never padded",
+      "source_type": "query_variants",
+      "timestamp": "2026-10-11T16:26:55+00:00",
+      "url": "",
+      "variants": [
+        "EFI61141B",
+        ""
+      ]
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_official",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/",
+      "source_type": "catalog_root",
+      "timestamp": "2026-10-11T16:27:00+00:00",
+      "url": "https://www.electrolux.co.uk/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T16:27:05+00:00",
+      "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/",
+      "source_type": "PDP",
+      "timestamp": "2026-10-11T16:27:10+00:00",
+      "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/"
+    },
+    {
+      "accepted": false,
+      "candidate_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/",
+      "catalog_product_code": "914932044",
+      "discovery_reason": "native official catalog productData",
+      "event": "electrolux_discovery",
+      "identity_relation": {
+        "model": "EFI61141B",
+        "model_relation": "unproven",
+        "requested_pnc": "",
+        "requested_region": "UK"
+      },
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "No unique native PDPContainer; catalog/family is discovery only",
+      "source_type": "PDP",
+      "timestamp": "2026-10-11T16:27:10+00:00",
+      "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_sitemap",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/robots.txt",
+      "source_type": "robots",
+      "timestamp": "2026-10-11T16:27:14+00:00",
+      "url": "https://www.electrolux.co.uk/robots.txt"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_sitemap",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/globalassets/sitemaps/www.electrolux.co.uk/sitemapindex.xml",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-11T16:27:18+00:00",
+      "url": "https://www.electrolux.co.uk/globalassets/sitemaps/www.electrolux.co.uk/sitemapindex.xml"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "other_official_region",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.se",
+      "requested_url": "https://www.electrolux.se/",
+      "source_type": "catalog_root",
+      "timestamp": "2026-10-11T16:27:25+00:00",
+      "url": "https://www.electrolux.se/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.se",
+      "requested_url": "https://www.electrolux.se/laundry/laundry/washing-machines/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T16:27:32+00:00",
+      "url": "https://www.electrolux.se/laundry/laundry/washing-machines/?d2cSellable=true"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.se",
+      "requested_url": "https://www.electrolux.se/laundry/laundry/washing-machines/top-loader-washing-machine/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T16:27:39+00:00",
+      "url": "https://www.electrolux.se/laundry/laundry/washing-machines/top-loader-washing-machine/?d2cSellable=true"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_sitemap",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.se",
+      "requested_url": "https://www.electrolux.se/robots.txt",
+      "source_type": "robots",
+      "timestamp": "2026-10-11T16:27:44+00:00",
+      "url": "https://www.electrolux.se/robots.txt"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_sitemap",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.se",
+      "requested_url": "https://www.electrolux.se/globalassets/sitemaps/www.electrolux.se/sitemapindex.xml",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-11T16:27:48+00:00",
+      "url": "https://www.electrolux.se/globalassets/sitemaps/www.electrolux.se/sitemapindex.xml"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "other_official_region",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.de",
+      "requested_url": "https://www.electrolux.de/",
+      "source_type": "catalog_root",
+      "timestamp": "2026-10-11T16:27:54+00:00",
+      "url": "https://www.electrolux.de/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_sitemap",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.de",
+      "requested_url": "https://www.electrolux.de/robots.txt",
+      "source_type": "robots",
+      "timestamp": "2026-10-11T16:27:58+00:00",
+      "url": "https://www.electrolux.de/robots.txt"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_sitemap",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.de",
+      "requested_url": "https://www.electrolux.de/globalassets/sitemaps/www.electrolux.de/sitemapindex.xml",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-11T16:28:02+00:00",
+      "url": "https://www.electrolux.de/globalassets/sitemaps/www.electrolux.de/sitemapindex.xml"
+    },
+    {
+      "event": "query_outcome",
+      "outcome": "runtime_unavailable",
+      "provider": "google_old_parser",
+      "query": "site:www.electrolux.co.uk Electrolux EFI61141B",
+      "reason": "Error",
+      "timestamp": "2026-10-11T16:28:02.878416+00:00",
+      "url": "https://www.google.com/search?q=site%3Awww.electrolux.co.uk+Electrolux+EFI61141B&hl=en"
+    },
+    {
+      "event": "query",
+      "mechanism": "browser_projection",
+      "old_parser_source": "",
+      "provider": "bing_browser",
+      "query": "site:www.electrolux.co.uk Electrolux EFI61141B",
+      "region": "global",
+      "timestamp": "2026-10-11T16:28:05.134809+00:00",
+      "url": "https://www.bing.com/search?q=site%3Awww.electrolux.co.uk%20Electrolux%20EFI61141B"
+    },
+    {
+      "event": "query_outcome",
+      "final_url": "https://www.bing.com/search?q=site%3Awww.electrolux.co.uk%20Electrolux%20EFI61141B",
+      "network_requests": 200,
+      "old_parser_called": false,
+      "old_parser_completed": false,
+      "old_parser_source": "",
+      "outcome": "no_candidates",
+      "provider": "bing_browser",
+      "query": "site:www.electrolux.co.uk Electrolux EFI61141B",
+      "region": "global",
+      "resource_capped": true,
+      "timestamp": "2026-10-11T16:28:09.997863+00:00",
+      "url": "https://www.bing.com/search?q=site%3Awww.electrolux.co.uk%20Electrolux%20EFI61141B"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "candidate_only",
+      "provider": "dns",
+      "query": "EFI61141B",
+      "reason": "Нет проверенного дилерского URL для «Electrolux Electrolux EFI61141B» (артикул EFI61141B). Не хватает: model_missing, product_relation_partial, specifications_missing, gallery_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "region": "RU",
+      "source_type": "dealer",
+      "timestamp": "2026-10-11T16:28:10+00:00",
+      "url": ""
+    }
+  ]
+}

@@ -11,6 +11,7 @@ OFFICIAL.update({'xbox_model','xbox_configuration','xbox_hardware'})
 OFFICIAL.update({'razer_model','razer_configuration'})
 OFFICIAL.update({'xiaomi_model','xiaomi_region','xiaomi_configuration'})
 OFFICIAL.add('dreame_model')
+OFFICIAL.add('electrolux')
 
 @dataclass(frozen=True)
 class ResolvedValue:
@@ -66,6 +67,15 @@ def resolve_attributes(facts: Iterable[dict[str,Any]], source_pages: Iterable[di
                 results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if exact else 'model_confirmed_official','Официальный факт HyperX; модель и коммерческий вариант разделены.','hyperx',False,exact))
             continue
         xm=[f for f in official if f['source_key'].startswith('xiaomi_')]
+        el=[f for f in official if f['source_key']=='electrolux']
+        if el:
+            page=pages.get('electrolux',{})
+            if page.get('error') or page.get('match_level') not in {'full_sku','model_confirmed'} or _different(el):
+                results.append(ResolvedValue(name,'','','needs_review','Exact Electrolux model/product relation not confirmed.','',_different(el),False))
+            else:
+                f=el[0];exact=page['match_level']=='full_sku'
+                results.append(ResolvedValue(name,f['normalized_value'],f['unit'],'full_sku_official' if exact else 'model_confirmed_official','Official native PDP; PNC-sensitive fields filtered before storage.','electrolux',False,exact))
+            continue
         dr=[f for f in official if f['source_key']=='dreame_model']
         if dr:
             from .xiaomi_identity import fact_scope

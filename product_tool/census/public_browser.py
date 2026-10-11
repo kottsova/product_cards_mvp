@@ -159,13 +159,26 @@ class PublicBrowserSession:
      raise requests.ConnectionError('host_stopped')
     owner.start()
     try:
-     result=owner.context.request.get(url,timeout=min(10,timeout)*1000,max_redirects=0,fail_on_status_code=False,headers={'Accept-Encoding':'identity'})
+     from urllib.parse import urljoin
+     history=[];target=url
+     for redirect_index in range(6):
+      if not owner.allowed(target):raise ValueError('foreign binary redirect')
+      if (urlsplit(target).hostname or '') in access_stop.active_stops(policy_fetch.read_log(owner.log)):raise ValueError('host_stopped before binary redirect')
+      result=owner.context.request.get(target,timeout=min(10,timeout)*1000,max_redirects=0,fail_on_status_code=False,headers={'Accept-Encoding':'identity'})
+      if result.status not in {301,302,303,307,308} or kwargs.get('allow_redirects') is False:break
+      location=result.headers.get('location') or result.headers.get('Location')
+      if not location:break
+      prior=requests.Response();prior.status_code=result.status;prior.url=result.url;prior.headers.update(result.headers);prior._content=b'';history.append(prior)
+      target=urljoin(result.url,location);result.dispose();del result
+      if redirect_index==5:raise ValueError('binary redirect budget exhausted')
+      owner.pause(1)
      length=result.headers.get('content-length','')
      if length.isdigit() and int(length)>max_bytes:raise ValueError('binary declared size exceeds budget')
      data=result.body()
      if len(data)>max_bytes:raise ValueError('binary size exceeds budget')
      response=requests.Response();response.status_code=result.status;response.url=result.url
      response.headers.update(result.headers);response._content=data;response._content_consumed=True
+     response.history=history
      response.encoding='utf-8'
      return response
     except Exception as exc:

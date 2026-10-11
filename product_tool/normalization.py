@@ -22,6 +22,8 @@ class NormalizedFact:
 
 
 NAME_RULES = (
+    # Stage 78 actual native appliance fixtures: niche/cut-out axes are not product axes.
+    (re.compile(r"^(?:размер|габарит|ширин|высот|глубин)\w*.*(?:ниши|встраив|монтажн|выреза)", re.I), "installation_dimensions"),
     (re.compile(r"^размеры?\s+нагревательных\s+элементов", re.I), "heating_element_sizes"),
     (re.compile(r"^abmessungen des verpackten gerätes$", re.I), "package_dimensions"),
     (re.compile(r"^abmessungen des gerätes", re.I), "product_dimensions"),
@@ -83,8 +85,10 @@ _MARKED_VERSION = re.compile(r"^\s*([●•O+])\s*(?:v|ver(?:sion)?|версия
 # a qualifier that is not in the vocabulary is simply not recognised and the values keep sharing one name, so an unknown case
 # still ends in a conflict for a person to look at, never in a silent merge. Two different values of the same quantity (same
 # base name, same qualifier) still conflict.
-_QUALIFIABLE = frozenset({"product_weight", "product_dimensions", "package_weight", "package_dimensions", "max_load_weight"})
+_QUALIFIABLE = frozenset({"product_weight", "product_dimensions", "installation_dimensions", "package_weight", "package_dimensions", "max_load_weight"})
 _QUALIFIERS = (
+    # Stage 78 actual Swedish vacuum: explicitly only the machine differs from net product mass.
+    (re.compile(r"только\s+(?:устройств|аппарат|пылесос)"), "bare_device"),
     (re.compile(r"без\s+подставк"), "without_stand"),
     (re.compile(r"(?<![а-я])с\s+подставк"), "with_stand"),
     (re.compile(r"брутто"), "gross"),
@@ -146,7 +150,7 @@ def _qualifier(cleaned: str, base: str) -> str:
         found = [label for pattern, label in _DIAGONAL_UNITS if pattern.search(cleaned)]
     elif base in _QUALIFIABLE:
         found = [label for pattern, label in _QUALIFIERS if pattern.search(cleaned)]
-        axis = re.match(r"(ширин|высот|глубин)", cleaned) if base == "product_dimensions" else None
+        axis = re.match(r"(ширин|высот|глубин)", cleaned) if base in {"product_dimensions", "installation_dimensions"} else None
         if axis:  # Stage 22: one edge of the product (depth 455) is not the W x H x D triple, whatever the two are called
             found.append({"ширин": "width", "высот": "height", "глубин": "depth"}[axis.group(1)])
         if base == "product_dimensions" and re.search(r"упаков|короб", cleaned):  # Stage 26: "Глубина упаковки" is the packaging's edge (the names that already say package_* are unchanged)

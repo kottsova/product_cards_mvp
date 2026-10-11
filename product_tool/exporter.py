@@ -108,7 +108,10 @@ def export_batch(database: Path,batch_id: str)->bytes:
     from . import xiaomi_pipeline
     from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
     from . import razer_pipeline
+    from . import electrolux_pipeline
     for p in batch["products"]:
+        el=p['brand'].strip().casefold()=='electrolux'
+        el_evidence=card_evidence.load(database,p['id'],'electrolux') if el else None
         source_pages = jobs.get_source_pages(database, p["id"])
         ps=p['brand'].strip().casefold() in PLAYSTATION_BRANDS
         ps_evidence=card_evidence.load(database,p['id'],'playstation') if ps else None
@@ -127,7 +130,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
         saved_documents = (manual_status.effective_documents(database,p["id"],p["search_code"])
                            if lg else jobs.get_documents(database,p["id"]))
         for d in saved_documents:
-            tied = (xiaomi_pipeline.document_verified(d,xm_evidence) if xm else d.get("identity_confirmed", False) if lg else
+            tied = (electrolux_pipeline.document_verified(d,el_evidence) if el else xiaomi_pipeline.document_verified(d,xm_evidence) if xm else d.get("identity_confirmed", False) if lg else
                     bosch_presentation.document_verified(d, card_evidence.load(database,p["id"],"bosch_home"), source_pages)
                     if p["brand"].strip().upper() == "BOSCH" else
                     samsung_readiness.document_verified(d, card_evidence.load(database,p["id"],"samsung_documents"))
@@ -150,7 +153,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
         for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
-            tied = xiaomi_pipeline.photo_verified(item,xm_evidence) if xm else razer_pipeline.photo_verified(item,rz_evidence) if rz else xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
+            tied = electrolux_pipeline.photo_verified(item,el_evidence) if el else xiaomi_pipeline.photo_verified(item,xm_evidence) if xm else razer_pipeline.photo_verified(item,rz_evidence) if rz else xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
@@ -421,4 +424,19 @@ def export_batch(database: Path,batch_id: str)->bytes:
                         width=sheet.column_dimensions[cell.column_letter].width or 14
                         lines=max(lines,ceil(len(str(cell.value or ''))/max(8,width-2)))
                     sheet.row_dimensions[row[0].row].height=min(180,max(24,16*lines))
+    electrolux_products=[p for p in batch['products'] if p['brand'].strip().casefold()=='electrolux']
+    if electrolux_products:
+        overview=book.create_sheet(_title('Electrolux готовность',used));_headers(overview,['Товар','Модель','Входной PNC','Product code / PNC','Revision','Регион','Связь продукта','Характеристики','Фото проверены','Инструкция','Готовность','Пробелы'])
+        raw_sheet=book.create_sheet(_title('Electrolux исходные',used));_headers(raw_sheet,['Товар','Раздел','Исходное поле','Значение','Область','PNC','Регион','Результат','Причина'])
+        docs_sheet=book.create_sheet(_title('Electrolux документы',used));_headers(docs_sheet,['Товар','Тип','Язык','Модель','PNC','Регион','URL','Связь проверена','Байты проверены','Стандарт источника','SHA256'])
+        for p in electrolux_products:
+            ev=card_evidence.load(database,p['id'],'electrolux') or {};r=electrolux_pipeline.card_readiness(database,p['id']);i=r['identity']
+            overview.append([p['name'],i.get('model'),i.get('requested_pnc'),i.get('product_code'),i.get('revision'),i.get('region'),i.get('product_code_relation'),r['confirmed_specs'],len(ev.get('model_gallery_assets',[])),r['manual_status'],r['verdict'],'; '.join(electrolux_pipeline.GAPS[g] for g in r['gaps'])])
+            for accepted,bucket in ((True,'accepted_facts'),(False,'rejected_facts')):
+                for f in ev.get(bucket,[]):raw_sheet.append([p['name'],f['section'],f['label'],f['value'],f['scope'],f['product_code'],f['region'],'Принят' if accepted else 'Кандидат / отклонён',f.get('reason','')])
+            for d in ev.get('document_inventory',[]):docs_sheet.append([p['name'],d['type'],d['language'],d['model'],d['product_code'],d['region'],d['url'],'Да' if d['identity_verified'] else 'Нет','Да' if d.get('bytes_verified') else 'Нет',d['standard_context'],d.get('sha256')])
+        for sheet in (overview,raw_sheet,docs_sheet):
+            for column in sheet.columns:sheet.column_dimensions[column[0].column_letter].width=min(60,max(14,max(len(str(c.value or '')) for c in column)+2))
+            for row in sheet:
+                for cell in row:cell.alignment=Alignment(wrap_text=True,vertical='top')
     output=BytesIO(); book.save(output); book.close(); return output.getvalue()

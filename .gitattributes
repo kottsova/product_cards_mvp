@@ -97,3 +97,11 @@ tests/test_dreame_stage77.py text eol=lf
 
 # Native DOM captures are byte evidence, not hand-authored diffs.
 reports/dreame_stage77/**/captures/*.html -diff
+
+# Stage 78 preserves actual public response bytes and native audit fixtures.
+reports/electrolux_stage78/** -text
+reports/electrolux_stage78/**/*.html -diff
+tests/test_electrolux_stage78.py text eol=lf
+product_tool/electrolux_page.py text eol=lf
+product_tool/electrolux_pipeline.py text eol=lf
+product_tool/adapters/electrolux.py text eol=lf

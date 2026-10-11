@@ -155,6 +155,7 @@ def run_once(
     razer_adapter_factory: Callable[[], object] | None = None,
     xiaomi_adapter_factory: Callable[[], object] | None = None,
     dreame_adapter_factory: Callable[[], object] | None = None,
+    electrolux_adapter_factory: Callable[[], object] | None = None,
 ) -> bool:
     job=jobs.claim_next(database)
     if job is None: return False
@@ -165,6 +166,10 @@ def run_once(
         if not product:
             jobs.finish(database,job_id,"error","Подтверждённый товар не найден."); return True
         from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
+        if product['brand'].strip().casefold() == 'electrolux':
+            from . import electrolux_pipeline
+            electrolux_pipeline.run_job(database,job_id,product_id,product,stages=job['stages'],adapter_factory=electrolux_adapter_factory,dns_adapter_factory=dns_adapter_factory,clock=clock)
+            return True
         if product['brand'].strip().casefold() == 'dreame':
             from . import xiaomi_pipeline
             from .adapters.dreame import DreameAdapter

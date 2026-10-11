@@ -15,6 +15,7 @@ OFFICIAL += ('xbox_model','xbox_configuration','xbox_hardware')
 OFFICIAL += ('razer_model','razer_configuration')
 OFFICIAL += ('xiaomi_model','xiaomi_region','xiaomi_configuration')
 OFFICIAL += ('dreame_model',)
+OFFICIAL += ('electrolux',)
 
 
 def _clean_label(raw: str) -> str:
@@ -195,6 +196,8 @@ def present_card_rows(
             from .jbl_presentation import section as jbl_section
             section = jbl_section(section)
         row["section_name"] = section.strip().lower().capitalize() if section.isupper() and not section.startswith("SMART") else section.strip()
+        if row.get('electrolux_presentation') and chosen:
+            row['display_name']=chosen.get('raw_name') or row['display_name']
         row["role"] = _role(category, row)
         if row.get('hyperx_presentation') and (chosen or {}).get('raw_name') in {'Game Mode','Backlight','Light Effects','Audio Controls'}:
             row['role']='feature'

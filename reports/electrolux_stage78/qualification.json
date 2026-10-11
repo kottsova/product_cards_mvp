@@ -1,0 +1,78 @@
+{
+  "stage": 78,
+  "audit_verdict": "PASS",
+  "adapter_verdict": "Electrolux adapter not ready",
+  "actual_live_pdp": 9,
+  "cards_ready": 7,
+  "confirmed_specs": 268,
+  "byte_verified_selected_photos": 16,
+  "verified_documents": 24,
+  "manual_statuses": {
+    "1": "Не проверена",
+    "2": "Проверена",
+    "3": "Проверена",
+    "4": "Проверена, не найдена",
+    "5": "Проверена",
+    "6": "Проверена",
+    "7": "Проверена",
+    "8": "Не проверена",
+    "9": "Проверена",
+    "10": "Не проверена"
+  },
+  "context": {
+    "session_id": "public_browser:dfa06549542f40a687e7555fa95e1436",
+    "contexts": 1,
+    "navigations": 39,
+    "cookies_before_count": 17,
+    "cookies_after_count": 33,
+    "context_closed": true
+  },
+  "frozen_dataset_sha256": "92cc16f718f98b20aafed5a6cc247b72c57fe4b034592078cf0ec58527d69176",
+  "framework_required": false,
+  "pncs": {
+    "UK": {
+      "url": "https://shop.electrolux.co.uk/model/m/EOF6P46X",
+      "pnc_versions": [
+        "94949823900",
+        "94949822300",
+        "94403205100",
+        "94403205200",
+        "94403205101",
+        "94949823901",
+        "94928801101"
+      ],
+      "relation": "Actual live official model-specific PNC menu; no specs equivalence assumed"
+    },
+    "SE": {
+      "url": "https://shop.electrolux.se/model/m/EOF6P46X",
+      "pnc_versions": [
+        "94949823900",
+        "94949822300",
+        "94403205100",
+        "94403205200",
+        "94403205101",
+        "94949823901",
+        "94928801101"
+      ],
+      "relation": "Actual live official model-specific PNC menu; no specs equivalence assumed"
+    }
+  },
+  "regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 739.4348323000013,
+    "result": [
+      "Ran 1847 tests in 735.322s",
+      "OK"
+    ],
+    "command": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe -m tests",
+    "network": "offline test guard"
+  },
+  "blockers": [
+    "EFI61141B exact UK PDP redirects to catalog; other-regional/external exact source not recovered within bounded discovery",
+    "EF7742OBI same official Push Button Functions label has two different lists; held as conflict",
+    "Exact 11-digit PNC/revision-sensitive configuration resolution not qualified; row 10 is an explicit synthetic revision request, correctly partial",
+    "Default plain HTTP transport fails before response in this environment; controlled Chrome data acquisition works, default HTTP production access not qualified"
+  ],
+  "offline_only": "30 fixture/transport edge tests and gallery/PDF/UI QA are not fresh live successes"
+}

@@ -387,6 +387,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         from .xbox_identity import BRANDS as XBOX_BRANDS
         xbox_evidence = card_evidence.load(database,product_id,'xbox') if product['brand'].strip().casefold() in XBOX_BRANDS else None
         from . import xiaomi_pipeline
+        from . import electrolux_pipeline
+        electrolux_evidence=card_evidence.load(database,product_id,'electrolux') if product['brand'].strip().casefold()=='electrolux' else None
         from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
         model_family = 'dreame' if product['brand'].strip().casefold()=='dreame' else 'xiaomi'
         xiaomi_evidence = card_evidence.load(database,product_id,model_family) if model_family=='dreame' or product['brand'].strip().casefold() in XIAOMI_BRANDS else None
@@ -399,6 +401,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         jbl_evidence = card_evidence.load(database, product_id, "jbl") if product["brand"].strip().upper() == "JBL" else None
         lenovo_evidence = card_evidence.load(database, product_id, "lenovo") if product["brand"].strip().upper() == "LENOVO" else None
         photos = jobs.get_photo_candidates(database, product_id)
+        if electrolux_evidence is not None:
+            for photo in photos:photo['identity_confirmed']=electrolux_pipeline.photo_verified(photo,electrolux_evidence)
+            for document in documents:document['identity_confirmed']=electrolux_pipeline.document_verified(document,electrolux_evidence)
         if lg_batch.is_lg(product):
             for document in documents:
                 document["identity_confirmed"] = document.get("identity_confirmed", False)
@@ -469,6 +474,9 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             playstation_gaps=playstation_pipeline.GAPS,
             xbox_evidence=xbox_evidence,
             xiaomi_evidence=xiaomi_evidence,
+            electrolux_evidence=electrolux_evidence,
+            electrolux_card=electrolux_pipeline.card_readiness(database,product_id) if electrolux_evidence is not None else None,
+            electrolux_gaps=electrolux_pipeline.GAPS,
             xiaomi_card=xiaomi_pipeline.card_readiness(database,product_id,family=model_family) if xiaomi_evidence is not None else None,
             model_family_label=model_family.title(),
             xiaomi_gaps=xiaomi_pipeline.GAPS,
@@ -499,7 +507,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             card_attributes=card_attributes,
             counts=jobs.result_counts(database, product_id),
             documents=documents,
-            manual_status=xiaomi_evidence.get('manual_status','Не проверена') if xiaomi_evidence is not None else hyperx_evidence.get('manual_status','Не проверена') if hyperx_evidence is not None else razer_evidence.get('manual_status','Не проверена') if razer_evidence is not None else xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
+            manual_status=electrolux_evidence.get('manual_status','Не проверена') if electrolux_evidence is not None else xiaomi_evidence.get('manual_status','Не проверена') if xiaomi_evidence is not None else hyperx_evidence.get('manual_status','Не проверена') if hyperx_evidence is not None else razer_evidence.get('manual_status','Не проверена') if razer_evidence is not None else xbox_evidence.get('manual_status','Не проверена') if xbox_evidence is not None else playstation_evidence.get("manual_status","Не проверена") if playstation_evidence is not None else apple_evidence.get("manual_status", "Не проверена") if apple_evidence is not None else lenovo_evidence.get("manual_status", "Не проверена") if lenovo_evidence is not None else jbl_evidence.get("manual_status", "Не проверена") if jbl_evidence is not None else manual_status.russian_status(database, product_id, product["search_code"], lg=lg_batch.is_lg(product)),
             manual_reason=manual_status.unchecked_reason(database, product_id, product["search_code"]) if lg_batch.is_lg(product) else "",
             manual_search=manual_status.completed_search(database, product_id) if lg_batch.is_lg(product) else None,
             photos=photos,
