@@ -36,7 +36,8 @@ def manual_assessment(pages, tokens):
     return check,headings
 
 class XiaomiAdapter:
-    def __init__(self, *, clock=time.monotonic, fetch_log_path=Path('data/xiaomi_fetch_log.json'), session=None, trace_callback=None, capture_dir=None, search_provider=None):
+    def __init__(self, *, clock=time.monotonic, fetch_log_path=Path('data/xiaomi_fetch_log.json'), session=None, trace_callback=None, capture_dir=None, search_provider=None, manuals_enabled=True):
+        self.manuals_enabled=manuals_enabled
         self.clock = clock; self.log = Path(fetch_log_path)
         self.http = session or PolicyAwareSession(self.log, allowed_hosts=HOSTS, underlying=BinarySafeSession(requests.Session()), max_bytes=15_000_000)
         self.trace_callback = trace_callback; self.capture_dir = Path(capture_dir or self.log.parent/'xiaomi_captures')
@@ -108,7 +109,7 @@ class XiaomiAdapter:
                 doc.photo_candidates.extend(gallery);ev['model_gallery_candidates']=relations
                 # Other diagrams/lifestyle/navigation remain candidates, not gallery by proximity.
                 soup=BeautifulSoup(p[0],'html.parser')
-                for img in soup.select('img.xm-img')[:80]:
+                for img in soup.select('main img.xm-img'):
                     image=img.get('src') or img.get('data-src') or ''
                     host=urlsplit(image).hostname or ''
                     if urlsplit(image).scheme!='https' or not host.endswith('.appmifile.com'):continue
@@ -121,7 +122,7 @@ class XiaomiAdapter:
                 break
             if best: break
         if not best:
-            support=self.fetch('https://www.mi.com/global/support/user-guide/',query=wanted,provider='official_support',source_type='manual_inventory',cache=True)
+            support=self.fetch('https://www.mi.com/global/support/user-guide/',query=wanted,provider='official_support',source_type='manual_inventory',cache=True) if self.manuals_enabled else None
             if support:self.trace(query=wanted,provider='official_support',url=support[1],region=region(support[1]),source_type='discovery',accepted=False,reason='Official guide inventory checked; it does not substitute for exact PDP/spec identity')
             # Shared browser provider binding; protection is handled by the existing attended lifecycle.
             from .lg_browser_search import LGBrowserSearch

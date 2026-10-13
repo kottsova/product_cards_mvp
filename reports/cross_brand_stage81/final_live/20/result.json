@@ -1,0 +1,2330 @@
+{
+  "input": {
+    "id": 20,
+    "brand": "Samsung",
+    "dispatch_brand": "Samsung",
+    "article": "NZ64T3506AK/WT",
+    "model": "Samsung NZ64T3506AK/WT",
+    "name": "Samsung NZ64T3506AK/WT",
+    "category": "Варочные панели",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/samsung_stage59/dataset_frozen.json",
+    "original_input": {
+      "article": "NZ64T3506AK/WT",
+      "name": "Samsung NZ64T3506AK/WT",
+      "category": "Варочные панели",
+      "selection_reason": "Previously qualified category missing from Stage 59 ten"
+    }
+  },
+  "observed_at": "2026-10-13T11:28:12.379579+00:00",
+  "seconds": 8.67,
+  "job": {
+    "id": "38e63bd94cb5410dbede6ae052b386f8",
+    "product_id": 20,
+    "status": "done",
+    "current_stage": 4,
+    "message": "Samsung: Артикул каталога NZ64T3506AK/WT подтверждён содержимым официальной страницы: видимый текст страницы, единственный код в данных товара страницы (modelCode/shopSKU). Реальных конфликтов: 0; расхождений с дилером: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки Samsung к выгрузке: export_ready_with_gaps; пробелы: instruction_not_checked, dealer_cross_check_missing.",
+    "created_at": "2026-10-13T11:28:03+00:00",
+    "updated_at": "2026-10-13T11:28:08+00:00",
+    "started_at": "2026-10-13T11:28:03+00:00",
+    "finished_at": "2026-10-13T11:28:08+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 34,
+      "product_id": 20,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "not_needed",
+      "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+      "fetched_at": "2026-10-13T11:28:08+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 33,
+      "product_id": 20,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "url": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+      "found_model": "NZ64T3506AK/WT",
+      "match_level": "full_sku",
+      "evidence": "Артикул каталога NZ64T3506AK/WT подтверждён содержимым официальной страницы: видимый текст страницы, единственный код в данных товара страницы (modelCode/shopSKU).",
+      "fetched_at": "2026-10-13T11:28:08+00:00",
+      "error": "",
+      "description": "Купить Варочная панель 57,5 см Черный NZ64T3506AK/WT на Официальном Сайте Samsung. Подробнее про размеры и характеристики на Samsung Казахстан",
+      "photos": [
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?$Q90_2052_1641_JPG$"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 1036,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Burner - Left Front",
+      "raw_value": "Одинарная (183 мм) - 1.8 квт",
+      "section": "Характеристики нагревательных элементов",
+      "value_cell": null,
+      "normalized_name": "burner_left_front",
+      "normalized_value": "одинарная (183 мм) - 1.8 квт",
+      "unit": ""
+    },
+    {
+      "id": 1037,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Burner - Left Rear",
+      "raw_value": "Одинарная (148 мм) - 1.2 квт",
+      "section": "Характеристики нагревательных элементов",
+      "value_cell": null,
+      "normalized_name": "burner_left_rear",
+      "normalized_value": "одинарная (148 мм) - 1.2 квт",
+      "unit": ""
+    },
+    {
+      "id": 1038,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Burner - Right Front",
+      "raw_value": "Одинарная (148 мм) - 1.2 квт",
+      "section": "Характеристики нагревательных элементов",
+      "value_cell": null,
+      "normalized_name": "burner_right_front",
+      "normalized_value": "одинарная (148 мм) - 1.2 квт",
+      "unit": ""
+    },
+    {
+      "id": 1039,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Burner - Right Rear",
+      "raw_value": "Одинарная (183 мм) - 1.8 квт",
+      "section": "Характеристики нагревательных элементов",
+      "value_cell": null,
+      "normalized_name": "burner_right_rear",
+      "normalized_value": "одинарная (183 мм) - 1.8 квт",
+      "unit": ""
+    },
+    {
+      "id": 1032,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Тип дисплея",
+      "raw_value": "LED",
+      "section": "Экстерьер",
+      "value_cell": null,
+      "normalized_name": "display_type",
+      "normalized_value": "led",
+      "unit": ""
+    },
+    {
+      "id": 1046,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Габариты упаковки (ШxВxГ)",
+      "raw_value": "690 x 115 x 645 мм",
+      "section": "Размеры / Вес",
+      "value_cell": null,
+      "normalized_name": "package_dimensions",
+      "normalized_value": "w=690;h=115;d=645",
+      "unit": "mm"
+    },
+    {
+      "id": 1035,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Power Level",
+      "raw_value": "9",
+      "section": "Характеристики нагревательных элементов",
+      "value_cell": null,
+      "normalized_name": "power_level",
+      "normalized_value": "9",
+      "unit": ""
+    },
+    {
+      "id": 1043,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Power On/Off",
+      "raw_value": "Да",
+      "section": "Функции управления",
+      "value_cell": null,
+      "normalized_name": "power_on_off",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 1028,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Размеры корпуса (Ш x В x Г) (Обзор)",
+      "raw_value": "575 x 55 x 505 мм",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "product_dimensions",
+      "normalized_value": "w=575;h=55;d=505",
+      "unit": "mm"
+    },
+    {
+      "id": 1048,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Размеры корпуса (Ш x В x Г) (Размеры / Вес)",
+      "raw_value": "575 x 55 x 505 мм",
+      "section": "Размеры / Вес",
+      "value_cell": null,
+      "normalized_name": "product_dimensions",
+      "normalized_value": "w=575;h=55;d=505",
+      "unit": "mm"
+    },
+    {
+      "id": 1049,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Вес (брутто), кг",
+      "raw_value": "9.2 кг",
+      "section": "Размеры / Вес",
+      "value_cell": null,
+      "normalized_name": "product_weight__gross",
+      "normalized_value": "9.2",
+      "unit": "kg"
+    },
+    {
+      "id": 1050,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Вес нетто",
+      "raw_value": "7.7 кг",
+      "section": "Размеры / Вес",
+      "value_cell": null,
+      "normalized_name": "product_weight__net",
+      "normalized_value": "7.7",
+      "unit": "kg"
+    },
+    {
+      "id": 1040,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Блокировка для безопасности детей",
+      "raw_value": "Да",
+      "section": "Функции управления",
+      "value_cell": null,
+      "normalized_name": "блокировка_для_безопасности_детей",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 1027,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Варочная поверхность",
+      "raw_value": "4 шт",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "варочная_поверхность",
+      "normalized_value": "4 шт",
+      "unit": ""
+    },
+    {
+      "id": 1047,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Вырезные размеры (ШхГ), мм",
+      "raw_value": "560 x 490 мм",
+      "section": "Размеры / Вес",
+      "value_cell": null,
+      "normalized_name": "вырезные_размеры_шхг_мм__dimensions",
+      "normalized_value": "560 x 490 мм",
+      "unit": ""
+    },
+    {
+      "id": 1042,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Индикатор остаточного тепла",
+      "raw_value": "Да",
+      "section": "Функции управления",
+      "value_cell": null,
+      "normalized_name": "индикатор_остаточного_тепла",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 1033,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Источник питания",
+      "raw_value": "220-240 В ~ 50/60 Гц",
+      "section": "Характеристики нагревательных элементов",
+      "value_cell": null,
+      "normalized_name": "источник_питания",
+      "normalized_value": "220-240 в ~ 50/60 гц",
+      "unit": ""
+    },
+    {
+      "id": 1051,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Количество комплектов в контейнере (20/40-футовый)",
+      "raw_value": "459 / 918",
+      "section": "Размеры / Вес",
+      "value_cell": null,
+      "normalized_name": "количество_комплектов_в_контейнере_20_40_футовый",
+      "normalized_value": "459 / 918",
+      "unit": ""
+    },
+    {
+      "id": 1044,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Количество конфорок",
+      "raw_value": "4 шт",
+      "section": "Варочная поверхность",
+      "value_cell": null,
+      "normalized_name": "количество_конфорок",
+      "normalized_value": "4 шт",
+      "unit": ""
+    },
+    {
+      "id": 1041,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Кухонный таймер",
+      "raw_value": "Нет",
+      "section": "Функции управления",
+      "value_cell": null,
+      "normalized_name": "кухонный_таймер",
+      "normalized_value": "false",
+      "unit": "bool"
+    },
+    {
+      "id": 1034,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Потребляемая мощность (кВт)",
+      "raw_value": "6.0 квт",
+      "section": "Характеристики нагревательных элементов",
+      "value_cell": null,
+      "normalized_name": "потребляемая_мощность_квт",
+      "normalized_value": "6.0 квт",
+      "unit": ""
+    },
+    {
+      "id": 1030,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Рамка",
+      "raw_value": "Угловая",
+      "section": "Экстерьер",
+      "value_cell": null,
+      "normalized_name": "рамка",
+      "normalized_value": "угловая",
+      "unit": ""
+    },
+    {
+      "id": 1045,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Тип",
+      "raw_value": "Radiant",
+      "section": "Варочная поверхность",
+      "value_cell": null,
+      "normalized_name": "тип",
+      "normalized_value": "radiant",
+      "unit": ""
+    },
+    {
+      "id": 1031,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Тип управления",
+      "raw_value": "Сенсорный",
+      "section": "Экстерьер",
+      "value_cell": null,
+      "normalized_name": "тип_управления",
+      "normalized_value": "сенсорный",
+      "unit": ""
+    },
+    {
+      "id": 1029,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Тип установки модели",
+      "raw_value": "Встраиваемая",
+      "section": "Экстерьер",
+      "value_cell": null,
+      "normalized_name": "тип_установки_модели",
+      "normalized_value": "встраиваемая",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 1007,
+      "product_id": 20,
+      "normalized_name": "burner_left_front",
+      "selected_value": "одинарная (183 мм) - 1.8 квт",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1008,
+      "product_id": 20,
+      "normalized_name": "burner_left_rear",
+      "selected_value": "одинарная (148 мм) - 1.2 квт",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1009,
+      "product_id": 20,
+      "normalized_name": "burner_right_front",
+      "selected_value": "одинарная (148 мм) - 1.2 квт",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1010,
+      "product_id": 20,
+      "normalized_name": "burner_right_rear",
+      "selected_value": "одинарная (183 мм) - 1.8 квт",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1011,
+      "product_id": 20,
+      "normalized_name": "display_type",
+      "selected_value": "led",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1012,
+      "product_id": 20,
+      "normalized_name": "package_dimensions",
+      "selected_value": "w=690;h=115;d=645",
+      "selected_unit": "mm",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1013,
+      "product_id": 20,
+      "normalized_name": "power_level",
+      "selected_value": "9",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1014,
+      "product_id": 20,
+      "normalized_name": "power_on_off",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1015,
+      "product_id": 20,
+      "normalized_name": "product_dimensions",
+      "selected_value": "w=575;h=55;d=505",
+      "selected_unit": "mm",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1016,
+      "product_id": 20,
+      "normalized_name": "product_weight__gross",
+      "selected_value": "9.2",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1017,
+      "product_id": 20,
+      "normalized_name": "product_weight__net",
+      "selected_value": "7.7",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1018,
+      "product_id": 20,
+      "normalized_name": "блокировка_для_безопасности_детей",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1019,
+      "product_id": 20,
+      "normalized_name": "варочная_поверхность",
+      "selected_value": "4 шт",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1020,
+      "product_id": 20,
+      "normalized_name": "вырезные_размеры_шхг_мм__dimensions",
+      "selected_value": "560 x 490 мм",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1021,
+      "product_id": 20,
+      "normalized_name": "индикатор_остаточного_тепла",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1022,
+      "product_id": 20,
+      "normalized_name": "источник_питания",
+      "selected_value": "220-240 в ~ 50/60 гц",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1023,
+      "product_id": 20,
+      "normalized_name": "количество_комплектов_в_контейнере_20_40_футовый",
+      "selected_value": "459 / 918",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1024,
+      "product_id": 20,
+      "normalized_name": "количество_конфорок",
+      "selected_value": "4 шт",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1025,
+      "product_id": 20,
+      "normalized_name": "кухонный_таймер",
+      "selected_value": "false",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1026,
+      "product_id": 20,
+      "normalized_name": "потребляемая_мощность_квт",
+      "selected_value": "6.0 квт",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1027,
+      "product_id": 20,
+      "normalized_name": "рамка",
+      "selected_value": "угловая",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1028,
+      "product_id": 20,
+      "normalized_name": "тип",
+      "selected_value": "radiant",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1029,
+      "product_id": 20,
+      "normalized_name": "тип_управления",
+      "selected_value": "сенсорный",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1030,
+      "product_id": 20,
+      "normalized_name": "тип_установки_модели",
+      "selected_value": "встраиваемая",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T11:28:08+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "burner_left_front",
+      "sources": {
+        "samsung": {
+          "id": 1036,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Burner - Left Front",
+          "raw_value": "Одинарная (183 мм) - 1.8 квт",
+          "section": "Характеристики нагревательных элементов",
+          "value_cell": null,
+          "normalized_name": "burner_left_front",
+          "normalized_value": "одинарная (183 мм) - 1.8 квт",
+          "unit": "",
+          "display_value": "одинарная (183 мм) - 1.8 квт",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Burner - Left Front"
+      ],
+      "display_name": "Передняя левая конфорка",
+      "resolved": {
+        "id": 1007,
+        "product_id": 20,
+        "normalized_name": "burner_left_front",
+        "selected_value": "одинарная (183 мм) - 1.8 квт",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Одинарная (183 мм) - 1.8 квт",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Характеристики нагревательных элементов",
+      "category_attribute_key": "Характеристики нагревательных элементов / Передняя левая конфорка"
+    },
+    {
+      "normalized_name": "burner_left_rear",
+      "sources": {
+        "samsung": {
+          "id": 1037,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Burner - Left Rear",
+          "raw_value": "Одинарная (148 мм) - 1.2 квт",
+          "section": "Характеристики нагревательных элементов",
+          "value_cell": null,
+          "normalized_name": "burner_left_rear",
+          "normalized_value": "одинарная (148 мм) - 1.2 квт",
+          "unit": "",
+          "display_value": "одинарная (148 мм) - 1.2 квт",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Burner - Left Rear"
+      ],
+      "display_name": "Задняя левая конфорка",
+      "resolved": {
+        "id": 1008,
+        "product_id": 20,
+        "normalized_name": "burner_left_rear",
+        "selected_value": "одинарная (148 мм) - 1.2 квт",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Одинарная (148 мм) - 1.2 квт",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Характеристики нагревательных элементов",
+      "category_attribute_key": "Характеристики нагревательных элементов / Задняя левая конфорка"
+    },
+    {
+      "normalized_name": "burner_right_front",
+      "sources": {
+        "samsung": {
+          "id": 1038,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Burner - Right Front",
+          "raw_value": "Одинарная (148 мм) - 1.2 квт",
+          "section": "Характеристики нагревательных элементов",
+          "value_cell": null,
+          "normalized_name": "burner_right_front",
+          "normalized_value": "одинарная (148 мм) - 1.2 квт",
+          "unit": "",
+          "display_value": "одинарная (148 мм) - 1.2 квт",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Burner - Right Front"
+      ],
+      "display_name": "Передняя правая конфорка",
+      "resolved": {
+        "id": 1009,
+        "product_id": 20,
+        "normalized_name": "burner_right_front",
+        "selected_value": "одинарная (148 мм) - 1.2 квт",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Одинарная (148 мм) - 1.2 квт",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Характеристики нагревательных элементов",
+      "category_attribute_key": "Характеристики нагревательных элементов / Передняя правая конфорка"
+    },
+    {
+      "normalized_name": "burner_right_rear",
+      "sources": {
+        "samsung": {
+          "id": 1039,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Burner - Right Rear",
+          "raw_value": "Одинарная (183 мм) - 1.8 квт",
+          "section": "Характеристики нагревательных элементов",
+          "value_cell": null,
+          "normalized_name": "burner_right_rear",
+          "normalized_value": "одинарная (183 мм) - 1.8 квт",
+          "unit": "",
+          "display_value": "одинарная (183 мм) - 1.8 квт",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Burner - Right Rear"
+      ],
+      "display_name": "Задняя правая конфорка",
+      "resolved": {
+        "id": 1010,
+        "product_id": 20,
+        "normalized_name": "burner_right_rear",
+        "selected_value": "одинарная (183 мм) - 1.8 квт",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Одинарная (183 мм) - 1.8 квт",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Характеристики нагревательных элементов",
+      "category_attribute_key": "Характеристики нагревательных элементов / Задняя правая конфорка"
+    },
+    {
+      "normalized_name": "power_level",
+      "sources": {
+        "samsung": {
+          "id": 1035,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Power Level",
+          "raw_value": "9",
+          "section": "Характеристики нагревательных элементов",
+          "value_cell": null,
+          "normalized_name": "power_level",
+          "normalized_value": "9",
+          "unit": "",
+          "display_value": "9",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Power Level"
+      ],
+      "display_name": "Уровень мощности",
+      "resolved": {
+        "id": 1013,
+        "product_id": 20,
+        "normalized_name": "power_level",
+        "selected_value": "9",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "9",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Характеристики нагревательных элементов",
+      "category_attribute_key": "Характеристики нагревательных элементов / Уровень мощности"
+    },
+    {
+      "normalized_name": "power_on_off",
+      "sources": {
+        "samsung": {
+          "id": 1043,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Power On/Off",
+          "raw_value": "Да",
+          "section": "Функции управления",
+          "value_cell": null,
+          "normalized_name": "power_on_off",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Power On/Off"
+      ],
+      "display_name": "Включение и выключение",
+      "resolved": {
+        "id": 1014,
+        "product_id": 20,
+        "normalized_name": "power_on_off",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Функции управления",
+      "category_attribute_key": "Функции управления / Включение и выключение"
+    },
+    {
+      "normalized_name": "блокировка_для_безопасности_детей",
+      "sources": {
+        "samsung": {
+          "id": 1040,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Блокировка для безопасности детей",
+          "raw_value": "Да",
+          "section": "Функции управления",
+          "value_cell": null,
+          "normalized_name": "блокировка_для_безопасности_детей",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Блокировка для безопасности детей"
+      ],
+      "display_name": "Блокировка для безопасности детей",
+      "resolved": {
+        "id": 1018,
+        "product_id": 20,
+        "normalized_name": "блокировка_для_безопасности_детей",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Функции управления",
+      "category_attribute_key": "Функции управления / Блокировка для безопасности детей"
+    },
+    {
+      "normalized_name": "варочная_поверхность",
+      "sources": {
+        "samsung": {
+          "id": 1027,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Варочная поверхность",
+          "raw_value": "4 шт",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "варочная_поверхность",
+          "normalized_value": "4 шт",
+          "unit": "",
+          "display_value": "4 шт",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Варочная поверхность"
+      ],
+      "display_name": "Варочная поверхность",
+      "resolved": {
+        "id": 1019,
+        "product_id": 20,
+        "normalized_name": "варочная_поверхность",
+        "selected_value": "4 шт",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "4 шт",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Варочная поверхность"
+    },
+    {
+      "normalized_name": "product_weight__gross",
+      "sources": {
+        "samsung": {
+          "id": 1049,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Вес (брутто), кг",
+          "raw_value": "9.2 кг",
+          "section": "Размеры / Вес",
+          "value_cell": null,
+          "normalized_name": "product_weight__gross",
+          "normalized_value": "9.2",
+          "unit": "kg",
+          "display_value": "9.2 кг",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Вес (брутто), кг"
+      ],
+      "display_name": "Вес (брутто), кг",
+      "resolved": {
+        "id": 1016,
+        "product_id": 20,
+        "normalized_name": "product_weight__gross",
+        "selected_value": "9.2",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "9.2 кг",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Вес (брутто), кг"
+    },
+    {
+      "normalized_name": "product_weight__net",
+      "sources": {
+        "samsung": {
+          "id": 1050,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Вес нетто",
+          "raw_value": "7.7 кг",
+          "section": "Размеры / Вес",
+          "value_cell": null,
+          "normalized_name": "product_weight__net",
+          "normalized_value": "7.7",
+          "unit": "kg",
+          "display_value": "7.7 кг",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Вес нетто"
+      ],
+      "display_name": "Вес нетто",
+      "resolved": {
+        "id": 1017,
+        "product_id": 20,
+        "normalized_name": "product_weight__net",
+        "selected_value": "7.7",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "7.7 кг",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Вес нетто"
+    },
+    {
+      "normalized_name": "вырезные_размеры_шхг_мм__dimensions",
+      "sources": {
+        "samsung": {
+          "id": 1047,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Вырезные размеры (ШхГ), мм",
+          "raw_value": "560 x 490 мм",
+          "section": "Размеры / Вес",
+          "value_cell": null,
+          "normalized_name": "вырезные_размеры_шхг_мм__dimensions",
+          "normalized_value": "560 x 490 мм",
+          "unit": "",
+          "display_value": "560 x 490 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Вырезные размеры (ШхГ), мм"
+      ],
+      "display_name": "Вырезные размеры (ШхГ), мм",
+      "resolved": {
+        "id": 1020,
+        "product_id": 20,
+        "normalized_name": "вырезные_размеры_шхг_мм__dimensions",
+        "selected_value": "560 x 490 мм",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "560 x 490 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Вырезные размеры (ШхГ), мм"
+    },
+    {
+      "normalized_name": "product_h_mm",
+      "sources": {
+        "samsung": {
+          "id": 1028,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры корпуса (Ш x В x Г) (Обзор)",
+          "raw_value": "575 x 55 x 505 мм",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "55",
+          "unit": "mm",
+          "display_value": "55 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры корпуса (Ш x В x Г) (Обзор)",
+        "Размеры корпуса (Ш x В x Г) (Размеры / Вес)"
+      ],
+      "display_name": "Высота товара, мм",
+      "resolved": {
+        "id": 1015,
+        "product_id": 20,
+        "normalized_name": "product_dimensions",
+        "selected_value": "55",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "55 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions",
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Высота товара, мм"
+    },
+    {
+      "normalized_name": "package_h_mm",
+      "sources": {
+        "samsung": {
+          "id": 1046,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Габариты упаковки (ШxВxГ)",
+          "raw_value": "690 x 115 x 645 мм",
+          "section": "Размеры / Вес",
+          "value_cell": null,
+          "normalized_name": "package_dimensions",
+          "normalized_value": "115",
+          "unit": "mm",
+          "display_value": "115 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Габариты упаковки (ШxВxГ)"
+      ],
+      "display_name": "Высота упаковки, мм",
+      "resolved": {
+        "id": 1012,
+        "product_id": 20,
+        "normalized_name": "package_dimensions",
+        "selected_value": "115",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "115 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "package_dimensions",
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Высота упаковки, мм"
+    },
+    {
+      "normalized_name": "product_d_mm",
+      "sources": {
+        "samsung": {
+          "id": 1028,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры корпуса (Ш x В x Г) (Обзор)",
+          "raw_value": "575 x 55 x 505 мм",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "505",
+          "unit": "mm",
+          "display_value": "505 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры корпуса (Ш x В x Г) (Обзор)",
+        "Размеры корпуса (Ш x В x Г) (Размеры / Вес)"
+      ],
+      "display_name": "Глубина товара, мм",
+      "resolved": {
+        "id": 1015,
+        "product_id": 20,
+        "normalized_name": "product_dimensions",
+        "selected_value": "505",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "505 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions",
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Глубина товара, мм"
+    },
+    {
+      "normalized_name": "package_d_mm",
+      "sources": {
+        "samsung": {
+          "id": 1046,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Габариты упаковки (ШxВxГ)",
+          "raw_value": "690 x 115 x 645 мм",
+          "section": "Размеры / Вес",
+          "value_cell": null,
+          "normalized_name": "package_dimensions",
+          "normalized_value": "645",
+          "unit": "mm",
+          "display_value": "645 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Габариты упаковки (ШxВxГ)"
+      ],
+      "display_name": "Глубина упаковки, мм",
+      "resolved": {
+        "id": 1012,
+        "product_id": 20,
+        "normalized_name": "package_dimensions",
+        "selected_value": "645",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "645 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "package_dimensions",
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Глубина упаковки, мм"
+    },
+    {
+      "normalized_name": "индикатор_остаточного_тепла",
+      "sources": {
+        "samsung": {
+          "id": 1042,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Индикатор остаточного тепла",
+          "raw_value": "Да",
+          "section": "Функции управления",
+          "value_cell": null,
+          "normalized_name": "индикатор_остаточного_тепла",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Индикатор остаточного тепла"
+      ],
+      "display_name": "Индикатор остаточного тепла",
+      "resolved": {
+        "id": 1021,
+        "product_id": 20,
+        "normalized_name": "индикатор_остаточного_тепла",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Функции управления",
+      "category_attribute_key": "Функции управления / Индикатор остаточного тепла"
+    },
+    {
+      "normalized_name": "источник_питания",
+      "sources": {
+        "samsung": {
+          "id": 1033,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Источник питания",
+          "raw_value": "220-240 В ~ 50/60 Гц",
+          "section": "Характеристики нагревательных элементов",
+          "value_cell": null,
+          "normalized_name": "источник_питания",
+          "normalized_value": "220-240 в ~ 50/60 гц",
+          "unit": "",
+          "display_value": "220-240 в ~ 50/60 гц",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Источник питания"
+      ],
+      "display_name": "Источник питания",
+      "resolved": {
+        "id": 1022,
+        "product_id": 20,
+        "normalized_name": "источник_питания",
+        "selected_value": "220-240 в ~ 50/60 гц",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "220-240 В ~ 50/60 Гц",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Характеристики нагревательных элементов",
+      "category_attribute_key": "Характеристики нагревательных элементов / Источник питания"
+    },
+    {
+      "normalized_name": "количество_комплектов_в_контейнере_20_40_футовый",
+      "sources": {
+        "samsung": {
+          "id": 1051,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Количество комплектов в контейнере (20/40-футовый)",
+          "raw_value": "459 / 918",
+          "section": "Размеры / Вес",
+          "value_cell": null,
+          "normalized_name": "количество_комплектов_в_контейнере_20_40_футовый",
+          "normalized_value": "459 / 918",
+          "unit": "",
+          "display_value": "459 / 918",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Количество комплектов в контейнере (20/40-футовый)"
+      ],
+      "display_name": "Количество комплектов в контейнере (20/40-футовый)",
+      "resolved": {
+        "id": 1023,
+        "product_id": 20,
+        "normalized_name": "количество_комплектов_в_контейнере_20_40_футовый",
+        "selected_value": "459 / 918",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "459 / 918",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Количество комплектов в контейнере (20/40-футовый)"
+    },
+    {
+      "normalized_name": "количество_конфорок",
+      "sources": {
+        "samsung": {
+          "id": 1044,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Количество конфорок",
+          "raw_value": "4 шт",
+          "section": "Варочная поверхность",
+          "value_cell": null,
+          "normalized_name": "количество_конфорок",
+          "normalized_value": "4 шт",
+          "unit": "",
+          "display_value": "4 шт",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Количество конфорок"
+      ],
+      "display_name": "Количество конфорок",
+      "resolved": {
+        "id": 1024,
+        "product_id": 20,
+        "normalized_name": "количество_конфорок",
+        "selected_value": "4 шт",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "4 шт",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Варочная поверхность",
+      "category_attribute_key": "Варочная поверхность / Количество конфорок"
+    },
+    {
+      "normalized_name": "кухонный_таймер",
+      "sources": {
+        "samsung": {
+          "id": 1041,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Кухонный таймер",
+          "raw_value": "Нет",
+          "section": "Функции управления",
+          "value_cell": null,
+          "normalized_name": "кухонный_таймер",
+          "normalized_value": "false",
+          "unit": "bool",
+          "display_value": "Нет",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Кухонный таймер"
+      ],
+      "display_name": "Кухонный таймер",
+      "resolved": {
+        "id": 1025,
+        "product_id": 20,
+        "normalized_name": "кухонный_таймер",
+        "selected_value": "false",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Нет",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Функции управления",
+      "category_attribute_key": "Функции управления / Кухонный таймер"
+    },
+    {
+      "normalized_name": "потребляемая_мощность_квт",
+      "sources": {
+        "samsung": {
+          "id": 1034,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Потребляемая мощность (кВт)",
+          "raw_value": "6.0 квт",
+          "section": "Характеристики нагревательных элементов",
+          "value_cell": null,
+          "normalized_name": "потребляемая_мощность_квт",
+          "normalized_value": "6.0 квт",
+          "unit": "",
+          "display_value": "6.0 квт",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Потребляемая мощность (кВт)"
+      ],
+      "display_name": "Потребляемая мощность (кВт)",
+      "resolved": {
+        "id": 1026,
+        "product_id": 20,
+        "normalized_name": "потребляемая_мощность_квт",
+        "selected_value": "6.0 квт",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "6.0 квт",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Характеристики нагревательных элементов",
+      "category_attribute_key": "Характеристики нагревательных элементов / Потребляемая мощность (кВт)"
+    },
+    {
+      "normalized_name": "рамка",
+      "sources": {
+        "samsung": {
+          "id": 1030,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Рамка",
+          "raw_value": "Угловая",
+          "section": "Экстерьер",
+          "value_cell": null,
+          "normalized_name": "рамка",
+          "normalized_value": "угловая",
+          "unit": "",
+          "display_value": "угловая",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Рамка"
+      ],
+      "display_name": "Рамка",
+      "resolved": {
+        "id": 1027,
+        "product_id": 20,
+        "normalized_name": "рамка",
+        "selected_value": "угловая",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Угловая",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Экстерьер",
+      "category_attribute_key": "Экстерьер / Рамка"
+    },
+    {
+      "normalized_name": "тип",
+      "sources": {
+        "samsung": {
+          "id": 1045,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Тип",
+          "raw_value": "Radiant",
+          "section": "Варочная поверхность",
+          "value_cell": null,
+          "normalized_name": "тип",
+          "normalized_value": "radiant",
+          "unit": "",
+          "display_value": "radiant",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Тип"
+      ],
+      "display_name": "Тип",
+      "resolved": {
+        "id": 1028,
+        "product_id": 20,
+        "normalized_name": "тип",
+        "selected_value": "radiant",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Radiant",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Варочная поверхность",
+      "category_attribute_key": "Варочная поверхность / Тип"
+    },
+    {
+      "normalized_name": "display_type",
+      "sources": {
+        "samsung": {
+          "id": 1032,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Тип дисплея",
+          "raw_value": "LED",
+          "section": "Экстерьер",
+          "value_cell": null,
+          "normalized_name": "display_type",
+          "normalized_value": "led",
+          "unit": "",
+          "display_value": "led",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Тип дисплея"
+      ],
+      "display_name": "Тип дисплея",
+      "resolved": {
+        "id": 1011,
+        "product_id": 20,
+        "normalized_name": "display_type",
+        "selected_value": "led",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "LED",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Экстерьер",
+      "category_attribute_key": "Экстерьер / Тип дисплея"
+    },
+    {
+      "normalized_name": "тип_управления",
+      "sources": {
+        "samsung": {
+          "id": 1031,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Тип управления",
+          "raw_value": "Сенсорный",
+          "section": "Экстерьер",
+          "value_cell": null,
+          "normalized_name": "тип_управления",
+          "normalized_value": "сенсорный",
+          "unit": "",
+          "display_value": "сенсорный",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Тип управления"
+      ],
+      "display_name": "Тип управления",
+      "resolved": {
+        "id": 1029,
+        "product_id": 20,
+        "normalized_name": "тип_управления",
+        "selected_value": "сенсорный",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Сенсорный",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Экстерьер",
+      "category_attribute_key": "Экстерьер / Тип управления"
+    },
+    {
+      "normalized_name": "тип_установки_модели",
+      "sources": {
+        "samsung": {
+          "id": 1029,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Тип установки модели",
+          "raw_value": "Встраиваемая",
+          "section": "Экстерьер",
+          "value_cell": null,
+          "normalized_name": "тип_установки_модели",
+          "normalized_value": "встраиваемая",
+          "unit": "",
+          "display_value": "встраиваемая",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Тип установки модели"
+      ],
+      "display_name": "Тип установки модели",
+      "resolved": {
+        "id": 1030,
+        "product_id": 20,
+        "normalized_name": "тип_установки_модели",
+        "selected_value": "встраиваемая",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Встраиваемая",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Экстерьер",
+      "category_attribute_key": "Экстерьер / Тип установки модели"
+    },
+    {
+      "normalized_name": "product_w_mm",
+      "sources": {
+        "samsung": {
+          "id": 1028,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры корпуса (Ш x В x Г) (Обзор)",
+          "raw_value": "575 x 55 x 505 мм",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "575",
+          "unit": "mm",
+          "display_value": "575 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры корпуса (Ш x В x Г) (Обзор)",
+        "Размеры корпуса (Ш x В x Г) (Размеры / Вес)"
+      ],
+      "display_name": "Ширина товара, мм",
+      "resolved": {
+        "id": 1015,
+        "product_id": 20,
+        "normalized_name": "product_dimensions",
+        "selected_value": "575",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "575 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions",
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Ширина товара, мм"
+    },
+    {
+      "normalized_name": "package_w_mm",
+      "sources": {
+        "samsung": {
+          "id": 1046,
+          "product_id": 20,
+          "source_page_id": 33,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Габариты упаковки (ШxВxГ)",
+          "raw_value": "690 x 115 x 645 мм",
+          "section": "Размеры / Вес",
+          "value_cell": null,
+          "normalized_name": "package_dimensions",
+          "normalized_value": "690",
+          "unit": "mm",
+          "display_value": "690 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Габариты упаковки (ШxВxГ)"
+      ],
+      "display_name": "Ширина упаковки, мм",
+      "resolved": {
+        "id": 1012,
+        "product_id": 20,
+        "normalized_name": "package_dimensions",
+        "selected_value": "690",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T11:28:08+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "690 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "package_dimensions",
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Ширина упаковки, мм"
+    }
+  ],
+  "photos": [
+    {
+      "id": 491,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-thumb-427525072",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-thumb-427525072",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T11:28:08+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 490,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T11:28:08+00:00",
+      "verified_width": 2052,
+      "verified_height": 1641,
+      "verified_bytes": 91776,
+      "verified_format": "JPG",
+      "site_name": "Samsung Казахстан"
+    }
+  ],
+  "all_official_gallery": [
+    {
+      "id": 491,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-thumb-427525072",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-thumb-427525072",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T11:28:08+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "unclassified_official_visual",
+      "normalized_asset": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525072",
+      "role_label": "Официальное изображение; роль не определена",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+      "aliases": []
+    },
+    {
+      "id": 490,
+      "product_id": 20,
+      "source_page_id": 33,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": 1641,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T11:28:08+00:00",
+      "verified_width": 2052,
+      "verified_height": 1641,
+      "verified_bytes": 91776,
+      "verified_format": "JPG",
+      "site_name": "Samsung Казахстан",
+      "normalized_asset": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?%24Q90_2052_1641_JPG%24=",
+      "role": "product_render",
+      "verified_at": "2026-10-13T11:28:12.374828+00:00",
+      "size_bytes": 91776,
+      "format": "JPG",
+      "content_type": "image/jpeg",
+      "effective_content_type": "image/jpeg",
+      "sha256": "dc6b2607a3535954de241a674015a1ba6ef5e2ae8e042e99d343f83e722a76c2",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\dc6b2607a3535954de241a674015a1ba6ef5e2ae8e042e99d343f83e722a76c2.img",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+      "aliases": []
+    }
+  ],
+  "photo_evidence": {
+    "entries": {
+      "samsung / https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071 / https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?$Q90_2052_1641_JPG$": {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?$Q90_2052_1641_JPG$",
+        "source_key": "samsung",
+        "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071",
+        "normalized_asset": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?%24Q90_2052_1641_JPG%24=",
+        "role": "product_render",
+        "verified_at": "2026-10-13T11:28:12.374828+00:00",
+        "width": 2052,
+        "height": 1641,
+        "size_bytes": 91776,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "dc6b2607a3535954de241a674015a1ba6ef5e2ae8e042e99d343f83e722a76c2",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\dc6b2607a3535954de241a674015a1ba6ef5e2ae8e042e99d343f83e722a76c2.img"
+      }
+    },
+    "last_completion": {
+      "budget_seconds": 180,
+      "results": [
+        {
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071?$Q90_2052_1641_JPG$",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "dc6b2607a3535954de241a674015a1ba6ef5e2ae8e042e99d343f83e722a76c2"
+        }
+      ]
+    }
+  },
+  "documents": [],
+  "evidence": {
+    "article": "NZ64T3506AK/WT",
+    "route": {
+      "kind": "sitemap",
+      "addresses": [
+        "https://www.samsung.com/kz_ru/da-sitemap.xml",
+        "https://www.samsung.com/kz_ru/vd-sitemap.xml",
+        "https://www.samsung.com/ru/da-sitemap.xml",
+        "https://www.samsung.com/ru/vd-sitemap.xml"
+      ],
+      "reason": "",
+      "found_via": "https://www.samsung.com/kz_ru/da-sitemap.xml"
+    },
+    "query_variants": [
+      "NZ64T3506AK/WT",
+      "NZ64T3506AK"
+    ],
+    "candidates": [
+      {
+        "url": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+        "via": "https://www.samsung.com/kz_ru/da-sitemap.xml",
+        "match_level": "full_sku",
+        "product_page": true
+      }
+    ],
+    "external_search": null,
+    "external_results": null,
+    "steps": [
+      {
+        "step": "sitemap",
+        "url": "https://www.samsung.com/kz_ru/da-sitemap.xml",
+        "status": 200
+      },
+      {
+        "step": "product_page",
+        "url": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+        "status": 200
+      }
+    ],
+    "page_url": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+    "buy_page_url": "",
+    "identity": {
+      "level": "full_sku",
+      "strength": "strong",
+      "match_level": "full_sku",
+      "evidence": [
+        "visible_text",
+        "url_only_not_counted",
+        "product_data_code"
+      ],
+      "jsonld_sku": "",
+      "title": "57,5см Варочная панель Электрическая Сенсорное управление | Samsung Казахстан",
+      "is_product_page": true,
+      "open_differences": []
+    },
+    "specs": 25,
+    "photos": {
+      "full_size": 1,
+      "thumbnails": 1,
+      "three_d_excluded": 0,
+      "from": "https://www.samsung.com/kz_ru/cooking-appliances/hobs/hob-nz64t3506ak-wt/",
+      "bound_by_asset_path": [
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/nz64t3506ak-wt/gallery/kz-ru-metro-205752-nz64t3506ak-wt-427525071"
+      ],
+      "gap": ""
+    },
+    "document_links": [
+      {
+        "file": "User_Manual_NZ64T3506AK_WT_RU-UK-KK_201029.pdf",
+        "model_name": "NZ64T3506AK",
+        "language_hint": "RU"
+      }
+    ],
+    "gaps": [],
+    "missing_fields": [],
+    "outcome": "page_read",
+    "halted": null,
+    "device_split": {
+      "tables": [],
+      "assigned": [],
+      "unassigned": []
+    }
+  },
+  "readiness": {
+    "gap_reasons": {
+      "instruction_not_checked": "этап инструкций не запрашивался",
+      "dealer_cross_check_missing": "проверенного точного адреса у дилера нет, DNS запросов не делает; сверка с дилером не выполнялась"
+    },
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "dealer_cross_check_missing",
+      "instruction_not_checked"
+    ],
+    "gaps": [
+      "dealer_cross_check_missing",
+      "instruction_not_checked"
+    ],
+    "page_match_level": "full_sku",
+    "open_variant_differences": [],
+    "official_facts": 25,
+    "official_photos": 1,
+    "official_photos_selected": 1,
+    "real_conflicts": 0,
+    "conflict_fields": [],
+    "device_values_unassigned": [],
+    "device_values_assigned": 0,
+    "dealer_disputes": [],
+    "open_reviews": [],
+    "instruction": {
+      "saved": 0,
+      "russian_saved": 0,
+      "manual_check_files": 0,
+      "brief_guides": [],
+      "russian_by_text": null,
+      "tied_by_official_page": null,
+      "names_catalog_code_exactly": null,
+      "names_family_mask": null,
+      "names_link_model_only": false,
+      "acceptance_basis": null,
+      "accepted": null,
+      "mark": "",
+      "code_relation": {},
+      "assessed_from": null
+    },
+    "dealer_confirmed": [],
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "gap_reasons": {
+      "instruction_not_checked": "этап инструкций не запрашивался",
+      "dealer_cross_check_missing": "проверенного точного адреса у дилера нет, DNS запросов не делает; сверка с дилером не выполнялась"
+    },
+    "verdict": "export_ready_with_gaps",
+    "blocking_gaps": [
+      "instruction_not_checked"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "instruction_not_checked",
+      "dealer_cross_check_missing"
+    ],
+    "page_match_level": "full_sku",
+    "open_variant_differences": [],
+    "official_facts": 25,
+    "official_photos": 1,
+    "official_photos_selected": 1,
+    "real_conflicts": 0,
+    "conflict_fields": [],
+    "device_values_unassigned": [],
+    "device_values_assigned": 0,
+    "dealer_disputes": [],
+    "open_reviews": [],
+    "instruction": {
+      "saved": 0,
+      "russian_saved": 0,
+      "manual_check_files": 0,
+      "brief_guides": [],
+      "russian_by_text": null,
+      "tied_by_official_page": null,
+      "names_catalog_code_exactly": null,
+      "names_family_mask": null,
+      "names_link_model_only": false,
+      "acceptance_basis": null,
+      "accepted": null,
+      "mark": "",
+      "code_relation": {},
+      "assessed_from": null
+    },
+    "dealer_confirmed": []
+  },
+  "trace": []
+}

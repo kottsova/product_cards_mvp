@@ -117,24 +117,34 @@ def parse_page(html,url,article):
     compact=lambda v:re.sub(r'[^a-z]','',v.lower())
     alts=[im.get('alt','') for im in b.select('img[alt]') if urlsplit(im.get('src','')).path==urlsplit(u).path]
     alt=' '.join(dict.fromkeys(alts));ev.setdefault('gallery_audit',[]).append({'url':u,'alt':alt})
-    if re.search(r'box|packaging|shipping',alt,re.I):
-     ev['photo_candidates'].append({'url':u,'reason':'Packaging image; not product gallery'});continue
+    packaging=bool(re.search(r'box|packaging|shipping',alt,re.I))
     primary_alt=re.sub(r'black display bezel|black bezel|black display', '',alt,flags=re.I)
     alt_colors=[c for c in colors if c in compact(primary_alt)]
+    if packaging and re.match(r'Shipping box\b',primary_alt,re.I):alt_colors=[] # Box finish is a packaging component, not device color.
     if alt_colors and not all(c in compact(title) for c in alt_colors):
      ev['photo_candidates'].append({'url':u,'reason':'Family/multiple or conflicting exterior colors in image description'});continue
     observed=[c for c in colors if c in compact(urlsplit(u).path)]
-    if not observed and not alt_colors:
+    if not observed and not alt_colors and not packaging:
      ev['photo_candidates'].append({'url':u,'reason':'Image color relation unverified'});continue
     if observed and not all(c in compact(title) for c in observed):
      ev['photo_candidates'].append({'url':u,'reason':'Conflicting gallery color; not confirmed'});continue
-    key=hashlib.sha256(u.encode()).hexdigest();doc.photo_candidates.append(PhotoCandidate(u,key));doc.photos.append(u)
- ev['exact_photo_assets']=[x.asset_key for x in doc.photo_candidates]
+    key=hashlib.sha256(u.encode()).hexdigest();doc.photo_candidates.append(PhotoCandidate(u,key,kind='packaging' if packaging else 'product_gallery'));doc.photos.append(u)
+    if packaging:
+     ev.setdefault('all_official_photo_assets',[]).append(key)
+     ev.setdefault('photos',[]).append({'url':u,'asset_key':key,'role':'packaging','relation':'exact_sku_associated_media','verified':True})
+ # Preserve rejected owned gallery URLs as selectable candidates too.
+ # Confirmation stays entirely in the exact asset relations above.
+ for candidate in ev['photo_candidates']:
+  u=candidate.get('url','')
+  if (urlsplit(u).hostname or '').endswith('.cdn-apple.com') and u not in {p.url for p in doc.photo_candidates}:
+   doc.photo_candidates.append(PhotoCandidate(u,hashlib.sha256(u.encode()).hexdigest(),kind='candidate',excluded_reason=candidate.get('reason','Appearance relation unproven')))
+ ev['exact_photo_assets']=[x.asset_key for x in doc.photo_candidates if x.kind=='product_gallery']
  ev['configuration_complete']=not ambiguous and any(x.name=='Объём накопителя' for x in doc.attributes)
  return doc,ev
 
 class AppleAdapter:
- def __init__(self,*,fetch_log_path=None,trace_callback=None,clock=time.monotonic):
+ def __init__(self,*,fetch_log_path=None,trace_callback=None,clock=time.monotonic,manuals_enabled=True):
+  self.manuals_enabled=manuals_enabled
   self.clock=clock;self.log=Path(fetch_log_path or 'data/apple_fetch.json');self.session=PolicyAwareSession(self.log,allowed_hosts=('apple.com',));self.trace_callback=trace_callback;self.reports={};self.capture_dir=self.log.parent/'apple_captures';self.capture_dir.mkdir(parents=True,exist_ok=True)
  def emit(self,**event):
   if self.trace_callback:self.trace_callback(dict(timestamp=utc_now(),**event))
@@ -258,7 +268,7 @@ class AppleAdapter:
   else:ev['model_fetch_error']=z.marker or str(z.status_code)
   ev['configuration_complete']=bool(config.get('storage')) if MODELS[key][2] in {'iphone','ipad','mac'} else bool(config.get('case_size') and config.get('connectivity')) if key=='watch10' else bool(ev.get('catalog_identity')) if key=='airpods4anc' else False
   for candidate in ev.get('photo_candidates',[]):candidate.update(model_relation='exact_model' if key else 'unproven',color_relation='candidate')
-  if self.clock()<deadline:self.check_manual(ev,key,deadline)
+  if self.manuals_enabled and self.clock()<deadline:self.check_manual(ev,key,deadline)
   from ..photo_metadata import inspect_saved_photo
   for candidate in ev.get('photo_candidates',[]):
    if self.clock()>=deadline:break

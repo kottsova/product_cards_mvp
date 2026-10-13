@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block title %}{{ product.name or product.search_code }} · Карточки товаров{% endblock %}
-{% block head %}{% if active %}<meta http-equiv="refresh" content="5">{% endif %}<script src="/static/photo_lightbox.js" defer></script>{% endblock %}
+{% block head %}{% if active %}<meta http-equiv="refresh" content="5">{% endif %}<script src="/static/photo_lightbox.js" defer></script><script src="/static/attribute_filter.js" defer></script>{% endblock %}
 {% block content %}
+{% if color_info %}<p class="product-color"><strong>Цвет:</strong> {{ color_info.value }}{% if not color_info.confirmed %} · официальная связь с конфигурацией не доказана{% endif %}</p>{% endif %}
 {% if electrolux_evidence %}
 <section class="section" id="electrolux-readiness"><h2>Модель и PNC Electrolux</h2>
 <p>{{ electrolux_evidence.identity.model }}. Готовность: <strong>{{ 'Готова' if electrolux_card.verdict == 'export_ready' else 'Не готова' }}</strong>. Инструкция: {{ electrolux_card.manual_status }}.</p>
@@ -67,6 +68,7 @@
 <section class="section" id="photos"><div class="section-heading"><h2>Фотографии</h2><span class="count">{{ photos|length }}</span></div>
 {% if photos %}<p>Отметка выбора сохраняет фото для работы с карточкой. Она не подтверждает его связь с артикулом; кандидаты показаны отдельно.</p>
 <form action="/products/{{ product.id }}/photos" method="post">
+<button class="button" type="submit" formaction="/products/{{ product.id }}/photos/inspect-all" formmethod="post">Проверить параметры всей галереи</button>
 <div class="form-actions"><button class="button" name="action" value="official">Выбрать фото официальных страниц</button><button class="button" name="action" value="none">Снять выбор</button>{% for key,label in [('lg_kz','LG Казахстан'),('lg_ru','LG Россия'),('sulpak','Sulpak')] %}<button class="button" name="action" value="source:{{ key }}">Выбрать товарные фото {{ label }}</button>{% endfor %}</div>
 <h3>{{ 'Подтверждённые фото модели' if xiaomi_card else 'Фото с подтверждённой связью с товаром' }}</h3>
 <div class="photo-grid">{% for p in photos if p.kind != 'excluded' and p.identity_confirmed %}{% include "photo_tile.html" %}{% endfor %}</div>

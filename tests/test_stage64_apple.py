@@ -34,8 +34,11 @@ class AppleIdentityTests(unittest.TestCase):
   doc,ev=parse_page(html,'https://www.apple.com/shop/buy-iphone/iphone-16','MYAP3LL/A');self.assertNotEqual(doc.match_level,'full_sku');self.assertFalse(doc.photo_candidates)
  def test_conflicting_gallery_color_is_candidate(self):
   html=(ROOT/'official_0.html').read_text(encoding='utf-8').replace('refurb-mba13-m4-midnight','refurb-mba13-m4-silver')
-  doc,ev=parse_page(html,'https://www.apple.com/shop/product/fw123ll/a','FW123LL/A');self.assertFalse(doc.photo_candidates);self.assertTrue(ev['photo_candidates'])
- def test_real_ipad_gallery_box_and_multicolor_are_candidates(self):
+  doc,ev=parse_page(html,'https://www.apple.com/shop/product/fw123ll/a','FW123LL/A');self.assertTrue(doc.photo_candidates);self.assertTrue(all(p.kind=='candidate' for p in doc.photo_candidates));self.assertFalse(ev['exact_photo_assets']);self.assertTrue(ev['photo_candidates'])
+ def test_real_ipad_exact_sku_box_is_separate_and_multicolor_is_candidate(self):
   records=[p for p in (ROOT/'apple_captures').glob('*.html.json') if json.loads(p.read_text(encoding='utf-8'))['query']=='FD3Y4LL/A'];self.assertTrue(records)
   record=records[0];meta=json.loads(record.read_text(encoding='utf-8'));doc,ev=parse_page(record.with_suffix('').read_text(encoding='utf-8'),meta['url'],'FD3Y4LL/A')
-  self.assertEqual(len(doc.photo_candidates),2);self.assertTrue(any('Packaging' in x['reason'] for x in ev['photo_candidates']));self.assertTrue(any('multiple' in x['reason'] for x in ev['photo_candidates']))
+  self.assertEqual(len(doc.photo_candidates),4)
+  packaging=[p for p in doc.photo_candidates if p.kind=='packaging'];self.assertEqual(len(packaging),1)
+  self.assertIn(packaging[0].asset_key,ev['all_official_photo_assets']);self.assertNotIn(packaging[0].asset_key,ev['exact_photo_assets'])
+  self.assertTrue(any('multiple' in x['reason'] for x in ev['photo_candidates']))

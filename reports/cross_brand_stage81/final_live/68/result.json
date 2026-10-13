@@ -1,0 +1,3547 @@
+{
+  "input": {
+    "id": 68,
+    "brand": "Razer",
+    "dispatch_brand": "Razer",
+    "article": "RZ09-0528",
+    "model": "Razer Blade 16 (2025)",
+    "name": "Razer Blade 16 (2025) [GPU=RTX 5080; RAM=32 GB; storage=1 TB]",
+    "category": "Ноутбуки",
+    "input_configuration": {
+      "GPU": "RTX 5080",
+      "RAM": "32 GB",
+      "storage": "1 TB"
+    },
+    "region": "en-US",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/razer_stage71/frozen_inputs.json",
+    "original_input": {
+      "id": 7,
+      "article": "RZ09-0528",
+      "model": "Razer Blade 16 (2025)",
+      "name": "Razer Blade 16 (2025) [GPU=RTX 5080; RAM=32 GB; storage=1 TB]",
+      "category": "Ноутбуки",
+      "region": "en-US",
+      "configuration": {
+        "GPU": "RTX 5080",
+        "RAM": "32 GB",
+        "storage": "1 TB"
+      }
+    }
+  },
+  "observed_at": "2026-10-13T14:44:30.405868+00:00",
+  "seconds": 58.5,
+  "job": {
+    "id": "f97f9348e6bc41fc94ad66f49571bb96",
+    "product_id": 68,
+    "status": "done",
+    "current_stage": 1,
+    "message": "Razer: Не готова. Запрошенная конфигурация не подтверждена; Русская инструкция не проверена",
+    "created_at": "2026-10-13T14:43:31+00:00",
+    "updated_at": "2026-10-13T14:44:29+00:00",
+    "started_at": "2026-10-13T14:43:31+00:00",
+    "finished_at": "2026-10-13T14:44:29+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 179,
+      "product_id": 68,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+      "found_model": "RZ09-0528",
+      "match_level": "model_confirmed",
+      "evidence": "{\"model_confirmed\": true, \"model\": \"Razer Blade 16 (2025)\", \"model_code\": \"RZ09-0528\", \"requested\": \"RZ09-0528\", \"model_relation\": \"model_confirmed\", \"configuration_relation\": \"unproven\", \"exact_sku\": false, \"reason\": \"SSR retail node explicitly binds baseProductName and printed RZ commercial code\", \"requested_configuration\": {\"GPU\": \"RTX 5080\", \"RAM\": \"32 GB\", \"storage\": \"1 TB\"}, \"components\": {\"requested\": \"RZ09-0528\", \"family_prefix\": \"RZ09\", \"part_body\": \"0528\", \"regional_suffix\": \"\", \"full_part\": false, \"suffix_decoded\": false}}",
+      "fetched_at": "2026-10-13T14:44:29+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 3045,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Audio",
+      "raw_value": "THX® Spatial Audio Built-in Dual-array microphone 6 x Built-in stereo speakers W/ Smart Amp 3.5 mm headphone/microphone combo port 7.1 Codec support (via HDMI)",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "audio",
+      "normalized_value": "thx® spatial audio built-in dual-array microphone 6 x built-in stereo speakers w/ smart amp 3.5 mm headphone/microphone combo port 7.1 codec support (via hdmi)",
+      "unit": ""
+    },
+    {
+      "id": 3047,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Camera",
+      "raw_value": "Windows® Hello built-in IR FHD webcam (1080p)",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "camera",
+      "normalized_value": "windows® hello built-in ir fhd webcam (1080p)",
+      "unit": ""
+    },
+    {
+      "id": 3048,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Chassis",
+      "raw_value": "CNC-Milled Aluminum Anodized Black Finish with Fingerprint Resistive Coating Backlit Green Razer Logo",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "chassis",
+      "normalized_value": "cnc-milled aluminum anodized black finish with fingerprint resistive coating backlit green razer logo",
+      "unit": ""
+    },
+    {
+      "id": 3049,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "I/O Ports",
+      "raw_value": "3 x USB 3.2 Gen 2 Type-A Ports 2 x USB4 Type-C Ports with Power Delivery and Display Port 1.4 via iGPU Charging supported with 20V USB-C chargers with PD 3.0 (100W) 1 x MicroSD Card Reader (UHS-II) 1 x HDMI 2.1 output",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "i_o_ports",
+      "normalized_value": "3 x usb 3.2 gen 2 type-a ports 2 x usb4 type-c ports with power delivery and display port 1.4 via igpu charging supported with 20v usb-c chargers with pd 3.0 (100w) 1 x microsd card reader (uhs-ii) 1 x hdmi 2.1 output",
+      "unit": ""
+    },
+    {
+      "id": 3050,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Keyboard and Touchpad",
+      "raw_value": "1.5 mm travel, Membrane, Linear-feel, 63 g +/- 1 g Per key RGB Powered by Razer Chroma™ N-Key rollover keyboard 1000 Hz Polling Dual LED Control Precision Glass Touchpad",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "keyboard_and_touchpad",
+      "normalized_value": "1.5 mm travel, membrane, linear-feel, 63 g +/- 1 g per key rgb powered by razer chroma™ n-key rollover keyboard 1000 hz polling dual led control precision glass touchpad",
+      "unit": ""
+    },
+    {
+      "id": 3051,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Network and Communication",
+      "raw_value": "Wi-Fi 7(802.11a/b/g/n/ac/ax/be) (Triple band) 2*2 + Bluetooth® 5.4",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "network_and_communication",
+      "normalized_value": "wi-fi 7(802.11a/b/g/n/ac/ax/be) (triple band) 2*2 + bluetooth® 5.4",
+      "unit": ""
+    },
+    {
+      "id": 3053,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Power Supply",
+      "raw_value": "200 W power adapter",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "power_supply",
+      "normalized_value": "200 w power adapter",
+      "unit": ""
+    },
+    {
+      "id": 3054,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Screen Technology",
+      "raw_value": "OLED",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "screen_technology",
+      "normalized_value": "oled",
+      "unit": ""
+    },
+    {
+      "id": 3055,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Screen Type",
+      "raw_value": "OLED",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "screen_type",
+      "normalized_value": "oled",
+      "unit": ""
+    },
+    {
+      "id": 3057,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Software",
+      "raw_value": "Razer™ Synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "software",
+      "normalized_value": "razer™ synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+      "unit": ""
+    },
+    {
+      "id": 3059,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Warranty",
+      "raw_value": "1-year limited laptop warranty 2-year limited battery warranty",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "warranty",
+      "normalized_value": "1-year limited laptop warranty 2-year limited battery warranty",
+      "unit": ""
+    },
+    {
+      "id": 3046,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Аккумулятор",
+      "raw_value": "Built-in 90 WHr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "аккумулятор",
+      "normalized_value": "built-in 90 whr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+      "unit": ""
+    },
+    {
+      "id": 3056,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Безопасность",
+      "raw_value": "Microsoft Pluton Trusted Platform Module (TPM) 2.0 Kensington™ Security Slot Modern Standby",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "безопасность",
+      "normalized_value": "microsoft pluton trusted platform module (tpm) 2.0 kensington™ security slot modern standby",
+      "unit": ""
+    },
+    {
+      "id": 3052,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Операционная система",
+      "raw_value": "Windows 11 Home",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "операционная_система",
+      "normalized_value": "windows 11 home",
+      "unit": ""
+    },
+    {
+      "id": 3058,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "site_name": "Razer Official",
+      "raw_name": "Система охлаждения",
+      "raw_value": "Vapor Chamber Cooling",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "система_охлаждения",
+      "normalized_value": "vapor chamber cooling",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2712,
+      "product_id": 68,
+      "normalized_name": "audio",
+      "selected_value": "thx® spatial audio built-in dual-array microphone 6 x built-in stereo speakers w/ smart amp 3.5 mm headphone/microphone combo port 7.1 codec support (via hdmi)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2713,
+      "product_id": 68,
+      "normalized_name": "camera",
+      "selected_value": "windows® hello built-in ir fhd webcam (1080p)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2714,
+      "product_id": 68,
+      "normalized_name": "chassis",
+      "selected_value": "cnc-milled aluminum anodized black finish with fingerprint resistive coating backlit green razer logo",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2715,
+      "product_id": 68,
+      "normalized_name": "i_o_ports",
+      "selected_value": "3 x usb 3.2 gen 2 type-a ports 2 x usb4 type-c ports with power delivery and display port 1.4 via igpu charging supported with 20v usb-c chargers with pd 3.0 (100w) 1 x microsd card reader (uhs-ii) 1 x hdmi 2.1 output",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2716,
+      "product_id": 68,
+      "normalized_name": "keyboard_and_touchpad",
+      "selected_value": "1.5 mm travel, membrane, linear-feel, 63 g +/- 1 g per key rgb powered by razer chroma™ n-key rollover keyboard 1000 hz polling dual led control precision glass touchpad",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2717,
+      "product_id": 68,
+      "normalized_name": "network_and_communication",
+      "selected_value": "wi-fi 7(802.11a/b/g/n/ac/ax/be) (triple band) 2*2 + bluetooth® 5.4",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2718,
+      "product_id": 68,
+      "normalized_name": "power_supply",
+      "selected_value": "200 w power adapter",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2719,
+      "product_id": 68,
+      "normalized_name": "screen_technology",
+      "selected_value": "oled",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2720,
+      "product_id": 68,
+      "normalized_name": "screen_type",
+      "selected_value": "oled",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2721,
+      "product_id": 68,
+      "normalized_name": "software",
+      "selected_value": "razer™ synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2722,
+      "product_id": 68,
+      "normalized_name": "warranty",
+      "selected_value": "1-year limited laptop warranty 2-year limited battery warranty",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2723,
+      "product_id": 68,
+      "normalized_name": "аккумулятор",
+      "selected_value": "built-in 90 whr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2724,
+      "product_id": 68,
+      "normalized_name": "безопасность",
+      "selected_value": "microsoft pluton trusted platform module (tpm) 2.0 kensington™ security slot modern standby",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2725,
+      "product_id": 68,
+      "normalized_name": "операционная_система",
+      "selected_value": "windows 11 home",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2726,
+      "product_id": 68,
+      "normalized_name": "система_охлаждения",
+      "selected_value": "vapor chamber cooling",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+      "selected_source": "razer_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:44:29+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "audio",
+      "sources": {
+        "razer_model": {
+          "id": 3045,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Audio",
+          "raw_value": "THX® Spatial Audio Built-in Dual-array microphone 6 x Built-in stereo speakers W/ Smart Amp 3.5 mm headphone/microphone combo port 7.1 Codec support (via HDMI)",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "audio",
+          "normalized_value": "thx® spatial audio built-in dual-array microphone 6 x built-in stereo speakers w/ smart amp 3.5 mm headphone/microphone combo port 7.1 codec support (via hdmi)",
+          "unit": "",
+          "display_value": "thx® spatial audio built-in dual-array microphone 6 x built-in stereo speakers w/ smart amp 3.5 мм headphone/microphone combo port 7.1 codec support (via hdmi)",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Audio"
+      ],
+      "display_name": "Аудио",
+      "resolved": {
+        "id": 2712,
+        "product_id": 68,
+        "normalized_name": "audio",
+        "selected_value": "thx® spatial audio built-in dual-array microphone 6 x built-in stereo speakers w/ smart amp 3.5 mm headphone/microphone combo port 7.1 codec support (via hdmi)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "THX® Spatial Audio Built-in Dual-array microphone 6 x Built-in stereo speakers W/ Smart Amp 3.5 мм headphone/microphone combo port 7.1 Codec support (via HDMI)",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Аудио"
+    },
+    {
+      "normalized_name": "camera",
+      "sources": {
+        "razer_model": {
+          "id": 3047,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Camera",
+          "raw_value": "Windows® Hello built-in IR FHD webcam (1080p)",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "camera",
+          "normalized_value": "windows® hello built-in ir fhd webcam (1080p)",
+          "unit": "",
+          "display_value": "windows® hello built-in ir fhd webcam (1080p)",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Camera"
+      ],
+      "display_name": "Камера",
+      "resolved": {
+        "id": 2713,
+        "product_id": 68,
+        "normalized_name": "camera",
+        "selected_value": "windows® hello built-in ir fhd webcam (1080p)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Windows® Hello built-in IR FHD webcam (1080p)",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Камера"
+    },
+    {
+      "normalized_name": "chassis",
+      "sources": {
+        "razer_model": {
+          "id": 3048,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Chassis",
+          "raw_value": "CNC-Milled Aluminum Anodized Black Finish with Fingerprint Resistive Coating Backlit Green Razer Logo",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "chassis",
+          "normalized_value": "cnc-milled aluminum anodized black finish with fingerprint resistive coating backlit green razer logo",
+          "unit": "",
+          "display_value": "cnc-milled aluminum anodized black finish with fingerprint resistive coating backlit green razer logo",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Chassis"
+      ],
+      "display_name": "Корпус",
+      "resolved": {
+        "id": 2714,
+        "product_id": 68,
+        "normalized_name": "chassis",
+        "selected_value": "cnc-milled aluminum anodized black finish with fingerprint resistive coating backlit green razer logo",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "CNC-Milled Aluminum Anodized Black Finish with Fingerprint Resistive Coating Backlit Green Razer Logo",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Корпус"
+    },
+    {
+      "normalized_name": "i_o_ports",
+      "sources": {
+        "razer_model": {
+          "id": 3049,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "I/O Ports",
+          "raw_value": "3 x USB 3.2 Gen 2 Type-A Ports 2 x USB4 Type-C Ports with Power Delivery and Display Port 1.4 via iGPU Charging supported with 20V USB-C chargers with PD 3.0 (100W) 1 x MicroSD Card Reader (UHS-II) 1 x HDMI 2.1 output",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "i_o_ports",
+          "normalized_value": "3 x usb 3.2 gen 2 type-a ports 2 x usb4 type-c ports with power delivery and display port 1.4 via igpu charging supported with 20v usb-c chargers with pd 3.0 (100w) 1 x microsd card reader (uhs-ii) 1 x hdmi 2.1 output",
+          "unit": "",
+          "display_value": "3 x usb 3.2 gen 2 type-a ports 2 x usb4 type-c ports with power delivery and display port 1.4 via igpu charging supported with 20v USB-C chargers with pd 3.0 (100w) 1 x microsd card reader (uhs-ii) 1 x hdmi 2.1 output",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "I/O Ports"
+      ],
+      "display_name": "Порты ввода и вывода",
+      "resolved": {
+        "id": 2715,
+        "product_id": 68,
+        "normalized_name": "i_o_ports",
+        "selected_value": "3 x usb 3.2 gen 2 type-a ports 2 x usb4 type-c ports with power delivery and display port 1.4 via igpu charging supported with 20v usb-c chargers with pd 3.0 (100w) 1 x microsd card reader (uhs-ii) 1 x hdmi 2.1 output",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "3 x USB 3.2 Gen 2 Type-A Ports 2 x USB4 Type-C Ports with Power Delivery and Display Port 1.4 via iGPU Charging supported with 20V USB-C chargers with PD 3.0 (100 Вт) 1 x MicroSD Card Reader (UHS-II) 1 x HDMI 2.1 output",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Порты ввода и вывода"
+    },
+    {
+      "normalized_name": "keyboard_and_touchpad",
+      "sources": {
+        "razer_model": {
+          "id": 3050,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Keyboard and Touchpad",
+          "raw_value": "1.5 mm travel, Membrane, Linear-feel, 63 g +/- 1 g Per key RGB Powered by Razer Chroma™ N-Key rollover keyboard 1000 Hz Polling Dual LED Control Precision Glass Touchpad",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "keyboard_and_touchpad",
+          "normalized_value": "1.5 mm travel, membrane, linear-feel, 63 g +/- 1 g per key rgb powered by razer chroma™ n-key rollover keyboard 1000 hz polling dual led control precision glass touchpad",
+          "unit": "",
+          "display_value": "1.5 мм travel, membrane, linear-feel, 63 g +/- 1 g per key rgb powered by razer chroma™ n-key rollover keyboard 1000 Гц polling dual led control precision glass touchpad",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Keyboard and Touchpad"
+      ],
+      "display_name": "Клавиатура и тачпад",
+      "resolved": {
+        "id": 2716,
+        "product_id": 68,
+        "normalized_name": "keyboard_and_touchpad",
+        "selected_value": "1.5 mm travel, membrane, linear-feel, 63 g +/- 1 g per key rgb powered by razer chroma™ n-key rollover keyboard 1000 hz polling dual led control precision glass touchpad",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "1.5 мм travel, Membrane, Linear-feel, 63 г +/- 1 г Per key RGB Powered by Razer Chroma™ N-Key rollover keyboard 1000 Гц Polling Dual LED Control Precision Glass Touchpad",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Клавиатура и тачпад"
+    },
+    {
+      "normalized_name": "network_and_communication",
+      "sources": {
+        "razer_model": {
+          "id": 3051,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Network and Communication",
+          "raw_value": "Wi-Fi 7(802.11a/b/g/n/ac/ax/be) (Triple band) 2*2 + Bluetooth® 5.4",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "network_and_communication",
+          "normalized_value": "wi-fi 7(802.11a/b/g/n/ac/ax/be) (triple band) 2*2 + bluetooth® 5.4",
+          "unit": "",
+          "display_value": "wi-fi 7(802.11a/b/g/n/ac/ax/be) (triple band) 2*2 + Bluetooth® 5.4",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Network and Communication"
+      ],
+      "display_name": "Сеть и связь",
+      "resolved": {
+        "id": 2717,
+        "product_id": 68,
+        "normalized_name": "network_and_communication",
+        "selected_value": "wi-fi 7(802.11a/b/g/n/ac/ax/be) (triple band) 2*2 + bluetooth® 5.4",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Wi-Fi 7(802.11a/b/g/n/ac/ax/be) (Triple band) 2*2 + Bluetooth® 5.4",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Сеть и связь"
+    },
+    {
+      "normalized_name": "power_supply",
+      "sources": {
+        "razer_model": {
+          "id": 3053,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Power Supply",
+          "raw_value": "200 W power adapter",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "power_supply",
+          "normalized_value": "200 w power adapter",
+          "unit": "",
+          "display_value": "200 w power adapter",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Power Supply"
+      ],
+      "display_name": "Питание",
+      "resolved": {
+        "id": 2718,
+        "product_id": 68,
+        "normalized_name": "power_supply",
+        "selected_value": "200 w power adapter",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "200 Вт power adapter",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Питание"
+    },
+    {
+      "normalized_name": "screen_technology",
+      "sources": {
+        "razer_model": {
+          "id": 3054,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Screen Technology",
+          "raw_value": "OLED",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "screen_technology",
+          "normalized_value": "oled",
+          "unit": "",
+          "display_value": "oled",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Screen Technology"
+      ],
+      "display_name": "Технология экрана",
+      "resolved": {
+        "id": 2719,
+        "product_id": 68,
+        "normalized_name": "screen_technology",
+        "selected_value": "oled",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "OLED",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Технология экрана"
+    },
+    {
+      "normalized_name": "screen_type",
+      "sources": {
+        "razer_model": {
+          "id": 3055,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Screen Type",
+          "raw_value": "OLED",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "screen_type",
+          "normalized_value": "oled",
+          "unit": "",
+          "display_value": "oled",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Screen Type"
+      ],
+      "display_name": "Тип экрана",
+      "resolved": {
+        "id": 2720,
+        "product_id": 68,
+        "normalized_name": "screen_type",
+        "selected_value": "oled",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "OLED",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Тип экрана"
+    },
+    {
+      "normalized_name": "software",
+      "sources": {
+        "razer_model": {
+          "id": 3057,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Software",
+          "raw_value": "Razer™ Synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "software",
+          "normalized_value": "razer™ synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+          "unit": "",
+          "display_value": "razer™ synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Software"
+      ],
+      "display_name": "Программное обеспечение",
+      "resolved": {
+        "id": 2721,
+        "product_id": 68,
+        "normalized_name": "software",
+        "selected_value": "razer™ synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Razer™ Synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Программное обеспечение"
+    },
+    {
+      "normalized_name": "warranty",
+      "sources": {
+        "razer_model": {
+          "id": 3059,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Warranty",
+          "raw_value": "1-year limited laptop warranty 2-year limited battery warranty",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "warranty",
+          "normalized_value": "1-year limited laptop warranty 2-year limited battery warranty",
+          "unit": "",
+          "display_value": "1-year limited laptop warranty 2-year limited battery warranty",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Warranty"
+      ],
+      "display_name": "Гарантия",
+      "resolved": {
+        "id": 2722,
+        "product_id": 68,
+        "normalized_name": "warranty",
+        "selected_value": "1-year limited laptop warranty 2-year limited battery warranty",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "1-year limited laptop warranty 2-year limited battery warranty",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Гарантия"
+    },
+    {
+      "normalized_name": "аккумулятор",
+      "sources": {
+        "razer_model": {
+          "id": 3046,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Аккумулятор",
+          "raw_value": "Built-in 90 WHr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "аккумулятор",
+          "normalized_value": "built-in 90 whr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+          "unit": "",
+          "display_value": "built-in 90 whr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Аккумулятор"
+      ],
+      "display_name": "Аккумулятор",
+      "resolved": {
+        "id": 2723,
+        "product_id": 68,
+        "normalized_name": "аккумулятор",
+        "selected_value": "built-in 90 whr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Built-in 90 WHr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Аккумулятор"
+    },
+    {
+      "normalized_name": "безопасность",
+      "sources": {
+        "razer_model": {
+          "id": 3056,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Безопасность",
+          "raw_value": "Microsoft Pluton Trusted Platform Module (TPM) 2.0 Kensington™ Security Slot Modern Standby",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "безопасность",
+          "normalized_value": "microsoft pluton trusted platform module (tpm) 2.0 kensington™ security slot modern standby",
+          "unit": "",
+          "display_value": "microsoft pluton trusted platform module (tpm) 2.0 kensington™ security slot modern standby",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Безопасность"
+      ],
+      "display_name": "Безопасность",
+      "resolved": {
+        "id": 2724,
+        "product_id": 68,
+        "normalized_name": "безопасность",
+        "selected_value": "microsoft pluton trusted platform module (tpm) 2.0 kensington™ security slot modern standby",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Microsoft Pluton Trusted Platform Module (TPM) 2.0 Kensington™ Security Slot Modern Standby",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Безопасность"
+    },
+    {
+      "normalized_name": "операционная_система",
+      "sources": {
+        "razer_model": {
+          "id": 3052,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Операционная система",
+          "raw_value": "Windows 11 Home",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "операционная_система",
+          "normalized_value": "windows 11 home",
+          "unit": "",
+          "display_value": "windows 11 home",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Операционная система"
+      ],
+      "display_name": "Операционная система",
+      "resolved": {
+        "id": 2725,
+        "product_id": 68,
+        "normalized_name": "операционная_система",
+        "selected_value": "windows 11 home",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Windows 11 Home",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Операционная система"
+    },
+    {
+      "normalized_name": "система_охлаждения",
+      "sources": {
+        "razer_model": {
+          "id": 3058,
+          "product_id": 68,
+          "source_page_id": 179,
+          "source_key": "razer_model",
+          "site_name": "Razer Official",
+          "raw_name": "Система охлаждения",
+          "raw_value": "Vapor Chamber Cooling",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "система_охлаждения",
+          "normalized_value": "vapor chamber cooling",
+          "unit": "",
+          "display_value": "vapor chamber cooling",
+          "display_source": "Razer Official"
+        }
+      },
+      "raw_names": [
+        "Система охлаждения"
+      ],
+      "display_name": "Система охлаждения",
+      "resolved": {
+        "id": 2726,
+        "product_id": 68,
+        "normalized_name": "система_охлаждения",
+        "selected_value": "vapor chamber cooling",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Razer; модель и конфигурация проверены отдельно.",
+        "selected_source": "razer_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:44:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Vapor Chamber Cooling",
+        "display_status": "Подтверждено для модели Razer",
+        "display_source": "Razer — модель"
+      },
+      "razer_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Система охлаждения"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1717,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "url": "https://assets3.razerzone.com/DUfntBxzqBf4vX9uyw2HS86kDwo=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh69%2Fh35%2F9917794549790%2Fblade-16-s11-black-2-500x500.png",
+      "asset_key": "a953296b59ed15022de4d028fcae817c7f748ea667995004aac0afaf98537be4",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:44:29+00:00",
+      "verified_width": 500,
+      "verified_height": 500,
+      "verified_bytes": 131679,
+      "verified_format": "PNG",
+      "site_name": "Razer Official"
+    }
+  ],
+  "all_official_gallery": [
+    {
+      "id": 1717,
+      "product_id": 68,
+      "source_page_id": 179,
+      "source_key": "razer_model",
+      "url": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h69/h35/9917794549790/blade-16-s11-black-2-500x500.png",
+      "asset_key": "a953296b59ed15022de4d028fcae817c7f748ea667995004aac0afaf98537be4",
+      "kind": "product_gallery",
+      "width": 500,
+      "height": 500,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:44:29+00:00",
+      "verified_width": 500,
+      "verified_height": 500,
+      "verified_bytes": 131679,
+      "verified_format": "PNG",
+      "site_name": "Razer Official",
+      "normalized_asset": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h69/h35/9917794549790/blade-16-s11-black-2-500x500.png",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:44:30.390260+00:00",
+      "size_bytes": 131679,
+      "format": "PNG",
+      "content_type": "image/png",
+      "effective_content_type": "image/png",
+      "sha256": "635f7c837cfe56a6f790f579a99d22b61de0f91a296a5524399337fafdd5b1aa",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\635f7c837cfe56a6f790f579a99d22b61de0f91a296a5524399337fafdd5b1aa.img",
+      "verified_url": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h69/h35/9917794549790/blade-16-s11-black-2-500x500.png",
+      "published_rendition_url": "https://assets3.razerzone.com/DUfntBxzqBf4vX9uyw2HS86kDwo=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh69%2Fh35%2F9917794549790%2Fblade-16-s11-black-2-500x500.png",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "retail_node_color_layout",
+      "official_color": "Black",
+      "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+      "aliases": []
+    }
+  ],
+  "photo_evidence": {
+    "entries": {
+      "razer_model / a953296b59ed15022de4d028fcae817c7f748ea667995004aac0afaf98537be4 / https://assets3.razerzone.com/DUfntBxzqBf4vX9uyw2HS86kDwo=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh69%2Fh35%2F9917794549790%2Fblade-16-s11-black-2-500x500.png": {
+        "url": "https://assets3.razerzone.com/DUfntBxzqBf4vX9uyw2HS86kDwo=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh69%2Fh35%2F9917794549790%2Fblade-16-s11-black-2-500x500.png",
+        "source_key": "razer_model",
+        "asset_key": "a953296b59ed15022de4d028fcae817c7f748ea667995004aac0afaf98537be4",
+        "normalized_asset": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h69/h35/9917794549790/blade-16-s11-black-2-500x500.png",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:44:30.390260+00:00",
+        "width": 500,
+        "height": 500,
+        "size_bytes": 131679,
+        "format": "PNG",
+        "content_type": "image/png",
+        "effective_content_type": "image/png",
+        "sha256": "635f7c837cfe56a6f790f579a99d22b61de0f91a296a5524399337fafdd5b1aa",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\635f7c837cfe56a6f790f579a99d22b61de0f91a296a5524399337fafdd5b1aa.img",
+        "verified_url": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h69/h35/9917794549790/blade-16-s11-black-2-500x500.png"
+      }
+    },
+    "last_completion": {
+      "budget_seconds": 180,
+      "results": [
+        {
+          "url": "https://assets3.razerzone.com/DUfntBxzqBf4vX9uyw2HS86kDwo=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh69%2Fh35%2F9917794549790%2Fblade-16-s11-black-2-500x500.png",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "635f7c837cfe56a6f790f579a99d22b61de0f91a296a5524399337fafdd5b1aa"
+        }
+      ]
+    }
+  },
+  "documents": [],
+  "evidence": {
+    "identity": {
+      "model_confirmed": true,
+      "model": "Razer Blade 16 (2025)",
+      "model_code": "RZ09-0528",
+      "requested": "RZ09-0528",
+      "model_relation": "model_confirmed",
+      "configuration_relation": "unproven",
+      "exact_sku": false,
+      "reason": "SSR retail node explicitly binds baseProductName and printed RZ commercial code",
+      "requested_configuration": {
+        "GPU": "RTX 5080",
+        "RAM": "32 GB",
+        "storage": "1 TB"
+      },
+      "components": {
+        "requested": "RZ09-0528",
+        "family_prefix": "RZ09",
+        "part_body": "0528",
+        "regional_suffix": "",
+        "full_part": false,
+        "suffix_decoded": false
+      },
+      "configuration_gaps": [
+        "GPU",
+        "RAM",
+        "storage"
+      ]
+    },
+    "raw_specs": [
+      {
+        "section": "Store SSR",
+        "raw_label": "Graphics",
+        "value": "NVIDIA® GeForce RTX™ 5060 8 GB GDDR7 VRAM Dynamic Boost (+15 W) | NVIDIA® GeForce RTX™ 5070 8 GB GDDR7 VRAM Dynamic Boost (+15 W)",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Store SSR",
+        "raw_label": "Memory",
+        "value": "16 GB LPDDR5X 8000 MHz (Soldered) | 32 GB LPDDR5X 8000 MHz (Soldered)",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Audio",
+        "value": "THX® Spatial Audio Built-in Dual-array microphone 6 x Built-in stereo speakers W/ Smart Amp 3.5 mm headphone/microphone combo port 7.1 Codec support (via HDMI)",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Battery",
+        "value": "Built-in 90 WHr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Camera",
+        "value": "Windows® Hello built-in IR FHD webcam (1080p)",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Chassis",
+        "value": "CNC-Milled Aluminum Anodized Black Finish with Fingerprint Resistive Coating Backlit Green Razer Logo",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Color",
+        "value": "Black",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Dimensions",
+        "value": "14.9 mm ~ 17.4 mm x 250.5 mm x 355 mm 0.59\" ~ 0.69\" x 9.86\" x 13.98\"",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Display",
+        "value": "16-inch QHD+ 240 Hz OLED, 2560 x 1600",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "I/O Ports",
+        "value": "3 x USB 3.2 Gen 2 Type-A Ports 2 x USB4 Type-C Ports with Power Delivery and Display Port 1.4 via iGPU Charging supported with 20V USB-C chargers with PD 3.0 (100W) 1 x MicroSD Card Reader (UHS-II) 1 x HDMI 2.1 output",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Included in the Box",
+        "value": "Razer Blade 16, power adapter & regional power cord, micro-fiber cleaning cloth, Important Product Information Guide",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Keyboard and Touchpad",
+        "value": "1.5 mm travel, Membrane, Linear-feel, 63 g +/- 1 g Per key RGB Powered by Razer Chroma™ N-Key rollover keyboard 1000 Hz Polling Dual LED Control Precision Glass Touchpad",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Network and Communication",
+        "value": "Wi-Fi 7(802.11a/b/g/n/ac/ax/be) (Triple band) 2*2 + Bluetooth® 5.4",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Neural Processor",
+        "value": "AMD XDNA™ NPU (up to 50 TOPS)",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Operating System",
+        "value": "Windows 11 Home",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Power Supply",
+        "value": "200 W power adapter",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Processor",
+        "value": "AMD Ryzen™ AI 9 365 Processor (10-Cores / 20-Threads, 2 GHz Base/ 5 GHz Max boost) with Radeon™ 880M Graphics",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Refresh rate",
+        "value": "240 Hz",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Screen Resolution",
+        "value": "QHD⁺ OLED",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Screen Technology",
+        "value": "OLED",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Screen Type",
+        "value": "OLED",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Security",
+        "value": "Microsoft Pluton Trusted Platform Module (TPM) 2.0 Kensington™ Security Slot Modern Standby",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Software",
+        "value": "Razer™ Synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Storage",
+        "value": "1 TB SSD",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Storage (Installed)",
+        "value": "1 TB PCIe® 4.0 NVMe™ M.2 SSD",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Studio Edition",
+        "value": "Studio Edition - Yes",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Thermal System",
+        "value": "Vapor Chamber Cooling",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Warranty",
+        "value": "1-year limited laptop warranty 2-year limited battery warranty",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Weight",
+        "value": "2.14 kg / 4.71 lbs​",
+        "extraction_role": "embedded_json"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Audio",
+        "value": "THX® Spatial Audio Built-in Dual-array microphone 6 x Built-in stereo speakers W/ Smart Amp 3.5 mm headphone/microphone combo port 7.1 Codec support (via HDMI)",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Battery",
+        "value": "Built-in 90 WHr rechargeable lithium-ion polymer battery 50% in 30-min, 80% in 48 min.",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Camera",
+        "value": "Windows® Hello built-in IR FHD webcam (1080p)",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Chassis",
+        "value": "CNC-Milled Aluminum Anodized Black Finish with Fingerprint Resistive Coating Backlit Green Razer Logo",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "I/O Ports",
+        "value": "3 x USB 3.2 Gen 2 Type-A Ports 2 x USB4 Type-C Ports with Power Delivery and Display Port 1.4 via iGPU Charging supported with 20V USB-C chargers with PD 3.0 (100W) 1 x MicroSD Card Reader (UHS-II) 1 x HDMI 2.1 output",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Keyboard and Touchpad",
+        "value": "1.5 mm travel, Membrane, Linear-feel, 63 g +/- 1 g Per key RGB Powered by Razer Chroma™ N-Key rollover keyboard 1000 Hz Polling Dual LED Control Precision Glass Touchpad",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Network and Communication",
+        "value": "Wi-Fi 7(802.11a/b/g/n/ac/ax/be) (Triple band) 2*2 + Bluetooth® 5.4",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Operating System",
+        "value": "Windows 11 Home",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Power Supply",
+        "value": "200 W power adapter",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Screen Technology",
+        "value": "OLED",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Screen Type",
+        "value": "OLED",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Security",
+        "value": "Microsoft Pluton Trusted Platform Module (TPM) 2.0 Kensington™ Security Slot Modern Standby",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Software",
+        "value": "Razer™ Synapse 3 & 4 enabled with performance, programmable keyboard, backlighting, and fan control",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Thermal System",
+        "value": "Vapor Chamber Cooling",
+        "extraction_role": "embedded_json"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Warranty",
+        "value": "1-year limited laptop warranty 2-year limited battery warranty",
+        "extraction_role": "embedded_json"
+      }
+    ],
+    "rejected_specs": [
+      {
+        "section": "Store SSR",
+        "raw_label": "Graphics",
+        "value": "NVIDIA® GeForce RTX™ 5060 8 GB GDDR7 VRAM Dynamic Boost (+15 W) | NVIDIA® GeForce RTX™ 5070 8 GB GDDR7 VRAM Dynamic Boost (+15 W)",
+        "extraction_role": "embedded_json",
+        "reason": "retail_variants_differ_or_missing"
+      },
+      {
+        "section": "Store SSR",
+        "raw_label": "Memory",
+        "value": "16 GB LPDDR5X 8000 MHz (Soldered) | 32 GB LPDDR5X 8000 MHz (Soldered)",
+        "extraction_role": "embedded_json",
+        "reason": "retail_variants_differ_or_missing"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Color",
+        "value": "Black",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Dimensions",
+        "value": "14.9 mm ~ 17.4 mm x 250.5 mm x 355 mm 0.59\" ~ 0.69\" x 9.86\" x 13.98\"",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Display",
+        "value": "16-inch QHD+ 240 Hz OLED, 2560 x 1600",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Included in the Box",
+        "value": "Razer Blade 16, power adapter & regional power cord, micro-fiber cleaning cloth, Important Product Information Guide",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Neural Processor",
+        "value": "AMD XDNA™ NPU (up to 50 TOPS)",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Processor",
+        "value": "AMD Ryzen™ AI 9 365 Processor (10-Cores / 20-Threads, 2 GHz Base/ 5 GHz Max boost) with Radeon™ 880M Graphics",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Refresh rate",
+        "value": "240 Hz",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Screen Resolution",
+        "value": "QHD⁺ OLED",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Storage",
+        "value": "1 TB SSD",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Storage (Installed)",
+        "value": "1 TB PCIe® 4.0 NVMe™ M.2 SSD",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Studio Edition",
+        "value": "Studio Edition - Yes",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      },
+      {
+        "section": "Technical Specifications",
+        "raw_label": "Weight",
+        "value": "2.14 kg / 4.71 lbs​",
+        "extraction_role": "embedded_json",
+        "reason": "configuration_specific"
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://assets3.razerzone.com/DUfntBxzqBf4vX9uyw2HS86kDwo=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh69%2Fh35%2F9917794549790%2Fblade-16-s11-black-2-500x500.png",
+        "asset_key": "a953296b59ed15022de4d028fcae817c7f748ea667995004aac0afaf98537be4",
+        "role": "product_gallery",
+        "verified": true,
+        "relation": "retail_node_color_layout",
+        "color_verified": false,
+        "reason": "Color/layout and appearance relation not proven",
+        "retail_sku": "RZ09-05286EN3-R3U1",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5070 (8 GB GDDR7 VRAM)",
+          "storage": "1 TB SSD",
+          "RAM": "32 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        }
+      }
+    ],
+    "exact_photo_assets": [
+      "a953296b59ed15022de4d028fcae817c7f748ea667995004aac0afaf98537be4"
+    ],
+    "manuals": [
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-en.pdf",
+        "title": "User Guide (English)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-es.pdf",
+        "title": "User Guide (Spanish)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-fr.pdf",
+        "title": "User Guide (French)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-de.pdf",
+        "title": "User Guide (German)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-pt-BR.pdf",
+        "title": "User Guide (Portuguese-Brazilian)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-ru.pdf",
+        "title": "User Guide (Russian)",
+        "type": "User Guide",
+        "language": "Русский",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-zh-TW.pdf",
+        "title": "User Guide (Traditional Chinese)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-zh-CN.pdf",
+        "title": "User Guide (Simplified Chinese)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-kr.pdf",
+        "title": "User Guide (Korean)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      },
+      {
+        "url": "https://dl.razerzone.com/master-guides/RazerSynapse4/Blade16-00000710-ja.pdf",
+        "title": "User Guide (Japanese)",
+        "type": "User Guide",
+        "language": "Другой",
+        "relation": "model",
+        "verified": false
+      }
+    ],
+    "verified_documents": [],
+    "manual_status": "Не проверена",
+    "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+    "source_type": "pdp",
+    "retail_relations": [
+      {
+        "model": "Razer Blade 16",
+        "hardware_code": "RZ09-05285EN3-R3U1",
+        "retail_sku": "RZ09-05285EN3-R3U1",
+        "retail_url": "https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-05285EN3-R3U1",
+        "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5060 (8 GB GDDR7 VRAM)",
+          "storage": "1 TB SSD",
+          "RAM": "16 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        },
+        "model_confirmed": true,
+        "requested_configuration_matches": false,
+        "reason": "Official Support confirms generation; SSR binds the same printed hardware code to this retail node"
+      },
+      {
+        "model": "Razer Blade 16",
+        "hardware_code": "RZ09-05286EN3-R3U1",
+        "retail_sku": "RZ09-05286EN3-R3U1",
+        "retail_url": "https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-05286EN3-R3U1",
+        "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5070 (8 GB GDDR7 VRAM)",
+          "storage": "1 TB SSD",
+          "RAM": "32 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        },
+        "model_confirmed": true,
+        "requested_configuration_matches": false,
+        "reason": "Official Support confirms generation; SSR binds the same printed hardware code to this retail node"
+      },
+      {
+        "model": "Razer Blade 16",
+        "hardware_code": "",
+        "retail_sku": "RZ09-05817EN3-R3U1",
+        "retail_url": "https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-05817EN3-R3U1",
+        "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5070 Ti (12 GB GDDR7 VRAM)",
+          "storage": "1 TB SSD",
+          "RAM": "32 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        },
+        "model_confirmed": false,
+        "requested_configuration_matches": false,
+        "reason": "Name/code mismatch; neighboring model, generation or connectivity is insufficient"
+      },
+      {
+        "model": "Razer Blade 16",
+        "hardware_code": "",
+        "retail_sku": "RZ09-05818EN3-R3U1",
+        "retail_url": "https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-05818EN3-R3U1",
+        "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5080 (16 GB GDDR7 VRAM)",
+          "storage": "1 TB SSD",
+          "RAM": "32 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        },
+        "model_confirmed": false,
+        "requested_configuration_matches": false,
+        "reason": "Name/code mismatch; neighboring model, generation or connectivity is insufficient"
+      },
+      {
+        "model": "Razer Blade 16",
+        "hardware_code": "",
+        "retail_sku": "RZ09-05818EN4-R3U1",
+        "retail_url": "https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-05818EN4-R3U1",
+        "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5080 (16 GB GDDR7 VRAM)",
+          "storage": "1 TB SSD",
+          "RAM": "64 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        },
+        "model_confirmed": false,
+        "requested_configuration_matches": false,
+        "reason": "Name/code mismatch; neighboring model, generation or connectivity is insufficient"
+      },
+      {
+        "model": "Razer Blade 16",
+        "hardware_code": "",
+        "retail_sku": "RZ09-05819EN4-R3U1",
+        "retail_url": "https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-05819EN4-R3U1",
+        "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5090 (24 GB GDDR7 VRAM)",
+          "storage": "2 TB SSD",
+          "RAM": "32 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        },
+        "model_confirmed": false,
+        "requested_configuration_matches": false,
+        "reason": "Name/code mismatch; neighboring model, generation or connectivity is insufficient"
+      },
+      {
+        "model": "Razer Blade 16",
+        "hardware_code": "",
+        "retail_sku": "RZ09-05819EN9-R3U1",
+        "retail_url": "https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-05819EN9-R3U1",
+        "source_url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "options": {
+          "color": "Black",
+          "GPU": "GeForce RTX 5090 (24 GB GDDR7 VRAM)",
+          "storage": "2 TB SSD",
+          "RAM": "64 GB",
+          "layout": "US Layout",
+          "region": "en-US"
+        },
+        "model_confirmed": false,
+        "requested_configuration_matches": false,
+        "reason": "Name/code mismatch; neighboring model, generation or connectivity is insufficient"
+      }
+    ],
+    "support_extraction": {
+      "source_url": "https://mysupport.razer.com/app/answers/detail/a_id/14806/kw/RZ09-0528",
+      "raw_specs": [
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Category",
+          "value": "Specification",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Operating System",
+          "value": "Windows 11 Home - 64-Bit",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "CPU",
+          "value": "AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 HX 370 Processor (12-Cores /24-Threads, 3.3 GHz Base/5.1 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 HX 370 Processor (12-Cores /24-Threads, 3.3 GHz Base/5.1 GHz Max boost) with Radeon™ 880M Graphics",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "GPU",
+          "value": "NVIDIA® GeForce RTX™ 5060 NVIDIA® GeForce RTX™ 5070 NVIDIA® GeForce RTX™ 5070TI NVIDIA® GeForce RTX™ 5080 NVIDIA® GeForce RTX™ 5080 NVIDIA® GeForce RTX™ 5090 NVIDIA® GeForce RTX™ 5090",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "GPU Features",
+          "value": "8 GB GDDR7 VRAM Up to 115 W TGP (100 W + 15 W Dynamic Boost) 8 GB GDDR7 VRAM Up to 115 W TGP (100 W + 15 W Dynamic Boost) 12 GB GDDR7 VRAM Up to 140 W TGP (115 W + 25 W Dynamic Boost) 16 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost) 16 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost) 24 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost) 24 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost)",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Neural Processing Units",
+          "value": "AMD XDNA™ NPU (up to 50 TOPS)",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Thermal System",
+          "value": "Vapor Chamber Cooling",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Size",
+          "value": "16\"",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Resolution",
+          "value": "QHD+ (2560x1600) 16:10",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Refresh Rate",
+          "value": "240 Hz",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Response Time",
+          "value": "0.2 ms",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "NVIDIA G-Sync™ Enabled",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Advanced Optimus",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "AMD Freesync Premium",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Individually factory calibrated",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Brightness (Typical / Max)",
+          "value": "Up to 400 nits brightness",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Color Gamut",
+          "value": "Up to 100% DCI-P3",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Calman Certified",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "HDR",
+          "value": "HDR 500",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Technology",
+          "value": "OLED Technology",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Bezels",
+          "value": "Thin 4.7 mm bezel",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "System Memory",
+          "value": "16 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 64 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 64 GB LPDDR5X 8000 MHz (Soldered)",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Storage",
+          "raw_label": "Installed",
+          "value": "1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x 1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 2 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 2 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 4 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Storage",
+          "raw_label": "Maximum Upgradeable",
+          "value": "NVMe, Single Sided, expandable up to 4 TB SSD per slot (M.2 2280)",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "USB4 Type-C Ports",
+          "value": "2 x USB4 Type-C Ports with Power Delivery and Display Port 2.1 via iGPU. Charging supported with 20V USB-C chargers with PD 3.0 (100W)",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "USB-A 3.2 Gen 2",
+          "value": "3 x USB 3.2 Gen 2 Type-A Ports",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Touchpad",
+          "value": "Precision glass touchpad",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Keyboard - Technology",
+          "value": "Per key RGB Powered by Razer Chroma™ N-Key rollover",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Keyboard - Switch",
+          "value": "1.5 mm travel, Membrane, Linear-feel, 63 g +/- 1g, 1000 Hz Polling, Dual LED Control",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "HDMI 2.1 output",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "UHS-II SD Card Reader",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Communication",
+          "value": "Wi-Fi 7 and Bluetooth 5.4 WLAN tri-band 2x2 802.11a/b/g/n/ac/ax/be",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Webcam",
+          "value": "Full HD webcam (1080p) with Windows Hello IR webcam",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Speakers",
+          "value": "6 x Built-in stereo speakers with Smart Amp",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Audio Jack",
+          "value": "3.5 mm headphone / microphone combo port",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Microphone",
+          "value": "Built-in Dual-array microphone",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "THX® Spatial Audio",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "7.1 Codec Support (via HDMI)",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Security",
+          "value": "Microsoft Pluton, Trusted Platform Module (TPM) 2.0, Kensington™ Security Slot",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Additional Features",
+          "value": "Razer™ Synapse 4 enabled with performance, programmable keyboard, backlighting, and fan control Modern Standby",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Battery",
+          "value": "Built-in 90 WHr rechargeable lithium-ion polymer battery (50% in 30-min, 80% in 48 min) Limited 2-Year Warranty",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Power Adaptor",
+          "value": "200 W power adapter 200 W power adapter 280 W power adapter 280 W power adapter 280 W power adapter 280 W power adapter 280 W power adapter",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Limited Warranty",
+          "value": "1 Year",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Dimensions (Approx.)",
+          "value": "Height: 0.59 in ~ .69 in / 14.9 mm ~ 17.4 mm Width: 9.86 in / 250.5 mm Depth: 13.98 in / 355 mm",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Material",
+          "value": "CNC-Milled Aluminum, Anodized Black Finish with Fingerprint Resistive Coating with Backlit Green Razer Logo",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Color",
+          "value": "Black",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Weight (Approx.)",
+          "value": "4.6 lbs / 2.08 Kg",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "In the Box",
+          "value": "Razer Blade 16\", power adapter and regional power cord, micro-fiber cleaning cloth, Important Product Information Guide",
+          "extraction_role": "dom_table"
+        }
+      ],
+      "accepted_specs": [
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Operating System",
+          "value": "Windows 11 Home - 64-Bit",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Neural Processing Units",
+          "value": "AMD XDNA™ NPU (up to 50 TOPS)",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Thermal System",
+          "value": "Vapor Chamber Cooling",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "NVIDIA G-Sync™ Enabled",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Advanced Optimus",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "AMD Freesync Premium",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Calman Certified",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Technology",
+          "value": "OLED Technology",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "USB4 Type-C Ports",
+          "value": "2 x USB4 Type-C Ports with Power Delivery and Display Port 2.1 via iGPU. Charging supported with 20V USB-C chargers with PD 3.0 (100W)",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "USB-A 3.2 Gen 2",
+          "value": "3 x USB 3.2 Gen 2 Type-A Ports",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Touchpad",
+          "value": "Precision glass touchpad",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Keyboard - Technology",
+          "value": "Per key RGB Powered by Razer Chroma™ N-Key rollover",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "HDMI 2.1 output",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "UHS-II SD Card Reader",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Communication",
+          "value": "Wi-Fi 7 and Bluetooth 5.4 WLAN tri-band 2x2 802.11a/b/g/n/ac/ax/be",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Webcam",
+          "value": "Full HD webcam (1080p) with Windows Hello IR webcam",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Speakers",
+          "value": "6 x Built-in stereo speakers with Smart Amp",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Audio Jack",
+          "value": "3.5 mm headphone / microphone combo port",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Microphone",
+          "value": "Built-in Dual-array microphone",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "THX® Spatial Audio",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "7.1 Codec Support (via HDMI)",
+          "value": "Yes",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Security",
+          "value": "Microsoft Pluton, Trusted Platform Module (TPM) 2.0, Kensington™ Security Slot",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Additional Features",
+          "value": "Razer™ Synapse 4 enabled with performance, programmable keyboard, backlighting, and fan control Modern Standby",
+          "extraction_role": "dom_table"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Battery",
+          "value": "Built-in 90 WHr rechargeable lithium-ion polymer battery (50% in 30-min, 80% in 48 min) Limited 2-Year Warranty",
+          "extraction_role": "dom_table"
+        }
+      ],
+      "rejected_specs": [
+        {
+          "section": "Technical Specifications",
+          "raw_label": "Category",
+          "value": "Specification",
+          "extraction_role": "dom_table",
+          "reason": "identity_or_software_help"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "CPU",
+          "value": "AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 365 Processor (10-Cores /20-Threads, 2 GHz Base/5 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 HX 370 Processor (12-Cores /24-Threads, 3.3 GHz Base/5.1 GHz Max boost) with Radeon™ 880M Graphics AMD Ryzen™ AI 9 HX 370 Processor (12-Cores /24-Threads, 3.3 GHz Base/5.1 GHz Max boost) with Radeon™ 880M Graphics",
+          "extraction_role": "dom_table",
+          "reason": "family_options_or_variant_values"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "GPU",
+          "value": "NVIDIA® GeForce RTX™ 5060 NVIDIA® GeForce RTX™ 5070 NVIDIA® GeForce RTX™ 5070TI NVIDIA® GeForce RTX™ 5080 NVIDIA® GeForce RTX™ 5080 NVIDIA® GeForce RTX™ 5090 NVIDIA® GeForce RTX™ 5090",
+          "extraction_role": "dom_table",
+          "reason": "family_options_or_variant_values"
+        },
+        {
+          "section": "Technical Specifications",
+          "raw_label": "GPU Features",
+          "value": "8 GB GDDR7 VRAM Up to 115 W TGP (100 W + 15 W Dynamic Boost) 8 GB GDDR7 VRAM Up to 115 W TGP (100 W + 15 W Dynamic Boost) 12 GB GDDR7 VRAM Up to 140 W TGP (115 W + 25 W Dynamic Boost) 16 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost) 16 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost) 24 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost) 24 GB GDDR7 VRAM Up to 160 W TGP (135 W + 25 W Dynamic Boost)",
+          "extraction_role": "dom_table",
+          "reason": "family_options_or_variant_values"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Size",
+          "value": "16\"",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Resolution",
+          "value": "QHD+ (2560x1600) 16:10",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Refresh Rate",
+          "value": "240 Hz",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Response Time",
+          "value": "0.2 ms",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Individually factory calibrated",
+          "value": "Yes",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Brightness (Typical / Max)",
+          "value": "Up to 400 nits brightness",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Color Gamut",
+          "value": "Up to 100% DCI-P3",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "HDR",
+          "value": "HDR 500",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "Bezels",
+          "value": "Thin 4.7 mm bezel",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Display",
+          "raw_label": "System Memory",
+          "value": "16 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 64 GB LPDDR5X 8000 MHz (Soldered) 32 GB LPDDR5X 8000 MHz (Soldered) 64 GB LPDDR5X 8000 MHz (Soldered)",
+          "extraction_role": "dom_table",
+          "reason": "family_options_or_variant_values"
+        },
+        {
+          "section": "Storage",
+          "raw_label": "Installed",
+          "value": "1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x 1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 1 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 2 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 2 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2 4 TB SSD (M.2 PCIe Gen 4 NVMe x4, x2) SSD Slot (right): M.2 PCIe Gen 4 NVMe x4, x2 SSD Slot (left): M.2 PCIe Gen 4 NVMe x2",
+          "extraction_role": "dom_table",
+          "reason": "family_options_or_variant_values"
+        },
+        {
+          "section": "Storage",
+          "raw_label": "Maximum Upgradeable",
+          "value": "NVMe, Single Sided, expandable up to 4 TB SSD per slot (M.2 2280)",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Input & Output",
+          "raw_label": "Keyboard - Switch",
+          "value": "1.5 mm travel, Membrane, Linear-feel, 63 g +/- 1g, 1000 Hz Polling, Dual LED Control",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Power Adaptor",
+          "value": "200 W power adapter 200 W power adapter 280 W power adapter 280 W power adapter 280 W power adapter 280 W power adapter 280 W power adapter",
+          "extraction_role": "dom_table",
+          "reason": "family_options_or_variant_values"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Limited Warranty",
+          "value": "1 Year",
+          "extraction_role": "dom_table",
+          "reason": "identity_or_software_help"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Dimensions (Approx.)",
+          "value": "Height: 0.59 in ~ .69 in / 14.9 mm ~ 17.4 mm Width: 9.86 in / 250.5 mm Depth: 13.98 in / 355 mm",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Material",
+          "value": "CNC-Milled Aluminum, Anodized Black Finish with Fingerprint Resistive Coating with Backlit Green Razer Logo",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Color",
+          "value": "Black",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "Weight (Approx.)",
+          "value": "4.6 lbs / 2.08 Kg",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        },
+        {
+          "section": "Audio",
+          "raw_label": "In the Box",
+          "value": "Razer Blade 16\", power adapter and regional power cord, micro-fiber cleaning cloth, Important Product Information Guide",
+          "extraction_role": "dom_table",
+          "reason": "configuration_specific"
+        }
+      ]
+    },
+    "proofs": [
+      {
+        "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml",
+        "provider": "live_http",
+        "sha256": "e0305a75baaef3398e11e3dfe64c75939bfc75e0e055791cd7654495dbef788d",
+        "file": "e0305a75baaef3398e11e3dfe64c75939bfc75e0e055791cd7654495dbef788d.html"
+      },
+      {
+        "url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "provider": "live_browser",
+        "sha256": "e1be76359be8aa96adca4965668bc0133aa9036f3c4b7f8348ca4ca8064f8632",
+        "file": "e1be76359be8aa96adca4965668bc0133aa9036f3c4b7f8348ca4ca8064f8632.html"
+      },
+      {
+        "url": "https://www.razer.com/sg-en/gaming-laptops/razer-blade-16",
+        "provider": "live_browser",
+        "sha256": "54c7bf8015c78829d29a922338184de8be70e7ed6909e63912d47a4b24fd3389",
+        "file": "54c7bf8015c78829d29a922338184de8be70e7ed6909e63912d47a4b24fd3389.html"
+      },
+      {
+        "url": "https://www.razer.com/au-en/gaming-laptops/razer-blade-16",
+        "provider": "live_browser",
+        "sha256": "543a9483730d258f67f68598db63f9eb9535da16ac5ef8bb753c5649ddd37c06",
+        "file": "543a9483730d258f67f68598db63f9eb9535da16ac5ef8bb753c5649ddd37c06.html"
+      },
+      {
+        "url": "https://mysupport.razer.com/app/answers/list/kw/RZ09-0528",
+        "provider": "live_browser",
+        "sha256": "39b5fcc1cdbce01fc681cf97f98691968c9b76cad5c41e7b2be1afb6fc1ebcff",
+        "file": "39b5fcc1cdbce01fc681cf97f98691968c9b76cad5c41e7b2be1afb6fc1ebcff.html"
+      },
+      {
+        "url": "https://mysupport.razer.com/app/answers/detail/a_id/14806/kw/RZ09-0528",
+        "provider": "live_browser",
+        "sha256": "debd2a1afde71388a64d688319d832ea3d68744ec84167bc51dee8b537ce447e",
+        "file": "debd2a1afde71388a64d688319d832ea3d68744ec84167bc51dee8b537ce447e.html"
+      }
+    ],
+    "query_variants": [
+      "RZ09-0528",
+      "Razer Blade 16 (2025)"
+    ],
+    "requested_configuration": {
+      "GPU": "RTX 5080",
+      "RAM": "32 GB",
+      "storage": "1 TB"
+    },
+    "dealer_fallback": {
+      "accepted": false,
+      "url": "",
+      "reason": "Нет проверенного дилерского URL для «Razer Razer Blade 16 (2025) [GPU=RTX 5080; RAM=32 GB; storage=1 TB]» (артикул RZ09-0528). Не хватает: configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "match_level": "dealer_url_needed"
+    }
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "gaps": [
+      "configuration_missing",
+      "manual_unverified"
+    ],
+    "blocking_gaps": [
+      "configuration_missing"
+    ],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "confirmed_specs": 15,
+    "identity": {
+      "model_confirmed": true,
+      "model": "Razer Blade 16 (2025)",
+      "model_code": "RZ09-0528",
+      "requested": "RZ09-0528",
+      "model_relation": "model_confirmed",
+      "configuration_relation": "unproven",
+      "exact_sku": false,
+      "reason": "SSR retail node explicitly binds baseProductName and printed RZ commercial code",
+      "requested_configuration": {
+        "GPU": "RTX 5080",
+        "RAM": "32 GB",
+        "storage": "1 TB"
+      },
+      "components": {
+        "requested": "RZ09-0528",
+        "family_prefix": "RZ09",
+        "part_body": "0528",
+        "regional_suffix": "",
+        "full_part": false,
+        "suffix_decoded": false
+      },
+      "configuration_gaps": [
+        "GPU",
+        "RAM",
+        "storage"
+      ]
+    },
+    "exact_identity": true,
+    "conflicts": 0,
+    "manual_status": "Не проверена",
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "verdict": "not_ready",
+    "gaps": [
+      "configuration_missing",
+      "manual_unverified"
+    ],
+    "blocking_gaps": [
+      "configuration_missing"
+    ],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "confirmed_specs": 15,
+    "identity": {
+      "model_confirmed": true,
+      "model": "Razer Blade 16 (2025)",
+      "model_code": "RZ09-0528",
+      "requested": "RZ09-0528",
+      "model_relation": "model_confirmed",
+      "configuration_relation": "unproven",
+      "exact_sku": false,
+      "reason": "SSR retail node explicitly binds baseProductName and printed RZ commercial code",
+      "requested_configuration": {
+        "GPU": "RTX 5080",
+        "RAM": "32 GB",
+        "storage": "1 TB"
+      },
+      "components": {
+        "requested": "RZ09-0528",
+        "family_prefix": "RZ09",
+        "part_body": "0528",
+        "regional_suffix": "",
+        "full_part": false,
+        "suffix_decoded": false
+      },
+      "configuration_gaps": [
+        "GPU",
+        "RAM",
+        "storage"
+      ]
+    },
+    "exact_identity": true,
+    "conflicts": 0,
+    "manual_status": "Не проверена"
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "razer_discovery",
+      "identity_relation": "unproven",
+      "provider": "regional_exact",
+      "query": "RZ09-0528",
+      "reason": "No published exact-SKU search route; continue with official catalog",
+      "region": "requested",
+      "source_type": "catalog",
+      "timestamp": "2026-10-13T14:43:31+00:00",
+      "url": "https://www.razer.com/"
+    },
+    {
+      "accepted": false,
+      "candidates": [
+        "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "https://www.razer.com/sg-en/gaming-laptops/razer-blade-16",
+        "https://www.razer.com/au-en/gaming-laptops/razer-blade-16",
+        "https://www.razer.com/hk-en/gaming-laptops/razer-blade-16",
+        "https://www.razer.com/hk-zh/gaming-laptops/razer-blade-16",
+        "https://www.razer.com/tw-zh/gaming-laptops/razer-blade-16",
+        "https://www.razer.com/de-de/gaming-laptops/razer-blade-16",
+        "https://www.razer.com/eu-en/gaming-laptops/razer-blade-16"
+      ],
+      "event": "razer_discovery",
+      "identity_relation": "unproven",
+      "observation": "live_http",
+      "provider": "official_sitemap",
+      "query": "Razer Blade 16 (2025)",
+      "reason": "Catalog candidates require page identity",
+      "region": "global",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-13T14:43:51+00:00",
+      "url": "https://sitemap-xml.razer.com/pro-sitemaps-4237407.php?sn=sitemap1.xml"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-13T14:43:57+00:00",
+        "counts": {
+          "blocked_font_requests": 14,
+          "blocked_image_requests": 119,
+          "blocked_media_requests": 1,
+          "document_bytes": 1913189,
+          "document_requests": 1,
+          "document_status": 200,
+          "navigations": 1,
+          "network_requests": 128,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://razer.app.baqend.com/v1/speedkit/install.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/instantsearch.js@4.101.1"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://ee.channels.ocs.oraclecloud.com/js/eesvcs.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/algoliasearch@5.54.1/dist/algoliasearch.umd.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn1.affirm.com/js/v2/affirm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Titillium+Web%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C700&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded%3Aopsz%2Cwght%2CFILL%2CGRAD%4020..48%2C100..700%2C0..1%2C-50..200&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Titillium+Web%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C700&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/search-insights@2.17.3/dist/search-insights.min.js"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://token.razerdata.com/"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "xhr",
+              "url": "https://www.razer.com/sf-data"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://try.abtasty.com/3722fc52f00cf02012ad5878da4bfcd0.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-6ZK3"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-T54JMTP"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "xhr",
+              "url": "https://www.razer.com/sf-data"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/icon/font?kit=sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzarEDXoBFWN6qY2-iIKel5b0-E5NKkQ&skey=70ddea8fe54d532e&v=v305"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.youtube.com/iframe_api"
+            }
+          ],
+          "resource_attempts": 262,
+          "script_xhr_fetch_requests": 92,
+          "stylesheet_requests": 35
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://www.razer.com/gaming-laptops/razer-blade-16"
+          }
+        ],
+        "session_id": "public_browser:e9621f87c1ab4d5baffa3ae52b2a872f",
+        "sha256": "e1be76359be8aa96adca4965668bc0133aa9036f3c4b7f8348ca4ca8064f8632",
+        "status_code": 200,
+        "url": "https://www.razer.com/gaming-laptops/razer-blade-16",
+        "visible": true
+      },
+      "event": "razer_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support_browser",
+      "query": "Razer Blade 16 (2025)",
+      "reason": "Public JS document rendered; identity checked separately",
+      "region": "global",
+      "source_type": "render",
+      "timestamp": "2026-10-13T14:43:57+00:00",
+      "url": "https://www.razer.com/gaming-laptops/razer-blade-16"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-13T14:44:05+00:00",
+        "counts": {
+          "blocked_font_requests": 14,
+          "blocked_image_requests": 118,
+          "blocked_media_requests": 1,
+          "document_bytes": 1997730,
+          "document_requests": 1,
+          "document_status": 200,
+          "navigations": 1,
+          "network_requests": 128,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://razer.app.baqend.com/v1/speedkit/install.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/instantsearch.js@4.101.1"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://ee.channels.ocs.oraclecloud.com/js/eesvcs.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/algoliasearch@5.54.1/dist/algoliasearch.umd.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Titillium+Web%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C700&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded%3Aopsz%2Cwght%2CFILL%2CGRAD%4020..48%2C100..700%2C0..1%2C-50..200&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/search-insights@2.17.3/dist/search-insights.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://token.razerdata.com/"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "xhr",
+              "url": "https://www.razer.com/sf-data"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://try.abtasty.com/3722fc52f00cf02012ad5878da4bfcd0.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-RZRJ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-T54JMTP"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "xhr",
+              "url": "https://www.razer.com/sf-data"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/icon/font?kit=sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzarEDXoBFWN6qY2-iIKel5b0-E5NKkQ&skey=70ddea8fe54d532e&v=v305"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.youtube.com/iframe_api"
+            }
+          ],
+          "resource_attempts": 261,
+          "script_xhr_fetch_requests": 92,
+          "stylesheet_requests": 35
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://www.razer.com/sg-en/gaming-laptops/razer-blade-16"
+          }
+        ],
+        "session_id": "public_browser:e9621f87c1ab4d5baffa3ae52b2a872f",
+        "sha256": "54c7bf8015c78829d29a922338184de8be70e7ed6909e63912d47a4b24fd3389",
+        "status_code": 200,
+        "url": "https://www.razer.com/sg-en/gaming-laptops/razer-blade-16",
+        "visible": true
+      },
+      "event": "razer_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support_browser",
+      "query": "Razer Blade 16 (2025)",
+      "reason": "Public JS document rendered; identity checked separately",
+      "region": "global",
+      "source_type": "render",
+      "timestamp": "2026-10-13T14:44:05+00:00",
+      "url": "https://www.razer.com/sg-en/gaming-laptops/razer-blade-16"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-13T14:44:11+00:00",
+        "counts": {
+          "blocked_font_requests": 14,
+          "blocked_image_requests": 117,
+          "blocked_media_requests": 1,
+          "document_bytes": 1928335,
+          "document_requests": 1,
+          "document_status": 200,
+          "navigations": 1,
+          "network_requests": 127,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://razer.app.baqend.com/v1/speedkit/install.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/instantsearch.js@4.101.1"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://ee.channels.ocs.oraclecloud.com/js/eesvcs.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/algoliasearch@5.54.1/dist/algoliasearch.umd.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Titillium+Web%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C700&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded%3Aopsz%2Cwght%2CFILL%2CGRAD%4020..48%2C100..700%2C0..1%2C-50..200&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/search-insights@2.17.3/dist/search-insights.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://token.razerdata.com/"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "xhr",
+              "url": "https://www.razer.com/sf-data"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://try.abtasty.com/3722fc52f00cf02012ad5878da4bfcd0.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-Z5QQ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-T54JMTP"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "xhr",
+              "url": "https://www.razer.com/sf-data"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "font",
+              "url": "https://fonts.gstatic.com/icon/font?kit=sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzarEDXoBFWN6qY2-iIKel5b0-E5NKkQ&skey=70ddea8fe54d532e&v=v305"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.youtube.com/iframe_api"
+            }
+          ],
+          "resource_attempts": 259,
+          "script_xhr_fetch_requests": 92,
+          "stylesheet_requests": 34
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://www.razer.com/au-en/gaming-laptops/razer-blade-16"
+          }
+        ],
+        "session_id": "public_browser:e9621f87c1ab4d5baffa3ae52b2a872f",
+        "sha256": "543a9483730d258f67f68598db63f9eb9535da16ac5ef8bb753c5649ddd37c06",
+        "status_code": 200,
+        "url": "https://www.razer.com/au-en/gaming-laptops/razer-blade-16",
+        "visible": true
+      },
+      "event": "razer_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support_browser",
+      "query": "Razer Blade 16 (2025)",
+      "reason": "Public JS document rendered; identity checked separately",
+      "region": "global",
+      "source_type": "render",
+      "timestamp": "2026-10-13T14:44:11+00:00",
+      "url": "https://www.razer.com/au-en/gaming-laptops/razer-blade-16"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-13T14:44:18+00:00",
+        "counts": {
+          "blocked_font_requests": 14,
+          "blocked_image_requests": 15,
+          "document_bytes": 284583,
+          "document_requests": 4,
+          "document_status": 200,
+          "navigations": 1,
+          "network_requests": 45,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://try.abtasty.com/3722fc52f00cf02012ad5878da4bfcd0.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=PT+Sans&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C700%2C900&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined%3Aopsz%2Cwght%2CFILL%2CGRAD%4024%2C400%2C0%2C0&icon_names=close"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%2C900&display=swap&subset=greek%2Cgreek-ext"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=Roboto%3A100%2C100i%2C300%2C400%2C400i%2C700%2C700i&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/[redacted]"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.clarity.ms/tag/sfhdsw0ud1"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://ee.channels.ocs.oraclecloud.com/js/eesvcs.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-Z5QQ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/search-insights@2.17.3/dist/search-insights.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.rnengage.com/api/1/javascript/acs.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.rnengage.com/api/e/ca185657/e.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://oauth2.razer.com/services/sso"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://oauth2.razer.com/services/sso"
+            }
+          ],
+          "resource_attempts": 74,
+          "script_xhr_fetch_requests": 25,
+          "stylesheet_requests": 16
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://mysupport.razer.com/app/answers/list/kw/RZ09-0528"
+          }
+        ],
+        "session_id": "public_browser:e9621f87c1ab4d5baffa3ae52b2a872f",
+        "sha256": "39b5fcc1cdbce01fc681cf97f98691968c9b76cad5c41e7b2be1afb6fc1ebcff",
+        "status_code": 200,
+        "url": "https://mysupport.razer.com/app/answers/list/kw/RZ09-0528",
+        "visible": true
+      },
+      "event": "razer_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support_browser",
+      "query": "RZ09-0528",
+      "reason": "Public JS document rendered; identity checked separately",
+      "region": "global",
+      "source_type": "render",
+      "timestamp": "2026-10-13T14:44:18+00:00",
+      "url": "https://mysupport.razer.com/app/answers/list/kw/RZ09-0528"
+    },
+    {
+      "accepted": true,
+      "event": "razer_discovery",
+      "identity_relation": "model_confirmed",
+      "provider": "official_support_search",
+      "query": "RZ09-0528",
+      "reason": "Explicit official model name and printed RZ code",
+      "region": "global",
+      "source_type": "support_candidate",
+      "timestamp": "2026-10-13T14:44:18+00:00",
+      "url": "https://mysupport.razer.com/app/answers/detail/a_id/14806/kw/RZ09-0528"
+    },
+    {
+      "accepted": false,
+      "browser": {
+        "captured_at": "2026-10-13T14:44:26+00:00",
+        "counts": {
+          "blocked_font_requests": 8,
+          "blocked_image_requests": 18,
+          "document_bytes": 494860,
+          "document_requests": 5,
+          "document_status": 200,
+          "navigations": 1,
+          "network_requests": 52,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://try.abtasty.com/3722fc52f00cf02012ad5878da4bfcd0.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=PT+Sans&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C700%2C900&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined%3Aopsz%2Cwght%2CFILL%2CGRAD%4024%2C400%2C0%2C0&icon_names=close"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%2C900&display=swap&subset=greek%2Cgreek-ext"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://fonts.googleapis.com/css?family=Roboto%3A100%2C100i%2C300%2C400%2C400i%2C700%2C700i&display=swap"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/[redacted]"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.clarity.ms/tag/sfhdsw0ud1"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://ee.channels.ocs.oraclecloud.com/js/eesvcs.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-Z5QQ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/jbcJYDkiTlc"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/GF6XRX4z32s"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/d0TWJdzjpb0"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/sAyYZSXOBUY"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/52oYxR3-gC8"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/pTHWRUwKCyA"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/mJRWo1CksrI?si=wXsJv8ev5CIDgCrS"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "document",
+              "url": "https://www.youtube.com/embed/-p4DxeZ8AoY"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.jsdelivr.net/npm/search-insights@2.17.3/dist/search-insights.min.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.rnengage.com/api/1/javascript/acs.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.rnengage.com/api/e/ca185657/e.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://oauth2.razer.com/services/sso"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://noembed.com/embed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjbcJYDkiTlc"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://noembed.com/embed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGF6XRX4z32s"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://noembed.com/embed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dd0TWJdzjpb0"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://noembed.com/embed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsAyYZSXOBUY"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "xhr",
+              "url": "https://noembed.com/embed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D52oYxR3-gC8"
+            }
+          ],
+          "resource_attempts": 78,
+          "script_xhr_fetch_requests": 31,
+          "stylesheet_requests": 16
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://mysupport.razer.com/app/answers/detail/a_id/14806/kw/RZ09-0528"
+          }
+        ],
+        "session_id": "public_browser:e9621f87c1ab4d5baffa3ae52b2a872f",
+        "sha256": "debd2a1afde71388a64d688319d832ea3d68744ec84167bc51dee8b537ce447e",
+        "status_code": 200,
+        "url": "https://mysupport.razer.com/app/answers/detail/a_id/14806/kw/RZ09-0528",
+        "visible": true
+      },
+      "event": "razer_discovery",
+      "identity_relation": "unproven",
+      "provider": "official_support_browser",
+      "query": "RZ09-0528",
+      "reason": "Public JS document rendered; identity checked separately",
+      "region": "global",
+      "source_type": "render",
+      "timestamp": "2026-10-13T14:44:26+00:00",
+      "url": "https://mysupport.razer.com/app/answers/detail/a_id/14806/kw/RZ09-0528"
+    },
+    {
+      "accepted": true,
+      "event": "razer_discovery",
+      "identity_relation": "model_confirmed",
+      "provider": "official_support",
+      "query": "RZ09-0528",
+      "reason": "Explicit official model name and printed RZ code",
+      "region": "global",
+      "source_type": "support",
+      "timestamp": "2026-10-13T14:44:28+00:00",
+      "url": "https://mysupport.razer.com/app/answers/detail/a_id/14806/kw/RZ09-0528"
+    },
+    {
+      "accepted": false,
+      "event": "razer_dealer",
+      "identity_relation": "unproven",
+      "provider": "dns",
+      "query": "RZ09-0528",
+      "reason": "Нет проверенного дилерского URL для «Razer Razer Blade 16 (2025) [GPU=RTX 5080; RAM=32 GB; storage=1 TB]» (артикул RZ09-0528). Не хватает: configuration_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "region": "ru",
+      "source_type": "dealer",
+      "timestamp": "2026-10-13T14:44:29+00:00",
+      "url": ""
+    }
+  ]
+}

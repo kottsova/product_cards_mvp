@@ -135,7 +135,7 @@ def display_value(value: str, unit: str = "") -> str:
     dimensions = re.fullmatch(r"w=([^;]+);h=([^;]+);d=([^;]+)", value)
     if dimensions:
         return f"{dimensions.group(1)} × {dimensions.group(2)} × {dimensions.group(3)} мм (Ш × В × Г)"
-    units = {"rpm": "об/мин", "kg": "кг", "mm": "мм", "bool": ""}
+    units = {"rpm":"об/мин","kg":"кг","g":"г","mm":"мм","cm":"см","bool":"","W":"Вт","w":"Вт","Pa":"Па","pa":"Па","mAh":"мА·ч","Wh":"Вт·ч","Hz":"Гц","hz":"Гц","kHz":"кГц","MHz":"МГц","GHz":"ГГц","dB":"дБ","ml":"мл","l":"л","L":"л","h":"ч","min":"мин"}
     shown_unit = units.get(unit, unit)
     return f"{value} {shown_unit}".strip()
 

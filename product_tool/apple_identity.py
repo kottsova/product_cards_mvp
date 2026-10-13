@@ -49,7 +49,7 @@ def parse_model(html,url,key,configuration):
  from .adapters.apple import official
  title,_,cat,_=MODELS[key];b,groups=sections(html)
  found=clean_text(b.h1.get_text(' ',strip=True)) if b.h1 else ''
- doc=SourceDocument('apple_model','Apple Tech Specs',url,found_model=found)
+ doc=SourceDocument('apple_model','Apple Tech Specs',url,found_model=found,html=html)
  audit={'url':url,'model_key':key,'raw_specs':[],'candidates':[],'admitted':[]}
  if not official(url) or 'tech specs' not in plain(found) or identify(found)!=key:
   doc.error='Tech Specs model/generation mismatch';return doc,audit
@@ -116,9 +116,45 @@ def parse_model(html,url,key,configuration):
     elif 'cpu' in t:add('Ядра CPU',v,sec)
     elif 'gpu' in t:add('Ядра GPU',v,sec)
     elif 'neural' in t:add('Neural Engine',v,sec)
+    elif 'ray tracing' in t:add('Трассировка лучей',v,sec)
+    elif 'memory bandwidth' in t:add('Пропускная способность памяти процессора',v,sec)
+    elif t=='media engine':add('Медиадвижок',v,sec)
+    elif 'hardware-accelerated' in t:add('Аппаратные видеокодеки',v,sec)
+    elif 'prores' in t and ('encode' in t or 'decode' in t):add('Обработка ProRes',v,sec)
+    elif 'av1 decode' in t:add('Декодирование AV1',v,sec)
+    elif 'video decode engine' in t:add('Модуль декодирования видео',v,sec)
+    elif 'video encode engine' in t:add('Модуль кодирования видео',v,sec)
     else:candidate(sec,v,'chip metadata')
    continue
-  labels={'Display':'Технологии экрана','Camera':'Основная камера','TrueDepth Camera':'Фронтальная камера','Front Camera':'Фронтальная камера','Sensors':'Датчики','Charging and Expansion':'Разъёмы и зарядка','MagSafe':'MagSafe','MagSafe and Wireless Charging':'MagSafe и беспроводная зарядка','Audio Technology':'Аудиотехнологии','Face ID':'Face ID','Touch ID':'Touch ID','Dust, Sweat, and Water Resistant':'Защита от пыли и воды','Splash, Water, and Dust Resistant':'Защита от пыли и воды','Water and Dust Resistance':'Защита от пыли и воды'}
+  if sec=='Display':
+   optional=False;technologies=[]
+   for v in values:
+    t=plain(v)
+    if 'configurable' in t:optional=True
+    if optional or re.search(r'optional|sold separately|depending',t):candidate(sec,v,'Display configuration option; continuation scope retained');continue
+    if t in {'color','refresh rates','xdr (extreme dynamic range)'}:candidate(sec,v,'Section/subsection heading, not a separate value');continue
+    if t.endswith('display'):technologies.append(v);continue
+    diagonal=re.search(r'(\d+(?:\.\d+)?)[ -]*inch',t)
+    resolution=re.search(r'(\d+)\s*-?by-?\s*(\d+)\s+(?:native |pixel )?resolution',t)
+    density=re.search(r'(\d+)\s+pixels per inch',t)
+    if diagonal:add('Диагональ экрана, дюймы',diagonal[1],sec)
+    if resolution:add('Нативное разрешение дисплея',resolution[1]+' x '+resolution[2]+' пикселей',sec)
+    if density:add('Плотность пикселей, ppi',density[1],sec)
+    if diagonal or resolution or density:continue
+    if 'contrast ratio' in t:add('Контрастность',v,sec)
+    elif 'brightness' in t:
+     mode='XDR' if 'xdr brightness' in t else 'SDR' if 'sdr brightness' in t else 'экрана'
+     limit=' (минимальная)' if re.search(r'\bminimum\b',t) else ' (максимальная)' if re.search(r'\bmaximum\b|\bmaximun\b|\bup to\b',t) else ''
+     add('Яркость '+mode+limit,v,sec)
+    elif 'colors' in t:add('Количество отображаемых цветов',v,sec)
+    elif 'wide color' in t:add('Цветовой охват',v,sec)
+    elif 'true tone' in t:add('True Tone',v,sec)
+    elif 'promotion' in t:add('Адаптивная частота ProMotion (заявленная)',v,sec)
+    elif 'fixed refresh rates' in t:add('Поддерживаемые фиксированные частоты обновления',v,sec)
+    else:candidate(sec,v,'Display field not yet canonically mapped')
+   if technologies:add('Технология экрана','; '.join(technologies),sec)
+   continue
+  labels={'Camera':'Основная камера','TrueDepth Camera':'Фронтальная камера','Front Camera':'Фронтальная камера','Sensors':'Датчики','Charging and Expansion':'Разъёмы и зарядка','MagSafe':'MagSafe','MagSafe and Wireless Charging':'MagSafe и беспроводная зарядка','Audio Technology':'Аудиотехнологии','Face ID':'Face ID','Touch ID':'Touch ID','Dust, Sweat, and Water Resistant':'Защита от пыли и воды','Splash, Water, and Dust Resistant':'Защита от пыли и воды','Water and Dust Resistance':'Защита от пыли и воды'}
   if sec in {'Wireless','Cellular and Wireless','Connectivity'}:
    for v in values:
     if re.search(r'wi.fi\s*\d',plain(v)):add('Wi-Fi',v,sec)
@@ -131,5 +167,23 @@ def parse_model(html,url,key,configuration):
     else:admitted.append(v)
    if admitted:add(labels[sec],'; '.join(admitted),sec)
   else:
-   for v in values:candidate(sec,v,'feature not yet canonically mapped')
+   useful={'Video Playback':'Воспроизведение видео','Audio Playback':'Воспроизведение аудио','Keyboard and Trackpad':'Клавиатура и тачпад','Audio':'Аудиосистема','Operating Requirements':'Условия эксплуатации','Operating System':'Операционная система','Accessibility':'Специальные возможности','Built-in Apps':'Встроенные приложения','Apple Intelligence':'Apple Intelligence','Siri':'Siri','Controls':'Элементы управления','Buttons and Connectors':'Кнопки и разъёмы','Video Recording':'Видеосъёмка','Video Calling':'Видеозвонки','Audio Calling':'Аудиозвонки','TV and Video':'Вывод видео','Location':'Определение местоположения','Health and Wellness':'Функции здоровья'}
+   if sec in useful:
+    admitted=[]
+    for v in values:
+     if re.search(r'user guide|learn more|most advanced|most powerful|designed to|features include:|accessibility features help|optional|sold separately|depending|regional|not available in all',plain(v)):
+      candidate(sec,v,'Support/marketing or conditional statement; retained raw')
+     elif sec=='Keyboard and Trackpad' and ('U.S.' in v or 'ISO' in v):candidate(sec,v,'Explicit layout variation; exact layout relation not qualified')
+     else:admitted.append(v)
+    if admitted:add(useful[sec],'; '.join(admitted),sec)
+   elif sec=='Display Support':
+    active='';safe=[]
+    for v in values:
+     if 'Thunderbolt 5' in v:active='other';candidate(sec,v,'Transport-specific subsection not present in exact M4 port specs');continue
+     if 'HDMI digital' in v or 'Thunderbolt 4 digital' in v:active='model'
+     if active=='other':candidate(sec,v,'Transport-specific subsection not qualified for exact model');continue
+     safe.append(v)
+    if safe:add('Подключение внешних дисплеев','; '.join(safe),sec)
+   else:
+    for v in values:candidate(sec,v,'feature not yet canonically mapped')
  return doc,audit

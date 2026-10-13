@@ -1,0 +1,4747 @@
+{
+  "input": {
+    "id": 100,
+    "brand": "Electrolux",
+    "dispatch_brand": "Electrolux",
+    "article": "EIV84550",
+    "model": "EIV84550",
+    "name": "Electrolux EIV84550",
+    "category": "Варочные панели",
+    "input_configuration": {},
+    "region": "UK",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/electrolux_stage78/dataset.json",
+    "original_input": {
+      "id": 7,
+      "brand": "Electrolux",
+      "article": "EIV84550",
+      "model": "EIV84550",
+      "name": "Electrolux EIV84550",
+      "category": "Варочные панели",
+      "region": "UK",
+      "input_pnc": null,
+      "input_color": null,
+      "provenance": "Official catalog/search model; published 9-digit PNC for row 9; row 10 explicit synthetic revision-00 request for conservative identity edge test, not a supplier assertion"
+    }
+  },
+  "observed_at": "2026-10-13T09:29:02.221921+00:00",
+  "seconds": 13.27,
+  "job": {
+    "id": "7d73ec091c0344688b05d7d2fad8ef54",
+    "product_id": 100,
+    "status": "done",
+    "current_stage": null,
+    "message": "Electrolux: export_ready; Инструкция не проверена (не блокирует готовность)",
+    "created_at": "2026-10-13T09:28:48+00:00",
+    "updated_at": "2026-10-13T09:29:02+00:00",
+    "started_at": "2026-10-13T09:28:48+00:00",
+    "finished_at": "2026-10-13T09:29:02+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 218,
+      "product_id": 100,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+      "found_model": "EIV84550",
+      "match_level": "full_sku",
+      "evidence": "{\"model\": \"EIV84550\", \"model_relation\": \"model_confirmed\", \"requested_pnc\": \"\", \"requested_region\": \"UK\", \"found_model\": \"EIV84550\", \"product_code\": \"949599217\", \"pnc_base\": \"949599217\", \"revision\": null, \"region\": \"UK\", \"ean\": \"7332543822331\", \"family\": \"600 MultipleBridge Full Induction 80cm\", \"product_code_relation\": \"published_product_confirmed\", \"configuration_confirmed\": true}",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "error": "",
+      "description": "The 600  Bridge Induction Hob lets you combine two separate cooking zones to create one large surface. With the temperature and time settings automatically aligned, it's ideal for making the most of planchas or roasting pots.",
+      "photos": [
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/aeeda3e6-101b-4b57-9ec6-a7afcd4d0d85/2022789936-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/bb8a7526-59c2-4708-9b42-f270e848bb0a/2018639096-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/1944d549-15e4-446f-9079-82e1cd183551/2018639094-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a7c4f61f-d44e-478f-9343-0d55f958b1a3/2018639092-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/c916be13-d6a4-4ddf-a7c5-1c13ab31b97c/2018607189-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/4ec0b043-1f80-472e-9966-526c2963f433/2019661528-jpg",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/7ae32f84-63cd-4eb0-a874-7a214bb183e6/2019661524-jpg"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 3548,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Цвет подсветки (LED)",
+      "raw_value": "Red",
+      "section": "Подключение и установка",
+      "value_cell": null,
+      "normalized_name": "backlight_color",
+      "normalized_value": "red",
+      "unit": ""
+    },
+    {
+      "id": 3554,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Цвет / отделка",
+      "raw_value": "Black",
+      "section": "Прочие характеристики",
+      "value_cell": null,
+      "normalized_name": "color",
+      "normalized_value": "black",
+      "unit": ""
+    },
+    {
+      "id": 3546,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Глубина ниши, мм",
+      "raw_value": "490",
+      "section": "Встраивание",
+      "value_cell": null,
+      "normalized_name": "installation_dimensions__depth",
+      "normalized_value": "490",
+      "unit": ""
+    },
+    {
+      "id": 3544,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Высота ниши, мм",
+      "raw_value": "44",
+      "section": "Встраивание",
+      "value_cell": null,
+      "normalized_name": "installation_dimensions__height",
+      "normalized_value": "44",
+      "unit": ""
+    },
+    {
+      "id": 3545,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Ширина ниши, мм",
+      "raw_value": "750",
+      "section": "Встраивание",
+      "value_cell": null,
+      "normalized_name": "installation_dimensions__width",
+      "normalized_value": "750",
+      "unit": ""
+    },
+    {
+      "id": 3552,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Вес с упаковкой, кг",
+      "raw_value": "13.62",
+      "section": "Упаковка",
+      "value_cell": null,
+      "normalized_name": "package_weight__packaging",
+      "normalized_value": "13.62",
+      "unit": "kg"
+    },
+    {
+      "id": 3543,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Глубина товара, мм",
+      "raw_value": "520",
+      "section": "Габариты товара",
+      "value_cell": null,
+      "normalized_name": "product_dimensions__depth",
+      "normalized_value": "520",
+      "unit": ""
+    },
+    {
+      "id": 3542,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Ширина товара, мм",
+      "raw_value": "780",
+      "section": "Габариты товара",
+      "value_cell": null,
+      "normalized_name": "product_dimensions__width",
+      "normalized_value": "780",
+      "unit": ""
+    },
+    {
+      "id": 3551,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Вес товара, кг",
+      "raw_value": "12.78",
+      "section": "Габариты товара",
+      "value_cell": null,
+      "normalized_name": "product_weight",
+      "normalized_value": "12.78",
+      "unit": "kg"
+    },
+    {
+      "id": 3540,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Безопасность варочной панели",
+      "raw_value": "Automatic Switch Off",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "безопасность_варочной_панели",
+      "normalized_value": "automatic switch off",
+      "unit": ""
+    },
+    {
+      "id": 3558,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Горелка Wok",
+      "raw_value": "No",
+      "section": "Прочие характеристики",
+      "value_cell": null,
+      "normalized_name": "горелка_wok",
+      "normalized_value": "false",
+      "unit": "bool"
+    },
+    {
+      "id": 3547,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Длина кабеля, м",
+      "raw_value": "N/A",
+      "section": "Подключение и установка",
+      "value_cell": null,
+      "normalized_name": "длина_кабеля_м",
+      "normalized_value": "n/a",
+      "unit": ""
+    },
+    {
+      "id": 3536,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Задняя левая зона — мощность / диаметр",
+      "raw_value": "2300/3200W/210mm",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "задняя_левая_зона_мощность_диаметр",
+      "normalized_value": "2300/3200w/210mm",
+      "unit": ""
+    },
+    {
+      "id": 3537,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Задняя правая зона — мощность / диаметр",
+      "raw_value": "2300/3200W/210mm",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "задняя_правая_зона_мощность_диаметр",
+      "normalized_value": "2300/3200w/210mm",
+      "unit": ""
+    },
+    {
+      "id": 3534,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Задняя средняя зона — мощность / диаметр",
+      "raw_value": "2300/3200W/210mm",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "задняя_средняя_зона_мощность_диаметр",
+      "normalized_value": "2300/3200w/210mm",
+      "unit": ""
+    },
+    {
+      "id": 3538,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Количество зон нагрева",
+      "raw_value": "5",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "количество_зон_нагрева",
+      "normalized_value": "5",
+      "unit": ""
+    },
+    {
+      "id": 3549,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Комплект перехода на сжиженный газ",
+      "raw_value": "No",
+      "section": "Подключение и установка",
+      "value_cell": null,
+      "normalized_name": "комплект_перехода_на_сжиженный_газ",
+      "normalized_value": "false",
+      "unit": "bool"
+    },
+    {
+      "id": 3550,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Мощность подключения, Вт",
+      "raw_value": "7350",
+      "section": "Подключение и установка",
+      "value_cell": null,
+      "normalized_name": "мощность_подключения_вт",
+      "normalized_value": "7350",
+      "unit": ""
+    },
+    {
+      "id": 3557,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Окантовка варочной панели",
+      "raw_value": "Bevelled 1 Side",
+      "section": "Прочие характеристики",
+      "value_cell": null,
+      "normalized_name": "окантовка_варочной_панели",
+      "normalized_value": "bevelled 1 side",
+      "unit": ""
+    },
+    {
+      "id": 3532,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Передняя левая зона — мощность / диаметр",
+      "raw_value": "2300/3200W/210mm",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "передняя_левая_зона_мощность_диаметр",
+      "normalized_value": "2300/3200w/210mm",
+      "unit": ""
+    },
+    {
+      "id": 3535,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Передняя правая зона — мощность / диаметр",
+      "raw_value": "2300/3200W/210mm",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "передняя_правая_зона_мощность_диаметр",
+      "normalized_value": "2300/3200w/210mm",
+      "unit": ""
+    },
+    {
+      "id": 3533,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Передняя средняя зона — мощность / диаметр",
+      "raw_value": "2300/3200W/210mm",
+      "section": "Основные характеристики",
+      "value_cell": null,
+      "normalized_name": "передняя_средняя_зона_мощность_диаметр",
+      "normalized_value": "2300/3200w/210mm",
+      "unit": ""
+    },
+    {
+      "id": 3541,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Подключение к электросети",
+      "raw_value": "Hardwired connection only",
+      "section": "Подключение и установка",
+      "value_cell": null,
+      "normalized_name": "подключение_к_электросети",
+      "normalized_value": "hardwired connection only",
+      "unit": ""
+    },
+    {
+      "id": 3556,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Подключение природного газа",
+      "raw_value": "No",
+      "section": "Прочие характеристики",
+      "value_cell": null,
+      "normalized_name": "подключение_природного_газа",
+      "normalized_value": "false",
+      "unit": "bool"
+    },
+    {
+      "id": 3553,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Серия",
+      "raw_value": "600",
+      "section": "Прочие характеристики",
+      "value_cell": null,
+      "normalized_name": "серия",
+      "normalized_value": "600",
+      "unit": ""
+    },
+    {
+      "id": 3539,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Тип варочной панели",
+      "raw_value": "Full Induction",
+      "section": "Энергия — шкала и период источника",
+      "value_cell": null,
+      "normalized_name": "тип_варочной_панели",
+      "normalized_value": "full induction",
+      "unit": ""
+    },
+    {
+      "id": 3555,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Тип управления",
+      "raw_value": "Penguin",
+      "section": "Прочие характеристики",
+      "value_cell": null,
+      "normalized_name": "тип_управления",
+      "normalized_value": "penguin",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 3201,
+      "product_id": 100,
+      "normalized_name": "backlight_color",
+      "selected_value": "red",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3202,
+      "product_id": 100,
+      "normalized_name": "color",
+      "selected_value": "black",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3203,
+      "product_id": 100,
+      "normalized_name": "installation_dimensions__depth",
+      "selected_value": "490",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3204,
+      "product_id": 100,
+      "normalized_name": "installation_dimensions__height",
+      "selected_value": "44",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3205,
+      "product_id": 100,
+      "normalized_name": "installation_dimensions__width",
+      "selected_value": "750",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3206,
+      "product_id": 100,
+      "normalized_name": "package_weight__packaging",
+      "selected_value": "13.62",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3207,
+      "product_id": 100,
+      "normalized_name": "product_dimensions__depth",
+      "selected_value": "520",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3208,
+      "product_id": 100,
+      "normalized_name": "product_dimensions__width",
+      "selected_value": "780",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3209,
+      "product_id": 100,
+      "normalized_name": "product_weight",
+      "selected_value": "12.78",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3210,
+      "product_id": 100,
+      "normalized_name": "безопасность_варочной_панели",
+      "selected_value": "automatic switch off",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3211,
+      "product_id": 100,
+      "normalized_name": "горелка_wok",
+      "selected_value": "false",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3212,
+      "product_id": 100,
+      "normalized_name": "длина_кабеля_м",
+      "selected_value": "n/a",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3213,
+      "product_id": 100,
+      "normalized_name": "задняя_левая_зона_мощность_диаметр",
+      "selected_value": "2300/3200w/210mm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3214,
+      "product_id": 100,
+      "normalized_name": "задняя_правая_зона_мощность_диаметр",
+      "selected_value": "2300/3200w/210mm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3215,
+      "product_id": 100,
+      "normalized_name": "задняя_средняя_зона_мощность_диаметр",
+      "selected_value": "2300/3200w/210mm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3216,
+      "product_id": 100,
+      "normalized_name": "количество_зон_нагрева",
+      "selected_value": "5",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3217,
+      "product_id": 100,
+      "normalized_name": "комплект_перехода_на_сжиженный_газ",
+      "selected_value": "false",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3218,
+      "product_id": 100,
+      "normalized_name": "мощность_подключения_вт",
+      "selected_value": "7350",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3219,
+      "product_id": 100,
+      "normalized_name": "окантовка_варочной_панели",
+      "selected_value": "bevelled 1 side",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3220,
+      "product_id": 100,
+      "normalized_name": "передняя_левая_зона_мощность_диаметр",
+      "selected_value": "2300/3200w/210mm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3221,
+      "product_id": 100,
+      "normalized_name": "передняя_правая_зона_мощность_диаметр",
+      "selected_value": "2300/3200w/210mm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3222,
+      "product_id": 100,
+      "normalized_name": "передняя_средняя_зона_мощность_диаметр",
+      "selected_value": "2300/3200w/210mm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3223,
+      "product_id": 100,
+      "normalized_name": "подключение_к_электросети",
+      "selected_value": "hardwired connection only",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3224,
+      "product_id": 100,
+      "normalized_name": "подключение_природного_газа",
+      "selected_value": "false",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3225,
+      "product_id": 100,
+      "normalized_name": "серия",
+      "selected_value": "600",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3226,
+      "product_id": 100,
+      "normalized_name": "тип_варочной_панели",
+      "selected_value": "full induction",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 3227,
+      "product_id": 100,
+      "normalized_name": "тип_управления",
+      "selected_value": "penguin",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:29:02+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "безопасность_варочной_панели",
+      "sources": {
+        "electrolux": {
+          "id": 3540,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Безопасность варочной панели",
+          "raw_value": "Automatic Switch Off",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "безопасность_варочной_панели",
+          "normalized_value": "automatic switch off",
+          "unit": "",
+          "display_value": "automatic switch off",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Безопасность варочной панели"
+      ],
+      "display_name": "Безопасность варочной панели",
+      "resolved": {
+        "id": 3210,
+        "product_id": 100,
+        "normalized_name": "безопасность_варочной_панели",
+        "selected_value": "automatic switch off",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "automatic switch off",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "package_weight__packaging",
+      "sources": {
+        "electrolux": {
+          "id": 3552,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Вес с упаковкой, кг",
+          "raw_value": "13.62",
+          "section": "Упаковка",
+          "value_cell": null,
+          "normalized_name": "package_weight__packaging",
+          "normalized_value": "13.62",
+          "unit": "kg",
+          "display_value": "13.62 кг",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Вес с упаковкой, кг"
+      ],
+      "display_name": "Вес с упаковкой, кг",
+      "resolved": {
+        "id": 3206,
+        "product_id": 100,
+        "normalized_name": "package_weight__packaging",
+        "selected_value": "13.62",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "13.62 кг",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "installation_dimensions__height",
+      "sources": {
+        "electrolux": {
+          "id": 3544,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Высота ниши, мм",
+          "raw_value": "44",
+          "section": "Встраивание",
+          "value_cell": null,
+          "normalized_name": "installation_dimensions__height",
+          "normalized_value": "44",
+          "unit": "",
+          "display_value": "44",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Высота ниши, мм"
+      ],
+      "display_name": "Высота ниши, мм",
+      "resolved": {
+        "id": 3204,
+        "product_id": 100,
+        "normalized_name": "installation_dimensions__height",
+        "selected_value": "44",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "44",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "installation_dimensions__depth",
+      "sources": {
+        "electrolux": {
+          "id": 3546,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Глубина ниши, мм",
+          "raw_value": "490",
+          "section": "Встраивание",
+          "value_cell": null,
+          "normalized_name": "installation_dimensions__depth",
+          "normalized_value": "490",
+          "unit": "",
+          "display_value": "490",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Глубина ниши, мм"
+      ],
+      "display_name": "Глубина ниши, мм",
+      "resolved": {
+        "id": 3203,
+        "product_id": 100,
+        "normalized_name": "installation_dimensions__depth",
+        "selected_value": "490",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "490",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "product_dimensions__depth",
+      "sources": {
+        "electrolux": {
+          "id": 3543,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Глубина товара, мм",
+          "raw_value": "520",
+          "section": "Габариты товара",
+          "value_cell": null,
+          "normalized_name": "product_dimensions__depth",
+          "normalized_value": "520",
+          "unit": "",
+          "display_value": "520",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Глубина товара, мм"
+      ],
+      "display_name": "Глубина товара, мм",
+      "resolved": {
+        "id": 3207,
+        "product_id": 100,
+        "normalized_name": "product_dimensions__depth",
+        "selected_value": "520",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "520",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "горелка_wok",
+      "sources": {
+        "electrolux": {
+          "id": 3558,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Горелка Wok",
+          "raw_value": "No",
+          "section": "Прочие характеристики",
+          "value_cell": null,
+          "normalized_name": "горелка_wok",
+          "normalized_value": "false",
+          "unit": "bool",
+          "display_value": "Нет",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Горелка Wok"
+      ],
+      "display_name": "Горелка Wok",
+      "resolved": {
+        "id": 3211,
+        "product_id": 100,
+        "normalized_name": "горелка_wok",
+        "selected_value": "false",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Нет",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "длина_кабеля_м",
+      "sources": {
+        "electrolux": {
+          "id": 3547,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Длина кабеля, м",
+          "raw_value": "N/A",
+          "section": "Подключение и установка",
+          "value_cell": null,
+          "normalized_name": "длина_кабеля_м",
+          "normalized_value": "n/a",
+          "unit": "",
+          "display_value": "n/a",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Длина кабеля, м"
+      ],
+      "display_name": "Длина кабеля, м",
+      "resolved": {
+        "id": 3212,
+        "product_id": 100,
+        "normalized_name": "длина_кабеля_м",
+        "selected_value": "n/a",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "n/a",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "задняя_левая_зона_мощность_диаметр",
+      "sources": {
+        "electrolux": {
+          "id": 3536,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Задняя левая зона — мощность / диаметр",
+          "raw_value": "2300/3200W/210mm",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "задняя_левая_зона_мощность_диаметр",
+          "normalized_value": "2300/3200w/210mm",
+          "unit": "",
+          "display_value": "2300/3200w/210mm",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Задняя левая зона — мощность / диаметр"
+      ],
+      "display_name": "Задняя левая зона — мощность / диаметр",
+      "resolved": {
+        "id": 3213,
+        "product_id": 100,
+        "normalized_name": "задняя_левая_зона_мощность_диаметр",
+        "selected_value": "2300/3200w/210mm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2300/3200w/210mm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "задняя_правая_зона_мощность_диаметр",
+      "sources": {
+        "electrolux": {
+          "id": 3537,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Задняя правая зона — мощность / диаметр",
+          "raw_value": "2300/3200W/210mm",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "задняя_правая_зона_мощность_диаметр",
+          "normalized_value": "2300/3200w/210mm",
+          "unit": "",
+          "display_value": "2300/3200w/210mm",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Задняя правая зона — мощность / диаметр"
+      ],
+      "display_name": "Задняя правая зона — мощность / диаметр",
+      "resolved": {
+        "id": 3214,
+        "product_id": 100,
+        "normalized_name": "задняя_правая_зона_мощность_диаметр",
+        "selected_value": "2300/3200w/210mm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2300/3200w/210mm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "задняя_средняя_зона_мощность_диаметр",
+      "sources": {
+        "electrolux": {
+          "id": 3534,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Задняя средняя зона — мощность / диаметр",
+          "raw_value": "2300/3200W/210mm",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "задняя_средняя_зона_мощность_диаметр",
+          "normalized_value": "2300/3200w/210mm",
+          "unit": "",
+          "display_value": "2300/3200w/210mm",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Задняя средняя зона — мощность / диаметр"
+      ],
+      "display_name": "Задняя средняя зона — мощность / диаметр",
+      "resolved": {
+        "id": 3215,
+        "product_id": 100,
+        "normalized_name": "задняя_средняя_зона_мощность_диаметр",
+        "selected_value": "2300/3200w/210mm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2300/3200w/210mm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "количество_зон_нагрева",
+      "sources": {
+        "electrolux": {
+          "id": 3538,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Количество зон нагрева",
+          "raw_value": "5",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "количество_зон_нагрева",
+          "normalized_value": "5",
+          "unit": "",
+          "display_value": "5",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Количество зон нагрева"
+      ],
+      "display_name": "Количество зон нагрева",
+      "resolved": {
+        "id": 3216,
+        "product_id": 100,
+        "normalized_name": "количество_зон_нагрева",
+        "selected_value": "5",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "5",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "комплект_перехода_на_сжиженный_газ",
+      "sources": {
+        "electrolux": {
+          "id": 3549,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Комплект перехода на сжиженный газ",
+          "raw_value": "No",
+          "section": "Подключение и установка",
+          "value_cell": null,
+          "normalized_name": "комплект_перехода_на_сжиженный_газ",
+          "normalized_value": "false",
+          "unit": "bool",
+          "display_value": "Нет",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Комплект перехода на сжиженный газ"
+      ],
+      "display_name": "Комплект перехода на сжиженный газ",
+      "resolved": {
+        "id": 3217,
+        "product_id": 100,
+        "normalized_name": "комплект_перехода_на_сжиженный_газ",
+        "selected_value": "false",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Нет",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "product_weight",
+      "sources": {
+        "electrolux": {
+          "id": 3551,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Вес товара, кг",
+          "raw_value": "12.78",
+          "section": "Габариты товара",
+          "value_cell": null,
+          "normalized_name": "product_weight",
+          "normalized_value": "12.78",
+          "unit": "kg",
+          "display_value": "12.78 кг",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Вес товара, кг"
+      ],
+      "display_name": "Вес товара, кг",
+      "resolved": {
+        "id": 3209,
+        "product_id": 100,
+        "normalized_name": "product_weight",
+        "selected_value": "12.78",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "12.78 кг",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "мощность_подключения_вт",
+      "sources": {
+        "electrolux": {
+          "id": 3550,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Мощность подключения, Вт",
+          "raw_value": "7350",
+          "section": "Подключение и установка",
+          "value_cell": null,
+          "normalized_name": "мощность_подключения_вт",
+          "normalized_value": "7350",
+          "unit": "",
+          "display_value": "7350",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Мощность подключения, Вт"
+      ],
+      "display_name": "Мощность подключения, Вт",
+      "resolved": {
+        "id": 3218,
+        "product_id": 100,
+        "normalized_name": "мощность_подключения_вт",
+        "selected_value": "7350",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "7350",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "окантовка_варочной_панели",
+      "sources": {
+        "electrolux": {
+          "id": 3557,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Окантовка варочной панели",
+          "raw_value": "Bevelled 1 Side",
+          "section": "Прочие характеристики",
+          "value_cell": null,
+          "normalized_name": "окантовка_варочной_панели",
+          "normalized_value": "bevelled 1 side",
+          "unit": "",
+          "display_value": "bevelled 1 side",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Окантовка варочной панели"
+      ],
+      "display_name": "Окантовка варочной панели",
+      "resolved": {
+        "id": 3219,
+        "product_id": 100,
+        "normalized_name": "окантовка_варочной_панели",
+        "selected_value": "bevelled 1 side",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "bevelled 1 side",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "передняя_левая_зона_мощность_диаметр",
+      "sources": {
+        "electrolux": {
+          "id": 3532,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Передняя левая зона — мощность / диаметр",
+          "raw_value": "2300/3200W/210mm",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "передняя_левая_зона_мощность_диаметр",
+          "normalized_value": "2300/3200w/210mm",
+          "unit": "",
+          "display_value": "2300/3200w/210mm",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Передняя левая зона — мощность / диаметр"
+      ],
+      "display_name": "Передняя левая зона — мощность / диаметр",
+      "resolved": {
+        "id": 3220,
+        "product_id": 100,
+        "normalized_name": "передняя_левая_зона_мощность_диаметр",
+        "selected_value": "2300/3200w/210mm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2300/3200w/210mm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "передняя_правая_зона_мощность_диаметр",
+      "sources": {
+        "electrolux": {
+          "id": 3535,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Передняя правая зона — мощность / диаметр",
+          "raw_value": "2300/3200W/210mm",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "передняя_правая_зона_мощность_диаметр",
+          "normalized_value": "2300/3200w/210mm",
+          "unit": "",
+          "display_value": "2300/3200w/210mm",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Передняя правая зона — мощность / диаметр"
+      ],
+      "display_name": "Передняя правая зона — мощность / диаметр",
+      "resolved": {
+        "id": 3221,
+        "product_id": 100,
+        "normalized_name": "передняя_правая_зона_мощность_диаметр",
+        "selected_value": "2300/3200w/210mm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2300/3200w/210mm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "передняя_средняя_зона_мощность_диаметр",
+      "sources": {
+        "electrolux": {
+          "id": 3533,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Передняя средняя зона — мощность / диаметр",
+          "raw_value": "2300/3200W/210mm",
+          "section": "Основные характеристики",
+          "value_cell": null,
+          "normalized_name": "передняя_средняя_зона_мощность_диаметр",
+          "normalized_value": "2300/3200w/210mm",
+          "unit": "",
+          "display_value": "2300/3200w/210mm",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Передняя средняя зона — мощность / диаметр"
+      ],
+      "display_name": "Передняя средняя зона — мощность / диаметр",
+      "resolved": {
+        "id": 3222,
+        "product_id": 100,
+        "normalized_name": "передняя_средняя_зона_мощность_диаметр",
+        "selected_value": "2300/3200w/210mm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2300/3200w/210mm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "подключение_к_электросети",
+      "sources": {
+        "electrolux": {
+          "id": 3541,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Подключение к электросети",
+          "raw_value": "Hardwired connection only",
+          "section": "Подключение и установка",
+          "value_cell": null,
+          "normalized_name": "подключение_к_электросети",
+          "normalized_value": "hardwired connection only",
+          "unit": "",
+          "display_value": "hardwired connection only",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Подключение к электросети"
+      ],
+      "display_name": "Подключение к электросети",
+      "resolved": {
+        "id": 3223,
+        "product_id": 100,
+        "normalized_name": "подключение_к_электросети",
+        "selected_value": "hardwired connection only",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "hardwired connection only",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "подключение_природного_газа",
+      "sources": {
+        "electrolux": {
+          "id": 3556,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Подключение природного газа",
+          "raw_value": "No",
+          "section": "Прочие характеристики",
+          "value_cell": null,
+          "normalized_name": "подключение_природного_газа",
+          "normalized_value": "false",
+          "unit": "bool",
+          "display_value": "Нет",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Подключение природного газа"
+      ],
+      "display_name": "Подключение природного газа",
+      "resolved": {
+        "id": 3224,
+        "product_id": 100,
+        "normalized_name": "подключение_природного_газа",
+        "selected_value": "false",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Нет",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "серия",
+      "sources": {
+        "electrolux": {
+          "id": 3553,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Серия",
+          "raw_value": "600",
+          "section": "Прочие характеристики",
+          "value_cell": null,
+          "normalized_name": "серия",
+          "normalized_value": "600",
+          "unit": "",
+          "display_value": "600",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Серия"
+      ],
+      "display_name": "Серия",
+      "resolved": {
+        "id": 3225,
+        "product_id": 100,
+        "normalized_name": "серия",
+        "selected_value": "600",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "600",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "тип_варочной_панели",
+      "sources": {
+        "electrolux": {
+          "id": 3539,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Тип варочной панели",
+          "raw_value": "Full Induction",
+          "section": "Энергия — шкала и период источника",
+          "value_cell": null,
+          "normalized_name": "тип_варочной_панели",
+          "normalized_value": "full induction",
+          "unit": "",
+          "display_value": "full induction",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Тип варочной панели"
+      ],
+      "display_name": "Тип варочной панели",
+      "resolved": {
+        "id": 3226,
+        "product_id": 100,
+        "normalized_name": "тип_варочной_панели",
+        "selected_value": "full induction",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "full induction",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "тип_управления",
+      "sources": {
+        "electrolux": {
+          "id": 3555,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Тип управления",
+          "raw_value": "Penguin",
+          "section": "Прочие характеристики",
+          "value_cell": null,
+          "normalized_name": "тип_управления",
+          "normalized_value": "penguin",
+          "unit": "",
+          "display_value": "penguin",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Тип управления"
+      ],
+      "display_name": "Тип управления",
+      "resolved": {
+        "id": 3227,
+        "product_id": 100,
+        "normalized_name": "тип_управления",
+        "selected_value": "penguin",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "penguin",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "color",
+      "sources": {
+        "electrolux": {
+          "id": 3554,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Цвет / отделка",
+          "raw_value": "Black",
+          "section": "Прочие характеристики",
+          "value_cell": null,
+          "normalized_name": "color",
+          "normalized_value": "black",
+          "unit": "",
+          "display_value": "black",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Цвет / отделка"
+      ],
+      "display_name": "Цвет / отделка",
+      "resolved": {
+        "id": 3202,
+        "product_id": 100,
+        "normalized_name": "color",
+        "selected_value": "black",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "black",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "backlight_color",
+      "sources": {
+        "electrolux": {
+          "id": 3548,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Цвет подсветки (LED)",
+          "raw_value": "Red",
+          "section": "Подключение и установка",
+          "value_cell": null,
+          "normalized_name": "backlight_color",
+          "normalized_value": "red",
+          "unit": "",
+          "display_value": "red",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Цвет подсветки (LED)"
+      ],
+      "display_name": "Цвет подсветки (LED)",
+      "resolved": {
+        "id": 3201,
+        "product_id": 100,
+        "normalized_name": "backlight_color",
+        "selected_value": "red",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "red",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "installation_dimensions__width",
+      "sources": {
+        "electrolux": {
+          "id": 3545,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Ширина ниши, мм",
+          "raw_value": "750",
+          "section": "Встраивание",
+          "value_cell": null,
+          "normalized_name": "installation_dimensions__width",
+          "normalized_value": "750",
+          "unit": "",
+          "display_value": "750",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Ширина ниши, мм"
+      ],
+      "display_name": "Ширина ниши, мм",
+      "resolved": {
+        "id": 3205,
+        "product_id": 100,
+        "normalized_name": "installation_dimensions__width",
+        "selected_value": "750",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "750",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    },
+    {
+      "normalized_name": "product_dimensions__width",
+      "sources": {
+        "electrolux": {
+          "id": 3542,
+          "product_id": 100,
+          "source_page_id": 218,
+          "source_key": "electrolux",
+          "site_name": "Electrolux official",
+          "raw_name": "Ширина товара, мм",
+          "raw_value": "780",
+          "section": "Габариты товара",
+          "value_cell": null,
+          "normalized_name": "product_dimensions__width",
+          "normalized_value": "780",
+          "unit": "",
+          "display_value": "780",
+          "display_source": "Electrolux official"
+        }
+      },
+      "raw_names": [
+        "Ширина товара, мм"
+      ],
+      "display_name": "Ширина товара, мм",
+      "resolved": {
+        "id": 3208,
+        "product_id": 100,
+        "normalized_name": "product_dimensions__width",
+        "selected_value": "780",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+        "selected_source": "electrolux",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:29:02+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "780",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "electrolux"
+      },
+      "electrolux_presentation": true
+    }
+  ],
+  "photos": [
+    {
+      "id": 2509,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/aeeda3e6-101b-4b57-9ec6-a7afcd4d0d85/2022789936-eps",
+      "asset_key": "8c4cdde6b0e01fe87c13ac4d",
+      "kind": "lifestyle",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2507,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg",
+      "asset_key": "f6a43dc10ba34ecb604e45ed",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": 700,
+      "verified_height": 700,
+      "verified_bytes": 10272,
+      "verified_format": "JPG",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2508,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps",
+      "asset_key": "721bc95d59f1b18ee8ab70e1",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": 700,
+      "verified_height": 700,
+      "verified_bytes": 21978,
+      "verified_format": "JPG",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2510,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/bb8a7526-59c2-4708-9b42-f270e848bb0a/2018639096-eps",
+      "asset_key": "8aaa9cc41e83703fbeabf132",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2511,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/1944d549-15e4-446f-9079-82e1cd183551/2018639094-eps",
+      "asset_key": "371beeed81dfcf6ac4513e0d",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2512,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a7c4f61f-d44e-478f-9343-0d55f958b1a3/2018639092-eps",
+      "asset_key": "8d2cc05be1a43013125e03ef",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2513,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/c916be13-d6a4-4ddf-a7c5-1c13ab31b97c/2018607189-eps",
+      "asset_key": "9eb864985b94ec129b740fd5",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2514,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/4ec0b043-1f80-472e-9966-526c2963f433/2019661528-jpg",
+      "asset_key": "c623628cf6924fc3070ef15a",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 2515,
+      "product_id": 100,
+      "source_page_id": 218,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/7ae32f84-63cd-4eb0-a874-7a214bb183e6/2019661524-jpg",
+      "asset_key": "2e3bdb0a4478c77c6a8332b5",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:29:00+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "identity": {
+      "model": "EIV84550",
+      "model_relation": "model_confirmed",
+      "requested_pnc": "",
+      "requested_region": "UK",
+      "found_model": "EIV84550",
+      "product_code": "949599217",
+      "pnc_base": "949599217",
+      "revision": null,
+      "region": "UK",
+      "ean": "7332543822331",
+      "family": "600 MultipleBridge Full Induction 80cm",
+      "product_code_relation": "published_product_confirmed",
+      "configuration_confirmed": true,
+      "published_finish": "Black",
+      "revision_inventory_relation": "unproven"
+    },
+    "raw_facts": [
+      {
+        "section": "Specification",
+        "label": "Hob2Hood®: Allows you to control the cooker hood via your hob.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Specification",
+        "label": "PowerBoost: Gives an instant increase in temperature allowing water to boil in less than 90 seconds.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Specification",
+        "label": "Bridging function: Combines 2 cooking zones allowing flexibility for any size pan.\n\n",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Specification",
+        "label": "Pause functionality allows you to take short breaks without losing your cooking settings.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Specification",
+        "label": "OptiFix™: Only one step to install the hob.",
+        "value": "OptiFix™: only one step to install the hob thanks to a custom made fully automated process",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Specification",
+        "label": "Child lock safety function.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Specification",
+        "label": "Individual Zone Timers: Set a separate timer for each cooking zone on your hob.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[6]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Left Front - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Front Middle - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Rear Middle - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Right Front - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Left Rear - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Right Rear - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Number of cooking zones",
+        "value": "5",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[6]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Performance",
+        "label": "Hob Energy type",
+        "value": "Full Induction",
+        "scope": "model",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[7]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "model_shared"
+      },
+      {
+        "section": "Performance",
+        "label": "Hob Safety",
+        "value": "Automatic Switch Off",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[8]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "Plug or Hardwired",
+        "value": "Hardwired connection only",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "Dimensions (mm) (WxD)",
+        "value": "780x520",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "Built-in Dimensions (mm) (HxWxD)",
+        "value": "44x750x490",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "Cord Length (m)",
+        "value": "N/A",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "LED Colour",
+        "value": "Red",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "LPG Conversion Kit Included",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "Total Electricity Loading (W)",
+        "value": "7350",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[6]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "Net weight (kg)",
+        "value": "12.78",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[7]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Installation",
+        "label": "Gross weight (kg)",
+        "value": "13.62",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[8]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Other",
+        "label": "Series",
+        "value": "600",
+        "scope": "model",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "model_shared"
+      },
+      {
+        "section": "Other",
+        "label": "Main Colour",
+        "value": "Black",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Other",
+        "label": "Control Type",
+        "value": "Penguin",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Other",
+        "label": "Gas Supply: Natural Gas",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Other",
+        "label": "Frame Type",
+        "value": "Bevelled 1 Side",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      },
+      {
+        "section": "Other",
+        "label": "Wok burner",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc"
+      }
+    ],
+    "accepted_facts": [
+      {
+        "section": "Performance",
+        "label": "Left Front - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Передняя левая зона — мощность / диаметр"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Front Middle - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Передняя средняя зона — мощность / диаметр"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Rear Middle - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Задняя средняя зона — мощность / диаметр"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Right Front - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Передняя правая зона — мощность / диаметр"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Left Rear - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Задняя левая зона — мощность / диаметр"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Right Rear - Power/Diameter",
+        "value": "2300/3200W/210mm",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Задняя правая зона — мощность / диаметр"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Number of cooking zones",
+        "value": "5",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[6]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Количество зон нагрева"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Hob Energy type",
+        "value": "Full Induction",
+        "scope": "model",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[7]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "model_shared",
+        "canonical_fields": [
+          "Тип варочной панели"
+        ]
+      },
+      {
+        "section": "Performance",
+        "label": "Hob Safety",
+        "value": "Automatic Switch Off",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[8]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 1,
+          "section_label": "Performance",
+          "section_metadata": {
+            "label": "Performance"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Безопасность варочной панели"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "Plug or Hardwired",
+        "value": "Hardwired connection only",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Подключение к электросети"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "Dimensions (mm) (WxD)",
+        "value": "780x520",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Ширина товара, мм",
+          "Глубина товара, мм"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "Built-in Dimensions (mm) (HxWxD)",
+        "value": "44x750x490",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Высота ниши, мм",
+          "Ширина ниши, мм",
+          "Глубина ниши, мм"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "Cord Length (m)",
+        "value": "N/A",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Длина кабеля, м"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "LED Colour",
+        "value": "Red",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Цвет подсветки (LED)"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "LPG Conversion Kit Included",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Комплект перехода на сжиженный газ"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "Total Electricity Loading (W)",
+        "value": "7350",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[6]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Мощность подключения, Вт"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "Net weight (kg)",
+        "value": "12.78",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[7]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Вес товара, кг"
+        ]
+      },
+      {
+        "section": "Installation",
+        "label": "Gross weight (kg)",
+        "value": "13.62",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[8]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 2,
+          "section_label": "Installation",
+          "section_metadata": {
+            "label": "Installation"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Вес с упаковкой, кг"
+        ]
+      },
+      {
+        "section": "Other",
+        "label": "Series",
+        "value": "600",
+        "scope": "model",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "model_shared",
+        "canonical_fields": [
+          "Серия"
+        ]
+      },
+      {
+        "section": "Other",
+        "label": "Main Colour",
+        "value": "Black",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Цвет / отделка"
+        ]
+      },
+      {
+        "section": "Other",
+        "label": "Control Type",
+        "value": "Penguin",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Тип управления"
+        ]
+      },
+      {
+        "section": "Other",
+        "label": "Gas Supply: Natural Gas",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Подключение природного газа"
+        ]
+      },
+      {
+        "section": "Other",
+        "label": "Frame Type",
+        "value": "Bevelled 1 Side",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Окантовка варочной панели"
+        ]
+      },
+      {
+        "section": "Other",
+        "label": "Wok burner",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 3,
+          "section_label": "Other",
+          "section_metadata": {
+            "productCode": "949 599 217",
+            "productDisposalInformationLink": {
+              "text": "Information for professionals about non-destructive disassembly according to Regulation EU 66/2014",
+              "source": "/support/contact-us/",
+              "openInNewWindow": true
+            },
+            "label": "Other"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "canonical_fields": [
+          "Горелка Wok"
+        ]
+      }
+    ],
+    "rejected_facts": [
+      {
+        "section": "Specification",
+        "label": "Hob2Hood®: Allows you to control the cooker hood via your hob.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[0]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "PowerBoost: Gives an instant increase in temperature allowing water to boil in less than 90 seconds.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[1]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Bridging function: Combines 2 cooking zones allowing flexibility for any size pan.\n\n",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[2]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Pause functionality allows you to take short breaks without losing your cooking settings.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[3]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "OptiFix™: Only one step to install the hob.",
+        "value": "OptiFix™: only one step to install the hob thanks to a custom made fully automated process",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[4]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Child lock safety function.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[5]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Individual Zone Timers: Set a separate timer for each cooking zone on your hob.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949599217",
+        "region": "UK",
+        "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[6]",
+        "parent_context": {
+          "component": "FullSpecification",
+          "section_index": 0,
+          "section_label": "Specification",
+          "section_metadata": {
+            "label": "Specification"
+          }
+        },
+        "evidence_relation": "exact_pnc",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      }
+    ],
+    "document_inventory": [
+      {
+        "type": "Specification Sheet",
+        "title": "specification sheet",
+        "url": "https://productinformation.electrolux.com/SERVICES/PIServices/EdenService.svc/WEB/GetDatasheetPDF/productid=FB3556A9-CBDD-4E63-9989-D4B37401401D/projectid=7397D917-43EC-4639-A403-F020C8132B0C/languageid=6C86D7CB-D0E0-49F0-A308-768C3DBF5489",
+        "model": "EIV84550",
+        "product_code": "949599217",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+        "identity_verified": true,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "Unspecified; no old/new scale inference",
+        "date": ""
+      },
+      {
+        "type": "User Manual",
+        "title": "user manual",
+        "url": "https://electrolux.bynder.com/asset/49a9e667-baec-47ad-870a-29f251d5947f/0c9bd8fd-4954-4b0e-83d2-ff78a786cae3-pdf.pdf",
+        "model": "EIV84550",
+        "product_code": "949599217",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+        "identity_verified": true,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "Unspecified; no old/new scale inference",
+        "date": "2024-11-28T12:01:54"
+      },
+      {
+        "type": "Product Fiche",
+        "title": "product information sheet",
+        "url": "https://support.electroluxgroup.eu/external/compliance-documents/GBEnergyLabel/949599217/Combined/latest/PDF/EN",
+        "model": "EIV84550",
+        "product_code": "949599217",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+        "identity_verified": true,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "GBEnergyLabel",
+        "date": ""
+      },
+      {
+        "type": "Installation Drawing",
+        "title": "Installation chart",
+        "url": "https://www.electrolux.co.uk/services/eml/transform/PN/be2a798e-0342-40bd-b3f1-686bf0f986ee/2021781706-eps",
+        "model": "EIV84550",
+        "product_code": "949599217",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+        "identity_verified": true,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "Unspecified; no old/new scale inference",
+        "date": ""
+      }
+    ],
+    "gallery_inventory": [
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg",
+        "asset_key": "f6a43dc10ba34ecb604e45ed",
+        "kind": "product_gallery",
+        "alt": "Product",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps",
+        "asset_key": "721bc95d59f1b18ee8ab70e1",
+        "kind": "product_gallery",
+        "alt": "Product Control Panel",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/aeeda3e6-101b-4b57-9ec6-a7afcd4d0d85/2022789936-eps",
+        "asset_key": "8c4cdde6b0e01fe87c13ac4d",
+        "kind": "lifestyle",
+        "alt": "Product in a room environment",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/bb8a7526-59c2-4708-9b42-f270e848bb0a/2018639096-eps",
+        "asset_key": "8aaa9cc41e83703fbeabf132",
+        "kind": "product_gallery",
+        "alt": "Product Detail",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/1944d549-15e4-446f-9079-82e1cd183551/2018639094-eps",
+        "asset_key": "371beeed81dfcf6ac4513e0d",
+        "kind": "product_gallery",
+        "alt": "Product Detail",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a7c4f61f-d44e-478f-9343-0d55f958b1a3/2018639092-eps",
+        "asset_key": "8d2cc05be1a43013125e03ef",
+        "kind": "product_gallery",
+        "alt": "Product Detail",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/c916be13-d6a4-4ddf-a7c5-1c13ab31b97c/2018607189-eps",
+        "asset_key": "9eb864985b94ec129b740fd5",
+        "kind": "product_gallery",
+        "alt": "Product Detail",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/4ec0b043-1f80-472e-9966-526c2963f433/2019661528-jpg",
+        "asset_key": "c623628cf6924fc3070ef15a",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/7ae32f84-63cd-4eb0-a874-7a214bb183e6/2019661524-jpg",
+        "asset_key": "2e3bdb0a4478c77c6a8332b5",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": true,
+        "product_code": "949599217",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      }
+    ],
+    "manual_status": "Не проверена",
+    "verified_documents": [],
+    "model_gallery_assets": [
+      "f6a43dc10ba34ecb604e45ed",
+      "721bc95d59f1b18ee8ab70e1"
+    ],
+    "source_field_collisions": [],
+    "pnc_inventory": {
+      "relations": [],
+      "requested_relation": "unproven",
+      "technical_equivalence": false
+    },
+    "pnc_evidence_graph": {
+      "nodes": {
+        "model": "EIV84550",
+        "published_pnc": "949599217",
+        "requested_pnc": "",
+        "pdp": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+      },
+      "edges": [
+        {
+          "from": "EIV84550",
+          "to": "949599217",
+          "relation": "exact_pnc",
+          "evidence_type": "identity",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[0]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Hob2Hood®: Allows you to control the cooker hood via your hob.",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[1]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "PowerBoost: Gives an instant increase in temperature allowing water to boil in less than 90 seconds.",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[2]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Bridging function: Combines 2 cooking zones allowing flexibility for any size pan.\n\n",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[3]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Pause functionality allows you to take short breaks without losing your cooking settings.",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[4]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "OptiFix™: Only one step to install the hob.",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[5]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Child lock safety function.",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[0].items[6]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Individual Zone Timers: Set a separate timer for each cooking zone on your hob.",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[0]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Left Front - Power/Diameter",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[1]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Front Middle - Power/Diameter",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[2]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Rear Middle - Power/Diameter",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[3]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Right Front - Power/Diameter",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[4]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Left Rear - Power/Diameter",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[5]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Right Rear - Power/Diameter",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[6]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Number of cooking zones",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[7]",
+          "relation": "model_shared",
+          "evidence_type": "specification",
+          "label": "Hob Energy type",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[1].items[8]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Hob Safety",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[0]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Plug or Hardwired",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[1]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Dimensions (mm) (WxD)",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[2]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Built-in Dimensions (mm) (HxWxD)",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[3]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Cord Length (m)",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[4]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "LED Colour",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[5]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "LPG Conversion Kit Included",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[6]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Total Electricity Loading (W)",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[7]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Net weight (kg)",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[2].items[8]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Gross weight (kg)",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[0]",
+          "relation": "model_shared",
+          "evidence_type": "specification",
+          "label": "Series",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[1]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Main Colour",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[2]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Control Type",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[3]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Gas Supply: Natural Gas",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[4]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Frame Type",
+          "product_code": "949599217"
+        },
+        {
+          "from": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+          "to": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[3].items[5]",
+          "relation": "exact_pnc",
+          "evidence_type": "specification",
+          "label": "Wok burner",
+          "product_code": "949599217"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/aeeda3e6-101b-4b57-9ec6-a7afcd4d0d85/2022789936-eps",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/bb8a7526-59c2-4708-9b42-f270e848bb0a/2018639096-eps",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/1944d549-15e4-446f-9079-82e1cd183551/2018639094-eps",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a7c4f61f-d44e-478f-9343-0d55f958b1a3/2018639092-eps",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/c916be13-d6a4-4ddf-a7c5-1c13ab31b97c/2018607189-eps",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/4ec0b043-1f80-472e-9966-526c2963f433/2019661528-jpg",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/7ae32f84-63cd-4eb0-a874-7a214bb183e6/2019661524-jpg",
+          "relation": "exact_pnc",
+          "evidence_type": "photo",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://productinformation.electrolux.com/SERVICES/PIServices/EdenService.svc/WEB/GetDatasheetPDF/productid=FB3556A9-CBDD-4E63-9989-D4B37401401D/projectid=7397D917-43EC-4639-A403-F020C8132B0C/languageid=6C86D7CB-D0E0-49F0-A308-768C3DBF5489",
+          "relation": "exact_pnc",
+          "evidence_type": "Specification Sheet",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://electrolux.bynder.com/asset/49a9e667-baec-47ad-870a-29f251d5947f/0c9bd8fd-4954-4b0e-83d2-ff78a786cae3-pdf.pdf",
+          "relation": "exact_pnc",
+          "evidence_type": "User Manual",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://support.electroluxgroup.eu/external/compliance-documents/GBEnergyLabel/949599217/Combined/latest/PDF/EN",
+          "relation": "exact_pnc",
+          "evidence_type": "Product Fiche",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        },
+        {
+          "from": "949599217",
+          "to": "https://www.electrolux.co.uk/services/eml/transform/PN/be2a798e-0342-40bd-b3f1-686bf0f986ee/2021781706-eps",
+          "relation": "exact_pnc",
+          "evidence_type": "Installation Drawing",
+          "source_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        }
+      ],
+      "types": [
+        "exact_pnc",
+        "model_shared",
+        "revision_specific",
+        "unknown"
+      ]
+    },
+    "query_variants": [
+      "EIV84550",
+      ""
+    ],
+    "captures": [
+      {
+        "url": "https://www.electrolux.co.uk/search/?q=EIV84550&tab=Product",
+        "status_code": 200,
+        "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 90,
+          "network_requests": 61,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 13,
+          "blocked_image_requests": 25,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 47,
+          "document_status": 200,
+          "document_bytes": 673334
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/search/?q=EIV84550",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-13T09:28:54+00:00",
+        "sha256": "e33c95cc46f73a679795825b1304e5f3d5c5ac674f1d270e108de13a69425cde",
+        "total_navigations": 29,
+        "dom_state": "captured_after_domcontentloaded",
+        "signal": "",
+        "file": "25fa0873daecb13bca064b5d33e2f0aad744ad0b8d81d65a8d7003db993470a9.html",
+        "requested_url": "https://www.electrolux.co.uk/search/?q=EIV84550",
+        "observation": "actual_live",
+        "original_response_sha256": "25fa0873daecb13bca064b5d33e2f0aad744ad0b8d81d65a8d7003db993470a9",
+        "privacy_redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+        "status_code": 200,
+        "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 189,
+          "network_requests": 118,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 30,
+          "blocked_image_requests": 67,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.paypal.com/sdk/js?client-id=Aegphy4qyExklqSm3nhg1EBbqQd10P8Tzv-uNQgEvYaHly7YRLGi0xWyyO2NcDnCyrQ7lduG-0iq0kbe&components=messages",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://js.klarna.com/web-sdk/v1/klarna.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 87,
+          "document_status": 200,
+          "document_bytes": 909499
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-13T09:28:59+00:00",
+        "sha256": "f04441d6ea4aae32da778fc72d0a7cee1c754a77408da5665f22b2e6f936d849",
+        "total_navigations": 30,
+        "dom_state": "captured_after_domcontentloaded",
+        "signal": "",
+        "file": "bc78333014c5f59149a83a0fca38a167157e52548a0ba1ba1e37273c990793ec.html",
+        "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+        "observation": "actual_live",
+        "original_response_sha256": "bc78333014c5f59149a83a0fca38a167157e52548a0ba1ba1e37273c990793ec",
+        "privacy_redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      }
+    ],
+    "live_success": true,
+    "access_error": "",
+    "image_measurements": [
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg",
+        "accepted": true,
+        "identity_confirmed": true,
+        "selection": "confirmed",
+        "width": 700,
+        "height": 700,
+        "size_bytes": 10272,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "68bdc002b2b06a1b93b4454ddc2f52ea6ed7ff0577a5442461630169a74f4cb9"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps",
+        "accepted": true,
+        "identity_confirmed": true,
+        "selection": "confirmed",
+        "width": 700,
+        "height": 700,
+        "size_bytes": 21978,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "eb2d734d9459f910599beaf7d6ca3bf8f8567145f2f40fd7f15768c4663c79b7"
+      }
+    ]
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "EIV84550",
+      "model_relation": "model_confirmed",
+      "requested_pnc": "",
+      "requested_region": "UK",
+      "found_model": "EIV84550",
+      "product_code": "949599217",
+      "pnc_base": "949599217",
+      "revision": null,
+      "region": "UK",
+      "ean": "7332543822331",
+      "family": "600 MultipleBridge Full Induction 80cm",
+      "product_code_relation": "published_product_confirmed",
+      "configuration_confirmed": true,
+      "published_finish": "Black",
+      "revision_inventory_relation": "unproven"
+    },
+    "confirmed_specs": 27,
+    "manual_status": "Не проверена",
+    "conflicts": 0,
+    "exact_identity": true,
+    "readiness_scope": "published regional product / exact supplied PNC when present"
+  },
+  "trace": [
+    {
+      "candidate_budget": 24,
+      "document_budget": 12,
+      "event": "electrolux_discovery",
+      "image_batch_budget": 24,
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "navigation_budget": 18,
+      "product_budget": 150,
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "job_start",
+      "state": "start",
+      "timestamp": "2026-10-13T09:28:48+00:00",
+      "url": ""
+    },
+    {
+      "budget_seconds": 100,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 149.99591539998073,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "discovery",
+      "state": "start",
+      "timestamp": "2026-10-13T09:28:48+00:00",
+      "url": ""
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "input",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "normalization",
+      "query": "EIV84550",
+      "reason": "Model and PNC are separate queries; revision never padded",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "query_variants",
+      "timestamp": "2026-10-13T09:28:48+00:00",
+      "url": "",
+      "variants": [
+        "EIV84550",
+        ""
+      ]
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "regional_official",
+      "query": "EIV84550",
+      "reason": "same-session live catalog cache; not fresh PDP success",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "catalog_root",
+      "timestamp": "2026-10-13T09:28:48+00:00",
+      "url": "https://www.electrolux.co.uk/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "regional_exact",
+      "query": "EIV84550",
+      "reason": "same-session live catalog cache; not fresh PDP success",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "official_search",
+      "timestamp": "2026-10-13T09:28:49+00:00",
+      "url": "https://www.electrolux.co.uk/search/"
+    },
+    {
+      "event": "browser_timing",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "phase": "public_goto",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "start",
+      "timestamp": "2026-10-13T09:28:49+00:00",
+      "url": "https://www.electrolux.co.uk/search/?q=EIV84550",
+      "wall_timeout": 18
+    },
+    {
+      "browser_events": [
+        {
+          "main_document": true,
+          "status": 200,
+          "url": "https://www.electrolux.co.uk/search/?q=EIV84550"
+        }
+      ],
+      "challenge": "",
+      "dom_state": "domcontentloaded",
+      "elapsed": 5.0533,
+      "event": "browser_timing",
+      "exception": "",
+      "final_url": "https://www.electrolux.co.uk/search/?q=EIV84550&tab=Product",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "network_idle_wait": false,
+      "phase": "public_goto",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "end",
+      "timeout": false,
+      "timestamp": "2026-10-13T09:28:54+00:00",
+      "url": "https://www.electrolux.co.uk/search/?q=EIV84550"
+    },
+    {
+      "event": "browser_timing",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "phase": "public_snapshot",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "start",
+      "timestamp": "2026-10-13T09:28:54+00:00",
+      "url": "https://www.electrolux.co.uk/search/?q=EIV84550&tab=Product",
+      "wall_timeout": 6
+    },
+    {
+      "browser_events": [],
+      "challenge": "",
+      "dom_state": "captured_after_domcontentloaded",
+      "elapsed": 0.2389,
+      "event": "browser_timing",
+      "exception": "",
+      "final_url": "https://www.electrolux.co.uk/search/?q=EIV84550&tab=Product",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "network_idle_wait": false,
+      "phase": "public_snapshot",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "end",
+      "timeout": false,
+      "timestamp": "2026-10-13T09:28:54+00:00",
+      "url": "https://www.electrolux.co.uk/search/?q=EIV84550&tab=Product"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "regional_exact",
+      "query": "EIV84550",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/search/?q=EIV84550",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "official_search",
+      "timestamp": "2026-10-13T09:28:54+00:00",
+      "url": "https://www.electrolux.co.uk/search/?q=EIV84550&tab=Product"
+    },
+    {
+      "budget_seconds": 24,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 144.21794030000456,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "candidate",
+      "state": "start",
+      "timestamp": "2026-10-13T09:28:54+00:00",
+      "url": ""
+    },
+    {
+      "event": "browser_timing",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "phase": "public_goto",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "start",
+      "timestamp": "2026-10-13T09:28:54+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+      "wall_timeout": 18
+    },
+    {
+      "browser_events": [
+        {
+          "main_document": true,
+          "status": 200,
+          "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+        }
+      ],
+      "challenge": "",
+      "dom_state": "domcontentloaded",
+      "elapsed": 4.7268,
+      "event": "browser_timing",
+      "exception": "",
+      "final_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "network_idle_wait": false,
+      "phase": "public_goto",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "end",
+      "timeout": false,
+      "timestamp": "2026-10-13T09:28:59+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+    },
+    {
+      "event": "browser_timing",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "phase": "public_snapshot",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "start",
+      "timestamp": "2026-10-13T09:28:59+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+      "wall_timeout": 6
+    },
+    {
+      "browser_events": [],
+      "challenge": "",
+      "dom_state": "captured_after_domcontentloaded",
+      "elapsed": 0.4997,
+      "event": "browser_timing",
+      "exception": "",
+      "final_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "network_idle_wait": false,
+      "phase": "public_snapshot",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "end",
+      "timeout": false,
+      "timestamp": "2026-10-13T09:28:59+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "regional_exact",
+      "query": "EIV84550",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "PDP",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+    },
+    {
+      "budget_seconds": 8,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 138.95422660000622,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "extraction",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 0.2365,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "extraction",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 5.5076,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "candidate",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "accepted": true,
+      "candidate_url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/",
+      "catalog_product_code": "",
+      "discovery_reason": "published official link",
+      "event": "electrolux_discovery",
+      "identity_relation": {
+        "configuration_confirmed": true,
+        "ean": "7332543822331",
+        "family": "600 MultipleBridge Full Induction 80cm",
+        "found_model": "EIV84550",
+        "model": "EIV84550",
+        "model_relation": "model_confirmed",
+        "pnc_base": "949599217",
+        "product_code": "949599217",
+        "product_code_relation": "published_product_confirmed",
+        "published_finish": "Black",
+        "region": "UK",
+        "requested_pnc": "",
+        "requested_region": "UK",
+        "revision": null
+      },
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "regional_exact",
+      "query": "EIV84550",
+      "reason": "{\"model\": \"EIV84550\", \"model_relation\": \"model_confirmed\", \"requested_pnc\": \"\", \"requested_region\": \"UK\", \"found_model\": \"EIV84550\", \"product_code\": \"949599217\", \"pnc_base\": \"949599217\", \"revision\": null, \"region\": \"UK\", \"ean\": \"7332543822331\", \"family\": \"600 MultipleBridge Full Induction 80cm\", \"product_code_relation\": \"published_product_confirmed\", \"configuration_confirmed\": true}",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "PDP",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/hobs/induction-hob/eiv84550/"
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 11.478,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "discovery",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "budget_seconds": null,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 138.51180639999802,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "persistence",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 0.0512,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "persistence",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "reason": "stage not requested",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "documents",
+      "state": "skipped",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "budget_seconds": 24,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "photos",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "budget_seconds": 13,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 138.44471759998123,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "image",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "event": "browser_timing",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "phase": "public_binary",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg",
+      "wall_timeout": 12.993120200000703
+    },
+    {
+      "browser_events": [],
+      "challenge": "",
+      "dom_state": "unknown",
+      "elapsed": 0.2605,
+      "event": "browser_timing",
+      "exception": "",
+      "final_url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "network_idle_wait": false,
+      "phase": "public_binary",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "end",
+      "timeout": false,
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3e9d4740-cff8-4993-8817-c5cad4539e1e/2021787249-jpg"
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 0.2949,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "image",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "budget_seconds": 13,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 138.13538950000657,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "image",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:00+00:00",
+      "url": ""
+    },
+    {
+      "event": "browser_timing",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "phase": "public_binary",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:01+00:00",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps",
+      "wall_timeout": 12.02163569998811
+    },
+    {
+      "browser_events": [],
+      "challenge": "",
+      "dom_state": "unknown",
+      "elapsed": 0.2907,
+      "event": "browser_timing",
+      "exception": "",
+      "final_url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "network_idle_wait": false,
+      "phase": "public_binary",
+      "product_id": 100,
+      "retries": 0,
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "state": "end",
+      "timeout": false,
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/f7cccec1-7776-4115-81ef-f3f6d44995a0/2021787167-eps"
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 1.3103,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "image",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": ""
+    },
+    {
+      "budget_exhausted": false,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "photos",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": ""
+    },
+    {
+      "budget_seconds": null,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 136.8067977000028,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "persistence",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": ""
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 0.0335,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "persistence",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": ""
+    },
+    {
+      "budget_seconds": null,
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "product_remaining": 136.76207850000355,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "persistence",
+      "state": "start",
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": ""
+    },
+    {
+      "budget_exhausted": false,
+      "elapsed": 0.0067,
+      "event": "electrolux_discovery",
+      "exception": "",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "persistence",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": ""
+    },
+    {
+      "event": "electrolux_discovery",
+      "job_id": "7d73ec091c0344688b05d7d2fad8ef54",
+      "product_budget_exhausted": false,
+      "product_id": 100,
+      "provider": "timing",
+      "session_id": "public_browser:b0e629b0f9f04b4693f2325ca221121c",
+      "source_type": "job_finish",
+      "state": "end",
+      "timestamp": "2026-10-13T09:29:02+00:00",
+      "url": ""
+    }
+  ]
+}

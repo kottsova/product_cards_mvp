@@ -4,7 +4,7 @@ from io import BytesIO
 from pathlib import Path
 import re
 from openpyxl import Workbook
-from openpyxl.styles import Font, Alignment
+from openpyxl.styles import Font, Alignment, PatternFill
 from . import jbl_pipeline, lenovo_pipeline, lenovo_presentation, attribute_projection, bosch_presentation, bosch_readiness, card_evidence, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
 from .adapters.lg import lg_base_model
 from .lg_identity import document_tied_to_article, photo_tied_to_article
@@ -39,20 +39,26 @@ def export_batch(database: Path,batch_id: str)->bytes:
     for p in batch["products"]: groups.setdefault(p["category"] or "Категория не определена",[]).append(p)
     for category,products in groups.items():
         sheet=book.create_sheet(_title(category,used)); rows={p["id"]:attribute_projection.final_attribute_rows(database,p["id"]) for p in products}
-        keys=sorted({r["normalized_name"] for rr in rows.values() for r in rr},key=lambda k:next(r["display_name"] for rr in rows.values() for r in rr if r["normalized_name"]==k))
-        labels={k:next(r["display_name"] for rr in rows.values() for r in rr if r["normalized_name"]==k) for k in keys}
-        # Distinct canonical concepts must not acquire an indistinguishable column.
-        repeated = {label for label in labels.values() if list(labels.values()).count(label) > 1}
-        for key in keys:
-            if labels[key] in repeated:
-                labels[key] += f" ({key.replace('_', ' ')})"
+        # The common presentation vocabulary supplies semantic labels/scopes.
+        # Language aliases of the same visible concept share one product column;
+        # conflicting values are exposed rather than choosing the last alias.
+        keys=sorted({r['display_name'] for rr in rows.values() for r in rr},key=lambda k:(min(r.get('parent_group','') for rr in rows.values() for r in rr if r['display_name']==k),k.casefold()))
+        if 'Цвет' not in keys:keys.append('Цвет')
+        labels={k:k for k in keys}
         _headers(sheet,["Строка","Название","Бренд","Поисковый идентификатор" if xiaomi_only else "Полный артикул","Модель" if xiaomi_only else "Базовая модель",*[labels[k] for k in keys]])
         for p in products:
             is_lg = lg_batch.is_lg(p)
-            resolved = {r["normalized_name"]: value.get("display_value", "")
-                        if not (is_lg or p["brand"].strip().upper() in {"SAMSUNG", "LENOVO"}) or (value.get("full_sku_confirmed") and not value.get("conflict"))
-                        else ""
-                        for r in rows[p["id"]] for value in [r.get("resolved") or {}]}
+            visible={}
+            for r in rows[p['id']]:
+                value=r.get('resolved') or {};shown=value.get('display_value','')
+                if value.get('conflict'):
+                    shown='Расхождение: '+'; '.join(dict.fromkeys(f.get('display_value','') for f in r.get('sources',{}).values()))
+                elif (is_lg or p['brand'].strip().upper() in {'SAMSUNG','LENOVO'}) and not (value.get('full_sku_confirmed') or value.get('status') in {'model_confirmed_official','hardware_confirmed_official'}):shown=''
+                if shown:visible.setdefault(r['display_name'],[]).append(shown)
+            resolved={k:(vals[0] if len(vals)==1 else 'Расхождение: '+'; '.join(vals)) for k,items in visible.items() for vals in [list(dict.fromkeys(items))]}
+            from .canonical_attributes import color_result
+            from .photo_inventory import evidence_kind
+            resolved['Цвет']=color_result(p,rows[p['id']],jobs.get_source_pages(database,p['id']),card_evidence.load(database,p['id'],evidence_kind(p)) or {})['value']
             model=lg_base_model(p["search_code"]) if p["brand"].strip().upper()=="LG" else ""
             if p['brand'].strip().casefold()=='dreame':
                 identity=(card_evidence.load(database,p['id'],'dreame') or {}).get('identity',{})
@@ -88,6 +94,21 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 label = row["raw_names"][0]
             check.append([(p["name"] or p["search_code"]),p["search_code"],label,*([s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value","")] if has_lg else []),*([s.get("sulpak",{}).get("raw_value","")] if has_sulpak_facts else []),*([s.get("lg_global",{}).get("raw_value","")] if has_lg_global else []),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail, "; ".join(dict.fromkeys(row["raw_names"]))])
     source_sheet=book.create_sheet(_title("Источники",used)); _headers(source_sheet,["Товар","Полный артикул","Сайт","Найденная модель","Уровень совпадения","Доказательство","Дата","Ошибка","URL"])
+    attributes_sheet=book.create_sheet(_title('Атрибуты',used));_headers(attributes_sheet,['Товар','Категория','Группа','Основные / особенности','Характеристика','Значение','Статус','Источник'])
+    schema_sheet=book.create_sheet(_title('Схема категорий',used));_headers(schema_sheet,['Категория','Группа','Характеристика','Основные / особенности','Бренды'])
+    observed_schema={}
+    from .card_presentation import present_card_rows
+    for p in batch['products']:
+        entries=attribute_projection.final_attribute_rows(database,p['id'])
+        presented=present_card_rows(entries,jobs.get_facts(database,p['id']),jobs.get_source_pages(database,p['id']),p['category'])
+        for role,sections in presented['groups'].items():
+            for group,items in sections.items():
+                for item in items:
+                    value=item.get('resolved') or {};shown=value.get('display_value','')
+                    if value.get('conflict'):shown='Расхождение: '+'; '.join(dict.fromkeys(f.get('display_value','') for f in item.get('sources',{}).values()))
+                    attributes_sheet.append([p['name'] or p['search_code'],p['category'],group,'Основные' if role=='core' else 'Особенности',item['display_name'],shown,value.get('display_status','Не подтверждено'),'; '.join(item.get('sources',{}))])
+                    key=(p['category'],group,item['display_name'],role);observed_schema.setdefault(key,set()).add(p['brand'])
+    for (cat,group,label,role),brands in sorted(observed_schema.items()):schema_sheet.append([cat,group,label,'Основные' if role=='core' else 'Особенности',', '.join(sorted(brands))])
     for p in batch["products"]:
         for s in jobs.get_source_pages(database,p["id"]):
             if s["source_key"] in {"lg_kz_support", "lg_ru_support"}:
@@ -99,7 +120,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
             source_sheet.append([(p["name"] or p["search_code"]),p["search_code"],s["site_name"],s["found_model"],level,s["evidence"],s["fetched_at"],display_access_error(s["error"]),s["url"]])
     docs=book.create_sheet(_title("Инструкции",used)); _headers(docs,["Товар","Документ","Язык","Дата","Размер","Основной","Модель поддержки","Источник","Прямая ссылка","Связь с артикулом","Тип источника","Статус проверки"])
     photo_columns=["Ширина, px","Высота, px","Размер файла","Формат"]
-    photos=book.create_sheet(_title("Фотографии",used)); _headers(photos,["Товар","Источник","Тип","URL","Подтверждение варианта",*photo_columns])
+    photos=book.create_sheet(_title("Фотографии",used)); _headers(photos,["Товар","Источник","Тип","URL","Подтверждение варианта",*photo_columns,"Роль","Выбрано для карточки","SHA256","Проверка байтов","Источник галереи"])
     photo_candidates = None
     from . import playstation_pipeline
     from .playstation_identity import BRANDS as PLAYSTATION_BRANDS
@@ -152,9 +173,14 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 reason = manual_status.unchecked_reason(database, p["id"], p["search_code"])
                 docs.append([(p["name"] or p["search_code"]), "", "", "", "", "", "",
                              support_url, "", reason, "LG" if lg and audit else "Samsung" if samsung else "", status])
-        for item in jobs.get_photo_candidates(database,p["id"],include_excluded=p["brand"].strip().upper() in ("BOSCH", "SAMSUNG")):
+        from . import photo_inventory
+        priority=p['brand'].strip().casefold() in {'jbl','samsung','lg','apple','playstation','xbox','razer','hyperx','xiaomi','redmi','poco','dreame','electrolux'}
+        gallery=photo_inventory.enriched_photos(database,p['id']) if priority else jobs.get_photo_candidates(database,p['id'],include_excluded=p['brand'].strip().upper() in ('BOSCH','SAMSUNG'))
+        for item in gallery:
             tied = electrolux_pipeline.photo_verified(item,el_evidence) if el else xiaomi_pipeline.photo_verified(item,xm_evidence) if xm else razer_pipeline.photo_verified(item,rz_evidence) if rz else xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
+            if priority:tied=item['identity_confirmed']
             kind = {"product_gallery":"Товарная галерея","feature":"Особенности и инфографика","marketing":"Маркетинговые материалы"}.get(item["kind"],item["kind"])
+            if item['kind']=='excluded' and priority:continue
             if item["kind"] == "excluded" and p["brand"].strip().upper() in ("BOSCH", "SAMSUNG"):
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
@@ -165,15 +191,17 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],
                                          "Исключённый кандидат",item["url"],"Нет",reason,*_photo_cells(item)])
                 continue
-            if item["selected"] and tied:
-                photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Фото модели; цвет поставщика не подтверждён" if xm else "Цвет подтверждён" if lenovo else "Подтверждён",*_photo_cells(item)])
+            if tied and item['kind']!='excluded':
+                from . import photo_inventory
+                rich=next((x for x in photo_inventory.enriched_photos(database,p['id'],dedupe=False) if x['id']==item['id']),item)
+                photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Фото модели; цвет поставщика не подтверждён" if xm else "Цвет подтверждён" if lenovo else "Подтверждён",*_photo_cells(item),rich.get('role_label','Не определена'),'Да' if item['selected'] else 'Нет',rich.get('sha256',''),'Проверены' if rich.get('byte_verified') else 'Не проверены',rich.get('source_url','')])
             elif item["selected"] and not tied:
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
                 photo_candidates.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],
                                          "Да" if item["selected"] else "Нет","Связь с артикулом не подтверждена",*_photo_cells(item)])
-            elif (samsung or lenovo or jbl or rz) and item["kind"] != "excluded":
+            elif (priority or samsung or lenovo or jbl or rz) and item["kind"] != "excluded":
                 if photo_candidates is None:
                     photo_candidates = book.create_sheet(_title("Фото-кандидаты",used))
                     _headers(photo_candidates,["Товар","Источник","Тип","URL","Выбрано для просмотра","Статус",*photo_columns])
@@ -439,4 +467,24 @@ def export_batch(database: Path,batch_id: str)->bytes:
             for column in sheet.columns:sheet.column_dimensions[column[0].column_letter].width=min(60,max(14,max(len(str(c.value or '')) for c in column)+2))
             for row in sheet:
                 for cell in row:cell.alignment=Alignment(wrap_text=True,vertical='top')
+    if any(p['brand'].strip().casefold() in {'jbl','samsung','lg','apple','playstation','sony','xbox','razer','hyperx','xiaomi','redmi','poco','dreame','electrolux'} for p in batch['products']):
+        from math import ceil
+        for sheet in book:
+            sheet.sheet_view.showGridLines=False
+            sheet.auto_filter.ref=sheet.dimensions
+            for column in sheet.columns:
+                label=str(column[0].value or '')
+                width=min(54,max(14,max(min(52,len(str(c.value or ''))) for c in column)+2))
+                if label in {'URL','URL фото','Значение','Причина','Доказательство'}:width=72
+                sheet.column_dimensions[column[0].column_letter].width=width
+            for row in sheet:
+                lines=1
+                for cell in row:
+                    cell.font=Font(name='Arial',size=10,bold=cell.row==1,color='FFFFFF' if cell.row==1 else '172B4D')
+                    cell.alignment=Alignment(wrap_text=True,vertical='top',horizontal='center' if cell.row==1 else 'right' if isinstance(cell.value,(int,float)) else 'left')
+                    if cell.row==1:cell.fill=PatternFill('solid',fgColor='243B53')
+                    width=sheet.column_dimensions[cell.column_letter].width
+                    lines=max(lines,sum(max(1,ceil(len(part)/max(8,width-2))) for part in str(cell.value or '').split('\n')))
+                sheet.row_dimensions[row[0].row].height=min(409,max(28,15*lines+8))
+            if sheet.cell(1,1).value=='Строка':sheet.freeze_panes='F2'
     output=BytesIO(); book.save(output); book.close(); return output.getvalue()

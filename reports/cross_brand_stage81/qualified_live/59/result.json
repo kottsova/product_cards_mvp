@@ -1,0 +1,1962 @@
+{
+  "input": {
+    "id": 59,
+    "brand": "Xbox",
+    "dispatch_brand": "Xbox",
+    "article": "8RSN7J6375GG/99WM",
+    "model": "Xbox Elite Wireless Controller Series 2",
+    "name": "Xbox Elite Wireless Controller Series 2",
+    "category": "Контроллеры",
+    "input_configuration": {},
+    "region": "en-US",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/xbox_stage68/dataset.json",
+    "original_input": {
+      "row": 6,
+      "article": "8RSN7J6375GG/99WM",
+      "name": "Xbox Elite Wireless Controller Series 2",
+      "identifier_type": "store_product_id/store_sku_id",
+      "requested_region": "en-US",
+      "brand": "Xbox",
+      "category": "accessories"
+    }
+  },
+  "observed_at": "2026-10-13T14:37:54.532739+00:00",
+  "seconds": 14.63,
+  "job": {
+    "id": "f54c545586b448bfa465a946ca6120c5",
+    "product_id": 59,
+    "status": "done",
+    "current_stage": null,
+    "message": "Xbox: Готова",
+    "created_at": "2026-10-13T14:37:39+00:00",
+    "updated_at": "2026-10-13T14:37:52+00:00",
+    "started_at": "2026-10-13T14:37:39+00:00",
+    "finished_at": "2026-10-13T14:37:52+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 162,
+      "product_id": 59,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg",
+      "found_model": "XBOX Elite Wireless Controller Series 2",
+      "match_level": "full_sku",
+      "evidence": "Own public Store Product ID / SKU; typed identifiers kept separate",
+      "fetched_at": "2026-10-13T14:37:43+00:00",
+      "error": "",
+      "description": "XBOX Elite Wireless Controller Series 2.\nСовместимость с Xbox Accessories: Available on XBOX consoles and Windows 10/11..\nАудиоразъём: Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft..\nТактильная отдача: Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app..\nBluetooth: Да.\nXbox Wireless: Да.\nUSB-C: Да.\nАккумулятор и время работы: Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors..\nНазначаемые кнопки: A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles..",
+      "photos": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1"
+      ]
+    },
+    {
+      "id": 164,
+      "product_id": 59,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "url": "",
+      "found_model": "",
+      "match_level": "unknown",
+      "evidence": "",
+      "fetched_at": "2026-10-13T14:37:52+00:00",
+      "error": "Источник не подтверждён в текущем запуске",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 163,
+      "product_id": 59,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2",
+      "found_model": "Xbox Elite Wireless Controller Series 2",
+      "match_level": "model_confirmed",
+      "evidence": "Own official family PDP; configuration candidates are not exact facts",
+      "fetched_at": "2026-10-13T14:37:41+00:00",
+      "error": "",
+      "description": "Xbox Elite Wireless Controller Series 2.\nСовместимость с Xbox Accessories: Available on XBOX consoles and Windows 10/11..\nАудиоразъём: Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft..\nТактильная отдача: Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app..\nBluetooth: Да.\nXbox Wireless: Да.\nUSB-C: Да.\nАккумулятор и время работы: Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors..\nНазначаемые кнопки: A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles..",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 2844,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Bluetooth",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "bluetooth",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2854,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Bluetooth",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "bluetooth",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2846,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "USB-C",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "usb_c",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2856,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "USB-C",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "usb_c",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2845,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Xbox Wireless",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "xbox_wireless",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2855,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Xbox Wireless",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "xbox_wireless",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2847,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аккумулятор и время работы",
+      "raw_value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "normalized_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+      "unit": ""
+    },
+    {
+      "id": 2857,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аккумулятор и время работы",
+      "raw_value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "normalized_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+      "unit": ""
+    },
+    {
+      "id": 2841,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аудиоразъём",
+      "raw_value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аудиоразъем",
+      "normalized_value": "includes 3.5mm stereo headset jack. also compatible with the xbox one stereo headset adapter and all other xbox controller accessories made by microsoft.",
+      "unit": ""
+    },
+    {
+      "id": 2851,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аудиоразъём",
+      "raw_value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аудиоразъем",
+      "normalized_value": "includes 3.5mm stereo headset jack. also compatible with the xbox one stereo headset adapter and all other xbox controller accessories made by microsoft.",
+      "unit": ""
+    },
+    {
+      "id": 2838,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Комплектация",
+      "raw_value": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case",
+      "section": "Комплект",
+      "value_cell": 1,
+      "normalized_name": "комплектация",
+      "normalized_value": "xbox elite wireless controller series 2 thumbstick – adjustment tool charging dock + usb-c cable set of 4 paddles: medium (2), mini (2) additional thumbsticks: classic (2), dome (1), tall (1) additional d-pad: standard carrying case",
+      "unit": ""
+    },
+    {
+      "id": 2848,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Назначаемые кнопки",
+      "raw_value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "назначаемые_кнопки",
+      "normalized_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+      "unit": ""
+    },
+    {
+      "id": 2858,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Назначаемые кнопки",
+      "raw_value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "назначаемые_кнопки",
+      "normalized_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+      "unit": ""
+    },
+    {
+      "id": 2843,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Подключение",
+      "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "подключение",
+      "normalized_value": "connect to xbox consoles with xbox wireless, or using the included 9’ usb-c cable. wirelessly connect to windows pcs, tablets, android, and ios devices using bluetooth, or with the included 9’ usb-c cable. connect to windows 7 or 8.1 pcs with the included 9’ usb-c cable; some functionality not supported.",
+      "unit": ""
+    },
+    {
+      "id": 2853,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Подключение",
+      "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "подключение",
+      "normalized_value": "connect to xbox consoles with xbox wireless, or using the included 9’ usb-c cable. wirelessly connect to window pcs, tablets, android, and ios devices using bluetooth, or with the included 9’ usb-c cable. connect to windows 7 or 8.1 pcs with the included 9’ usb-c cable; some functionality not supported.",
+      "unit": ""
+    },
+    {
+      "id": 2839,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость",
+      "raw_value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость",
+      "normalized_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires bluetooth, included usb cable, or xbox wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+      "unit": ""
+    },
+    {
+      "id": 2849,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость",
+      "raw_value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость",
+      "normalized_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires bluetooth, included usb cable, or xbox wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+      "unit": ""
+    },
+    {
+      "id": 2840,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость с Xbox Accessories",
+      "raw_value": "Available on XBOX consoles and Windows 10/11.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость_с_xbox_accessories",
+      "normalized_value": "available on xbox consoles and windows 10/11.",
+      "unit": ""
+    },
+    {
+      "id": 2850,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость с Xbox Accessories",
+      "raw_value": "Available on XBOX consoles and Windows 10/11.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость_с_xbox_accessories",
+      "normalized_value": "available on xbox consoles and windows 10/11.",
+      "unit": ""
+    },
+    {
+      "id": 2842,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Тактильная отдача",
+      "raw_value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "тактильная_отдача",
+      "normalized_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+      "unit": ""
+    },
+    {
+      "id": 2852,
+      "product_id": 59,
+      "source_page_id": 163,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Тактильная отдача",
+      "raw_value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "тактильная_отдача",
+      "normalized_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2550,
+      "product_id": 59,
+      "normalized_name": "bluetooth",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2551,
+      "product_id": 59,
+      "normalized_name": "usb_c",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2552,
+      "product_id": 59,
+      "normalized_name": "xbox_wireless",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2553,
+      "product_id": 59,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "selected_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2554,
+      "product_id": 59,
+      "normalized_name": "аудиоразъем",
+      "selected_value": "includes 3.5mm stereo headset jack. also compatible with the xbox one stereo headset adapter and all other xbox controller accessories made by microsoft.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2555,
+      "product_id": 59,
+      "normalized_name": "комплектация",
+      "selected_value": "xbox elite wireless controller series 2 thumbstick – adjustment tool charging dock + usb-c cable set of 4 paddles: medium (2), mini (2) additional thumbsticks: classic (2), dome (1), tall (1) additional d-pad: standard carrying case",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2556,
+      "product_id": 59,
+      "normalized_name": "назначаемые_кнопки",
+      "selected_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2557,
+      "product_id": 59,
+      "normalized_name": "подключение",
+      "selected_value": "connect to xbox consoles with xbox wireless, or using the included 9’ usb-c cable. wirelessly connect to windows pcs, tablets, android, and ios devices using bluetooth, or with the included 9’ usb-c cable. connect to windows 7 or 8.1 pcs with the included 9’ usb-c cable; some functionality not supported.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2558,
+      "product_id": 59,
+      "normalized_name": "совместимость",
+      "selected_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires bluetooth, included usb cable, or xbox wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2559,
+      "product_id": 59,
+      "normalized_name": "совместимость_с_xbox_accessories",
+      "selected_value": "available on xbox consoles and windows 10/11.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2560,
+      "product_id": 59,
+      "normalized_name": "тактильная_отдача",
+      "selected_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:52+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "bluetooth",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2844,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Bluetooth",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "bluetooth",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2854,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Bluetooth",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "bluetooth",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Bluetooth",
+        "Bluetooth"
+      ],
+      "display_name": "Bluetooth",
+      "resolved": {
+        "id": 2550,
+        "product_id": 59,
+        "normalized_name": "bluetooth",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Bluetooth"
+    },
+    {
+      "normalized_name": "usb_c",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2846,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "USB-C",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "usb_c",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2856,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "USB-C",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "usb_c",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "USB-C",
+        "USB-C"
+      ],
+      "display_name": "USB-C",
+      "resolved": {
+        "id": 2551,
+        "product_id": 59,
+        "normalized_name": "usb_c",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / USB-C"
+    },
+    {
+      "normalized_name": "xbox_wireless",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2845,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Xbox Wireless",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "xbox_wireless",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2855,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Xbox Wireless",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "xbox_wireless",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Xbox Wireless",
+        "Xbox Wireless"
+      ],
+      "display_name": "Xbox Wireless",
+      "resolved": {
+        "id": 2552,
+        "product_id": 59,
+        "normalized_name": "xbox_wireless",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Xbox Wireless"
+    },
+    {
+      "normalized_name": "аккумулятор_и_время_работы",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2847,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аккумулятор и время работы",
+          "raw_value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аккумулятор_и_время_работы",
+          "normalized_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+          "unit": "",
+          "display_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2857,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аккумулятор и время работы",
+          "raw_value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аккумулятор_и_время_работы",
+          "normalized_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+          "unit": "",
+          "display_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Аккумулятор и время работы",
+        "Аккумулятор и время работы"
+      ],
+      "display_name": "Аккумулятор и время работы",
+      "resolved": {
+        "id": 2553,
+        "product_id": 59,
+        "normalized_name": "аккумулятор_и_время_работы",
+        "selected_value": "internal, rechargeable battery with up to 40 hours of battery life per charge. battery life varies with usage and other factors.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Internal, rechargeable battery with До 40 ч of battery life per charge. Battery life varies with usage and other factors.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Аккумулятор и время работы"
+    },
+    {
+      "normalized_name": "аудиоразъем",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2841,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аудиоразъём",
+          "raw_value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аудиоразъем",
+          "normalized_value": "includes 3.5mm stereo headset jack. also compatible with the xbox one stereo headset adapter and all other xbox controller accessories made by microsoft.",
+          "unit": "",
+          "display_value": "includes 3.5mm stereo headset jack. also compatible with the Xbox One stereo headset adapter and all other xbox controller accessories made by microsoft.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2851,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аудиоразъём",
+          "raw_value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аудиоразъем",
+          "normalized_value": "includes 3.5mm stereo headset jack. also compatible with the xbox one stereo headset adapter and all other xbox controller accessories made by microsoft.",
+          "unit": "",
+          "display_value": "includes 3.5mm stereo headset jack. also compatible with the Xbox One stereo headset adapter and all other xbox controller accessories made by microsoft.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Аудиоразъём",
+        "Аудиоразъём"
+      ],
+      "display_name": "Аудиоразъём",
+      "resolved": {
+        "id": 2554,
+        "product_id": 59,
+        "normalized_name": "аудиоразъем",
+        "selected_value": "includes 3.5mm stereo headset jack. also compatible with the xbox one stereo headset adapter and all other xbox controller accessories made by microsoft.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Includes 3.5мм stereo headset jack. Also compatible with the Xbox One Stereo Headset Adapter and all other Xbox controller accessories made by Microsoft.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Аудиоразъём"
+    },
+    {
+      "normalized_name": "комплектация",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2838,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Комплектация",
+          "raw_value": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case",
+          "section": "Комплект",
+          "value_cell": 1,
+          "normalized_name": "комплектация",
+          "normalized_value": "xbox elite wireless controller series 2 thumbstick – adjustment tool charging dock + usb-c cable set of 4 paddles: medium (2), mini (2) additional thumbsticks: classic (2), dome (1), tall (1) additional d-pad: standard carrying case",
+          "unit": "",
+          "display_value": "xbox elite wireless controller series 2 thumbstick – adjustment tool charging dock + USB-C cable set of 4 paddles: medium (2), mini (2) additional thumbsticks: classic (2), dome (1), tall (1) additional d-pad: standard carrying case",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Комплектация"
+      ],
+      "display_name": "Комплектация",
+      "resolved": {
+        "id": 2555,
+        "product_id": 59,
+        "normalized_name": "комплектация",
+        "selected_value": "xbox elite wireless controller series 2 thumbstick – adjustment tool charging dock + usb-c cable set of 4 paddles: medium (2), mini (2) additional thumbsticks: classic (2), dome (1), tall (1) additional d-pad: standard carrying case",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Xbox Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Комплект",
+      "category_attribute_key": "Комплект / Комплектация"
+    },
+    {
+      "normalized_name": "назначаемые_кнопки",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2848,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Назначаемые кнопки",
+          "raw_value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "назначаемые_кнопки",
+          "normalized_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+          "unit": "",
+          "display_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2858,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Назначаемые кнопки",
+          "raw_value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "назначаемые_кнопки",
+          "normalized_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+          "unit": "",
+          "display_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Назначаемые кнопки",
+        "Назначаемые кнопки"
+      ],
+      "display_name": "Назначаемые кнопки",
+      "resolved": {
+        "id": 2556,
+        "product_id": 59,
+        "normalized_name": "назначаемые_кнопки",
+        "selected_value": "a, b, x, and y; d-pad up, down, left, and right; left and right bumpers; left and right triggers; left and right thumbstick click; 4 paddles.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Назначаемые кнопки"
+    },
+    {
+      "normalized_name": "подключение",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2843,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Подключение",
+          "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "подключение",
+          "normalized_value": "connect to xbox consoles with xbox wireless, or using the included 9’ usb-c cable. wirelessly connect to windows pcs, tablets, android, and ios devices using bluetooth, or with the included 9’ usb-c cable. connect to windows 7 or 8.1 pcs with the included 9’ usb-c cable; some functionality not supported.",
+          "unit": "",
+          "display_value": "connect to xbox consoles with Xbox Wireless, or using the included 9’ USB-C cable. wirelessly connect to windows pcs, tablets, android, and ios devices using Bluetooth, or with the included 9’ USB-C cable. connect to windows 7 or 8.1 pcs with the included 9’ USB-C cable; some functionality not supported.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2853,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Подключение",
+          "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "подключение",
+          "normalized_value": "connect to xbox consoles with xbox wireless, or using the included 9’ usb-c cable. wirelessly connect to window pcs, tablets, android, and ios devices using bluetooth, or with the included 9’ usb-c cable. connect to windows 7 or 8.1 pcs with the included 9’ usb-c cable; some functionality not supported.",
+          "unit": "",
+          "display_value": "connect to xbox consoles with Xbox Wireless, or using the included 9’ USB-C cable. wirelessly connect to window pcs, tablets, android, and ios devices using Bluetooth, or with the included 9’ USB-C cable. connect to windows 7 or 8.1 pcs with the included 9’ USB-C cable; some functionality not supported.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Подключение",
+        "Подключение"
+      ],
+      "display_name": "Подключение",
+      "resolved": {
+        "id": 2557,
+        "product_id": 59,
+        "normalized_name": "подключение",
+        "selected_value": "connect to xbox consoles with xbox wireless, or using the included 9’ usb-c cable. wirelessly connect to windows pcs, tablets, android, and ios devices using bluetooth, or with the included 9’ usb-c cable. connect to windows 7 or 8.1 pcs with the included 9’ usb-c cable; some functionality not supported.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Connect to Xbox consoles with Xbox Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Подключение"
+    },
+    {
+      "normalized_name": "совместимость",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2839,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость",
+          "raw_value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость",
+          "normalized_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires bluetooth, included usb cable, or xbox wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+          "unit": "",
+          "display_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires Bluetooth, included usb cable, or Xbox Wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2849,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость",
+          "raw_value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость",
+          "normalized_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires bluetooth, included usb cable, or xbox wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+          "unit": "",
+          "display_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires Bluetooth, included usb cable, or Xbox Wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Совместимость",
+        "Совместимость"
+      ],
+      "display_name": "Совместимость",
+      "resolved": {
+        "id": 2558,
+        "product_id": 59,
+        "normalized_name": "совместимость",
+        "selected_value": "for use with xbox systems and pcs running windows 7 or later. windows 10/11: requires bluetooth, included usb cable, or xbox wireless adapter (sold separately). windows 7 or 8.1: requires included usb cable; some functionality not supported.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "For use with Xbox systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or Xbox Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Совместимость"
+    },
+    {
+      "normalized_name": "совместимость_с_xbox_accessories",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2840,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость с Xbox Accessories",
+          "raw_value": "Available on XBOX consoles and Windows 10/11.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость_с_xbox_accessories",
+          "normalized_value": "available on xbox consoles and windows 10/11.",
+          "unit": "",
+          "display_value": "available on xbox consoles and windows 10/11.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2850,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость с Xbox Accessories",
+          "raw_value": "Available on XBOX consoles and Windows 10/11.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость_с_xbox_accessories",
+          "normalized_value": "available on xbox consoles and windows 10/11.",
+          "unit": "",
+          "display_value": "available on xbox consoles and windows 10/11.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Совместимость с Xbox Accessories",
+        "Совместимость с Xbox Accessories"
+      ],
+      "display_name": "Совместимость с Xbox Accessories",
+      "resolved": {
+        "id": 2559,
+        "product_id": 59,
+        "normalized_name": "совместимость_с_xbox_accessories",
+        "selected_value": "available on xbox consoles and windows 10/11.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Available on Xbox consoles and Windows 10/11.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Совместимость с Xbox Accessories"
+    },
+    {
+      "normalized_name": "тактильная_отдача",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2842,
+          "product_id": 59,
+          "source_page_id": 162,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Тактильная отдача",
+          "raw_value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "тактильная_отдача",
+          "normalized_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+          "unit": "",
+          "display_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2852,
+          "product_id": 59,
+          "source_page_id": 163,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Тактильная отдача",
+          "raw_value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "тактильная_отдача",
+          "normalized_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+          "unit": "",
+          "display_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Тактильная отдача",
+        "Тактильная отдача"
+      ],
+      "display_name": "Тактильная отдача",
+      "resolved": {
+        "id": 2560,
+        "product_id": 59,
+        "normalized_name": "тактильная_отдача",
+        "selected_value": "features impulse triggers and rumble motors. motor control can be adjusted in the app.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:52+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Тактильная отдача"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1691,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+      "asset_key": "3d9573bd496da4fc6fce855aa949e1e0c585a083ea371fa553db07812a23519d",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:37:52+00:00",
+      "verified_width": 400,
+      "verified_height": 400,
+      "verified_bytes": 16914,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft"
+    },
+    {
+      "id": 1692,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1",
+      "asset_key": "8b63e69e939cb9d08704f4f7e90c159fcb70a6e6299de86c4a50f09389605435",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:37:52+00:00",
+      "verified_width": 400,
+      "verified_height": 400,
+      "verified_bytes": 15451,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft"
+    }
+  ],
+  "all_official_gallery": [
+    {
+      "id": 1691,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+      "asset_key": "3d9573bd496da4fc6fce855aa949e1e0c585a083ea371fa553db07812a23519d",
+      "kind": "product_gallery",
+      "width": 400,
+      "height": 400,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:37:52+00:00",
+      "verified_width": 400,
+      "verified_height": 400,
+      "verified_bytes": 16914,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft",
+      "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:37:52.974912+00:00",
+      "size_bytes": 16914,
+      "format": "JPG",
+      "content_type": "image/jpeg",
+      "effective_content_type": "image/jpeg",
+      "sha256": "0eefd69868860bcc134568ea12d622c6bc15eebae07a587a766bffc8504ddec8",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\0eefd69868860bcc134568ea12d622c6bc15eebae07a587a766bffc8504ddec8.img",
+      "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg",
+      "aliases": []
+    },
+    {
+      "id": 1692,
+      "product_id": 59,
+      "source_page_id": 162,
+      "source_key": "xbox_configuration",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1",
+      "asset_key": "8b63e69e939cb9d08704f4f7e90c159fcb70a6e6299de86c4a50f09389605435",
+      "kind": "product_gallery",
+      "width": 400,
+      "height": 400,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:37:52+00:00",
+      "verified_width": 400,
+      "verified_height": 400,
+      "verified_bytes": 15451,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft",
+      "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:37:54.520446+00:00",
+      "size_bytes": 15451,
+      "format": "JPG",
+      "content_type": "image/jpeg",
+      "effective_content_type": "image/jpeg",
+      "sha256": "02f087b6529cb7b3bf758d35779c6ef13c01ef2f2b05c76b73c9f28d9f5b0a22",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\02f087b6529cb7b3bf758d35779c6ef13c01ef2f2b05c76b73c9f28d9f5b0a22.img",
+      "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg",
+      "aliases": []
+    }
+  ],
+  "photo_evidence": {
+    "entries": {
+      "xbox_configuration / 3d9573bd496da4fc6fce855aa949e1e0c585a083ea371fa553db07812a23519d / https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1": {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+        "source_key": "xbox_configuration",
+        "asset_key": "3d9573bd496da4fc6fce855aa949e1e0c585a083ea371fa553db07812a23519d",
+        "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:37:52.974912+00:00",
+        "width": 400,
+        "height": 400,
+        "size_bytes": 16914,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "0eefd69868860bcc134568ea12d622c6bc15eebae07a587a766bffc8504ddec8",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\0eefd69868860bcc134568ea12d622c6bc15eebae07a587a766bffc8504ddec8.img",
+        "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1"
+      },
+      "xbox_configuration / 8b63e69e939cb9d08704f4f7e90c159fcb70a6e6299de86c4a50f09389605435 / https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1": {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1",
+        "source_key": "xbox_configuration",
+        "asset_key": "8b63e69e939cb9d08704f4f7e90c159fcb70a6e6299de86c4a50f09389605435",
+        "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:37:54.520446+00:00",
+        "width": 400,
+        "height": 400,
+        "size_bytes": 15451,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "02f087b6529cb7b3bf758d35779c6ef13c01ef2f2b05c76b73c9f28d9f5b0a22",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\02f087b6529cb7b3bf758d35779c6ef13c01ef2f2b05c76b73c9f28d9f5b0a22.img",
+        "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1"
+      }
+    },
+    "last_completion": {
+      "budget_seconds": 180,
+      "results": [
+        {
+          "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b00-1",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "0eefd69868860bcc134568ea12d622c6bc15eebae07a587a766bffc8504ddec8"
+        },
+        {
+          "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-3131-D-b01-1",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "02f087b6529cb7b3bf758d35779c6ef13c01ef2f2b05c76b73c9f28d9f5b0a22"
+        }
+      ]
+    }
+  },
+  "documents": [],
+  "evidence": {
+    "requested_identifier": "8RSN7J6375GG/99WM",
+    "requested_identifier_type": "store_product_id/store_sku_id",
+    "requested_region": "en-US",
+    "model_key": "elite",
+    "query_variants": [
+      "8RSN7J6375GG",
+      "Xbox Elite Wireless Controller Series 2",
+      "8RSN7J6375GG/99WM Xbox"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "identifiers": {
+      "store_product_id": "8RSN7J6375GG",
+      "store_sku_id": "99WM",
+      "manufacturer_part_number": null,
+      "hardware_model_number": null,
+      "storefront": "en-us"
+    },
+    "raw_specs": [
+      {
+        "section": "TECH SPECS",
+        "raw_label": "System requirements",
+        "value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported. Drivers available at xbox.com/xboxone/PC-controller ."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "XBOX Accessories app requirements",
+        "value": "Available on XBOX consoles and Windows 10/11."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Audio",
+        "value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Haptic feedback",
+        "value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Weight",
+        "value": "345g (+/- 15g) when using with 4 paddles, faceted D-pad, and standard thumbsticks attached."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Connectivity",
+        "value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Thumbstick control",
+        "value": "Use the included thumbstick-adjustment tool to manually change thumbstick tension, with 3 tension setting to choose from. Adjust thumbstick sensitivity curves with the XBOX Accessories app, or swap thumbstick inputs so that the left thumbstick controls the right thumbstick input and vice versa."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Battery",
+        "value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Assignable buttons",
+        "value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "What's included",
+        "value": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "System requirements",
+        "value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported. Drivers available at XBOX.com/XBOXone/PC-controller ."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Connectivity",
+        "value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Thumbstick control",
+        "value": "Use the included thumbstick-adjustment tool to manually change thumbstick tension, with 3 tension settings to choose from. Adjust thumbstick sensitivity curves with the XBOX Accessories app, or swap thumbstick inputs so that the left thumbstick controls the right thumbstick input and vice versa."
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Характеристики модели",
+        "raw_label": "System requirements",
+        "raw_value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported. Drivers available at xbox.com/xboxone/PC-controller .",
+        "label": "Совместимость",
+        "value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "XBOX Accessories app requirements",
+        "raw_value": "Available on XBOX consoles and Windows 10/11.",
+        "label": "Совместимость с Xbox Accessories",
+        "value": "Available on XBOX consoles and Windows 10/11.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Audio",
+        "raw_value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+        "label": "Аудиоразъём",
+        "value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Haptic feedback",
+        "raw_value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+        "label": "Тактильная отдача",
+        "value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "Подключение",
+        "value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "Bluetooth",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "Xbox Wireless",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Window PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "USB-C",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Battery",
+        "raw_value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+        "label": "Аккумулятор и время работы",
+        "value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Assignable buttons",
+        "raw_value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+        "label": "Назначаемые кнопки",
+        "value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2"
+      },
+      {
+        "section": "Комплект",
+        "raw_label": "What's included",
+        "raw_value": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case",
+        "label": "Комплектация",
+        "value": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case",
+        "scope": "retail",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "System requirements",
+        "raw_value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported. Drivers available at XBOX.com/XBOXone/PC-controller .",
+        "label": "Совместимость",
+        "value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "XBOX Accessories app requirements",
+        "raw_value": "Available on XBOX consoles and Windows 10/11.",
+        "label": "Совместимость с Xbox Accessories",
+        "value": "Available on XBOX consoles and Windows 10/11.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Audio",
+        "raw_value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+        "label": "Аудиоразъём",
+        "value": "Includes 3.5mm stereo headset jack. Also compatible with the XBOX One Stereo Headset Adapter and all other XBOX controller accessories made by Microsoft.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Haptic feedback",
+        "raw_value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+        "label": "Тактильная отдача",
+        "value": "Features Impulse Triggers and rumble motors. Motor control can be adjusted in the app.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "Подключение",
+        "value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "Bluetooth",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "Xbox Wireless",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless, or using the included 9’ USB-C cable. Wirelessly connect to Windows PCs, tablets, Android, and iOS devices using Bluetooth, or with the included 9’ USB-C cable. Connect to Windows 7 or 8.1 PCs with the included 9’ USB-C cable; some functionality not supported.",
+        "label": "USB-C",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Battery",
+        "raw_value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+        "label": "Аккумулятор и время работы",
+        "value": "Internal, rechargeable battery with up to 40 hours of battery life per charge. Battery life varies with usage and other factors.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Assignable buttons",
+        "raw_value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+        "label": "Назначаемые кнопки",
+        "value": "A, B, X, and Y; D-pad up, down, left, and right; Left and right bumpers; Left and right triggers; Left and right thumbstick click; 4 paddles.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg"
+      }
+    ],
+    "attribute_scopes": {
+      "Совместимость": "model",
+      "Совместимость с Xbox Accessories": "model",
+      "Аудиоразъём": "model",
+      "Тактильная отдача": "model",
+      "Подключение": "model",
+      "Bluetooth": "model",
+      "Xbox Wireless": "model",
+      "USB-C": "model",
+      "Аккумулятор и время работы": "model",
+      "Назначаемые кнопки": "model",
+      "Комплектация": "retail"
+    },
+    "identity_relations": [
+      {
+        "type": "store_product",
+        "product_id": "8RSN7J6375GG",
+        "sku_ids": [
+          "99WM"
+        ],
+        "hardware_model_numbers": [],
+        "manufacturer_parts": [],
+        "region": "en-us",
+        "url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg",
+        "relation": "own_store_product",
+        "unique_hardware_configuration": false
+      }
+    ],
+    "configuration_candidates": [
+      {
+        "section": "TECH SPECS",
+        "raw_label": "System requirements",
+        "value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported. Drivers available at xbox.com/xboxone/PC-controller .",
+        "reason": "Compatibility prefix accepted; driver procedure suffix withheld"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Weight",
+        "value": "345g (+/- 15g) when using with 4 paddles, faceted D-pad, and standard thumbsticks attached.",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Thumbstick control",
+        "value": "Use the included thumbstick-adjustment tool to manually change thumbstick tension, with 3 tension setting to choose from. Adjust thumbstick sensitivity curves with the XBOX Accessories app, or swap thumbstick inputs so that the left thumbstick controls the right thumbstick input and vice versa.",
+        "reason": "Technical field lacks safe canonical mapping"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "System requirements",
+        "value": "For use with XBOX systems and PCs running Windows 7 or later. Windows 10/11: requires Bluetooth, included USB cable, or XBOX Wireless adapter (sold separately). Windows 7 or 8.1: requires included USB cable; some functionality not supported. Drivers available at XBOX.com/XBOXone/PC-controller .",
+        "reason": "Compatibility prefix accepted; driver procedure suffix withheld"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Thumbstick control",
+        "value": "Use the included thumbstick-adjustment tool to manually change thumbstick tension, with 3 tension settings to choose from. Adjust thumbstick sensitivity curves with the XBOX Accessories app, or swap thumbstick inputs so that the left thumbstick controls the right thumbstick input and vice versa.",
+        "reason": "Technical field lacks safe canonical mapping"
+      }
+    ],
+    "photo_candidates": [
+      {
+        "url": "https://assets.xboxservices.com/assets/0a/f7/0af77a7b-c7ad-4dc9-a483-ffa6f47da869.jpg?n=999666_Hero-Image-1084_1920x831.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front view of the XBOX Elite Wireless controller series 2 with a close up of the controller in the background"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/57/a6/57a6f2f8-4978-495a-acf1-4a0878ae4861.jpg?n=999666_Custom-Hero-1400_1920x1237.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front left angle of the XBOX Elite Wireless Controller Series 2 in front of a Spartan from Halo Infinite."
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/b0/0b/b00bcb61-c68e-4e49-a408-154a168ca457.jpg?n=999666_Image-Priority-Image-768_Performance_1248x800.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Close up of the front of the XBOX Elite Wireless Controller Series 2"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/2e/d5/2ed5554d-8110-473c-b23d-bc0ea03e19e0.jpg?n=999666_Image-Priority-Poster-Image-768_Optimized_1248x800.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Button mapping options of the XBOX Elite Wireless Controller Series 2"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/e7/93/e7937a2a-acff-4a89-89d5-81bdd1e9d956.jpg?n=999666_Image-Priority-Poster-Image-768_Interchangeable_1248x800.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Animation of components attaching to the XBOX Elite Wireless Controller Series 2."
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/e5/4a/e54a9bb5-7e9d-4b5b-b369-1e775576ca4b.jpg?n=999666_Image-Priority-Poster-Image-768_Switch-Devices_1248x800.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Elite Wireless Controller Series 2 with Halo Infinite across multiple devices screens, including XBOX Series X and PC."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/8e/8d/8e8d68b4-4724-415e-98fc-3c8a854b142a.jpg?n=XEWC-Series-2_Page-Hero-1084_XDL_1920x720.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front view of a customized XBOX Elite Wireless Controller Series 2 and additional controller add-ons in multiple color options shown alongside."
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/70/ab/70ab0f0e-ac31-49c0-8f85-83adfa6038f5.jpg?n=999666_Buy-Box-Image-0_1_829x799.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front left angled view of the XBOX Elite Wireless Controller Series 2"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/de/5c/de5c31bd-b962-4f9f-af98-32a6331ac91b.jpg?n=999666_Buy-Box-Image-0_2_829x799.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front view of the XBOX Elite Wireless Controller Series 2"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/c6/7b/c67b5416-3ae1-4127-bcd9-2e6f23abca71.jpg?n=999666_Buy-Box-Image-0_3_829x799.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Back view of the XBOX Elite Wireless Controller Series 2"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/17/07/170771f3-4797-464d-8341-28333d4f12fe.jpg?n=999666_Buy-Box-Image-0_4_829x799.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Bottom view of the XBOX Elite Wireless Controller Series 2"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/60/5c/605c37d5-663e-4690-8a52-d866398f6d17.jpg?n=320089_Image-1084_Compare-Chart_Standard_800x850.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Elite Wireless Controller Series 2 with all of its included components: interchangeable thumbsticks, classic d-pad, thumbstick adjustment tool, charge base, USB-C cable, set of paddles, and a carry case."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/b8/e6/b8e6c8ce-69fa-44c6-a36e-4f4a8c1df2f2.jpg?n=999666_Image-1084_Compare-Chart_Compared_800x850.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Elite Wireless Controller Series 2 – Core (White) with all of its included components: USB-C cable and thumbstick adjustment tool."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/8a/28/8a28d9de-8834-41fe-b063-c82bc44aef0f.jpg?n=999666_Rotating-Hero-1084_Halo-Infinite_1920x1080.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "A multiplayer Spartan stands behind the XBOX Elite Wireless Controller Series 2. Two teams of Spartans battle it out in a desert environment in the background."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/48/fc/48fc3cff-4130-4f50-9cf4-c5802107a795.jpg?n=999666_Rotating-Hero-1084_FH5_1920x1080.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "A Ford Bronco and Land Rover Defender race through the snow underneath the XBOX Elite Wireless Controller Series 2."
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/92/6f/926f1ec2-236d-4067-bd90-5bb1b2420790.png?n=Accessories_Panes-Triptic-Small-1084-0_White-elite-series-2_353x353.png",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Detail view of Xbox Elite Wireless Controller Series 2 – Core (White)"
+      }
+    ],
+    "exact_photo_assets": [
+      "3d9573bd496da4fc6fce855aa949e1e0c585a083ea371fa553db07812a23519d",
+      "8b63e69e939cb9d08704f4f7e90c159fcb70a6e6299de86c4a50f09389605435"
+    ],
+    "photo_scopes": {
+      "3d9573bd496da4fc6fce855aa949e1e0c585a083ea371fa553db07812a23519d": {
+        "store_product_id": "8RSN7J6375GG",
+        "store_sku_id": "99WM",
+        "hardware_model_number": null,
+        "color": "",
+        "alt": "XBOX Elite Wireless Controller Series 2, top view",
+        "kind": "retail_gallery",
+        "basis": "Own Store row, hardware relation and per-asset family/color/bundle; no kit inference"
+      },
+      "8b63e69e939cb9d08704f4f7e90c159fcb70a6e6299de86c4a50f09389605435": {
+        "store_product_id": "8RSN7J6375GG",
+        "store_sku_id": "99WM",
+        "hardware_model_number": null,
+        "color": "",
+        "alt": "XBOX Elite Wireless Controller Series 2, bottom view",
+        "kind": "retail_gallery",
+        "basis": "Own Store row, hardware relation and per-asset family/color/bundle; no kit inference"
+      }
+    },
+    "manuals": [
+      {
+        "type": "Unclassified document",
+        "title": "Австралия - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Контроллеры Xbox Elite"
+      },
+      {
+        "type": "Safety/Regulatory",
+        "title": "Великобритания - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ELITE%20CONTROLLER%20EN%20AR%20CS%20DA%20NL%20FI%20FR%20DE%20EL%20IW%20HU%20IT%20NO%20PL%20PT%20RU%20SK%20ES%20SV%20TR.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Контроллеры Xbox Elite",
+        "sha256": "8953d7488138de8c3574e88f4a2656ebcbee6bf4ca2c16b91ecfc45cff5339c4",
+        "pages": 88,
+        "cover_text": "Product and Regulatory Guide, Limited Warranty & Agreement"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "США - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ELITE%20CONTROLLER%20EN%20PT%20FR%20ES%20-%20US%20CA%20LATAM.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Контроллеры Xbox Elite"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Тайвань - Китайский традиционный",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ELITE%20CONTROLLER%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Контроллеры Xbox Elite"
+      }
+    ],
+    "manual_status": "Не проверена",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "bundle_contents": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case"
+    },
+    "configuration_complete": true,
+    "hardware_complete": false,
+    "exact_official_pdp": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg",
+    "hardware_official_pdp": "",
+    "support_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+    "access_stops": [
+      {
+        "url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "reason": "HTTP 200 SPA shell; article/downloads not verified"
+      }
+    ],
+    "page_default_titles": [
+      {
+        "url": "https://www.xbox.com/en-us/accessories/controllers/elite-wireless-controller-series-2",
+        "title": "XBOX Elite Wireless Controller Series 2",
+        "resolved_title": "Xbox Elite Wireless Controller Series 2",
+        "scope": "xbox_model"
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/d/xbox-elite-wireless-controller-series-2/8rsn7j6375gg",
+        "title": "XBOX Elite Wireless Controller Series 2",
+        "resolved_title": "XBOX Elite Wireless Controller Series 2",
+        "scope": "xbox_configuration"
+      }
+    ],
+    "sitemaps": [
+      {
+        "url": "https://www.xbox.com/sitemap/cms-sitemap-0.xml.gz",
+        "count": 6833,
+        "product_candidates": 1371
+      },
+      {
+        "url": "https://www.microsoft.com/store/xbox-gaming-sitemap-index.xml",
+        "count": 726,
+        "product_candidates": 688
+      }
+    ],
+    "manual_search_complete": false,
+    "manual_search_reason": "Official family manual index; available Russian document role checked; User Guide evaluated separately from Safety/Regulatory",
+    "configuration_scope": "retail_variant"
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "configuration_scope": "retail_variant",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "bundle_contents": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case"
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 10,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": [
+      "en-US"
+    ],
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "configuration_scope": "retail_variant",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "bundle_contents": "XBOX Elite Wireless Controller Series 2 Thumbstick – adjustment tool Charging dock + USB-C cable Set of 4 paddles: medium (2), mini (2) Additional thumbsticks: classic (2), dome (1), tall (1) Additional D-pad: standard Carrying case"
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 10,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": [
+      "en-US"
+    ]
+  },
+  "trace": [],
+  "original_observation_phase": "final_live",
+  "consolidation": "Persistence of actual live worker observations, not a fresh run and not replay"
+}

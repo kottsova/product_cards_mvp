@@ -127,7 +127,7 @@ class XboxPipelineTests(unittest.TestCase):
         d,e=self.install();p=jobs.get_photo_candidates(self.db,self.pid)[0];self.assertTrue(xbox_pipeline.photo_verified(p,e));self.assertFalse(xbox_pipeline.photo_verified({**p,'source_key':'dns'},e))
     def test_branded_terms_in_final_values_preserve_case(self):
         d,e=page('0cb77f891ef9dafe07c1.html','https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn','9203Q8W23LHN/HFXZ','headset');jobs.save_source_document(self.db,self.pid,d);jobs.resolve_product(self.db,self.pid)
-        original=jobs.get_resolved(self.db,self.pid);rows=attribute_projection.final_attribute_rows(self.db,self.pid);shown=next(x['resolved']['display_value'] for x in rows if x['display_name']=='Spatial Sound')
+        original=jobs.get_resolved(self.db,self.pid);rows=attribute_projection.final_attribute_rows(self.db,self.pid);shown=next(x['resolved']['display_value'] for x in rows if x['display_name']=='Пространственный звук')
         self.assertIn('Dolby Atmos',shown);self.assertIn('Windows Sonic',shown);self.assertIn('Xbox One',shown);self.assertEqual(original,jobs.get_resolved(self.db,self.pid))
 
 if __name__=='__main__':unittest.main()

@@ -118,8 +118,10 @@ td input { min-width: 130px; }
 .conflict-sides { margin: 8px 0; padding-left: 18px; }
 .conflict-sides li { margin: 4px 0; }
 .manual-value { margin: 6px 0; }
-.photo-tile { display: grid; align-content: start; gap: 7px; min-width: 0; }
+.photo-tile { display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 7px; min-width: 0; }
+.photo-tile small { overflow-wrap: anywhere; }
 .photo-tile .photo-select { display: flex; align-items: center; gap: 5px; }
+.photo-tile .photo-select input { width: auto; flex: 0 0 auto; margin: 0; }
 .photo-tile .photo-open { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
 .photo-tile .photo-open img { display: block; width: 100%; height: 150px; object-fit: contain; background: #f6f8f9; border: 1px solid var(--line); border-radius: 8px; }
 .photo-tile > a { font-size: .82rem; }

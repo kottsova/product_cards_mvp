@@ -1,0 +1,1310 @@
+{
+  "input": {
+    "id": 58,
+    "brand": "Xbox",
+    "dispatch_brand": "Xbox",
+    "article": "8QRF79K7JSR6/ZHP2",
+    "model": "Xbox Wireless Controller Arctic Camo Special Edition",
+    "name": "Xbox Wireless Controller Arctic Camo Special Edition",
+    "category": "Контроллеры",
+    "input_configuration": {},
+    "region": "en-US",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/xbox_stage68/dataset.json",
+    "original_input": {
+      "row": 5,
+      "article": "8QRF79K7JSR6/ZHP2",
+      "name": "Xbox Wireless Controller Arctic Camo Special Edition",
+      "identifier_type": "store_product_id/store_sku_id",
+      "requested_region": "en-US",
+      "brand": "Xbox",
+      "category": "accessories"
+    }
+  },
+  "observed_at": "2026-10-13T14:37:39.866300+00:00",
+  "seconds": 19.08,
+  "job": {
+    "id": "872afbc5fc304437a0c090c82a9b6bc4",
+    "product_id": 58,
+    "status": "done",
+    "current_stage": null,
+    "message": "Xbox: Готова",
+    "created_at": "2026-10-13T14:37:20+00:00",
+    "updated_at": "2026-10-13T14:37:39+00:00",
+    "started_at": "2026-10-13T14:37:20+00:00",
+    "finished_at": "2026-10-13T14:37:39+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 159,
+      "product_id": 58,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6",
+      "found_model": "XBOX Wireless Controller – Arctic Camo Special Edition",
+      "match_level": "full_sku",
+      "evidence": "Own public Store Product ID / SKU; typed identifiers kept separate",
+      "fetched_at": "2026-10-13T14:37:29+00:00",
+      "error": "",
+      "description": "XBOX Wireless Controller – Arctic Camo Special Edition.\nПодключение: Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*.\nBluetooth: Да.\nXbox Wireless: Да.\nАккумулятор и время работы: AA batteries for up to 40 hours of battery life.***.\nЦвет: Arctic Camo.",
+      "photos": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00"
+      ]
+    },
+    {
+      "id": 161,
+      "product_id": 58,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "url": "",
+      "found_model": "",
+      "match_level": "unknown",
+      "evidence": "",
+      "fetched_at": "2026-10-13T14:37:39+00:00",
+      "error": "Источник не подтверждён в текущем запуске",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 160,
+      "product_id": 58,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller",
+      "found_model": "Xbox Wireless Controller",
+      "match_level": "model_confirmed",
+      "evidence": "Own official family PDP; configuration candidates are not exact facts",
+      "fetched_at": "2026-10-13T14:37:22+00:00",
+      "error": "",
+      "description": "Xbox Wireless Controller.\nПодключение: Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *.\nBluetooth: Да.\nXbox Wireless: Да.\nАккумулятор и время работы: AA batteries for up to 40 hours of battery life ***.",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 2828,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Bluetooth",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "bluetooth",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2834,
+      "product_id": 58,
+      "source_page_id": 160,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Bluetooth",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "bluetooth",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2832,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Цвет",
+      "raw_value": "Arctic Camo",
+      "section": "Конфигурация",
+      "value_cell": 1,
+      "normalized_name": "color",
+      "normalized_value": "arctic camo",
+      "unit": ""
+    },
+    {
+      "id": 2829,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Xbox Wireless",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "xbox_wireless",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2835,
+      "product_id": 58,
+      "source_page_id": 160,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Xbox Wireless",
+      "raw_value": "Да",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "xbox_wireless",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2831,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аккумулятор и время работы",
+      "raw_value": "AA batteries for up to 40 hours of battery life.***",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "normalized_value": "aa batteries for up to 40 hours of battery life.***",
+      "unit": ""
+    },
+    {
+      "id": 2837,
+      "product_id": 58,
+      "source_page_id": 160,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аккумулятор и время работы",
+      "raw_value": "AA batteries for up to 40 hours of battery life ***",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "normalized_value": "aa batteries for up to 40 hours of battery life ***",
+      "unit": ""
+    },
+    {
+      "id": 2827,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Подключение",
+      "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "подключение",
+      "normalized_value": "connect to xbox consoles with xbox wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using bluetooth.*",
+      "unit": ""
+    },
+    {
+      "id": 2833,
+      "product_id": 58,
+      "source_page_id": 160,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Подключение",
+      "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "подключение",
+      "normalized_value": "connect to xbox consoles with xbox wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using bluetooth. *",
+      "unit": ""
+    },
+    {
+      "id": 2830,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость",
+      "raw_value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS.**",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость",
+      "normalized_value": "xbox series x, xbox series s, windows 10/11, android, and ios.**",
+      "unit": ""
+    },
+    {
+      "id": 2836,
+      "product_id": 58,
+      "source_page_id": 160,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость",
+      "raw_value": "XBOX Series X, XBOX Series S, XBOX One, Windows 10/11, Android, and iOS. *",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость",
+      "normalized_value": "xbox series x, xbox series s, xbox one, windows 10/11, android, and ios. *",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2544,
+      "product_id": 58,
+      "normalized_name": "bluetooth",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:39+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2545,
+      "product_id": 58,
+      "normalized_name": "color",
+      "selected_value": "arctic camo",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:39+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2546,
+      "product_id": 58,
+      "normalized_name": "xbox_wireless",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:39+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2547,
+      "product_id": 58,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "selected_value": "aa batteries for up to 40 hours of battery life.***",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:39+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2548,
+      "product_id": 58,
+      "normalized_name": "подключение",
+      "selected_value": "connect to xbox consoles with xbox wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using bluetooth.*",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:39+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2549,
+      "product_id": 58,
+      "normalized_name": "совместимость",
+      "selected_value": "xbox series x, xbox series s, windows 10/11, android, and ios.**",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:37:39+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "bluetooth",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2828,
+          "product_id": 58,
+          "source_page_id": 159,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Bluetooth",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "bluetooth",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2834,
+          "product_id": 58,
+          "source_page_id": 160,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Bluetooth",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "bluetooth",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Bluetooth",
+        "Bluetooth"
+      ],
+      "display_name": "Bluetooth",
+      "resolved": {
+        "id": 2544,
+        "product_id": 58,
+        "normalized_name": "bluetooth",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:39+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Bluetooth"
+    },
+    {
+      "normalized_name": "xbox_wireless",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2829,
+          "product_id": 58,
+          "source_page_id": 159,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Xbox Wireless",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "xbox_wireless",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2835,
+          "product_id": 58,
+          "source_page_id": 160,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Xbox Wireless",
+          "raw_value": "Да",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "xbox_wireless",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Xbox Wireless",
+        "Xbox Wireless"
+      ],
+      "display_name": "Xbox Wireless",
+      "resolved": {
+        "id": 2546,
+        "product_id": 58,
+        "normalized_name": "xbox_wireless",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:39+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Xbox Wireless"
+    },
+    {
+      "normalized_name": "аккумулятор_и_время_работы",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2831,
+          "product_id": 58,
+          "source_page_id": 159,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аккумулятор и время работы",
+          "raw_value": "AA batteries for up to 40 hours of battery life.***",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аккумулятор_и_время_работы",
+          "normalized_value": "aa batteries for up to 40 hours of battery life.***",
+          "unit": "",
+          "display_value": "aa batteries for up to 40 hours of battery life.***",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2837,
+          "product_id": 58,
+          "source_page_id": 160,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аккумулятор и время работы",
+          "raw_value": "AA batteries for up to 40 hours of battery life ***",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аккумулятор_и_время_работы",
+          "normalized_value": "aa batteries for up to 40 hours of battery life ***",
+          "unit": "",
+          "display_value": "aa batteries for up to 40 hours of battery life ***",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Аккумулятор и время работы",
+        "Аккумулятор и время работы"
+      ],
+      "display_name": "Аккумулятор и время работы",
+      "resolved": {
+        "id": 2547,
+        "product_id": 58,
+        "normalized_name": "аккумулятор_и_время_работы",
+        "selected_value": "aa batteries for up to 40 hours of battery life.***",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:39+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "AA batteries for До 40 ч of battery life.***",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Аккумулятор и время работы"
+    },
+    {
+      "normalized_name": "подключение",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2827,
+          "product_id": 58,
+          "source_page_id": 159,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Подключение",
+          "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "подключение",
+          "normalized_value": "connect to xbox consoles with xbox wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using bluetooth.*",
+          "unit": "",
+          "display_value": "connect to xbox consoles with Xbox Wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using Bluetooth.*",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2833,
+          "product_id": 58,
+          "source_page_id": 160,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Подключение",
+          "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "подключение",
+          "normalized_value": "connect to xbox consoles with xbox wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using bluetooth. *",
+          "unit": "",
+          "display_value": "connect to xbox consoles with Xbox Wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using Bluetooth. *",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Подключение",
+        "Подключение"
+      ],
+      "display_name": "Подключение",
+      "resolved": {
+        "id": 2548,
+        "product_id": 58,
+        "normalized_name": "подключение",
+        "selected_value": "connect to xbox consoles with xbox wireless. wirelessly connect to windows 10/11 pcs, tablets, ios and android using bluetooth.*",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:39+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Connect to Xbox consoles with Xbox Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Подключение"
+    },
+    {
+      "normalized_name": "совместимость",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2830,
+          "product_id": 58,
+          "source_page_id": 159,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость",
+          "raw_value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS.**",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость",
+          "normalized_value": "xbox series x, xbox series s, windows 10/11, android, and ios.**",
+          "unit": "",
+          "display_value": "Xbox Series X, Xbox Series S, windows 10/11, android, and ios.**",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2836,
+          "product_id": 58,
+          "source_page_id": 160,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость",
+          "raw_value": "XBOX Series X, XBOX Series S, XBOX One, Windows 10/11, Android, and iOS. *",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость",
+          "normalized_value": "xbox series x, xbox series s, xbox one, windows 10/11, android, and ios. *",
+          "unit": "",
+          "display_value": "Xbox Series X, Xbox Series S, Xbox One, windows 10/11, android, and ios. *",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Совместимость",
+        "Совместимость"
+      ],
+      "display_name": "Совместимость",
+      "resolved": {
+        "id": 2549,
+        "product_id": 58,
+        "normalized_name": "совместимость",
+        "selected_value": "xbox series x, xbox series s, windows 10/11, android, and ios.**",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:39+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Xbox Series X, Xbox Series S, Windows 10/11, Android, and iOS.**",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Совместимость"
+    },
+    {
+      "normalized_name": "color",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2832,
+          "product_id": 58,
+          "source_page_id": 159,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Цвет",
+          "raw_value": "Arctic Camo",
+          "section": "Конфигурация",
+          "value_cell": 1,
+          "normalized_name": "color",
+          "normalized_value": "arctic camo",
+          "unit": "",
+          "display_value": "Arctic Camo",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Цвет"
+      ],
+      "display_name": "Цвет",
+      "resolved": {
+        "id": 2545,
+        "product_id": 58,
+        "normalized_name": "color",
+        "selected_value": "arctic camo",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:37:39+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Arctic Camo",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Конфигурация",
+      "category_attribute_key": "Конфигурация / Цвет"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1690,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00",
+      "asset_key": "fb28c6c12c7dea26dbe3fc6585e03bf692727d04ee99c27c9f1419636c3e6e94",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:37:39+00:00",
+      "verified_width": 400,
+      "verified_height": 256,
+      "verified_bytes": 14647,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft"
+    }
+  ],
+  "all_official_gallery": [
+    {
+      "id": 1690,
+      "product_id": 58,
+      "source_page_id": 159,
+      "source_key": "xbox_configuration",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00",
+      "asset_key": "fb28c6c12c7dea26dbe3fc6585e03bf692727d04ee99c27c9f1419636c3e6e94",
+      "kind": "product_gallery",
+      "width": 400,
+      "height": 256,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:37:39+00:00",
+      "verified_width": 400,
+      "verified_height": 256,
+      "verified_bytes": 14647,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft",
+      "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:37:39.846458+00:00",
+      "size_bytes": 14647,
+      "format": "JPG",
+      "content_type": "image/jpeg",
+      "effective_content_type": "image/jpeg",
+      "sha256": "7d4f6f9a43b3332a81917ebe852e5cd7119dc42598b8ad574d04294c45757d10",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\7d4f6f9a43b3332a81917ebe852e5cd7119dc42598b8ad574d04294c45757d10.img",
+      "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6",
+      "aliases": []
+    }
+  ],
+  "photo_evidence": {
+    "entries": {
+      "xbox_configuration / fb28c6c12c7dea26dbe3fc6585e03bf692727d04ee99c27c9f1419636c3e6e94 / https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00": {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00",
+        "source_key": "xbox_configuration",
+        "asset_key": "fb28c6c12c7dea26dbe3fc6585e03bf692727d04ee99c27c9f1419636c3e6e94",
+        "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:37:39.846458+00:00",
+        "width": 400,
+        "height": 256,
+        "size_bytes": 14647,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "7d4f6f9a43b3332a81917ebe852e5cd7119dc42598b8ad574d04294c45757d10",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\7d4f6f9a43b3332a81917ebe852e5cd7119dc42598b8ad574d04294c45757d10.img",
+        "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00"
+      }
+    },
+    "last_completion": {
+      "budget_seconds": 180,
+      "results": [
+        {
+          "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BuyBox-Xbox-Wireless-Controller-Arctic-Camo-b00",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "7d4f6f9a43b3332a81917ebe852e5cd7119dc42598b8ad574d04294c45757d10"
+        }
+      ]
+    }
+  },
+  "documents": [],
+  "evidence": {
+    "requested_identifier": "8QRF79K7JSR6/ZHP2",
+    "requested_identifier_type": "store_product_id/store_sku_id",
+    "requested_region": "en-US",
+    "model_key": "controller",
+    "query_variants": [
+      "8QRF79K7JSR6",
+      "Xbox Wireless Controller Arctic Camo Special Edition",
+      "8QRF79K7JSR6/ZHP2 Xbox"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "identifiers": {
+      "store_product_id": "8QRF79K7JSR6",
+      "store_sku_id": "ZHP2",
+      "manufacturer_part_number": null,
+      "hardware_model_number": null,
+      "storefront": "en-us"
+    },
+    "raw_specs": [
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Connectivity",
+        "value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Compatible With",
+        "value": "XBOX Series X, XBOX Series S, XBOX One, Windows 10/11, Android, and iOS. *"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Battery",
+        "value": "AA batteries for up to 40 hours of battery life ***"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Compatible With",
+        "value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS. **"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Battery",
+        "value": "AA batteries for up to 40 hours of battery life. ***"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Connectivity",
+        "value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Compatible With",
+        "value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS.**"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Battery",
+        "value": "AA batteries for up to 40 hours of battery life.***"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "label": "Подключение",
+        "value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "label": "Bluetooth",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "label": "Xbox Wireless",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Compatible With",
+        "raw_value": "XBOX Series X, XBOX Series S, XBOX One, Windows 10/11, Android, and iOS. *",
+        "label": "Совместимость",
+        "value": "XBOX Series X, XBOX Series S, XBOX One, Windows 10/11, Android, and iOS. *",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Battery",
+        "raw_value": "AA batteries for up to 40 hours of battery life ***",
+        "label": "Аккумулятор и время работы",
+        "value": "AA batteries for up to 40 hours of battery life ***",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "label": "Подключение",
+        "value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller/8xn59crbsqgz"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "label": "Bluetooth",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller/8xn59crbsqgz"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth. *",
+        "label": "Xbox Wireless",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller/8xn59crbsqgz"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Compatible With",
+        "raw_value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS. **",
+        "label": "Совместимость",
+        "value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS. **",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller/8xn59crbsqgz"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Battery",
+        "raw_value": "AA batteries for up to 40 hours of battery life. ***",
+        "label": "Аккумулятор и время работы",
+        "value": "AA batteries for up to 40 hours of battery life. ***",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller/8xn59crbsqgz"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*",
+        "label": "Подключение",
+        "value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*",
+        "label": "Bluetooth",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Connectivity",
+        "raw_value": "Connect to XBOX consoles with XBOX Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth.*",
+        "label": "Xbox Wireless",
+        "value": "Да",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Compatible With",
+        "raw_value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS.**",
+        "label": "Совместимость",
+        "value": "XBOX Series X, XBOX Series S, Windows 10/11, Android, and iOS.**",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Battery",
+        "raw_value": "AA batteries for up to 40 hours of battery life.***",
+        "label": "Аккумулятор и время работы",
+        "value": "AA batteries for up to 40 hours of battery life.***",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6"
+      },
+      {
+        "section": "Конфигурация",
+        "raw_label": "Own variant / catalog / bundle",
+        "raw_value": "Arctic Camo",
+        "label": "Цвет",
+        "value": "Arctic Camo",
+        "scope": "retail",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6"
+      }
+    ],
+    "attribute_scopes": {
+      "Подключение": "model",
+      "Bluetooth": "model",
+      "Xbox Wireless": "model",
+      "Совместимость": "model",
+      "Аккумулятор и время работы": "model",
+      "Цвет": "retail"
+    },
+    "identity_relations": [
+      {
+        "type": "store_product",
+        "product_id": "8XN59CRBSQGZ",
+        "sku_ids": [
+          "QP6M",
+          "KPRJ",
+          "M3FS",
+          "QJQ7",
+          "94GX",
+          "N5LN",
+          "ZX5T"
+        ],
+        "hardware_model_numbers": [],
+        "manufacturer_parts": [],
+        "region": "en-us",
+        "url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller/8xn59crbsqgz",
+        "relation": "own_store_product",
+        "unique_hardware_configuration": false
+      },
+      {
+        "type": "store_product",
+        "product_id": "8QRF79K7JSR6",
+        "sku_ids": [
+          "ZHP2"
+        ],
+        "hardware_model_numbers": [],
+        "manufacturer_parts": [],
+        "region": "en-us",
+        "url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6",
+        "relation": "own_store_product",
+        "unique_hardware_configuration": false
+      }
+    ],
+    "configuration_candidates": [],
+    "photo_candidates": [
+      {
+        "url": "https://assets.xboxservices.com/assets/e3/4a/e34a9787-b941-41d1-94e4-436f75e7a60e.jpg?n=Xbox-Wireless-Controller_Image-Hero-1084_Volt_1920x831_02.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Wireless controller Electric Volt in front Pulse Red on left and Pink on right"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/20/e2/20e21d86-38c5-42d1-accb-627990ccd1d4.jpg?n=Xbox-Wireless-Controller_Image-Hero-768_XDL_1920x831_02.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Design Lab customizable XBOX Wireless controller in front with Purple on left and Carbon Black on right "
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/e5/4c/e54c5416-9bca-412b-beea-5133e61491ac.jpg?n=Xbox-Wireless-Controller_Feature-Image-Priority-0_1040x867.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Top view of someone holding the XBOX Wireless Controller on the couch"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/08/66/08667d8a-4c96-4c1a-a463-31a9a1aa7e31.jpg?n=111101_3-up-0_Left_454x523.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Right textured trigger on the XBOX wireless controller"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/c7/38/c738fe52-e638-43a0-90c4-5f3b7637148c.jpg?n=111101_3-up-0_Center_454x523.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Wireless controller D-pad"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/cf/1a/cf1aba07-192d-4621-86ca-4a3768545e19.jpg?n=111101_3-up-0_Right_454x523.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Left textured trigger on the XBOX wireless controller"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/b5/1a/b51a4fb4-a63f-454b-be82-0a5024a4a9f0.jpg?n=111101_Page-Hero-1084_1920x720.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX wireless controller in front of a computer, monitor, tablet, XBOX wireless controller, and a mouse and keyboard"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/15/a3/15a3b044-6c3b-4cd5-bbb2-063f3e8dd4ae.jpg?n=Xbox-Wireless-Controller-XDL_Page-Hero-1084_1920x720.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Three customizable XBOX Wireless Controllers made with XBOX Design Lab, on a colorful background."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/78/b4/78b44144-2ced-4451-824f-2c249ce0a969.jpg?n=Xbox-Wireless-Controller_Image-1084_8-Controllers_957848_1920x675.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Wireless Controller Carbon Black, Robot White, Shock Blue, Pulse Red, Electric Volt, Deep Pink, Velocity Green, and Astral Purple"
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Hero-0_Carbon-Black_3000x1682:VP1-539x440",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front and back view of XBOX Wireless Controller in Carbon Black."
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Hero-0_Robot-White_3000x1682:VP1-539x440",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front and back view of XBOX Wireless Controller in Robot White."
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Hero-0_Pulse-Red_3000x1682:VP1-539x440",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front and back view of XBOX Wireless Controller in Pulse Red."
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Hero-0_Electric-Volt_3000x1682:VP1-539x440",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front and back view of XBOX Wireless Controller in Electric Volt"
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Hero-0_Shock-Blue_3000x1682:VP1-539x440",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front and back view of XBOX Wireless Controller in Shock Blue."
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Hero-0_Deep-Pink_3000x1682:VP1-539x440",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front and back view of XBOX Wireless Controller in Deep Pink."
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Hero-0_246801_3000x1682:VP1-539x440",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front and back view of XBOX Wireless Controller in velocity green"
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-Cntrl-Black-b00?qlt=90&hei=270&wid=270&bgc=FFFFFFFF&fmt=jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front view of XBOX Wireless Controller black."
+      },
+      {
+        "url": "https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/_h/9be151e5/coreui.statics/images/1x1clear.gif",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front view of XBOX Wireless Controller black."
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Sneak-Carousel-Center_957848_960x540_02?scl=1&wid=960&hei=540",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Top down view of person holding the XBOX Wireless Controller"
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Sneak-Carousel-Right_957848_960x540_02?scl=1&wid=960&hei=540",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Close up of the XBOX , view, menu, and share buttons on the XBOX Wireless Controller."
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Wireless-Controller_Sneak-Carousel-Left_957848_960x540_02?scl=1&wid=960&hei=540",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Back of the XBOX Wireless Controller with a close-up of the textured triggers"
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mosaic-Medium-1718x1500-Light-Xbox-Wireless-Controllers-Family?wid=859&hei=750",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Wireless Controllers in various colors."
+      }
+    ],
+    "exact_photo_assets": [
+      "fb28c6c12c7dea26dbe3fc6585e03bf692727d04ee99c27c9f1419636c3e6e94"
+    ],
+    "photo_scopes": {
+      "fb28c6c12c7dea26dbe3fc6585e03bf692727d04ee99c27c9f1419636c3e6e94": {
+        "store_product_id": "8QRF79K7JSR6",
+        "store_sku_id": "ZHP2",
+        "hardware_model_number": null,
+        "color": "Arctic Camo",
+        "alt": "Front view of XBOX Wireless Controller – Arctic Camo Special Edition.",
+        "kind": "exact_color",
+        "basis": "Own Store row, hardware relation and per-asset family/color/bundle; no kit inference"
+      }
+    },
+    "manuals": [
+      {
+        "type": "Unclassified document",
+        "title": "Тайвань - Китайский традиционный",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Аксессуары Xbox"
+      },
+      {
+        "type": "Safety/Regulatory",
+        "title": "Великобритания - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20AR%20CS%20DA%20NL%20FI%20FR%20DE%20EL%20IW%20HU%20IT%20NO%20PL%20PT%20RU%20SK%20ES%20SV%20TR.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Аксессуары Xbox",
+        "sha256": "2fa7b8f69115ff666a96b30502511ab4b61eb1c1d853a3a8dc834a2db809ffe6",
+        "pages": 132,
+        "cover_text": "Product and Regulatory Guide, Limited Warranty & Agreement"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "США - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20PT%20FR%20ES%20-%20US%20CA%20LATAM.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Аксессуары Xbox"
+      }
+    ],
+    "manual_status": "Не проверена",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "color": "Arctic Camo"
+    },
+    "configuration_complete": true,
+    "hardware_complete": false,
+    "exact_official_pdp": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6",
+    "hardware_official_pdp": "",
+    "support_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+    "access_stops": [
+      {
+        "url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "reason": "HTTP 200 SPA shell; article/downloads not verified"
+      }
+    ],
+    "page_default_titles": [
+      {
+        "url": "https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller",
+        "title": "XBOX Wireless Controller",
+        "resolved_title": "Xbox Wireless Controller",
+        "scope": "xbox_model"
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller/8xn59crbsqgz",
+        "title": "XBOX Wireless Controller - Carbon Black",
+        "resolved_title": "Xbox Wireless Controller",
+        "scope": "xbox_model"
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/d/xbox-wireless-controller-arctic-camo-special-edition/8qrf79k7jsr6",
+        "title": "XBOX Wireless Controller – Arctic Camo Special Edition",
+        "resolved_title": "XBOX Wireless Controller – Arctic Camo Special Edition",
+        "scope": "xbox_configuration"
+      }
+    ],
+    "catalog_rows": 204,
+    "catalog_identifiers": [
+      {
+        "field": "gaPid",
+        "value": "8qrf79k7jsr6/zhp2",
+        "source_url": "https://www.xbox.com/en-US/global-shares/templates/accessories/JS/allAccessories-Sheet1.js",
+        "title": "XBOX Wireless Controller – Arctic Camo Special Edition",
+        "relation": "catalog_candidate_requires_own_store_row"
+      }
+    ],
+    "sitemaps": [
+      {
+        "url": "https://www.xbox.com/sitemap/cms-sitemap-0.xml.gz",
+        "count": 6833,
+        "product_candidates": 1371
+      },
+      {
+        "url": "https://www.microsoft.com/store/xbox-gaming-sitemap-index.xml",
+        "count": 726,
+        "product_candidates": 688
+      }
+    ],
+    "manual_search_complete": false,
+    "manual_search_reason": "Official family manual index; available Russian document role checked; User Guide evaluated separately from Safety/Regulatory",
+    "configuration_scope": "retail_variant"
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "configuration_scope": "retail_variant",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "color": "Arctic Camo"
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 5,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": [
+      "en-US"
+    ],
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "configuration_scope": "retail_variant",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "color": "Arctic Camo"
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 5,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": [
+      "en-US"
+    ]
+  },
+  "trace": [],
+  "original_observation_phase": "final_live",
+  "consolidation": "Persistence of actual live worker observations, not a fresh run and not replay"
+}

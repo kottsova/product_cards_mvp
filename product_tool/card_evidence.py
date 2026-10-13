@@ -26,6 +26,19 @@ CREATE TABLE IF NOT EXISTS card_evidence (
 def save(database: Path, product_id: int, kind: str, payload: dict[str, Any]) -> None:
     with storage._connection(database) as connection:
         connection.execute(SCHEMA)
+        previous=connection.execute("SELECT payload_json FROM card_evidence WHERE product_id=? AND kind=?",(product_id,kind)).fetchone()
+        if previous:
+            old=json.loads(previous['payload_json'])
+            retained=list(old.get('retained_document_evidence',[]))
+            document_keys=('manuals','verified_documents','manual_status','manual_search','document_inventory')
+            if any(old.get(k) for k in ('manuals','verified_documents','document_inventory')):
+                record={'identity':old.get('identity',{}),'requested_revision':old.get('requested_revision',{}),'documents':{k:old[k] for k in document_keys if k in old}}
+                current={'identity':payload.get('identity',{}),'requested_revision':payload.get('requested_revision',{}),'documents':{k:payload[k] for k in document_keys if k in payload}}
+                if record!=current and record not in retained:retained.append(record)
+            if retained:
+                # Keep historical proof under its original identity; never transfer
+                # verification to a changed model, variant or PNC on refresh.
+                payload={**payload,'retained_document_evidence':retained}
         connection.execute(
             "INSERT INTO card_evidence (product_id, kind, payload_json, updated_at) VALUES (?, ?, ?, ?) "
             "ON CONFLICT(product_id, kind) DO UPDATE SET payload_json=excluded.payload_json, updated_at=excluded.updated_at",

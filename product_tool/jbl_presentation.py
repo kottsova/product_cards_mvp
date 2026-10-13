@@ -24,16 +24,49 @@ def section(raw):
  if v in {'features','ausstattung'}:return 'Особенности модели'
  return 'Основные характеристики' if v in {'specifications','general specifications','allgemeine spezifikationen'} else raw
 
+def metric_counterpart(source,rows):
+ """Published alternate units are duplicates only within printed rounding."""
+ match=re.search(r'\((in|lbs?|oz|ft)\)$',source.get('raw_name',''),re.I)
+ if not match:return None
+ stem=re.sub(r'\([^()]+\)$','',source['raw_name']).strip().casefold()
+ mappings={'in':{'mm':Decimal('25.4'),'cm':Decimal('2.54')},'lb':{'kg':Decimal('.45359237'),'kgs':Decimal('.45359237'),'g':Decimal('453.59237')},'lbs':{'kg':Decimal('.45359237'),'kgs':Decimal('.45359237'),'g':Decimal('453.59237')},'oz':{'g':Decimal('28.349523125'),'kg':Decimal('.028349523125')},'ft':{'m':Decimal('.3048'),'cm':Decimal('30.48')}}
+ tokens=lambda text:re.findall(r'\d+(?:[.,]\d+)?',text)
+ precision=lambda text:Decimal('0.5')*Decimal(10)**(-len(text.split('.')[1]) if '.' in text else 0)
+ for row in rows:
+  other=row.get('sources',{}).get('jbl',{});suffix=re.search(r'\((mm|cm|kg|kgs|g|m)\)$',other.get('raw_name',''),re.I)
+  if not suffix or re.sub(r'\([^()]+\)$','',other['raw_name']).strip().casefold()!=stem:continue
+  factor=mappings[match[1].lower()].get(suffix[1].lower())
+  if factor is None:continue
+  a=tokens(source.get('raw_value',''));b=tokens(other.get('raw_value',''))
+  if not a or len(a)!=len(b):continue
+  a=[v.replace(',','.') for v in a];b=[v.replace(',','.') for v in b]
+  equivalent=all(abs(Decimal(x)*factor-Decimal(y))<=precision(x)*factor+precision(y) for x,y in zip(a,b))
+  return {'row':row,'factor':str(factor),'equivalent':equivalent,'metric_source':other}
+ return None
+
 def project(rows):
  result=[]
+ contradictions={}
+ for original in rows:
+  source=original.get('sources',{}).get('jbl',{});relation=metric_counterpart(source,rows)
+  if relation and not relation['equivalent']:contradictions[relation['row']['normalized_name']]=original
  for original in rows:
   row={**original,'jbl_presentation':True};source=row.get('sources',{}).get('jbl',{});raw=source.get('raw_name') or (row.get('raw_names') or [row.get('normalized_name','')])[0];value=source.get('raw_value','')
-  if re.search(r'\((?:in|lbs|lb|oz|ft)\)$',raw,re.I):continue # Equivalent metric measurements retain the original audit.
+  if re.search(r'\((?:in|lbs|lb|oz|ft)\)$',raw,re.I):
+   relation=metric_counterpart(source,rows)
+   if relation:continue # Equivalent duplicate, or explicitly attached conflict below.
   row['display_name']=label(raw)
   resolved=dict(row.get('resolved') or {})
   if resolved.get('display_value') in {'Yes','Ja','yes','ja','Ya','ya'}:resolved['display_value']='Да'
   if resolved.get('display_value') in {'No','Nein','no','nein'}:resolved['display_value']='Нет'
   if resolved:row['resolved']=resolved
+  if row['normalized_name'] in contradictions:
+   alternate=contradictions[row['normalized_name']];other=alternate['sources']['jbl']
+   row['refined_from']=alternate['normalized_name'];row['source_unit_conflict']=True
+   metric_unit=re.search(r'\(([^()]+)\)$',raw)[1];alternate_unit=re.search(r'\(([^()]+)\)$',other['raw_name'])[1]
+   shown_unit={'g':'г','kg':'кг','kgs':'кг','oz':'унции','lb':'фунты','lbs':'фунты','mm':'мм','cm':'см','ft':'футы','in':'дюймы'}
+   row['resolved']={**resolved,'conflict':True,'status':'needs_review','full_sku_confirmed':False,'display_status':'Расхождение официальных единиц','display_value':value+' '+shown_unit.get(metric_unit,metric_unit)+' / '+other['raw_value']+' '+shown_unit.get(alternate_unit,alternate_unit),'reason':'Published metric and imperial values do not agree within their printed rounding precision'}
+   resolved=row['resolved']
   # Only whole-product dimensions with explicit W x H x D cm axes; never case/earpiece.
   if raw in {'Dimensions (Width x Height x Depth) (cm)','Abmessungen (Breite x Höhe x Tiefe) (cm)','Dimensi (Lebar x Tinggi x Kedalaman) (cm)'} and re.fullmatch(r'\s*\d+(?:[.,]\d+)?\s*[x×]\s*\d+(?:[.,]\d+)?\s*[x×]\s*\d+(?:[.,]\d+)?\s*',value):
    numbers=re.findall(r'\d+(?:[.,]\d+)?',value)

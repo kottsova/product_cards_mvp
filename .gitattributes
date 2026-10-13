@@ -124,3 +124,47 @@ reports/electrolux_stage80_1/**/*.html -diff
 reports/electrolux_stage80_1/**/*.xml -diff
 tests/test_electrolux_stage80_1.py text eol=lf
 tests/fixtures/electrolux_stall_worker.py text eol=lf
+
+# Stage 81 frozen selection and public response proof hashes retain bytes.
+reports/cross_brand_stage81/** -text
+reports/cross_brand_stage81/**/*.html -diff
+product_tool/adapters/apple.py text eol=lf
+product_tool/adapters/xiaomi.py text eol=lf
+product_tool/apple_identity.py text eol=lf
+product_tool/xiaomi_page.py text eol=lf
+product_tool/canonical_attributes.py text eol=lf
+product_tool/photo_inventory.py text eol=lf
+product_tool/card_evidence.py text eol=crlf
+tests/test_cross_brand_stage81.py text eol=lf
+
+product_tool/adapters/jbl.py text eol=crlf
+
+product_tool/apple_pipeline.py text eol=crlf
+
+product_tool/jbl_pipeline.py text eol=crlf
+
+product_tool/jbl_presentation.py text eol=crlf
+
+product_tool/lg_presentation.py text eol=crlf
+
+product_tool/static/attribute_filter.js text eol=lf
+
+product_tool/templates/card_attributes.html text eol=crlf
+
+product_tool/templates/photo_tile.html text eol=crlf
+
+product_tool/xiaomi_identity.py text eol=lf
+
+tests/test_lg_extended.py text eol=crlf
+
+tests/test_stage26_samsung_worker.py text eol=crlf
+
+tests/test_stage27_samsung_rules.py text eol=crlf
+
+tests/test_stage64_apple.py text eol=crlf
+
+tests/test_xbox_stage68.py text eol=lf
+
+product_tool/adapters/lg_documents.py text eol=crlf
+
+product_tool/static/styles.css text eol=crlf

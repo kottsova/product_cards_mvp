@@ -1,0 +1,1330 @@
+{
+  "input": {
+    "id": 60,
+    "brand": "Xbox",
+    "dispatch_brand": "Xbox",
+    "article": "9203Q8W23LHN/HFXZ",
+    "model": "Xbox Wireless Headset",
+    "name": "Xbox Wireless Headset",
+    "category": "Гарнитуры",
+    "input_configuration": {},
+    "region": "en-US",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/xbox_stage68/dataset.json",
+    "original_input": {
+      "row": 7,
+      "article": "9203Q8W23LHN/HFXZ",
+      "name": "Xbox Wireless Headset",
+      "identifier_type": "store_product_id/store_sku_id",
+      "requested_region": "en-US",
+      "brand": "Xbox",
+      "category": "accessories"
+    }
+  },
+  "observed_at": "2026-10-13T14:38:08.542530+00:00",
+  "seconds": 13.95,
+  "job": {
+    "id": "fb26b289a8c1408fa964d1233acec8b3",
+    "product_id": 60,
+    "status": "done",
+    "current_stage": null,
+    "message": "Xbox: Готова",
+    "created_at": "2026-10-13T14:37:54+00:00",
+    "updated_at": "2026-10-13T14:38:07+00:00",
+    "started_at": "2026-10-13T14:37:54+00:00",
+    "finished_at": "2026-10-13T14:38:07+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 165,
+      "product_id": 60,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn",
+      "found_model": "XBOX Wireless Headset",
+      "match_level": "full_sku",
+      "evidence": "Own public Store Product ID / SKU; typed identifiers kept separate",
+      "fetched_at": "2026-10-13T14:37:58+00:00",
+      "error": "",
+      "description": "XBOX Wireless Headset.\nSpatial Sound: Supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One 1.\nАккумулятор и время работы: Internal, rechargeable battery with up to 20 hours of battery life per charge. 1.\nВес товара: 320g.",
+      "photos": [
+        "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4"
+      ]
+    },
+    {
+      "id": 167,
+      "product_id": 60,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "url": "",
+      "found_model": "",
+      "match_level": "unknown",
+      "evidence": "",
+      "fetched_at": "2026-10-13T14:38:07+00:00",
+      "error": "Источник не подтверждён в текущем запуске",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 166,
+      "product_id": 60,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset",
+      "found_model": "Xbox Wireless Headset",
+      "match_level": "model_confirmed",
+      "evidence": "Own official family PDP; configuration candidates are not exact facts",
+      "fetched_at": "2026-10-13T14:37:56+00:00",
+      "error": "",
+      "description": "Xbox Wireless Headset.\nМикрофон: Mic design : bendable boom with dual mics and Illuminated LED when mic is on.\nДинамики: Speaker size : 40mm Speaker material : Paper composite diaphragm and neodymium magnet Speaker Impedance : 32 ohm Speaker Response : 20Hz - 20kHz.\nУправление: Buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup)..\nSpatial Sound: Supports Spatial Sound technologies like Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One *.",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 2863,
+      "product_id": 60,
+      "source_page_id": 165,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Вес товара",
+      "raw_value": "320g",
+      "section": "Габариты и вес",
+      "value_cell": 1,
+      "normalized_name": "product_weight",
+      "normalized_value": "0.32",
+      "unit": "kg"
+    },
+    {
+      "id": 2861,
+      "product_id": 60,
+      "source_page_id": 165,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Spatial Sound",
+      "raw_value": "Supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One 1",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "spatial_sound",
+      "normalized_value": "supports windows sonic, dolby atmos, and dts headphone:x on xbox series x|s and xbox one 1",
+      "unit": ""
+    },
+    {
+      "id": 2869,
+      "product_id": 60,
+      "source_page_id": 166,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Spatial Sound",
+      "raw_value": "Supports Spatial Sound technologies like Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One *",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "spatial_sound",
+      "normalized_value": "supports spatial sound technologies like windows sonic, dolby atmos, and dts headphone:x on xbox series x|s and xbox one *",
+      "unit": ""
+    },
+    {
+      "id": 2862,
+      "product_id": 60,
+      "source_page_id": 165,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аккумулятор и время работы",
+      "raw_value": "Internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "normalized_value": "internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+      "unit": ""
+    },
+    {
+      "id": 2868,
+      "product_id": 60,
+      "source_page_id": 166,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аккумулятор и время работы",
+      "raw_value": "Internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "normalized_value": "internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *",
+      "unit": ""
+    },
+    {
+      "id": 2866,
+      "product_id": 60,
+      "source_page_id": 166,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Динамики",
+      "raw_value": "Speaker size : 40mm Speaker material : Paper composite diaphragm and neodymium magnet Speaker Impedance : 32 ohm Speaker Response : 20Hz - 20kHz",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "динамики",
+      "normalized_value": "speaker size : 40mm speaker material : paper composite diaphragm and neodymium magnet speaker impedance : 32 ohm speaker response : 20hz - 20khz",
+      "unit": ""
+    },
+    {
+      "id": 2859,
+      "product_id": 60,
+      "source_page_id": 165,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Комплектация",
+      "raw_value": "XBOX Wireless Headset",
+      "section": "Комплект",
+      "value_cell": 1,
+      "normalized_name": "комплектация",
+      "normalized_value": "xbox wireless headset",
+      "unit": ""
+    },
+    {
+      "id": 2865,
+      "product_id": 60,
+      "source_page_id": 166,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Микрофон",
+      "raw_value": "Mic design : bendable boom with dual mics and Illuminated LED when mic is on",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "микрофон",
+      "normalized_value": "mic design : bendable boom with dual mics and illuminated led when mic is on",
+      "unit": ""
+    },
+    {
+      "id": 2860,
+      "product_id": 60,
+      "source_page_id": 165,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость",
+      "raw_value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require Game Pass Ultimate, Standard, or Core (membership sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость",
+      "normalized_value": "for use with xbox series x|s, xbox one, and windows 10/11 devices. on supported consoles, some voice chat features may require game pass ultimate, standard, or core (membership sold separately). windows 10/11 use requires bluetooth 4.2+ or compatible usb-c cable. sold separately.",
+      "unit": ""
+    },
+    {
+      "id": 2864,
+      "product_id": 60,
+      "source_page_id": 166,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Совместимость",
+      "raw_value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require XBOX Game Pass Ultimate, Premium, or Essential (subscription sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "совместимость",
+      "normalized_value": "for use with xbox series x|s, xbox one, and windows 10/11 devices. on supported consoles, some voice chat features may require xbox game pass ultimate, premium, or essential (subscription sold separately). windows 10/11 use requires bluetooth 4.2+ or compatible usb-c cable. sold separately.",
+      "unit": ""
+    },
+    {
+      "id": 2867,
+      "product_id": 60,
+      "source_page_id": 166,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Управление",
+      "raw_value": "Buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+      "section": "Характеристики модели",
+      "value_cell": 1,
+      "normalized_name": "управление",
+      "normalized_value": "buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2561,
+      "product_id": 60,
+      "normalized_name": "product_weight",
+      "selected_value": "0.32",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2562,
+      "product_id": 60,
+      "normalized_name": "spatial_sound",
+      "selected_value": "supports windows sonic, dolby atmos, and dts headphone:x on xbox series x|s and xbox one 1",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2563,
+      "product_id": 60,
+      "normalized_name": "аккумулятор_и_время_работы",
+      "selected_value": "internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2564,
+      "product_id": 60,
+      "normalized_name": "динамики",
+      "selected_value": "speaker size : 40mm speaker material : paper composite diaphragm and neodymium magnet speaker impedance : 32 ohm speaker response : 20hz - 20khz",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2565,
+      "product_id": 60,
+      "normalized_name": "комплектация",
+      "selected_value": "xbox wireless headset",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2566,
+      "product_id": 60,
+      "normalized_name": "микрофон",
+      "selected_value": "mic design : bendable boom with dual mics and illuminated led when mic is on",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2567,
+      "product_id": 60,
+      "normalized_name": "совместимость",
+      "selected_value": "for use with xbox series x|s, xbox one, and windows 10/11 devices. on supported consoles, some voice chat features may require game pass ultimate, standard, or core (membership sold separately). windows 10/11 use requires bluetooth 4.2+ or compatible usb-c cable. sold separately.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_configuration",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2568,
+      "product_id": 60,
+      "normalized_name": "управление",
+      "selected_value": "buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:07+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "spatial_sound",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2861,
+          "product_id": 60,
+          "source_page_id": 165,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Spatial Sound",
+          "raw_value": "Supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One 1",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "spatial_sound",
+          "normalized_value": "supports windows sonic, dolby atmos, and dts headphone:x on xbox series x|s and xbox one 1",
+          "unit": "",
+          "display_value": "supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on Xbox Series X|s and Xbox One 1",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2869,
+          "product_id": 60,
+          "source_page_id": 166,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Spatial Sound",
+          "raw_value": "Supports Spatial Sound technologies like Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One *",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "spatial_sound",
+          "normalized_value": "supports spatial sound technologies like windows sonic, dolby atmos, and dts headphone:x on xbox series x|s and xbox one *",
+          "unit": "",
+          "display_value": "supports Spatial Sound technologies like Windows Sonic, Dolby Atmos, and DTS Headphone:X on Xbox Series X|s and Xbox One *",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Spatial Sound",
+        "Spatial Sound"
+      ],
+      "display_name": "Пространственный звук",
+      "resolved": {
+        "id": 2562,
+        "product_id": 60,
+        "normalized_name": "spatial_sound",
+        "selected_value": "supports windows sonic, dolby atmos, and dts headphone:x on xbox series x|s and xbox one 1",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on Xbox Series X|S and Xbox One 1",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Пространственный звук"
+    },
+    {
+      "normalized_name": "аккумулятор_и_время_работы",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2862,
+          "product_id": 60,
+          "source_page_id": 165,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аккумулятор и время работы",
+          "raw_value": "Internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аккумулятор_и_время_работы",
+          "normalized_value": "internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+          "unit": "",
+          "display_value": "internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2868,
+          "product_id": 60,
+          "source_page_id": 166,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аккумулятор и время работы",
+          "raw_value": "Internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "аккумулятор_и_время_работы",
+          "normalized_value": "internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *",
+          "unit": "",
+          "display_value": "internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Аккумулятор и время работы",
+        "Аккумулятор и время работы"
+      ],
+      "display_name": "Аккумулятор и время работы",
+      "resolved": {
+        "id": 2563,
+        "product_id": 60,
+        "normalized_name": "аккумулятор_и_время_работы",
+        "selected_value": "internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Internal, rechargeable battery with До 20 ч of battery life per charge. 1",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Аккумулятор и время работы"
+    },
+    {
+      "normalized_name": "динамики",
+      "sources": {
+        "xbox_model": {
+          "id": 2866,
+          "product_id": 60,
+          "source_page_id": 166,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Динамики",
+          "raw_value": "Speaker size : 40mm Speaker material : Paper composite diaphragm and neodymium magnet Speaker Impedance : 32 ohm Speaker Response : 20Hz - 20kHz",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "динамики",
+          "normalized_value": "speaker size : 40mm speaker material : paper composite diaphragm and neodymium magnet speaker impedance : 32 ohm speaker response : 20hz - 20khz",
+          "unit": "",
+          "display_value": "speaker size : 40mm speaker material : paper composite diaphragm and neodymium magnet speaker impedance : 32 ohm speaker response : 20hz - 20khz",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Динамики"
+      ],
+      "display_name": "Динамики",
+      "resolved": {
+        "id": 2564,
+        "product_id": 60,
+        "normalized_name": "динамики",
+        "selected_value": "speaker size : 40mm speaker material : paper composite diaphragm and neodymium magnet speaker impedance : 32 ohm speaker response : 20hz - 20khz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Speaker size : 40мм Speaker material : Paper composite diaphragm and neodymium magnet Speaker Impedance : 32 ohm Speaker Response : 20Гц - 20кГц",
+        "display_status": "Общая характеристика модели Xbox",
+        "display_source": "xbox_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Динамики"
+    },
+    {
+      "normalized_name": "комплектация",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2859,
+          "product_id": 60,
+          "source_page_id": 165,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Комплектация",
+          "raw_value": "XBOX Wireless Headset",
+          "section": "Комплект",
+          "value_cell": 1,
+          "normalized_name": "комплектация",
+          "normalized_value": "xbox wireless headset",
+          "unit": "",
+          "display_value": "Xbox Wireless headset",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Комплектация"
+      ],
+      "display_name": "Комплектация",
+      "resolved": {
+        "id": 2565,
+        "product_id": 60,
+        "normalized_name": "комплектация",
+        "selected_value": "xbox wireless headset",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Xbox Wireless Headset",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Комплект",
+      "category_attribute_key": "Комплект / Комплектация"
+    },
+    {
+      "normalized_name": "product_weight",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2863,
+          "product_id": 60,
+          "source_page_id": 165,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Вес товара",
+          "raw_value": "320g",
+          "section": "Габариты и вес",
+          "value_cell": 1,
+          "normalized_name": "product_weight",
+          "normalized_value": "0.32",
+          "unit": "kg",
+          "display_value": "0.32 кг",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Вес товара"
+      ],
+      "display_name": "Вес товара, кг",
+      "resolved": {
+        "id": 2561,
+        "product_id": 60,
+        "normalized_name": "product_weight",
+        "selected_value": "0.32",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "0.32 кг",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Вес товара, кг"
+    },
+    {
+      "normalized_name": "микрофон",
+      "sources": {
+        "xbox_model": {
+          "id": 2865,
+          "product_id": 60,
+          "source_page_id": 166,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Микрофон",
+          "raw_value": "Mic design : bendable boom with dual mics and Illuminated LED when mic is on",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "микрофон",
+          "normalized_value": "mic design : bendable boom with dual mics and illuminated led when mic is on",
+          "unit": "",
+          "display_value": "mic design : bendable boom with dual mics and illuminated led when mic is on",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Микрофон"
+      ],
+      "display_name": "Микрофон",
+      "resolved": {
+        "id": 2566,
+        "product_id": 60,
+        "normalized_name": "микрофон",
+        "selected_value": "mic design : bendable boom with dual mics and illuminated led when mic is on",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Mic design : bendable boom with dual mics and Illuminated LED when mic is on",
+        "display_status": "Общая характеристика модели Xbox",
+        "display_source": "xbox_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Микрофон"
+    },
+    {
+      "normalized_name": "совместимость",
+      "sources": {
+        "xbox_configuration": {
+          "id": 2860,
+          "product_id": 60,
+          "source_page_id": 165,
+          "source_key": "xbox_configuration",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость",
+          "raw_value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require Game Pass Ultimate, Standard, or Core (membership sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость",
+          "normalized_value": "for use with xbox series x|s, xbox one, and windows 10/11 devices. on supported consoles, some voice chat features may require game pass ultimate, standard, or core (membership sold separately). windows 10/11 use requires bluetooth 4.2+ or compatible usb-c cable. sold separately.",
+          "unit": "",
+          "display_value": "for use with Xbox Series X|s, Xbox One, and windows 10/11 devices. on supported consoles, some voice chat features may require Game Pass Ultimate, standard, or core (membership sold separately). windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. sold separately.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2864,
+          "product_id": 60,
+          "source_page_id": 166,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Совместимость",
+          "raw_value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require XBOX Game Pass Ultimate, Premium, or Essential (subscription sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "совместимость",
+          "normalized_value": "for use with xbox series x|s, xbox one, and windows 10/11 devices. on supported consoles, some voice chat features may require xbox game pass ultimate, premium, or essential (subscription sold separately). windows 10/11 use requires bluetooth 4.2+ or compatible usb-c cable. sold separately.",
+          "unit": "",
+          "display_value": "for use with Xbox Series X|s, Xbox One, and windows 10/11 devices. on supported consoles, some voice chat features may require xbox Game Pass Ultimate, premium, or essential (subscription sold separately). windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. sold separately.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Совместимость",
+        "Совместимость"
+      ],
+      "display_name": "Совместимость",
+      "resolved": {
+        "id": 2567,
+        "product_id": 60,
+        "normalized_name": "совместимость",
+        "selected_value": "for use with xbox series x|s, xbox one, and windows 10/11 devices. on supported consoles, some voice chat features may require game pass ultimate, standard, or core (membership sold separately). windows 10/11 use requires bluetooth 4.2+ or compatible usb-c cable. sold separately.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_configuration",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "For use with Xbox Series X|S, Xbox One, and Windows 10/11 devices. On supported consoles, some voice chat features may require Game Pass Ultimate, Standard, or Core (membership sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+        "display_status": "Параметр точного SKU Microsoft Store",
+        "display_source": "xbox_configuration"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Совместимость"
+    },
+    {
+      "normalized_name": "управление",
+      "sources": {
+        "xbox_model": {
+          "id": 2867,
+          "product_id": 60,
+          "source_page_id": 166,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Управление",
+          "raw_value": "Buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+          "section": "Характеристики модели",
+          "value_cell": 1,
+          "normalized_name": "управление",
+          "normalized_value": "buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+          "unit": "",
+          "display_value": "buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Управление"
+      ],
+      "display_name": "Управление",
+      "resolved": {
+        "id": 2568,
+        "product_id": 60,
+        "normalized_name": "управление",
+        "selected_value": "buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:07+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+        "display_status": "Общая характеристика модели Xbox",
+        "display_source": "xbox_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Характеристики модели",
+      "category_attribute_key": "Характеристики модели / Управление"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1693,
+      "product_id": 60,
+      "source_page_id": 165,
+      "source_key": "xbox_configuration",
+      "url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4",
+      "asset_key": "487ffb9c5abb6214a35233eee45d40c8f7a45218a6395c34e9e1d0a1ae15cba6",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:38:07+00:00",
+      "verified_width": 400,
+      "verified_height": 400,
+      "verified_bytes": 13427,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft"
+    }
+  ],
+  "all_official_gallery": [
+    {
+      "id": 1693,
+      "product_id": 60,
+      "source_page_id": 165,
+      "source_key": "xbox_configuration",
+      "url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4",
+      "asset_key": "487ffb9c5abb6214a35233eee45d40c8f7a45218a6395c34e9e1d0a1ae15cba6",
+      "kind": "product_gallery",
+      "width": 400,
+      "height": 400,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:38:07+00:00",
+      "verified_width": 400,
+      "verified_height": 400,
+      "verified_bytes": 13427,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft",
+      "normalized_asset": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:38:08.518427+00:00",
+      "size_bytes": 13427,
+      "format": "JPG",
+      "content_type": "image/jpeg",
+      "effective_content_type": "image/jpeg",
+      "sha256": "d0374527b3402564b4050562498e82b8cc96d8a3731e5155dd4bbc875f856c48",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\d0374527b3402564b4050562498e82b8cc96d8a3731e5155dd4bbc875f856c48.img",
+      "verified_url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn",
+      "aliases": []
+    }
+  ],
+  "photo_evidence": {
+    "entries": {
+      "xbox_configuration / 487ffb9c5abb6214a35233eee45d40c8f7a45218a6395c34e9e1d0a1ae15cba6 / https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4": {
+        "url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4",
+        "source_key": "xbox_configuration",
+        "asset_key": "487ffb9c5abb6214a35233eee45d40c8f7a45218a6395c34e9e1d0a1ae15cba6",
+        "normalized_asset": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:38:08.518427+00:00",
+        "width": 400,
+        "height": 400,
+        "size_bytes": 13427,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "d0374527b3402564b4050562498e82b8cc96d8a3731e5155dd4bbc875f856c48",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\d0374527b3402564b4050562498e82b8cc96d8a3731e5155dd4bbc875f856c48.img",
+        "verified_url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4"
+      }
+    },
+    "last_completion": {
+      "budget_seconds": 180,
+      "results": [
+        {
+          "url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1pzRf?ver=47a4",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "d0374527b3402564b4050562498e82b8cc96d8a3731e5155dd4bbc875f856c48"
+        }
+      ]
+    }
+  },
+  "documents": [],
+  "evidence": {
+    "requested_identifier": "9203Q8W23LHN/HFXZ",
+    "requested_identifier_type": "store_product_id/store_sku_id",
+    "requested_region": "en-US",
+    "model_key": "headset",
+    "query_variants": [
+      "9203Q8W23LHN",
+      "Xbox Wireless Headset",
+      "9203Q8W23LHN/HFXZ Xbox"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "identifiers": {
+      "store_product_id": "9203Q8W23LHN",
+      "store_sku_id": "HFXZ",
+      "manufacturer_part_number": null,
+      "hardware_model_number": null,
+      "storefront": "en-us"
+    },
+    "raw_specs": [
+      {
+        "section": "TECH SPECS",
+        "raw_label": "What’s in the box",
+        "value": "XBOX Wireless Headset"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "System Requirements",
+        "value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require XBOX Game Pass Ultimate, Premium, or Essential (subscription sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Materials",
+        "value": "Headband : inner steel metal band with foam cushioning Ear cushions : oval design with polyurethane leather and foam cushioning"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Microphones",
+        "value": "Mic design : bendable boom with dual mics and Illuminated LED when mic is on"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Speakers",
+        "value": "Speaker size : 40mm Speaker material : Paper composite diaphragm and neodymium magnet Speaker Impedance : 32 ohm Speaker Response : 20Hz - 20kHz"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Controls",
+        "value": "Buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup)."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Bluetooth",
+        "value": "Bluetooth version : 5.3 (A2DP, HFP, HSP) Codec : SBC"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Battery",
+        "value": "Internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Weight",
+        "value": "11 oz (320g)"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Virtual Surround Sound",
+        "value": "Supports Spatial Sound technologies like Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One *"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "XBOX Accessories app",
+        "value": "Adjust equalizer settings, bass boost, auto-mute, LED brightness, and mic monitoring *"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "System requirements",
+        "value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require Game Pass Ultimate, Standard, or Core (membership sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately."
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "XBOX Accessories app",
+        "value": "Adjust equalizer settings, bass boost, auto-mute, LED brightness, mic monitoring 1 , and swap mix and volume dials with the XBOX Accessories App, available on XBOX Series X|S and XBOX One 1"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Virtual surround sound",
+        "value": "Supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One 1"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Battery",
+        "value": "Internal, rechargeable battery with up to 20 hours of battery life per charge. 1"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Weight",
+        "value": "320g"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Warranty",
+        "value": "1-year limited warranty 3"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Характеристики модели",
+        "raw_label": "System Requirements",
+        "raw_value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require XBOX Game Pass Ultimate, Premium, or Essential (subscription sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+        "label": "Совместимость",
+        "value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require XBOX Game Pass Ultimate, Premium, or Essential (subscription sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Microphones",
+        "raw_value": "Mic design : bendable boom with dual mics and Illuminated LED when mic is on",
+        "label": "Микрофон",
+        "value": "Mic design : bendable boom with dual mics and Illuminated LED when mic is on",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Speakers",
+        "raw_value": "Speaker size : 40mm Speaker material : Paper composite diaphragm and neodymium magnet Speaker Impedance : 32 ohm Speaker Response : 20Hz - 20kHz",
+        "label": "Динамики",
+        "value": "Speaker size : 40mm Speaker material : Paper composite diaphragm and neodymium magnet Speaker Impedance : 32 ohm Speaker Response : 20Hz - 20kHz",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Controls",
+        "raw_value": "Buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+        "label": "Управление",
+        "value": "Buttons : power/pair, mute, game/chat audio balance dial (left earcup), volume dial (right earcup).",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Battery",
+        "raw_value": "Internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *",
+        "label": "Аккумулятор и время работы",
+        "value": "Internal, rechargeable lithium-ion battery with up to 20 hours of battery life per charge. 30 minutes of charging provides about 4 hours of battery life and recharges to full battery life in about 3 hours when headset is not in use. *",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Virtual Surround Sound",
+        "raw_value": "Supports Spatial Sound technologies like Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One *",
+        "label": "Spatial Sound",
+        "value": "Supports Spatial Sound technologies like Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One *",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset"
+      },
+      {
+        "section": "Комплект",
+        "raw_label": "What’s in the box",
+        "raw_value": "XBOX Wireless Headset",
+        "label": "Комплектация",
+        "value": "XBOX Wireless Headset",
+        "scope": "retail",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "System requirements",
+        "raw_value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require Game Pass Ultimate, Standard, or Core (membership sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+        "label": "Совместимость",
+        "value": "For use with XBOX Series X|S, XBOX One, and Windows 10/11 devices. On supported consoles, some voice chat features may require Game Pass Ultimate, Standard, or Core (membership sold separately). Windows 10/11 use requires Bluetooth 4.2+ or compatible USB-C cable. Sold separately.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Virtual surround sound",
+        "raw_value": "Supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One 1",
+        "label": "Spatial Sound",
+        "value": "Supports Windows Sonic, Dolby Atmos, and DTS Headphone:X on XBOX Series X|S and XBOX One 1",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn"
+      },
+      {
+        "section": "Характеристики модели",
+        "raw_label": "Battery",
+        "raw_value": "Internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+        "label": "Аккумулятор и время работы",
+        "value": "Internal, rechargeable battery with up to 20 hours of battery life per charge. 1",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn"
+      },
+      {
+        "section": "Габариты и вес",
+        "raw_label": "Weight",
+        "raw_value": "320g",
+        "label": "Вес товара",
+        "value": "320g",
+        "scope": "hardware_configuration",
+        "source_url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn"
+      }
+    ],
+    "attribute_scopes": {
+      "Совместимость": "model",
+      "Микрофон": "model",
+      "Динамики": "model",
+      "Управление": "model",
+      "Аккумулятор и время работы": "model",
+      "Spatial Sound": "model",
+      "Комплектация": "retail",
+      "Вес товара": "hardware_configuration"
+    },
+    "identity_relations": [
+      {
+        "type": "store_product",
+        "product_id": "9203Q8W23LHN",
+        "sku_ids": [
+          "HFXZ"
+        ],
+        "hardware_model_numbers": [],
+        "manufacturer_parts": [],
+        "region": "en-us",
+        "url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn",
+        "relation": "own_store_product",
+        "unique_hardware_configuration": false
+      }
+    ],
+    "configuration_candidates": [
+      {
+        "section": "TECH SPECS",
+        "raw_label": "What’s in the box",
+        "value": "XBOX Wireless Headset",
+        "reason": "Kit contents require own exact configuration; cannot borrow model kit"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Materials",
+        "value": "Headband : inner steel metal band with foam cushioning Ear cushions : oval design with polyurethane leather and foam cushioning",
+        "reason": "Technical field lacks safe canonical mapping"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Bluetooth",
+        "value": "Bluetooth version : 5.3 (A2DP, HFP, HSP) Codec : SBC",
+        "reason": "Technical field lacks safe canonical mapping"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Weight",
+        "value": "11 oz (320g)",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "XBOX Accessories app",
+        "value": "Adjust equalizer settings, bass boost, auto-mute, LED brightness, and mic monitoring *",
+        "reason": "Technical field lacks safe canonical mapping"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "XBOX Accessories app",
+        "value": "Adjust equalizer settings, bass boost, auto-mute, LED brightness, mic monitoring 1 , and swap mix and volume dials with the XBOX Accessories App, available on XBOX Series X|S and XBOX One 1",
+        "reason": "Technical field lacks safe canonical mapping"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Warranty",
+        "value": "1-year limited warranty 3",
+        "reason": "Technical field lacks safe canonical mapping"
+      }
+    ],
+    "photo_candidates": [
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/09/04/090478a4-5a5d-4a0e-9140-5b5184f46ffe.jpg?n=465582_Image-Hero-768_1920x831.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Front angled view of the XBOX Wireless Headset. A larger detailed view of the earcups is pictured behind the headset."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/4f/bb/4fbb81da-2461-4710-ad23-0549f698c872.jpg?n=465582_Super-Hero-1400_Immerse_1920x1237.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Wireless Headset on a table with two people holding controllers in the background"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/9a/5f/9a5f13df-551f-4846-a5a8-812386a72b4a.jpg?n=465582_Feature-0_1_1040x585.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Person putting on the XBOX Wireless Headset with their hands over the ear cuffs"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/ce/5c/ce5cc444-1afa-4683-9fb1-a568dfc8bfc4.jpg?n=465582_Feature-0_3_1040x585.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Person speaking into the XBOX Wireless Headset"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/e7/9e/e79e184d-0512-4902-8c5e-60865bc2e3bb.jpg?n=465582_Feature-0_4_1040x585.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Wireless Headset settings dashboard with headset, XBOX Series X and XBOX Wireless Controller on the side"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/fa/26/fa264865-0e7a-4974-916e-93f464164420.jpg?n=465582_Page-Hero-1084_Battery_1920x720.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "A close-up of a USB-C cable and the USB-C port on the XBOX Wireless Headset, indicating the internal battery can be recharged with a USB-C cable."
+      }
+    ],
+    "exact_photo_assets": [
+      "487ffb9c5abb6214a35233eee45d40c8f7a45218a6395c34e9e1d0a1ae15cba6"
+    ],
+    "photo_scopes": {
+      "487ffb9c5abb6214a35233eee45d40c8f7a45218a6395c34e9e1d0a1ae15cba6": {
+        "store_product_id": "9203Q8W23LHN",
+        "store_sku_id": "HFXZ",
+        "hardware_model_number": null,
+        "color": "",
+        "alt": "Front angle of the XBOX Wireless Headset",
+        "kind": "retail_gallery",
+        "basis": "Own Store row, hardware relation and per-asset family/color/bundle; no kit inference"
+      }
+    },
+    "manuals": [
+      {
+        "type": "Unclassified document",
+        "title": "Тайвань - Китайский традиционный",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20ZH%20JA%20KO%20-%20CN%20SI%20TW%20HK%20JP%20KO.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Аксессуары Xbox"
+      },
+      {
+        "type": "Safety/Regulatory",
+        "title": "Великобритания - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20AR%20CS%20DA%20NL%20FI%20FR%20DE%20EL%20IW%20HU%20IT%20NO%20PL%20PT%20RU%20SK%20ES%20SV%20TR.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Аксессуары Xbox",
+        "sha256": "2fa7b8f69115ff666a96b30502511ab4b61eb1c1d853a3a8dc834a2db809ffe6",
+        "pages": 132,
+        "cover_text": "Product and Regulatory Guide, Limited Warranty & Agreement"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "США - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX%20ACCESSORIES%20EN%20PT%20FR%20ES%20-%20US%20CA%20LATAM.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Аксессуары Xbox"
+      }
+    ],
+    "manual_status": "Не проверена",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "bundle_contents": "XBOX Wireless Headset"
+    },
+    "configuration_complete": true,
+    "hardware_complete": false,
+    "exact_official_pdp": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn",
+    "hardware_official_pdp": "",
+    "support_url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+    "access_stops": [
+      {
+        "url": "https://support.xbox.com/en-US/help/hardware-network/console/manuals-specs",
+        "reason": "HTTP 200 SPA shell; article/downloads not verified"
+      }
+    ],
+    "page_default_titles": [
+      {
+        "url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset",
+        "title": "XBOX Wireless Headset",
+        "resolved_title": "Xbox Wireless Headset",
+        "scope": "xbox_model"
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/d/xbox-wireless-headset/9203q8w23lhn",
+        "title": "XBOX Wireless Headset",
+        "resolved_title": "XBOX Wireless Headset",
+        "scope": "xbox_configuration"
+      }
+    ],
+    "catalog_rows": 204,
+    "catalog_identifiers": [
+      {
+        "field": "gaPid",
+        "value": "9203q8w23lhn/HFXZ",
+        "source_url": "https://www.xbox.com/en-US/global-shares/templates/accessories/JS/allAccessories-Sheet1.js",
+        "title": "XBOX Wireless Headset",
+        "relation": "catalog_candidate_requires_own_store_row"
+      }
+    ],
+    "sitemaps": [
+      {
+        "url": "https://www.xbox.com/sitemap/cms-sitemap-0.xml.gz",
+        "count": 6833,
+        "product_candidates": 1371
+      },
+      {
+        "url": "https://www.microsoft.com/store/xbox-gaming-sitemap-index.xml",
+        "count": 726,
+        "product_candidates": 688
+      }
+    ],
+    "manual_search_complete": false,
+    "manual_search_reason": "Official family manual index; available Russian document role checked; User Guide evaluated separately from Safety/Regulatory",
+    "configuration_scope": "retail_variant"
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "configuration_scope": "retail_variant",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "bundle_contents": "XBOX Wireless Headset"
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 7,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": [
+      "en-US"
+    ],
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_store_sku",
+      "hardware": "unproven"
+    },
+    "configuration_scope": "retail_variant",
+    "configuration_fields": {
+      "storefront": "en-us",
+      "bundle_contents": "XBOX Wireless Headset"
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 7,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": [
+      "en-US"
+    ]
+  },
+  "trace": [],
+  "original_observation_phase": "final_live",
+  "consolidation": "Persistence of actual live worker observations, not a fresh run and not replay"
+}

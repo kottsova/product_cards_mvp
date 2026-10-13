@@ -249,7 +249,10 @@ class OrdinaryWorkerPath(unittest.TestCase):
         self.assertEqual(by_article["NZ64T3506AK/WT"][2], "export_ready_with_gaps")
         exported_photos = list(book["Фотографии"].iter_rows(min_row=2, values_only=True))
         expected = sum(photos for (a, level, s, photos) in EXPECTED.values() if level == "full_sku")
-        self.assertEqual(len(exported_photos), expected)
+        self.assertEqual(expected,100)
+        self.assertEqual(len(exported_photos),109) # All exact official images, including nine unselected assets.
+        selected_column=[c.value for c in book['Фотографии'][1]].index('Выбрано для карточки')
+        self.assertEqual(sum(r[selected_column]=='Да' for r in exported_photos),expected)
         self.assertFalse(any(r[3] and ("-thumb-" in r[3] or r[3].endswith((".glb", ".usdz"))) for r in exported_photos))
         levels = {r[3]: r[4] for r in book["Источники"].iter_rows(min_row=2, values_only=True) if r[2] == "Samsung Казахстан"}
         self.assertEqual(sorted(set(levels.values())), ["Артикул только в тексте страницы", "Базовая модель", "Полный артикул"])

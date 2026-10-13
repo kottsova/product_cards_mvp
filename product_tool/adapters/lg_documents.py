@@ -29,7 +29,7 @@ class BinarySafeSession:
         response = self.underlying.get(url, **kwargs)
         headers = getattr(response, "headers", None) or {}
         content_type = str(headers.get("content-type", headers.get("Content-Type", ""))).casefold()
-        if any(kind in content_type for kind in _BINARY_TYPES) or url.split("?", 1)[0].casefold().endswith(".pdf"):
+        if content_type.startswith('image/') or any(kind in content_type for kind in _BINARY_TYPES) or url.split("?", 1)[0].casefold().endswith(".pdf"):
             try:
                 response.encoding = "latin-1"
             except AttributeError:

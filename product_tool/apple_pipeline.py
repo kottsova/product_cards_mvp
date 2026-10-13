@@ -22,7 +22,9 @@ def card_readiness(database,product_id):
 
 def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns_adapter_factory=None,clock=time.monotonic):
  discovery_trace.initialize(database);trace=lambda e:discovery_trace.record(database,job_id,product_id,e)
- adapter=(adapter_factory or (lambda:AppleAdapter(fetch_log_path=Path(database).parent/'apple_fetch.json',trace_callback=trace,clock=clock)))();article=product['search_code'];doc=adapter.find_source(article,name=product.get('name',''),category=product.get('category',''),deadline=clock()+90)
+ adapter=(adapter_factory or (lambda:AppleAdapter(fetch_log_path=Path(database).parent/'apple_fetch.json',trace_callback=trace,clock=clock)))()
+ if hasattr(adapter,'manuals_enabled'):adapter.manuals_enabled=6 in stages
+ article=product['search_code'];doc=adapter.find_source(article,name=product.get('name',''),category=product.get('category',''),deadline=clock()+90)
  jobs.save_source_document(database,product_id,doc,update_description=2 in stages,update_attributes=3 in stages,update_photos=4 in stages)
  model=getattr(adapter,'model_document',None)
  if model:jobs.save_source_document(database,product_id,model,update_description=False,update_attributes=3 in stages,update_photos=4 in stages)

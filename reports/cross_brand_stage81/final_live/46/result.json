@@ -1,0 +1,1974 @@
+{
+  "input": {
+    "id": 46,
+    "brand": "Apple",
+    "dispatch_brand": "Apple",
+    "article": "MXP93LL/A",
+    "model": "AirPods 4 with Active Noise Cancellation White",
+    "name": "AirPods 4 with Active Noise Cancellation White",
+    "category": "Наушники TWS",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/apple_stage64/dataset_frozen.json",
+    "original_input": {
+      "article": "MXP93LL/A",
+      "name": "AirPods 4 with Active Noise Cancellation White",
+      "category": "tws",
+      "condition": "retail"
+    }
+  },
+  "observed_at": "2026-10-13T14:28:31.818957+00:00",
+  "seconds": 28.31,
+  "job": {
+    "id": "d33fe02719e64370afeb5db4f2ba7f7d",
+    "product_id": 46,
+    "status": "done",
+    "current_stage": null,
+    "message": "Apple: Готова; ",
+    "created_at": "2026-10-13T14:28:03+00:00",
+    "updated_at": "2026-10-13T14:28:29+00:00",
+    "started_at": "2026-10-13T14:28:03+00:00",
+    "finished_at": "2026-10-13T14:28:29+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 121,
+      "product_id": 46,
+      "source_key": "apple",
+      "site_name": "Apple official catalog",
+      "url": "https://www.apple.com/education/purchase/contracts/docs/NASPO_PSS_Apple_Branded.pdf",
+      "found_model": "AirPods 4 with Active Noise Cancellation",
+      "match_level": "full_sku",
+      "evidence": "Public official catalog exact SKU row establishes model; not a PDP or configuration spec source",
+      "fetched_at": "2026-10-13T14:28:28+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 122,
+      "product_id": 46,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "url": "https://support.apple.com/en-us/121204",
+      "found_model": "AirPods 4 with Active Noise Cancellation - Tech Specs",
+      "match_level": "model_confirmed",
+      "evidence": "Exact model/generation; configuration options excluded and size/connectivity scopes checked",
+      "fetched_at": "2026-10-13T14:28:29+00:00",
+      "error": "",
+      "description": "",
+      "photos": [
+        "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 2571,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Bluetooth",
+      "raw_value": "Bluetooth 5.3 wireless technology",
+      "section": "Connectivity",
+      "value_cell": 1,
+      "normalized_name": "bluetooth",
+      "normalized_value": "bluetooth 5.3 wireless technology",
+      "unit": ""
+    },
+    {
+      "id": 2563,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Аудиотехнологии",
+      "raw_value": "Custom high-excursion Apple driver; Custom high dynamic range amplifier; Active Noise Cancellation; Adaptive Audio; Transparency mode; Conversation Awareness; Voice Isolation; Personalized Spatial Audio with dynamic head tracking; Adaptive EQ; Vent system for pressure equalization",
+      "section": "Audio Technology",
+      "value_cell": 1,
+      "normalized_name": "аудиотехнологии",
+      "normalized_value": "custom high-excursion apple driver; custom high dynamic range amplifier; active noise cancellation; adaptive audio; transparency mode; conversation awareness; voice isolation; personalized spatial audio with dynamic head tracking; adaptive eq; vent system for pressure equalization",
+      "unit": ""
+    },
+    {
+      "id": 2568,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Воспроизведение аудио: один заряд без ANC",
+      "raw_value": "Up to 5 hours of listening time on a single charge with noise control off",
+      "section": "Battery",
+      "value_cell": 1,
+      "normalized_name": "воспроизведение_аудио_один_заряд_без_anc",
+      "normalized_value": "up to 5 hours of listening time on a single charge with noise control off",
+      "unit": ""
+    },
+    {
+      "id": 2567,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Воспроизведение аудио: один заряд с ANC",
+      "raw_value": "Up to 4 hours of listening time on a single charge with Active Noise Cancellation enabled",
+      "section": "Battery",
+      "value_cell": 1,
+      "normalized_name": "воспроизведение_аудио_один_заряд_с_anc",
+      "normalized_value": "up to 4 hours of listening time on a single charge with active noise cancellation enabled",
+      "unit": ""
+    },
+    {
+      "id": 2570,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Воспроизведение аудио: с кейсом без ANC",
+      "raw_value": "Up to 30 hours of listening time with noise control off",
+      "section": "Battery",
+      "value_cell": 1,
+      "normalized_name": "воспроизведение_аудио_с_кейсом_без_anc",
+      "normalized_value": "up to 30 hours of listening time with noise control off",
+      "unit": ""
+    },
+    {
+      "id": 2569,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Воспроизведение аудио: с кейсом с ANC",
+      "raw_value": "Up to 20 hours of listening time with Active Noise Cancellation enabled",
+      "section": "Battery",
+      "value_cell": 1,
+      "normalized_name": "воспроизведение_аудио_с_кейсом_с_anc",
+      "normalized_value": "up to 20 hours of listening time with active noise cancellation enabled",
+      "unit": ""
+    },
+    {
+      "id": 2564,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Датчики",
+      "raw_value": "Dual beamforming microphones; Inward-facing microphone; Optical in-ear sensor; Motion-detecting accelerometer; Speech-detecting accelerometer; Force sensor",
+      "section": "Sensors",
+      "value_cell": 1,
+      "normalized_name": "датчики",
+      "normalized_value": "dual beamforming microphones; inward-facing microphone; optical in-ear sensor; motion-detecting accelerometer; speech-detecting accelerometer; force sensor",
+      "unit": ""
+    },
+    {
+      "id": 2566,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Защита от пыли и воды",
+      "raw_value": "Dust, sweat, and water resistant (IP54)",
+      "section": "Dust, Sweat, and Water Resistant",
+      "value_cell": 1,
+      "normalized_name": "защита_от_пыли_и_воды",
+      "normalized_value": "dust, sweat, and water resistant (ip54)",
+      "unit": ""
+    },
+    {
+      "id": 2572,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Специальные возможности",
+      "raw_value": "Live Listen audio; Headphone levels; Headphone Accommodations",
+      "section": "Accessibility",
+      "value_cell": 1,
+      "normalized_name": "специальные_возможности",
+      "normalized_value": "live listen audio; headphone levels; headphone accommodations",
+      "unit": ""
+    },
+    {
+      "id": 2565,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "site_name": "Apple Tech Specs",
+      "raw_name": "Элементы управления",
+      "raw_value": "Press once to play or pause media; Press once to answer a call or mute or unmute; Press once for camera remote; Press twice to end a call; Press twice to skip forward; Press three times to skip back; Press and hold for Siri; Say \"Hey Siri\" or just \"Siri\" to do things like play a song, make a call, or get directions; With Siri Interactions, nod your head yes or gently shake your head no when Siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+      "section": "Controls",
+      "value_cell": 1,
+      "normalized_name": "элементы_управления",
+      "normalized_value": "press once to play or pause media; press once to answer a call or mute or unmute; press once for camera remote; press twice to end a call; press twice to skip forward; press three times to skip back; press and hold for siri; say \"hey siri\" or just \"siri\" to do things like play a song, make a call, or get directions; with siri interactions, nod your head yes or gently shake your head no when siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2336,
+      "product_id": 46,
+      "normalized_name": "bluetooth",
+      "selected_value": "bluetooth 5.3 wireless technology",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2337,
+      "product_id": 46,
+      "normalized_name": "аудиотехнологии",
+      "selected_value": "custom high-excursion apple driver; custom high dynamic range amplifier; active noise cancellation; adaptive audio; transparency mode; conversation awareness; voice isolation; personalized spatial audio with dynamic head tracking; adaptive eq; vent system for pressure equalization",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2338,
+      "product_id": 46,
+      "normalized_name": "воспроизведение_аудио_один_заряд_без_anc",
+      "selected_value": "up to 5 hours of listening time on a single charge with noise control off",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2339,
+      "product_id": 46,
+      "normalized_name": "воспроизведение_аудио_один_заряд_с_anc",
+      "selected_value": "up to 4 hours of listening time on a single charge with active noise cancellation enabled",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2340,
+      "product_id": 46,
+      "normalized_name": "воспроизведение_аудио_с_кейсом_без_anc",
+      "selected_value": "up to 30 hours of listening time with noise control off",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2341,
+      "product_id": 46,
+      "normalized_name": "воспроизведение_аудио_с_кейсом_с_anc",
+      "selected_value": "up to 20 hours of listening time with active noise cancellation enabled",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2342,
+      "product_id": 46,
+      "normalized_name": "датчики",
+      "selected_value": "dual beamforming microphones; inward-facing microphone; optical in-ear sensor; motion-detecting accelerometer; speech-detecting accelerometer; force sensor",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2343,
+      "product_id": 46,
+      "normalized_name": "защита_от_пыли_и_воды",
+      "selected_value": "dust, sweat, and water resistant (ip54)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2344,
+      "product_id": 46,
+      "normalized_name": "специальные_возможности",
+      "selected_value": "live listen audio; headphone levels; headphone accommodations",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2345,
+      "product_id": 46,
+      "normalized_name": "элементы_управления",
+      "selected_value": "press once to play or pause media; press once to answer a call or mute or unmute; press once for camera remote; press twice to end a call; press twice to skip forward; press three times to skip back; press and hold for siri; say \"hey siri\" or just \"siri\" to do things like play a song, make a call, or get directions; with siri interactions, nod your head yes or gently shake your head no when siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+      "selected_source": "apple_model",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:28:29+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "bluetooth",
+      "sources": {
+        "apple_model": {
+          "id": 2571,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Bluetooth",
+          "raw_value": "Bluetooth 5.3 wireless technology",
+          "section": "Connectivity",
+          "value_cell": 1,
+          "normalized_name": "bluetooth",
+          "normalized_value": "bluetooth 5.3 wireless technology",
+          "unit": "",
+          "display_value": "bluetooth 5.3 wireless technology",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Bluetooth"
+      ],
+      "display_name": "Bluetooth",
+      "resolved": {
+        "id": 2336,
+        "product_id": 46,
+        "normalized_name": "bluetooth",
+        "selected_value": "bluetooth 5.3 wireless technology",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Bluetooth 5.3 wireless technology",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Bluetooth"
+    },
+    {
+      "normalized_name": "аудиотехнологии",
+      "sources": {
+        "apple_model": {
+          "id": 2563,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Аудиотехнологии",
+          "raw_value": "Custom high-excursion Apple driver; Custom high dynamic range amplifier; Active Noise Cancellation; Adaptive Audio; Transparency mode; Conversation Awareness; Voice Isolation; Personalized Spatial Audio with dynamic head tracking; Adaptive EQ; Vent system for pressure equalization",
+          "section": "Audio Technology",
+          "value_cell": 1,
+          "normalized_name": "аудиотехнологии",
+          "normalized_value": "custom high-excursion apple driver; custom high dynamic range amplifier; active noise cancellation; adaptive audio; transparency mode; conversation awareness; voice isolation; personalized spatial audio with dynamic head tracking; adaptive eq; vent system for pressure equalization",
+          "unit": "",
+          "display_value": "custom high-excursion apple driver; custom high dynamic range amplifier; active noise cancellation; adaptive audio; transparency mode; conversation awareness; voice isolation; personalized spatial audio with dynamic head tracking; adaptive eq; vent system for pressure equalization",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Аудиотехнологии"
+      ],
+      "display_name": "Аудиотехнологии",
+      "resolved": {
+        "id": 2337,
+        "product_id": 46,
+        "normalized_name": "аудиотехнологии",
+        "selected_value": "custom high-excursion apple driver; custom high dynamic range amplifier; active noise cancellation; adaptive audio; transparency mode; conversation awareness; voice isolation; personalized spatial audio with dynamic head tracking; adaptive eq; vent system for pressure equalization",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Custom high-excursion Apple driver; Custom high dynamic range amplifier; Active Noise Cancellation; Adaptive Audio; Transparency mode; Conversation Awareness; Voice Isolation; Personalized Spatial Audio with dynamic head tracking; Adaptive EQ; Vent system for pressure equalization",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Аудиотехнологии",
+      "category_attribute_key": "Аудиотехнологии / Аудиотехнологии"
+    },
+    {
+      "normalized_name": "воспроизведение_аудио_один_заряд_без_anc",
+      "sources": {
+        "apple_model": {
+          "id": 2568,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Воспроизведение аудио: один заряд без ANC",
+          "raw_value": "Up to 5 hours of listening time on a single charge with noise control off",
+          "section": "Battery",
+          "value_cell": 1,
+          "normalized_name": "воспроизведение_аудио_один_заряд_без_anc",
+          "normalized_value": "up to 5 hours of listening time on a single charge with noise control off",
+          "unit": "",
+          "display_value": "up to 5 hours of listening time on a single charge with noise control off",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Воспроизведение аудио: один заряд без ANC"
+      ],
+      "display_name": "Воспроизведение аудио один заряд без anc",
+      "resolved": {
+        "id": 2338,
+        "product_id": 46,
+        "normalized_name": "воспроизведение_аудио_один_заряд_без_anc",
+        "selected_value": "up to 5 hours of listening time on a single charge with noise control off",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "До 5 ч of listening time on a single charge with noise control off",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Аккумулятор",
+      "category_attribute_key": "Аккумулятор / Воспроизведение аудио один заряд без anc"
+    },
+    {
+      "normalized_name": "воспроизведение_аудио_один_заряд_с_anc",
+      "sources": {
+        "apple_model": {
+          "id": 2567,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Воспроизведение аудио: один заряд с ANC",
+          "raw_value": "Up to 4 hours of listening time on a single charge with Active Noise Cancellation enabled",
+          "section": "Battery",
+          "value_cell": 1,
+          "normalized_name": "воспроизведение_аудио_один_заряд_с_anc",
+          "normalized_value": "up to 4 hours of listening time on a single charge with active noise cancellation enabled",
+          "unit": "",
+          "display_value": "up to 4 hours of listening time on a single charge with active noise cancellation enabled",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Воспроизведение аудио: один заряд с ANC"
+      ],
+      "display_name": "Воспроизведение аудио один заряд с anc",
+      "resolved": {
+        "id": 2339,
+        "product_id": 46,
+        "normalized_name": "воспроизведение_аудио_один_заряд_с_anc",
+        "selected_value": "up to 4 hours of listening time on a single charge with active noise cancellation enabled",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "До 4 ч of listening time on a single charge with Active Noise Cancellation enabled",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Аккумулятор",
+      "category_attribute_key": "Аккумулятор / Воспроизведение аудио один заряд с anc"
+    },
+    {
+      "normalized_name": "воспроизведение_аудио_с_кейсом_без_anc",
+      "sources": {
+        "apple_model": {
+          "id": 2570,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Воспроизведение аудио: с кейсом без ANC",
+          "raw_value": "Up to 30 hours of listening time with noise control off",
+          "section": "Battery",
+          "value_cell": 1,
+          "normalized_name": "воспроизведение_аудио_с_кейсом_без_anc",
+          "normalized_value": "up to 30 hours of listening time with noise control off",
+          "unit": "",
+          "display_value": "up to 30 hours of listening time with noise control off",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Воспроизведение аудио: с кейсом без ANC"
+      ],
+      "display_name": "Воспроизведение аудио с кейсом без anc",
+      "resolved": {
+        "id": 2340,
+        "product_id": 46,
+        "normalized_name": "воспроизведение_аудио_с_кейсом_без_anc",
+        "selected_value": "up to 30 hours of listening time with noise control off",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "До 30 ч of listening time with noise control off",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Аккумулятор",
+      "category_attribute_key": "Аккумулятор / Воспроизведение аудио с кейсом без anc"
+    },
+    {
+      "normalized_name": "воспроизведение_аудио_с_кейсом_с_anc",
+      "sources": {
+        "apple_model": {
+          "id": 2569,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Воспроизведение аудио: с кейсом с ANC",
+          "raw_value": "Up to 20 hours of listening time with Active Noise Cancellation enabled",
+          "section": "Battery",
+          "value_cell": 1,
+          "normalized_name": "воспроизведение_аудио_с_кейсом_с_anc",
+          "normalized_value": "up to 20 hours of listening time with active noise cancellation enabled",
+          "unit": "",
+          "display_value": "up to 20 hours of listening time with active noise cancellation enabled",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Воспроизведение аудио: с кейсом с ANC"
+      ],
+      "display_name": "Воспроизведение аудио с кейсом с anc",
+      "resolved": {
+        "id": 2341,
+        "product_id": 46,
+        "normalized_name": "воспроизведение_аудио_с_кейсом_с_anc",
+        "selected_value": "up to 20 hours of listening time with active noise cancellation enabled",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "До 20 ч of listening time with Active Noise Cancellation enabled",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Аккумулятор",
+      "category_attribute_key": "Аккумулятор / Воспроизведение аудио с кейсом с anc"
+    },
+    {
+      "normalized_name": "датчики",
+      "sources": {
+        "apple_model": {
+          "id": 2564,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Датчики",
+          "raw_value": "Dual beamforming microphones; Inward-facing microphone; Optical in-ear sensor; Motion-detecting accelerometer; Speech-detecting accelerometer; Force sensor",
+          "section": "Sensors",
+          "value_cell": 1,
+          "normalized_name": "датчики",
+          "normalized_value": "dual beamforming microphones; inward-facing microphone; optical in-ear sensor; motion-detecting accelerometer; speech-detecting accelerometer; force sensor",
+          "unit": "",
+          "display_value": "dual beamforming microphones; inward-facing microphone; optical in-ear sensor; motion-detecting accelerometer; speech-detecting accelerometer; force sensor",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Датчики"
+      ],
+      "display_name": "Датчики",
+      "resolved": {
+        "id": 2342,
+        "product_id": 46,
+        "normalized_name": "датчики",
+        "selected_value": "dual beamforming microphones; inward-facing microphone; optical in-ear sensor; motion-detecting accelerometer; speech-detecting accelerometer; force sensor",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Dual beamforming microphones; Inward-facing microphone; Optical in-ear sensor; Motion-detecting accelerometer; Speech-detecting accelerometer; Force sensor",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Датчики",
+      "category_attribute_key": "Датчики / Датчики"
+    },
+    {
+      "normalized_name": "защита_от_пыли_и_воды",
+      "sources": {
+        "apple_model": {
+          "id": 2566,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Защита от пыли и воды",
+          "raw_value": "Dust, sweat, and water resistant (IP54)",
+          "section": "Dust, Sweat, and Water Resistant",
+          "value_cell": 1,
+          "normalized_name": "защита_от_пыли_и_воды",
+          "normalized_value": "dust, sweat, and water resistant (ip54)",
+          "unit": "",
+          "display_value": "dust, sweat, and water resistant (ip54)",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Защита от пыли и воды"
+      ],
+      "display_name": "Защита от пыли и воды",
+      "resolved": {
+        "id": 2343,
+        "product_id": 46,
+        "normalized_name": "защита_от_пыли_и_воды",
+        "selected_value": "dust, sweat, and water resistant (ip54)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Dust, sweat, and water resistant (IP54)",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Защита от пыли, пота и воды",
+      "category_attribute_key": "Защита от пыли, пота и воды / Защита от пыли и воды"
+    },
+    {
+      "normalized_name": "специальные_возможности",
+      "sources": {
+        "apple_model": {
+          "id": 2572,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Специальные возможности",
+          "raw_value": "Live Listen audio; Headphone levels; Headphone Accommodations",
+          "section": "Accessibility",
+          "value_cell": 1,
+          "normalized_name": "специальные_возможности",
+          "normalized_value": "live listen audio; headphone levels; headphone accommodations",
+          "unit": "",
+          "display_value": "live listen audio; headphone levels; headphone accommodations",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Специальные возможности"
+      ],
+      "display_name": "Специальные возможности",
+      "resolved": {
+        "id": 2344,
+        "product_id": 46,
+        "normalized_name": "специальные_возможности",
+        "selected_value": "live listen audio; headphone levels; headphone accommodations",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Live Listen audio; Headphone levels; Headphone Accommodations",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Специальные возможности",
+      "category_attribute_key": "Специальные возможности / Специальные возможности"
+    },
+    {
+      "normalized_name": "элементы_управления",
+      "sources": {
+        "apple_model": {
+          "id": 2565,
+          "product_id": 46,
+          "source_page_id": 122,
+          "source_key": "apple_model",
+          "site_name": "Apple Tech Specs",
+          "raw_name": "Элементы управления",
+          "raw_value": "Press once to play or pause media; Press once to answer a call or mute or unmute; Press once for camera remote; Press twice to end a call; Press twice to skip forward; Press three times to skip back; Press and hold for Siri; Say \"Hey Siri\" or just \"Siri\" to do things like play a song, make a call, or get directions; With Siri Interactions, nod your head yes or gently shake your head no when Siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+          "section": "Controls",
+          "value_cell": 1,
+          "normalized_name": "элементы_управления",
+          "normalized_value": "press once to play or pause media; press once to answer a call or mute or unmute; press once for camera remote; press twice to end a call; press twice to skip forward; press three times to skip back; press and hold for siri; say \"hey siri\" or just \"siri\" to do things like play a song, make a call, or get directions; with siri interactions, nod your head yes or gently shake your head no when siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+          "unit": "",
+          "display_value": "press once to play or pause media; press once to answer a call or mute or unmute; press once for camera remote; press twice to end a call; press twice to skip forward; press three times to skip back; press and hold for siri; say \"hey siri\" or just \"siri\" to do things like play a song, make a call, or get directions; with siri interactions, nod your head yes or gently shake your head no when siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+          "display_source": "Apple Tech Specs"
+        }
+      },
+      "raw_names": [
+        "Элементы управления"
+      ],
+      "display_name": "Элементы управления",
+      "resolved": {
+        "id": 2345,
+        "product_id": 46,
+        "normalized_name": "элементы_управления",
+        "selected_value": "press once to play or pause media; press once to answer a call or mute or unmute; press once for camera remote; press twice to end a call; press twice to skip forward; press three times to skip back; press and hold for siri; say \"hey siri\" or just \"siri\" to do things like play a song, make a call, or get directions; with siri interactions, nod your head yes or gently shake your head no when siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Параметр точной модели Apple; конфигурационные варианты исключены, размер и тип подключения проверены отдельно.",
+        "selected_source": "apple_model",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:28:29+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Press once to play or pause media; Press once to answer a call or mute or unmute; Press once for camera remote; Press twice to end a call; Press twice to skip forward; Press three times to skip back; Press and hold for Siri; Say \"Hey Siri\" or just \"Siri\" to do things like play a song, make a call, or get directions; With Siri Interactions, nod your head yes or gently shake your head no when Siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+        "display_status": "Подтверждено для точной модели Apple",
+        "display_source": "apple_model"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Controls",
+      "category_attribute_key": "Controls / Элементы управления"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1667,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "url": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png",
+      "asset_key": "b4387589d444a8e6df99c38d5c94993a52bf8d3229230a08584ada27b7ff3fcc",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:28:29+00:00",
+      "verified_width": 1000,
+      "verified_height": 1000,
+      "verified_bytes": 206662,
+      "verified_format": "PNG",
+      "site_name": "Apple Tech Specs"
+    }
+  ],
+  "all_official_gallery": [
+    {
+      "id": 1667,
+      "product_id": 46,
+      "source_page_id": 122,
+      "source_key": "apple_model",
+      "url": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png",
+      "asset_key": "b4387589d444a8e6df99c38d5c94993a52bf8d3229230a08584ada27b7ff3fcc",
+      "kind": "product_gallery",
+      "width": 1000,
+      "height": 1000,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:28:29+00:00",
+      "verified_width": 1000,
+      "verified_height": 1000,
+      "verified_bytes": 206662,
+      "verified_format": "PNG",
+      "site_name": "Apple Tech Specs",
+      "normalized_asset": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:28:31.808149+00:00",
+      "size_bytes": 206662,
+      "format": "PNG",
+      "content_type": "image/png",
+      "effective_content_type": "image/png",
+      "sha256": "b306b32a46b0b2dacc23b6bfa159ce645207df2bcf406a6207695ec8827368f1",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\b306b32a46b0b2dacc23b6bfa159ce645207df2bcf406a6207695ec8827368f1.img",
+      "verified_url": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://support.apple.com/en-us/121204",
+      "aliases": []
+    }
+  ],
+  "photo_evidence": {
+    "entries": {
+      "apple_model / b4387589d444a8e6df99c38d5c94993a52bf8d3229230a08584ada27b7ff3fcc / https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png": {
+        "url": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png",
+        "source_key": "apple_model",
+        "asset_key": "b4387589d444a8e6df99c38d5c94993a52bf8d3229230a08584ada27b7ff3fcc",
+        "normalized_asset": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:28:31.808149+00:00",
+        "width": 1000,
+        "height": 1000,
+        "size_bytes": 206662,
+        "format": "PNG",
+        "content_type": "image/png",
+        "effective_content_type": "image/png",
+        "sha256": "b306b32a46b0b2dacc23b6bfa159ce645207df2bcf406a6207695ec8827368f1",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\b306b32a46b0b2dacc23b6bfa159ce645207df2bcf406a6207695ec8827368f1.img",
+        "verified_url": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png"
+      }
+    },
+    "last_completion": {
+      "budget_seconds": 180,
+      "results": [
+        {
+          "url": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121204-airpods-4-anc.png",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "b306b32a46b0b2dacc23b6bfa159ce645207df2bcf406a6207695ec8827368f1"
+        }
+      ]
+    }
+  },
+  "documents": [],
+  "evidence": {
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_part_number",
+      "variant": "unproven",
+      "part_number": "MXP93LL/A",
+      "hardware_model_numbers": []
+    },
+    "raw_specs": [],
+    "configuration_candidates": [
+      {
+        "section": "Live Translation",
+        "raw_label": "Live Translation",
+        "value": "Live Translation for communicating across languages",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "Chip",
+        "raw_label": "Chip",
+        "value": "H2 headphone chip",
+        "reason": "chip metadata"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "AirPods 4 with Active Noise Cancellation (Each)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Height: 1.19 inches (30.2 mm)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Width: 0.72 inch (18.3 mm)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Depth: 0.71 inch (18.1 mm)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Weight: 0.15 ounce (4.3 grams)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Charging Case (USB-C) with speaker",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Height: 1.82 inches (46.2 mm)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Width: 1.97 inches (50.1 mm)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Depth: 0.83 inch (21.2 mm)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Size and Weight",
+        "raw_label": "Size and Weight",
+        "value": "Weight: 1.22 ounces (34.7 grams)",
+        "reason": "Earbud/case component dimensions require separate routing"
+      },
+      {
+        "section": "Charging Case",
+        "raw_label": "Charging Case",
+        "value": "Works with USB-C connector, Apple Watch charger, or Qi‑certified chargers",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "Charging Case",
+        "raw_label": "Charging Case",
+        "value": "Includes a speaker for use with Find My proximity view",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "Battery",
+        "raw_label": "Battery",
+        "value": "AirPods 4 with Active Noise Cancellation",
+        "reason": "power/accessory metadata"
+      },
+      {
+        "section": "Battery",
+        "raw_label": "Battery",
+        "value": "AirPods 4 with Active Noise Cancellation and Charging Case (USB‑C)",
+        "reason": "power/accessory metadata"
+      },
+      {
+        "section": "Battery",
+        "raw_label": "Battery",
+        "value": "5 minutes in the case provides around 1 hour of listening time",
+        "reason": "power/accessory metadata"
+      },
+      {
+        "section": "In the Box",
+        "raw_label": "In the Box",
+        "value": "AirPods 4 with Active Noise Cancellation",
+        "reason": "configuration-sensitive family option"
+      },
+      {
+        "section": "In the Box",
+        "raw_label": "In the Box",
+        "value": "Charging Case (USB-C) with speaker",
+        "reason": "configuration-sensitive family option"
+      },
+      {
+        "section": "In the Box",
+        "raw_label": "In the Box",
+        "value": "Documentation",
+        "reason": "configuration-sensitive family option"
+      },
+      {
+        "section": "In the Box",
+        "raw_label": "In the Box",
+        "value": "USB-C Charge Cable sold separately",
+        "reason": "configuration-sensitive family option"
+      },
+      {
+        "section": "Accessibility",
+        "raw_label": "Accessibility",
+        "value": "Accessibility features help people with disabilities get the most out of their new AirPods.",
+        "reason": "Support/marketing or conditional statement; retained raw"
+      },
+      {
+        "section": "Accessibility",
+        "raw_label": "Accessibility",
+        "value": "Features include:",
+        "reason": "Support/marketing or conditional statement; retained raw"
+      },
+      {
+        "section": "System Requirements",
+        "raw_label": "System Requirements",
+        "value": "iPhone models with the latest version of iOS",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "System Requirements",
+        "raw_label": "System Requirements",
+        "value": "iPad models with the latest version of iPadOS",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "System Requirements",
+        "raw_label": "System Requirements",
+        "value": "Apple Watch models with the latest version of watchOS",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "System Requirements",
+        "raw_label": "System Requirements",
+        "value": "Mac models with the latest version of macOS",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "System Requirements",
+        "raw_label": "System Requirements",
+        "value": "Apple TV models with the latest version of tvOS",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "System Requirements",
+        "raw_label": "System Requirements",
+        "value": "Apple Vision Pro with the latest version of visionOS",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "System Requirements",
+        "raw_label": "System Requirements",
+        "value": "AirPods can be used as wireless Bluetooth headphones with Apple devices using earlier software and with non‑Apple devices, but functionality may be limited.",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "AirPods are designed to reduce environmental impact:",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "Materials",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "100% recycled tin in the solder of multiple printed circuit boards",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "100% recycled gold in the plating of multiple printed circuit boards",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "100% recycled copper plating salts on multiple printed circuit boards",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "100% recycled rare earth elements in all magnets",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "50% recycled plastic in three parts",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "100% fiber-based packaging",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "Energy",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "Meets U.S. Department of Energy requirements for battery charger systems",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "Waste",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "No established final assembly sites generate waste sent to landfill as part of Apple’s Zero Waste Program",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "Smarter chemistry",
+        "reason": "feature not yet canonically mapped"
+      },
+      {
+        "section": "AirPods and the Environment",
+        "raw_label": "AirPods and the Environment",
+        "value": "Mercury-, BFR-, and PVC-free",
+        "reason": "feature not yet canonically mapped"
+      }
+    ],
+    "photo_candidates": [],
+    "manual_status": "Не проверена",
+    "manuals": [],
+    "catalog_identity": {
+      "url": "https://www.apple.com/education/purchase/contracts/docs/NASPO_PSS_Apple_Branded.pdf",
+      "sha256": "551a7a0255c7697eb97fb4536538aaa3fab362a2d8356667071c30899ee04ab7",
+      "rows": [
+        {
+          "page": 8,
+          "description": [
+            "AirPods 4 with Active Noise Cancellation"
+          ]
+        }
+      ]
+    },
+    "query_variants": [
+      "MXP93LL/A",
+      "AirPods 4 with Active Noise Cancellation White",
+      "site:apple.com \"MXP93LL/A\""
+    ],
+    "model_key": "airpods4anc",
+    "model_name": "AirPods 4 with Active Noise Cancellation",
+    "configuration_fields": {
+      "storefront_region": "us"
+    },
+    "storefront_region": "us",
+    "model_evidence": {
+      "url": "https://support.apple.com/en-us/121204",
+      "model_key": "airpods4anc",
+      "raw_specs": [
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Custom high-excursion Apple driver"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Custom high dynamic range amplifier"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Active Noise Cancellation"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Adaptive Audio"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Transparency mode"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Conversation Awareness"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Voice Isolation"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Personalized Spatial Audio with dynamic head tracking"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Adaptive EQ"
+        },
+        {
+          "section": "Audio Technology",
+          "raw_label": "Audio Technology",
+          "value": "Vent system for pressure equalization"
+        },
+        {
+          "section": "Live Translation",
+          "raw_label": "Live Translation",
+          "value": "Live Translation for communicating across languages"
+        },
+        {
+          "section": "Sensors",
+          "raw_label": "Sensors",
+          "value": "Dual beamforming microphones"
+        },
+        {
+          "section": "Sensors",
+          "raw_label": "Sensors",
+          "value": "Inward-facing microphone"
+        },
+        {
+          "section": "Sensors",
+          "raw_label": "Sensors",
+          "value": "Optical in-ear sensor"
+        },
+        {
+          "section": "Sensors",
+          "raw_label": "Sensors",
+          "value": "Motion-detecting accelerometer"
+        },
+        {
+          "section": "Sensors",
+          "raw_label": "Sensors",
+          "value": "Speech-detecting accelerometer"
+        },
+        {
+          "section": "Sensors",
+          "raw_label": "Sensors",
+          "value": "Force sensor"
+        },
+        {
+          "section": "Chip",
+          "raw_label": "Chip",
+          "value": "H2 headphone chip"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Press once to play or pause media"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Press once to answer a call or mute or unmute"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Press once for camera remote"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Press twice to end a call"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Press twice to skip forward"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Press three times to skip back"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Press and hold for Siri"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "Say \"Hey Siri\" or just \"Siri\" to do things like play a song, make a call, or get directions"
+        },
+        {
+          "section": "Controls",
+          "raw_label": "Controls",
+          "value": "With Siri Interactions, nod your head yes or gently shake your head no when Siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more"
+        },
+        {
+          "section": "Dust, Sweat, and Water Resistant",
+          "raw_label": "Dust, Sweat, and Water Resistant",
+          "value": "Dust, sweat, and water resistant (IP54)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "AirPods 4 with Active Noise Cancellation (Each)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Height: 1.19 inches (30.2 mm)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Width: 0.72 inch (18.3 mm)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Depth: 0.71 inch (18.1 mm)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Weight: 0.15 ounce (4.3 grams)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Charging Case (USB-C) with speaker"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Height: 1.82 inches (46.2 mm)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Width: 1.97 inches (50.1 mm)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Depth: 0.83 inch (21.2 mm)"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Weight: 1.22 ounces (34.7 grams)"
+        },
+        {
+          "section": "Charging Case",
+          "raw_label": "Charging Case",
+          "value": "Works with USB-C connector, Apple Watch charger, or Qi‑certified chargers"
+        },
+        {
+          "section": "Charging Case",
+          "raw_label": "Charging Case",
+          "value": "Includes a speaker for use with Find My proximity view"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "AirPods 4 with Active Noise Cancellation"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "Up to 4 hours of listening time on a single charge with Active Noise Cancellation enabled"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "Up to 5 hours of listening time on a single charge with noise control off"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "AirPods 4 with Active Noise Cancellation and Charging Case (USB‑C)"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "Up to 20 hours of listening time with Active Noise Cancellation enabled"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "Up to 30 hours of listening time with noise control off"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "5 minutes in the case provides around 1 hour of listening time"
+        },
+        {
+          "section": "Connectivity",
+          "raw_label": "Connectivity",
+          "value": "Bluetooth 5.3 wireless technology"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "AirPods 4 with Active Noise Cancellation"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "Charging Case (USB-C) with speaker"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "Documentation"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "USB-C Charge Cable sold separately"
+        },
+        {
+          "section": "Accessibility",
+          "raw_label": "Accessibility",
+          "value": "Accessibility features help people with disabilities get the most out of their new AirPods."
+        },
+        {
+          "section": "Accessibility",
+          "raw_label": "Accessibility",
+          "value": "Features include:"
+        },
+        {
+          "section": "Accessibility",
+          "raw_label": "Accessibility",
+          "value": "Live Listen audio"
+        },
+        {
+          "section": "Accessibility",
+          "raw_label": "Accessibility",
+          "value": "Headphone levels"
+        },
+        {
+          "section": "Accessibility",
+          "raw_label": "Accessibility",
+          "value": "Headphone Accommodations"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "iPhone models with the latest version of iOS"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "iPad models with the latest version of iPadOS"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Apple Watch models with the latest version of watchOS"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Mac models with the latest version of macOS"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Apple TV models with the latest version of tvOS"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Apple Vision Pro with the latest version of visionOS"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "AirPods can be used as wireless Bluetooth headphones with Apple devices using earlier software and with non‑Apple devices, but functionality may be limited."
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "AirPods are designed to reduce environmental impact:"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Materials"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled tin in the solder of multiple printed circuit boards"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled gold in the plating of multiple printed circuit boards"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled copper plating salts on multiple printed circuit boards"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled rare earth elements in all magnets"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "50% recycled plastic in three parts"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% fiber-based packaging"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Energy"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Meets U.S. Department of Energy requirements for battery charger systems"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Waste"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "No established final assembly sites generate waste sent to landfill as part of Apple’s Zero Waste Program"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Smarter chemistry"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Mercury-, BFR-, and PVC-free"
+        }
+      ],
+      "candidates": [
+        {
+          "section": "Live Translation",
+          "raw_label": "Live Translation",
+          "value": "Live Translation for communicating across languages",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "Chip",
+          "raw_label": "Chip",
+          "value": "H2 headphone chip",
+          "reason": "chip metadata"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "AirPods 4 with Active Noise Cancellation (Each)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Height: 1.19 inches (30.2 mm)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Width: 0.72 inch (18.3 mm)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Depth: 0.71 inch (18.1 mm)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Weight: 0.15 ounce (4.3 grams)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Charging Case (USB-C) with speaker",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Height: 1.82 inches (46.2 mm)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Width: 1.97 inches (50.1 mm)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Depth: 0.83 inch (21.2 mm)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Size and Weight",
+          "raw_label": "Size and Weight",
+          "value": "Weight: 1.22 ounces (34.7 grams)",
+          "reason": "Earbud/case component dimensions require separate routing"
+        },
+        {
+          "section": "Charging Case",
+          "raw_label": "Charging Case",
+          "value": "Works with USB-C connector, Apple Watch charger, or Qi‑certified chargers",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "Charging Case",
+          "raw_label": "Charging Case",
+          "value": "Includes a speaker for use with Find My proximity view",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "AirPods 4 with Active Noise Cancellation",
+          "reason": "power/accessory metadata"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "AirPods 4 with Active Noise Cancellation and Charging Case (USB‑C)",
+          "reason": "power/accessory metadata"
+        },
+        {
+          "section": "Battery",
+          "raw_label": "Battery",
+          "value": "5 minutes in the case provides around 1 hour of listening time",
+          "reason": "power/accessory metadata"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "AirPods 4 with Active Noise Cancellation",
+          "reason": "configuration-sensitive family option"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "Charging Case (USB-C) with speaker",
+          "reason": "configuration-sensitive family option"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "Documentation",
+          "reason": "configuration-sensitive family option"
+        },
+        {
+          "section": "In the Box",
+          "raw_label": "In the Box",
+          "value": "USB-C Charge Cable sold separately",
+          "reason": "configuration-sensitive family option"
+        },
+        {
+          "section": "Accessibility",
+          "raw_label": "Accessibility",
+          "value": "Accessibility features help people with disabilities get the most out of their new AirPods.",
+          "reason": "Support/marketing or conditional statement; retained raw"
+        },
+        {
+          "section": "Accessibility",
+          "raw_label": "Accessibility",
+          "value": "Features include:",
+          "reason": "Support/marketing or conditional statement; retained raw"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "iPhone models with the latest version of iOS",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "iPad models with the latest version of iPadOS",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Apple Watch models with the latest version of watchOS",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Mac models with the latest version of macOS",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Apple TV models with the latest version of tvOS",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "Apple Vision Pro with the latest version of visionOS",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "System Requirements",
+          "raw_label": "System Requirements",
+          "value": "AirPods can be used as wireless Bluetooth headphones with Apple devices using earlier software and with non‑Apple devices, but functionality may be limited.",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "AirPods are designed to reduce environmental impact:",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Materials",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled tin in the solder of multiple printed circuit boards",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled gold in the plating of multiple printed circuit boards",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled copper plating salts on multiple printed circuit boards",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% recycled rare earth elements in all magnets",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "50% recycled plastic in three parts",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "100% fiber-based packaging",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Energy",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Meets U.S. Department of Energy requirements for battery charger systems",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Waste",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "No established final assembly sites generate waste sent to landfill as part of Apple’s Zero Waste Program",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Smarter chemistry",
+          "reason": "feature not yet canonically mapped"
+        },
+        {
+          "section": "AirPods and the Environment",
+          "raw_label": "AirPods and the Environment",
+          "value": "Mercury-, BFR-, and PVC-free",
+          "reason": "feature not yet canonically mapped"
+        }
+      ],
+      "admitted": [
+        {
+          "name": "Аудиотехнологии",
+          "value": "Custom high-excursion Apple driver; Custom high dynamic range amplifier; Active Noise Cancellation; Adaptive Audio; Transparency mode; Conversation Awareness; Voice Isolation; Personalized Spatial Audio with dynamic head tracking; Adaptive EQ; Vent system for pressure equalization",
+          "scope": "model-stable",
+          "section": "Audio Technology"
+        },
+        {
+          "name": "Датчики",
+          "value": "Dual beamforming microphones; Inward-facing microphone; Optical in-ear sensor; Motion-detecting accelerometer; Speech-detecting accelerometer; Force sensor",
+          "scope": "model-stable",
+          "section": "Sensors"
+        },
+        {
+          "name": "Элементы управления",
+          "value": "Press once to play or pause media; Press once to answer a call or mute or unmute; Press once for camera remote; Press twice to end a call; Press twice to skip forward; Press three times to skip back; Press and hold for Siri; Say \"Hey Siri\" or just \"Siri\" to do things like play a song, make a call, or get directions; With Siri Interactions, nod your head yes or gently shake your head no when Siri asks if you want to answer an incoming call, hear a text message, manage notifications, and more",
+          "scope": "model-stable",
+          "section": "Controls"
+        },
+        {
+          "name": "Защита от пыли и воды",
+          "value": "Dust, sweat, and water resistant (IP54)",
+          "scope": "model-stable",
+          "section": "Dust, Sweat, and Water Resistant"
+        },
+        {
+          "name": "Воспроизведение аудио: один заряд с ANC",
+          "value": "Up to 4 hours of listening time on a single charge with Active Noise Cancellation enabled",
+          "scope": "model-stable",
+          "section": "Battery"
+        },
+        {
+          "name": "Воспроизведение аудио: один заряд без ANC",
+          "value": "Up to 5 hours of listening time on a single charge with noise control off",
+          "scope": "model-stable",
+          "section": "Battery"
+        },
+        {
+          "name": "Воспроизведение аудио: с кейсом с ANC",
+          "value": "Up to 20 hours of listening time with Active Noise Cancellation enabled",
+          "scope": "model-stable",
+          "section": "Battery"
+        },
+        {
+          "name": "Воспроизведение аудио: с кейсом без ANC",
+          "value": "Up to 30 hours of listening time with noise control off",
+          "scope": "model-stable",
+          "section": "Battery"
+        },
+        {
+          "name": "Bluetooth",
+          "value": "Bluetooth 5.3 wireless technology",
+          "scope": "model-stable",
+          "section": "Connectivity"
+        },
+        {
+          "name": "Специальные возможности",
+          "value": "Live Listen audio; Headphone levels; Headphone Accommodations",
+          "scope": "model-stable",
+          "section": "Accessibility"
+        }
+      ]
+    },
+    "exact_photo_assets": [
+      "b4387589d444a8e6df99c38d5c94993a52bf8d3229230a08584ada27b7ff3fcc"
+    ],
+    "photo_scope": "exact_model; catalog publishes no SKU color field",
+    "configuration_complete": true
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_part_number",
+      "variant": "unproven",
+      "part_number": "MXP93LL/A",
+      "hardware_model_numbers": []
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 10,
+    "model_specs": 10,
+    "configuration_fields": {
+      "storefront_region": "us"
+    },
+    "gaps": [
+      "manual_unverified"
+    ],
+    "official_exact_regions": [
+      "apple_model"
+    ],
+    "instruction": {
+      "russian": false
+    },
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_part_number",
+      "variant": "unproven",
+      "part_number": "MXP93LL/A",
+      "hardware_model_numbers": []
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 10,
+    "model_specs": 10,
+    "configuration_fields": {
+      "storefront_region": "us"
+    },
+    "gaps": [
+      "manual_unverified"
+    ],
+    "official_exact_regions": [
+      "apple_model"
+    ],
+    "instruction": {
+      "russian": false
+    }
+  },
+  "trace": []
+}

@@ -31,7 +31,7 @@ def region_matches(requested, source):
 
 def fact_scope(label, value='', section=''):
     text = label.casefold()
-    if text in {'display colours', 'display colors', 'color gamut', 'color depth','storage temperature'}:
+    if text in {'display colours', 'display colors', 'color gamut', 'color depth','storage temperature','storage humidity','тип оперативной памяти','тип накопителя'}:
         return 'model'
     if re.search(r'storage|\bram\b|memory|colour|color|bundle|edition|sku|part number|цвет|памят', text):
         return 'configuration'

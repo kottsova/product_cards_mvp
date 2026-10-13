@@ -318,6 +318,20 @@ def normalize_value(name: str, value: str, *, value_cell: bool | None = None) ->
 def normalize_fact(fact: RawAttribute) -> NormalizedFact:
     name = normalize_name(fact.name, fact.section)
     value, unit = normalize_value(fact.name, fact.value, value_cell=fact.value_cell)
+    bare=clean_text(fact.name).casefold()
+    if bare in {'без упаковки','в упаковке','without packaging','with packaging'} and _DIMENSION_VALUE.fullmatch(clean_text(fact.value)):
+        order=_axis_order(fact.section)
+        written_unit=re.search(r'(?<![а-яa-z])(мм|mm|см|cm)(?![а-яa-z])|(?:[гdh])\s*(мм|mm)\b',fact.section,re.I)
+        if len(order)==3 and written_unit:
+            name='product_dimensions' if bare in {'без упаковки','without packaging'} else 'package_dimensions'
+            u=next(x for x in written_unit.groups() if x)
+            parsed=_normalize_dimensions('Dimensions ('+' x '.join(order)+')',fact.value+' '+u)
+            if parsed:value,unit=parsed
+    # A dash can negate an availability feature, but is not a numeric value
+    # or a product color. Preserve the raw cell as unknown in typed fields.
+    if unit=='bool' and value=='false' and name!='color_material_option' and re.search(
+            r'^(?:цвет|color|colour|вес|масса|об[ъь]ем|ёмкост|емкост|размер|габарит|ширин|высот|глубин|weight|dimensions)|\((?:кг|kg|г|g|л|l|мл|ml|мм|mm|вт|w|па|pa)\)',fact.name,re.I):
+        value,unit='unknown','unknown'
     if name == "тип__drying" and re.search(r"конденсац|конденсатора", _cleaned(fact.value)):
         value, unit = "condensing dryer", ""
     # A version and an availability marker in Bluetooth rows are different concepts.
@@ -331,7 +345,7 @@ def normalize_fact(fact: RawAttribute) -> NormalizedFact:
     words = _cleaned(fact.name).split()
     if len(words) >= 2 and _cleaned(fact.value) == words[0] and words[0].endswith(("ая", "ый", "ое", "ие")):
         value, unit = "true", "bool"
-    if not _mapped(_cleaned(fact.name)):
+    if name not in {'product_dimensions','package_dimensions'} and not _mapped(_cleaned(fact.name)):
         # An unmapped name (a spec row named only by the part, e.g. "Главный" / "Сабвуфер") that carries a size in one row and a
         # weight in the next: the kind of the value says which quantity it is.
         raw = clean_text(fact.value)

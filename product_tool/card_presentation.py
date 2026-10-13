@@ -15,7 +15,7 @@ OFFICIAL += ('xbox_model','xbox_configuration','xbox_hardware')
 OFFICIAL += ('razer_model','razer_configuration')
 OFFICIAL += ('xiaomi_model','xiaomi_region','xiaomi_configuration')
 OFFICIAL += ('dreame_model',)
-OFFICIAL += ('electrolux',)
+OFFICIAL += ('electrolux','hyperx','playstation','playstation_model','playstation_hardware')
 
 
 def _clean_label(raw: str) -> str:
@@ -195,8 +195,17 @@ def present_card_rows(
         if row.get("jbl_presentation"):
             from .jbl_presentation import section as jbl_section
             section = jbl_section(section)
+        if row.get('canonical_presentation'):
+            original_label=original['display_name']
+            from .canonical_attributes import label_ru,parent_group
+            row['display_name']=label_ru(original_label)
+            section=original.get('parent_group') or parent_group(section)
+            resolved=row.get('resolved') or {}
+            if resolved and not resolved.get('conflict'):
+                selected=resolved.get('selected_source')
+                row['sources']={key:({**fact,'display_value':resolved['display_value']} if key==selected else fact) for key,fact in row['sources'].items()}
         row["section_name"] = section.strip().lower().capitalize() if section.isupper() and not section.startswith("SMART") else section.strip()
-        if row.get('electrolux_presentation') and chosen:
+        if row.get('electrolux_presentation') and chosen and not row.get('canonical_presentation'):
             row['display_name']=chosen.get('raw_name') or row['display_name']
         row["role"] = _role(category, row)
         if row.get('hyperx_presentation') and (chosen or {}).get('raw_name') in {'Game Mode','Backlight','Light Effects','Audio Controls'}:
@@ -204,7 +213,7 @@ def present_card_rows(
         row["compact_status"] = _compact_status(row)
         row["evidence_facts"] = []
         seen_fact_ids: set[int] = set()
-        for key in (row.get("derived_from") or row["normalized_name"], row.get("refined_from")):
+        for key in (row.get("derived_from") or row["normalized_name"], row.get("refined_from"),*row.get('derived_from_names',[])):
             for fact in raw_by_name.get(key, []):
                 if fact["id"] not in seen_fact_ids:
                     row["evidence_facts"].append({

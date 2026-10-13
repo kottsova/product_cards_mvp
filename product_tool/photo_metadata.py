@@ -95,7 +95,8 @@ def image_dimensions(data: bytes) -> tuple[int, int, str] | None:
     return None
 
 
-def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying=None) -> dict[str, int | str]:
+def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying=None,
+                        full_verification=False, save_dir: Path | None=None) -> dict[str, int | str]:
     """One bounded policy-aware GET of an already saved image; no discovery."""
     allowed = ALLOWED_BY_SOURCE.get(source_key, ())
     host = (urlsplit(url).hostname or "").casefold()
@@ -114,31 +115,50 @@ def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying
         raise ValueError("Image exceeds the 8 MB measurement limit.")
     data = response.text.encode("latin-1")
     content_type=next((v for k,v in response.headers.items() if k.casefold()=='content-type'),'').split(';',1)[0].strip().lower()
-    binary_image=content_type=='application/octet-stream' and source_key in {'hyperx','xiaomi_model','dreame_model','electrolux'}
-    if content_type not in {'image/png','image/jpeg','image/webp'} and not binary_image:
+    binary_image=content_type=='application/octet-stream' and (full_verification or source_key in {'hyperx','xiaomi_model','dreame_model','electrolux'})
+    extra_types={'image/gif','image/avif','image/tiff','image/bmp'} if full_verification else set()
+    if content_type not in {'image/png','image/jpeg','image/webp'}|extra_types and not binary_image:
         raise ValueError('Image response has an unsupported content-type.')
     dimensions = image_dimensions(data)
+    if not dimensions and full_verification:
+        from PIL import Image
+        try:
+            with Image.open(BytesIO(data)) as decoded:
+                if decoded.format in {'GIF','AVIF','TIFF','BMP'}:dimensions=(*decoded.size,decoded.format)
+        except Exception:pass
     if not dimensions:
         raise ValueError("Image bytes do not contain a supported PNG, JPG or WEBP header.")
     width, height, image_format = dimensions
-    if source_key not in {'hyperx','xiaomi_model','dreame_model','electrolux'}:
+    if not full_verification and source_key not in {'hyperx','xiaomi_model','dreame_model','electrolux'}:
         return {"width":width,"height":height,"size_bytes":len(data),"format":image_format}
     from PIL import Image
     try:
         with Image.open(BytesIO(data)) as decoded:
             decoded.verify()
-            if decoded.size!=(width,height) or decoded.format not in {'PNG','JPEG','WEBP'}:raise ValueError('Image header/content mismatch')
+            supported={'PNG','JPEG','WEBP'}|({'GIF','AVIF','TIFF','BMP'} if full_verification else set())
+            if decoded.size!=(width,height) or decoded.format not in supported:raise ValueError('Image header/content mismatch')
         with Image.open(BytesIO(data)) as decoded:
             decoded.load()
-            extrema=decoded.convert('RGB').getextrema()
-            if all(lo==hi for lo,hi in extrema):raise ValueError('Blank placeholder image')
-            if decoded.mode=='RGBA' and decoded.getchannel('A').getextrema()[1]==0:raise ValueError('Transparent placeholder image')
+            samples={0}
+            if full_verification and getattr(decoded,'n_frames',1)>1:samples.update({decoded.n_frames//2,decoded.n_frames-1})
+            blank=True
+            for frame in sorted(samples):
+                decoded.seek(frame);decoded.load();extrema=decoded.convert('RGB').getextrema()
+                transparent=decoded.mode=='RGBA' and decoded.getchannel('A').getextrema()[1]==0
+                if not transparent and any(lo!=hi for lo,hi in extrema):blank=False
+            if blank:raise ValueError('Blank or transparent placeholder image')
     except Exception as exc:
         raise ValueError('Image bytes failed decoding verification.') from exc
     if width<64 or height<64:
         raise ValueError('Image is too small to be a product render.')
-    effective_type={'PNG':'image/png','JPG':'image/jpeg','WEBP':'image/webp'}[image_format]
+    effective_type={'PNG':'image/png','JPG':'image/jpeg','WEBP':'image/webp','GIF':'image/gif','AVIF':'image/avif','TIFF':'image/tiff','BMP':'image/bmp'}[image_format]
     if effective_type!=content_type and not binary_image:
         raise ValueError('Image format/content-type mismatch.')
     import hashlib
-    return {"width": width, "height": height, "size_bytes": len(data), "format": image_format, "content_type":content_type,"effective_content_type":effective_type,"sha256":hashlib.sha256(data).hexdigest()}
+    measured={"width": width, "height": height, "size_bytes": len(data), "format": image_format, "content_type":content_type,"effective_content_type":effective_type,"sha256":hashlib.sha256(data).hexdigest()}
+    if save_dir is not None:
+        destination=Path(save_dir);destination.mkdir(parents=True,exist_ok=True)
+        file=destination/(measured['sha256']+'.img')
+        if not file.exists():file.write_bytes(data)
+        measured['saved_file']=str(file)
+    return measured

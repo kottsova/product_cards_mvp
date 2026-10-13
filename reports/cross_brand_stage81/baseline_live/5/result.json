@@ -1,0 +1,3775 @@
+{
+  "input": {
+    "id": 5,
+    "brand": "JBL",
+    "dispatch_brand": "JBL",
+    "article": "JBLTBUDSBLK",
+    "model": "JBL Tune Buds Black",
+    "name": "JBL Tune Buds Black",
+    "category": "Наушники TWS",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/jbl_stage62/dataset_frozen.json",
+    "original_input": {
+      "article": "JBLTBUDSBLK",
+      "name": "JBL Tune Buds Black",
+      "category": "tws"
+    }
+  },
+  "observed_at": "2026-10-13T08:57:34.206371+00:00",
+  "seconds": 3.07,
+  "job": {
+    "id": "a79e480524d7443ca4cc8387c4410e95",
+    "product_id": 5,
+    "status": "done",
+    "current_stage": 1,
+    "message": "JBL: Готова. Русская пользовательская инструкция не подтверждена",
+    "created_at": "2026-10-13T08:57:31+00:00",
+    "updated_at": "2026-10-13T08:57:34+00:00",
+    "started_at": "2026-10-13T08:57:31+00:00",
+    "finished_at": "2026-10-13T08:57:34+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 5,
+      "product_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "url": "https://id.jbl.com/in-ear-headphones/JBLTBUDSBLK.html",
+      "found_model": "JBLTBUDSBLK",
+      "match_level": "full_sku",
+      "evidence": "{\"model_relation\": \"exact_model\", \"variant_relation\": \"exact_sku\", \"requested_components\": {\"model_code\": \"JBLTBUDS\", \"color\": \"Black\", \"region\": \"\", \"full_code\": \"JBLTBUDSBLK\"}, \"returned_components\": {\"model_code\": \"JBLTBUDS\", \"color\": \"Black\", \"region\": \"\", \"full_code\": \"JBLTBUDSBLK\"}, \"exact_sku\": true, \"model_confirmed\": true, \"relation\": \"exact_sku\", \"requested\": \"JBLTBUDSBLK\", \"returned_sku\": \"JBLTBUDSBLK\", \"returned_mpn\": \"JBLTBUDSBLK\", \"data_pid\": \"\", \"model\": \"JBL Tune Buds\", \"reason\": \"Returned SKU + MPN + product context\"}",
+      "fetched_at": "2026-10-13T08:57:34+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 143,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Active Noise Cancelling",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "active_noise_cancelling",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 144,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Ambient Aware",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "ambient_aware",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 125,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Berat Casing Pengisian Daya (g)",
+      "raw_value": "38.8",
+      "section": "Ukuran",
+      "value_cell": null,
+      "normalized_name": "berat_casing_pengisian_daya_g",
+      "normalized_value": "38.8",
+      "unit": ""
+    },
+    {
+      "id": 123,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Berat Casing Pengisian Daya (oz)",
+      "raw_value": "1.4",
+      "section": "Ukuran",
+      "value_cell": null,
+      "normalized_name": "berat_casing_pengisian_daya_oz",
+      "normalized_value": "1.4",
+      "unit": ""
+    },
+    {
+      "id": 126,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Berat earpiece (g)",
+      "raw_value": "10.8",
+      "section": "Ukuran",
+      "value_cell": null,
+      "normalized_name": "berat_earpiece_g",
+      "normalized_value": "10.8",
+      "unit": ""
+    },
+    {
+      "id": 124,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Berat earpiece (oz)",
+      "raw_value": "0.3",
+      "section": "Ukuran",
+      "value_cell": null,
+      "normalized_name": "berat_earpiece_oz",
+      "normalized_value": "0.3",
+      "unit": ""
+    },
+    {
+      "id": 161,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "bluetooth",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 129,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth frequency",
+      "raw_value": "2.4 GHz – 2.4835 GHz",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null,
+      "normalized_name": "bluetooth_frequency",
+      "normalized_value": "2.4 ghz – 2.4835 ghz",
+      "unit": ""
+    },
+    {
+      "id": 130,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth profiles",
+      "raw_value": "A2DP v1.3.2, AVRCP v1.6.2, HFP v1.8, DID v1.3",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null,
+      "normalized_name": "bluetooth_profiles",
+      "normalized_value": "a2dp v1.3.2, avrcp v1.6.2, hfp v1.8, did v1.3",
+      "unit": ""
+    },
+    {
+      "id": 131,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth transmitted modulation",
+      "raw_value": "GFSK, π/4-DQPSK, 8-DPSK",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null,
+      "normalized_name": "bluetooth_transmitted_modulation",
+      "normalized_value": "gfsk, π/4-dqpsk, 8-dpsk",
+      "unit": ""
+    },
+    {
+      "id": 132,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth transmitter power",
+      "raw_value": "<13 dBm",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null,
+      "normalized_name": "bluetooth_transmitter_power",
+      "normalized_value": "<13 dbm",
+      "unit": ""
+    },
+    {
+      "id": 128,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth version",
+      "raw_value": "5.3",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null,
+      "normalized_name": "bluetooth_version",
+      "normalized_value": "5.3",
+      "unit": ""
+    },
+    {
+      "id": 145,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Built-in Microphone",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "built_in_microphone",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 158,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Charging cable",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "charging_cable",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 146,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Charging case",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "charging_case",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 133,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Charging case battery life (max hours)",
+      "raw_value": "30",
+      "section": "Baterai",
+      "value_cell": null,
+      "normalized_name": "charging_case_battery_life_max_hours",
+      "normalized_value": "30",
+      "unit": ""
+    },
+    {
+      "id": 134,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Charging time (hours from empty)",
+      "raw_value": "2",
+      "section": "Baterai",
+      "value_cell": null,
+      "normalized_name": "charging_time_hours_from_empty",
+      "normalized_value": "2",
+      "unit": ""
+    },
+    {
+      "id": 120,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Driver sensitivity at 1kHz/1mW (dB)",
+      "raw_value": "101",
+      "section": "Spesifikasi Audio",
+      "value_cell": null,
+      "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+      "normalized_value": "101",
+      "unit": ""
+    },
+    {
+      "id": 118,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Driver size (mm)",
+      "raw_value": "10",
+      "section": "Spesifikasi General",
+      "value_cell": null,
+      "normalized_name": "driver_size_mm",
+      "normalized_value": "10",
+      "unit": ""
+    },
+    {
+      "id": 159,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Dustproof",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "dustproof",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 122,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Dynamic frequency response range (Hz)",
+      "raw_value": "20 Hz - 20 kHz",
+      "section": "Spesifikasi Audio",
+      "value_cell": null,
+      "normalized_name": "dynamic_frequency_response_range_hz",
+      "normalized_value": "20 hz - 20 khz",
+      "unit": ""
+    },
+    {
+      "id": 147,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Hands Free Call",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "hands_free_call",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 121,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Impedance (ohms)",
+      "raw_value": "32",
+      "section": "Spesifikasi Audio",
+      "value_cell": null,
+      "normalized_name": "impedance_ohms",
+      "normalized_value": "32",
+      "unit": ""
+    },
+    {
+      "id": 148,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "In-ear",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "in_ear",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 153,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Integrasi Asisten Suara",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "integrasi_asisten_suara",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 156,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "JBL Headphone App",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "jbl_headphone_app",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 149,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "JBL Pure Bass Sound",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "jbl_pure_bass_sound",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 135,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Maximum music play time with ANC off (hours)",
+      "raw_value": "12",
+      "section": "Baterai",
+      "value_cell": null,
+      "normalized_name": "maximum_music_play_time_with_anc_off_hours",
+      "normalized_value": "12",
+      "unit": ""
+    },
+    {
+      "id": 136,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Maximum music play time with ANC on (hours)",
+      "raw_value": "10",
+      "section": "Baterai",
+      "value_cell": null,
+      "normalized_name": "maximum_music_play_time_with_anc_on_hours",
+      "normalized_value": "10",
+      "unit": ""
+    },
+    {
+      "id": 137,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Maximum talk time (hours)",
+      "raw_value": "6.6",
+      "section": "Baterai",
+      "value_cell": null,
+      "normalized_name": "maximum_talk_time_hours",
+      "normalized_value": "6.6",
+      "unit": ""
+    },
+    {
+      "id": 139,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Multi-point Connection",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "multi_point_connection",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 150,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Multi-Point Connection",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "multi_point_connection",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 119,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Number of Microphones",
+      "raw_value": "4",
+      "section": "Spesifikasi General",
+      "value_cell": null,
+      "normalized_name": "number_of_microphones",
+      "normalized_value": "4",
+      "unit": ""
+    },
+    {
+      "id": 157,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Peringkat IPX",
+      "raw_value": "IP54",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "peringkat_ipx",
+      "normalized_value": "ip54",
+      "unit": ""
+    },
+    {
+      "id": 160,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Rechargable battery",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "rechargable_battery",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 151,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Speed charge",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "speed_charge",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 162,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Tahan debu",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "tahan_debu",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 141,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "TalkThru",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "talkthru",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 152,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Touch Control",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "touch_control",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 142,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "True Wireless",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "true_wireless",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 140,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Voice Aware",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "voice_aware",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 138,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Waktu putar maksimum (jam)",
+      "raw_value": "48",
+      "section": "Baterai",
+      "value_cell": null,
+      "normalized_name": "waktu_putar_maksimum_jam",
+      "normalized_value": "48",
+      "unit": ""
+    },
+    {
+      "id": 154,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Water Resistant",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "water_resistant",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 127,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Weight (g)",
+      "raw_value": "52.8",
+      "section": "Ukuran",
+      "value_cell": null,
+      "normalized_name": "weight_g",
+      "normalized_value": "52.8",
+      "unit": ""
+    },
+    {
+      "id": 155,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Wireless",
+      "raw_value": "Yes",
+      "section": "Fitur",
+      "value_cell": null,
+      "normalized_name": "wireless",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 163,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Комплектация",
+      "raw_value": "1 x Headphone JBL Tune Buds 1 x Wadah pengisian daya 1 x kabel pengisian daya USB Type-C 1 x 3 eartip dengan ukuran berbeda 1 x Kartu Garansi / Peringatan (W / !) 1 x QSG / Lembar Keamanan (S / i)",
+      "section": "Комплектация",
+      "value_cell": null,
+      "normalized_name": "комплектация",
+      "normalized_value": "1 x headphone jbl tune buds 1 x wadah pengisian daya 1 x kabel pengisian daya usb type-c 1 x 3 eartip dengan ukuran berbeda 1 x kartu garansi / peringatan (w / !) 1 x qsg / lembar keamanan (s / i)",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 118,
+      "product_id": 5,
+      "normalized_name": "active_noise_cancelling",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 119,
+      "product_id": 5,
+      "normalized_name": "ambient_aware",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 120,
+      "product_id": 5,
+      "normalized_name": "berat_casing_pengisian_daya_g",
+      "selected_value": "38.8",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 121,
+      "product_id": 5,
+      "normalized_name": "berat_casing_pengisian_daya_oz",
+      "selected_value": "1.4",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 122,
+      "product_id": 5,
+      "normalized_name": "berat_earpiece_g",
+      "selected_value": "10.8",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 123,
+      "product_id": 5,
+      "normalized_name": "berat_earpiece_oz",
+      "selected_value": "0.3",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 124,
+      "product_id": 5,
+      "normalized_name": "bluetooth",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 125,
+      "product_id": 5,
+      "normalized_name": "bluetooth_frequency",
+      "selected_value": "2.4 ghz – 2.4835 ghz",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 126,
+      "product_id": 5,
+      "normalized_name": "bluetooth_profiles",
+      "selected_value": "a2dp v1.3.2, avrcp v1.6.2, hfp v1.8, did v1.3",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 127,
+      "product_id": 5,
+      "normalized_name": "bluetooth_transmitted_modulation",
+      "selected_value": "gfsk, π/4-dqpsk, 8-dpsk",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 128,
+      "product_id": 5,
+      "normalized_name": "bluetooth_transmitter_power",
+      "selected_value": "<13 dbm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 129,
+      "product_id": 5,
+      "normalized_name": "bluetooth_version",
+      "selected_value": "5.3",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 130,
+      "product_id": 5,
+      "normalized_name": "built_in_microphone",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 131,
+      "product_id": 5,
+      "normalized_name": "charging_cable",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 132,
+      "product_id": 5,
+      "normalized_name": "charging_case",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 133,
+      "product_id": 5,
+      "normalized_name": "charging_case_battery_life_max_hours",
+      "selected_value": "30",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 134,
+      "product_id": 5,
+      "normalized_name": "charging_time_hours_from_empty",
+      "selected_value": "2",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 135,
+      "product_id": 5,
+      "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+      "selected_value": "101",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 136,
+      "product_id": 5,
+      "normalized_name": "driver_size_mm",
+      "selected_value": "10",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 137,
+      "product_id": 5,
+      "normalized_name": "dustproof",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 138,
+      "product_id": 5,
+      "normalized_name": "dynamic_frequency_response_range_hz",
+      "selected_value": "20 hz - 20 khz",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 139,
+      "product_id": 5,
+      "normalized_name": "hands_free_call",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 140,
+      "product_id": 5,
+      "normalized_name": "impedance_ohms",
+      "selected_value": "32",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 141,
+      "product_id": 5,
+      "normalized_name": "in_ear",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 142,
+      "product_id": 5,
+      "normalized_name": "integrasi_asisten_suara",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 143,
+      "product_id": 5,
+      "normalized_name": "jbl_headphone_app",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 144,
+      "product_id": 5,
+      "normalized_name": "jbl_pure_bass_sound",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 145,
+      "product_id": 5,
+      "normalized_name": "maximum_music_play_time_with_anc_off_hours",
+      "selected_value": "12",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 146,
+      "product_id": 5,
+      "normalized_name": "maximum_music_play_time_with_anc_on_hours",
+      "selected_value": "10",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 147,
+      "product_id": 5,
+      "normalized_name": "maximum_talk_time_hours",
+      "selected_value": "6.6",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 148,
+      "product_id": 5,
+      "normalized_name": "multi_point_connection",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 149,
+      "product_id": 5,
+      "normalized_name": "number_of_microphones",
+      "selected_value": "4",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 150,
+      "product_id": 5,
+      "normalized_name": "peringkat_ipx",
+      "selected_value": "ip54",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 151,
+      "product_id": 5,
+      "normalized_name": "rechargable_battery",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 152,
+      "product_id": 5,
+      "normalized_name": "speed_charge",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 153,
+      "product_id": 5,
+      "normalized_name": "tahan_debu",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 154,
+      "product_id": 5,
+      "normalized_name": "talkthru",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 155,
+      "product_id": 5,
+      "normalized_name": "touch_control",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 156,
+      "product_id": 5,
+      "normalized_name": "true_wireless",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 157,
+      "product_id": 5,
+      "normalized_name": "voice_aware",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 158,
+      "product_id": 5,
+      "normalized_name": "waktu_putar_maksimum_jam",
+      "selected_value": "48",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 159,
+      "product_id": 5,
+      "normalized_name": "water_resistant",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 160,
+      "product_id": 5,
+      "normalized_name": "weight_g",
+      "selected_value": "52.8",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 161,
+      "product_id": 5,
+      "normalized_name": "wireless",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 162,
+      "product_id": 5,
+      "normalized_name": "комплектация",
+      "selected_value": "1 x headphone jbl tune buds 1 x wadah pengisian daya 1 x kabel pengisian daya usb type-c 1 x 3 eartip dengan ukuran berbeda 1 x kartu garansi / peringatan (w / !) 1 x qsg / lembar keamanan (s / i)",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:34+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "active_noise_cancelling",
+      "sources": {
+        "jbl": {
+          "id": 143,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Active Noise Cancelling",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "active_noise_cancelling",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Active Noise Cancelling"
+      ],
+      "display_name": "Активное шумоподавление",
+      "resolved": {
+        "id": 118,
+        "product_id": 5,
+        "normalized_name": "active_noise_cancelling",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "ambient_aware",
+      "sources": {
+        "jbl": {
+          "id": 144,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Ambient Aware",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "ambient_aware",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Ambient Aware"
+      ],
+      "display_name": "Ambient Aware",
+      "resolved": {
+        "id": 119,
+        "product_id": 5,
+        "normalized_name": "ambient_aware",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "berat_casing_pengisian_daya_g",
+      "sources": {
+        "jbl": {
+          "id": 125,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Berat Casing Pengisian Daya (g)",
+          "raw_value": "38.8",
+          "section": "Ukuran",
+          "value_cell": null,
+          "normalized_name": "berat_casing_pengisian_daya_g",
+          "normalized_value": "38.8",
+          "unit": "",
+          "display_value": "38.8",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Berat Casing Pengisian Daya (g)"
+      ],
+      "display_name": "Вес зарядного кейса, г",
+      "resolved": {
+        "id": 120,
+        "product_id": 5,
+        "normalized_name": "berat_casing_pengisian_daya_g",
+        "selected_value": "38.8",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "38.8",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "berat_earpiece_g",
+      "sources": {
+        "jbl": {
+          "id": 126,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Berat earpiece (g)",
+          "raw_value": "10.8",
+          "section": "Ukuran",
+          "value_cell": null,
+          "normalized_name": "berat_earpiece_g",
+          "normalized_value": "10.8",
+          "unit": "",
+          "display_value": "10.8",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Berat earpiece (g)"
+      ],
+      "display_name": "Вес наушников (один или пара не уточнено), г",
+      "resolved": {
+        "id": 122,
+        "product_id": 5,
+        "normalized_name": "berat_earpiece_g",
+        "selected_value": "10.8",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "10.8",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth",
+      "sources": {
+        "jbl": {
+          "id": 161,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "bluetooth",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth"
+      ],
+      "display_name": "Bluetooth",
+      "resolved": {
+        "id": 124,
+        "product_id": 5,
+        "normalized_name": "bluetooth",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_frequency",
+      "sources": {
+        "jbl": {
+          "id": 129,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth frequency",
+          "raw_value": "2.4 GHz – 2.4835 GHz",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "normalized_name": "bluetooth_frequency",
+          "normalized_value": "2.4 ghz – 2.4835 ghz",
+          "unit": "",
+          "display_value": "2.4 ghz – 2.4835 ghz",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth frequency"
+      ],
+      "display_name": "Частотный диапазон Bluetooth",
+      "resolved": {
+        "id": 125,
+        "product_id": 5,
+        "normalized_name": "bluetooth_frequency",
+        "selected_value": "2.4 ghz – 2.4835 ghz",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2.4 ghz – 2.4835 ghz",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_profiles",
+      "sources": {
+        "jbl": {
+          "id": 130,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth profiles",
+          "raw_value": "A2DP v1.3.2, AVRCP v1.6.2, HFP v1.8, DID v1.3",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "normalized_name": "bluetooth_profiles",
+          "normalized_value": "a2dp v1.3.2, avrcp v1.6.2, hfp v1.8, did v1.3",
+          "unit": "",
+          "display_value": "a2dp v1.3.2, avrcp v1.6.2, hfp v1.8, did v1.3",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth profiles"
+      ],
+      "display_name": "Профили Bluetooth",
+      "resolved": {
+        "id": 126,
+        "product_id": 5,
+        "normalized_name": "bluetooth_profiles",
+        "selected_value": "a2dp v1.3.2, avrcp v1.6.2, hfp v1.8, did v1.3",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "a2dp v1.3.2, avrcp v1.6.2, hfp v1.8, did v1.3",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_transmitted_modulation",
+      "sources": {
+        "jbl": {
+          "id": 131,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth transmitted modulation",
+          "raw_value": "GFSK, π/4-DQPSK, 8-DPSK",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "normalized_name": "bluetooth_transmitted_modulation",
+          "normalized_value": "gfsk, π/4-dqpsk, 8-dpsk",
+          "unit": "",
+          "display_value": "gfsk, π/4-dqpsk, 8-dpsk",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth transmitted modulation"
+      ],
+      "display_name": "Модуляция Bluetooth",
+      "resolved": {
+        "id": 127,
+        "product_id": 5,
+        "normalized_name": "bluetooth_transmitted_modulation",
+        "selected_value": "gfsk, π/4-dqpsk, 8-dpsk",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "gfsk, π/4-dqpsk, 8-dpsk",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_transmitter_power",
+      "sources": {
+        "jbl": {
+          "id": 132,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth transmitter power",
+          "raw_value": "<13 dBm",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "normalized_name": "bluetooth_transmitter_power",
+          "normalized_value": "<13 dbm",
+          "unit": "",
+          "display_value": "<13 dbm",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth transmitter power"
+      ],
+      "display_name": "Мощность передатчика Bluetooth",
+      "resolved": {
+        "id": 128,
+        "product_id": 5,
+        "normalized_name": "bluetooth_transmitter_power",
+        "selected_value": "<13 dbm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "<13 dbm",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "built_in_microphone",
+      "sources": {
+        "jbl": {
+          "id": 145,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Built-in Microphone",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "built_in_microphone",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Built-in Microphone"
+      ],
+      "display_name": "Встроенный микрофон",
+      "resolved": {
+        "id": 130,
+        "product_id": 5,
+        "normalized_name": "built_in_microphone",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "charging_cable",
+      "sources": {
+        "jbl": {
+          "id": 158,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Charging cable",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "charging_cable",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Charging cable"
+      ],
+      "display_name": "Кабель зарядки в комплекте",
+      "resolved": {
+        "id": 131,
+        "product_id": 5,
+        "normalized_name": "charging_cable",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "charging_case",
+      "sources": {
+        "jbl": {
+          "id": 146,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Charging case",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "charging_case",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Charging case"
+      ],
+      "display_name": "Зарядный кейс",
+      "resolved": {
+        "id": 132,
+        "product_id": 5,
+        "normalized_name": "charging_case",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "charging_case_battery_life_max_hours",
+      "sources": {
+        "jbl": {
+          "id": 133,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Charging case battery life (max hours)",
+          "raw_value": "30",
+          "section": "Baterai",
+          "value_cell": null,
+          "normalized_name": "charging_case_battery_life_max_hours",
+          "normalized_value": "30",
+          "unit": "",
+          "display_value": "30",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Charging case battery life (max hours)"
+      ],
+      "display_name": "Максимальное дополнительное время работы от кейса, ч",
+      "resolved": {
+        "id": 133,
+        "product_id": 5,
+        "normalized_name": "charging_case_battery_life_max_hours",
+        "selected_value": "30",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "30",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "charging_time_hours_from_empty",
+      "sources": {
+        "jbl": {
+          "id": 134,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Charging time (hours from empty)",
+          "raw_value": "2",
+          "section": "Baterai",
+          "value_cell": null,
+          "normalized_name": "charging_time_hours_from_empty",
+          "normalized_value": "2",
+          "unit": "",
+          "display_value": "2",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Charging time (hours from empty)"
+      ],
+      "display_name": "Время полной зарядки, ч",
+      "resolved": {
+        "id": 134,
+        "product_id": 5,
+        "normalized_name": "charging_time_hours_from_empty",
+        "selected_value": "2",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+      "sources": {
+        "jbl": {
+          "id": 120,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Driver sensitivity at 1kHz/1mW (dB)",
+          "raw_value": "101",
+          "section": "Spesifikasi Audio",
+          "value_cell": null,
+          "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+          "normalized_value": "101",
+          "unit": "",
+          "display_value": "101",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Driver sensitivity at 1kHz/1mW (dB)"
+      ],
+      "display_name": "Чувствительность динамика, дБ",
+      "resolved": {
+        "id": 135,
+        "product_id": 5,
+        "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+        "selected_value": "101",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "101",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "driver_size_mm",
+      "sources": {
+        "jbl": {
+          "id": 118,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Driver size (mm)",
+          "raw_value": "10",
+          "section": "Spesifikasi General",
+          "value_cell": null,
+          "normalized_name": "driver_size_mm",
+          "normalized_value": "10",
+          "unit": "",
+          "display_value": "10",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Driver size (mm)"
+      ],
+      "display_name": "Диаметр динамика, мм",
+      "resolved": {
+        "id": 136,
+        "product_id": 5,
+        "normalized_name": "driver_size_mm",
+        "selected_value": "10",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "10",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "dustproof",
+      "sources": {
+        "jbl": {
+          "id": 159,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Dustproof",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "dustproof",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Dustproof"
+      ],
+      "display_name": "Защита от пыли",
+      "resolved": {
+        "id": 137,
+        "product_id": 5,
+        "normalized_name": "dustproof",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "dynamic_frequency_response_range_hz",
+      "sources": {
+        "jbl": {
+          "id": 122,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Dynamic frequency response range (Hz)",
+          "raw_value": "20 Hz - 20 kHz",
+          "section": "Spesifikasi Audio",
+          "value_cell": null,
+          "normalized_name": "dynamic_frequency_response_range_hz",
+          "normalized_value": "20 hz - 20 khz",
+          "unit": "",
+          "display_value": "20 hz - 20 khz",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Dynamic frequency response range (Hz)"
+      ],
+      "display_name": "Диапазон частот, Гц",
+      "resolved": {
+        "id": 138,
+        "product_id": 5,
+        "normalized_name": "dynamic_frequency_response_range_hz",
+        "selected_value": "20 hz - 20 khz",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "20 hz - 20 khz",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "hands_free_call",
+      "sources": {
+        "jbl": {
+          "id": 147,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Hands Free Call",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "hands_free_call",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Hands Free Call"
+      ],
+      "display_name": "Звонки без помощи рук",
+      "resolved": {
+        "id": 139,
+        "product_id": 5,
+        "normalized_name": "hands_free_call",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "impedance_ohms",
+      "sources": {
+        "jbl": {
+          "id": 121,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Impedance (ohms)",
+          "raw_value": "32",
+          "section": "Spesifikasi Audio",
+          "value_cell": null,
+          "normalized_name": "impedance_ohms",
+          "normalized_value": "32",
+          "unit": "",
+          "display_value": "32",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Impedance (ohms)"
+      ],
+      "display_name": "Импеданс, Ом",
+      "resolved": {
+        "id": 140,
+        "product_id": 5,
+        "normalized_name": "impedance_ohms",
+        "selected_value": "32",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "32",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "in_ear",
+      "sources": {
+        "jbl": {
+          "id": 148,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "In-ear",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "in_ear",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "In-ear"
+      ],
+      "display_name": "Внутриканальные наушники",
+      "resolved": {
+        "id": 141,
+        "product_id": 5,
+        "normalized_name": "in_ear",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "integrasi_asisten_suara",
+      "sources": {
+        "jbl": {
+          "id": 153,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Integrasi Asisten Suara",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "integrasi_asisten_suara",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Integrasi Asisten Suara"
+      ],
+      "display_name": "Поддержка голосового помощника",
+      "resolved": {
+        "id": 142,
+        "product_id": 5,
+        "normalized_name": "integrasi_asisten_suara",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "jbl_headphone_app",
+      "sources": {
+        "jbl": {
+          "id": 156,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "JBL Headphone App",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "jbl_headphone_app",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "JBL Headphone App"
+      ],
+      "display_name": "Приложение JBL Headphones",
+      "resolved": {
+        "id": 143,
+        "product_id": 5,
+        "normalized_name": "jbl_headphone_app",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "jbl_pure_bass_sound",
+      "sources": {
+        "jbl": {
+          "id": 149,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "JBL Pure Bass Sound",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "jbl_pure_bass_sound",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "JBL Pure Bass Sound"
+      ],
+      "display_name": "JBL Pure Bass Sound",
+      "resolved": {
+        "id": 144,
+        "product_id": 5,
+        "normalized_name": "jbl_pure_bass_sound",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "maximum_music_play_time_with_anc_off_hours",
+      "sources": {
+        "jbl": {
+          "id": 135,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Maximum music play time with ANC off (hours)",
+          "raw_value": "12",
+          "section": "Baterai",
+          "value_cell": null,
+          "normalized_name": "maximum_music_play_time_with_anc_off_hours",
+          "normalized_value": "12",
+          "unit": "",
+          "display_value": "12",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Maximum music play time with ANC off (hours)"
+      ],
+      "display_name": "Время работы без ANC, ч",
+      "resolved": {
+        "id": 145,
+        "product_id": 5,
+        "normalized_name": "maximum_music_play_time_with_anc_off_hours",
+        "selected_value": "12",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "12",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "maximum_music_play_time_with_anc_on_hours",
+      "sources": {
+        "jbl": {
+          "id": 136,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Maximum music play time with ANC on (hours)",
+          "raw_value": "10",
+          "section": "Baterai",
+          "value_cell": null,
+          "normalized_name": "maximum_music_play_time_with_anc_on_hours",
+          "normalized_value": "10",
+          "unit": "",
+          "display_value": "10",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Maximum music play time with ANC on (hours)"
+      ],
+      "display_name": "Время работы с ANC, ч",
+      "resolved": {
+        "id": 146,
+        "product_id": 5,
+        "normalized_name": "maximum_music_play_time_with_anc_on_hours",
+        "selected_value": "10",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "10",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "maximum_talk_time_hours",
+      "sources": {
+        "jbl": {
+          "id": 137,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Maximum talk time (hours)",
+          "raw_value": "6.6",
+          "section": "Baterai",
+          "value_cell": null,
+          "normalized_name": "maximum_talk_time_hours",
+          "normalized_value": "6.6",
+          "unit": "",
+          "display_value": "6.6",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Maximum talk time (hours)"
+      ],
+      "display_name": "Время работы в режиме разговоров, ч",
+      "resolved": {
+        "id": 147,
+        "product_id": 5,
+        "normalized_name": "maximum_talk_time_hours",
+        "selected_value": "6.6",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "6.6",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "multi_point_connection",
+      "sources": {
+        "jbl": {
+          "id": 139,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Multi-point Connection",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "multi_point_connection",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Multi-point Connection",
+        "Multi-Point Connection"
+      ],
+      "display_name": "Подключение к нескольким устройствам",
+      "resolved": {
+        "id": 148,
+        "product_id": 5,
+        "normalized_name": "multi_point_connection",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "number_of_microphones",
+      "sources": {
+        "jbl": {
+          "id": 119,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Number of Microphones",
+          "raw_value": "4",
+          "section": "Spesifikasi General",
+          "value_cell": null,
+          "normalized_name": "number_of_microphones",
+          "normalized_value": "4",
+          "unit": "",
+          "display_value": "4",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Number of Microphones"
+      ],
+      "display_name": "Количество микрофонов",
+      "resolved": {
+        "id": 149,
+        "product_id": 5,
+        "normalized_name": "number_of_microphones",
+        "selected_value": "4",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "4",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "peringkat_ipx",
+      "sources": {
+        "jbl": {
+          "id": 157,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Peringkat IPX",
+          "raw_value": "IP54",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "peringkat_ipx",
+          "normalized_value": "ip54",
+          "unit": "",
+          "display_value": "ip54",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Peringkat IPX"
+      ],
+      "display_name": "Степень защиты IP",
+      "resolved": {
+        "id": 150,
+        "product_id": 5,
+        "normalized_name": "peringkat_ipx",
+        "selected_value": "ip54",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "ip54",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "rechargable_battery",
+      "sources": {
+        "jbl": {
+          "id": 160,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Rechargable battery",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "rechargable_battery",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Rechargable battery"
+      ],
+      "display_name": "Перезаряжаемый аккумулятор",
+      "resolved": {
+        "id": 151,
+        "product_id": 5,
+        "normalized_name": "rechargable_battery",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "speed_charge",
+      "sources": {
+        "jbl": {
+          "id": 151,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Speed charge",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "speed_charge",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Speed charge"
+      ],
+      "display_name": "Быстрая зарядка",
+      "resolved": {
+        "id": 152,
+        "product_id": 5,
+        "normalized_name": "speed_charge",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "tahan_debu",
+      "sources": {
+        "jbl": {
+          "id": 162,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Tahan debu",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "tahan_debu",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Tahan debu"
+      ],
+      "display_name": "Защита от пыли",
+      "resolved": {
+        "id": 153,
+        "product_id": 5,
+        "normalized_name": "tahan_debu",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "talkthru",
+      "sources": {
+        "jbl": {
+          "id": 141,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "TalkThru",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "talkthru",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "TalkThru"
+      ],
+      "display_name": "TalkThru",
+      "resolved": {
+        "id": 154,
+        "product_id": 5,
+        "normalized_name": "talkthru",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "touch_control",
+      "sources": {
+        "jbl": {
+          "id": 152,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Touch Control",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "touch_control",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Touch Control"
+      ],
+      "display_name": "Сенсорное управление",
+      "resolved": {
+        "id": 155,
+        "product_id": 5,
+        "normalized_name": "touch_control",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "true_wireless",
+      "sources": {
+        "jbl": {
+          "id": 142,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "True Wireless",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "true_wireless",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "True Wireless"
+      ],
+      "display_name": "Полностью беспроводные наушники",
+      "resolved": {
+        "id": 156,
+        "product_id": 5,
+        "normalized_name": "true_wireless",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "voice_aware",
+      "sources": {
+        "jbl": {
+          "id": 140,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Voice Aware",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "voice_aware",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Voice Aware"
+      ],
+      "display_name": "Voice Aware",
+      "resolved": {
+        "id": 157,
+        "product_id": 5,
+        "normalized_name": "voice_aware",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "waktu_putar_maksimum_jam",
+      "sources": {
+        "jbl": {
+          "id": 138,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Waktu putar maksimum (jam)",
+          "raw_value": "48",
+          "section": "Baterai",
+          "value_cell": null,
+          "normalized_name": "waktu_putar_maksimum_jam",
+          "normalized_value": "48",
+          "unit": "",
+          "display_value": "48",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Waktu putar maksimum (jam)"
+      ],
+      "display_name": "Максимальное время воспроизведения, ч",
+      "resolved": {
+        "id": 158,
+        "product_id": 5,
+        "normalized_name": "waktu_putar_maksimum_jam",
+        "selected_value": "48",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "48",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "water_resistant",
+      "sources": {
+        "jbl": {
+          "id": 154,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Water Resistant",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "water_resistant",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Water Resistant"
+      ],
+      "display_name": "Защита от воды",
+      "resolved": {
+        "id": 159,
+        "product_id": 5,
+        "normalized_name": "water_resistant",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "weight_g",
+      "sources": {
+        "jbl": {
+          "id": 127,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Weight (g)",
+          "raw_value": "52.8",
+          "section": "Ukuran",
+          "value_cell": null,
+          "normalized_name": "weight_g",
+          "normalized_value": "52.8",
+          "unit": "",
+          "display_value": "52.8",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Weight (g)"
+      ],
+      "display_name": "Вес товара, кг",
+      "resolved": {
+        "id": 160,
+        "product_id": 5,
+        "normalized_name": "weight_g",
+        "selected_value": "0.0528",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "0.0528",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "wireless",
+      "sources": {
+        "jbl": {
+          "id": 155,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Wireless",
+          "raw_value": "Yes",
+          "section": "Fitur",
+          "value_cell": null,
+          "normalized_name": "wireless",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Wireless"
+      ],
+      "display_name": "Беспроводное подключение",
+      "resolved": {
+        "id": 161,
+        "product_id": 5,
+        "normalized_name": "wireless",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_version",
+      "sources": {
+        "jbl": {
+          "id": 128,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth version",
+          "raw_value": "5.3",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "normalized_name": "bluetooth_version",
+          "normalized_value": "5.3",
+          "unit": "",
+          "display_value": "5.3",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth version"
+      ],
+      "display_name": "Версия Bluetooth",
+      "resolved": {
+        "id": 129,
+        "product_id": 5,
+        "normalized_name": "bluetooth_version",
+        "selected_value": "5.3",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "5.3",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "комплектация",
+      "sources": {
+        "jbl": {
+          "id": 163,
+          "product_id": 5,
+          "source_page_id": 5,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Комплектация",
+          "raw_value": "1 x Headphone JBL Tune Buds 1 x Wadah pengisian daya 1 x kabel pengisian daya USB Type-C 1 x 3 eartip dengan ukuran berbeda 1 x Kartu Garansi / Peringatan (W / !) 1 x QSG / Lembar Keamanan (S / i)",
+          "section": "Комплектация",
+          "value_cell": null,
+          "normalized_name": "комплектация",
+          "normalized_value": "1 x headphone jbl tune buds 1 x wadah pengisian daya 1 x kabel pengisian daya usb type-c 1 x 3 eartip dengan ukuran berbeda 1 x kartu garansi / peringatan (w / !) 1 x qsg / lembar keamanan (s / i)",
+          "unit": "",
+          "display_value": "1 x headphone jbl tune buds 1 x wadah pengisian daya 1 x kabel pengisian daya usb type-c 1 x 3 eartip dengan ukuran berbeda 1 x kartu garansi / peringatan (w / !) 1 x qsg / lembar keamanan (s / i)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Комплектация"
+      ],
+      "display_name": "Комплектация",
+      "resolved": {
+        "id": 162,
+        "product_id": 5,
+        "normalized_name": "комплектация",
+        "selected_value": "1 x headphone jbl tune buds 1 x wadah pengisian daya 1 x kabel pengisian daya usb type-c 1 x 3 eartip dengan ukuran berbeda 1 x kartu garansi / peringatan (w / !) 1 x qsg / lembar keamanan (s / i)",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:34+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "1 x headphone jbl tune buds 1 x wadah pengisian daya 1 x kabel pengisian daya usb type-c 1 x 3 eartip dengan ukuran berbeda 1 x kartu garansi / peringatan (w / !) 1 x qsg / lembar keamanan (s / i)",
+        "display_status": "Полный артикул на официальной странице JBL",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    }
+  ],
+  "photos": [
+    {
+      "id": 5,
+      "product_id": 5,
+      "source_page_id": 5,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw14ea1478/01.JBL_Tune Buds_Product Image_Hero_Black.png",
+      "asset_key": "e9e2d540f4dd2b8ef68f6d16068d3dc4323841191e220654054ee60b551f5d39",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T08:57:34+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "article": "JBLTBUDSBLK",
+    "query_variants": [
+      "site:jbl.com \"JBLTBUDSBLK\"",
+      "site:jbl.com \"JBLTBUDS\"",
+      "site:jbl.com JBL Tune Buds"
+    ],
+    "identity": {
+      "model_relation": "exact_model",
+      "variant_relation": "exact_sku",
+      "requested_components": {
+        "model_code": "JBLTBUDS",
+        "color": "Black",
+        "region": "",
+        "full_code": "JBLTBUDSBLK"
+      },
+      "returned_components": {
+        "model_code": "JBLTBUDS",
+        "color": "Black",
+        "region": "",
+        "full_code": "JBLTBUDSBLK"
+      },
+      "exact_sku": true,
+      "model_confirmed": true,
+      "relation": "exact_sku",
+      "requested": "JBLTBUDSBLK",
+      "returned_sku": "JBLTBUDSBLK",
+      "returned_mpn": "JBLTBUDSBLK",
+      "data_pid": "",
+      "model": "JBL Tune Buds",
+      "reason": "Returned SKU + MPN + product context",
+      "color": "Black"
+    },
+    "raw_specs": [
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Driver size (mm)",
+        "value": "10"
+      },
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Number of Microphones",
+        "value": "4"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Driver sensitivity at 1kHz/1mW (dB)",
+        "value": "101"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Impedance (ohms)",
+        "value": "32"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Dynamic frequency response range (Hz)",
+        "value": "20 Hz - 20 kHz"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat Casing Pengisian Daya (oz)",
+        "value": "1.4"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat earpiece (oz)",
+        "value": "0.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat Casing Pengisian Daya (g)",
+        "value": "38.8"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat earpiece (g)",
+        "value": "10.8"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Weight (g)",
+        "value": "52.8"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth version",
+        "value": "5.3"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth frequency",
+        "value": "2.4 GHz – 2.4835 GHz"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth profiles",
+        "value": "A2DP v1.3.2, AVRCP v1.6.2, HFP v1.8, DID v1.3"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitted modulation",
+        "value": "GFSK, π/4-DQPSK, 8-DPSK"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitter power",
+        "value": "<13 dBm"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Charging case battery life (max hours)",
+        "value": "30"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Charging time (hours from empty)",
+        "value": "2"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Maximum music play time with ANC off (hours)",
+        "value": "12"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Maximum music play time with ANC on (hours)",
+        "value": "10"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Maximum talk time (hours)",
+        "value": "6.6"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Waktu putar maksimum (jam)",
+        "value": "48"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Multi-point Connection",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Voice Aware",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "TalkThru",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "True Wireless",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Active Noise Cancelling",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Ambient Aware",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Built-in Microphone",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Charging case",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Hands Free Call",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "In-ear",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Pure Bass Sound",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Multi-Point Connection",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Speed charge",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Touch Control",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Integrasi Asisten Suara",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Water Resistant",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Wireless",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Headphone App",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Peringkat IPX",
+        "value": "IP54"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Charging cable",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Dustproof",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Rechargable battery",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Bluetooth",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Tahan debu",
+        "value": "Yes"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Driver size (mm)",
+        "value": "10"
+      },
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Number of Microphones",
+        "value": "4"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Driver sensitivity at 1kHz/1mW (dB)",
+        "value": "101"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Impedance (ohms)",
+        "value": "32"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Dynamic frequency response range (Hz)",
+        "value": "20 Hz - 20 kHz"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat Casing Pengisian Daya (oz)",
+        "value": "1.4"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat earpiece (oz)",
+        "value": "0.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat Casing Pengisian Daya (g)",
+        "value": "38.8"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Berat earpiece (g)",
+        "value": "10.8"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Weight (g)",
+        "value": "52.8"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth version",
+        "value": "5.3"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth frequency",
+        "value": "2.4 GHz – 2.4835 GHz"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth profiles",
+        "value": "A2DP v1.3.2, AVRCP v1.6.2, HFP v1.8, DID v1.3"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitted modulation",
+        "value": "GFSK, π/4-DQPSK, 8-DPSK"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitter power",
+        "value": "<13 dBm"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Charging case battery life (max hours)",
+        "value": "30"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Charging time (hours from empty)",
+        "value": "2"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Maximum music play time with ANC off (hours)",
+        "value": "12"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Maximum music play time with ANC on (hours)",
+        "value": "10"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Maximum talk time (hours)",
+        "value": "6.6"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Waktu putar maksimum (jam)",
+        "value": "48"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Multi-point Connection",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Voice Aware",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "TalkThru",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "True Wireless",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Active Noise Cancelling",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Ambient Aware",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Built-in Microphone",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Charging case",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Hands Free Call",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "In-ear",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Pure Bass Sound",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Multi-Point Connection",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Speed charge",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Touch Control",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Integrasi Asisten Suara",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Water Resistant",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Wireless",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Headphone App",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Peringkat IPX",
+        "value": "IP54"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Charging cable",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Dustproof",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Rechargable battery",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Bluetooth",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Tahan debu",
+        "value": "Yes"
+      }
+    ],
+    "rejected_specs": [],
+    "photos": [
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw14ea1478/01.JBL_Tune Buds_Product Image_Hero_Black.png",
+        "asset_key": "e9e2d540f4dd2b8ef68f6d16068d3dc4323841191e220654054ee60b551f5d39",
+        "relation": "exact_sku_gallery",
+        "color": "Black",
+        "role": "product_gallery",
+        "verified": true
+      }
+    ],
+    "manuals": [
+      {
+        "type": "Regulatory/Other",
+        "title": "Declaration of Conformity 434 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwbe137524/pdfs/JBL TUNE BUDS - EU_UK DOC_V7.0.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Regulatory/Other",
+        "title": "PPWR DoC 367 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw91090b89/pdfs/JBL-TUNEBUDS-EU_DOC_PPWR.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Quick Start Guide",
+        "title": "Quick Start Guide (Multilingual) 2 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw08810d1e/pdfs/JBL_TUNE BUDS_QSG_App.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Quick Start Guide",
+        "title": "Quick Start Guide (Multilingual) 6 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5cd54719/pdfs/JBL_Tune Buds_QSG_Multilingual.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Warranty",
+        "title": "JBL Global Warranty Card 9 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3b22fc9b/pdfs/TR04082_JBL_Global_Warranty_card_F_V9_HD.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Spec Sheet",
+        "title": "Spec Sheet (English) 308 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw0c1d0475/pdfs/JBL_Tune_BUDS_ Specsheet_EN.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Regulatory/Other",
+        "title": "PSTI Declaration of Conformity (English) 171 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc23d903b/pdfs/JBL_TUNE_BUDS.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      }
+    ],
+    "verified_documents": [],
+    "exact_photo_assets": [
+      "e9e2d540f4dd2b8ef68f6d16068d3dc4323841191e220654054ee60b551f5d39"
+    ],
+    "manual_status": "Не проверена",
+    "support_urls": []
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLTBUDSBLK",
+      "reason": "Network request failed",
+      "region": "ru",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:31+00:00",
+      "url": "https://ru.jbl.com/JBLTBUDSBLK.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLTBUDSBLK",
+      "reason": "[policy_host_stopped]",
+      "region": "uk",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:31+00:00",
+      "url": "https://uk.jbl.com/JBLTBUDSBLK.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLTBUDSBLK",
+      "reason": "[policy_host_stopped]",
+      "region": "de",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:31+00:00",
+      "url": "https://de.jbl.com/JBLTBUDSBLK.html"
+    },
+    {
+      "accepted": true,
+      "event": "jbl_discovery",
+      "identity_relation": "exact_sku",
+      "model_relation": "exact_model",
+      "provider": "regional_exact",
+      "query": "JBLTBUDSBLK",
+      "reason": "Returned SKU + MPN + product context",
+      "region": "id",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:34+00:00",
+      "url": "https://id.jbl.com/in-ear-headphones/JBLTBUDSBLK.html",
+      "variant_relation": "exact_sku"
+    }
+  ]
+}

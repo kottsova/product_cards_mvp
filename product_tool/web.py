@@ -454,6 +454,13 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         if lenovo_evidence is not None and latest and message == latest.get("message"):
             message = "Проверка Lenovo завершена; готовность и пробелы показаны ниже."
         comparison = attribute_projection.final_attribute_rows(database, product_id)
+        from . import photo_inventory
+        if product['brand'].strip().casefold() in {'jbl','samsung','lg','apple','playstation','sony playstation','xbox','microsoft xbox','razer','hyperx','xiaomi','redmi','poco','dreame','electrolux'}:
+            measured=photo_inventory.enriched_photos(database,product_id)
+            by_id={p['id']:p for p in measured}
+            photos=[{**p,**by_id.get(p['id'],{})} for p in photos if p['id'] in by_id]
+        color_evidence=card_evidence.load(database,product_id,photo_inventory.evidence_kind(product)) or {}
+        color_info=__import__('product_tool.canonical_attributes',fromlist=['color_result']).color_result(product,comparison,sources,color_evidence)
         card_attributes = card_presentation.present_card_rows(
             comparison, jobs.get_facts(database, product_id), sources, product["category"]
         )
@@ -464,6 +471,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         return render(
             request, "product.html", status_code,
             product=product,
+            color_info=color_info,
             result=jobs.get_result(database, product_id),
             sources=[{**source, "error": _display_access_stop(source["error"]),
                        "description": product_description.product_description(source["description"])
@@ -584,6 +592,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             measured = photo_metadata.inspect_saved_photo(
                 photo["url"], photo["source_key"],
                 root / photo_metadata.log_name(photo["source_key"]),
+                full_verification=True,save_dir=root/'official_images',
             )
         except (ValueError, OSError, requests.RequestException) as exc:
             return product_page(request, product_id,
@@ -591,7 +600,16 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         jobs.save_photo_metadata(database, product_id, photo_id, photo["url"],
             width=int(measured["width"]), height=int(measured["height"]),
             size_bytes=int(measured["size_bytes"]), image_format=str(measured["format"]))
+        from .photo_inventory import persist_measurement
+        persist_measurement(database,product_id,photo,measured)
         return RedirectResponse(f"/products/{product_id}#photos", status_code=303)
+
+    @app.post('/products/{product_id}/photos/inspect-all')
+    def inspect_all_photos(product_id: int):
+        if jobs.get_product(database,product_id) is None:return Response('Товар не найден.',status_code=404)
+        from .photo_inventory import complete
+        complete(database,product_id,budget_seconds=180)
+        return RedirectResponse(f'/products/{product_id}#photos',status_code=303)
 
     @app.post("/products/{product_id}/photos", response_class=HTMLResponse)
     async def save_photo_selection(request: Request, product_id: int) -> HTMLResponse:

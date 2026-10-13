@@ -101,7 +101,7 @@ LABELS.update({'LED Colour':'Цвет подсветки (LED)','Vikt, endast ma
 def label(raw):return LABELS.get(raw,raw if re.search('[а-яё]',raw,re.I) else 'Характеристика: '+raw)
 def mapped(row):
  raw,value=' '.join(row['label'].split()),row['value'];sec=row['section'];out=[]
- if raw=='Produktmått H x B x D, mm':raw='Dimensions (mm) (HxWxD)'
+ if re.search(r'Produktmått\s+H\s*[x×]\s*B\s*[x×]\s*D,?\s*mm',raw,re.I):raw='Dimensions (mm) (HxWxD)'
  axes=re.search(r'\((H[xX]W[xX]D|W[xX]D)\)',raw)
  if 'Dimensions' in raw and axes:
   nums=re.findall(r'\d+(?:\.\d+)?',value)
@@ -160,6 +160,11 @@ def parse(html,url,model,requested_pnc='',requested_region='',requested_color=''
    ev['raw_facts'].append(raw)
    if re.search(r'(?:product (?:number|no)|produktnummer).*\(?PNC\)?',raw['label'],re.I) and key(raw['value'])!=pnc:
     ev['rejected_facts'].append({**raw,'reason':'Malformed or contradictory PNC field; not a technical fact'});continue
+   feature=re.match(r'\s*(AirDry|TwinTech(?:®)? NoFrost|Hob2Hood(?:®)?|SteamBake)\s*:',raw['label'])
+   if feature and exact and raw['evidence_relation']!='unknown' and not re.search(r'optional|selected models|not supported|not available',raw['label'],re.I):
+    attr=RawAttribute(feature[1].replace('®',''),'Есть','Особенности модели',True)
+    doc.attributes.append(attr);ev['accepted_facts'].append({**raw,'canonical_fields':[attr.name],'derived_fields':[{'name':attr.name,'value':attr.value,'section':attr.section}],'admission':'Explicit owned-PDP capability statement; no promotional adjective admitted'})
+    continue
    if not raw['value'] or raw['section'] in {'Specification','Specifikation','Specifikationer'} or raw['label'].strip().lower() in {'no','yes'}:ev['rejected_facts'].append({**raw,'reason':'Marketing/feature prose or malformed label, not a structured technical pair'});continue
    if cross_region and (raw['section'] in {'Energy','Energi'} or re.search(r'voltage|frequency|plug|hardwired|electricity loading|recommended fuse|energy|water consumption',raw['label'],re.I)):
     ev['rejected_facts'].append({**raw,'reason':'Regional electrical/regulatory evidence not transferred from another region'});continue

@@ -14,6 +14,8 @@ def card_readiness(database,product_id):
  ev=card_evidence.load(database,product_id,'jbl') or {};sources=jobs.get_source_pages(database,product_id)
  exact=any(s['source_key']=='jbl' and s['match_level'] in {'full_sku','model_confirmed'} and not s['error'] for s in sources)
  facts=[x for x in jobs.get_resolved(database,product_id) if (x['full_sku_confirmed'] or x['status']=='model_confirmed_official') and not x['conflict']];conflicts=jobs.result_counts(database,product_id)['conflicts'];gaps=[]
+ from .attribute_projection import final_attribute_rows
+ conflicts+=sum(bool(r.get('source_unit_conflict')) for r in final_attribute_rows(database,product_id))
  if not exact:gaps.append('exact_sku_missing')
  if not facts:gaps.append('specifications_missing')
  if not any(p['selected'] and photo_verified(p,ev) for p in jobs.get_photo_candidates(database,product_id)):gaps.append('gallery_missing')

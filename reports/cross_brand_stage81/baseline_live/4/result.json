@@ -1,0 +1,2310 @@
+{
+  "input": {
+    "id": 4,
+    "brand": "JBL",
+    "dispatch_brand": "JBL",
+    "article": "JBLBAR500PROBLKEP",
+    "model": "JBL Bar 500 Black EP",
+    "name": "JBL Bar 500 Black EP",
+    "category": "Саундбары",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/jbl_stage62/dataset_frozen.json",
+    "original_input": {
+      "article": "JBLBAR500PROBLKEP",
+      "name": "JBL Bar 500 Black EP",
+      "category": "soundbar"
+    }
+  },
+  "observed_at": "2026-10-13T08:57:31.101323+00:00",
+  "seconds": 9.94,
+  "job": {
+    "id": "1b028c0280ea4338bdc486f52cf5187a",
+    "product_id": 4,
+    "status": "done",
+    "current_stage": 1,
+    "message": "JBL: Готова. Русская пользовательская инструкция не подтверждена",
+    "created_at": "2026-10-13T08:57:21+00:00",
+    "updated_at": "2026-10-13T08:57:31+00:00",
+    "started_at": "2026-10-13T08:57:21+00:00",
+    "finished_at": "2026-10-13T08:57:31+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 4,
+      "product_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "url": "https://id.jbl.com/en/soundbars/BAR-500-.html?dwvar_BAR-500-_color=Black-APAC-Current",
+      "found_model": "JBLBAR500PROBLKAS",
+      "match_level": "model_confirmed",
+      "evidence": "{\"model_relation\": \"exact_model\", \"variant_relation\": \"same_color_other_region\", \"requested_components\": {\"model_code\": \"JBLBAR500PRO\", \"color\": \"Black\", \"region\": \"EP\", \"full_code\": \"JBLBAR500PROBLKEP\"}, \"returned_components\": {\"model_code\": \"JBLBAR500PRO\", \"color\": \"Black\", \"region\": \"AS\", \"full_code\": \"JBLBAR500PROBLKAS\"}, \"exact_sku\": false, \"model_confirmed\": true, \"relation\": \"other_variant\", \"requested\": \"JBLBAR500PROBLKEP\", \"returned_sku\": \"JBLBAR500PROBLKAS\", \"returned_mpn\": \"JBLBAR500PROBLKAS\", \"data_pid\": \"\", \"model\": \"BAR 500\", \"reason\": \"Official coherent SKU/MPN confirms same model; variant evidence separate\"}",
+      "fetched_at": "2026-10-13T08:57:30+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 113,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "2.4G Wi-Fi transmitter power",
+      "raw_value": "< 20 dBm (EIRP)",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "2_4g_wi_fi_transmitter_power",
+      "normalized_value": "< 20 dbm (eirp)",
+      "unit": ""
+    },
+    {
+      "id": 116,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "2.4G wireless transmitter frequency range",
+      "raw_value": "2406 - 2474MH",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "2_4g_wireless_transmitter_frequency_range",
+      "normalized_value": "2406 - 2474mh",
+      "unit": ""
+    },
+    {
+      "id": 117,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "2.4G wireless transmitter power",
+      "raw_value": "＜10dBm (EIRP）",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "2_4g_wireless_transmitter_power",
+      "normalized_value": "＜10dbm (eirp）",
+      "unit": ""
+    },
+    {
+      "id": 114,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "5G Wi-Fi transmitter frequency range",
+      "raw_value": "5.15 - 5.35GHz, 5.470-5.725GHz, 5.725 - 5.825GHz",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "5g_wi_fi_transmitter_frequency_range",
+      "normalized_value": "5.15 - 5.35ghz, 5.470-5.725ghz, 5.725 - 5.825ghz",
+      "unit": ""
+    },
+    {
+      "id": 115,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "5G Wi-Fi transmitter power",
+      "raw_value": "5.15-5.25GHz <23dBm, 5.25-5.35GHz & 5.47-5.725GHz <20dBm, 5.725-5.825GHz <14dBm (EIRP)",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "5g_wi_fi_transmitter_power",
+      "normalized_value": "5.15-5.25ghz <23dbm, 5.25-5.35ghz & 5.47-5.725ghz <20dbm, 5.725-5.825ghz <14dbm (eirp)",
+      "unit": ""
+    },
+    {
+      "id": 109,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth profile",
+      "raw_value": "A2DP 1.2, AVRCP 1.5",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "bluetooth_profile",
+      "normalized_value": "a2dp 1.2, avrcp 1.5",
+      "unit": ""
+    },
+    {
+      "id": 110,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth transmitter frequency range",
+      "raw_value": "2400 MHz – 2483.5 MHz",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "bluetooth_transmitter_frequency_range",
+      "normalized_value": "2400 mhz – 2483.5 mhz",
+      "unit": ""
+    },
+    {
+      "id": 111,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth transmitter power",
+      "raw_value": "<15 dBm (EIRP)",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "bluetooth_transmitter_power",
+      "normalized_value": "<15 dbm (eirp)",
+      "unit": ""
+    },
+    {
+      "id": 108,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth version",
+      "raw_value": "5.0",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "bluetooth_version",
+      "normalized_value": "5",
+      "unit": ""
+    },
+    {
+      "id": 103,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Frequency response",
+      "raw_value": "35Hz - 20kHz (-6dB)",
+      "section": "Audio Specifications",
+      "value_cell": null,
+      "normalized_name": "frequency_response",
+      "normalized_value": "35hz - 20khz (-6db)",
+      "unit": ""
+    },
+    {
+      "id": 96,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Networked standby power",
+      "raw_value": "< 2.0 W",
+      "section": "General Specifications",
+      "value_cell": null,
+      "normalized_name": "networked_standby_power",
+      "normalized_value": "< 2.0 w",
+      "unit": ""
+    },
+    {
+      "id": 97,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Operating temperature",
+      "raw_value": "0°C - 45 °C",
+      "section": "General Specifications",
+      "value_cell": null,
+      "normalized_name": "operating_temperature",
+      "normalized_value": "0°c - 45 °c",
+      "unit": ""
+    },
+    {
+      "id": 95,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Power supply",
+      "raw_value": "100 - 240V AC, ~ 50/60Hz",
+      "section": "General Specifications",
+      "value_cell": null,
+      "normalized_name": "power_supply",
+      "normalized_value": "100 - 240v ac, ~ 50/60hz",
+      "unit": ""
+    },
+    {
+      "id": 104,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Soundbar dimensions (W x H x D)",
+      "raw_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+      "section": "Dimensions",
+      "value_cell": null,
+      "normalized_name": "soundbar_dimensions_w_x_h_x_d",
+      "normalized_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+      "unit": ""
+    },
+    {
+      "id": 99,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Soundbar output power (Max @THD 1%)",
+      "raw_value": "290W",
+      "section": "Audio Specifications",
+      "value_cell": null,
+      "normalized_name": "soundbar_output_power_max_thd_1",
+      "normalized_value": "290w",
+      "unit": ""
+    },
+    {
+      "id": 101,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Soundbar transducer",
+      "raw_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+      "section": "Audio Specifications",
+      "value_cell": null,
+      "normalized_name": "soundbar_transducer",
+      "normalized_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+      "unit": ""
+    },
+    {
+      "id": 106,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Soundbar weight",
+      "raw_value": "2.8kg/ 6.2 lbs",
+      "section": "Dimensions",
+      "value_cell": null,
+      "normalized_name": "soundbar_weight",
+      "normalized_value": "2.8",
+      "unit": "kg"
+    },
+    {
+      "id": 105,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Subwoofer dimensions (W x H x D)",
+      "raw_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+      "section": "Dimensions",
+      "value_cell": null,
+      "normalized_name": "subwoofer_dimensions_w_x_h_x_d",
+      "normalized_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+      "unit": ""
+    },
+    {
+      "id": 100,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Subwoofer output power (Max. @THD 1%)",
+      "raw_value": "300 W",
+      "section": "Audio Specifications",
+      "value_cell": null,
+      "normalized_name": "subwoofer_output_power_max_thd_1",
+      "normalized_value": "300 w",
+      "unit": ""
+    },
+    {
+      "id": 102,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Subwoofer transducer",
+      "raw_value": "10” (260mm)",
+      "section": "Audio Specifications",
+      "value_cell": null,
+      "normalized_name": "subwoofer_transducer",
+      "normalized_value": "10” (260mm)",
+      "unit": ""
+    },
+    {
+      "id": 107,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Subwoofer weight",
+      "raw_value": "10 kg / 22 lbs",
+      "section": "Dimensions",
+      "value_cell": null,
+      "normalized_name": "subwoofer_weight",
+      "normalized_value": "10",
+      "unit": "kg"
+    },
+    {
+      "id": 98,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Total speaker power output (Max @THD 1%)",
+      "raw_value": "590W",
+      "section": "Audio Specifications",
+      "value_cell": null,
+      "normalized_name": "total_speaker_power_output_max_thd_1",
+      "normalized_value": "590w",
+      "unit": ""
+    },
+    {
+      "id": 112,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Wi-Fi network",
+      "raw_value": "IEEE 802.11 a/b/g/n/ac/ax (2.4GHz/5GHz)",
+      "section": "Control and Connection Specifications",
+      "value_cell": null,
+      "normalized_name": "wi_fi_network",
+      "normalized_value": "ieee 802.11 a/b/g/n/ac/ax (2.4ghz/5ghz)",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 95,
+      "product_id": 4,
+      "normalized_name": "2_4g_wi_fi_transmitter_power",
+      "selected_value": "< 20 dbm (eirp)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 96,
+      "product_id": 4,
+      "normalized_name": "2_4g_wireless_transmitter_frequency_range",
+      "selected_value": "2406 - 2474mh",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 97,
+      "product_id": 4,
+      "normalized_name": "2_4g_wireless_transmitter_power",
+      "selected_value": "＜10dbm (eirp）",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 98,
+      "product_id": 4,
+      "normalized_name": "5g_wi_fi_transmitter_frequency_range",
+      "selected_value": "5.15 - 5.35ghz, 5.470-5.725ghz, 5.725 - 5.825ghz",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 99,
+      "product_id": 4,
+      "normalized_name": "5g_wi_fi_transmitter_power",
+      "selected_value": "5.15-5.25ghz <23dbm, 5.25-5.35ghz & 5.47-5.725ghz <20dbm, 5.725-5.825ghz <14dbm (eirp)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 100,
+      "product_id": 4,
+      "normalized_name": "bluetooth_profile",
+      "selected_value": "a2dp 1.2, avrcp 1.5",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 101,
+      "product_id": 4,
+      "normalized_name": "bluetooth_transmitter_frequency_range",
+      "selected_value": "2400 mhz – 2483.5 mhz",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 102,
+      "product_id": 4,
+      "normalized_name": "bluetooth_transmitter_power",
+      "selected_value": "<15 dbm (eirp)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 103,
+      "product_id": 4,
+      "normalized_name": "bluetooth_version",
+      "selected_value": "5",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 104,
+      "product_id": 4,
+      "normalized_name": "frequency_response",
+      "selected_value": "35hz - 20khz (-6db)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 105,
+      "product_id": 4,
+      "normalized_name": "networked_standby_power",
+      "selected_value": "< 2.0 w",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 106,
+      "product_id": 4,
+      "normalized_name": "operating_temperature",
+      "selected_value": "0°c - 45 °c",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 107,
+      "product_id": 4,
+      "normalized_name": "power_supply",
+      "selected_value": "100 - 240v ac, ~ 50/60hz",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 108,
+      "product_id": 4,
+      "normalized_name": "soundbar_dimensions_w_x_h_x_d",
+      "selected_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 109,
+      "product_id": 4,
+      "normalized_name": "soundbar_output_power_max_thd_1",
+      "selected_value": "290w",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 110,
+      "product_id": 4,
+      "normalized_name": "soundbar_transducer",
+      "selected_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 111,
+      "product_id": 4,
+      "normalized_name": "soundbar_weight",
+      "selected_value": "2.8",
+      "selected_unit": "kg",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 112,
+      "product_id": 4,
+      "normalized_name": "subwoofer_dimensions_w_x_h_x_d",
+      "selected_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 113,
+      "product_id": 4,
+      "normalized_name": "subwoofer_output_power_max_thd_1",
+      "selected_value": "300 w",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 114,
+      "product_id": 4,
+      "normalized_name": "subwoofer_transducer",
+      "selected_value": "10” (260mm)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 115,
+      "product_id": 4,
+      "normalized_name": "subwoofer_weight",
+      "selected_value": "10",
+      "selected_unit": "kg",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 116,
+      "product_id": 4,
+      "normalized_name": "total_speaker_power_output_max_thd_1",
+      "selected_value": "590w",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 117,
+      "product_id": 4,
+      "normalized_name": "wi_fi_network",
+      "selected_value": "ieee 802.11 a/b/g/n/ac/ax (2.4ghz/5ghz)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+      "selected_source": "jbl",
+      "conflict": 0,
+      "updated_at": "2026-10-13T08:57:31+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "2_4g_wi_fi_transmitter_power",
+      "sources": {
+        "jbl": {
+          "id": 113,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "2.4G Wi-Fi transmitter power",
+          "raw_value": "< 20 dBm (EIRP)",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "2_4g_wi_fi_transmitter_power",
+          "normalized_value": "< 20 dbm (eirp)",
+          "unit": "",
+          "display_value": "< 20 dbm (eirp)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "2.4G Wi-Fi transmitter power"
+      ],
+      "display_name": "Мощность передатчика Wi-Fi 2,4 ГГц",
+      "resolved": {
+        "id": 95,
+        "product_id": 4,
+        "normalized_name": "2_4g_wi_fi_transmitter_power",
+        "selected_value": "< 20 dbm (eirp)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "< 20 dbm (eirp)",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "2_4g_wireless_transmitter_frequency_range",
+      "sources": {
+        "jbl": {
+          "id": 116,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "2.4G wireless transmitter frequency range",
+          "raw_value": "2406 - 2474MH",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "2_4g_wireless_transmitter_frequency_range",
+          "normalized_value": "2406 - 2474mh",
+          "unit": "",
+          "display_value": "2406 - 2474mh",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "2.4G wireless transmitter frequency range"
+      ],
+      "display_name": "Частотный диапазон беспроводного соединения 2,4 ГГц",
+      "resolved": {
+        "id": 96,
+        "product_id": 4,
+        "normalized_name": "2_4g_wireless_transmitter_frequency_range",
+        "selected_value": "2406 - 2474mh",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "2406 - 2474mh",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "2_4g_wireless_transmitter_power",
+      "sources": {
+        "jbl": {
+          "id": 117,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "2.4G wireless transmitter power",
+          "raw_value": "＜10dBm (EIRP）",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "2_4g_wireless_transmitter_power",
+          "normalized_value": "＜10dbm (eirp）",
+          "unit": "",
+          "display_value": "＜10dbm (eirp）",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "2.4G wireless transmitter power"
+      ],
+      "display_name": "Мощность беспроводного передатчика 2,4 ГГц",
+      "resolved": {
+        "id": 97,
+        "product_id": 4,
+        "normalized_name": "2_4g_wireless_transmitter_power",
+        "selected_value": "＜10dbm (eirp）",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "＜10dbm (eirp）",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "5g_wi_fi_transmitter_frequency_range",
+      "sources": {
+        "jbl": {
+          "id": 114,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "5G Wi-Fi transmitter frequency range",
+          "raw_value": "5.15 - 5.35GHz, 5.470-5.725GHz, 5.725 - 5.825GHz",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "5g_wi_fi_transmitter_frequency_range",
+          "normalized_value": "5.15 - 5.35ghz, 5.470-5.725ghz, 5.725 - 5.825ghz",
+          "unit": "",
+          "display_value": "5.15 - 5.35ghz, 5.470-5.725ghz, 5.725 - 5.825ghz",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "5G Wi-Fi transmitter frequency range"
+      ],
+      "display_name": "Частотный диапазон Wi-Fi 5 ГГц",
+      "resolved": {
+        "id": 98,
+        "product_id": 4,
+        "normalized_name": "5g_wi_fi_transmitter_frequency_range",
+        "selected_value": "5.15 - 5.35ghz, 5.470-5.725ghz, 5.725 - 5.825ghz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "5.15 - 5.35ghz, 5.470-5.725ghz, 5.725 - 5.825ghz",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "5g_wi_fi_transmitter_power",
+      "sources": {
+        "jbl": {
+          "id": 115,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "5G Wi-Fi transmitter power",
+          "raw_value": "5.15-5.25GHz <23dBm, 5.25-5.35GHz & 5.47-5.725GHz <20dBm, 5.725-5.825GHz <14dBm (EIRP)",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "5g_wi_fi_transmitter_power",
+          "normalized_value": "5.15-5.25ghz <23dbm, 5.25-5.35ghz & 5.47-5.725ghz <20dbm, 5.725-5.825ghz <14dbm (eirp)",
+          "unit": "",
+          "display_value": "5.15-5.25ghz <23dbm, 5.25-5.35ghz & 5.47-5.725ghz <20dbm, 5.725-5.825ghz <14dbm (eirp)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "5G Wi-Fi transmitter power"
+      ],
+      "display_name": "Мощность передатчика Wi-Fi 5 ГГц",
+      "resolved": {
+        "id": 99,
+        "product_id": 4,
+        "normalized_name": "5g_wi_fi_transmitter_power",
+        "selected_value": "5.15-5.25ghz <23dbm, 5.25-5.35ghz & 5.47-5.725ghz <20dbm, 5.725-5.825ghz <14dbm (eirp)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "5.15-5.25ghz <23dbm, 5.25-5.35ghz & 5.47-5.725ghz <20dbm, 5.725-5.825ghz <14dbm (eirp)",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_profile",
+      "sources": {
+        "jbl": {
+          "id": 109,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth profile",
+          "raw_value": "A2DP 1.2, AVRCP 1.5",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "bluetooth_profile",
+          "normalized_value": "a2dp 1.2, avrcp 1.5",
+          "unit": "",
+          "display_value": "a2dp 1.2, avrcp 1.5",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth profile"
+      ],
+      "display_name": "Профили Bluetooth",
+      "resolved": {
+        "id": 100,
+        "product_id": 4,
+        "normalized_name": "bluetooth_profile",
+        "selected_value": "a2dp 1.2, avrcp 1.5",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "a2dp 1.2, avrcp 1.5",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_transmitter_frequency_range",
+      "sources": {
+        "jbl": {
+          "id": 110,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth transmitter frequency range",
+          "raw_value": "2400 MHz – 2483.5 MHz",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "bluetooth_transmitter_frequency_range",
+          "normalized_value": "2400 mhz – 2483.5 mhz",
+          "unit": "",
+          "display_value": "2400 mhz – 2483.5 mhz",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth transmitter frequency range"
+      ],
+      "display_name": "Частотный диапазон Bluetooth",
+      "resolved": {
+        "id": 101,
+        "product_id": 4,
+        "normalized_name": "bluetooth_transmitter_frequency_range",
+        "selected_value": "2400 mhz – 2483.5 mhz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "2400 mhz – 2483.5 mhz",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_transmitter_power",
+      "sources": {
+        "jbl": {
+          "id": 111,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth transmitter power",
+          "raw_value": "<15 dBm (EIRP)",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "bluetooth_transmitter_power",
+          "normalized_value": "<15 dbm (eirp)",
+          "unit": "",
+          "display_value": "<15 dbm (eirp)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth transmitter power"
+      ],
+      "display_name": "Мощность передатчика Bluetooth",
+      "resolved": {
+        "id": 102,
+        "product_id": 4,
+        "normalized_name": "bluetooth_transmitter_power",
+        "selected_value": "<15 dbm (eirp)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "<15 dbm (eirp)",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "frequency_response",
+      "sources": {
+        "jbl": {
+          "id": 103,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Frequency response",
+          "raw_value": "35Hz - 20kHz (-6dB)",
+          "section": "Audio Specifications",
+          "value_cell": null,
+          "normalized_name": "frequency_response",
+          "normalized_value": "35hz - 20khz (-6db)",
+          "unit": "",
+          "display_value": "35hz - 20khz (-6db)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Frequency response"
+      ],
+      "display_name": "Диапазон частот",
+      "resolved": {
+        "id": 104,
+        "product_id": 4,
+        "normalized_name": "frequency_response",
+        "selected_value": "35hz - 20khz (-6db)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "35hz - 20khz (-6db)",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "networked_standby_power",
+      "sources": {
+        "jbl": {
+          "id": 96,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Networked standby power",
+          "raw_value": "< 2.0 W",
+          "section": "General Specifications",
+          "value_cell": null,
+          "normalized_name": "networked_standby_power",
+          "normalized_value": "< 2.0 w",
+          "unit": "",
+          "display_value": "< 2.0 w",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Networked standby power"
+      ],
+      "display_name": "Мощность в сетевом режиме ожидания",
+      "resolved": {
+        "id": 105,
+        "product_id": 4,
+        "normalized_name": "networked_standby_power",
+        "selected_value": "< 2.0 w",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "< 2.0 w",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "operating_temperature",
+      "sources": {
+        "jbl": {
+          "id": 97,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Operating temperature",
+          "raw_value": "0°C - 45 °C",
+          "section": "General Specifications",
+          "value_cell": null,
+          "normalized_name": "operating_temperature",
+          "normalized_value": "0°c - 45 °c",
+          "unit": "",
+          "display_value": "0°c - 45 °c",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Operating temperature"
+      ],
+      "display_name": "Рабочая температура",
+      "resolved": {
+        "id": 106,
+        "product_id": 4,
+        "normalized_name": "operating_temperature",
+        "selected_value": "0°c - 45 °c",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "0°c - 45 °c",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "power_supply",
+      "sources": {
+        "jbl": {
+          "id": 95,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Power supply",
+          "raw_value": "100 - 240V AC, ~ 50/60Hz",
+          "section": "General Specifications",
+          "value_cell": null,
+          "normalized_name": "power_supply",
+          "normalized_value": "100 - 240v ac, ~ 50/60hz",
+          "unit": "",
+          "display_value": "100 - 240v ac, ~ 50/60hz",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Power supply"
+      ],
+      "display_name": "Питание",
+      "resolved": {
+        "id": 107,
+        "product_id": 4,
+        "normalized_name": "power_supply",
+        "selected_value": "100 - 240v ac, ~ 50/60hz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "100 - 240v ac, ~ 50/60hz",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "soundbar_dimensions_w_x_h_x_d",
+      "sources": {
+        "jbl": {
+          "id": 104,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Soundbar dimensions (W x H x D)",
+          "raw_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+          "section": "Dimensions",
+          "value_cell": null,
+          "normalized_name": "soundbar_dimensions_w_x_h_x_d",
+          "normalized_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+          "unit": "",
+          "display_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Soundbar dimensions (W x H x D)"
+      ],
+      "display_name": "Габариты саундбара (Ш × В × Г)",
+      "resolved": {
+        "id": 108,
+        "product_id": 4,
+        "normalized_name": "soundbar_dimensions_w_x_h_x_d",
+        "selected_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "soundbar_output_power_max_thd_1",
+      "sources": {
+        "jbl": {
+          "id": 99,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Soundbar output power (Max @THD 1%)",
+          "raw_value": "290W",
+          "section": "Audio Specifications",
+          "value_cell": null,
+          "normalized_name": "soundbar_output_power_max_thd_1",
+          "normalized_value": "290w",
+          "unit": "",
+          "display_value": "290w",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Soundbar output power (Max @THD 1%)"
+      ],
+      "display_name": "Мощность саундбара (макс., THD 1%)",
+      "resolved": {
+        "id": 109,
+        "product_id": 4,
+        "normalized_name": "soundbar_output_power_max_thd_1",
+        "selected_value": "290w",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "290w",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "soundbar_transducer",
+      "sources": {
+        "jbl": {
+          "id": 101,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Soundbar transducer",
+          "raw_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+          "section": "Audio Specifications",
+          "value_cell": null,
+          "normalized_name": "soundbar_transducer",
+          "normalized_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+          "unit": "",
+          "display_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Soundbar transducer"
+      ],
+      "display_name": "Динамики саундбара",
+      "resolved": {
+        "id": 110,
+        "product_id": 4,
+        "normalized_name": "soundbar_transducer",
+        "selected_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "soundbar_weight",
+      "sources": {
+        "jbl": {
+          "id": 106,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Soundbar weight",
+          "raw_value": "2.8kg/ 6.2 lbs",
+          "section": "Dimensions",
+          "value_cell": null,
+          "normalized_name": "soundbar_weight",
+          "normalized_value": "2.8",
+          "unit": "kg",
+          "display_value": "2.8 кг",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Soundbar weight"
+      ],
+      "display_name": "Вес саундбара",
+      "resolved": {
+        "id": 111,
+        "product_id": 4,
+        "normalized_name": "soundbar_weight",
+        "selected_value": "2.8",
+        "selected_unit": "kg",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "2.8 кг",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "subwoofer_dimensions_w_x_h_x_d",
+      "sources": {
+        "jbl": {
+          "id": 105,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Subwoofer dimensions (W x H x D)",
+          "raw_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+          "section": "Dimensions",
+          "value_cell": null,
+          "normalized_name": "subwoofer_dimensions_w_x_h_x_d",
+          "normalized_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+          "unit": "",
+          "display_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Subwoofer dimensions (W x H x D)"
+      ],
+      "display_name": "Габариты сабвуфера (Ш × В × Г)",
+      "resolved": {
+        "id": 112,
+        "product_id": 4,
+        "normalized_name": "subwoofer_dimensions_w_x_h_x_d",
+        "selected_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\"",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "subwoofer_output_power_max_thd_1",
+      "sources": {
+        "jbl": {
+          "id": 100,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Subwoofer output power (Max. @THD 1%)",
+          "raw_value": "300 W",
+          "section": "Audio Specifications",
+          "value_cell": null,
+          "normalized_name": "subwoofer_output_power_max_thd_1",
+          "normalized_value": "300 w",
+          "unit": "",
+          "display_value": "300 w",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Subwoofer output power (Max. @THD 1%)"
+      ],
+      "display_name": "Мощность сабвуфера (макс., THD 1%)",
+      "resolved": {
+        "id": 113,
+        "product_id": 4,
+        "normalized_name": "subwoofer_output_power_max_thd_1",
+        "selected_value": "300 w",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "300 w",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "subwoofer_transducer",
+      "sources": {
+        "jbl": {
+          "id": 102,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Subwoofer transducer",
+          "raw_value": "10” (260mm)",
+          "section": "Audio Specifications",
+          "value_cell": null,
+          "normalized_name": "subwoofer_transducer",
+          "normalized_value": "10” (260mm)",
+          "unit": "",
+          "display_value": "10” (260mm)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Subwoofer transducer"
+      ],
+      "display_name": "Динамик сабвуфера",
+      "resolved": {
+        "id": 114,
+        "product_id": 4,
+        "normalized_name": "subwoofer_transducer",
+        "selected_value": "10” (260mm)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "10” (260mm)",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "subwoofer_weight",
+      "sources": {
+        "jbl": {
+          "id": 107,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Subwoofer weight",
+          "raw_value": "10 kg / 22 lbs",
+          "section": "Dimensions",
+          "value_cell": null,
+          "normalized_name": "subwoofer_weight",
+          "normalized_value": "10",
+          "unit": "kg",
+          "display_value": "10 кг",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Subwoofer weight"
+      ],
+      "display_name": "Вес сабвуфера",
+      "resolved": {
+        "id": 115,
+        "product_id": 4,
+        "normalized_name": "subwoofer_weight",
+        "selected_value": "10",
+        "selected_unit": "kg",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "10 кг",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "total_speaker_power_output_max_thd_1",
+      "sources": {
+        "jbl": {
+          "id": 98,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Total speaker power output (Max @THD 1%)",
+          "raw_value": "590W",
+          "section": "Audio Specifications",
+          "value_cell": null,
+          "normalized_name": "total_speaker_power_output_max_thd_1",
+          "normalized_value": "590w",
+          "unit": "",
+          "display_value": "590w",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Total speaker power output (Max @THD 1%)"
+      ],
+      "display_name": "Общая мощность (макс., THD 1%)",
+      "resolved": {
+        "id": 116,
+        "product_id": 4,
+        "normalized_name": "total_speaker_power_output_max_thd_1",
+        "selected_value": "590w",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "590w",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "wi_fi_network",
+      "sources": {
+        "jbl": {
+          "id": 112,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Wi-Fi network",
+          "raw_value": "IEEE 802.11 a/b/g/n/ac/ax (2.4GHz/5GHz)",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "wi_fi_network",
+          "normalized_value": "ieee 802.11 a/b/g/n/ac/ax (2.4ghz/5ghz)",
+          "unit": "",
+          "display_value": "ieee 802.11 a/b/g/n/ac/ax (2.4ghz/5ghz)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Wi-Fi network"
+      ],
+      "display_name": "Стандарты Wi-Fi",
+      "resolved": {
+        "id": 117,
+        "product_id": 4,
+        "normalized_name": "wi_fi_network",
+        "selected_value": "ieee 802.11 a/b/g/n/ac/ax (2.4ghz/5ghz)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "ieee 802.11 a/b/g/n/ac/ax (2.4ghz/5ghz)",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    },
+    {
+      "normalized_name": "bluetooth_version",
+      "sources": {
+        "jbl": {
+          "id": 108,
+          "product_id": 4,
+          "source_page_id": 4,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth version",
+          "raw_value": "5.0",
+          "section": "Control and Connection Specifications",
+          "value_cell": null,
+          "normalized_name": "bluetooth_version",
+          "normalized_value": "5",
+          "unit": "",
+          "display_value": "5",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth version"
+      ],
+      "display_name": "Версия Bluetooth",
+      "resolved": {
+        "id": 103,
+        "product_id": 4,
+        "normalized_name": "bluetooth_version",
+        "selected_value": "5",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-13T08:57:31+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "5",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true
+    }
+  ],
+  "photos": [
+    {
+      "id": 4,
+      "product_id": 4,
+      "source_page_id": 4,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc9a60649/JBLBar500_WEB_HERO.png",
+      "asset_key": "1356b7dfdc536a9247c6fa4104a5ca772ad32a5156255e51e3101d770d04f564",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T08:57:31+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "article": "JBLBAR500PROBLKEP",
+    "query_variants": [
+      "site:jbl.com \"JBLBAR500PROBLKEP\"",
+      "site:jbl.com \"JBLBAR500PRO\"",
+      "site:jbl.com BAR 500"
+    ],
+    "identity": {
+      "model_relation": "exact_model",
+      "variant_relation": "same_color_other_region",
+      "requested_components": {
+        "model_code": "JBLBAR500PRO",
+        "color": "Black",
+        "region": "EP",
+        "full_code": "JBLBAR500PROBLKEP"
+      },
+      "returned_components": {
+        "model_code": "JBLBAR500PRO",
+        "color": "Black",
+        "region": "AS",
+        "full_code": "JBLBAR500PROBLKAS"
+      },
+      "exact_sku": false,
+      "model_confirmed": true,
+      "relation": "other_variant",
+      "requested": "JBLBAR500PROBLKEP",
+      "returned_sku": "JBLBAR500PROBLKAS",
+      "returned_mpn": "JBLBAR500PROBLKAS",
+      "data_pid": "",
+      "model": "BAR 500",
+      "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+      "color": "Black"
+    },
+    "raw_specs": [
+      {
+        "section": "General Specifications",
+        "raw_label": "Power supply",
+        "value": "100 - 240V AC, ~ 50/60Hz"
+      },
+      {
+        "section": "General Specifications",
+        "raw_label": "Networked standby power",
+        "value": "< 2.0 W"
+      },
+      {
+        "section": "General Specifications",
+        "raw_label": "Operating temperature",
+        "value": "0°C - 45 °C"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Total speaker power output (Max @THD 1%)",
+        "value": "590W"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Soundbar output power (Max @THD 1%)",
+        "value": "290W"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Subwoofer output power (Max. @THD 1%)",
+        "value": "300 W"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Soundbar transducer",
+        "value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Subwoofer transducer",
+        "value": "10” (260mm)"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Frequency response",
+        "value": "35Hz - 20kHz (-6dB)"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Audio inputs",
+        "value": "1 Optical, Bluetooth, USB (USB playback is available in US version. For other versions, USB is for Service only.)"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Soundbar dimensions (W x H x D)",
+        "value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Subwoofer dimensions (W x H x D)",
+        "value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\""
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Soundbar weight",
+        "value": "2.8kg/ 6.2 lbs"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Subwoofer weight",
+        "value": "10 kg / 22 lbs"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Packaging dimensions (W x H x D)",
+        "value": "1105 x 370 x 475 mm/ 43.5\" x 14.6\" x 18.7\""
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Packaging Weight",
+        "value": "16.2 kg / 35.6 lbs"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "USB port",
+        "value": "Type A"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "USB rating",
+        "value": "5V DC, 0.5A"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Supporting file format",
+        "value": "MP3"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "MP3 codec",
+        "value": "MPEG 1 Layer 2/3, MPEG 2 Layer 3, MPEG 2.5 Layer 3"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "MP3 sampling rate",
+        "value": "16 - 48 kHz"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "MP3 bitrate",
+        "value": "80 - 320 kpbs"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth version",
+        "value": "5.0"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth profile",
+        "value": "A2DP 1.2, AVRCP 1.5"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth transmitter frequency range",
+        "value": "2400 MHz – 2483.5 MHz"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth transmitter power",
+        "value": "<15 dBm (EIRP)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Wi-Fi network",
+        "value": "IEEE 802.11 a/b/g/n/ac/ax (2.4GHz/5GHz)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G Wi-Fi transmitter frequency range",
+        "value": "2412 - 2472 MHz (2.4 GHz ISM Band, USA 11 Channels, Europe and others 13 Channels)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G Wi-Fi transmitter power",
+        "value": "< 20 dBm (EIRP)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "5G Wi-Fi transmitter frequency range",
+        "value": "5.15 - 5.35GHz, 5.470-5.725GHz, 5.725 - 5.825GHz"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "5G Wi-Fi transmitter power",
+        "value": "5.15-5.25GHz <23dBm, 5.25-5.35GHz & 5.47-5.725GHz <20dBm, 5.725-5.825GHz <14dBm (EIRP)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G wireless transmitter frequency range",
+        "value": "2406 - 2474MH"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G wireless transmitter power",
+        "value": "＜10dBm (EIRP）"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "General Specifications",
+        "raw_label": "Power supply",
+        "value": "100 - 240V AC, ~ 50/60Hz"
+      },
+      {
+        "section": "General Specifications",
+        "raw_label": "Networked standby power",
+        "value": "< 2.0 W"
+      },
+      {
+        "section": "General Specifications",
+        "raw_label": "Operating temperature",
+        "value": "0°C - 45 °C"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Total speaker power output (Max @THD 1%)",
+        "value": "590W"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Soundbar output power (Max @THD 1%)",
+        "value": "290W"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Subwoofer output power (Max. @THD 1%)",
+        "value": "300 W"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Soundbar transducer",
+        "value": "4x (46x90)mm racetrack drivers, 3x 0.75\" (20mm) tweeters"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Subwoofer transducer",
+        "value": "10” (260mm)"
+      },
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Frequency response",
+        "value": "35Hz - 20kHz (-6dB)"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Soundbar dimensions (W x H x D)",
+        "value": "1017 x 56 x 103.5 mm / 40’’ x 2.2’’ x 4’’"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Subwoofer dimensions (W x H x D)",
+        "value": "305 x 440.4 x 305 mm / 12\" x 17.3\" x 12\""
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Soundbar weight",
+        "value": "2.8kg/ 6.2 lbs"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Subwoofer weight",
+        "value": "10 kg / 22 lbs"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth version",
+        "value": "5.0"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth profile",
+        "value": "A2DP 1.2, AVRCP 1.5"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth transmitter frequency range",
+        "value": "2400 MHz – 2483.5 MHz"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Bluetooth transmitter power",
+        "value": "<15 dBm (EIRP)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Wi-Fi network",
+        "value": "IEEE 802.11 a/b/g/n/ac/ax (2.4GHz/5GHz)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G Wi-Fi transmitter power",
+        "value": "< 20 dBm (EIRP)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "5G Wi-Fi transmitter frequency range",
+        "value": "5.15 - 5.35GHz, 5.470-5.725GHz, 5.725 - 5.825GHz"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "5G Wi-Fi transmitter power",
+        "value": "5.15-5.25GHz <23dBm, 5.25-5.35GHz & 5.47-5.725GHz <20dBm, 5.725-5.825GHz <14dBm (EIRP)"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G wireless transmitter frequency range",
+        "value": "2406 - 2474MH"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G wireless transmitter power",
+        "value": "＜10dBm (EIRP）"
+      }
+    ],
+    "rejected_specs": [
+      {
+        "section": "Audio Specifications",
+        "raw_label": "Audio inputs",
+        "value": "1 Optical, Bluetooth, USB (USB playback is available in US version. For other versions, USB is for Service only.)",
+        "reason": "conditional_or_regional_option"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Packaging dimensions (W x H x D)",
+        "value": "1105 x 370 x 475 mm/ 43.5\" x 14.6\" x 18.7\"",
+        "reason": "variant_specific_field"
+      },
+      {
+        "section": "Dimensions",
+        "raw_label": "Packaging Weight",
+        "value": "16.2 kg / 35.6 lbs",
+        "reason": "variant_specific_field"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "USB port",
+        "value": "Type A",
+        "reason": "regional_technical_difference"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "USB rating",
+        "value": "5V DC, 0.5A",
+        "reason": "regional_technical_difference"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "Supporting file format",
+        "value": "MP3",
+        "reason": "regional_technical_difference"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "MP3 codec",
+        "value": "MPEG 1 Layer 2/3, MPEG 2 Layer 3, MPEG 2.5 Layer 3",
+        "reason": "regional_technical_difference"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "MP3 sampling rate",
+        "value": "16 - 48 kHz",
+        "reason": "regional_technical_difference"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "MP3 bitrate",
+        "value": "80 - 320 kpbs",
+        "reason": "regional_technical_difference"
+      },
+      {
+        "section": "Control and Connection Specifications",
+        "raw_label": "2.4G Wi-Fi transmitter frequency range",
+        "value": "2412 - 2472 MHz (2.4 GHz ISM Band, USA 11 Channels, Europe and others 13 Channels)",
+        "reason": "conditional_or_regional_option"
+      },
+      {
+        "section": "Комплектация",
+        "raw_label": "Комплектация",
+        "value": "1 x Main Soundbar 1 x Wireless subwoofer Remote control with 2 x batteries Power cords (up to 8pcs depending on region SKUs) 1 x HDMI cable 2 x L-shape wall-mount bracket with screws Quick start guide Safety Instruction and Warranty Card Wall mount template",
+        "reason": "variant_specific_field"
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc9a60649/JBLBar500_WEB_HERO.png",
+        "asset_key": "1356b7dfdc536a9247c6fa4104a5ca772ad32a5156255e51e3101d770d04f564",
+        "relation": "model_color_gallery",
+        "color": "Black",
+        "role": "product_gallery",
+        "verified": true
+      }
+    ],
+    "manuals": [
+      {
+        "type": "Regulatory/Other",
+        "title": "Declaration of Conformity 457 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw81cbf036/pdfs/JBL BAR 500 - EU_UK DOC_V7.0 - Without adapter version.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Regulatory/Other",
+        "title": "PPWR DoC 348 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc5002812/pdfs/BAR500_EU_DOC_PPWR.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Quick Start Guide",
+        "title": "Quick Start Guide (Multilingual) 2 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc2616cb2/pdfs/HA_JBL_Bar 500_QSG_Global_CR_V20_online.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Regulatory/Other",
+        "title": "JBL Bar 500 Tech Backgrounder 2 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw0699b037/pdfs/JBL BAR 500 Tech Backgrounder.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Warranty",
+        "title": "JBL Global Warranty Card 9 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3b22fc9b/pdfs/TR04082_JBL_Global_Warranty_card_F_V9_HD.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Spec Sheet",
+        "title": "Spec Sheet (English) 335 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwac4943c9/pdfs/JBL Bar 500_Specsheet_EN.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Regulatory/Other",
+        "title": "PSTI Declaration of Conformity (English) 175 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw7b4b6cf6/pdfs/PSTI-DOC_JBL_BAR_500.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "User Guide",
+        "title": "Owners Manual (English) 3 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwd9ac5d04/pdfs/HA_JBL_Bar_500_OM_V11_EN.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      }
+    ],
+    "verified_documents": [],
+    "exact_photo_assets": [
+      "1356b7dfdc536a9247c6fa4104a5ca772ad32a5156255e51e3101d770d04f564"
+    ],
+    "manual_status": "Не проверена",
+    "support_urls": [
+      "https://support.jbl.com/id/en/policy-legal/buy-authentic.html",
+      "https://support.jbl.com/id/en/policy-legal/buy-authentic.html",
+      "https://support.jbl.com/id/en/policy-legal/buy-authentic.html",
+      "https://support.jbl.com/id/en/policy-legal/buy-authentic.html",
+      "https://support.jbl.com/id/en/policy-legal/buy-authentic.html"
+    ]
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "Network request failed",
+      "region": "ru",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:21+00:00",
+      "url": "https://ru.jbl.com/JBLBAR500PROBLKEP.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "Network request failed",
+      "region": "ru",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:22+00:00",
+      "url": "https://ru.jbl.com/JBLBAR500PROBLK.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "[policy_host_stopped]",
+      "region": "uk",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:22+00:00",
+      "url": "https://uk.jbl.com/JBLBAR500PROBLKEP.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "[policy_host_stopped]",
+      "region": "uk",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:22+00:00",
+      "url": "https://uk.jbl.com/JBLBAR500PROBLK.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "[policy_host_stopped]",
+      "region": "de",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:22+00:00",
+      "url": "https://de.jbl.com/JBLBAR500PROBLKEP.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "[policy_host_stopped]",
+      "region": "de",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:22+00:00",
+      "url": "https://de.jbl.com/JBLBAR500PROBLK.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "404",
+      "region": "id",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:24+00:00",
+      "url": "https://id.jbl.com/JBLBAR500PROBLKEP.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "JBLBAR500PROBLKEP",
+      "reason": "404",
+      "region": "id",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:26+00:00",
+      "url": "https://id.jbl.com/JBLBAR500PROBLK.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "model_relation": "discovery_only",
+      "provider": "regional_official_search",
+      "query": "Bar 500",
+      "reason": "Official server search/redirect is discovery only",
+      "region": "id",
+      "source_type": "search",
+      "timestamp": "2026-10-13T08:57:28+00:00",
+      "url": "https://id.jbl.com/en/search?q=Bar%20500",
+      "variant_relation": "unproven"
+    },
+    {
+      "accepted": true,
+      "event": "jbl_discovery",
+      "model_relation": "exact_model",
+      "provider": "regional_official_search",
+      "query": "Bar 500",
+      "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+      "region": "id",
+      "source_type": "pdp",
+      "timestamp": "2026-10-13T08:57:30+00:00",
+      "url": "https://id.jbl.com/en/soundbars/BAR-500-.html?dwvar_BAR-500-_color=Black-APAC-Current",
+      "variant_relation": "same_color_other_region"
+    }
+  ]
+}

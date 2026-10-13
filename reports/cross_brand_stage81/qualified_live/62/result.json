@@ -1,0 +1,2997 @@
+{
+  "input": {
+    "id": 62,
+    "brand": "Xbox",
+    "dispatch_brand": "Xbox",
+    "article": "1883",
+    "model": "Xbox Series S hardware model 1883",
+    "name": "Xbox Series S hardware model 1883",
+    "category": "Игровые консоли",
+    "input_configuration": {},
+    "region": "en-GB",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/xbox_stage68/dataset.json",
+    "original_input": {
+      "row": 10,
+      "article": "1883",
+      "name": "Xbox Series S hardware model 1883",
+      "identifier_type": "hardware_model_number",
+      "requested_region": "en-GB",
+      "brand": "Xbox",
+      "category": "consoles"
+    }
+  },
+  "observed_at": "2026-10-13T14:38:36.502407+00:00",
+  "seconds": 13.48,
+  "job": {
+    "id": "a6141ce1f1a6448480a291dac62f3b66",
+    "product_id": 62,
+    "status": "done",
+    "current_stage": null,
+    "message": "Xbox: Готова",
+    "created_at": "2026-10-13T14:38:23+00:00",
+    "updated_at": "2026-10-13T14:38:34+00:00",
+    "started_at": "2026-10-13T14:38:23+00:00",
+    "finished_at": "2026-10-13T14:38:34+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 173,
+      "product_id": 62,
+      "source_key": "xbox_configuration",
+      "site_name": "Xbox / Microsoft",
+      "url": "",
+      "found_model": "",
+      "match_level": "unknown",
+      "evidence": "",
+      "fetched_at": "2026-10-13T14:38:34+00:00",
+      "error": "Источник не подтверждён в текущем запуске",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 171,
+      "product_id": 62,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn",
+      "found_model": "Xbox Series S",
+      "match_level": "hardware_confirmed",
+      "evidence": "Own Store explicitly publishes requested hardware model; retail variants remain candidates",
+      "fetched_at": "2026-10-13T14:38:30+00:00",
+      "error": "",
+      "description": "Xbox Series S.\nАрхитектура процессора: Zen 2.\nАрхитектура графического процессора: RDNA 2.\nОперативная память: 10 GB GDDR6 128 bit-wide bus.\nПропускная способность памяти: 8 GB @ 224 GB/s, 2 GB @ 56 GB/s.\nСкорость ввода-вывода: 2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block).\nПоддержка карты расширения: Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately)..\nПоддержка внешних USB-накопителей: Support for USB 3.1 external HDD (sold separately)..\nИгровое разрешение: 1440p.\nЧастота кадров: Up to 120 FPS.\nВозможности HDMI: Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync..\nАудиоформаты: Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, up to 7.1.\nHDMI: 1× HDMI 2.1 port.\nUSB-порты: 3× USB 3.1 Gen 1 ports.\nEthernet: 802.3 10/100/1000.\nXbox Wireless: Dedicated dual band Xbox Wireless radio.",
+      "photos": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S"
+      ]
+    },
+    {
+      "id": 172,
+      "product_id": 62,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "url": "https://www.xbox.com/en-gb/consoles/xbox-series-s",
+      "found_model": "Xbox Series S",
+      "match_level": "model_confirmed",
+      "evidence": "Own official family PDP; configuration candidates are not exact facts",
+      "fetched_at": "2026-10-13T14:38:24+00:00",
+      "error": "",
+      "description": "Xbox Series S.\nАрхитектура процессора: Zen 2.\nАрхитектура графического процессора: RDNA 2.\nОперативная память: 10GB GDDR6 128 bit-wide bus.\nПропускная способность памяти: 8 GB @ 224 GB/s, 2 GB @ 56 GB/s..\nСкорость ввода-вывода: 2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block).\nПоддержка карты расширения: Support for 1 TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately)..\nПоддержка внешних USB-накопителей: Support for USB 3.1 external HDD (sold separately)..\nИгровое разрешение: 1440p.\nЧастота кадров: Up to 120 FPS.\nВозможности HDMI: Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync..\nАудиоформаты: L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos.\nHDMI: 1x HDMI 2.1 port.\nUSB-порты: 3x USB 3.1 Gen 1 ports.\nEthernet: 802.3 10/100/1000.\nXbox Wireless: Dedicated dual band XBOX Wireless radio.",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 2923,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Ethernet",
+      "raw_value": "802.3 10/100/1000",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "ethernet",
+      "normalized_value": "802.3 10/100/1000",
+      "unit": ""
+    },
+    {
+      "id": 2938,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Ethernet",
+      "raw_value": "802.3 10/100/1000",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "ethernet",
+      "normalized_value": "802.3 10/100/1000",
+      "unit": ""
+    },
+    {
+      "id": 2921,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "HDMI",
+      "raw_value": "1× HDMI 2.1 port",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "hdmi",
+      "normalized_value": "1× hdmi 2.1 port",
+      "unit": ""
+    },
+    {
+      "id": 2936,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "HDMI",
+      "raw_value": "1x HDMI 2.1 port",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "hdmi",
+      "normalized_value": "1x hdmi 2.1 port",
+      "unit": ""
+    },
+    {
+      "id": 2922,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "USB-порты",
+      "raw_value": "3× USB 3.1 Gen 1 ports",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "usb_порты",
+      "normalized_value": "3× usb 3.1 gen 1 ports",
+      "unit": ""
+    },
+    {
+      "id": 2937,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "USB-порты",
+      "raw_value": "3x USB 3.1 Gen 1 ports",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "usb_порты",
+      "normalized_value": "3x usb 3.1 gen 1 ports",
+      "unit": ""
+    },
+    {
+      "id": 2924,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Xbox Wireless",
+      "raw_value": "Dedicated dual band Xbox Wireless radio",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "xbox_wireless",
+      "normalized_value": "dedicated dual band xbox wireless radio",
+      "unit": ""
+    },
+    {
+      "id": 2939,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Xbox Wireless",
+      "raw_value": "Dedicated dual band XBOX Wireless radio",
+      "section": "Подключение",
+      "value_cell": 1,
+      "normalized_name": "xbox_wireless",
+      "normalized_value": "dedicated dual band xbox wireless radio",
+      "unit": ""
+    },
+    {
+      "id": 2911,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Архитектура графического процессора",
+      "raw_value": "RDNA 2",
+      "section": "Процессор и графика",
+      "value_cell": 1,
+      "normalized_name": "архитектура_графического_процессора",
+      "normalized_value": "rdna 2",
+      "unit": ""
+    },
+    {
+      "id": 2926,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Архитектура графического процессора",
+      "raw_value": "RDNA 2",
+      "section": "Процессор и графика",
+      "value_cell": 1,
+      "normalized_name": "архитектура_графического_процессора",
+      "normalized_value": "rdna 2",
+      "unit": ""
+    },
+    {
+      "id": 2910,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Архитектура процессора",
+      "raw_value": "Zen 2",
+      "section": "Процессор и графика",
+      "value_cell": 1,
+      "normalized_name": "архитектура_процессора",
+      "normalized_value": "zen 2",
+      "unit": ""
+    },
+    {
+      "id": 2925,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Архитектура процессора",
+      "raw_value": "Zen 2",
+      "section": "Процессор и графика",
+      "value_cell": 1,
+      "normalized_name": "архитектура_процессора",
+      "normalized_value": "zen 2",
+      "unit": ""
+    },
+    {
+      "id": 2920,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аудиоформаты",
+      "raw_value": "Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, up to 7.1",
+      "section": "Звук",
+      "value_cell": 1,
+      "normalized_name": "аудиоформаты",
+      "normalized_value": "dolby digital 5.1; dts 5.1; dolby truehd with atmos; l-pcm, up to 7.1",
+      "unit": ""
+    },
+    {
+      "id": 2935,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Аудиоформаты",
+      "raw_value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+      "section": "Звук",
+      "value_cell": 1,
+      "normalized_name": "аудиоформаты",
+      "normalized_value": "l-pcm, up to 7.1; dolby digital 5.1; dts 5.1; dolby truehd with atmos",
+      "unit": ""
+    },
+    {
+      "id": 2919,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Возможности HDMI",
+      "raw_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+      "section": "Видео",
+      "value_cell": 1,
+      "normalized_name": "возможности_hdmi",
+      "normalized_value": "auto low latency mode. hdmi variable refresh rate. amd freesync.",
+      "unit": ""
+    },
+    {
+      "id": 2934,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Возможности HDMI",
+      "raw_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+      "section": "Видео",
+      "value_cell": 1,
+      "normalized_name": "возможности_hdmi",
+      "normalized_value": "auto low latency mode. hdmi variable refresh rate. amd freesync.",
+      "unit": ""
+    },
+    {
+      "id": 2917,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Игровое разрешение",
+      "raw_value": "1440p",
+      "section": "Видео",
+      "value_cell": 1,
+      "normalized_name": "игровое_разрешение",
+      "normalized_value": "1440p",
+      "unit": ""
+    },
+    {
+      "id": 2932,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Игровое разрешение",
+      "raw_value": "1440p",
+      "section": "Видео",
+      "value_cell": 1,
+      "normalized_name": "игровое_разрешение",
+      "normalized_value": "1440p",
+      "unit": ""
+    },
+    {
+      "id": 2912,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Оперативная память",
+      "raw_value": "10 GB GDDR6 128 bit-wide bus",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "оперативная_память",
+      "normalized_value": "10 gb gddr6 128 bit-wide bus",
+      "unit": ""
+    },
+    {
+      "id": 2927,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Оперативная память",
+      "raw_value": "10GB GDDR6 128 bit-wide bus",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "оперативная_память",
+      "normalized_value": "10gb gddr6 128 bit-wide bus",
+      "unit": ""
+    },
+    {
+      "id": 2916,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Поддержка внешних USB-накопителей",
+      "raw_value": "Support for USB 3.1 external HDD (sold separately).",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "поддержка_внешних_usb_накопителей",
+      "normalized_value": "support for usb 3.1 external hdd (sold separately).",
+      "unit": ""
+    },
+    {
+      "id": 2931,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Поддержка внешних USB-накопителей",
+      "raw_value": "Support for USB 3.1 external HDD (sold separately).",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "поддержка_внешних_usb_накопителей",
+      "normalized_value": "support for usb 3.1 external hdd (sold separately).",
+      "unit": ""
+    },
+    {
+      "id": 2915,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Поддержка карты расширения",
+      "raw_value": "Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately).",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "поддержка_карты_расширения",
+      "normalized_value": "support for 1tb storage expansion cards for xbox series x|s matches internal storage exactly (sold separately).",
+      "unit": ""
+    },
+    {
+      "id": 2930,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Поддержка карты расширения",
+      "raw_value": "Support for 1 TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately).",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "поддержка_карты_расширения",
+      "normalized_value": "support for 1 tb storage expansion cards for xbox series x|s match internal storage performance (sold separately).",
+      "unit": ""
+    },
+    {
+      "id": 2913,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Пропускная способность памяти",
+      "raw_value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "пропускная_способность_памяти",
+      "normalized_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s",
+      "unit": ""
+    },
+    {
+      "id": 2928,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Пропускная способность памяти",
+      "raw_value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s.",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "пропускная_способность_памяти",
+      "normalized_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s.",
+      "unit": ""
+    },
+    {
+      "id": 2914,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Скорость ввода-вывода",
+      "raw_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "скорость_ввода_вывода",
+      "normalized_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+      "unit": ""
+    },
+    {
+      "id": 2929,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Скорость ввода-вывода",
+      "raw_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+      "section": "Память и накопители",
+      "value_cell": 1,
+      "normalized_name": "скорость_ввода_вывода",
+      "normalized_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+      "unit": ""
+    },
+    {
+      "id": 2918,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Частота кадров",
+      "raw_value": "Up to 120 FPS",
+      "section": "Видео",
+      "value_cell": 1,
+      "normalized_name": "частота_кадров",
+      "normalized_value": "up to 120 fps",
+      "unit": ""
+    },
+    {
+      "id": 2933,
+      "product_id": 62,
+      "source_page_id": 172,
+      "source_key": "xbox_model",
+      "site_name": "Xbox / Microsoft",
+      "raw_name": "Частота кадров",
+      "raw_value": "Up to 120 FPS",
+      "section": "Видео",
+      "value_cell": 1,
+      "normalized_name": "частота_кадров",
+      "normalized_value": "up to 120 fps",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2592,
+      "product_id": 62,
+      "normalized_name": "ethernet",
+      "selected_value": "802.3 10/100/1000",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2593,
+      "product_id": 62,
+      "normalized_name": "hdmi",
+      "selected_value": "1× hdmi 2.1 port",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2594,
+      "product_id": 62,
+      "normalized_name": "usb_порты",
+      "selected_value": "3× usb 3.1 gen 1 ports",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2595,
+      "product_id": 62,
+      "normalized_name": "xbox_wireless",
+      "selected_value": "dedicated dual band xbox wireless radio",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2596,
+      "product_id": 62,
+      "normalized_name": "архитектура_графического_процессора",
+      "selected_value": "rdna 2",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2597,
+      "product_id": 62,
+      "normalized_name": "архитектура_процессора",
+      "selected_value": "zen 2",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2598,
+      "product_id": 62,
+      "normalized_name": "аудиоформаты",
+      "selected_value": "dolby digital 5.1; dts 5.1; dolby truehd with atmos; l-pcm, up to 7.1",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2599,
+      "product_id": 62,
+      "normalized_name": "возможности_hdmi",
+      "selected_value": "auto low latency mode. hdmi variable refresh rate. amd freesync.",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2600,
+      "product_id": 62,
+      "normalized_name": "игровое_разрешение",
+      "selected_value": "1440p",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2601,
+      "product_id": 62,
+      "normalized_name": "оперативная_память",
+      "selected_value": "10 gb gddr6 128 bit-wide bus",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2602,
+      "product_id": 62,
+      "normalized_name": "поддержка_внешних_usb_накопителей",
+      "selected_value": "support for usb 3.1 external hdd (sold separately).",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2603,
+      "product_id": 62,
+      "normalized_name": "поддержка_карты_расширения",
+      "selected_value": "support for 1tb storage expansion cards for xbox series x|s matches internal storage exactly (sold separately).",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2604,
+      "product_id": 62,
+      "normalized_name": "пропускная_способность_памяти",
+      "selected_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2605,
+      "product_id": 62,
+      "normalized_name": "скорость_ввода_вывода",
+      "selected_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2606,
+      "product_id": 62,
+      "normalized_name": "частота_кадров",
+      "selected_value": "up to 120 fps",
+      "selected_unit": "",
+      "status": "hardware_confirmed_official",
+      "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+      "selected_source": "xbox_hardware",
+      "conflict": 0,
+      "updated_at": "2026-10-13T14:38:34+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "ethernet",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2923,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Ethernet",
+          "raw_value": "802.3 10/100/1000",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "ethernet",
+          "normalized_value": "802.3 10/100/1000",
+          "unit": "",
+          "display_value": "802.3 10/100/1000",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2938,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Ethernet",
+          "raw_value": "802.3 10/100/1000",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "ethernet",
+          "normalized_value": "802.3 10/100/1000",
+          "unit": "",
+          "display_value": "802.3 10/100/1000",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Ethernet",
+        "Ethernet"
+      ],
+      "display_name": "Ethernet",
+      "resolved": {
+        "id": 2592,
+        "product_id": 62,
+        "normalized_name": "ethernet",
+        "selected_value": "802.3 10/100/1000",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "802.3 10/100/1000",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Ethernet"
+    },
+    {
+      "normalized_name": "hdmi",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2921,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "HDMI",
+          "raw_value": "1× HDMI 2.1 port",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "hdmi",
+          "normalized_value": "1× hdmi 2.1 port",
+          "unit": "",
+          "display_value": "1× HDMI 2.1 port",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2936,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "HDMI",
+          "raw_value": "1x HDMI 2.1 port",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "hdmi",
+          "normalized_value": "1x hdmi 2.1 port",
+          "unit": "",
+          "display_value": "1x HDMI 2.1 port",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "HDMI",
+        "HDMI"
+      ],
+      "display_name": "HDMI",
+      "resolved": {
+        "id": 2593,
+        "product_id": 62,
+        "normalized_name": "hdmi",
+        "selected_value": "1× hdmi 2.1 port",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "1× HDMI 2.1 port",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / HDMI"
+    },
+    {
+      "normalized_name": "xbox_wireless",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2924,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Xbox Wireless",
+          "raw_value": "Dedicated dual band Xbox Wireless radio",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "xbox_wireless",
+          "normalized_value": "dedicated dual band xbox wireless radio",
+          "unit": "",
+          "display_value": "dedicated dual band Xbox Wireless radio",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2939,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Xbox Wireless",
+          "raw_value": "Dedicated dual band XBOX Wireless radio",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "xbox_wireless",
+          "normalized_value": "dedicated dual band xbox wireless radio",
+          "unit": "",
+          "display_value": "dedicated dual band Xbox Wireless radio",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Xbox Wireless",
+        "Xbox Wireless"
+      ],
+      "display_name": "Xbox Wireless",
+      "resolved": {
+        "id": 2595,
+        "product_id": 62,
+        "normalized_name": "xbox_wireless",
+        "selected_value": "dedicated dual band xbox wireless radio",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Dedicated dual band Xbox Wireless radio",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Xbox Wireless"
+    },
+    {
+      "normalized_name": "архитектура_графического_процессора",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2911,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Архитектура графического процессора",
+          "raw_value": "RDNA 2",
+          "section": "Процессор и графика",
+          "value_cell": 1,
+          "normalized_name": "архитектура_графического_процессора",
+          "normalized_value": "rdna 2",
+          "unit": "",
+          "display_value": "RDNA 2",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2926,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Архитектура графического процессора",
+          "raw_value": "RDNA 2",
+          "section": "Процессор и графика",
+          "value_cell": 1,
+          "normalized_name": "архитектура_графического_процессора",
+          "normalized_value": "rdna 2",
+          "unit": "",
+          "display_value": "RDNA 2",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Архитектура графического процессора",
+        "Архитектура графического процессора"
+      ],
+      "display_name": "Архитектура графического процессора",
+      "resolved": {
+        "id": 2596,
+        "product_id": 62,
+        "normalized_name": "архитектура_графического_процессора",
+        "selected_value": "rdna 2",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "RDNA 2",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Процессор и графика",
+      "category_attribute_key": "Процессор и графика / Архитектура графического процессора"
+    },
+    {
+      "normalized_name": "архитектура_процессора",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2910,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Архитектура процессора",
+          "raw_value": "Zen 2",
+          "section": "Процессор и графика",
+          "value_cell": 1,
+          "normalized_name": "архитектура_процессора",
+          "normalized_value": "zen 2",
+          "unit": "",
+          "display_value": "Zen 2",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2925,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Архитектура процессора",
+          "raw_value": "Zen 2",
+          "section": "Процессор и графика",
+          "value_cell": 1,
+          "normalized_name": "архитектура_процессора",
+          "normalized_value": "zen 2",
+          "unit": "",
+          "display_value": "Zen 2",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Архитектура процессора",
+        "Архитектура процессора"
+      ],
+      "display_name": "Архитектура процессора",
+      "resolved": {
+        "id": 2597,
+        "product_id": 62,
+        "normalized_name": "архитектура_процессора",
+        "selected_value": "zen 2",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Zen 2",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Процессор и графика",
+      "category_attribute_key": "Процессор и графика / Архитектура процессора"
+    },
+    {
+      "normalized_name": "аудиоформаты",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2920,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аудиоформаты",
+          "raw_value": "Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, up to 7.1",
+          "section": "Звук",
+          "value_cell": 1,
+          "normalized_name": "аудиоформаты",
+          "normalized_value": "dolby digital 5.1; dts 5.1; dolby truehd with atmos; l-pcm, up to 7.1",
+          "unit": "",
+          "display_value": "dolby digital 5.1; dts 5.1; dolby truehd with atmos; l-pcm, up to 7.1",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2935,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Аудиоформаты",
+          "raw_value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+          "section": "Звук",
+          "value_cell": 1,
+          "normalized_name": "аудиоформаты",
+          "normalized_value": "l-pcm, up to 7.1; dolby digital 5.1; dts 5.1; dolby truehd with atmos",
+          "unit": "",
+          "display_value": "l-pcm, up to 7.1; dolby digital 5.1; dts 5.1; dolby truehd with atmos",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Аудиоформаты",
+        "Аудиоформаты"
+      ],
+      "display_name": "Аудиоформаты",
+      "resolved": {
+        "id": 2598,
+        "product_id": 62,
+        "normalized_name": "аудиоформаты",
+        "selected_value": "dolby digital 5.1; dts 5.1; dolby truehd with atmos; l-pcm, up to 7.1",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, До 7.1",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Аудио",
+      "category_attribute_key": "Аудио / Аудиоформаты"
+    },
+    {
+      "normalized_name": "возможности_hdmi",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2919,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Возможности HDMI",
+          "raw_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+          "section": "Видео",
+          "value_cell": 1,
+          "normalized_name": "возможности_hdmi",
+          "normalized_value": "auto low latency mode. hdmi variable refresh rate. amd freesync.",
+          "unit": "",
+          "display_value": "auto low latency mode. HDMI variable refresh rate. amd freesync.",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2934,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Возможности HDMI",
+          "raw_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+          "section": "Видео",
+          "value_cell": 1,
+          "normalized_name": "возможности_hdmi",
+          "normalized_value": "auto low latency mode. hdmi variable refresh rate. amd freesync.",
+          "unit": "",
+          "display_value": "auto low latency mode. HDMI variable refresh rate. amd freesync.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Возможности HDMI",
+        "Возможности HDMI"
+      ],
+      "display_name": "Возможности HDMI",
+      "resolved": {
+        "id": 2599,
+        "product_id": 62,
+        "normalized_name": "возможности_hdmi",
+        "selected_value": "auto low latency mode. hdmi variable refresh rate. amd freesync.",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Видео",
+      "category_attribute_key": "Видео / Возможности HDMI"
+    },
+    {
+      "normalized_name": "игровое_разрешение",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2917,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Игровое разрешение",
+          "raw_value": "1440p",
+          "section": "Видео",
+          "value_cell": 1,
+          "normalized_name": "игровое_разрешение",
+          "normalized_value": "1440p",
+          "unit": "",
+          "display_value": "1440p",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2932,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Игровое разрешение",
+          "raw_value": "1440p",
+          "section": "Видео",
+          "value_cell": 1,
+          "normalized_name": "игровое_разрешение",
+          "normalized_value": "1440p",
+          "unit": "",
+          "display_value": "1440p",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Игровое разрешение",
+        "Игровое разрешение"
+      ],
+      "display_name": "Игровое разрешение",
+      "resolved": {
+        "id": 2600,
+        "product_id": 62,
+        "normalized_name": "игровое_разрешение",
+        "selected_value": "1440p",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "1440p",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Видео",
+      "category_attribute_key": "Видео / Игровое разрешение"
+    },
+    {
+      "normalized_name": "оперативная_память",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2912,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Оперативная память",
+          "raw_value": "10 GB GDDR6 128 bit-wide bus",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "оперативная_память",
+          "normalized_value": "10 gb gddr6 128 bit-wide bus",
+          "unit": "",
+          "display_value": "10 gb GDDR6 128 bit-wide bus",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2927,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Оперативная память",
+          "raw_value": "10GB GDDR6 128 bit-wide bus",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "оперативная_память",
+          "normalized_value": "10gb gddr6 128 bit-wide bus",
+          "unit": "",
+          "display_value": "10gb GDDR6 128 bit-wide bus",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Оперативная память",
+        "Оперативная память"
+      ],
+      "display_name": "Оперативная память",
+      "resolved": {
+        "id": 2601,
+        "product_id": 62,
+        "normalized_name": "оперативная_память",
+        "selected_value": "10 gb gddr6 128 bit-wide bus",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "10 GB GDDR6 128 bit-wide bus",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Память и накопители",
+      "category_attribute_key": "Память и накопители / Оперативная память"
+    },
+    {
+      "normalized_name": "поддержка_внешних_usb_накопителей",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2916,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Поддержка внешних USB-накопителей",
+          "raw_value": "Support for USB 3.1 external HDD (sold separately).",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "поддержка_внешних_usb_накопителей",
+          "normalized_value": "support for usb 3.1 external hdd (sold separately).",
+          "unit": "",
+          "display_value": "support for usb 3.1 external hdd (sold separately).",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2931,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Поддержка внешних USB-накопителей",
+          "raw_value": "Support for USB 3.1 external HDD (sold separately).",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "поддержка_внешних_usb_накопителей",
+          "normalized_value": "support for usb 3.1 external hdd (sold separately).",
+          "unit": "",
+          "display_value": "support for usb 3.1 external hdd (sold separately).",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Поддержка внешних USB-накопителей",
+        "Поддержка внешних USB-накопителей"
+      ],
+      "display_name": "Поддержка внешних USB-накопителей",
+      "resolved": {
+        "id": 2602,
+        "product_id": 62,
+        "normalized_name": "поддержка_внешних_usb_накопителей",
+        "selected_value": "support for usb 3.1 external hdd (sold separately).",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Support for USB 3.1 external HDD (sold separately).",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Память и накопители",
+      "category_attribute_key": "Память и накопители / Поддержка внешних USB-накопителей"
+    },
+    {
+      "normalized_name": "поддержка_карты_расширения",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2915,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Поддержка карты расширения",
+          "raw_value": "Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately).",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "поддержка_карты_расширения",
+          "normalized_value": "support for 1tb storage expansion cards for xbox series x|s matches internal storage exactly (sold separately).",
+          "unit": "",
+          "display_value": "support for 1tb storage expansion cards for Xbox Series X|s matches internal storage exactly (sold separately).",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2930,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Поддержка карты расширения",
+          "raw_value": "Support for 1 TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately).",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "поддержка_карты_расширения",
+          "normalized_value": "support for 1 tb storage expansion cards for xbox series x|s match internal storage performance (sold separately).",
+          "unit": "",
+          "display_value": "support for 1 tb storage expansion cards for Xbox Series X|s match internal storage performance (sold separately).",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Поддержка карты расширения",
+        "Поддержка карты расширения"
+      ],
+      "display_name": "Поддержка карты расширения",
+      "resolved": {
+        "id": 2603,
+        "product_id": 62,
+        "normalized_name": "поддержка_карты_расширения",
+        "selected_value": "support for 1tb storage expansion cards for xbox series x|s matches internal storage exactly (sold separately).",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately).",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Память и накопители",
+      "category_attribute_key": "Память и накопители / Поддержка карты расширения"
+    },
+    {
+      "normalized_name": "usb_порты",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2922,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "USB-порты",
+          "raw_value": "3× USB 3.1 Gen 1 ports",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "usb_порты",
+          "normalized_value": "3× usb 3.1 gen 1 ports",
+          "unit": "",
+          "display_value": "3× usb 3.1 gen 1 ports",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2937,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "USB-порты",
+          "raw_value": "3x USB 3.1 Gen 1 ports",
+          "section": "Подключение",
+          "value_cell": 1,
+          "normalized_name": "usb_порты",
+          "normalized_value": "3x usb 3.1 gen 1 ports",
+          "unit": "",
+          "display_value": "3x usb 3.1 gen 1 ports",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "USB-порты",
+        "USB-порты"
+      ],
+      "display_name": "USB-порты",
+      "resolved": {
+        "id": 2594,
+        "product_id": 62,
+        "normalized_name": "usb_порты",
+        "selected_value": "3× usb 3.1 gen 1 ports",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "3× USB 3.1 Gen 1 ports",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / USB-порты"
+    },
+    {
+      "normalized_name": "пропускная_способность_памяти",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2913,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Пропускная способность памяти",
+          "raw_value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "пропускная_способность_памяти",
+          "normalized_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s",
+          "unit": "",
+          "display_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2928,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Пропускная способность памяти",
+          "raw_value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s.",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "пропускная_способность_памяти",
+          "normalized_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s.",
+          "unit": "",
+          "display_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s.",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Пропускная способность памяти",
+        "Пропускная способность памяти"
+      ],
+      "display_name": "Пропускная способность памяти",
+      "resolved": {
+        "id": 2604,
+        "product_id": 62,
+        "normalized_name": "пропускная_способность_памяти",
+        "selected_value": "8 gb @ 224 gb/s, 2 gb @ 56 gb/s",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Память и накопители",
+      "category_attribute_key": "Память и накопители / Пропускная способность памяти"
+    },
+    {
+      "normalized_name": "скорость_ввода_вывода",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2914,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Скорость ввода-вывода",
+          "raw_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "скорость_ввода_вывода",
+          "normalized_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+          "unit": "",
+          "display_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2929,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Скорость ввода-вывода",
+          "raw_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+          "section": "Память и накопители",
+          "value_cell": 1,
+          "normalized_name": "скорость_ввода_вывода",
+          "normalized_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+          "unit": "",
+          "display_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Скорость ввода-вывода",
+        "Скорость ввода-вывода"
+      ],
+      "display_name": "Скорость ввода-вывода",
+      "resolved": {
+        "id": 2605,
+        "product_id": 62,
+        "normalized_name": "скорость_ввода_вывода",
+        "selected_value": "2.4 gb/s (raw), 4.8 gb/s (compressed, with custom hardware decompression block)",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Память и накопители",
+      "category_attribute_key": "Память и накопители / Скорость ввода-вывода"
+    },
+    {
+      "normalized_name": "частота_кадров",
+      "sources": {
+        "xbox_hardware": {
+          "id": 2918,
+          "product_id": 62,
+          "source_page_id": 171,
+          "source_key": "xbox_hardware",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Частота кадров",
+          "raw_value": "Up to 120 FPS",
+          "section": "Видео",
+          "value_cell": 1,
+          "normalized_name": "частота_кадров",
+          "normalized_value": "up to 120 fps",
+          "unit": "",
+          "display_value": "up to 120 fps",
+          "display_source": "Xbox / Microsoft"
+        },
+        "xbox_model": {
+          "id": 2933,
+          "product_id": 62,
+          "source_page_id": 172,
+          "source_key": "xbox_model",
+          "site_name": "Xbox / Microsoft",
+          "raw_name": "Частота кадров",
+          "raw_value": "Up to 120 FPS",
+          "section": "Видео",
+          "value_cell": 1,
+          "normalized_name": "частота_кадров",
+          "normalized_value": "up to 120 fps",
+          "unit": "",
+          "display_value": "up to 120 fps",
+          "display_source": "Xbox / Microsoft"
+        }
+      },
+      "raw_names": [
+        "Частота кадров",
+        "Частота кадров"
+      ],
+      "display_name": "Частота кадров",
+      "resolved": {
+        "id": 2606,
+        "product_id": 62,
+        "normalized_name": "частота_кадров",
+        "selected_value": "up to 120 fps",
+        "selected_unit": "",
+        "status": "hardware_confirmed_official",
+        "reason": "Официальный факт Xbox: модель, Store Product ID, SKU и hardware number разделены.",
+        "selected_source": "xbox_hardware",
+        "conflict": 0,
+        "updated_at": "2026-10-13T14:38:34+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "До 120 FPS",
+        "display_status": "Параметр опубликованного оборудования Xbox",
+        "display_source": "xbox_hardware"
+      },
+      "canonical_presentation": true,
+      "parent_group": "Видео",
+      "category_attribute_key": "Видео / Частота кадров"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1695,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+      "asset_key": "e2ed7f832dbc2df6c4c7170e532ef21ae6af2ab5847ad13fec7af70c29a40e4f",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:38:34+00:00",
+      "verified_width": 400,
+      "verified_height": 313,
+      "verified_bytes": 12698,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft"
+    },
+    {
+      "id": 1696,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S",
+      "asset_key": "4f6adfb83b9446f9daecb90f143c881f4372f3e89bf4cc54b9872631a135e36d",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:38:34+00:00",
+      "verified_width": 400,
+      "verified_height": 300,
+      "verified_bytes": 5738,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft"
+    }
+  ],
+  "all_official_gallery": [
+    {
+      "id": 1695,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+      "asset_key": "e2ed7f832dbc2df6c4c7170e532ef21ae6af2ab5847ad13fec7af70c29a40e4f",
+      "kind": "product_gallery",
+      "width": 400,
+      "height": 313,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:38:34+00:00",
+      "verified_width": 400,
+      "verified_height": 313,
+      "verified_bytes": 12698,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft",
+      "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:38:35.179745+00:00",
+      "size_bytes": 12698,
+      "format": "JPG",
+      "content_type": "image/jpeg",
+      "effective_content_type": "image/jpeg",
+      "sha256": "ceddeea7319a20b25007e569071670857e333290aae816fdaac62915d89981d1",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\ceddeea7319a20b25007e569071670857e333290aae816fdaac62915d89981d1.img",
+      "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn",
+      "aliases": []
+    },
+    {
+      "id": 1696,
+      "product_id": 62,
+      "source_page_id": 171,
+      "source_key": "xbox_hardware",
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S",
+      "asset_key": "4f6adfb83b9446f9daecb90f143c881f4372f3e89bf4cc54b9872631a135e36d",
+      "kind": "product_gallery",
+      "width": 400,
+      "height": 300,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T14:38:34+00:00",
+      "verified_width": 400,
+      "verified_height": 300,
+      "verified_bytes": 5738,
+      "verified_format": "JPG",
+      "site_name": "Xbox / Microsoft",
+      "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S",
+      "role": "product_render",
+      "verified_at": "2026-10-13T14:38:36.482162+00:00",
+      "size_bytes": 5738,
+      "format": "JPG",
+      "content_type": "image/jpeg",
+      "effective_content_type": "image/jpeg",
+      "sha256": "5408a0434358988761b4b36c4b612264ac98cc4369bc7a204a66bdeac8c30e5c",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\5408a0434358988761b4b36c4b612264ac98cc4369bc7a204a66bdeac8c30e5c.img",
+      "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "published asset identity",
+      "official_color": "",
+      "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn",
+      "aliases": []
+    }
+  ],
+  "photo_evidence": {
+    "entries": {
+      "xbox_hardware / e2ed7f832dbc2df6c4c7170e532ef21ae6af2ab5847ad13fec7af70c29a40e4f / https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994": {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+        "source_key": "xbox_hardware",
+        "asset_key": "e2ed7f832dbc2df6c4c7170e532ef21ae6af2ab5847ad13fec7af70c29a40e4f",
+        "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:38:35.179745+00:00",
+        "width": 400,
+        "height": 313,
+        "size_bytes": 12698,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "ceddeea7319a20b25007e569071670857e333290aae816fdaac62915d89981d1",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\ceddeea7319a20b25007e569071670857e333290aae816fdaac62915d89981d1.img",
+        "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994"
+      },
+      "xbox_hardware / 4f6adfb83b9446f9daecb90f143c881f4372f3e89bf4cc54b9872631a135e36d / https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S": {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S",
+        "source_key": "xbox_hardware",
+        "asset_key": "4f6adfb83b9446f9daecb90f143c881f4372f3e89bf4cc54b9872631a135e36d",
+        "normalized_asset": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S",
+        "role": "product_render",
+        "verified_at": "2026-10-13T14:38:36.482162+00:00",
+        "width": 400,
+        "height": 300,
+        "size_bytes": 5738,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "5408a0434358988761b4b36c4b612264ac98cc4369bc7a204a66bdeac8c30e5c",
+        "saved_file": "A:\\work\\dev\\product_cards_mvp\\reports\\cross_brand_stage81\\final_live\\official_images\\5408a0434358988761b4b36c4b612264ac98cc4369bc7a204a66bdeac8c30e5c.img",
+        "verified_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S"
+      }
+    },
+    "last_completion": {
+      "budget_seconds": 180,
+      "results": [
+        {
+          "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/XSS_Image-Buy-Box_Boxshot_2555x1994",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "ceddeea7319a20b25007e569071670857e333290aae816fdaac62915d89981d1"
+        },
+        {
+          "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/b01-Xbox-Series-S",
+          "state": "verified",
+          "identity_confirmed": true,
+          "sha256": "5408a0434358988761b4b36c4b612264ac98cc4369bc7a204a66bdeac8c30e5c"
+        }
+      ]
+    }
+  },
+  "documents": [],
+  "evidence": {
+    "requested_identifier": "1883",
+    "requested_identifier_type": "hardware_model_number",
+    "requested_region": "en-GB",
+    "model_key": "series_s",
+    "query_variants": [
+      "Xbox Series S",
+      "1883",
+      "Xbox Series S hardware model 1883",
+      "1883 Xbox"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "unproven",
+      "hardware": "official_hardware_model_number"
+    },
+    "identifiers": {
+      "hardware_model_number": "1883"
+    },
+    "raw_specs": [
+      {
+        "section": "PROCESSOR",
+        "raw_label": "CPU",
+        "value": "8X Cores @ 3.8 GHz (3.6 GHz w/SMT) Custom Zen 2 CPU"
+      },
+      {
+        "section": "PROCESSOR",
+        "raw_label": "GPU",
+        "value": "4 TFLOPS, 20 CUs @1.565 GHz Custom RDNA 2 GPU"
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Memory",
+        "value": "10GB GDDR6 128 bit-wide bus"
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Memory Bandwidth",
+        "value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s."
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Internal Storage",
+        "value": "XBOX Series S Robot White: 512 GB Custom NVME SSD XBOX Series S Carbon Black: 1 TB Custom NVME SSD XBOX Series S Robot White: 1 TB Custom NVME SSD"
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "I/O Throughput",
+        "value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)"
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Expandable Storage",
+        "value": "Support for 1 TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately). Support for USB 3.1 external HDD (sold separately)."
+      },
+      {
+        "section": "VIDEO CAPABILITIES",
+        "raw_label": "Gaming Resolution",
+        "value": "1440p"
+      },
+      {
+        "section": "VIDEO CAPABILITIES",
+        "raw_label": "Performance Target",
+        "value": "Up to 120 FPS"
+      },
+      {
+        "section": "VIDEO CAPABILITIES",
+        "raw_label": "HDMI Features",
+        "value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync."
+      },
+      {
+        "section": "SOUND CAPABILITIES",
+        "raw_label": "Audio formats",
+        "value": "L-PCM, up to 7.1"
+      },
+      {
+        "section": "SOUND CAPABILITIES",
+        "raw_label": "Audio formats",
+        "value": "Dolby Digital 5.1"
+      },
+      {
+        "section": "SOUND CAPABILITIES",
+        "raw_label": "Audio formats",
+        "value": "DTS 5.1"
+      },
+      {
+        "section": "SOUND CAPABILITIES",
+        "raw_label": "Audio formats",
+        "value": "Dolby TrueHD with Atmos"
+      },
+      {
+        "section": "PORTS & CONNECTIVITY",
+        "raw_label": "HDMI",
+        "value": "1x HDMI 2.1 port"
+      },
+      {
+        "section": "PORTS & CONNECTIVITY",
+        "raw_label": "USB",
+        "value": "3x USB 3.1 Gen 1 ports"
+      },
+      {
+        "section": "PORTS & CONNECTIVITY",
+        "raw_label": "Wireless",
+        "value": "802.11ac dual band"
+      },
+      {
+        "section": "PORTS & CONNECTIVITY",
+        "raw_label": "Ethernet",
+        "value": "802.3 10/100/1000"
+      },
+      {
+        "section": "PORTS & CONNECTIVITY",
+        "raw_label": "Accessories radio",
+        "value": "Dedicated dual band XBOX Wireless radio"
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Dimensions",
+        "value": "6.5 cm x 15.1 cm x 27.5 cm"
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Weight",
+        "value": "4.25 lbs"
+      },
+      {
+        "section": "Processor",
+        "raw_label": "CPU",
+        "value": "8× Cores @ 3.6 GHz (3.4 GHz w/SMT) Custom Zen 2 CPU"
+      },
+      {
+        "section": "Processor",
+        "raw_label": "GPU",
+        "value": "4 TFLOPS, 20 CUs @1.565 GHz Custom RDNA 2 GPU"
+      },
+      {
+        "section": "Processor",
+        "raw_label": "SOC Die Size",
+        "value": "197.05 mm"
+      },
+      {
+        "section": "Memory & Storage",
+        "raw_label": "Memory",
+        "value": "10 GB GDDR6 128 bit-wide bus"
+      },
+      {
+        "section": "Memory & Storage",
+        "raw_label": "Memory bandwidth",
+        "value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s"
+      },
+      {
+        "section": "Memory & Storage",
+        "raw_label": "Internal storage",
+        "value": "512 GB Custom NVME SSD"
+      },
+      {
+        "section": "Memory & Storage",
+        "raw_label": "I/O throughput",
+        "value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)"
+      },
+      {
+        "section": "Memory & Storage",
+        "raw_label": "Expandable storage",
+        "value": "Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately). Support for USB 3.1 external HDD (sold separately)."
+      },
+      {
+        "section": "Video Capabilities",
+        "raw_label": "Gaming resolution",
+        "value": "1440p"
+      },
+      {
+        "section": "Video Capabilities",
+        "raw_label": "Performance target",
+        "value": "Up to 120 FPS"
+      },
+      {
+        "section": "Video Capabilities",
+        "raw_label": "HDMI features",
+        "value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync."
+      },
+      {
+        "section": "Sound Capabilities",
+        "raw_label": "Audio formats",
+        "value": "Dolby Digital 5.1"
+      },
+      {
+        "section": "Sound Capabilities",
+        "raw_label": "Audio formats",
+        "value": "DTS 5.1"
+      },
+      {
+        "section": "Sound Capabilities",
+        "raw_label": "Audio formats",
+        "value": "Dolby TrueHD with Atmos"
+      },
+      {
+        "section": "Sound Capabilities",
+        "raw_label": "Audio formats",
+        "value": "L-PCM, up to 7.1"
+      },
+      {
+        "section": "Ports & Connectivity",
+        "raw_label": "HDMI",
+        "value": "1× HDMI 2.1 port"
+      },
+      {
+        "section": "Ports & Connectivity",
+        "raw_label": "USB",
+        "value": "3× USB 3.1 Gen 1 ports"
+      },
+      {
+        "section": "Ports & Connectivity",
+        "raw_label": "Wireless",
+        "value": "802.11ac dual band"
+      },
+      {
+        "section": "Ports & Connectivity",
+        "raw_label": "Ethernet",
+        "value": "802.3 10/100/1000"
+      },
+      {
+        "section": "Ports & Connectivity",
+        "raw_label": "Accessories radio",
+        "value": "Dedicated dual band Xbox Wireless radio"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Dimensions",
+        "value": "2.55 × 5.94 × 10.82 in (6.5 × 15.1 × 27.5 cm)"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Weight",
+        "value": "4.25 lbs (1.92 kg)"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Support Period",
+        "value": "For UK Customers: The defined support period for Xbox Series S, Model Number 1883, at the time the product was initially placed on the market on November 10, 2020, is November 10, 2028."
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Memory Bandwidth",
+        "value": "8GB @ 224 GB/s, 2GB @ 56 GB/s."
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Internal Storage",
+        "value": "XBOX Series S Robot White: 512GB Custom NVME SSD XBOX Series S Carbon Black: 1TB Custom NVME SSD XBOX Series S Robot White: 1TB Custom NVME SSD"
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Expandable Storage",
+        "value": "Support for 1TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately). Support for USB 3.1 external HDD (sold separately)."
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Dimensions",
+        "value": "6.5cm x 15.1cm x 27.5cm"
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Weight",
+        "value": "4.25 lbs."
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Процессор и графика",
+        "raw_label": "CPU",
+        "raw_value": "8X Cores @ 3.8 GHz (3.6 GHz w/SMT) Custom Zen 2 CPU",
+        "label": "Архитектура процессора",
+        "value": "Zen 2",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Процессор и графика",
+        "raw_label": "GPU",
+        "raw_value": "4 TFLOPS, 20 CUs @1.565 GHz Custom RDNA 2 GPU",
+        "label": "Архитектура графического процессора",
+        "value": "RDNA 2",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Memory",
+        "raw_value": "10GB GDDR6 128 bit-wide bus",
+        "label": "Оперативная память",
+        "value": "10GB GDDR6 128 bit-wide bus",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Memory Bandwidth",
+        "raw_value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s.",
+        "label": "Пропускная способность памяти",
+        "value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "I/O Throughput",
+        "raw_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+        "label": "Скорость ввода-вывода",
+        "value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Expandable Storage",
+        "raw_value": "Support for 1 TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately). Support for USB 3.1 external HDD (sold separately).",
+        "label": "Поддержка карты расширения",
+        "value": "Support for 1 TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately).",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Expandable Storage",
+        "raw_value": "Support for 1 TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately). Support for USB 3.1 external HDD (sold separately).",
+        "label": "Поддержка внешних USB-накопителей",
+        "value": "Support for USB 3.1 external HDD (sold separately).",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "Gaming Resolution",
+        "raw_value": "1440p",
+        "label": "Игровое разрешение",
+        "value": "1440p",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "Performance Target",
+        "raw_value": "Up to 120 FPS",
+        "label": "Частота кадров",
+        "value": "Up to 120 FPS",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "HDMI Features",
+        "raw_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+        "label": "Возможности HDMI",
+        "value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "L-PCM, up to 7.1",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "Dolby Digital 5.1",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "DTS 5.1",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "Dolby TrueHD with Atmos",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "HDMI",
+        "raw_value": "1x HDMI 2.1 port",
+        "label": "HDMI",
+        "value": "1x HDMI 2.1 port",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "USB",
+        "raw_value": "3x USB 3.1 Gen 1 ports",
+        "label": "USB-порты",
+        "value": "3x USB 3.1 Gen 1 ports",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Ethernet",
+        "raw_value": "802.3 10/100/1000",
+        "label": "Ethernet",
+        "value": "802.3 10/100/1000",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Accessories radio",
+        "raw_value": "Dedicated dual band XBOX Wireless radio",
+        "label": "Xbox Wireless",
+        "value": "Dedicated dual band XBOX Wireless radio",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-gb/consoles/xbox-series-s"
+      },
+      {
+        "section": "Процессор и графика",
+        "raw_label": "CPU",
+        "raw_value": "8× Cores @ 3.6 GHz (3.4 GHz w/SMT) Custom Zen 2 CPU",
+        "label": "Архитектура процессора",
+        "value": "Zen 2",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Процессор и графика",
+        "raw_label": "GPU",
+        "raw_value": "4 TFLOPS, 20 CUs @1.565 GHz Custom RDNA 2 GPU",
+        "label": "Архитектура графического процессора",
+        "value": "RDNA 2",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Memory",
+        "raw_value": "10 GB GDDR6 128 bit-wide bus",
+        "label": "Оперативная память",
+        "value": "10 GB GDDR6 128 bit-wide bus",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Memory bandwidth",
+        "raw_value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s",
+        "label": "Пропускная способность памяти",
+        "value": "8 GB @ 224 GB/s, 2 GB @ 56 GB/s",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "I/O throughput",
+        "raw_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+        "label": "Скорость ввода-вывода",
+        "value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Expandable storage",
+        "raw_value": "Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately). Support for USB 3.1 external HDD (sold separately).",
+        "label": "Поддержка карты расширения",
+        "value": "Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately).",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Expandable storage",
+        "raw_value": "Support for 1TB Storage Expansion Cards for Xbox Series X|S matches internal storage exactly (sold separately). Support for USB 3.1 external HDD (sold separately).",
+        "label": "Поддержка внешних USB-накопителей",
+        "value": "Support for USB 3.1 external HDD (sold separately).",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "Gaming resolution",
+        "raw_value": "1440p",
+        "label": "Игровое разрешение",
+        "value": "1440p",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "Performance target",
+        "raw_value": "Up to 120 FPS",
+        "label": "Частота кадров",
+        "value": "Up to 120 FPS",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "HDMI features",
+        "raw_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+        "label": "Возможности HDMI",
+        "value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "Dolby Digital 5.1",
+        "label": "Аудиоформаты",
+        "value": "Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, up to 7.1",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "DTS 5.1",
+        "label": "Аудиоформаты",
+        "value": "Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, up to 7.1",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "Dolby TrueHD with Atmos",
+        "label": "Аудиоформаты",
+        "value": "Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, up to 7.1",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "L-PCM, up to 7.1",
+        "label": "Аудиоформаты",
+        "value": "Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos; L-PCM, up to 7.1",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "HDMI",
+        "raw_value": "1× HDMI 2.1 port",
+        "label": "HDMI",
+        "value": "1× HDMI 2.1 port",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "USB",
+        "raw_value": "3× USB 3.1 Gen 1 ports",
+        "label": "USB-порты",
+        "value": "3× USB 3.1 Gen 1 ports",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Ethernet",
+        "raw_value": "802.3 10/100/1000",
+        "label": "Ethernet",
+        "value": "802.3 10/100/1000",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Accessories radio",
+        "raw_value": "Dedicated dual band Xbox Wireless radio",
+        "label": "Xbox Wireless",
+        "value": "Dedicated dual band Xbox Wireless radio",
+        "scope": "model",
+        "source_url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn"
+      },
+      {
+        "section": "Процессор и графика",
+        "raw_label": "CPU",
+        "raw_value": "8X Cores @ 3.8 GHz (3.6 GHz w/SMT) Custom Zen 2 CPU",
+        "label": "Архитектура процессора",
+        "value": "Zen 2",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Процессор и графика",
+        "raw_label": "GPU",
+        "raw_value": "4 TFLOPS, 20 CUs @1.565 GHz Custom RDNA 2 GPU",
+        "label": "Архитектура графического процессора",
+        "value": "RDNA 2",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Memory",
+        "raw_value": "10GB GDDR6 128 bit-wide bus",
+        "label": "Оперативная память",
+        "value": "10GB GDDR6 128 bit-wide bus",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Memory Bandwidth",
+        "raw_value": "8GB @ 224 GB/s, 2GB @ 56 GB/s.",
+        "label": "Пропускная способность памяти",
+        "value": "8GB @ 224 GB/s, 2GB @ 56 GB/s.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "I/O Throughput",
+        "raw_value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+        "label": "Скорость ввода-вывода",
+        "value": "2.4 GB/s (Raw), 4.8 GB/s (Compressed, with custom hardware decompression block)",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Expandable Storage",
+        "raw_value": "Support for 1TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately). Support for USB 3.1 external HDD (sold separately).",
+        "label": "Поддержка карты расширения",
+        "value": "Support for 1TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately).",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Память и накопители",
+        "raw_label": "Expandable Storage",
+        "raw_value": "Support for 1TB Storage Expansion Cards for XBOX Series X|S match internal storage performance (sold separately). Support for USB 3.1 external HDD (sold separately).",
+        "label": "Поддержка внешних USB-накопителей",
+        "value": "Support for USB 3.1 external HDD (sold separately).",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "Gaming Resolution",
+        "raw_value": "1440p",
+        "label": "Игровое разрешение",
+        "value": "1440p",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "Performance Target",
+        "raw_value": "Up to 120 FPS",
+        "label": "Частота кадров",
+        "value": "Up to 120 FPS",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Видео",
+        "raw_label": "HDMI Features",
+        "raw_value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+        "label": "Возможности HDMI",
+        "value": "Auto Low Latency Mode. HDMI Variable Refresh Rate. AMD FreeSync.",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "L-PCM, up to 7.1",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "Dolby Digital 5.1",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "DTS 5.1",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Звук",
+        "raw_label": "Audio formats",
+        "raw_value": "Dolby TrueHD with Atmos",
+        "label": "Аудиоформаты",
+        "value": "L-PCM, up to 7.1; Dolby Digital 5.1; DTS 5.1; Dolby TrueHD with Atmos",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "HDMI",
+        "raw_value": "1x HDMI 2.1 port",
+        "label": "HDMI",
+        "value": "1x HDMI 2.1 port",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "USB",
+        "raw_value": "3x USB 3.1 Gen 1 ports",
+        "label": "USB-порты",
+        "value": "3x USB 3.1 Gen 1 ports",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Ethernet",
+        "raw_value": "802.3 10/100/1000",
+        "label": "Ethernet",
+        "value": "802.3 10/100/1000",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      },
+      {
+        "section": "Подключение",
+        "raw_label": "Accessories radio",
+        "raw_value": "Dedicated dual band XBOX Wireless radio",
+        "label": "Xbox Wireless",
+        "value": "Dedicated dual band XBOX Wireless radio",
+        "scope": "model",
+        "source_url": "https://www.xbox.com/en-us/consoles/xbox-series-s"
+      }
+    ],
+    "attribute_scopes": {
+      "Архитектура процессора": "model",
+      "Архитектура графического процессора": "model",
+      "Оперативная память": "model",
+      "Пропускная способность памяти": "model",
+      "Скорость ввода-вывода": "model",
+      "Поддержка карты расширения": "model",
+      "Поддержка внешних USB-накопителей": "model",
+      "Игровое разрешение": "model",
+      "Частота кадров": "model",
+      "Возможности HDMI": "model",
+      "Аудиоформаты": "model",
+      "HDMI": "model",
+      "USB-порты": "model",
+      "Ethernet": "model",
+      "Xbox Wireless": "model"
+    },
+    "identity_relations": [
+      {
+        "type": "store_product",
+        "product_id": "942J774TP9JN",
+        "sku_ids": [
+          "24K9"
+        ],
+        "hardware_model_numbers": [
+          "1883"
+        ],
+        "manufacturer_parts": [],
+        "region": "en-gb",
+        "url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn",
+        "relation": "hardware_model_to_retail_candidates",
+        "unique_hardware_configuration": false
+      }
+    ],
+    "configuration_candidates": [
+      {
+        "section": "PROCESSOR",
+        "raw_label": "CPU",
+        "value": "8X Cores @ 3.8 GHz (3.6 GHz w/SMT) Custom Zen 2 CPU",
+        "reason": "Exact hardware revision not linked; frequency/runtime/radio revision values withheld"
+      },
+      {
+        "section": "PROCESSOR",
+        "raw_label": "GPU",
+        "value": "4 TFLOPS, 20 CUs @1.565 GHz Custom RDNA 2 GPU",
+        "reason": "Exact hardware revision not linked; frequency/runtime/radio revision values withheld"
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Internal Storage",
+        "value": "XBOX Series S Robot White: 512 GB Custom NVME SSD XBOX Series S Carbon Black: 1 TB Custom NVME SSD XBOX Series S Robot White: 1 TB Custom NVME SSD",
+        "reason": "Storage options do not identify a requested retail configuration"
+      },
+      {
+        "section": "PORTS & CONNECTIVITY",
+        "raw_label": "Wireless",
+        "value": "802.11ac dual band",
+        "reason": "Exact hardware revision not linked; frequency/runtime/radio revision values withheld"
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Dimensions",
+        "value": "6.5 cm x 15.1 cm x 27.5 cm",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Weight",
+        "value": "4.25 lbs",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      },
+      {
+        "section": "Processor",
+        "raw_label": "CPU",
+        "value": "8× Cores @ 3.6 GHz (3.4 GHz w/SMT) Custom Zen 2 CPU",
+        "reason": "Exact hardware revision not linked; frequency/runtime/radio revision values withheld"
+      },
+      {
+        "section": "Processor",
+        "raw_label": "GPU",
+        "value": "4 TFLOPS, 20 CUs @1.565 GHz Custom RDNA 2 GPU",
+        "reason": "Exact hardware revision not linked; frequency/runtime/radio revision values withheld"
+      },
+      {
+        "section": "Processor",
+        "raw_label": "SOC Die Size",
+        "value": "197.05 mm",
+        "reason": "Technical field lacks safe canonical mapping"
+      },
+      {
+        "section": "Memory & Storage",
+        "raw_label": "Internal storage",
+        "value": "512 GB Custom NVME SSD",
+        "reason": "Storage options do not identify a requested retail configuration"
+      },
+      {
+        "section": "Ports & Connectivity",
+        "raw_label": "Wireless",
+        "value": "802.11ac dual band",
+        "reason": "Exact hardware revision not linked; frequency/runtime/radio revision values withheld"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Dimensions",
+        "value": "2.55 × 5.94 × 10.82 in (6.5 × 15.1 × 27.5 cm)",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Weight",
+        "value": "4.25 lbs (1.92 kg)",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      },
+      {
+        "section": "TECH SPECS",
+        "raw_label": "Support Period",
+        "value": "For UK Customers: The defined support period for Xbox Series S, Model Number 1883, at the time the product was initially placed on the market on November 10, 2020, is November 10, 2028.",
+        "reason": "Technical field lacks safe canonical mapping"
+      },
+      {
+        "section": "MEMORY & STORAGE",
+        "raw_label": "Internal Storage",
+        "value": "XBOX Series S Robot White: 512GB Custom NVME SSD XBOX Series S Carbon Black: 1TB Custom NVME SSD XBOX Series S Robot White: 1TB Custom NVME SSD",
+        "reason": "Storage options do not identify a requested retail configuration"
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Dimensions",
+        "value": "6.5cm x 15.1cm x 27.5cm",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      },
+      {
+        "section": "DESIGN",
+        "raw_label": "Weight",
+        "value": "4.25 lbs.",
+        "reason": "Physical value requires own variant/revision and explicit axis/assembly binding"
+      }
+    ],
+    "photo_candidates": [
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/48/9b/489bc301-d24b-49f3-931a-4ef00892a673.jpg?n=Xbox-Series-X_Content-Placement-0_Quick-Resume_788x444_01.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Screenshot of a television demonstrating the Quick Resume capabilities of the XBOX Series S."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Series S next to a space ship on a Starfield planet"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Back of the XBOX Series S"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/42/36/4236e89d-9beb-4520-8dbd-ae16fcf1c641.jpg?n=Xbox-Series-S_Multi-Feature-1084_Carbon-Aware_1040x990_01.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Series S surrounded by leaves and plants"
+      },
+      {
+        "url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Xbox-Cntrl-White-b01-1",
+        "reason": "Other color/bundle or asset family unproven",
+        "alt": "Front view of XBOX Wireless Controller in white."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/48/9b/489bc301-d24b-49f3-931a-4ef00892a673.jpg?n=Xbox-Series-X_Content-Placement-0_Quick-Resume_788x444_01.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Screenshot of a television demonstrating the Quick Resume capabilities of the XBOX Series S."
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/4a/ac/4aac334d-a7f7-4bc3-93a8-58151dd17851.jpg?n=Xbox-Series-S_Super-Hero-1400_Complete-Control_1920x1400_01.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Series S next to a space ship on a Starfield planet"
+      },
+      {
+        "url": "https://assets.xboxservices.com/assets/87/90/879088f1-3b89-46a6-9d38-44694d5e924c.jpg?n=XBX_L-StorageExpansion-D.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "Back of the XBOX Series S"
+      },
+      {
+        "url": "https://cms-assets.xboxservices.com/assets/42/36/4236e89d-9beb-4520-8dbd-ae16fcf1c641.jpg?n=Xbox-Series-S_Multi-Feature-1084_Carbon-Aware_1040x990_01.jpg",
+        "reason": "Family asset; requested color/storage/bundle relation unproven",
+        "alt": "XBOX Series S surrounded by leaves and plants"
+      }
+    ],
+    "exact_photo_assets": [
+      "e2ed7f832dbc2df6c4c7170e532ef21ae6af2ab5847ad13fec7af70c29a40e4f",
+      "4f6adfb83b9446f9daecb90f143c881f4372f3e89bf4cc54b9872631a135e36d"
+    ],
+    "photo_scopes": {
+      "e2ed7f832dbc2df6c4c7170e532ef21ae6af2ab5847ad13fec7af70c29a40e4f": {
+        "store_product_id": "942J774TP9JN",
+        "store_sku_id": null,
+        "hardware_model_number": "1883",
+        "color": "",
+        "alt": "XBOX Series S console with XBOX wireless controller in robot white, facing forward",
+        "kind": "hardware_render",
+        "basis": "Own Store row, hardware relation and per-asset family/color/bundle; no kit inference"
+      },
+      "4f6adfb83b9446f9daecb90f143c881f4372f3e89bf4cc54b9872631a135e36d": {
+        "store_product_id": "942J774TP9JN",
+        "store_sku_id": null,
+        "hardware_model_number": "1883",
+        "color": "",
+        "alt": "Back view of the XBOX Series S.",
+        "kind": "hardware_render",
+        "basis": "Own Store row, hardware relation and per-asset family/color/bundle; no kit inference"
+      }
+    },
+    "manuals": [
+      {
+        "type": "Unclassified document",
+        "title": "Новая Зеландия - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - AU NZ.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Великобритания - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN NL FR DE IT PT ES- EU MEA.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "США - Испанский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN FR ES - US CA.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Китай - Китайский упрощенный",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ZH - CHINA.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Турция - Турецкий",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN CS EL IW HU PL SK TR- EU MEA.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Тайвань - Китайский традиционный",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN ZH KO - SI TW HK KO.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Индия - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN - INDIA.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Япония - Японский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL JA - JAPAN.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Мексика - Испанский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL ES - LATAM.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Объединенные Арабские Эмираты - Английский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL EN AR - MEA.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S"
+      },
+      {
+        "type": "Unclassified document",
+        "title": "Россия – Русский",
+        "url": "https://download.microsoft.com/download/c/5/1/c516c773-0650-4719-8b1e-fbee939075f5/XBOX SERIES X + S MANUAL RU - RUSSIA.pdf",
+        "language": "Не проверена",
+        "verified": false,
+        "relation": "official_family_manual_index",
+        "source_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "api_url": "https://content.support.xboxlive.com/content?path=%2FSXC%2Fhardware-network%2Fconsole%2Fmanuals-specs&language=ru-RU&market=RU",
+        "section": "Консоли Xbox Series X|S",
+        "sha256": "7b5efdaddca84ec16e99be6a9d5314186b13fcc5a30adca61913b5ab148cee5a",
+        "pages": 16,
+        "cover_text": "ǟȂ/u505ǽǱǽǳȀȁǱǽ\u0003Ǿǽ\u0003ǾǿǽǳȂ/u505ȁȂ\u0003\u0003 /u503\u0003Ǽǽǿǻǯȁ/u503ǱǼȊǻ\u0003ǯ/u505ȁǯǻ\u000f\u0003ǽǲǿǯǼ/u503ȆǴǼǼǯȎ\u0003 ǲǯǿǯǼȁ/u503Ȏ\u0003/u503\u0003ȀǽǲǺǯȇǴǼ/u503Ǵ"
+      },
+      {
+        "type": "Support article",
+        "title": "XBOX Series S Service Guide",
+        "url": "https://learn.microsoft.com/en-us/xbox/service-guides/series-s-console/series-s-device-id-and-disassembly",
+        "language": "English",
+        "verified": true,
+        "relation": "hardware_model_number"
+      }
+    ],
+    "manual_status": "Не проверена",
+    "configuration_fields": {},
+    "configuration_complete": false,
+    "hardware_complete": true,
+    "exact_official_pdp": "",
+    "hardware_official_pdp": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn",
+    "support_url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+    "access_stops": [
+      {
+        "url": "https://support.xbox.com/en-GB/help/hardware-network/console/manuals-specs",
+        "reason": "HTTP 200 SPA shell; article/downloads not verified"
+      }
+    ],
+    "page_default_titles": [
+      {
+        "url": "https://www.xbox.com/en-gb/consoles/xbox-series-s",
+        "title": "XBOX SERIES S",
+        "resolved_title": "Xbox Series S",
+        "scope": "xbox_model"
+      },
+      {
+        "url": "https://www.microsoft.com/en-gb/d/xbox-series-s/942j774tp9jn",
+        "title": "XBOX Series S",
+        "resolved_title": "Xbox Series S",
+        "scope": "xbox_hardware"
+      },
+      {
+        "url": "https://www.xbox.com/en-us/consoles/xbox-series-s",
+        "title": "XBOX SERIES S",
+        "resolved_title": "Xbox Series S",
+        "scope": "xbox_model"
+      }
+    ],
+    "catalog_rows": 8,
+    "sitemaps": [
+      {
+        "url": "https://www.xbox.com/sitemap/cms-sitemap-0.xml.gz",
+        "count": 6833,
+        "product_candidates": 1371
+      },
+      {
+        "url": "https://www.microsoft.com/store/xbox-gaming-sitemap-index.xml",
+        "count": 726,
+        "product_candidates": 688
+      }
+    ],
+    "manual_search_complete": false,
+    "manual_search_reason": "Official family manual index; available Russian document role checked; User Guide evaluated separately from Safety/Regulatory",
+    "configuration_scope": "hardware_only"
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "unproven",
+      "hardware": "official_hardware_model_number"
+    },
+    "configuration_scope": "hardware_only",
+    "configuration_fields": {},
+    "manual_status": "Не проверена",
+    "confirmed_specs": 15,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": [],
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "unproven",
+      "hardware": "official_hardware_model_number"
+    },
+    "configuration_scope": "hardware_only",
+    "configuration_fields": {},
+    "manual_status": "Не проверена",
+    "confirmed_specs": 15,
+    "instruction": {
+      "russian": false
+    },
+    "official_exact_regions": []
+  },
+  "trace": [],
+  "original_observation_phase": "final_live",
+  "consolidation": "Persistence of actual live worker observations, not a fresh run and not replay"
+}

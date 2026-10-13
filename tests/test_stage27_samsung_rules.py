@@ -242,7 +242,18 @@ class OrdinaryPathCreateProcessExport(unittest.TestCase):
         self.assertEqual(sources[("SM-A376EZAGINS", "Samsung Казахстан")], "Базовая модель")
         photos = Counter(r[0] for r in book["Фотографии"].iter_rows(min_row=2, values_only=True))
         names = {o["article"]: o for o in self.result["outcomes"]}
-        self.assertEqual(sum(photos.values()), 8)                                                  # the TV's gallery only; none of the fridge's or the phone's (Stage 30: the hob left this case)
+        self.assertEqual(sum(photos.values()),17) # Eight TV assets and nine unselected fridge assets explicitly printing the requested model code.
+        exported=list(book['Фотографии'].iter_rows(min_row=2,values_only=True))
+        selected_column=[c.value for c in book['Фотографии'][1]].index('Выбрано для карточки')
+        self.assertEqual(sum(r[selected_column]=='Да' for r in exported),8)
+        self.assertEqual(len(photos),2)
+        fridge_name=jobs.get_product(self.result['database'],names['RB31FERNDSA']['product_id'])['name']
+        phone_name=jobs.get_product(self.result['database'],names['SM-A376EZAGINS']['product_id'])['name']
+        fridge=[r for r in exported if r[0]==fridge_name]
+        self.assertEqual(len(fridge),9)
+        from product_tool.adapters.samsung import norm
+        self.assertTrue(all(norm('RB31FERNDSA') in norm(r[3]) for r in fridge))
+        self.assertFalse(any(r[0]==phone_name for r in exported))
 
     def test_the_web_card_page_and_the_export_agree_on_the_levels(self):
         with TestClient(create_app(Path(self._tmp.name))) as client:

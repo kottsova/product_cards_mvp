@@ -1,0 +1,2144 @@
+{
+  "input": {
+    "id": 24,
+    "brand": "Samsung",
+    "dispatch_brand": "Samsung",
+    "article": "MUF-64BE3/APC",
+    "model": "Samsung MUF-64BE3/APC",
+    "name": "Samsung MUF-64BE3/APC",
+    "category": "Flash-накопители",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/samsung_stage59/dataset_frozen.json",
+    "original_input": {
+      "article": "MUF-64BE3/APC",
+      "name": "Samsung MUF-64BE3/APC",
+      "category": "Flash-накопители",
+      "selection_reason": "Previously qualified category missing from Stage 59 ten"
+    }
+  },
+  "observed_at": "2026-10-13T09:01:06.811769+00:00",
+  "seconds": 3.93,
+  "job": {
+    "id": "82720ffaa9014deaae346cf3976029b8",
+    "product_id": 24,
+    "status": "done",
+    "current_stage": 4,
+    "message": "Samsung: Артикул каталога MUF-64BE3/APC подтверждён содержимым официальной страницы: sku в разметке товара, видимый текст страницы. Реальных конфликтов: 0; расхождений с дилером: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки Samsung к выгрузке: export_ready_with_gaps; пробелы: instruction_not_checked, dealer_cross_check_missing.",
+    "created_at": "2026-10-13T09:01:02+00:00",
+    "updated_at": "2026-10-13T09:01:06+00:00",
+    "started_at": "2026-10-13T09:01:02+00:00",
+    "finished_at": "2026-10-13T09:01:06+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 42,
+      "product_id": 24,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "not_needed",
+      "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 41,
+      "product_id": 24,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "url": "https://www.samsung.com/kz_ru/memory-storage/usb-flash-drive/samsung-usb-flash-drive-bar-plus-64gb-silver-muf-64be3-apc/",
+      "found_model": "MUF-64BE3/APC",
+      "match_level": "full_sku",
+      "evidence": "Артикул каталога MUF-64BE3/APC подтверждён содержимым официальной страницы: sku в разметке товара, видимый текст страницы.",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "error": "",
+      "description": "Флеш накопителю Samsung BAR Plus с потрясающим металлическим дизайном вы можете доверить хранение ваших самых ценных данных. Ведь Samsung Bar Plus - это флешка нового поколения, которая обеспечивает быструю и удобную скорость передачи данных с USB 3.1 и надежную 5-ти уровневую защиту.",
+      "photos": [
+        "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontsilver-102802697?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-backsilver-102802684?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-rperspectivesilver-102802685?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-lperspectivesilver-102802686?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-dynamicsilver-102802687?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-bottomsilver-102802688?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontpkgsilver-102802689?$Q90_2052_1641_JPG$"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 1191,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "EMC",
+      "raw_value": "KC, FCC, CE, VCCI, RCM",
+      "section": "Сертификация",
+      "value_cell": null,
+      "normalized_name": "emc",
+      "normalized_value": "kc, fcc, ce, vcci, rcm",
+      "unit": ""
+    },
+    {
+      "id": 1182,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Размеры (ШxВxГ)",
+      "raw_value": "15.46 X 40.00 X 12.00 мм",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "product_dimensions",
+      "normalized_value": "w=15.46;h=40;d=12",
+      "unit": "mm"
+    },
+    {
+      "id": 1183,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Вес",
+      "raw_value": "Прибл. 10 г.",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "product_weight",
+      "normalized_value": "0.01",
+      "unit": "kg"
+    },
+    {
+      "id": 1188,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Pентгеновское излучение (X-ray)",
+      "raw_value": "Выдерживает время облучения 500 сек при 80 КВ, токе 50 мкА имощности 4Вт.",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "pентгеновское_излучение_x_ray",
+      "normalized_value": "выдерживает время облучения 500 сек при 80 кв, токе 50 мка имощности 4вт.",
+      "unit": ""
+    },
+    {
+      "id": 1189,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Водонепроницаемость",
+      "raw_value": "72 часа на глубине 1 м при солености воды 3% NaCl",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "водонепроницаемость",
+      "normalized_value": "72 часа на глубине 1 м при солености воды 3% nacl",
+      "unit": ""
+    },
+    {
+      "id": 1171,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Выдержка",
+      "raw_value": "Скорость чтения до 200 млн байт / сек для USB 3.0. Скорость записи меньше скорости чтения. *Фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "выдержка",
+      "normalized_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+      "unit": ""
+    },
+    {
+      "id": 1192,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Гарантия",
+      "raw_value": "5 лет",
+      "section": "Гарантия",
+      "value_cell": null,
+      "normalized_name": "гарантия",
+      "normalized_value": "5 лет",
+      "unit": ""
+    },
+    {
+      "id": 1174,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Гарантия (Обзор)",
+      "raw_value": "5 лет",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "гарантия_обзор",
+      "normalized_value": "5 лет",
+      "unit": ""
+    },
+    {
+      "id": 1172,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Интерфейс (Обзор)",
+      "raw_value": "USB 3.1 Gen 1 (обратная совместимость с USB 3.0/2.0)",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "интерфейс_обзор",
+      "normalized_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+      "unit": ""
+    },
+    {
+      "id": 1180,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Интерфейс (Общие особенности)",
+      "raw_value": "USB 3.1 Gen 1 (обратная совместимость с USB 3.0/2.0)",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "интерфейс_общие_особенности",
+      "normalized_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+      "unit": ""
+    },
+    {
+      "id": 1187,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Магнитные поля",
+      "raw_value": "15 000 G (Гаусс)",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "магнитные_поля",
+      "normalized_value": "15 000 g (гаусс)",
+      "unit": ""
+    },
+    {
+      "id": 1179,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Объем",
+      "raw_value": "64 млрд байт * Фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "объем",
+      "normalized_value": "64 млрд байт * фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+      "unit": ""
+    },
+    {
+      "id": 1173,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Применение (Обзор)",
+      "raw_value": "ПК, Ноутбук",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "применение_обзор",
+      "normalized_value": "пк, ноутбук",
+      "unit": ""
+    },
+    {
+      "id": 1178,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Применение (Общие особенности)",
+      "raw_value": "ПК, Ноутбук",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "применение_общие_особенности",
+      "normalized_value": "пк, ноутбук",
+      "unit": ""
+    },
+    {
+      "id": 1186,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Рабочая температура",
+      "raw_value": "0~60℃",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "рабочая_температура",
+      "normalized_value": "0~60℃",
+      "unit": ""
+    },
+    {
+      "id": 1175,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Разъем (Обзор)",
+      "raw_value": "Standard A",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "разъем_обзор",
+      "normalized_value": "standard a",
+      "unit": ""
+    },
+    {
+      "id": 1181,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Разъем (Общие особенности)",
+      "raw_value": "Standard A",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "разъем_общие_особенности",
+      "normalized_value": "standard a",
+      "unit": ""
+    },
+    {
+      "id": 1170,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Семейство продуктов (Обзор)",
+      "raw_value": "BAR Plus",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "семейство_продуктов_обзор",
+      "normalized_value": "bar plus",
+      "unit": ""
+    },
+    {
+      "id": 1177,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Семейство продуктов (Общие особенности)",
+      "raw_value": "BAR Plus",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "семейство_продуктов_общие_особенности",
+      "normalized_value": "bar plus",
+      "unit": ""
+    },
+    {
+      "id": 1184,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Скорость передачи данных",
+      "raw_value": "Скорость чтения до 200 млн байт / сек для USB 3.0. Скорость записи меньше скорости чтения. *Фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+      "section": "Производительность",
+      "value_cell": null,
+      "normalized_name": "скорость_передачи_данных",
+      "normalized_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+      "unit": ""
+    },
+    {
+      "id": 1185,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Температура в выключенном состоянии",
+      "raw_value": "-10~70℃",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "температура_в_выключенном_состоянии",
+      "normalized_value": "-10~70℃",
+      "unit": ""
+    },
+    {
+      "id": 1176,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Тип продукта",
+      "raw_value": "USB 3.1 Flash Drive",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "тип_продукта",
+      "normalized_value": "usb 3.1 flash drive",
+      "unit": ""
+    },
+    {
+      "id": 1190,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Устойчивость к ударам",
+      "raw_value": "Ускорение:1500 g (gravity), Время воздействия: 0.5 мс, Направление: по трем осям x,y,z",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "устойчивость_к_ударам",
+      "normalized_value": "ускорение:1500 g (gravity), время воздействия: 0.5 мс, направление: по трем осям x,y,z",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 1147,
+      "product_id": 24,
+      "normalized_name": "emc",
+      "selected_value": "kc, fcc, ce, vcci, rcm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1148,
+      "product_id": 24,
+      "normalized_name": "product_dimensions",
+      "selected_value": "w=15.46;h=40;d=12",
+      "selected_unit": "mm",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1149,
+      "product_id": 24,
+      "normalized_name": "product_weight",
+      "selected_value": "0.01",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1150,
+      "product_id": 24,
+      "normalized_name": "pентгеновское_излучение_x_ray",
+      "selected_value": "выдерживает время облучения 500 сек при 80 кв, токе 50 мка имощности 4вт.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1151,
+      "product_id": 24,
+      "normalized_name": "водонепроницаемость",
+      "selected_value": "72 часа на глубине 1 м при солености воды 3% nacl",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1152,
+      "product_id": 24,
+      "normalized_name": "выдержка",
+      "selected_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1153,
+      "product_id": 24,
+      "normalized_name": "гарантия",
+      "selected_value": "5 лет",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1154,
+      "product_id": 24,
+      "normalized_name": "гарантия_обзор",
+      "selected_value": "5 лет",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1155,
+      "product_id": 24,
+      "normalized_name": "интерфейс_обзор",
+      "selected_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1156,
+      "product_id": 24,
+      "normalized_name": "интерфейс_общие_особенности",
+      "selected_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1157,
+      "product_id": 24,
+      "normalized_name": "магнитные_поля",
+      "selected_value": "15 000 g (гаусс)",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1158,
+      "product_id": 24,
+      "normalized_name": "объем",
+      "selected_value": "64 млрд байт * фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1159,
+      "product_id": 24,
+      "normalized_name": "применение_обзор",
+      "selected_value": "пк, ноутбук",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1160,
+      "product_id": 24,
+      "normalized_name": "применение_общие_особенности",
+      "selected_value": "пк, ноутбук",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1161,
+      "product_id": 24,
+      "normalized_name": "рабочая_температура",
+      "selected_value": "0~60℃",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1162,
+      "product_id": 24,
+      "normalized_name": "разъем_обзор",
+      "selected_value": "standard a",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1163,
+      "product_id": 24,
+      "normalized_name": "разъем_общие_особенности",
+      "selected_value": "standard a",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1164,
+      "product_id": 24,
+      "normalized_name": "семейство_продуктов_обзор",
+      "selected_value": "bar plus",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1165,
+      "product_id": 24,
+      "normalized_name": "семейство_продуктов_общие_особенности",
+      "selected_value": "bar plus",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1166,
+      "product_id": 24,
+      "normalized_name": "скорость_передачи_данных",
+      "selected_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1167,
+      "product_id": 24,
+      "normalized_name": "температура_в_выключенном_состоянии",
+      "selected_value": "-10~70℃",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1168,
+      "product_id": 24,
+      "normalized_name": "тип_продукта",
+      "selected_value": "usb 3.1 flash drive",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1169,
+      "product_id": 24,
+      "normalized_name": "устойчивость_к_ударам",
+      "selected_value": "ускорение:1500 g (gravity), время воздействия: 0.5 мс, направление: по трем осям x,y,z",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:06+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "emc",
+      "sources": {
+        "samsung": {
+          "id": 1191,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "EMC",
+          "raw_value": "KC, FCC, CE, VCCI, RCM",
+          "section": "Сертификация",
+          "value_cell": null,
+          "normalized_name": "emc",
+          "normalized_value": "kc, fcc, ce, vcci, rcm",
+          "unit": "",
+          "display_value": "kc, fcc, ce, vcci, rcm",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "EMC"
+      ],
+      "display_name": "EMC",
+      "resolved": {
+        "id": 1147,
+        "product_id": 24,
+        "normalized_name": "emc",
+        "selected_value": "kc, fcc, ce, vcci, rcm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "kc, fcc, ce, vcci, rcm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "pентгеновское_излучение_x_ray",
+      "sources": {
+        "samsung": {
+          "id": 1188,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Pентгеновское излучение (X-ray)",
+          "raw_value": "Выдерживает время облучения 500 сек при 80 КВ, токе 50 мкА имощности 4Вт.",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "pентгеновское_излучение_x_ray",
+          "normalized_value": "выдерживает время облучения 500 сек при 80 кв, токе 50 мка имощности 4вт.",
+          "unit": "",
+          "display_value": "выдерживает время облучения 500 сек при 80 кв, токе 50 мка имощности 4вт.",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Pентгеновское излучение (X-ray)"
+      ],
+      "display_name": "Pентгеновское излучение (X-ray)",
+      "resolved": {
+        "id": 1150,
+        "product_id": 24,
+        "normalized_name": "pентгеновское_излучение_x_ray",
+        "selected_value": "выдерживает время облучения 500 сек при 80 кв, токе 50 мка имощности 4вт.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "выдерживает время облучения 500 сек при 80 кв, токе 50 мка имощности 4вт.",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_weight",
+      "sources": {
+        "samsung": {
+          "id": 1183,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Вес",
+          "raw_value": "Прибл. 10 г.",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_weight",
+          "normalized_value": "0.01",
+          "unit": "kg",
+          "display_value": "0.01 кг",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Вес"
+      ],
+      "display_name": "Вес",
+      "resolved": {
+        "id": 1149,
+        "product_id": 24,
+        "normalized_name": "product_weight",
+        "selected_value": "0.01",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "0.01 кг",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "водонепроницаемость",
+      "sources": {
+        "samsung": {
+          "id": 1189,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Водонепроницаемость",
+          "raw_value": "72 часа на глубине 1 м при солености воды 3% NaCl",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "водонепроницаемость",
+          "normalized_value": "72 часа на глубине 1 м при солености воды 3% nacl",
+          "unit": "",
+          "display_value": "72 часа на глубине 1 м при солености воды 3% nacl",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Водонепроницаемость"
+      ],
+      "display_name": "Водонепроницаемость",
+      "resolved": {
+        "id": 1151,
+        "product_id": 24,
+        "normalized_name": "водонепроницаемость",
+        "selected_value": "72 часа на глубине 1 м при солености воды 3% nacl",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "72 часа на глубине 1 м при солености воды 3% nacl",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "выдержка",
+      "sources": {
+        "samsung": {
+          "id": 1171,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Выдержка",
+          "raw_value": "Скорость чтения до 200 млн байт / сек для USB 3.0. Скорость записи меньше скорости чтения. *Фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "выдержка",
+          "normalized_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+          "unit": "",
+          "display_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Выдержка"
+      ],
+      "display_name": "Выдержка",
+      "resolved": {
+        "id": 1152,
+        "product_id": 24,
+        "normalized_name": "выдержка",
+        "selected_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_h_mm",
+      "sources": {
+        "samsung": {
+          "id": 1182,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры (ШxВxГ)",
+          "raw_value": "15.46 X 40.00 X 12.00 мм",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "40",
+          "unit": "mm",
+          "display_value": "40 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры (ШxВxГ)"
+      ],
+      "display_name": "Высота товара, мм",
+      "resolved": {
+        "id": 1148,
+        "product_id": 24,
+        "normalized_name": "product_dimensions",
+        "selected_value": "40",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "40 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions"
+    },
+    {
+      "normalized_name": "гарантия",
+      "sources": {
+        "samsung": {
+          "id": 1192,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Гарантия",
+          "raw_value": "5 лет",
+          "section": "Гарантия",
+          "value_cell": null,
+          "normalized_name": "гарантия",
+          "normalized_value": "5 лет",
+          "unit": "",
+          "display_value": "5 лет",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Гарантия"
+      ],
+      "display_name": "Гарантия",
+      "resolved": {
+        "id": 1153,
+        "product_id": 24,
+        "normalized_name": "гарантия",
+        "selected_value": "5 лет",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "5 лет",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "гарантия_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1174,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Гарантия (Обзор)",
+          "raw_value": "5 лет",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "гарантия_обзор",
+          "normalized_value": "5 лет",
+          "unit": "",
+          "display_value": "5 лет",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Гарантия (Обзор)"
+      ],
+      "display_name": "Гарантия (Обзор)",
+      "resolved": {
+        "id": 1154,
+        "product_id": 24,
+        "normalized_name": "гарантия_обзор",
+        "selected_value": "5 лет",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "5 лет",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_d_mm",
+      "sources": {
+        "samsung": {
+          "id": 1182,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры (ШxВxГ)",
+          "raw_value": "15.46 X 40.00 X 12.00 мм",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "12",
+          "unit": "mm",
+          "display_value": "12 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры (ШxВxГ)"
+      ],
+      "display_name": "Глубина товара, мм",
+      "resolved": {
+        "id": 1148,
+        "product_id": 24,
+        "normalized_name": "product_dimensions",
+        "selected_value": "12",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "12 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions"
+    },
+    {
+      "normalized_name": "интерфейс_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1172,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Интерфейс (Обзор)",
+          "raw_value": "USB 3.1 Gen 1 (обратная совместимость с USB 3.0/2.0)",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "интерфейс_обзор",
+          "normalized_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+          "unit": "",
+          "display_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Интерфейс (Обзор)"
+      ],
+      "display_name": "Интерфейс (Обзор)",
+      "resolved": {
+        "id": 1155,
+        "product_id": 24,
+        "normalized_name": "интерфейс_обзор",
+        "selected_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "интерфейс_общие_особенности",
+      "sources": {
+        "samsung": {
+          "id": 1180,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Интерфейс (Общие особенности)",
+          "raw_value": "USB 3.1 Gen 1 (обратная совместимость с USB 3.0/2.0)",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "интерфейс_общие_особенности",
+          "normalized_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+          "unit": "",
+          "display_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Интерфейс (Общие особенности)"
+      ],
+      "display_name": "Интерфейс (Общие особенности)",
+      "resolved": {
+        "id": 1156,
+        "product_id": 24,
+        "normalized_name": "интерфейс_общие_особенности",
+        "selected_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "usb 3.1 gen 1 (обратная совместимость с usb 3.0/2.0)",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "магнитные_поля",
+      "sources": {
+        "samsung": {
+          "id": 1187,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Магнитные поля",
+          "raw_value": "15 000 G (Гаусс)",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "магнитные_поля",
+          "normalized_value": "15 000 g (гаусс)",
+          "unit": "",
+          "display_value": "15 000 g (гаусс)",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Магнитные поля"
+      ],
+      "display_name": "Магнитные поля",
+      "resolved": {
+        "id": 1157,
+        "product_id": 24,
+        "normalized_name": "магнитные_поля",
+        "selected_value": "15 000 g (гаусс)",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "15 000 g (гаусс)",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "объем",
+      "sources": {
+        "samsung": {
+          "id": 1179,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Объем",
+          "raw_value": "64 млрд байт * Фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "объем",
+          "normalized_value": "64 млрд байт * фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+          "unit": "",
+          "display_value": "64 млрд байт * фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Объем"
+      ],
+      "display_name": "Объем",
+      "resolved": {
+        "id": 1158,
+        "product_id": 24,
+        "normalized_name": "объем",
+        "selected_value": "64 млрд байт * фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "64 млрд байт * фактически используемая емкость накопителя может быть меньше (в результате форматирования, использования операционной системой, приложениями и др.)",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "применение_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1173,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Применение (Обзор)",
+          "raw_value": "ПК, Ноутбук",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "применение_обзор",
+          "normalized_value": "пк, ноутбук",
+          "unit": "",
+          "display_value": "пк, ноутбук",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Применение (Обзор)"
+      ],
+      "display_name": "Применение (Обзор)",
+      "resolved": {
+        "id": 1159,
+        "product_id": 24,
+        "normalized_name": "применение_обзор",
+        "selected_value": "пк, ноутбук",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "пк, ноутбук",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "применение_общие_особенности",
+      "sources": {
+        "samsung": {
+          "id": 1178,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Применение (Общие особенности)",
+          "raw_value": "ПК, Ноутбук",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "применение_общие_особенности",
+          "normalized_value": "пк, ноутбук",
+          "unit": "",
+          "display_value": "пк, ноутбук",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Применение (Общие особенности)"
+      ],
+      "display_name": "Применение (Общие особенности)",
+      "resolved": {
+        "id": 1160,
+        "product_id": 24,
+        "normalized_name": "применение_общие_особенности",
+        "selected_value": "пк, ноутбук",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "пк, ноутбук",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "рабочая_температура",
+      "sources": {
+        "samsung": {
+          "id": 1186,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Рабочая температура",
+          "raw_value": "0~60℃",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "рабочая_температура",
+          "normalized_value": "0~60℃",
+          "unit": "",
+          "display_value": "0~60℃",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Рабочая температура"
+      ],
+      "display_name": "Рабочая температура",
+      "resolved": {
+        "id": 1161,
+        "product_id": 24,
+        "normalized_name": "рабочая_температура",
+        "selected_value": "0~60℃",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "0~60℃",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "разъем_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1175,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Разъем (Обзор)",
+          "raw_value": "Standard A",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "разъем_обзор",
+          "normalized_value": "standard a",
+          "unit": "",
+          "display_value": "standard a",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Разъем (Обзор)"
+      ],
+      "display_name": "Разъем (Обзор)",
+      "resolved": {
+        "id": 1162,
+        "product_id": 24,
+        "normalized_name": "разъем_обзор",
+        "selected_value": "standard a",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "standard a",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "разъем_общие_особенности",
+      "sources": {
+        "samsung": {
+          "id": 1181,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Разъем (Общие особенности)",
+          "raw_value": "Standard A",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "разъем_общие_особенности",
+          "normalized_value": "standard a",
+          "unit": "",
+          "display_value": "standard a",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Разъем (Общие особенности)"
+      ],
+      "display_name": "Разъем (Общие особенности)",
+      "resolved": {
+        "id": 1163,
+        "product_id": 24,
+        "normalized_name": "разъем_общие_особенности",
+        "selected_value": "standard a",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "standard a",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "семейство_продуктов_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1170,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Семейство продуктов (Обзор)",
+          "raw_value": "BAR Plus",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "семейство_продуктов_обзор",
+          "normalized_value": "bar plus",
+          "unit": "",
+          "display_value": "bar plus",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Семейство продуктов (Обзор)"
+      ],
+      "display_name": "Семейство продуктов (Обзор)",
+      "resolved": {
+        "id": 1164,
+        "product_id": 24,
+        "normalized_name": "семейство_продуктов_обзор",
+        "selected_value": "bar plus",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "bar plus",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "семейство_продуктов_общие_особенности",
+      "sources": {
+        "samsung": {
+          "id": 1177,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Семейство продуктов (Общие особенности)",
+          "raw_value": "BAR Plus",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "семейство_продуктов_общие_особенности",
+          "normalized_value": "bar plus",
+          "unit": "",
+          "display_value": "bar plus",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Семейство продуктов (Общие особенности)"
+      ],
+      "display_name": "Семейство продуктов (Общие особенности)",
+      "resolved": {
+        "id": 1165,
+        "product_id": 24,
+        "normalized_name": "семейство_продуктов_общие_особенности",
+        "selected_value": "bar plus",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "bar plus",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "скорость_передачи_данных",
+      "sources": {
+        "samsung": {
+          "id": 1184,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Скорость передачи данных",
+          "raw_value": "Скорость чтения до 200 млн байт / сек для USB 3.0. Скорость записи меньше скорости чтения. *Фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+          "section": "Производительность",
+          "value_cell": null,
+          "normalized_name": "скорость_передачи_данных",
+          "normalized_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+          "unit": "",
+          "display_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Скорость передачи данных"
+      ],
+      "display_name": "Скорость передачи данных",
+      "resolved": {
+        "id": 1166,
+        "product_id": 24,
+        "normalized_name": "скорость_передачи_данных",
+        "selected_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "скорость чтения до 200 млн байт / сек для usb 3.0. скорость записи меньше скорости чтения. *фактическая скорость может зависеть от конфигурации аппаратных средств и условий использования.",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "температура_в_выключенном_состоянии",
+      "sources": {
+        "samsung": {
+          "id": 1185,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Температура в выключенном состоянии",
+          "raw_value": "-10~70℃",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "температура_в_выключенном_состоянии",
+          "normalized_value": "-10~70℃",
+          "unit": "",
+          "display_value": "-10~70℃",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Температура в выключенном состоянии"
+      ],
+      "display_name": "Температура в выключенном состоянии",
+      "resolved": {
+        "id": 1167,
+        "product_id": 24,
+        "normalized_name": "температура_в_выключенном_состоянии",
+        "selected_value": "-10~70℃",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "-10~70℃",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "тип_продукта",
+      "sources": {
+        "samsung": {
+          "id": 1176,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Тип продукта",
+          "raw_value": "USB 3.1 Flash Drive",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "тип_продукта",
+          "normalized_value": "usb 3.1 flash drive",
+          "unit": "",
+          "display_value": "usb 3.1 flash drive",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Тип продукта"
+      ],
+      "display_name": "Тип продукта",
+      "resolved": {
+        "id": 1168,
+        "product_id": 24,
+        "normalized_name": "тип_продукта",
+        "selected_value": "usb 3.1 flash drive",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "usb 3.1 flash drive",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "устойчивость_к_ударам",
+      "sources": {
+        "samsung": {
+          "id": 1190,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Устойчивость к ударам",
+          "raw_value": "Ускорение:1500 g (gravity), Время воздействия: 0.5 мс, Направление: по трем осям x,y,z",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "устойчивость_к_ударам",
+          "normalized_value": "ускорение:1500 g (gravity), время воздействия: 0.5 мс, направление: по трем осям x,y,z",
+          "unit": "",
+          "display_value": "ускорение:1500 g (gravity), время воздействия: 0.5 мс, направление: по трем осям x,y,z",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Устойчивость к ударам"
+      ],
+      "display_name": "Устойчивость к ударам",
+      "resolved": {
+        "id": 1169,
+        "product_id": 24,
+        "normalized_name": "устойчивость_к_ударам",
+        "selected_value": "ускорение:1500 g (gravity), время воздействия: 0.5 мс, направление: по трем осям x,y,z",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "ускорение:1500 g (gravity), время воздействия: 0.5 мс, направление: по трем осям x,y,z",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_w_mm",
+      "sources": {
+        "samsung": {
+          "id": 1182,
+          "product_id": 24,
+          "source_page_id": 41,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры (ШxВxГ)",
+          "raw_value": "15.46 X 40.00 X 12.00 мм",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "15.46",
+          "unit": "mm",
+          "display_value": "15.46 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры (ШxВxГ)"
+      ],
+      "display_name": "Ширина товара, мм",
+      "resolved": {
+        "id": 1148,
+        "product_id": 24,
+        "normalized_name": "product_dimensions",
+        "selected_value": "15.46",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:06+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "15.46 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions"
+    }
+  ],
+  "photos": [
+    {
+      "id": 510,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-backsilver-thumb-102802690",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-backsilver-thumb-102802690",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 511,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-bottomsilver-thumb-102802694",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-bottomsilver-thumb-102802694",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 512,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-dynamicsilver-thumb-102802693",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-dynamicsilver-thumb-102802693",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 513,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontpkgsilver-thumb-102802695",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontpkgsilver-thumb-102802695",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 514,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontsilver-thumb-102802698",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontsilver-thumb-102802698",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 515,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-lperspectivesilver-thumb-102802692",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-lperspectivesilver-thumb-102802692",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 516,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-rperspectivesilver-thumb-102802691",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-rperspectivesilver-thumb-102802691",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 503,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontsilver-102802697?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontsilver-102802697",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 504,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-backsilver-102802684?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-backsilver-102802684",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 505,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-rperspectivesilver-102802685?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-rperspectivesilver-102802685",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 506,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-lperspectivesilver-102802686?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-lperspectivesilver-102802686",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 507,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-dynamicsilver-102802687?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-dynamicsilver-102802687",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 508,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-bottomsilver-102802688?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-bottomsilver-102802688",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 509,
+      "product_id": 24,
+      "source_page_id": 41,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontpkgsilver-102802689?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-usb-3-1-flash-drive-bar-silver-muf-64be3-apc-frontpkgsilver-102802689",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:06+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "article": "MUF-64BE3/APC",
+    "route": {
+      "kind": "sitemap",
+      "addresses": [
+        "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "https://www.samsung.com/kz_ru/im-sitemap.xml",
+        "https://www.samsung.com/ru/memory-sitemap.xml",
+        "https://www.samsung.com/ru/im-sitemap.xml"
+      ],
+      "reason": "",
+      "found_via": "https://www.samsung.com/kz_ru/memory-sitemap.xml"
+    },
+    "query_variants": [
+      "MUF-64BE3/APC",
+      "MUF-64BE3"
+    ],
+    "candidates": [
+      {
+        "url": "https://www.samsung.com/kz_ru/memory-storage/usb-flash-drive/samsung-usb-flash-drive-bar-plus-64gb-silver-muf-64be3-apc/",
+        "via": "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "match_level": "full_sku",
+        "product_page": true
+      }
+    ],
+    "external_search": null,
+    "external_results": null,
+    "steps": [
+      {
+        "step": "sitemap",
+        "url": "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "status": 200
+      },
+      {
+        "step": "product_page",
+        "url": "https://www.samsung.com/kz_ru/memory-storage/usb-flash-drive/samsung-usb-flash-drive-bar-plus-64gb-silver-muf-64be3-apc/",
+        "status": 200
+      }
+    ],
+    "page_url": "https://www.samsung.com/kz_ru/memory-storage/usb-flash-drive/samsung-usb-flash-drive-bar-plus-64gb-silver-muf-64be3-apc/",
+    "buy_page_url": "",
+    "identity": {
+      "level": "full_sku",
+      "strength": "strong",
+      "match_level": "full_sku",
+      "evidence": [
+        "jsonld_sku",
+        "visible_text",
+        "url_only_not_counted"
+      ],
+      "jsonld_sku": "MUF-64BE3/APC",
+      "title": "USB накопитель Samsung BAR PLUS 64 гб | Samsung Казахстан",
+      "is_product_page": true,
+      "open_differences": []
+    },
+    "specs": 23,
+    "photos": {
+      "full_size": 7,
+      "thumbnails": 7,
+      "three_d_excluded": 0,
+      "from": "https://www.samsung.com/kz_ru/memory-storage/usb-flash-drive/samsung-usb-flash-drive-bar-plus-64gb-silver-muf-64be3-apc/",
+      "bound_by_asset_path": [],
+      "gap": ""
+    },
+    "document_links": [],
+    "gaps": [
+      "ссылок на руководство на странице нет"
+    ],
+    "missing_fields": [
+      "инструкция"
+    ],
+    "outcome": "page_read",
+    "halted": null,
+    "device_split": {
+      "tables": [],
+      "assigned": [],
+      "unassigned": []
+    }
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  },
+  "trace": []
+}

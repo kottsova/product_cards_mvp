@@ -14,6 +14,10 @@ def model_gallery(html, url, wanted):
     if not main:return [],[]
     hero=main.select_one('.section');nodes=list(hero.select('img')) if hero else []
     nodes+=main.select('.product-gallery img, [data-gallery] img, .product-render img')
+    # Native Xiaomi templates also publish their model-owned feature/gallery
+    # images throughout main. The explicit model alt is scope evidence; no
+    # supplier color/configuration is inferred from it.
+    nodes+=[img for img in main.select('img.xm-img[alt]') if img.get('alt','').strip() and model_matches(wanted,img['alt'])]
     photos=[];relations=[];seen=set()
     for img in nodes:
         image=img.get('src') or img.get('data-src') or '';host=urlsplit(image).hostname or '';alt=img.get('alt','').strip()
@@ -24,7 +28,7 @@ def model_gallery(html, url, wanted):
         if re.search(r'logo|icon|title|slogan|solgon|name_\d',urlsplit(image).path,re.I):continue
         seen.add(image);asset=hashlib.sha256(image.encode()).hexdigest()[:24]
         photos.append(PhotoCandidate(image,asset,kind='product_gallery'))
-        relations.append({'url':image,'asset_key':asset,'source_url':url,'role':'official_model_hero' if hero and hero in img.parents else 'official_product_gallery','model_relation':'model_confirmed','official_color':color,'supplier_color_relation':'unproven','accepted':False,'reason':'Exact model PDP gallery; byte verification pending, supplier appearance not asserted'})
+        relations.append({'url':image,'asset_key':asset,'source_url':url,'role':'official_model_hero' if hero and hero in img.parents else 'official_model_visual','model_relation':'model_confirmed','official_color':color,'supplier_color_relation':'unproven','accepted':False,'reason':'Exact model PDP main/gallery with model identity; byte verification pending, supplier appearance not asserted'})
     return photos,relations
 
 def charging_fields(attr):
@@ -45,14 +49,14 @@ def charging_fields(attr):
 
 def connectivity_fields(attr):
     """Keep SIM/Wi-Fi caveats with their component, not unrelated Bluetooth/codecs."""
-    if attr.name!='Network & Connectivity':return []
+    if not re.fullmatch(r'Network\s*(?:&|and)\s*Connectivity',attr.name,re.I):return []
     groups=[];label='SIM';lines=[]
     for line in attr.value.splitlines():
-        next_label='Network bands' if re.fullmatch(r'Network bands:?',line.strip(),re.I) else 'Wireless Networks' if line.strip()=='Wireless Networks' else 'Bluetooth' if re.match(r'^Bluetooth\s+\d',line.strip(),re.I) else 'Audio codecs' if re.match(r'^Supports SBC',line.strip()) else ''
+        next_label='Network bands' if re.fullmatch(r'Network bands:?',line.strip(),re.I) or label!='Network bands' and re.match(r'^[2-5]G:',line.strip()) else 'Wireless Networks' if line.strip()=='Wireless Networks' or label!='Wireless Networks' and re.match(r'^Wi-Fi:',line.strip(),re.I) else 'Bluetooth' if re.match(r'^Bluetooth\s+\d',line.strip(),re.I) else 'Audio codecs' if re.match(r'^Supports SBC',line.strip()) else ''
         if next_label:
             if lines:groups.append(RawAttribute(label,'\n'.join(lines),attr.section))
             label=next_label;lines=[]
-            if next_label in {'Network bands','Wireless Networks'}:continue
+            if re.fullmatch(r'Network bands:?|Wireless Networks',line.strip(),re.I):continue
         lines.append(line)
     if lines:groups.append(RawAttribute(label,'\n'.join(lines),attr.section))
     return groups if len(groups)>1 else []
@@ -93,7 +97,28 @@ def parse_page(html, url, article, name, category=''):
         elif re.search(r'\bdimensions\b|\bweight\b', attr.name, re.I) and re.search(r'Black|White|Green|Silver|Leather|colour|color', attr.value, re.I): reason = 'Dimensions/weight vary by appearance; exact color relation required'
         elif re.search(r'station|dock|base', attr.name+' '+attr.section, re.I) and opts.get('bundle'): reason = 'Station/base revision requires exact bundle evidence'
         if reason:
-            ev['rejected_specs'].append({**row, 'reason': reason})
+            recovered=[]
+            if scope=='configuration' and re.search(r'storage|ram|memory',attr.name,re.I):
+                # Capacity choices remain candidates. Explicit shared technology
+                # lines in the same mixed section describe the exact model.
+                for pattern,label in ((r'^RAM:\s*(LPDDR\d[A-Z0-9]*(?:\s+\d+\s*Mbps)?)\s*$','Тип оперативной памяти'),(r'^Storage:\s*(UFS\s*\d+(?:\.\d+)?)\s*$','Тип накопителя')):
+                    values=re.findall(pattern,attr.value,re.I|re.M)
+                    if len(set(values))==1:
+                        derived=RawAttribute(label,values[0],'Память')
+                        doc.attributes.append(derived);recovered.append(asdict(derived))
+                pair=re.findall(r'^\s*(LPDDR\d[A-Z0-9]*)\s*\+\s*(UFS\s*\d+(?:\.\d+)?)\s*$',attr.value,re.I|re.M)
+                if len(set(pair))==1 and not recovered:
+                    for label,v in zip(('Тип оперативной памяти','Тип накопителя'),pair[0]):
+                        derived=RawAttribute(label,v,'Память');doc.attributes.append(derived);recovered.append(asdict(derived))
+            elif reason.startswith('Dimensions/weight vary'):
+                for pattern,label in ((r'^Height:\s*(\d+(?:\.\d+)?)\s*mm\s*$','Высота товара, мм'),(r'^Width:\s*(\d+(?:\.\d+)?)\s*mm\s*$','Ширина товара, мм'),(r'^Depth:\s*(\d+(?:\.\d+)?)\s*mm\s*$','Глубина товара, мм'),(r'^Weight:\s*(\d+(?:\.\d+)?)\s*g\s*$','Вес товара, г')):
+                    matches=re.findall(pattern,attr.value,re.I|re.M)
+                    if len(set(matches))==1:
+                        derived=RawAttribute(label,matches[0],'Габариты и вес');doc.attributes.append(derived);recovered.append(asdict(derived))
+            if recovered:
+                ev['accepted_specs'].append({**row,'scope':'mixed','derived_fields':recovered,'admission':'Explicit shared model fields; conditional configuration parts remain candidates'})
+                ev.setdefault('configuration_candidates',[]).append({**row,'reason':reason,'admitted_model_fields':recovered})
+            else:ev['rejected_specs'].append({**row,'reason':reason})
         else:
             section = 'База / станция' if re.search(r'station|dock', attr.name+' '+attr.section, re.I) else 'Габариты и вес' if re.search(r'dimensions|weight', attr.name, re.I) else 'Питание и аккумулятор' if re.search(r'battery|charging|power|voltage', attr.name, re.I) else {'Display':'Экран','Design':'Конструкция','Material':'Материалы','Speaker':'Аудио','Processor':'Процессор','Rear camera':'Основная камера','Front Camera':'Фронтальная камера','Ports':'Порты'}.get(attr.section,'Характеристики модели')
             qualified=attr.name+' ('+attr.section+')' if attr.name in repeated and section!='База / станция' else attr.name

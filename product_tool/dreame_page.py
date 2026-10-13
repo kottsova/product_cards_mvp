@@ -78,7 +78,7 @@ def raw_rows(soup,products):
         if re.fullmatch(r'Robot Vacuum|Base Station|Handheld Vacuum|Vacuuming|Mopping|Runtime|Auto Mop Self-Cleaning|Auto Dust Collection|Intelligence|Others',heading.get_text(' ',strip=True),re.I):roots.append(heading.parent)
     root_ids={id(r) for r in roots}
     roots=[r for r in roots if not any(id(a) in root_ids for a in r.parents)]
-    for root in roots[:30]:
+    for root in roots:
         native_pairs=[b.parent for b in root.select('b, .item.common-subtitle > div > span:first-child') if len(b.parent.find_all(recursive=False))==2 and b.parent.find_all(recursive=False)[0] is b and b.parent.find_all(recursive=False)[1].name=='span']
         for row in [*root.select('tr, li, .spec-item, .specs-item, .specification-item, [data-spec-row], .row-item'),*native_pairs]:
             cells=row.find_all(['th','td'],recursive=False) if row.name=='tr' else row.find_all(recursive=False)
@@ -157,6 +157,24 @@ def parse_page(html,url,article,name,category=''):
             signature=(attr.name, re.sub(r'\s+','',attr.value).replace(';',''),attr.section)
             if signature not in accepted_keys:unique.append(attr);accepted_keys.add(signature)
         doc.attributes.extend(unique);ev['accepted_specs'].append({**enriched,'derived_fields':[asdict(x) for x in unique],'duplicate_presentation':not bool(unique)})
+    # Explicit branded capabilities are technical features even when their
+    # surrounding PDP prose is promotional. Admit presence only, not the
+    # advertising performance percentages; retain the entire raw statement.
+    feature_seen=set()
+    for heading in soup.select('main h2,main h3,main .common-title'):
+        if heading.find_parent(['nav','aside','table']):continue
+        container=heading.find_parent(class_='text-wrapper') or heading.parent
+        text=container.get_text(' ',strip=True)
+        for match in re.finditer(r'\b(MopExtend(?:™)?(?:\s+RoboSwing)?|SideReach(?:™)?|ProLeap(?:™)?|VersaLift(?:™)?|HyperStream(?:™)?|HyperMind(?:™)?)',text):
+            feature=match[1]
+            if feature in feature_seen:continue
+            feature_seen.add(feature)
+            record={'name':feature,'value':text,'section':'Особенности модели','source_section':heading.get_text(' ',strip=True),'component':default,'scope':'model','kind':'feature_presence','reason':''}
+            ev['raw_specs'].append(record)
+            if re.search(r'not supported|without '+re.escape(feature)+r'|optional|sold separately',text,re.I):
+                ev['rejected_specs'].append({**record,'reason':'Conditional or negative feature statement'});continue
+            attr=RawAttribute(feature,'Есть','Особенности модели',value_cell=True)
+            doc.attributes.append(attr);ev['accepted_specs'].append({**record,'derived_fields':[asdict(attr)],'admission':'Explicit model-owned capability presence; no marketing percentage admitted'})
     gallery=[]
     for p in selected:
         images=p.get('image',[]);images=images if isinstance(images,list) else [images]
@@ -182,10 +200,17 @@ def parse_page(html,url,article,name,category=''):
         if 'no-image' in image:role='placeholder'
         elif any('common-icon-item' in a.get('class',[]) for a in img.parents):role='feature_icon'
         elif any('common-item-container' in a.get('class',[]) for a in img.parents):role='package_inventory'
-        ev['native_media_inventory'].append({'url':urljoin(url,image),'role':role,'accepted':False})
+        alt=img.get('alt','')
+        model_slug=re.sub(r'[^a-z0-9]+','-',clean_model(wanted).casefold()).strip('-')
+        filename=urlsplit(image).path.rsplit('/',1)[-1].casefold()
+        named=bool(model_slug and re.match(re.escape(model_slug)+r'(?:[-_.]|$)',filename)) or matches(wanted,alt,config)
+        recommendation=any(re.search(r'recommend|related|upsell|cross-sell',str(a.get('class',[])),re.I) for a in img.parents)
+        owned=role=='feature_visual' and named and not recommendation
+        ev['native_media_inventory'].append({'url':urljoin(url,image),'role':role,'accepted':owned,'alt':alt,'ownership':'Exact model name in published media label/path and owned main DOM' if owned else 'unproven'})
+        if owned:gallery.append((image,'','official_model_visual',True))
     ev['native_feature_headings']=[x.get_text(' ',strip=True) for x in soup.select('main h2') if x.get_text(' ',strip=True)]
     seen=set();ev['gallery_asset_aliases']=[]
-    for image,color,role,eligible in gallery[:50]:
+    for image,color,role,eligible in gallery:
         if not isinstance(image,str):continue
         image=urljoin(url,image);h=urlsplit(image).hostname or ''
         if urlsplit(image).scheme!='https' or not any(h==a or h.endswith('.'+a) for a in MEDIA_HOSTS) or 'no-image' in image:continue
@@ -193,6 +218,6 @@ def parse_page(html,url,article,name,category=''):
         if asset in seen:
             ev['gallery_asset_aliases'].append({'url':image,'asset_key':asset,'accepted':False,'reason':'Shopify resize alias of an already published model gallery asset'});continue
         seen.add(asset);different=bool(color and config.get('color') and color.casefold()!=config['color'].casefold())
-        doc.photo_candidates.append(PhotoCandidate(image,asset,kind='candidate' if different or not eligible else 'product_gallery',excluded_reason='Explicit other color variant' if different else 'Accessory/bundle-specific image' if not eligible else ''))
+        doc.photo_candidates.append(PhotoCandidate(image,asset,kind='candidate' if different or not eligible else 'official_model_visual' if role=='official_model_visual' else 'product_gallery',excluded_reason='Explicit other color variant' if different else 'Accessory/bundle-specific image' if not eligible else ''))
         ev['model_gallery_candidates'].append({'url':image,'asset_key':asset,'source_url':url,'model_relation':'unproven' if different or not eligible else 'model_confirmed','official_color':color,'supplier_color_relation':'different' if different else 'unproven','role':role,'accepted':False,'reason':'Other published color' if different else 'Accessory/bundle inventory; candidate only' if not eligible else 'Exact-model published gallery; byte verification pending'})
     return doc,ev

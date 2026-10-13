@@ -1,0 +1,699 @@
+{
+  "input": {
+    "id": 27,
+    "brand": "Samsung",
+    "dispatch_brand": "Samsung",
+    "article": "EP-DA705BBRGRU",
+    "model": "Samsung EP-DA705BBRGRU",
+    "name": "Samsung EP-DA705BBRGRU",
+    "category": "Кабели",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/samsung_stage59/dataset_frozen.json",
+    "original_input": {
+      "article": "EP-DA705BBRGRU",
+      "name": "Samsung EP-DA705BBRGRU",
+      "category": "Кабели",
+      "selection_reason": "Previously qualified category missing from Stage 59 ten"
+    }
+  },
+  "observed_at": "2026-10-13T09:01:32.419580+00:00",
+  "seconds": 18.5,
+  "job": {
+    "id": "990d5980a2044eedbff988352b062ca6",
+    "product_id": 27,
+    "status": "done",
+    "current_stage": 4,
+    "message": "Samsung: Артикул каталога EP-DA705BBRGRU подтверждён содержимым официальной страницы: sku в разметке товара, видимый текст страницы. Реальных конфликтов: 0; расхождений с дилером: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки Samsung к выгрузке: export_ready_with_gaps; пробелы: instruction_not_checked, dealer_cross_check_missing.",
+    "created_at": "2026-10-13T09:01:13+00:00",
+    "updated_at": "2026-10-13T09:01:32+00:00",
+    "started_at": "2026-10-13T09:01:13+00:00",
+    "finished_at": "2026-10-13T09:01:32+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 48,
+      "product_id": 27,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "not_needed",
+      "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 47,
+      "product_id": 27,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "url": "https://www.samsung.com/kz_ru/mobile-accessories/usb-type-c-to-type-c-cable-black-ep-da705bbrgru/",
+      "found_model": "EP-DA705BBRGRU",
+      "match_level": "full_sku",
+      "evidence": "Артикул каталога EP-DA705BBRGRU подтверждён содержимым официальной страницы: sku в разметке товара, видимый текст страницы.",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "error": "",
+      "description": "Кабель USB Type-C (EP-DA705BBRGRU) - Смотрите преимущества и все функции этого продукта. Узнайте больше и найдите для себя лучшие Мобильные Аксессуары на Samsung Казахстан.",
+      "photos": [
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112367?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112360?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112361?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112362?$Q90_2052_1641_JPG$"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 1227,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Цвет",
+      "raw_value": "Черный",
+      "section": "Цвет",
+      "value_cell": null,
+      "normalized_name": "color",
+      "normalized_value": "черный",
+      "unit": ""
+    },
+    {
+      "id": 1231,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Вес",
+      "raw_value": "22.2 г",
+      "section": "Физические характеристики",
+      "value_cell": null,
+      "normalized_name": "product_weight",
+      "normalized_value": "0.0222",
+      "unit": "kg"
+    },
+    {
+      "id": 1230,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Длина кабеля",
+      "raw_value": "1 м",
+      "section": "Физические характеристики",
+      "value_cell": null,
+      "normalized_name": "длина_кабеля",
+      "normalized_value": "1 м",
+      "unit": ""
+    },
+    {
+      "id": 1229,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Интерфейс",
+      "raw_value": "USB Type-C to Type-C",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "интерфейс",
+      "normalized_value": "usb type-c to type-c",
+      "unit": ""
+    },
+    {
+      "id": 1228,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Функции управления",
+      "raw_value": "Макс. 3A, USB 2.0",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "функции_управления",
+      "normalized_value": "макс. 3a, usb 2.0",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 1204,
+      "product_id": 27,
+      "normalized_name": "color",
+      "selected_value": "черный",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:32+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1205,
+      "product_id": 27,
+      "normalized_name": "product_weight",
+      "selected_value": "0.0222",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:32+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1206,
+      "product_id": 27,
+      "normalized_name": "длина_кабеля",
+      "selected_value": "1 м",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:32+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1207,
+      "product_id": 27,
+      "normalized_name": "интерфейс",
+      "selected_value": "usb type-c to type-c",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:32+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1208,
+      "product_id": 27,
+      "normalized_name": "функции_управления",
+      "selected_value": "макс. 3a, usb 2.0",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:32+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "product_weight",
+      "sources": {
+        "samsung": {
+          "id": 1231,
+          "product_id": 27,
+          "source_page_id": 47,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Вес",
+          "raw_value": "22.2 г",
+          "section": "Физические характеристики",
+          "value_cell": null,
+          "normalized_name": "product_weight",
+          "normalized_value": "0.0222",
+          "unit": "kg",
+          "display_value": "0.0222 кг",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Вес"
+      ],
+      "display_name": "Вес",
+      "resolved": {
+        "id": 1205,
+        "product_id": 27,
+        "normalized_name": "product_weight",
+        "selected_value": "0.0222",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:32+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "0.0222 кг",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "длина_кабеля",
+      "sources": {
+        "samsung": {
+          "id": 1230,
+          "product_id": 27,
+          "source_page_id": 47,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Длина кабеля",
+          "raw_value": "1 м",
+          "section": "Физические характеристики",
+          "value_cell": null,
+          "normalized_name": "длина_кабеля",
+          "normalized_value": "1 м",
+          "unit": "",
+          "display_value": "1 м",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Длина кабеля"
+      ],
+      "display_name": "Длина кабеля",
+      "resolved": {
+        "id": 1206,
+        "product_id": 27,
+        "normalized_name": "длина_кабеля",
+        "selected_value": "1 м",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:32+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "1 м",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "интерфейс",
+      "sources": {
+        "samsung": {
+          "id": 1229,
+          "product_id": 27,
+          "source_page_id": 47,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Интерфейс",
+          "raw_value": "USB Type-C to Type-C",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "интерфейс",
+          "normalized_value": "usb type-c to type-c",
+          "unit": "",
+          "display_value": "usb type-c to type-c",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Интерфейс"
+      ],
+      "display_name": "Интерфейс",
+      "resolved": {
+        "id": 1207,
+        "product_id": 27,
+        "normalized_name": "интерфейс",
+        "selected_value": "usb type-c to type-c",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:32+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "usb type-c to type-c",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "функции_управления",
+      "sources": {
+        "samsung": {
+          "id": 1228,
+          "product_id": 27,
+          "source_page_id": 47,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Функции управления",
+          "raw_value": "Макс. 3A, USB 2.0",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "функции_управления",
+          "normalized_value": "макс. 3a, usb 2.0",
+          "unit": "",
+          "display_value": "макс. 3a, usb 2.0",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Функции управления"
+      ],
+      "display_name": "Функции управления",
+      "resolved": {
+        "id": 1208,
+        "product_id": 27,
+        "normalized_name": "функции_управления",
+        "selected_value": "макс. 3a, usb 2.0",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:32+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "макс. 3a, usb 2.0",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "color",
+      "sources": {
+        "samsung": {
+          "id": 1227,
+          "product_id": 27,
+          "source_page_id": 47,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Цвет",
+          "raw_value": "Черный",
+          "section": "Цвет",
+          "value_cell": null,
+          "normalized_name": "color",
+          "normalized_value": "черный",
+          "unit": "",
+          "display_value": "черный",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Цвет"
+      ],
+      "display_name": "Цвет",
+      "resolved": {
+        "id": 1204,
+        "product_id": 27,
+        "normalized_name": "color",
+        "selected_value": "черный",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:32+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "черный",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    }
+  ],
+  "photos": [
+    {
+      "id": 559,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112363",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112363",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 560,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112364",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112364",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 561,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112365",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112365",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 562,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112368",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-thumb-515112368",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 555,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112367?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112367",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 556,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112360?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112360",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 557,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112361?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112361",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 558,
+      "product_id": 27,
+      "source_page_id": 47,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112362?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112362",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:32+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "article": "EP-DA705BBRGRU",
+    "route": {
+      "kind": "sitemap",
+      "addresses": [
+        "https://www.samsung.com/kz_ru/im-sitemap.xml",
+        "https://www.samsung.com/kz_ru/assorted-sitemap.xml",
+        "https://www.samsung.com/ru/im-sitemap.xml",
+        "https://www.samsung.com/ru/assorted-sitemap.xml"
+      ],
+      "reason": "",
+      "found_via": "https://www.samsung.com/kz_ru/im-sitemap.xml"
+    },
+    "query_variants": [
+      "EP-DA705BBRGRU"
+    ],
+    "candidates": [
+      {
+        "url": "https://www.samsung.com/kz_ru/mobile-accessories/usb-type-c-to-type-c-cable-black-ep-da705bbrgru/",
+        "via": "https://www.samsung.com/kz_ru/im-sitemap.xml",
+        "match_level": "full_sku",
+        "product_page": true
+      }
+    ],
+    "external_search": null,
+    "external_results": null,
+    "steps": [
+      {
+        "step": "sitemap",
+        "url": "https://www.samsung.com/kz_ru/im-sitemap.xml",
+        "status": 200
+      },
+      {
+        "step": "product_page",
+        "url": "https://www.samsung.com/kz_ru/mobile-accessories/usb-type-c-to-type-c-cable-black-ep-da705bbrgru/",
+        "status": 200
+      }
+    ],
+    "page_url": "https://www.samsung.com/kz_ru/mobile-accessories/usb-type-c-to-type-c-cable-black-ep-da705bbrgru/",
+    "buy_page_url": "",
+    "identity": {
+      "level": "full_sku",
+      "strength": "strong",
+      "match_level": "full_sku",
+      "evidence": [
+        "jsonld_sku",
+        "visible_text",
+        "url_only_not_counted"
+      ],
+      "jsonld_sku": "EP-DA705BBRGRU",
+      "title": "Кабель USB Type-C черный | Samsung Казахстан",
+      "is_product_page": true,
+      "open_differences": []
+    },
+    "specs": 5,
+    "photos": {
+      "full_size": 4,
+      "thumbnails": 4,
+      "three_d_excluded": 0,
+      "from": "https://www.samsung.com/kz_ru/mobile-accessories/usb-type-c-to-type-c-cable-black-ep-da705bbrgru/",
+      "bound_by_asset_path": [
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112367",
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112360",
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112361",
+        "https://images.samsung.com/is/image/samsung/p6pim/kz_ru/ep-da705bbrgru/gallery/kz-ru-кабель-usb-type-c-ep-da705bbrgru-515112362"
+      ],
+      "gap": ""
+    },
+    "document_links": [],
+    "gaps": [
+      "ссылок на руководство на странице нет"
+    ],
+    "missing_fields": [
+      "инструкция"
+    ],
+    "outcome": "page_read",
+    "halted": null,
+    "device_split": {
+      "tables": [],
+      "assigned": [],
+      "unassigned": []
+    }
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  },
+  "trace": []
+}

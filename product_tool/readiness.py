@@ -29,8 +29,14 @@ BLOCKING = ("no_official_full_sku_page", "no_official_specifications", "no_offic
 ADVISORY = ("dealer_cross_check_missing",)
 
 
-def card_readiness(database: Path, product_id: int) -> dict[str, Any]:
+def _card_readiness(database: Path, product_id: int) -> dict[str, Any]:
     product = jobs.get_product(database, product_id) or {}
+    if product.get('brand','').strip().casefold()=='jbl':
+        from .jbl_pipeline import card_readiness as brand_readiness
+        return brand_readiness(database,product_id)
+    if product.get('brand','').strip().casefold()=='samsung':
+        from .samsung_readiness import card_readiness as brand_readiness
+        return brand_readiness(database,product_id)
     if product.get('brand','').strip().casefold()=='electrolux':
         from .electrolux_pipeline import card_readiness as electrolux_readiness
         return electrolux_readiness(database,product_id)
@@ -111,6 +117,21 @@ def card_readiness(database: Path, product_id: int) -> dict[str, Any]:
         "real_conflicts": conflicts, "instruction": {"found": len(documents), "languages": languages, "russian": "Русский" in tied_languages, "russian_file_found": "Русский" in languages, "verified_for_article": len(tied_documents)},
         "dealer_confirmed": dealer_confirmed,
     }
+
+
+def card_readiness(database: Path, product_id: int, *, manuals_required: bool=True) -> dict[str, Any]:
+    result=_card_readiness(database,product_id)
+    if manuals_required:return result
+    result=dict(result)
+    document_gaps=lambda g:g.startswith(('instruction_','manual_'))
+    blocking=list(result.get('blocking_gaps',[]))
+    moved=[g for g in blocking if document_gaps(g)]
+    result['blocking_gaps']=[g for g in blocking if not document_gaps(g)]
+    result['advisory_gaps']=list(dict.fromkeys(result.get('advisory_gaps',[])+moved))
+    result['gaps']=result['blocking_gaps']+result['advisory_gaps']
+    if moved and not result['blocking_gaps'] and result['verdict'] in {'not_ready','export_ready_with_gaps'}:result['verdict']='export_ready'
+    result['readiness_scope']='attributes_photos';result['manuals_required']=False
+    return result
 
 
 def readiness_text(readiness: dict[str, Any]) -> str:

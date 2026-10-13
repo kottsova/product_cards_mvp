@@ -1,0 +1,2897 @@
+{
+  "input": {
+    "id": 52,
+    "brand": "PlayStation",
+    "dispatch_brand": "PlayStation",
+    "article": "1000050213-GB",
+    "model": "DualSense Wireless Controller Midnight Black",
+    "name": "DualSense Wireless Controller Midnight Black",
+    "category": "Контроллеры",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/playstation_stage66/dataset_frozen.json",
+    "original_input": {
+      "article": "1000050213-GB",
+      "name": "DualSense Wireless Controller Midnight Black",
+      "category": "controllers"
+    }
+  },
+  "observed_at": "2026-10-13T09:10:05.136718+00:00",
+  "seconds": 13.54,
+  "job": {
+    "id": "63e841a18fcf42adbd55e5ac6759f98e",
+    "product_id": 52,
+    "status": "done",
+    "current_stage": null,
+    "message": "PlayStation: Готова",
+    "created_at": "2026-10-13T09:09:51+00:00",
+    "updated_at": "2026-10-13T09:10:05+00:00",
+    "started_at": "2026-10-13T09:09:51+00:00",
+    "finished_at": "2026-10-13T09:10:05+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 139,
+      "product_id": 52,
+      "source_key": "playstation",
+      "site_name": "PlayStation",
+      "url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+      "found_model": "DualSense® Wireless Controller - Midnight Black - For PS5, PC, MAC & Mobile",
+      "match_level": "full_sku",
+      "evidence": "Exact commercial SKU in own official PDP",
+      "fetched_at": "2026-10-13T09:09:58+00:00",
+      "error": "",
+      "description": "Беспроводной игровой контроллер DualSense. DualSense® Wireless Controller - Midnight Black - For PS5, PC, MAC & Mobile.\nЦвет: Чёрный (Midnight Black).\nКомплектация: DualSense® Wireless Controller; User manual.\nHaptic Feedback: Да.\nAdaptive Triggers: Да.\nМикрофон: Встроенный.",
+      "photos": [
+        "https://media.direct.playstation.com/is/image/psdglobal/2025-dualsense-ps5-controller-midnight-black-accessory-front",
+        "https://media.direct.playstation.com/is/image/psdglobal/2025-dualsense-ps5-controller-midnight-black-accessory-top-left",
+        "https://media.direct.playstation.com/is/image/psdglobal/2025-DualSense-Controller-MidnightBlack"
+      ]
+    },
+    {
+      "id": 141,
+      "product_id": 52,
+      "source_key": "playstation_hardware",
+      "site_name": "PlayStation",
+      "url": "",
+      "found_model": "",
+      "match_level": "unknown",
+      "evidence": "",
+      "fetched_at": "2026-10-13T09:10:05+00:00",
+      "error": "Источник не подтверждён в текущем запуске",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 140,
+      "product_id": 52,
+      "source_key": "playstation_model",
+      "site_name": "PlayStation",
+      "url": "https://www.playstation.com/en-gb/accessories/dualsense-wireless-controller/",
+      "found_model": "DualSense® wireless controller",
+      "match_level": "model_confirmed",
+      "evidence": "Exact family PDP; configuration and CFI revision checked separately",
+      "fetched_at": "2026-10-13T09:10:04+00:00",
+      "error": "",
+      "description": "Беспроводной игровой контроллер DualSense.\nAdaptive Triggers: Да.\nHaptic Feedback: Да.\nHaptic Feedback: Да.\nHaptic Feedback: Да.",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 2573,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "site_name": "PlayStation",
+      "raw_name": "Adaptive Triggers",
+      "raw_value": "Да",
+      "section": "Возможности модели",
+      "value_cell": 1,
+      "normalized_name": "adaptive_triggers",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2575,
+      "product_id": 52,
+      "source_page_id": 140,
+      "source_key": "playstation_model",
+      "site_name": "PlayStation",
+      "raw_name": "Adaptive Triggers",
+      "raw_value": "Да",
+      "section": "Возможности модели",
+      "value_cell": 1,
+      "normalized_name": "adaptive_triggers",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2570,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "site_name": "PlayStation",
+      "raw_name": "Цвет",
+      "raw_value": "Чёрный (Midnight Black)",
+      "section": "Конфигурация",
+      "value_cell": 1,
+      "normalized_name": "color",
+      "normalized_value": "черный (midnight black)",
+      "unit": ""
+    },
+    {
+      "id": 2572,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "site_name": "PlayStation",
+      "raw_name": "Haptic Feedback",
+      "raw_value": "Да",
+      "section": "Возможности модели",
+      "value_cell": 1,
+      "normalized_name": "haptic_feedback",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2576,
+      "product_id": 52,
+      "source_page_id": 140,
+      "source_key": "playstation_model",
+      "site_name": "PlayStation",
+      "raw_name": "Haptic Feedback",
+      "raw_value": "Да",
+      "section": "Возможности модели",
+      "value_cell": 1,
+      "normalized_name": "haptic_feedback",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2577,
+      "product_id": 52,
+      "source_page_id": 140,
+      "source_key": "playstation_model",
+      "site_name": "PlayStation",
+      "raw_name": "Haptic Feedback",
+      "raw_value": "Да",
+      "section": "Возможности модели",
+      "value_cell": 1,
+      "normalized_name": "haptic_feedback",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2578,
+      "product_id": 52,
+      "source_page_id": 140,
+      "source_key": "playstation_model",
+      "site_name": "PlayStation",
+      "raw_name": "Haptic Feedback",
+      "raw_value": "Да",
+      "section": "Возможности модели",
+      "value_cell": 1,
+      "normalized_name": "haptic_feedback",
+      "normalized_value": "true",
+      "unit": "bool"
+    },
+    {
+      "id": 2571,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "site_name": "PlayStation",
+      "raw_name": "Комплектация",
+      "raw_value": "DualSense® Wireless Controller; User manual",
+      "section": "Конфигурация",
+      "value_cell": 1,
+      "normalized_name": "комплектация",
+      "normalized_value": "dualsense® wireless controller; user manual",
+      "unit": ""
+    },
+    {
+      "id": 2574,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "site_name": "PlayStation",
+      "raw_name": "Микрофон",
+      "raw_value": "Встроенный",
+      "section": "Возможности модели",
+      "value_cell": 1,
+      "normalized_name": "микрофон",
+      "normalized_value": "встроенный",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2333,
+      "product_id": 52,
+      "normalized_name": "adaptive_triggers",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+      "selected_source": "playstation",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:10:05+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2334,
+      "product_id": 52,
+      "normalized_name": "color",
+      "selected_value": "черный (midnight black)",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+      "selected_source": "playstation",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:10:05+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2335,
+      "product_id": 52,
+      "normalized_name": "haptic_feedback",
+      "selected_value": "true",
+      "selected_unit": "bool",
+      "status": "full_sku_official",
+      "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+      "selected_source": "playstation",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:10:05+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2336,
+      "product_id": 52,
+      "normalized_name": "комплектация",
+      "selected_value": "dualsense® wireless controller; user manual",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+      "selected_source": "playstation",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:10:05+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2337,
+      "product_id": 52,
+      "normalized_name": "микрофон",
+      "selected_value": "встроенный",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+      "selected_source": "playstation",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:10:05+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "adaptive_triggers",
+      "sources": {
+        "playstation": {
+          "id": 2573,
+          "product_id": 52,
+          "source_page_id": 139,
+          "source_key": "playstation",
+          "site_name": "PlayStation",
+          "raw_name": "Adaptive Triggers",
+          "raw_value": "Да",
+          "section": "Возможности модели",
+          "value_cell": 1,
+          "normalized_name": "adaptive_triggers",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "PlayStation"
+        },
+        "playstation_model": {
+          "id": 2575,
+          "product_id": 52,
+          "source_page_id": 140,
+          "source_key": "playstation_model",
+          "site_name": "PlayStation",
+          "raw_name": "Adaptive Triggers",
+          "raw_value": "Да",
+          "section": "Возможности модели",
+          "value_cell": 1,
+          "normalized_name": "adaptive_triggers",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "PlayStation"
+        }
+      },
+      "raw_names": [
+        "Adaptive Triggers",
+        "Adaptive Triggers"
+      ],
+      "display_name": "Adaptive Triggers",
+      "resolved": {
+        "id": 2333,
+        "product_id": 52,
+        "normalized_name": "adaptive_triggers",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+        "selected_source": "playstation",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:10:05+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Параметр точного коммерческого артикула PlayStation",
+        "display_source": "playstation"
+      }
+    },
+    {
+      "normalized_name": "haptic_feedback",
+      "sources": {
+        "playstation": {
+          "id": 2572,
+          "product_id": 52,
+          "source_page_id": 139,
+          "source_key": "playstation",
+          "site_name": "PlayStation",
+          "raw_name": "Haptic Feedback",
+          "raw_value": "Да",
+          "section": "Возможности модели",
+          "value_cell": 1,
+          "normalized_name": "haptic_feedback",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "PlayStation"
+        },
+        "playstation_model": {
+          "id": 2576,
+          "product_id": 52,
+          "source_page_id": 140,
+          "source_key": "playstation_model",
+          "site_name": "PlayStation",
+          "raw_name": "Haptic Feedback",
+          "raw_value": "Да",
+          "section": "Возможности модели",
+          "value_cell": 1,
+          "normalized_name": "haptic_feedback",
+          "normalized_value": "true",
+          "unit": "bool",
+          "display_value": "Да",
+          "display_source": "PlayStation"
+        }
+      },
+      "raw_names": [
+        "Haptic Feedback",
+        "Haptic Feedback",
+        "Haptic Feedback",
+        "Haptic Feedback"
+      ],
+      "display_name": "Haptic Feedback",
+      "resolved": {
+        "id": 2335,
+        "product_id": 52,
+        "normalized_name": "haptic_feedback",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "full_sku_official",
+        "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+        "selected_source": "playstation",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:10:05+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Да",
+        "display_status": "Параметр точного коммерческого артикула PlayStation",
+        "display_source": "playstation"
+      }
+    },
+    {
+      "normalized_name": "комплектация",
+      "sources": {
+        "playstation": {
+          "id": 2571,
+          "product_id": 52,
+          "source_page_id": 139,
+          "source_key": "playstation",
+          "site_name": "PlayStation",
+          "raw_name": "Комплектация",
+          "raw_value": "DualSense® Wireless Controller; User manual",
+          "section": "Конфигурация",
+          "value_cell": 1,
+          "normalized_name": "комплектация",
+          "normalized_value": "dualsense® wireless controller; user manual",
+          "unit": "",
+          "display_value": "dualsense® wireless controller; user manual",
+          "display_source": "PlayStation"
+        }
+      },
+      "raw_names": [
+        "Комплектация"
+      ],
+      "display_name": "Комплектация",
+      "resolved": {
+        "id": 2336,
+        "product_id": 52,
+        "normalized_name": "комплектация",
+        "selected_value": "dualsense® wireless controller; user manual",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+        "selected_source": "playstation",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:10:05+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "dualsense® wireless controller; user manual",
+        "display_status": "Параметр точного коммерческого артикула PlayStation",
+        "display_source": "playstation"
+      }
+    },
+    {
+      "normalized_name": "микрофон",
+      "sources": {
+        "playstation": {
+          "id": 2574,
+          "product_id": 52,
+          "source_page_id": 139,
+          "source_key": "playstation",
+          "site_name": "PlayStation",
+          "raw_name": "Микрофон",
+          "raw_value": "Встроенный",
+          "section": "Возможности модели",
+          "value_cell": 1,
+          "normalized_name": "микрофон",
+          "normalized_value": "встроенный",
+          "unit": "",
+          "display_value": "встроенный",
+          "display_source": "PlayStation"
+        }
+      },
+      "raw_names": [
+        "Микрофон"
+      ],
+      "display_name": "Микрофон",
+      "resolved": {
+        "id": 2337,
+        "product_id": 52,
+        "normalized_name": "микрофон",
+        "selected_value": "встроенный",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+        "selected_source": "playstation",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:10:05+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "встроенный",
+        "display_status": "Параметр точного коммерческого артикула PlayStation",
+        "display_source": "playstation"
+      }
+    },
+    {
+      "normalized_name": "color",
+      "sources": {
+        "playstation": {
+          "id": 2570,
+          "product_id": 52,
+          "source_page_id": 139,
+          "source_key": "playstation",
+          "site_name": "PlayStation",
+          "raw_name": "Цвет",
+          "raw_value": "Чёрный (Midnight Black)",
+          "section": "Конфигурация",
+          "value_cell": 1,
+          "normalized_name": "color",
+          "normalized_value": "черный (midnight black)",
+          "unit": "",
+          "display_value": "черный (midnight black)",
+          "display_source": "PlayStation"
+        }
+      },
+      "raw_names": [
+        "Цвет"
+      ],
+      "display_name": "Цвет",
+      "resolved": {
+        "id": 2334,
+        "product_id": 52,
+        "normalized_name": "color",
+        "selected_value": "черный (midnight black)",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт PlayStation; уровень модели, CFI и коммерческой конфигурации сохранён раздельно.",
+        "selected_source": "playstation",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:10:05+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "черный (midnight black)",
+        "display_status": "Параметр точного коммерческого артикула PlayStation",
+        "display_source": "playstation"
+      }
+    }
+  ],
+  "photos": [
+    {
+      "id": 1608,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-dualsense-ps5-controller-midnight-black-accessory-front",
+      "asset_key": "a7917a7055def912df4b3d1c9d15297aa3dd39b3cf6e5a75df550f27345c1d36",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:10:05+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "PlayStation"
+    },
+    {
+      "id": 1609,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-dualsense-ps5-controller-midnight-black-accessory-top-left",
+      "asset_key": "657185edc671bcf05c83e7f794037d12043e484e3f8a6b1034d7b397f0ae47fc",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:10:05+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "PlayStation"
+    },
+    {
+      "id": 1610,
+      "product_id": 52,
+      "source_page_id": 139,
+      "source_key": "playstation",
+      "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-DualSense-Controller-MidnightBlack",
+      "asset_key": "3e4722a91854b84b327843b81136c87db79ecf8e52cbf5a569058969fcad2f23",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:10:05+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "PlayStation"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "identity": {
+      "model": "model_confirmed",
+      "hardware": "official_hardware_model_code",
+      "configuration": "exact_order_sku"
+    },
+    "query_variants": [
+      "1000050213GB",
+      "1000050213-GB",
+      "DualSense Wireless Controller Midnight Black",
+      "1000050213-GB PlayStation",
+      " DualSense Wireless Controller Midnight Black"
+    ],
+    "requested_identifier": "1000050213-GB",
+    "requested_scope": "retail",
+    "raw_specs": [
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Bring gaming worlds to life with haptic feedback and adaptive triggers**."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Chat online through the built-in microphone***."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Enjoy a comfortable, evolved design."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Charge and play with a built-in battery and USB-C**** port."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Raise your game on Apple devices***** by pairing the controller."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Play thousands of controller-supported games, including those on Apple Arcade."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Stream compatible games from your PS4™ or PS5™ console to your Apple device and play using the PS Remote Play App******."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Bring intuitive control to compatible games with touch pad and motion sensor support."
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Learn more about DualSense features >"
+      },
+      {
+        "section": "What's In The Box",
+        "raw_label": "What's In The Box",
+        "value": "DualSense® Wireless Controller"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "DualSense® Charging Station"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Currently Unavailable"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Coming Soon"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "PULSE Explore™ wireless earbuds - Midnight Black - PS5"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "PS5® Console Covers (model group - slim) - Midnight Black"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "DualSense Edge® Wireless Controller - Midnight Black"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Model Number - CFI-ZCT2W. *Compared to DUALSHOCK®4 wireless controller. **Haptic feedback and adaptive triggers may require USB connection and are available when supported by game. ***Internet and account for PlayStation® required. ****Cable not included. To connect or charge the controller use the USB cable supplied with the PS5® console. *****Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. ******PS Remote Play requires Remote Play App, PS4™ or PS5® console connected to a broadband network with at least 5Mbps, the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. In PS4 games streamed via Remote Play, haptic feedback is replaced with basic rumble and adaptive triggers are not supported. SIEE guarantees this Product is free from defects in materials and workmanship that result in Product failure during normal usage in accordance with the terms set out in the Guarantee ( https://www.playstation.com/content/dam/global_pdc/en/corporate/support/warranty-docs/Guarantee_EEA_Web.pdf ), for a period of 1 (one) year from the date of original purchase (the \"Guarantee Period\").' Household limits may apply. Always..."
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Model Number - CFI-ZCT2W. *Compared to DUALSHOCK®4 wireless controller. **Haptic feedback and adaptive triggers may require USB connection and are available when supported by game. ***Internet and account for PlayStation® required. ****Cable not included. To connect or charge the controller use the USB cable supplied with the PS5® console. *****Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. ******PS Remote Play requires Remote Play App, PS4™ or PS5® console connected to a broadband network with at least 5Mbps, the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. In PS4 games streamed via Remote Play, haptic feedback is replaced with basic rumble and adaptive triggers are not supported."
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "SIEE guarantees this Product is free from defects in materials and workmanship that result in Product failure during normal usage in accordance with the terms set out in the Guarantee ( https://www.playstation.com/content/dam/global_pdc/en/corporate/support/warranty-docs/Guarantee_EEA_Web.pdf ), for a period of 1 (one) year from the date of original purchase (the \"Guarantee Period\").'"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Household limits may apply. Always..."
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Model Number - CFI-ZCT2W. *Compared to DUALSHOCK®4 wireless controller. **Haptic feedback and adaptive triggers may require USB connection and are available when supported by game. ***Internet and account for PlayStation® required. ****Cable not included. To connect or charge the controller use the USB cable supplied with the PS5® console. *****Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. ******PS Remote Play requires Remote Play App, PS4™ or PS5® console connected to a broadband network with at least 5Mbps, the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. In PS4 games streamed via Remote Play, haptic feedback is replaced with basic rumble and adaptive triggers are not supported. SIEE guarantees this Product is free from defects in materials and workmanship that result in Product failure during normal usage in accordance with the terms set out in the Guarantee ( https://www.playstation.com/content/dam/global_pdc/en/corporate/support/warranty-docs/Guarantee_EEA_Web.pdf ), for a period of 1 (one) year from the date of original purchase (the \"Guarantee Period\").' Household limits may apply. Always update your PS5® system software and the wireless controller device software to the latest version. Updates to the firmware will be released for your DualSense wireless controller from time to time which are necessary for the proper functioning of the controller. You will be notified about new firmware updates when you update your PS5 system software to a later version or when you launch the firmware updater for DualSense wireless controller app. SIE strongly recommends always installing the latest update as soon as possible after the update is released. Failure to do so might expose your controller to security risks and/or might compromise the proper functioning of the controller. Carefully read the documentation supplied with this product before using. All warnings and safety information related to this product can be found in the PlayStation® Hardware Manuals. Design and specifications are subject to change without notice. “PlayStation”, “PlayStation Family Mark”, “PS5 logo”, “PS5”, “DualSense” and “DUALSHOCK” are registered trademarks or trademarks of Sony Interactive Entertainment Inc. “SONY” is a registered trademark of Sony Corporation. \"Heighten Your Senses\" is a registered trademark or trademark of Sony Interactive Entertainment LLC. USB Type-C® is a registered trademark of USB Implementers Forum. EU product enquiries: Sony Europe B.V., Leonardo da Vincilaan 7, 1930 Zaventem, Belgium. playstation.com ."
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Household limits may apply. Always update your PS5® system software and the wireless controller device software to the latest version. Updates to the firmware will be released for your DualSense wireless controller from time to time which are necessary for the proper functioning of the controller. You will be notified about new firmware updates when you update your PS5 system software to a later version or when you launch the firmware updater for DualSense wireless controller app. SIE strongly recommends always installing the latest update as soon as possible after the update is released. Failure to do so might expose your controller to security risks and/or might compromise the proper functioning of the controller. Carefully read the documentation supplied with this product before using. All warnings and safety information related to this product can be found in the PlayStation® Hardware Manuals. Design and specifications are subject to change without notice. “PlayStation”, “PlayStation Family Mark”, “PS5 logo”, “PS5”, “DualSense” and “DUALSHOCK” are registered trademarks or trademarks of Sony Interactive Entertainment Inc. “SONY” is a registered trademark of Sony Corporation. \"Heighten Your Senses\" is a registered trademark or trademark of Sony Interactive Entertainment LLC. USB Type-C® is a registered trademark of USB Implementers Forum. EU product enquiries: Sony Europe B.V., Leonardo da Vincilaan 7, 1930 Zaventem, Belgium. playstation.com ."
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "PS Direct"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "About Us"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "About SIE"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Modern Slavery Act Statement"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Terms & Policies"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Terms of Purchase"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Website Terms of Use"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Software Usage Terms"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Privacy Policy"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Cookie Policy"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Returns and Refund Policy"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "UK Product Security Regulations 2023 (PSTI)"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Health Warning"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "About Ratings"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Help & Support"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Order Status"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "FAQs"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Billing & Payments"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Delivery & Tracking"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Support"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Recycling"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Site Map"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Become a PlayStation Affiliate"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Values"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Environment"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Accessibility"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Website © 2026 Sony Interactive Entertainment Europe Limited. All content, games titles, trade names and/or trade dress, trademarks, artwork and associated imagery are trademarks and/or copyright material of their respective owners. All rights reserved."
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Country: United Kingdom"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Please verify your date of birth"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Please enter a valid date"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "You cannot purchase these items at this time."
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Sorry, you may not access this content"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Loading"
+      },
+      {
+        "section": "Own product features",
+        "raw_label": "Haptic Feedback",
+        "value": " Bring gaming worlds to life with haptic feedback and adaptive triggers**. Chat online through the built-in microphone***. Enjoy a comfortable, evolv",
+        "scope": "model"
+      },
+      {
+        "section": "Own product features",
+        "raw_label": "Adaptive Triggers",
+        "value": " Bring gaming worlds to life with haptic feedback and adaptive triggers**. Chat online through the built-in microphone***. Enjoy a comfortable, evolved design. Charge and ",
+        "scope": "model"
+      },
+      {
+        "section": "Own product features",
+        "raw_label": "Микрофон",
+        "value": "c feedback and adaptive triggers**. Chat online through the built-in microphone***. Enjoy a comfortable, evolved design. Charge and play with a built-in battery and USB-C**** port",
+        "scope": "model"
+      },
+      {
+        "section": "Bring gaming worlds to life",
+        "raw_label": "Bring gaming worlds to life",
+        "value": "\"Enable Javascript on browser\""
+      },
+      {
+        "section": "Adaptive Triggers 2",
+        "raw_label": "Adaptive Triggers 2",
+        "value": "Experience varying levels of force and tension as you interact with your in-game gear and environments. From pulling back an increasingly tight bowstring to hitting the brakes on a speeding car, feel physically connected to your on-screen actions."
+      },
+      {
+        "section": "Haptic Feedback 2",
+        "raw_label": "Haptic Feedback 2",
+        "value": "Feel physically responsive feedback to your in-game actions with dual actuators which replace traditional rumble motors. In your hands, these dynamic vibrations can simulate the feeling of everything from environments to the recoil of different weapons."
+      },
+      {
+        "section": "Limited Edition DualSense® Wireless Controllers",
+        "raw_label": "Limited Edition DualSense® Wireless Controllers",
+        "value": "Inspired by Grand Theft Auto VI, these limited-edition DualSense® wireless controllers capture the style and luxury of Vice City. Featuring a shimmering, iridescent finish, textured palm leaf details, and official Grand Theft Auto VI branding, they’re a bold tribute to modern day Vice City."
+      },
+      {
+        "section": "Choose your style",
+        "raw_label": "Choose your style",
+        "value": "Personalise your set-up and add more players to the mix with an additional DualSense wireless controller."
+      },
+      {
+        "section": "Techno Red",
+        "raw_label": "Techno Red",
+        "value": "See how the inky black shifts into gleaming neon. From dark gloss to pure heat, this colour doesn’t fade. It builds. So make your next play at full volume. Make it HYPERPOP."
+      },
+      {
+        "section": "Remix Green",
+        "raw_label": "Remix Green",
+        "value": "From deep gloss to in-your-face energy, this one brings the fun – no filters, no holding back. So remix your next matchup. Make it HYPERPOP."
+      },
+      {
+        "section": "Rhythm Blue",
+        "raw_label": "Rhythm Blue",
+        "value": "From deep gloss to a crisp edge – this sleek DualSense® wireless controller plays it cool, with focus. So move with rhythm and stay locked in. Make it HYPERPOP."
+      },
+      {
+        "section": "Chroma Teal",
+        "raw_label": "Chroma Teal",
+        "value": "Shifting colour from every angle through iridescent shades of green."
+      },
+      {
+        "section": "Chroma Pearl",
+        "raw_label": "Chroma Pearl",
+        "value": "Shifting colour from every angle with a chic iridescent finish of pinks and creams."
+      },
+      {
+        "section": "Chroma Indigo",
+        "raw_label": "Chroma Indigo",
+        "value": "Shifting colour from every angle with a vivid iridescent finish of blues and purples."
+      },
+      {
+        "section": "Sterling Silver",
+        "raw_label": "Sterling Silver",
+        "value": "Introduce a touch of class to your play with the sleek Sterling Silver DualSense wireless controller."
+      },
+      {
+        "section": "Volcanic Red",
+        "raw_label": "Volcanic Red",
+        "value": "Ignite your gaming sessions with the Volcanic Red DualSense wireless controller."
+      },
+      {
+        "section": "Cobalt Blue",
+        "raw_label": "Cobalt Blue",
+        "value": "Bring an alluring metallic finish into play with the Cobalt Blue DualSense wireless controller."
+      },
+      {
+        "section": "Galactic Purple",
+        "raw_label": "Galactic Purple",
+        "value": "Plot a course for astronomical adventures with the DualSense Galactic Purple wireless controller."
+      },
+      {
+        "section": "Starlight Blue",
+        "raw_label": "Starlight Blue",
+        "value": "Illuminate your PS5 gaming space with the DualSense Starlight Blue wireless controller."
+      },
+      {
+        "section": "Cosmic Red",
+        "raw_label": "Cosmic Red",
+        "value": "Explore new gaming frontiers with a vivid red design, complete with matching button details."
+      },
+      {
+        "section": "Midnight Black",
+        "raw_label": "Midnight Black",
+        "value": "Ignite your PS5 gaming nights with this sleek controller featuring two subtly different shades of black."
+      },
+      {
+        "section": "White",
+        "raw_label": "White",
+        "value": "Bring player two into your games with the original two-tone DualSense wireless controller design."
+      },
+      {
+        "section": "Grey Camouflage",
+        "raw_label": "Grey Camouflage",
+        "value": "Restyle your set-up with a unique camo design infused with patterns of the iconic PlayStation Shapes."
+      },
+      {
+        "section": "LISA Limited Edition DualSense® Wireless Controller",
+        "raw_label": "LISA Limited Edition DualSense® Wireless Controller",
+        "value": "Designed with LISA, this limited-edition DualSense wireless controller brings her unmistakable style into play. Featuring signature stars and personal touches inspired by the artist herself, this is a celebration of a global icon whose creativity continues to inspire."
+      },
+      {
+        "section": "Limited edition DualSense wireless controllers",
+        "raw_label": "Limited edition DualSense wireless controllers",
+        "value": "Celebrate some of the biggest PlayStation games, characters and moments with a limited edition DualSense wireless controller."
+      },
+      {
+        "section": "LISA Limited Edition",
+        "raw_label": "LISA Limited Edition",
+        "value": "Inspired by LISA’s signature style, this limited-edition DualSense wireless controller brings her unmistakable artistry to any gaming setup."
+      },
+      {
+        "section": "Grand Theft Auto VI Black Limited Edition",
+        "raw_label": "Grand Theft Auto VI Black Limited Edition",
+        "value": "Capture the energy of Vice City’s iconic nightlife with this limited-edition black DualSense® wireless controller."
+      },
+      {
+        "section": "Grand Theft Auto VI White Limited Edition",
+        "raw_label": "Grand Theft Auto VI White Limited Edition",
+        "value": "This limited-edition white DualSense® wireless controller embodies Vice City at daybreak, from its white sands and pastel skies, to all its laid-back glamour."
+      },
+      {
+        "section": "Marvel's Wolverine Adamantium",
+        "raw_label": "Marvel's Wolverine Adamantium",
+        "value": "Get the DualSense® Wireless Controller – Marvel’s Wolverine Adamantium Limited Edition featuring a premium metallic finish and conspicuous see-through claw marks."
+      },
+      {
+        "section": "DualSense® Wireless Controller – Marvel’s Wolverine Battle Yellow Limited Edition",
+        "raw_label": "DualSense® Wireless Controller – Marvel’s Wolverine Battle Yellow Limited Edition",
+        "value": "Feel the full brutality of Wolverine’s claw combat through haptic feedback and adaptive triggers with this limited-edition controller featuring furious slashes."
+      },
+      {
+        "section": "007 First Light™ Limited Edition",
+        "raw_label": "007 First Light™ Limited Edition",
+        "value": "Style. Power. Precision. Make your name and earn the number with the 007 First Light™ limited edition DualSense® wireless controller."
+      },
+      {
+        "section": "Marathon™ Limited Edition",
+        "raw_label": "Marathon™ Limited Edition",
+        "value": "Inspired by Marathon’s bold graphics and industrial surfaces, this limited-edition controller blends clean lines and vivid accents. Its futuristic design is tuned for precision – ready to power every high-stakes run."
+      },
+      {
+        "section": "Genshin Impact Limited Edition",
+        "raw_label": "Genshin Impact Limited Edition",
+        "value": "Master elemental energy in the world of Teyvat. Showcasing emblems of twin travellers Aether and Lumine, and featuring their trusted companion guide Paimon, this ethereal white, gold, and green palette is adorned with arcane glyphs of a fantasy realm."
+      },
+      {
+        "section": "God of War™ 20th Anniversary",
+        "raw_label": "God of War™ 20th Anniversary",
+        "value": "Unleash your Spartan Rage with this God of War™ 20th Anniversary limited edition controller, designed to evoke the legendary Ghost of Sparta’s ashen skin and scarlet tattoo."
+      },
+      {
+        "section": "ASTRO BOT™ Joyful Limited Edition",
+        "raw_label": "ASTRO BOT™ Joyful Limited Edition",
+        "value": "Dive back into supersized adventures with ASTRO and this limited-edition controller! It’s inspired by the playful design of ASTRO’s trusty Dual Speeder. This limited edition controller is no longer available."
+      },
+      {
+        "section": "Ghost of Yotei™ Gold Limited Edition",
+        "raw_label": "Ghost of Yotei™ Gold Limited Edition",
+        "value": "Experience the thrill of Atsu’s journey with this special DualSense wireless controller featuring a dramatic gold brushed design inspired by the game. This limited edition controller is no longer available."
+      },
+      {
+        "section": "Death Stranding™ 2: On the Beach Limited Edition",
+        "raw_label": "Death Stranding™ 2: On the Beach Limited Edition",
+        "value": "Keep the supplies moving with the latest piece of hardware for Porters heading out on a new journey in Death Stranding 2: On the Beach."
+      },
+      {
+        "section": "A gaming icon in your hands",
+        "raw_label": "A gaming icon in your hands",
+        "value": "Take control with an evolved, two-tone design that combines an iconic, intuitive layout with enhanced sticks and a reimagined light bar."
+      },
+      {
+        "section": "Haptic Feedback",
+        "raw_label": "Haptic Feedback",
+        "value": "Responsive vibrations react to your in‑game choices and simulate environmental factors in select PS5 games."
+      },
+      {
+        "section": "Haptic Feedback",
+        "raw_label": "Haptic Feedback",
+        "value": "Tap to zoom in and explore each feature"
+      },
+      {
+        "section": "Play for longer on more devices",
+        "raw_label": "Play for longer on more devices",
+        "value": "Keep your PS5 controllers fully charged and ready to go, whether you're playing on your gaming setup or moving away from the TV with PS Remote Play."
+      },
+      {
+        "section": "Click. Charge. Play.",
+        "raw_label": "Click. Charge. Play.",
+        "value": "Stay in the game and be ready to face your friends with the DualSense charging station."
+      },
+      {
+        "section": "Click. Charge. Play.",
+        "raw_label": "Click. Charge. Play.",
+        "value": "Dock up to two DualSense wireless controllers 5 quickly and easily with the charging station's click-in design. Your controllers charge as quickly as when connected to your PS5 console – so you can free up USB ports without sacrificing performance."
+      },
+      {
+        "section": "Raise your game on PC, Mac and mobile devices",
+        "raw_label": "Raise your game on PC, Mac and mobile devices",
+        "value": "Connect using a USB Type-C® cable or Bluetooth® technology and easily play on more devices including Windows PC and Mac® computers, and Android and iOS mobile phones and tablets."
+      },
+      {
+        "section": "Raise your game on PC, Mac and mobile devices",
+        "raw_label": "Raise your game on PC, Mac and mobile devices",
+        "value": "Elevate PC gaming with advanced features like haptic feedback and adaptive triggers in a range of blockbuster PC titles 8 , and play thousands of controller-supported games, including those streamed from your PS4™ or PS5 console to your PC, Mac 5 or compatible mobile devices via the PS Remote Play App 6 ."
+      },
+      {
+        "section": "Raise your game on PC, Mac and mobile devices",
+        "raw_label": "Raise your game on PC, Mac and mobile devices",
+        "value": "You can also update the controller's firmware on your Windows PC using the PlayStation Accessories app, downloadable here ."
+      },
+      {
+        "section": "DualSense Edge™ Wireless Controller",
+        "raw_label": "DualSense Edge™ Wireless Controller",
+        "value": "Get an edge in gameplay with remappable buttons, tunable triggers and sticks, changeable stick caps, back buttons, and more. Built with high performance and personalisation in mind, the controller also retains all the immersive features of the DualSense wireless controller."
+      },
+      {
+        "section": "Even more ways to play",
+        "raw_label": "Even more ways to play",
+        "value": "Put the DualSense wireless controller at the heart of your gaming setup with local multiplayer gaming, and match it with fresh console colour covers or a range of other PlayStation accessories."
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Pair your new DualSense wireless controller with a matching PS5 console cover for a vivid set."
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "PS5 console, console cover and DualSense wireless controller sold separately."
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Buyer guide"
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "From the best TVs and sound systems for gaming to handy additional extras, create a home gaming set up to the leave the competition in the dust."
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Grab player two and discover a world of local multiplayer games for the PlayStation®5 console, including sports, platformers and intense shooters that all take advantage of the DualSense wireless controller's incredible sensory features."
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Build your perfect gaming setup with controllers, headsets and other accessories for your PS5™ or PS4™ console."
+      },
+      {
+        "section": "Access™ controller",
+        "raw_label": "Access™ controller",
+        "value": "Introducing the Access controller, a versatile controller kit for PS5, designed to help players with disabilities play more comfortably for longer."
+      },
+      {
+        "section": "Buy direct from PlayStation",
+        "raw_label": "Buy direct from PlayStation",
+        "value": "Shop for DualSense wireless controllers in a range of colors, styles, and limited editions, and enjoy free standard delivery with every order, plus many more benefits of shopping direct from PlayStation."
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "1. Compared to DUALSHOCK 4 wireless controller. 2. Available when feature is supported by game. 3. Internet and account for PlayStation required. 4. Cable not included. To connect or charge the controller use the USB cable supplied with the PS5 console. 5. Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. 6. PS Remote Play requires Remote Play app connected to Wi-Fi, PS4™ or PS5™ console with the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. Version 4.0 of the Remote Play app on iOS and iPadOS or version 4.1 on macOS is required for games to be playable with the controller over Bluetooth®. 7. Controllers sold separately. 8. Haptic feedback and adaptive triggers may require USB connection and are available when supported by game."
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Always update your PS5 system software and the wireless controller device software to the latest version."
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Updates to the firmware will be released for your DualSense wireless controller from time to time which are necessary for the proper functioning of the controller. You will be notified about new firmware updates when you update your PS5 system software to a later version or when you launch the PlayStation Accessories app. SIE strongly recommends always installing the latest update as soon as possible after the update is released. Failure to do so might expose your controller to security risks and/or might compromise the proper functioning of the controller."
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "“PlayStation”, “PlayStation Family Mark”, “PS5 logo”, “PS5”, “DualSense”, “DUALSHOCK” “PS4” “DualSense Edge”, PULSE Elite” and “PULSE Explore” are registered trademarks or trademarks of Sony Interactive Entertainment Inc. “SONY” is a registered trademark of Sony Corporation."
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "\"Heighten Your Senses\" is a registered trademark or trademark of Sony Interactive Entertainment LLC. USB Type-C® is a registered trademark of USB Implementers Forum."
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Home"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation accessories"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "DualSense wireless controller"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "About SIE"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Careers"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Studios"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Productions"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Corporate"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "History of PlayStation"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS5"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS4"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS VR2"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS Plus"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Accessories"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Games"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Accessibility"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Online safety"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Diversity, equity & inclusion"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Order status"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Support hub"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Safety"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Status"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Repairs"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Password reset"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Refund Request"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Manuals"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Terms of service"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS Store cancellation policy"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Modern slavery act statement"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Product Security Disclosures"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Age ratings"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Health warning"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Developers"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Glossary"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Official licensing programme"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation App (iOS)"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation App (Android)"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Join our playtesting program"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Beta Program at PlayStation"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "© 2026 Sony Interactive Entertainment Europe Limited (SIEE) All content, games titles, trade names and/or trade dress, trademarks, artwork and associated imagery are trademarks and/or copyright material of their respective owners. All rights reserved. More info"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Legal"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Privacy policy"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Website terms of use"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Site Map"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Cookies Policy"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Software Usage Terms"
+      }
+    ],
+    "configuration_candidates": [
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Bring gaming worlds to life with haptic feedback and adaptive triggers**.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Chat online through the built-in microphone***.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Enjoy a comfortable, evolved design.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Charge and play with a built-in battery and USB-C**** port.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Raise your game on Apple devices***** by pairing the controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Play thousands of controller-supported games, including those on Apple Arcade.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Stream compatible games from your PS4™ or PS5™ console to your Apple device and play using the PS Remote Play App******.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Bring intuitive control to compatible games with touch pad and motion sensor support.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Features",
+        "raw_label": "Features",
+        "value": "Learn more about DualSense features >",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "DualSense® Charging Station",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Currently Unavailable",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Coming Soon",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "PULSE Explore™ wireless earbuds - Midnight Black - PS5",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "PS5® Console Covers (model group - slim) - Midnight Black",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "DualSense Edge® Wireless Controller - Midnight Black",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Model Number - CFI-ZCT2W. *Compared to DUALSHOCK®4 wireless controller. **Haptic feedback and adaptive triggers may require USB connection and are available when supported by game. ***Internet and account for PlayStation® required. ****Cable not included. To connect or charge the controller use the USB cable supplied with the PS5® console. *****Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. ******PS Remote Play requires Remote Play App, PS4™ or PS5® console connected to a broadband network with at least 5Mbps, the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. In PS4 games streamed via Remote Play, haptic feedback is replaced with basic rumble and adaptive triggers are not supported. SIEE guarantees this Product is free from defects in materials and workmanship that result in Product failure during normal usage in accordance with the terms set out in the Guarantee ( https://www.playstation.com/content/dam/global_pdc/en/corporate/support/warranty-docs/Guarantee_EEA_Web.pdf ), for a period of 1 (one) year from the date of original purchase (the \"Guarantee Period\").' Household limits may apply. Always...",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Model Number - CFI-ZCT2W. *Compared to DUALSHOCK®4 wireless controller. **Haptic feedback and adaptive triggers may require USB connection and are available when supported by game. ***Internet and account for PlayStation® required. ****Cable not included. To connect or charge the controller use the USB cable supplied with the PS5® console. *****Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. ******PS Remote Play requires Remote Play App, PS4™ or PS5® console connected to a broadband network with at least 5Mbps, the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. In PS4 games streamed via Remote Play, haptic feedback is replaced with basic rumble and adaptive triggers are not supported.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "SIEE guarantees this Product is free from defects in materials and workmanship that result in Product failure during normal usage in accordance with the terms set out in the Guarantee ( https://www.playstation.com/content/dam/global_pdc/en/corporate/support/warranty-docs/Guarantee_EEA_Web.pdf ), for a period of 1 (one) year from the date of original purchase (the \"Guarantee Period\").'",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Household limits may apply. Always...",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Model Number - CFI-ZCT2W. *Compared to DUALSHOCK®4 wireless controller. **Haptic feedback and adaptive triggers may require USB connection and are available when supported by game. ***Internet and account for PlayStation® required. ****Cable not included. To connect or charge the controller use the USB cable supplied with the PS5® console. *****Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. ******PS Remote Play requires Remote Play App, PS4™ or PS5® console connected to a broadband network with at least 5Mbps, the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. In PS4 games streamed via Remote Play, haptic feedback is replaced with basic rumble and adaptive triggers are not supported. SIEE guarantees this Product is free from defects in materials and workmanship that result in Product failure during normal usage in accordance with the terms set out in the Guarantee ( https://www.playstation.com/content/dam/global_pdc/en/corporate/support/warranty-docs/Guarantee_EEA_Web.pdf ), for a period of 1 (one) year from the date of original purchase (the \"Guarantee Period\").' Household limits may apply. Always update your PS5® system software and the wireless controller device software to the latest version. Updates to the firmware will be released for your DualSense wireless controller from time to time which are necessary for the proper functioning of the controller. You will be notified about new firmware updates when you update your PS5 system software to a later version or when you launch the firmware updater for DualSense wireless controller app. SIE strongly recommends always installing the latest update as soon as possible after the update is released. Failure to do so might expose your controller to security risks and/or might compromise the proper functioning of the controller. Carefully read the documentation supplied with this product before using. All warnings and safety information related to this product can be found in the PlayStation® Hardware Manuals. Design and specifications are subject to change without notice. “PlayStation”, “PlayStation Family Mark”, “PS5 logo”, “PS5”, “DualSense” and “DUALSHOCK” are registered trademarks or trademarks of Sony Interactive Entertainment Inc. “SONY” is a registered trademark of Sony Corporation. \"Heighten Your Senses\" is a registered trademark or trademark of Sony Interactive Entertainment LLC. USB Type-C® is a registered trademark of USB Implementers Forum. EU product enquiries: Sony Europe B.V., Leonardo da Vincilaan 7, 1930 Zaventem, Belgium. playstation.com .",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Household limits may apply. Always update your PS5® system software and the wireless controller device software to the latest version. Updates to the firmware will be released for your DualSense wireless controller from time to time which are necessary for the proper functioning of the controller. You will be notified about new firmware updates when you update your PS5 system software to a later version or when you launch the firmware updater for DualSense wireless controller app. SIE strongly recommends always installing the latest update as soon as possible after the update is released. Failure to do so might expose your controller to security risks and/or might compromise the proper functioning of the controller. Carefully read the documentation supplied with this product before using. All warnings and safety information related to this product can be found in the PlayStation® Hardware Manuals. Design and specifications are subject to change without notice. “PlayStation”, “PlayStation Family Mark”, “PS5 logo”, “PS5”, “DualSense” and “DUALSHOCK” are registered trademarks or trademarks of Sony Interactive Entertainment Inc. “SONY” is a registered trademark of Sony Corporation. \"Heighten Your Senses\" is a registered trademark or trademark of Sony Interactive Entertainment LLC. USB Type-C® is a registered trademark of USB Implementers Forum. EU product enquiries: Sony Europe B.V., Leonardo da Vincilaan 7, 1930 Zaventem, Belgium. playstation.com .",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "PS Direct",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "About Us",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "About SIE",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Modern Slavery Act Statement",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Terms & Policies",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Terms of Purchase",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Website Terms of Use",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Software Usage Terms",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Privacy Policy",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Cookie Policy",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Returns and Refund Policy",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "UK Product Security Regulations 2023 (PSTI)",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Health Warning",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "About Ratings",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Help & Support",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Order Status",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "FAQs",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Billing & Payments",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Delivery & Tracking",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Support",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Recycling",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Site Map",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Become a PlayStation Affiliate",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Values",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Environment",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Accessibility",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Website © 2026 Sony Interactive Entertainment Europe Limited. All content, games titles, trade names and/or trade dress, trademarks, artwork and associated imagery are trademarks and/or copyright material of their respective owners. All rights reserved.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Country: United Kingdom",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Please verify your date of birth",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Please enter a valid date",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "You cannot purchase these items at this time.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Sorry, you may not access this content",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "People Also Bought",
+        "raw_label": "People Also Bought",
+        "value": "Loading",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Bring gaming worlds to life",
+        "raw_label": "Bring gaming worlds to life",
+        "value": "\"Enable Javascript on browser\"",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Limited Edition DualSense® Wireless Controllers",
+        "raw_label": "Limited Edition DualSense® Wireless Controllers",
+        "value": "Inspired by Grand Theft Auto VI, these limited-edition DualSense® wireless controllers capture the style and luxury of Vice City. Featuring a shimmering, iridescent finish, textured palm leaf details, and official Grand Theft Auto VI branding, they’re a bold tribute to modern day Vice City.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Choose your style",
+        "raw_label": "Choose your style",
+        "value": "Personalise your set-up and add more players to the mix with an additional DualSense wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Techno Red",
+        "raw_label": "Techno Red",
+        "value": "See how the inky black shifts into gleaming neon. From dark gloss to pure heat, this colour doesn’t fade. It builds. So make your next play at full volume. Make it HYPERPOP.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Remix Green",
+        "raw_label": "Remix Green",
+        "value": "From deep gloss to in-your-face energy, this one brings the fun – no filters, no holding back. So remix your next matchup. Make it HYPERPOP.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Rhythm Blue",
+        "raw_label": "Rhythm Blue",
+        "value": "From deep gloss to a crisp edge – this sleek DualSense® wireless controller plays it cool, with focus. So move with rhythm and stay locked in. Make it HYPERPOP.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Chroma Teal",
+        "raw_label": "Chroma Teal",
+        "value": "Shifting colour from every angle through iridescent shades of green.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Chroma Pearl",
+        "raw_label": "Chroma Pearl",
+        "value": "Shifting colour from every angle with a chic iridescent finish of pinks and creams.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Chroma Indigo",
+        "raw_label": "Chroma Indigo",
+        "value": "Shifting colour from every angle with a vivid iridescent finish of blues and purples.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Sterling Silver",
+        "raw_label": "Sterling Silver",
+        "value": "Introduce a touch of class to your play with the sleek Sterling Silver DualSense wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Volcanic Red",
+        "raw_label": "Volcanic Red",
+        "value": "Ignite your gaming sessions with the Volcanic Red DualSense wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Cobalt Blue",
+        "raw_label": "Cobalt Blue",
+        "value": "Bring an alluring metallic finish into play with the Cobalt Blue DualSense wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Galactic Purple",
+        "raw_label": "Galactic Purple",
+        "value": "Plot a course for astronomical adventures with the DualSense Galactic Purple wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Starlight Blue",
+        "raw_label": "Starlight Blue",
+        "value": "Illuminate your PS5 gaming space with the DualSense Starlight Blue wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Cosmic Red",
+        "raw_label": "Cosmic Red",
+        "value": "Explore new gaming frontiers with a vivid red design, complete with matching button details.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Midnight Black",
+        "raw_label": "Midnight Black",
+        "value": "Ignite your PS5 gaming nights with this sleek controller featuring two subtly different shades of black.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "White",
+        "raw_label": "White",
+        "value": "Bring player two into your games with the original two-tone DualSense wireless controller design.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Grey Camouflage",
+        "raw_label": "Grey Camouflage",
+        "value": "Restyle your set-up with a unique camo design infused with patterns of the iconic PlayStation Shapes.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "LISA Limited Edition DualSense® Wireless Controller",
+        "raw_label": "LISA Limited Edition DualSense® Wireless Controller",
+        "value": "Designed with LISA, this limited-edition DualSense wireless controller brings her unmistakable style into play. Featuring signature stars and personal touches inspired by the artist herself, this is a celebration of a global icon whose creativity continues to inspire.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Limited edition DualSense wireless controllers",
+        "raw_label": "Limited edition DualSense wireless controllers",
+        "value": "Celebrate some of the biggest PlayStation games, characters and moments with a limited edition DualSense wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "LISA Limited Edition",
+        "raw_label": "LISA Limited Edition",
+        "value": "Inspired by LISA’s signature style, this limited-edition DualSense wireless controller brings her unmistakable artistry to any gaming setup.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Grand Theft Auto VI Black Limited Edition",
+        "raw_label": "Grand Theft Auto VI Black Limited Edition",
+        "value": "Capture the energy of Vice City’s iconic nightlife with this limited-edition black DualSense® wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Grand Theft Auto VI White Limited Edition",
+        "raw_label": "Grand Theft Auto VI White Limited Edition",
+        "value": "This limited-edition white DualSense® wireless controller embodies Vice City at daybreak, from its white sands and pastel skies, to all its laid-back glamour.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Marvel's Wolverine Adamantium",
+        "raw_label": "Marvel's Wolverine Adamantium",
+        "value": "Get the DualSense® Wireless Controller – Marvel’s Wolverine Adamantium Limited Edition featuring a premium metallic finish and conspicuous see-through claw marks.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "DualSense® Wireless Controller – Marvel’s Wolverine Battle Yellow Limited Edition",
+        "raw_label": "DualSense® Wireless Controller – Marvel’s Wolverine Battle Yellow Limited Edition",
+        "value": "Feel the full brutality of Wolverine’s claw combat through haptic feedback and adaptive triggers with this limited-edition controller featuring furious slashes.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "007 First Light™ Limited Edition",
+        "raw_label": "007 First Light™ Limited Edition",
+        "value": "Style. Power. Precision. Make your name and earn the number with the 007 First Light™ limited edition DualSense® wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Marathon™ Limited Edition",
+        "raw_label": "Marathon™ Limited Edition",
+        "value": "Inspired by Marathon’s bold graphics and industrial surfaces, this limited-edition controller blends clean lines and vivid accents. Its futuristic design is tuned for precision – ready to power every high-stakes run.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Genshin Impact Limited Edition",
+        "raw_label": "Genshin Impact Limited Edition",
+        "value": "Master elemental energy in the world of Teyvat. Showcasing emblems of twin travellers Aether and Lumine, and featuring their trusted companion guide Paimon, this ethereal white, gold, and green palette is adorned with arcane glyphs of a fantasy realm.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "God of War™ 20th Anniversary",
+        "raw_label": "God of War™ 20th Anniversary",
+        "value": "Unleash your Spartan Rage with this God of War™ 20th Anniversary limited edition controller, designed to evoke the legendary Ghost of Sparta’s ashen skin and scarlet tattoo.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "ASTRO BOT™ Joyful Limited Edition",
+        "raw_label": "ASTRO BOT™ Joyful Limited Edition",
+        "value": "Dive back into supersized adventures with ASTRO and this limited-edition controller! It’s inspired by the playful design of ASTRO’s trusty Dual Speeder. This limited edition controller is no longer available.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Ghost of Yotei™ Gold Limited Edition",
+        "raw_label": "Ghost of Yotei™ Gold Limited Edition",
+        "value": "Experience the thrill of Atsu’s journey with this special DualSense wireless controller featuring a dramatic gold brushed design inspired by the game. This limited edition controller is no longer available.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Death Stranding™ 2: On the Beach Limited Edition",
+        "raw_label": "Death Stranding™ 2: On the Beach Limited Edition",
+        "value": "Keep the supplies moving with the latest piece of hardware for Porters heading out on a new journey in Death Stranding 2: On the Beach.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "A gaming icon in your hands",
+        "raw_label": "A gaming icon in your hands",
+        "value": "Take control with an evolved, two-tone design that combines an iconic, intuitive layout with enhanced sticks and a reimagined light bar.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Play for longer on more devices",
+        "raw_label": "Play for longer on more devices",
+        "value": "Keep your PS5 controllers fully charged and ready to go, whether you're playing on your gaming setup or moving away from the TV with PS Remote Play.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Click. Charge. Play.",
+        "raw_label": "Click. Charge. Play.",
+        "value": "Stay in the game and be ready to face your friends with the DualSense charging station.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Click. Charge. Play.",
+        "raw_label": "Click. Charge. Play.",
+        "value": "Dock up to two DualSense wireless controllers 5 quickly and easily with the charging station's click-in design. Your controllers charge as quickly as when connected to your PS5 console – so you can free up USB ports without sacrificing performance.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Raise your game on PC, Mac and mobile devices",
+        "raw_label": "Raise your game on PC, Mac and mobile devices",
+        "value": "Connect using a USB Type-C® cable or Bluetooth® technology and easily play on more devices including Windows PC and Mac® computers, and Android and iOS mobile phones and tablets.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Raise your game on PC, Mac and mobile devices",
+        "raw_label": "Raise your game on PC, Mac and mobile devices",
+        "value": "Elevate PC gaming with advanced features like haptic feedback and adaptive triggers in a range of blockbuster PC titles 8 , and play thousands of controller-supported games, including those streamed from your PS4™ or PS5 console to your PC, Mac 5 or compatible mobile devices via the PS Remote Play App 6 .",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Raise your game on PC, Mac and mobile devices",
+        "raw_label": "Raise your game on PC, Mac and mobile devices",
+        "value": "You can also update the controller's firmware on your Windows PC using the PlayStation Accessories app, downloadable here .",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "DualSense Edge™ Wireless Controller",
+        "raw_label": "DualSense Edge™ Wireless Controller",
+        "value": "Get an edge in gameplay with remappable buttons, tunable triggers and sticks, changeable stick caps, back buttons, and more. Built with high performance and personalisation in mind, the controller also retains all the immersive features of the DualSense wireless controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Even more ways to play",
+        "raw_label": "Even more ways to play",
+        "value": "Put the DualSense wireless controller at the heart of your gaming setup with local multiplayer gaming, and match it with fresh console colour covers or a range of other PlayStation accessories.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Pair your new DualSense wireless controller with a matching PS5 console cover for a vivid set.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "PS5 console, console cover and DualSense wireless controller sold separately.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Buyer guide",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "From the best TVs and sound systems for gaming to handy additional extras, create a home gaming set up to the leave the competition in the dust.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Grab player two and discover a world of local multiplayer games for the PlayStation®5 console, including sports, platformers and intense shooters that all take advantage of the DualSense wireless controller's incredible sensory features.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Complete the look",
+        "raw_label": "Complete the look",
+        "value": "Build your perfect gaming setup with controllers, headsets and other accessories for your PS5™ or PS4™ console.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Access™ controller",
+        "raw_label": "Access™ controller",
+        "value": "Introducing the Access controller, a versatile controller kit for PS5, designed to help players with disabilities play more comfortably for longer.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "Buy direct from PlayStation",
+        "raw_label": "Buy direct from PlayStation",
+        "value": "Shop for DualSense wireless controllers in a range of colors, styles, and limited editions, and enjoy free standard delivery with every order, plus many more benefits of shopping direct from PlayStation.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "1. Compared to DUALSHOCK 4 wireless controller. 2. Available when feature is supported by game. 3. Internet and account for PlayStation required. 4. Cable not included. To connect or charge the controller use the USB cable supplied with the PS5 console. 5. Devices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported. 6. PS Remote Play requires Remote Play app connected to Wi-Fi, PS4™ or PS5™ console with the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. Version 4.0 of the Remote Play app on iOS and iPadOS or version 4.1 on macOS is required for games to be playable with the controller over Bluetooth®. 7. Controllers sold separately. 8. Haptic feedback and adaptive triggers may require USB connection and are available when supported by game.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Always update your PS5 system software and the wireless controller device software to the latest version.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Updates to the firmware will be released for your DualSense wireless controller from time to time which are necessary for the proper functioning of the controller. You will be notified about new firmware updates when you update your PS5 system software to a later version or when you launch the PlayStation Accessories app. SIE strongly recommends always installing the latest update as soon as possible after the update is released. Failure to do so might expose your controller to security risks and/or might compromise the proper functioning of the controller.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "“PlayStation”, “PlayStation Family Mark”, “PS5 logo”, “PS5”, “DualSense”, “DUALSHOCK” “PS4” “DualSense Edge”, PULSE Elite” and “PULSE Explore” are registered trademarks or trademarks of Sony Interactive Entertainment Inc. “SONY” is a registered trademark of Sony Corporation.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "\"Heighten Your Senses\" is a registered trademark or trademark of Sony Interactive Entertainment LLC. USB Type-C® is a registered trademark of USB Implementers Forum.",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Home",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation accessories",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "DualSense wireless controller",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "About SIE",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Careers",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Studios",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Productions",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Corporate",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "History of PlayStation",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS5",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS4",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS VR2",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS Plus",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Accessories",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Games",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Accessibility",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Online safety",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Diversity, equity & inclusion",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Order status",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Support hub",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Safety",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Status",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation Repairs",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Password reset",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Refund Request",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Manuals",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Terms of service",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PS Store cancellation policy",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Modern slavery act statement",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Product Security Disclosures",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Age ratings",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Health warning",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Developers",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Glossary",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Official licensing programme",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation App (iOS)",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "PlayStation App (Android)",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Join our playtesting program",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Beta Program at PlayStation",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "© 2026 Sony Interactive Entertainment Europe Limited (SIEE) All content, games titles, trade names and/or trade dress, trademarks, artwork and associated imagery are trademarks and/or copyright material of their respective owners. All rights reserved. More info",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Legal",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Privacy policy",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Website terms of use",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Site Map",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Cookies Policy",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      },
+      {
+        "section": "More reasons to shop with PlayStation:",
+        "raw_label": "More reasons to shop with PlayStation:",
+        "value": "Software Usage Terms",
+        "reason": "Configuration option or marketing; requires scoped canonical extraction"
+      }
+    ],
+    "photo_candidates": [
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-dualsense-ps5-controller-black-accessory-box-front-eu",
+        "reason": "Packaging, game, feature or accessory image"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-dualsense-Thumbnail-Novapink",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-dualsense-indigo-thumbnail",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/DualSense-pearl-thumbnail",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-DualSense-teal-thumbnail",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/Midnight-Black-DS-USB-Bundle-hero-1-cable-and-dualsense",
+        "reason": "Other bundle or accessory configuration image"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/DualSense-Controller-007-LE-thumbnail",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/DualSense-Wolverine-Silver-Swatch",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/DualSense-Wolverine-Yellow-Swatch",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-DualSense-Controller-MidnightBlack-features",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/2025-Dualsense-midnight-black-in-the-box",
+        "reason": "Packaging, game, feature or accessory image"
+      },
+      {
+        "url": "https://media.direct.playstation.com/is/image/psdglobal/DualSense-Charging-Station-Hero-1",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/Hyperpop-Collection-Dualsense-video-hero-thumb-desktop-01-en-15jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-dualsense-grey-gradient-background-block-desktop-01-en-30aug23?$100px$",
+        "reason": "Packaging, game, feature or accessory image"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-adaptive-triggers-image-block-01-en-30aug23?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-haptic-feedback-image-block-01-en-30aug23?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/GTAVI-LE-Black-White-DualSense-image-block-01-en-27aug26?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-techno-red-screenshot-01-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-techno-red-screenshot-04-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-techno-red-screenshot-03-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-remix-green-screenshot-01-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-remix-green-screenshot-04-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-remix-green-screenshot-03-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-rhythm-blue-screenshot-01-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-rhythm-blue-screenshot-04-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-rhythm-blue-screenshot-03-en-07jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-teal-screenshot-01-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-teal-screenshot-04-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-teal-screenshot-03-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-pearl-screenshot-01-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-pearl-screenshot-04-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-pearl-screenshot-03-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-indigo-screenshot-01-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-indigo-screenshot-04-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-indigo-screenshot-03-en-23sep24?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-sterling-silver-screenshot-01-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-sterling-silver-screenshot-04-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-sterling-silver-screenshot-02-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-volcanic-red-screenshot-01-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-volcanic-red-screenshot-03-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-volcanic-red-screenshot-02-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-cobalt-blue-screenshot-01-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-cobalt-blue-screenshot-03-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-cobalt-blue-screenshot-02-en-04sep23?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-galactic-purple-screenshot-01-en-30nov21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-galactic-purple-screenshot-04-en-30nov21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-galactic-purple-screenshot-03-en-30nov21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-starlight-blue-screenshot-01-en-30nov21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-starlight-blue-screenshot-04-en-30nov21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-starlight-blue-screenshot-03-en-30nov21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-cosmic-red-screenshot-04-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-cosmic-red-screenshot-01-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-cosmic-red-screenshot-02-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-midnight-black-screenshot-04-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-midnight-black-screenshot-01-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-midnight-black-screenshot-02-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-controller-image-block-01-ps5-26jun20?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-white-screenshot-04-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-white-screenshot-05-en-08dec21?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-gray-camo-screenshot-01-en-13sep22?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-gray-camo-screenshot-04-en-06sep22?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-gray-camo-screenshot-03-en-06sep22?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/gtavi-dualsense-black-controller-keyart-01-en-26aug26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/gtavi-dualsense-white-controller-keyart-01-en-26aug26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/007-First-Light-dualsense-controller-keyart-01-en-04mar26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/marathon-dualsense-controller-keyart-03-en-09jan26?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/Genshin-Impact-dualsense-controller-keyart-02-en-20nov25?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-controller-dualsense-controller-keyart-02-en-15may25?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/ghost-of-yotei-controllers-dualsense-gold-image-01-en-08sep25?$100px$",
+        "reason": "Packaging, game, feature or accessory image"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/death-stranding-2-dualsense-controller-keyart-01-en-03mar25?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/DUALSENSE-LE-LISA-PR-01-5x4-01-08aug26-_en?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/GTAVI-Black-DualSense-LE-image-block-01-en-26aug26?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/GTAVI-White-DualSense-LE-image-block-01-en-26aug26?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/DUALSENSE-LE-MWOLVERINE-PR-4x3-01-06jul26-en?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/DUALSENSE-LE-MWOLVERINE-PR-01-YELL-4x3-01-06jul26-en?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/007-First-Light-LE-DualSense-image-block-01-en-02apr26?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/Marathon-LE-DualSense-image-block-02-en-12jan26?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/Genshin-Impact-LE-DualSense-image-block-02-en-20nov25?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-20th-dualsense-image-block-01-en-07may25?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/AstroBot-LE-DualSense-image-block-02-en-02set25?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/ghost-of-yotei-controllers-dualsense-gold-image-02-en-08sep25?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/Death-Stranding2-LE-DualSense-image-block-02-en-09may25?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-controllers-image-block-02-en-06sep23?$100px$",
+        "reason": "Packaging, game, feature or accessory image"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-headphone-jack-image-block-02-en-02jul20?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-create-button-image-block-02-en-02jul20?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-battery-image-block-02-en-30jun20?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-speaker-image-block-01-en-30jun20?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-sensors-image-block-01-en-14jul20?$100px$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-charging-station-image-block-01-en-22jul20?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-pc-controls-image-block-01-en-22jan24?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-edge-background-block-desktop-01-en-10aug22?$100px$",
+        "reason": "Packaging, game, feature or accessory image"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/DualSense-Edge-image-block-01-en-24aug22?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      },
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-controller-product-thumbnail-03-en-29may23?$100px--t$",
+        "reason": "Model image; exact revision/color/bundle relation unproven"
+      }
+    ],
+    "manuals": [],
+    "manual_status": "Не проверена",
+    "configuration_fields": {
+      "bundle_contents": "DualSense® Wireless Controller; User manual",
+      "color": "Чёрный (Midnight Black)",
+      "storefront": "en-gb"
+    },
+    "exact_photo_assets": [
+      "a7917a7055def912df4b3d1c9d15297aa3dd39b3cf6e5a75df550f27345c1d36",
+      "657185edc671bcf05c83e7f794037d12043e484e3f8a6b1034d7b397f0ae47fc",
+      "3e4722a91854b84b327843b81136c87db79ecf8e52cbf5a569058969fcad2f23"
+    ],
+    "photo_scopes": {
+      "a7917a7055def912df4b3d1c9d15297aa3dd39b3cf6e5a75df550f27345c1d36": {
+        "scope": "retail",
+        "identifier": "1000050213-GB",
+        "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+        "reason": "Own gallery + exact order SKU"
+      },
+      "657185edc671bcf05c83e7f794037d12043e484e3f8a6b1034d7b397f0ae47fc": {
+        "scope": "retail",
+        "identifier": "1000050213-GB",
+        "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+        "reason": "Own gallery + exact order SKU"
+      },
+      "3e4722a91854b84b327843b81136c87db79ecf8e52cbf5a569058969fcad2f23": {
+        "scope": "retail",
+        "identifier": "1000050213-GB",
+        "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+        "reason": "Own gallery + exact order SKU"
+      }
+    },
+    "support_url": "",
+    "exact_official_pdp": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+    "sku_cfi_relations": [
+      {
+        "retail_sku": "1000050213-GB",
+        "published_cfi": [
+          "CFI-ZCT2W"
+        ],
+        "relation": "explicit_own_pdp",
+        "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+        "accepted_for_request": true,
+        "requested_relation": "exact_order_sku"
+      }
+    ],
+    "hardware_rows": [],
+    "sitemap_children": [
+      "https://www.playstation.com/es-ar/sitemap.xml",
+      "https://www.playstation.com/en-au/sitemap.xml",
+      "https://www.playstation.com/de-at/sitemap.xml",
+      "https://www.playstation.com/fr-be/sitemap.xml",
+      "https://www.playstation.com/nl-be/sitemap.xml",
+      "https://www.playstation.com/pt-br/sitemap.xml",
+      "https://www.playstation.com/en-ca/sitemap.xml",
+      "https://www.playstation.com/fr-ca/sitemap.xml",
+      "https://www.playstation.com/zh-hans-cn/sitemap.xml",
+      "https://www.playstation.com/cs-cz/sitemap.xml",
+      "https://www.playstation.com/en-cz/sitemap.xml",
+      "https://www.playstation.com/da-dk/sitemap.xml",
+      "https://www.playstation.com/en-dk/sitemap.xml",
+      "https://www.playstation.com/en-fi/sitemap.xml",
+      "https://www.playstation.com/fi-fi/sitemap.xml",
+      "https://www.playstation.com/fr-fr/sitemap.xml",
+      "https://www.playstation.com/de-de/sitemap.xml",
+      "https://www.playstation.com/en-hk/sitemap.xml",
+      "https://www.playstation.com/zh-hans-hk/sitemap.xml",
+      "https://www.playstation.com/zh-hant-hk/sitemap.xml",
+      "https://www.playstation.com/en-hu/sitemap.xml",
+      "https://www.playstation.com/hu-hu/sitemap.xml",
+      "https://www.playstation.com/en-is/sitemap.xml",
+      "https://www.playstation.com/it-it/sitemap.xml",
+      "https://www.playstation.com/ja-jp/sitemap.xml",
+      "https://www.playstation.com/de-lu/sitemap.xml",
+      "https://www.playstation.com/fr-lu/sitemap.xml",
+      "https://www.playstation.com/es-mx/sitemap.xml",
+      "https://www.playstation.com/nl-nl/sitemap.xml",
+      "https://www.playstation.com/en-no/sitemap.xml",
+      "https://www.playstation.com/no-no/sitemap.xml",
+      "https://www.playstation.com/en-pl/sitemap.xml",
+      "https://www.playstation.com/pl-pl/sitemap.xml",
+      "https://www.playstation.com/ru-ru/sitemap.xml",
+      "https://www.playstation.com/ar-sa/sitemap.xml",
+      "https://www.playstation.com/en-sa/sitemap.xml",
+      "https://www.playstation.com/es-es/sitemap.xml",
+      "https://www.playstation.com/en-se/sitemap.xml",
+      "https://www.playstation.com/sv-se/sitemap.xml",
+      "https://www.playstation.com/de-ch/sitemap.xml",
+      "https://www.playstation.com/fr-ch/sitemap.xml",
+      "https://www.playstation.com/it-ch/sitemap.xml",
+      "https://www.playstation.com/ar-ae/sitemap.xml",
+      "https://www.playstation.com/en-ae/sitemap.xml",
+      "https://www.playstation.com/en-gb/sitemap.xml",
+      "https://www.playstation.com/en-us/sitemap.xml",
+      "https://www.playstation.com/sitemap-ar.xml",
+      "https://www.playstation.com/sitemap-bg.xml",
+      "https://www.playstation.com/sitemap-el.xml",
+      "https://www.playstation.com/sitemap-en.xml",
+      "https://www.playstation.com/sitemap-es.xml",
+      "https://www.playstation.com/sitemap-he.xml",
+      "https://www.playstation.com/sitemap-hr.xml",
+      "https://www.playstation.com/sitemap-ro.xml",
+      "https://www.playstation.com/sitemap-ru.xml",
+      "https://www.playstation.com/sitemap-sk.xml",
+      "https://www.playstation.com/sitemap-sl.xml",
+      "https://www.playstation.com/sitemap-sr.xml",
+      "https://www.playstation.com/sitemap-th.xml",
+      "https://www.playstation.com/sitemap-tr.xml",
+      "https://www.playstation.com/sitemap-uk.xml",
+      "https://www.playstation.com/ko-kr/sitemap.xml",
+      "https://www.playstation.com/zh-hant-tw/sitemap.xml",
+      "https://www.playstation.com/en-tw/sitemap.xml",
+      "https://www.playstation.com/pt-pt/sitemap.xml"
+    ],
+    "observed_cfi_relations": [
+      {
+        "code": "CFI-ZCT2W",
+        "relation": "retail_linked_cfi",
+        "source_url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile"
+      }
+    ],
+    "retail_sku": "1000050213-GB",
+    "hardware_model": "CFI-ZCT2W",
+    "quick_start_status": "Не проверена",
+    "model_key": "dualsense",
+    "configuration_complete": true,
+    "configuration_scope": "retail_variant",
+    "description_evidence": [
+      {
+        "scope": "playstation",
+        "url": "https://direct.playstation.com/en-gb/buy-accessories/dualsense-wireless-controller-midnight-black-for-ps5-pc-mac-mobile",
+        "claims": [
+          "Цвет: Чёрный (Midnight Black).",
+          "Комплектация: DualSense® Wireless Controller; User manual.",
+          "Haptic Feedback: Да.",
+          "Adaptive Triggers: Да.",
+          "Микрофон: Встроенный."
+        ]
+      },
+      {
+        "scope": "playstation_model",
+        "url": "https://www.playstation.com/en-gb/accessories/dualsense-wireless-controller/",
+        "claims": [
+          "Adaptive Triggers: Да.",
+          "Haptic Feedback: Да.",
+          "Haptic Feedback: Да.",
+          "Haptic Feedback: Да."
+        ]
+      }
+    ]
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "model_confirmed",
+      "hardware": "official_hardware_model_code",
+      "configuration": "exact_order_sku"
+    },
+    "configuration_scope": "retail_variant",
+    "configuration_fields": {
+      "bundle_contents": "DualSense® Wireless Controller; User manual",
+      "color": "Чёрный (Midnight Black)",
+      "storefront": "en-gb"
+    },
+    "manual_status": "Не проверена",
+    "confirmed_specs": 3,
+    "gaps": [
+      "manual_unverified"
+    ],
+    "official_exact_regions": [
+      "playstation"
+    ],
+    "instruction": {
+      "russian": false
+    }
+  },
+  "trace": []
+}

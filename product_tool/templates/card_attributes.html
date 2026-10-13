@@ -1,5 +1,6 @@
 <section class="section" id="comparison">
   <div class="section-heading"><h2>Характеристики</h2><span class="count">{{ card_attributes.count }}</span></div>
+  <div class="form-actions"><label>Поиск по характеристикам<input type="search" id="attribute-search" placeholder="Название или значение"></label><label>Группа<select id="attribute-role"><option value="all">Все характеристики</option><option value="core">Основные характеристики</option><option value="feature">Особенности модели</option></select></label></div>
   {% if comparison %}
     {% for role, heading in [('core', 'Основные характеристики'), ('feature', 'Особенности модели')] %}
       {% if card_attributes.groups[role] %}

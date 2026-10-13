@@ -1,0 +1,2006 @@
+{
+  "input": {
+    "id": 26,
+    "brand": "Samsung",
+    "dispatch_brand": "Samsung",
+    "article": "MB-MC64HARU",
+    "model": "Samsung MB-MC64HARU",
+    "name": "Samsung MB-MC64HARU",
+    "category": "Карты памяти",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/samsung_stage59/dataset_frozen.json",
+    "original_input": {
+      "article": "MB-MC64HARU",
+      "name": "Samsung MB-MC64HARU",
+      "category": "Карты памяти",
+      "selection_reason": "Previously qualified category missing from Stage 59 ten"
+    }
+  },
+  "observed_at": "2026-10-13T09:01:13.900506+00:00",
+  "seconds": 3.96,
+  "job": {
+    "id": "a9e2683333624ab3b274a432f71ba119",
+    "product_id": 26,
+    "status": "done",
+    "current_stage": 4,
+    "message": "Samsung: Артикул каталога MB-MC64HARU подтверждён содержимым официальной страницы: sku в разметке товара, заголовок страницы, видимый текст страницы. Реальных конфликтов: 0; расхождений с дилером: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки Samsung к выгрузке: export_ready_with_gaps; пробелы: instruction_not_checked, dealer_cross_check_missing.",
+    "created_at": "2026-10-13T09:01:09+00:00",
+    "updated_at": "2026-10-13T09:01:13+00:00",
+    "started_at": "2026-10-13T09:01:09+00:00",
+    "finished_at": "2026-10-13T09:01:13+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 46,
+      "product_id": 26,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "not_needed",
+      "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 45,
+      "product_id": 26,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "url": "https://www.samsung.com/kz_ru/memory-storage/memory-card/evo-plus-microsd-card-64gb-mb-mc64ha-ru/",
+      "found_model": "MB-MC64HA/RU",
+      "match_level": "full_sku",
+      "evidence": "Артикул каталога MB-MC64HARU подтверждён содержимым официальной страницы: sku в разметке товара, заголовок страницы, видимый текст страницы.",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "error": "",
+      "description": "Карты памяти 64 ГБ EVO Plus предлагают высочайшую скорость, большую емкость, идеально подходят для видео 4K UHD и 4-proof для мобильных устройств в формате microSD и SD.",
+      "photos": [
+        "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300704575?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300704577?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300713944?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720442?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720486?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720488?$Q90_2052_1641_JPG$",
+        "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720646?$Q90_2052_1641_JPG$"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 1225,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "EMC",
+      "raw_value": "FCC, CE, VCCI, RCM",
+      "section": "Сертификация",
+      "value_cell": null,
+      "normalized_name": "emc",
+      "normalized_value": "fcc, ce, vcci, rcm",
+      "unit": ""
+    },
+    {
+      "id": 1216,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Размеры (ШxВxГ)",
+      "raw_value": "15x11x1 mm",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "product_dimensions",
+      "normalized_value": "w=15;h=11;d=1",
+      "unit": "mm"
+    },
+    {
+      "id": 1217,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Вес",
+      "raw_value": "Approx. 0.25g",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "product_weight",
+      "normalized_value": "0.00025",
+      "unit": "kg"
+    },
+    {
+      "id": 1226,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Гарантия",
+      "raw_value": "Limited 10 year warranty. * Warranty does not extend to dashcam, CCTV, surveillance camera and other write-intensive uses. * Warranty for SD adapter is limited to 1 year.",
+      "section": "Гарантия",
+      "value_cell": null,
+      "normalized_name": "гарантия",
+      "normalized_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+      "unit": ""
+    },
+    {
+      "id": 1210,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Гарантия (Обзор)",
+      "raw_value": "Limited 10 year warranty. * Warranty does not extend to dashcam, CCTV, surveillance camera and other write-intensive uses. * Warranty for SD adapter is limited to 1 year.",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "гарантия_обзор",
+      "normalized_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+      "unit": ""
+    },
+    {
+      "id": 1224,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Долговечность",
+      "raw_value": "10,000 mating cycles",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "долговечность",
+      "normalized_value": "10,000 mating cycles",
+      "unit": ""
+    },
+    {
+      "id": 1207,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Интерфейс (Обзор)",
+      "raw_value": "UHS-I, compatible to HS interface",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "интерфейс_обзор",
+      "normalized_value": "uhs-i, compatible to hs interface",
+      "unit": ""
+    },
+    {
+      "id": 1215,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Интерфейс (Общие особенности)",
+      "raw_value": "UHS-I, compatible to HS interface",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "интерфейс_общие_особенности",
+      "normalized_value": "uhs-i, compatible to hs interface",
+      "unit": ""
+    },
+    {
+      "id": 1209,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Класс быстродействия (Обзор)",
+      "raw_value": "Grade 1, Class 10",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "класс_быстродействия_обзор",
+      "normalized_value": "grade 1, class 10",
+      "unit": ""
+    },
+    {
+      "id": 1220,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Класс быстродействия (Производительность)",
+      "raw_value": "Grade 1, Class 10",
+      "section": "Производительность",
+      "value_cell": null,
+      "normalized_name": "класс_быстродействия_производительность",
+      "normalized_value": "grade 1, class 10",
+      "unit": ""
+    },
+    {
+      "id": 1218,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Комплектация",
+      "raw_value": "SD adapter",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "комплектация",
+      "normalized_value": "sd adapter",
+      "unit": ""
+    },
+    {
+      "id": 1214,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Объем",
+      "raw_value": "64GB, (1GB=1Billionbyte) * Actual storage capacity may be lower than the labeled capacity. Part of the storage may be used for system files and other storage control purposes.",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "объем",
+      "normalized_value": "64gb, (1gb=1billionbyte) * actual storage capacity may be lower than the labeled capacity. part of the storage may be used for system files and other storage control purposes.",
+      "unit": ""
+    },
+    {
+      "id": 1213,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Применение",
+      "raw_value": "Mobile phone, Smartphone, Tablet, etc",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "применение",
+      "normalized_value": "mobile phone, smartphone, tablet, etc",
+      "unit": ""
+    },
+    {
+      "id": 1223,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Рабочая температура",
+      "raw_value": "-25℃ to 85℃",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "рабочая_температура",
+      "normalized_value": "-25℃ to 85℃",
+      "unit": ""
+    },
+    {
+      "id": 1221,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Рабочее напряжение питания",
+      "raw_value": "2.7~3.6V",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "рабочее_напряжение_питания",
+      "normalized_value": "2.7~3.6v",
+      "unit": ""
+    },
+    {
+      "id": 1206,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Семейство продуктов (Обзор)",
+      "raw_value": "EVO Plus",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "семейство_продуктов_обзор",
+      "normalized_value": "evo plus",
+      "unit": ""
+    },
+    {
+      "id": 1212,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Семейство продуктов (Общие особенности)",
+      "raw_value": "EVO Plus",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "семейство_продуктов_общие_особенности",
+      "normalized_value": "evo plus",
+      "unit": ""
+    },
+    {
+      "id": 1208,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Скорость передачи данных (Обзор)",
+      "raw_value": "Read : up to 100MB/s with UHS-1 interface, Write : up to 20MB/s with UHS-1 interface * The foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. For products incompatible with UHS-I interface, the speeds may vary subject to different interface conditions",
+      "section": "Обзор",
+      "value_cell": null,
+      "normalized_name": "скорость_передачи_данных_обзор",
+      "normalized_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+      "unit": ""
+    },
+    {
+      "id": 1219,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Скорость передачи данных (Производительность)",
+      "raw_value": "Read : up to 100MB/s with UHS-1 interface, Write : up to 20MB/s with UHS-1 interface * The foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. For products incompatible with UHS-I interface, the speeds may vary subject to different interface conditions",
+      "section": "Производительность",
+      "value_cell": null,
+      "normalized_name": "скорость_передачи_данных_производительность",
+      "normalized_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+      "unit": ""
+    },
+    {
+      "id": 1222,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Температура хранения",
+      "raw_value": "-40℃ to 85℃",
+      "section": "Окружающая среда",
+      "value_cell": null,
+      "normalized_name": "температура_хранения",
+      "normalized_value": "-40℃ to 85℃",
+      "unit": ""
+    },
+    {
+      "id": 1211,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "site_name": "Samsung Казахстан",
+      "raw_name": "Тип продукта",
+      "raw_value": "microSDXC Memory Card",
+      "section": "Общие особенности",
+      "value_cell": null,
+      "normalized_name": "тип_продукта",
+      "normalized_value": "microsdxc memory card",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 1183,
+      "product_id": 26,
+      "normalized_name": "emc",
+      "selected_value": "fcc, ce, vcci, rcm",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1184,
+      "product_id": 26,
+      "normalized_name": "product_dimensions",
+      "selected_value": "w=15;h=11;d=1",
+      "selected_unit": "mm",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1185,
+      "product_id": 26,
+      "normalized_name": "product_weight",
+      "selected_value": "0.00025",
+      "selected_unit": "kg",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1186,
+      "product_id": 26,
+      "normalized_name": "гарантия",
+      "selected_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1187,
+      "product_id": 26,
+      "normalized_name": "гарантия_обзор",
+      "selected_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1188,
+      "product_id": 26,
+      "normalized_name": "долговечность",
+      "selected_value": "10,000 mating cycles",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1189,
+      "product_id": 26,
+      "normalized_name": "интерфейс_обзор",
+      "selected_value": "uhs-i, compatible to hs interface",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1190,
+      "product_id": 26,
+      "normalized_name": "интерфейс_общие_особенности",
+      "selected_value": "uhs-i, compatible to hs interface",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1191,
+      "product_id": 26,
+      "normalized_name": "класс_быстродействия_обзор",
+      "selected_value": "grade 1, class 10",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1192,
+      "product_id": 26,
+      "normalized_name": "класс_быстродействия_производительность",
+      "selected_value": "grade 1, class 10",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1193,
+      "product_id": 26,
+      "normalized_name": "комплектация",
+      "selected_value": "sd adapter",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1194,
+      "product_id": 26,
+      "normalized_name": "объем",
+      "selected_value": "64gb, (1gb=1billionbyte) * actual storage capacity may be lower than the labeled capacity. part of the storage may be used for system files and other storage control purposes.",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1195,
+      "product_id": 26,
+      "normalized_name": "применение",
+      "selected_value": "mobile phone, smartphone, tablet, etc",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1196,
+      "product_id": 26,
+      "normalized_name": "рабочая_температура",
+      "selected_value": "-25℃ to 85℃",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1197,
+      "product_id": 26,
+      "normalized_name": "рабочее_напряжение_питания",
+      "selected_value": "2.7~3.6v",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1198,
+      "product_id": 26,
+      "normalized_name": "семейство_продуктов_обзор",
+      "selected_value": "evo plus",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1199,
+      "product_id": 26,
+      "normalized_name": "семейство_продуктов_общие_особенности",
+      "selected_value": "evo plus",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1200,
+      "product_id": 26,
+      "normalized_name": "скорость_передачи_данных_обзор",
+      "selected_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1201,
+      "product_id": 26,
+      "normalized_name": "скорость_передачи_данных_производительность",
+      "selected_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1202,
+      "product_id": 26,
+      "normalized_name": "температура_хранения",
+      "selected_value": "-40℃ to 85℃",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 1203,
+      "product_id": 26,
+      "normalized_name": "тип_продукта",
+      "selected_value": "microsdxc memory card",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Значение с точной официальной страницы товара Samsung.",
+      "selected_source": "samsung",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:01:13+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "emc",
+      "sources": {
+        "samsung": {
+          "id": 1225,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "EMC",
+          "raw_value": "FCC, CE, VCCI, RCM",
+          "section": "Сертификация",
+          "value_cell": null,
+          "normalized_name": "emc",
+          "normalized_value": "fcc, ce, vcci, rcm",
+          "unit": "",
+          "display_value": "fcc, ce, vcci, rcm",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "EMC"
+      ],
+      "display_name": "EMC",
+      "resolved": {
+        "id": 1183,
+        "product_id": 26,
+        "normalized_name": "emc",
+        "selected_value": "fcc, ce, vcci, rcm",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "fcc, ce, vcci, rcm",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_weight",
+      "sources": {
+        "samsung": {
+          "id": 1217,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Вес",
+          "raw_value": "Approx. 0.25g",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_weight",
+          "normalized_value": "0.00025",
+          "unit": "kg",
+          "display_value": "0.00025 кг",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Вес"
+      ],
+      "display_name": "Вес",
+      "resolved": {
+        "id": 1185,
+        "product_id": 26,
+        "normalized_name": "product_weight",
+        "selected_value": "0.00025",
+        "selected_unit": "kg",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "0.00025 кг",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_h_mm",
+      "sources": {
+        "samsung": {
+          "id": 1216,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры (ШxВxГ)",
+          "raw_value": "15x11x1 mm",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "11",
+          "unit": "mm",
+          "display_value": "11 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры (ШxВxГ)"
+      ],
+      "display_name": "Высота товара, мм",
+      "resolved": {
+        "id": 1184,
+        "product_id": 26,
+        "normalized_name": "product_dimensions",
+        "selected_value": "11",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "11 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions"
+    },
+    {
+      "normalized_name": "гарантия",
+      "sources": {
+        "samsung": {
+          "id": 1226,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Гарантия",
+          "raw_value": "Limited 10 year warranty. * Warranty does not extend to dashcam, CCTV, surveillance camera and other write-intensive uses. * Warranty for SD adapter is limited to 1 year.",
+          "section": "Гарантия",
+          "value_cell": null,
+          "normalized_name": "гарантия",
+          "normalized_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+          "unit": "",
+          "display_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Гарантия"
+      ],
+      "display_name": "Гарантия",
+      "resolved": {
+        "id": 1186,
+        "product_id": 26,
+        "normalized_name": "гарантия",
+        "selected_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "гарантия_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1210,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Гарантия (Обзор)",
+          "raw_value": "Limited 10 year warranty. * Warranty does not extend to dashcam, CCTV, surveillance camera and other write-intensive uses. * Warranty for SD adapter is limited to 1 year.",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "гарантия_обзор",
+          "normalized_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+          "unit": "",
+          "display_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Гарантия (Обзор)"
+      ],
+      "display_name": "Гарантия (Обзор)",
+      "resolved": {
+        "id": 1187,
+        "product_id": 26,
+        "normalized_name": "гарантия_обзор",
+        "selected_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "limited 10 year warranty. * warranty does not extend to dashcam, cctv, surveillance camera and other write-intensive uses. * warranty for sd adapter is limited to 1 year.",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_d_mm",
+      "sources": {
+        "samsung": {
+          "id": 1216,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры (ШxВxГ)",
+          "raw_value": "15x11x1 mm",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "1",
+          "unit": "mm",
+          "display_value": "1 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры (ШxВxГ)"
+      ],
+      "display_name": "Глубина товара, мм",
+      "resolved": {
+        "id": 1184,
+        "product_id": 26,
+        "normalized_name": "product_dimensions",
+        "selected_value": "1",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "1 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions"
+    },
+    {
+      "normalized_name": "долговечность",
+      "sources": {
+        "samsung": {
+          "id": 1224,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Долговечность",
+          "raw_value": "10,000 mating cycles",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "долговечность",
+          "normalized_value": "10,000 mating cycles",
+          "unit": "",
+          "display_value": "10,000 mating cycles",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Долговечность"
+      ],
+      "display_name": "Долговечность",
+      "resolved": {
+        "id": 1188,
+        "product_id": 26,
+        "normalized_name": "долговечность",
+        "selected_value": "10,000 mating cycles",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "10,000 mating cycles",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "интерфейс_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1207,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Интерфейс (Обзор)",
+          "raw_value": "UHS-I, compatible to HS interface",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "интерфейс_обзор",
+          "normalized_value": "uhs-i, compatible to hs interface",
+          "unit": "",
+          "display_value": "uhs-i, compatible to hs interface",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Интерфейс (Обзор)"
+      ],
+      "display_name": "Интерфейс (Обзор)",
+      "resolved": {
+        "id": 1189,
+        "product_id": 26,
+        "normalized_name": "интерфейс_обзор",
+        "selected_value": "uhs-i, compatible to hs interface",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "uhs-i, compatible to hs interface",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "интерфейс_общие_особенности",
+      "sources": {
+        "samsung": {
+          "id": 1215,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Интерфейс (Общие особенности)",
+          "raw_value": "UHS-I, compatible to HS interface",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "интерфейс_общие_особенности",
+          "normalized_value": "uhs-i, compatible to hs interface",
+          "unit": "",
+          "display_value": "uhs-i, compatible to hs interface",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Интерфейс (Общие особенности)"
+      ],
+      "display_name": "Интерфейс (Общие особенности)",
+      "resolved": {
+        "id": 1190,
+        "product_id": 26,
+        "normalized_name": "интерфейс_общие_особенности",
+        "selected_value": "uhs-i, compatible to hs interface",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "uhs-i, compatible to hs interface",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "класс_быстродействия_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1209,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Класс быстродействия (Обзор)",
+          "raw_value": "Grade 1, Class 10",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "класс_быстродействия_обзор",
+          "normalized_value": "grade 1, class 10",
+          "unit": "",
+          "display_value": "grade 1, class 10",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Класс быстродействия (Обзор)"
+      ],
+      "display_name": "Класс быстродействия (Обзор)",
+      "resolved": {
+        "id": 1191,
+        "product_id": 26,
+        "normalized_name": "класс_быстродействия_обзор",
+        "selected_value": "grade 1, class 10",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "grade 1, class 10",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "класс_быстродействия_производительность",
+      "sources": {
+        "samsung": {
+          "id": 1220,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Класс быстродействия (Производительность)",
+          "raw_value": "Grade 1, Class 10",
+          "section": "Производительность",
+          "value_cell": null,
+          "normalized_name": "класс_быстродействия_производительность",
+          "normalized_value": "grade 1, class 10",
+          "unit": "",
+          "display_value": "grade 1, class 10",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Класс быстродействия (Производительность)"
+      ],
+      "display_name": "Класс быстродействия (Производительность)",
+      "resolved": {
+        "id": 1192,
+        "product_id": 26,
+        "normalized_name": "класс_быстродействия_производительность",
+        "selected_value": "grade 1, class 10",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "grade 1, class 10",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "комплектация",
+      "sources": {
+        "samsung": {
+          "id": 1218,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Комплектация",
+          "raw_value": "SD adapter",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "комплектация",
+          "normalized_value": "sd adapter",
+          "unit": "",
+          "display_value": "sd adapter",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Комплектация"
+      ],
+      "display_name": "Комплектация",
+      "resolved": {
+        "id": 1193,
+        "product_id": 26,
+        "normalized_name": "комплектация",
+        "selected_value": "sd adapter",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "sd adapter",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "объем",
+      "sources": {
+        "samsung": {
+          "id": 1214,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Объем",
+          "raw_value": "64GB, (1GB=1Billionbyte) * Actual storage capacity may be lower than the labeled capacity. Part of the storage may be used for system files and other storage control purposes.",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "объем",
+          "normalized_value": "64gb, (1gb=1billionbyte) * actual storage capacity may be lower than the labeled capacity. part of the storage may be used for system files and other storage control purposes.",
+          "unit": "",
+          "display_value": "64gb, (1gb=1billionbyte) * actual storage capacity may be lower than the labeled capacity. part of the storage may be used for system files and other storage control purposes.",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Объем"
+      ],
+      "display_name": "Объем",
+      "resolved": {
+        "id": 1194,
+        "product_id": 26,
+        "normalized_name": "объем",
+        "selected_value": "64gb, (1gb=1billionbyte) * actual storage capacity may be lower than the labeled capacity. part of the storage may be used for system files and other storage control purposes.",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "64gb, (1gb=1billionbyte) * actual storage capacity may be lower than the labeled capacity. part of the storage may be used for system files and other storage control purposes.",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "применение",
+      "sources": {
+        "samsung": {
+          "id": 1213,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Применение",
+          "raw_value": "Mobile phone, Smartphone, Tablet, etc",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "применение",
+          "normalized_value": "mobile phone, smartphone, tablet, etc",
+          "unit": "",
+          "display_value": "mobile phone, smartphone, tablet, etc",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Применение"
+      ],
+      "display_name": "Применение",
+      "resolved": {
+        "id": 1195,
+        "product_id": 26,
+        "normalized_name": "применение",
+        "selected_value": "mobile phone, smartphone, tablet, etc",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "mobile phone, smartphone, tablet, etc",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "рабочая_температура",
+      "sources": {
+        "samsung": {
+          "id": 1223,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Рабочая температура",
+          "raw_value": "-25℃ to 85℃",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "рабочая_температура",
+          "normalized_value": "-25℃ to 85℃",
+          "unit": "",
+          "display_value": "-25℃ to 85℃",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Рабочая температура"
+      ],
+      "display_name": "Рабочая температура",
+      "resolved": {
+        "id": 1196,
+        "product_id": 26,
+        "normalized_name": "рабочая_температура",
+        "selected_value": "-25℃ to 85℃",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "-25℃ to 85℃",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "рабочее_напряжение_питания",
+      "sources": {
+        "samsung": {
+          "id": 1221,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Рабочее напряжение питания",
+          "raw_value": "2.7~3.6V",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "рабочее_напряжение_питания",
+          "normalized_value": "2.7~3.6v",
+          "unit": "",
+          "display_value": "2.7~3.6v",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Рабочее напряжение питания"
+      ],
+      "display_name": "Рабочее напряжение питания",
+      "resolved": {
+        "id": 1197,
+        "product_id": 26,
+        "normalized_name": "рабочее_напряжение_питания",
+        "selected_value": "2.7~3.6v",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "2.7~3.6v",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "семейство_продуктов_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1206,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Семейство продуктов (Обзор)",
+          "raw_value": "EVO Plus",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "семейство_продуктов_обзор",
+          "normalized_value": "evo plus",
+          "unit": "",
+          "display_value": "evo plus",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Семейство продуктов (Обзор)"
+      ],
+      "display_name": "Семейство продуктов (Обзор)",
+      "resolved": {
+        "id": 1198,
+        "product_id": 26,
+        "normalized_name": "семейство_продуктов_обзор",
+        "selected_value": "evo plus",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "evo plus",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "семейство_продуктов_общие_особенности",
+      "sources": {
+        "samsung": {
+          "id": 1212,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Семейство продуктов (Общие особенности)",
+          "raw_value": "EVO Plus",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "семейство_продуктов_общие_особенности",
+          "normalized_value": "evo plus",
+          "unit": "",
+          "display_value": "evo plus",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Семейство продуктов (Общие особенности)"
+      ],
+      "display_name": "Семейство продуктов (Общие особенности)",
+      "resolved": {
+        "id": 1199,
+        "product_id": 26,
+        "normalized_name": "семейство_продуктов_общие_особенности",
+        "selected_value": "evo plus",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "evo plus",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "скорость_передачи_данных_обзор",
+      "sources": {
+        "samsung": {
+          "id": 1208,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Скорость передачи данных (Обзор)",
+          "raw_value": "Read : up to 100MB/s with UHS-1 interface, Write : up to 20MB/s with UHS-1 interface * The foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. For products incompatible with UHS-I interface, the speeds may vary subject to different interface conditions",
+          "section": "Обзор",
+          "value_cell": null,
+          "normalized_name": "скорость_передачи_данных_обзор",
+          "normalized_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+          "unit": "",
+          "display_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Скорость передачи данных (Обзор)"
+      ],
+      "display_name": "Скорость передачи данных (Обзор)",
+      "resolved": {
+        "id": 1200,
+        "product_id": 26,
+        "normalized_name": "скорость_передачи_данных_обзор",
+        "selected_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "скорость_передачи_данных_производительность",
+      "sources": {
+        "samsung": {
+          "id": 1219,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Скорость передачи данных (Производительность)",
+          "raw_value": "Read : up to 100MB/s with UHS-1 interface, Write : up to 20MB/s with UHS-1 interface * The foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. For products incompatible with UHS-I interface, the speeds may vary subject to different interface conditions",
+          "section": "Производительность",
+          "value_cell": null,
+          "normalized_name": "скорость_передачи_данных_производительность",
+          "normalized_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+          "unit": "",
+          "display_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Скорость передачи данных (Производительность)"
+      ],
+      "display_name": "Скорость передачи данных (Производительность)",
+      "resolved": {
+        "id": 1201,
+        "product_id": 26,
+        "normalized_name": "скорость_передачи_данных_производительность",
+        "selected_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "read : up to 100mb/s with uhs-1 interface, write : up to 20mb/s with uhs-1 interface * the foregoing read & write speeds are demonstrated by internal test conducted under certain controlled conditions, and actual speeds may vary depending upon usage and other conditions. for products incompatible with uhs-i interface, the speeds may vary subject to different interface conditions",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "температура_хранения",
+      "sources": {
+        "samsung": {
+          "id": 1222,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Температура хранения",
+          "raw_value": "-40℃ to 85℃",
+          "section": "Окружающая среда",
+          "value_cell": null,
+          "normalized_name": "температура_хранения",
+          "normalized_value": "-40℃ to 85℃",
+          "unit": "",
+          "display_value": "-40℃ to 85℃",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Температура хранения"
+      ],
+      "display_name": "Температура хранения",
+      "resolved": {
+        "id": 1202,
+        "product_id": 26,
+        "normalized_name": "температура_хранения",
+        "selected_value": "-40℃ to 85℃",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "-40℃ to 85℃",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "тип_продукта",
+      "sources": {
+        "samsung": {
+          "id": 1211,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Тип продукта",
+          "raw_value": "microSDXC Memory Card",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "тип_продукта",
+          "normalized_value": "microsdxc memory card",
+          "unit": "",
+          "display_value": "microsdxc memory card",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Тип продукта"
+      ],
+      "display_name": "Тип продукта",
+      "resolved": {
+        "id": 1203,
+        "product_id": 26,
+        "normalized_name": "тип_продукта",
+        "selected_value": "microsdxc memory card",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "microsdxc memory card",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true
+    },
+    {
+      "normalized_name": "product_w_mm",
+      "sources": {
+        "samsung": {
+          "id": 1216,
+          "product_id": 26,
+          "source_page_id": 45,
+          "source_key": "samsung",
+          "site_name": "Samsung Казахстан",
+          "raw_name": "Размеры (ШxВxГ)",
+          "raw_value": "15x11x1 mm",
+          "section": "Общие особенности",
+          "value_cell": null,
+          "normalized_name": "product_dimensions",
+          "normalized_value": "15",
+          "unit": "mm",
+          "display_value": "15 мм",
+          "display_source": "Samsung Казахстан"
+        }
+      },
+      "raw_names": [
+        "Размеры (ШxВxГ)"
+      ],
+      "display_name": "Ширина товара, мм",
+      "resolved": {
+        "id": 1184,
+        "product_id": 26,
+        "normalized_name": "product_dimensions",
+        "selected_value": "15",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Значение с точной официальной страницы товара Samsung.",
+        "selected_source": "samsung",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:01:13+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "15 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "Samsung Казахстан"
+      },
+      "lg_presentation": true,
+      "section_name": "Габариты и вес",
+      "derived_from": "product_dimensions"
+    }
+  ],
+  "photos": [
+    {
+      "id": 548,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300704576",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300704576",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 549,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300704578",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300704578",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 550,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720418",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720418",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 551,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720485",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720485",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 552,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720487",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720487",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 553,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720512",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720512",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 554,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720647",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--thumb-300720647",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "thumbnail",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 541,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300704575?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300704575",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 542,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300704577?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300704577",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 543,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300713944?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300713944",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 544,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720442?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720442",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 545,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720486?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720486",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 546,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720488?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720488",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    },
+    {
+      "id": 547,
+      "product_id": 26,
+      "source_page_id": 45,
+      "source_key": "samsung",
+      "url": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720646?$Q90_2052_1641_JPG$",
+      "asset_key": "https://images.samsung.com/is/image/samsung/kz-ru-evo-plus-microsd-card-with-sd-adapter-2020-model-mb-mc64ha-ru--300720646",
+      "kind": "product_gallery",
+      "width": 2052,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:01:13+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Samsung Казахстан"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "article": "MB-MC64HARU",
+    "route": {
+      "kind": "sitemap",
+      "addresses": [
+        "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "https://www.samsung.com/kz_ru/im-sitemap.xml",
+        "https://www.samsung.com/ru/memory-sitemap.xml",
+        "https://www.samsung.com/ru/im-sitemap.xml"
+      ],
+      "reason": "",
+      "found_via": "https://www.samsung.com/kz_ru/memory-sitemap.xml"
+    },
+    "query_variants": [
+      "MB-MC64HARU"
+    ],
+    "candidates": [
+      {
+        "url": "https://www.samsung.com/kz_ru/memory-storage/memory-card/evo-plus-microsd-card-64gb-mb-mc64ha-ru/",
+        "via": "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "match_level": "full_sku",
+        "product_page": true
+      }
+    ],
+    "external_search": null,
+    "external_results": null,
+    "steps": [
+      {
+        "step": "sitemap",
+        "url": "https://www.samsung.com/kz_ru/memory-sitemap.xml",
+        "status": 200
+      },
+      {
+        "step": "product_page",
+        "url": "https://www.samsung.com/kz_ru/memory-storage/memory-card/evo-plus-microsd-card-64gb-mb-mc64ha-ru/",
+        "status": 200
+      }
+    ],
+    "page_url": "https://www.samsung.com/kz_ru/memory-storage/memory-card/evo-plus-microsd-card-64gb-mb-mc64ha-ru/",
+    "buy_page_url": "",
+    "identity": {
+      "level": "full_sku",
+      "strength": "strong",
+      "match_level": "full_sku",
+      "evidence": [
+        "jsonld_sku",
+        "title",
+        "visible_text",
+        "url_only_not_counted"
+      ],
+      "jsonld_sku": "MB-MC64HA/RU",
+      "title": "Карта памяти Samsung EVO Plus 64 ГБ |MB-MC64HA/RU| Samsung KZ",
+      "is_product_page": true,
+      "open_differences": []
+    },
+    "specs": 21,
+    "photos": {
+      "full_size": 7,
+      "thumbnails": 7,
+      "three_d_excluded": 0,
+      "from": "https://www.samsung.com/kz_ru/memory-storage/memory-card/evo-plus-microsd-card-64gb-mb-mc64ha-ru/",
+      "bound_by_asset_path": [],
+      "gap": ""
+    },
+    "document_links": [],
+    "gaps": [
+      "ссылок на руководство на странице нет"
+    ],
+    "missing_fields": [
+      "инструкция"
+    ],
+    "outcome": "page_read",
+    "halted": null,
+    "device_split": {
+      "tables": [],
+      "assigned": [],
+      "unassigned": []
+    }
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing"
+    ],
+    "advisory_gaps": [
+      "dealer_cross_check_missing"
+    ],
+    "gaps": [
+      "no_official_full_sku_page",
+      "no_official_specifications",
+      "no_official_gallery_photo",
+      "instruction_missing",
+      "dealer_cross_check_missing"
+    ],
+    "official_exact_regions": [],
+    "official_facts": 0,
+    "official_facts_from_exact_pages": 0,
+    "official_gallery_selected": 0,
+    "official_gallery_from_exact_pages": 0,
+    "real_conflicts": 0,
+    "instruction": {
+      "found": 0,
+      "languages": [],
+      "russian": false,
+      "russian_file_found": false,
+      "verified_for_article": 0
+    },
+    "dealer_confirmed": []
+  },
+  "trace": []
+}

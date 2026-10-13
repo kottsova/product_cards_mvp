@@ -135,7 +135,8 @@ def classify(row: dict[str, Any]) -> str:
     if (value.get("selected_value") or "").strip().casefold() in EMPTY_VALUES:
         return "logistics/internal metadata"
     sources = row.get("sources") or {}
-    if sources and all(str(fact.get("raw_value") or "").strip().casefold() in EMPTY_VALUES for fact in sources.values()):
+    if sources and all(str(fact.get("raw_value") or "").strip().casefold() in EMPTY_VALUES for fact in sources.values()) and not (
+            value.get('selected_unit')=='bool' and value.get('selected_value') in {'true','false'}):
         return "logistics/internal metadata"
     return "product attribute"
 
@@ -208,11 +209,21 @@ def canonical_label(row: dict[str, Any], *, exact_ru: bool = False) -> str:
 def _dimension_context(row: dict[str, Any]) -> tuple[str, str] | None:
     key = row["normalized_name"]
     raw = " ".join(str(fact.get("raw_name") or "") for fact in row.get("sources", {}).values()).casefold()
+    if re.search(r'без\s+упаков|without\s+packag',raw):return 'product','товара'
     if key.startswith("package_dimensions") or key.startswith("packing_dimensions") or "упаков" in raw or "packing" in raw:
         return "package", "упаковки"
     if key.startswith("product_dimensions") or key.startswith("основной_модуль_") or key in {"главный__dimensions", "сабвуфер__dimensions"}:
         if "твитер" in raw or "turntable" in raw:
             return None
+        for pattern,scope,noun in ((r'внутренн\w*\s+блок|indoor','indoor_unit','внутреннего блока'),
+                                   (r'наружн\w*\s+блок|outdoor','outdoor_unit','наружного блока'),
+                                   (r'робот|\brobot\b','robot','робота'),
+                                   (r'станци|\bstation\b|\bdock\b','station','станции'),
+                                   (r'кейс|\bcase\b','case','кейса')):
+            if re.search(pattern,raw,re.I):
+                gross=bool(re.search(r'брутто|gross',raw,re.I))
+                return (scope+'_package',noun+' с упаковкой') if gross else (scope,noun)
+        if 'gross' in key or 'брутто' in raw:return 'package','упаковки'
         if "без подстав" in raw or "without_stand" in key:
             return "product_without_stand", "товара без подставки"
         if "с подстав" in raw or "with_stand" in key:
@@ -277,7 +288,7 @@ def normalize_measure(row: dict[str, Any]) -> dict[str, Any]:
 def split_dimensions(row: dict[str, Any]) -> list[dict[str, Any]] | None:
     context = _dimension_context(row)
     selected = row.get("resolved") or {}
-    if not context or selected.get("conflict") or not selected.get("selected_value"):
+    if not context or (not selected.get("conflict") and not selected.get("selected_value")):
         return None
     facts = row.get("sources") or {}
     selected_fact = facts.get(selected.get("selected_source") or "")
@@ -312,7 +323,7 @@ def split_dimensions(row: dict[str, Any]) -> list[dict[str, Any]] | None:
     # The existing resolved fact must agree with the explicitly parsed axes.
     normalized = selected.get("selected_value") or ""
     canonical = re.fullmatch(r"w=([^;]+);h=([^;]+);d=([^;]+)", normalized)
-    if canonical and any(canonical.group(i+1) != chosen[a] for i,a in enumerate(("w","h","d"))):
+    if canonical and not selected.get('conflict') and any(canonical.group(i+1) != chosen[a] for i,a in enumerate(("w","h","d"))):
         return None
     scope, noun = context
     result = []

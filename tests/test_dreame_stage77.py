@@ -71,7 +71,8 @@ class Stage77Tests(unittest.TestCase):
  def native_model(self,ident):
   r=R/'batch_live/first'/str(ident);v=json.loads((r/'result.json').read_text(encoding='utf8'));c=next(x for x in v['evidence']['captures'] if '/products/' in x['url']);return parse_page((r/'captures'/c['file']).read_text(encoding='utf8'),c['url'],v['input']['article'],v['input']['name'],v['input']['category'])
  def test_native_x50_explicit_component_weights(self):
-  d,e=self.native_model(4);self.assertEqual(len(d.attributes),4);self.assertEqual([(x.value,x.section) for x in d.attributes if x.name=='Weight'],[('4.53kg','Робот'),('9.09kg','База / станция')]);self.assertEqual(e['input_configuration']['bundle'],'Complete');self.assertIsNone(e['identity']['retail_sku'])
+  d,e=self.native_model(4);self.assertEqual(len(d.attributes),8);self.assertEqual([(x.value,x.section) for x in d.attributes if x.name=='Weight'],[('4.53kg','Робот'),('9.09kg','База / станция')]);self.assertEqual(e['input_configuration']['bundle'],'Complete');self.assertIsNone(e['identity']['retail_sku'])
+  self.assertEqual({'SideReach™','MopExtend™ RoboSwing','VersaLift','HyperStream™'},{x.name for x in d.attributes if x.section=='Особенности модели'});self.assertFalse(any('100%' in x.value for x in d.attributes))
  def test_native_h15_runtime_and_tank_states(self):
   d,e=self.native_model(7);v={x.name:x.value for x in d.attributes};self.assertEqual(v['Maximum Runtime — Quiet Mode'],'72min (Quiet Mode)');self.assertEqual(v['Maximum Runtime — Hot Water Mode'],'20min (Hot Water Mode)');self.assertEqual(v['Used Water Tank — Standing'],'650ml');self.assertEqual(v['Used Water Tank — Lie-Flat'],'400ml')
  def test_native_l60_duplicate_mobile_and_ambiguous_tank(self):
@@ -79,7 +80,8 @@ class Stage77Tests(unittest.TestCase):
  def test_native_h12_slogan_identity_and_handheld_runtime(self):
   d,e=self.native_model(9);self.assertEqual(d.match_level,'model_confirmed');v={x.name:x for x in d.attributes};self.assertEqual(v['Maximum Runtime — Wet and Dry Vacuum'].section,'Устройство');self.assertEqual(v['Maximum Runtime — Handheld Vacuum'].section,'Ручной пылесос')
  def test_native_x40_empty_h1_and_hidden_station_table(self):
-  d,e=self.native_model(10);self.assertEqual(d.match_level,'model_confirmed');self.assertEqual(len(d.attributes),19);v=[x for x in d.attributes if x.name=='Rated Power'];self.assertEqual([(x.value,x.section) for x in v],[('1,000W','База / станция')]);self.assertTrue(any(x.name=='Dust Bag Capacity' and x.section=='База / станция' for x in d.attributes));self.assertFalse(any('purchased separately' in x.value for x in d.attributes));self.assertTrue(any('Optional accessory' in x['reason'] for x in e['rejected_specs']))
+  d,e=self.native_model(10);self.assertEqual(d.match_level,'model_confirmed');self.assertEqual(len(d.attributes),21);v=[x for x in d.attributes if x.name=='Rated Power'];self.assertEqual([(x.value,x.section) for x in v],[('1,000W','База / станция')]);self.assertTrue(any(x.name=='Dust Bag Capacity' and x.section=='База / станция' for x in d.attributes));self.assertFalse(any('purchased separately' in x.value for x in d.attributes));self.assertTrue(any('Optional accessory' in x['reason'] for x in e['rejected_specs']))
+  self.assertEqual(2,sum(x.section=='Особенности модели' for x in d.attributes))
  def test_native_z30_grouped_rpm_matches_raw_without_decimal_regression(self):
   from product_tool.normalization import normalize_value
   r=R/'stable_live/first/8';v=json.loads((r/'result.json').read_text(encoding='utf8'));e=v['evidence'];c=next(x for x in e['captures'] if x['url']==e['pdp_url'])

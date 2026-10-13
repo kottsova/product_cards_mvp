@@ -40,6 +40,7 @@ def _dreame_image_stop(adapter,ev,image_log):
 def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns_adapter_factory=None,clock=time.monotonic,family='xiaomi'):
     discovery_trace.initialize(database);trace=lambda e:discovery_trace.record(database,job_id,product_id,{'timestamp':utc_now(),**e})
     adapter=(adapter_factory or (lambda:XiaomiAdapter(clock=clock,fetch_log_path=Path(database).parent/'xiaomi_fetch_log.json')))();adapter.trace_callback=trace
+    if hasattr(adapter,'manuals_enabled'):adapter.manuals_enabled=6 in stages
     article=product['search_code'].strip().upper();budget=RequestBudget(max_per_row=24,max_total=24);budget.begin_row(str(product_id))
     with request_budget(budget):
         doc=adapter.find_source(article,name=product.get('name',''),category=product.get('category',''),deadline=clock()+90)

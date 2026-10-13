@@ -90,19 +90,31 @@ def parse_pdp(html,url,article):
  # Only JSON-LD exact product images or microdata images in exact PDP scope.
  images=product.get('image',[]) if isinstance(product.get('image',[]),list) else [product.get('image')]
  images=[x for x in images if isinstance(x,str) and x]
- if not images:images=[x.get('data-zoom') or x.get('data-src') or x.get('src') for x in soup.select('.hero-gallery.-main img[itemprop="image"]')]
+ # JSON-LD usually carries just hero; the owned main gallery carries all
+ # published angles, and data-zoom is the explicitly published full rendition.
+ images += [x.get('data-zoom') or x.get('data-src') or x.get('src') for x in soup.select('.hero-gallery.-main img')]
  color=''
  variation=scope.select_one('.product-variations[data-current]')
  if variation:
   try:color=json.loads(variation['data-current']).get('color',{}).get('displayValue','')
   except (ValueError,TypeError):pass
  report['identity']['color']=color
+ seen_images=set()
  for image in dict.fromkeys(x for x in images if x):
-  image=urljoin(url,image);key=hashlib.sha256(image.encode()).hexdigest();kind='marketing' if re.search(r'lifestyle|packag|accessor',image,re.I) else 'feature' if re.search(r'diagram|technical|infographic',image,re.I) else 'product_gallery';wanted=identity['requested_components']['color'];observed=image_color(image);color_match=bool(wanted and identity['returned_components']['color']==wanted and (not color or color.casefold()==wanted.casefold()) and (not observed or observed==wanted))
-  bound=official(image) and kind=='product_gallery' and model_exact and (color_match if wanted else exact)
+  image=urljoin(url,image)
+  if image in seen_images:continue
+  seen_images.add(image)
+  key=hashlib.sha256(image.encode()).hexdigest()
+  if re.search(r'icon|\.svg(?:$|\?)',image,re.I):
+   report['photos'].append({'url':image,'asset_key':key,'role':'service_icon','verified':False,'reason':'Gallery UI icon, not a product photo'})
+   doc.photo_candidates.append(PhotoCandidate(image,key,'excluded',excluded_reason='Gallery UI icon, not a product photo'));continue
+  kind='marketing' if re.search(r'lifestyle|packag|accessor',image,re.I) else 'feature' if re.search(r'diagram|technical|infographic',image,re.I) else 'product_gallery';wanted=identity['requested_components']['color'];observed=image_color(image);color_match=bool(wanted and identity['returned_components']['color']==wanted and (not color or color.casefold()==wanted.casefold()) and (not observed or observed==wanted))
+  bound=official(image) and model_exact and (color_match if wanted else exact) and (exact if re.search(r'packag|accessor',image,re.I) else True)
   doc.photo_candidates.append(PhotoCandidate(image,key,kind=kind))
   report['photos'].append({'url':image,'asset_key':key,'relation':'exact_sku_gallery' if bound and exact else 'model_color_gallery' if bound else 'candidate','color':color,'role':kind,'verified':bound})
-  if bound:report['exact_photo_assets'].append(key)
+  if bound:
+   report.setdefault('all_official_photo_assets',[]).append(key)
+   if kind=='product_gallery':report['exact_photo_assets'].append(key)
  # Document relationship derives from a dedicated PDP download section, not footer links.
  downloads=soup.select_one('#pdp-specs--documents-content')
  links=downloads.select('a[href]') if downloads else soup.select('.pdp-specs a[href*="/pdfs/"]')

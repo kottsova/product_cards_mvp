@@ -1,0 +1,1500 @@
+{
+  "input": {
+    "id": 76,
+    "brand": "HyperX",
+    "dispatch_brand": "HyperX",
+    "article": "6L366AA",
+    "model": "HyperX Clutch Gladiate Wired",
+    "name": "HyperX Clutch Gladiate Wired",
+    "category": "Контроллеры",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/hyperx_stage73/frozen_inputs.json",
+    "original_input": {
+      "id": 9,
+      "article": "6L366AA",
+      "name": "HyperX Clutch Gladiate Wired",
+      "category": "Контроллеры"
+    }
+  },
+  "observed_at": "2026-10-13T09:21:37.952098+00:00",
+  "seconds": 11.39,
+  "job": {
+    "id": "55e26b9b94a74cd0a4a5508c44eacabd",
+    "product_id": 76,
+    "status": "done",
+    "current_stage": 3,
+    "message": "HyperX: exact_variant. Реальных конфликтов: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+    "created_at": "2026-10-13T09:21:26+00:00",
+    "updated_at": "2026-10-13T09:21:37+00:00",
+    "started_at": "2026-10-13T09:21:26+00:00",
+    "finished_at": "2026-10-13T09:21:37+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "id": 193,
+      "product_id": 76,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "not_needed",
+      "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+      "fetched_at": "2026-10-13T09:21:37+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 192,
+      "product_id": 76,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+      "found_model": "6L366AA",
+      "match_level": "exact_variant",
+      "evidence": "attribute_scope={\"model\": [\"Cable Type\", \"Compatibility\", \"Connection Type\"], \"variant\": [\"Cable Length (imperial) and type\", \"Color\", \"Height\", \"Length\", \"SKU\", \"Width\"]}; model_relation=model_confirmed; configuration_relation=exact_variant",
+      "fetched_at": "2026-10-13T09:21:37+00:00",
+      "error": "",
+      "description": "The HyperX Clutch Gladiate is a wired Xbox controller with dual trigger locks and remappable rear buttons, giving Xbox players customization options.",
+      "photos": [
+        "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_main_1.jpg?v=1763563251",
+        "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_2.jpg?v=1763563251",
+        "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_3.jpg?v=1763563251",
+        "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_4.jpg?v=1763563251",
+        "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_5.jpg?v=1763563251"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 3064,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Cable Length (imperial) and type",
+      "raw_value": "9.76ft | Detachable USB-C to USB-A Cable",
+      "section": "Physical Specifications",
+      "value_cell": null,
+      "normalized_name": "cable_length_imperial_and_type",
+      "normalized_value": "9.76ft | detachable usb-c to usb-a cable",
+      "unit": ""
+    },
+    {
+      "id": 3063,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Cable Type",
+      "raw_value": "Detachable USB-C to USB-A Cable",
+      "section": "Physical Specifications",
+      "value_cell": null,
+      "normalized_name": "cable_type",
+      "normalized_value": "detachable usb-c to usb-a cable",
+      "unit": ""
+    },
+    {
+      "id": 3066,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Color",
+      "raw_value": "Black",
+      "section": "Variant configuration",
+      "value_cell": null,
+      "normalized_name": "color",
+      "normalized_value": "black",
+      "unit": ""
+    },
+    {
+      "id": 3059,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Compatibility",
+      "raw_value": "Xbox Series X|S, Xbox One, PC",
+      "section": "Controller Specifications",
+      "value_cell": null,
+      "normalized_name": "compatibility",
+      "normalized_value": "xbox series x|s, xbox one, pc",
+      "unit": ""
+    },
+    {
+      "id": 3058,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Connection Type",
+      "raw_value": "Wired",
+      "section": "Controller Specifications",
+      "value_cell": null,
+      "normalized_name": "connection_type",
+      "normalized_value": "wired",
+      "unit": ""
+    },
+    {
+      "id": 3061,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Height",
+      "raw_value": "64.68mm",
+      "section": "Physical Specifications",
+      "value_cell": null,
+      "normalized_name": "height",
+      "normalized_value": "64.68",
+      "unit": "mm"
+    },
+    {
+      "id": 3060,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Length",
+      "raw_value": "155mm",
+      "section": "Physical Specifications",
+      "value_cell": null,
+      "normalized_name": "length",
+      "normalized_value": "155",
+      "unit": "mm"
+    },
+    {
+      "id": 3065,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "SKU",
+      "raw_value": "6L366AA",
+      "section": "Variant configuration",
+      "value_cell": null,
+      "normalized_name": "sku",
+      "normalized_value": "6l366aa",
+      "unit": ""
+    },
+    {
+      "id": 3062,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Width",
+      "raw_value": "110.56mm",
+      "section": "Physical Specifications",
+      "value_cell": null,
+      "normalized_name": "width",
+      "normalized_value": "110.56",
+      "unit": "mm"
+    }
+  ],
+  "resolved": [
+    {
+      "id": 2729,
+      "product_id": 76,
+      "normalized_name": "cable_length_imperial_and_type",
+      "selected_value": "9.76ft | detachable usb-c to usb-a cable",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2730,
+      "product_id": 76,
+      "normalized_name": "cable_type",
+      "selected_value": "detachable usb-c to usb-a cable",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2731,
+      "product_id": 76,
+      "normalized_name": "color",
+      "selected_value": "black",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2732,
+      "product_id": 76,
+      "normalized_name": "compatibility",
+      "selected_value": "xbox series x|s, xbox one, pc",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2733,
+      "product_id": 76,
+      "normalized_name": "connection_type",
+      "selected_value": "wired",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 2734,
+      "product_id": 76,
+      "normalized_name": "height",
+      "selected_value": "64.68",
+      "selected_unit": "mm",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2735,
+      "product_id": 76,
+      "normalized_name": "length",
+      "selected_value": "155",
+      "selected_unit": "mm",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2736,
+      "product_id": 76,
+      "normalized_name": "sku",
+      "selected_value": "6l366aa",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 2737,
+      "product_id": 76,
+      "normalized_name": "width",
+      "selected_value": "110.56",
+      "selected_unit": "mm",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T09:21:37+00:00",
+      "full_sku_confirmed": 1
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "cable_length_imperial_and_type",
+      "sources": {
+        "hyperx": {
+          "id": 3064,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Cable Length (imperial) and type",
+          "raw_value": "9.76ft | Detachable USB-C to USB-A Cable",
+          "section": "Physical Specifications",
+          "value_cell": null,
+          "normalized_name": "cable_length_imperial_and_type",
+          "normalized_value": "9.76ft | detachable usb-c to usb-a cable",
+          "unit": "",
+          "display_value": "9.76ft | detachable usb-c to usb-a cable",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Cable Length (imperial) and type"
+      ],
+      "display_name": "Длина и тип кабеля",
+      "resolved": {
+        "id": 2729,
+        "product_id": 76,
+        "normalized_name": "cable_length_imperial_and_type",
+        "selected_value": "9.76ft | detachable usb-c to usb-a cable",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "9.76ft | detachable usb-c to usb-a cable",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "cable_type",
+      "sources": {
+        "hyperx": {
+          "id": 3063,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Cable Type",
+          "raw_value": "Detachable USB-C to USB-A Cable",
+          "section": "Physical Specifications",
+          "value_cell": null,
+          "normalized_name": "cable_type",
+          "normalized_value": "detachable usb-c to usb-a cable",
+          "unit": "",
+          "display_value": "detachable usb-c to usb-a cable",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Cable Type"
+      ],
+      "display_name": "Тип кабеля",
+      "resolved": {
+        "id": 2730,
+        "product_id": 76,
+        "normalized_name": "cable_type",
+        "selected_value": "detachable usb-c to usb-a cable",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "detachable usb-c to usb-a cable",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "compatibility",
+      "sources": {
+        "hyperx": {
+          "id": 3059,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Compatibility",
+          "raw_value": "Xbox Series X|S, Xbox One, PC",
+          "section": "Controller Specifications",
+          "value_cell": null,
+          "normalized_name": "compatibility",
+          "normalized_value": "xbox series x|s, xbox one, pc",
+          "unit": "",
+          "display_value": "xbox series x|s, xbox one, pc",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Compatibility"
+      ],
+      "display_name": "Совместимость",
+      "resolved": {
+        "id": 2732,
+        "product_id": 76,
+        "normalized_name": "compatibility",
+        "selected_value": "xbox series x|s, xbox one, pc",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "xbox series x|s, xbox one, pc",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "connection_type",
+      "sources": {
+        "hyperx": {
+          "id": 3058,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Connection Type",
+          "raw_value": "Wired",
+          "section": "Controller Specifications",
+          "value_cell": null,
+          "normalized_name": "connection_type",
+          "normalized_value": "wired",
+          "unit": "",
+          "display_value": "wired",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Connection Type"
+      ],
+      "display_name": "Тип подключения",
+      "resolved": {
+        "id": 2733,
+        "product_id": 76,
+        "normalized_name": "connection_type",
+        "selected_value": "wired",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "wired",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "height",
+      "sources": {
+        "hyperx": {
+          "id": 3061,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Height",
+          "raw_value": "64.68mm",
+          "section": "Physical Specifications",
+          "value_cell": null,
+          "normalized_name": "height",
+          "normalized_value": "64.68",
+          "unit": "mm",
+          "display_value": "64.68 мм",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Height"
+      ],
+      "display_name": "Высота",
+      "resolved": {
+        "id": 2734,
+        "product_id": 76,
+        "normalized_name": "height",
+        "selected_value": "64.68",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "64.68 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "length",
+      "sources": {
+        "hyperx": {
+          "id": 3060,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Length",
+          "raw_value": "155mm",
+          "section": "Physical Specifications",
+          "value_cell": null,
+          "normalized_name": "length",
+          "normalized_value": "155",
+          "unit": "mm",
+          "display_value": "155 мм",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Length"
+      ],
+      "display_name": "Длина",
+      "resolved": {
+        "id": 2735,
+        "product_id": 76,
+        "normalized_name": "length",
+        "selected_value": "155",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "155 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "sku",
+      "sources": {
+        "hyperx": {
+          "id": 3065,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "SKU",
+          "raw_value": "6L366AA",
+          "section": "Variant configuration",
+          "value_cell": null,
+          "normalized_name": "sku",
+          "normalized_value": "6l366aa",
+          "unit": "",
+          "display_value": "6l366aa",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "SKU"
+      ],
+      "display_name": "Коммерческий SKU",
+      "resolved": {
+        "id": 2736,
+        "product_id": 76,
+        "normalized_name": "sku",
+        "selected_value": "6l366aa",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "6l366aa",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "width",
+      "sources": {
+        "hyperx": {
+          "id": 3062,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Width",
+          "raw_value": "110.56mm",
+          "section": "Physical Specifications",
+          "value_cell": null,
+          "normalized_name": "width",
+          "normalized_value": "110.56",
+          "unit": "mm",
+          "display_value": "110.56 мм",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Width"
+      ],
+      "display_name": "Ширина",
+      "resolved": {
+        "id": 2737,
+        "product_id": 76,
+        "normalized_name": "width",
+        "selected_value": "110.56",
+        "selected_unit": "mm",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "110.56 мм",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    },
+    {
+      "normalized_name": "color",
+      "sources": {
+        "hyperx": {
+          "id": 3066,
+          "product_id": 76,
+          "source_page_id": 192,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Color",
+          "raw_value": "Black",
+          "section": "Variant configuration",
+          "value_cell": null,
+          "normalized_name": "color",
+          "normalized_value": "black",
+          "unit": "",
+          "display_value": "black",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Color"
+      ],
+      "display_name": "Цвет",
+      "resolved": {
+        "id": 2731,
+        "product_id": 76,
+        "normalized_name": "color",
+        "selected_value": "black",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T09:21:37+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "black",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true
+    }
+  ],
+  "photos": [
+    {
+      "id": 1751,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_main_1.jpg?v=1763563251",
+      "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_main_1.jpg?v=1763563251",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:21:37+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "HyperX"
+    },
+    {
+      "id": 1752,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_2.jpg?v=1763563251",
+      "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_2.jpg?v=1763563251",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:21:37+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "HyperX"
+    },
+    {
+      "id": 1753,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_3.jpg?v=1763563251",
+      "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_3.jpg?v=1763563251",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:21:37+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "HyperX"
+    },
+    {
+      "id": 1754,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_4.jpg?v=1763563251",
+      "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_4.jpg?v=1763563251",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:21:37+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "HyperX"
+    },
+    {
+      "id": 1755,
+      "product_id": 76,
+      "source_page_id": 192,
+      "source_key": "hyperx",
+      "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_5.jpg?v=1763563251",
+      "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_5.jpg?v=1763563251",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-13T09:21:37+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "HyperX"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "model_name": "HyperX Clutch Gladiate – Gaming Controller – Xbox",
+    "input_code": "6L366AA",
+    "model_relation": "model_confirmed",
+    "configuration_relation": "exact_variant",
+    "requested_configuration": {},
+    "configuration_gaps": [],
+    "reason": "exact SKU and declared options",
+    "identity_relations": [
+      {
+        "type": "storefront_product_id",
+        "value": "7730772803741",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller"
+      },
+      {
+        "type": "merchant_sku",
+        "value": "6L366AA",
+        "base": "6L366AA",
+        "regional_suffix": "",
+        "shopify_variant_id": "43495937933469",
+        "options": {
+          "Color": "Black"
+        },
+        "accepted": true,
+        "relation": "exact_variant",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller?variant=43495937933469"
+      }
+    ],
+    "raw_specs": [
+      {
+        "section": "Controller Specifications",
+        "raw_label": "Connection Type",
+        "value": "Wired"
+      },
+      {
+        "section": "Controller Specifications",
+        "raw_label": "Compatibility",
+        "value": "Xbox Series X|S, Xbox One, PC"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Length",
+        "value": "155mm"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Height",
+        "value": "64.68mm"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Width",
+        "value": "110.56mm"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Cable Type",
+        "value": "Detachable USB-C to USB-A Cable"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Cable Length (imperial) and type",
+        "value": "9.76ft | Detachable USB-C to USB-A Cable"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Controller Specifications",
+        "raw_label": "Connection Type",
+        "value": "Wired",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "evidence": "<table><tr><th>Connection Type</th><td>Wired</td></tr></table>",
+        "accepted_label": "Connection Type",
+        "accepted_section": "Controller Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Controller Specifications",
+        "raw_label": "Compatibility",
+        "value": "Xbox Series X|S, Xbox One, PC",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "evidence": "<table><tr><th>Compatibility</th><td>Xbox Series X|S, Xbox One, PC</td></tr></table>",
+        "accepted_label": "Compatibility",
+        "accepted_section": "Controller Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Length",
+        "value": "155mm",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "evidence": "<table><tr><th>Length</th><td>155mm</td></tr></table>",
+        "accepted_label": "Length",
+        "accepted_section": "Physical Specifications",
+        "scope": "variant"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Height",
+        "value": "64.68mm",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "evidence": "<table><tr><th>Height</th><td>64.68mm</td></tr></table>",
+        "accepted_label": "Height",
+        "accepted_section": "Physical Specifications",
+        "scope": "variant"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Width",
+        "value": "110.56mm",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "evidence": "<table><tr><th>Width</th><td>110.56mm</td></tr></table>",
+        "accepted_label": "Width",
+        "accepted_section": "Physical Specifications",
+        "scope": "variant"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Cable Type",
+        "value": "Detachable USB-C to USB-A Cable",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "evidence": "<table><tr><th>Cable Type</th><td>Detachable USB-C to USB-A Cable</td></tr></table>",
+        "accepted_label": "Cable Type",
+        "accepted_section": "Physical Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Cable Length (imperial) and type",
+        "value": "9.76ft | Detachable USB-C to USB-A Cable",
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "evidence": "<table><tr><th>Cable Length (imperial) and type</th><td>9.76ft | Detachable USB-C to USB-A Cable</td></tr></table>",
+        "accepted_label": "Cable Length (imperial) and type",
+        "accepted_section": "Physical Specifications",
+        "scope": "variant"
+      }
+    ],
+    "rejected_specs": [],
+    "runtime_modes": [],
+    "audio_specs": [],
+    "runtime_limitations": "Unqualified table runtime retains unspecified mode; no Bluetooth-only or RGB mode inferred.",
+    "exact_photo_assets": [
+      "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_main_1.jpg?v=1763563251",
+      "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_2.jpg?v=1763563251",
+      "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_3.jpg?v=1763563251",
+      "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_4.jpg?v=1763563251",
+      "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_5.jpg?v=1763563251"
+    ],
+    "photos": [
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_main_1.jpg?v=1763563251",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_main_1.jpg?v=1763563251",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_2.jpg?v=1763563251",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_2.jpg?v=1763563251",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_3.jpg?v=1763563251",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_3.jpg?v=1763563251",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_4.jpg?v=1763563251",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_4.jpg?v=1763563251",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_5.jpg?v=1763563251",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_clutch_gladiate_6l366aa_angle_5.jpg?v=1763563251",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      }
+    ],
+    "manual_status": "Не проверена",
+    "manuals": [],
+    "dealer_fallback": {}
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "gaps": [],
+    "blocking_gaps": [],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "confirmed_specs": 7,
+    "official_facts": 7,
+    "exact_identity": true,
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_variant"
+    },
+    "manual_status": "Не проверена",
+    "conflicts": 0
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "hyperx_catalog_cache",
+      "provider": "session_catalog_cache",
+      "reason": "same-session navigation metadata only; PDP always fresh",
+      "source_type": "catalog_cache",
+      "timestamp": "2026-10-13T09:21:26+00:00",
+      "url": "https://hyperx.com/"
+    },
+    {
+      "accepted": false,
+      "event": "hyperx_query",
+      "identity_relation": "unverified",
+      "provider": "official_catalog_search",
+      "query": "6L366AA",
+      "reason": "discovery_only",
+      "region": "hyperx.com",
+      "source_type": "search",
+      "timestamp": "2026-10-13T09:21:26+00:00",
+      "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=6L366AA"
+    },
+    {
+      "accepted": true,
+      "browser": {
+        "captured_at": "2026-10-13T09:21:30+00:00",
+        "counts": {
+          "blocked_font_requests": 3,
+          "blocked_image_requests": 7,
+          "document_bytes": 395719,
+          "document_requests": 2,
+          "document_status": 200,
+          "javascript_errors": 6,
+          "navigations": 1,
+          "network_requests": 107,
+          "other_requests": 41,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://use.typekit.net/nya1ybm.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P9TRBRZ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://shop.app/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=19431581&shop_id=56183455901"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/storefront/standard-actions.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/s/javascripts/currencies.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://staticw2.yotpo.com//widget.js?lang=en"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://shop.app/[redacted]"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/unstable/graphql.json"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/shopify_pay/accelerated_checkout"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk?shop=hyperx-us.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "ping",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            }
+          ],
+          "resource_attempts": 117,
+          "script_xhr_fetch_requests": 27,
+          "stylesheet_requests": 37
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=6L366AA"
+          }
+        ],
+        "session_id": "public_browser:798b63762a1a47e5a40700250fe9d388",
+        "sha256": "3c48b0e83c62ccf549fe417696f88d6e63f64d0a7e4d46f12703e681f1b14d15",
+        "status_code": 200,
+        "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=6L366AA",
+        "visible": true
+      },
+      "event": "hyperx_fetch",
+      "final_url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=6L366AA",
+      "http_status": 200,
+      "identity_relation": "not_checked",
+      "provider": "official_live_browser",
+      "reason": "ordinary visible persistent session; identity checked separately",
+      "region": "hyperx.com",
+      "source_type": "fresh_dom",
+      "timestamp": "2026-10-13T09:21:30+00:00",
+      "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=6L366AA"
+    },
+    {
+      "accepted": true,
+      "browser": {
+        "captured_at": "2026-10-13T09:21:35+00:00",
+        "counts": {
+          "blocked_font_requests": 3,
+          "blocked_image_requests": 35,
+          "document_bytes": 670440,
+          "document_requests": 2,
+          "document_status": 200,
+          "javascript_errors": 9,
+          "navigations": 1,
+          "network_requests": 114,
+          "other_requests": 39,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://use.typekit.net/nya1ybm.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P9TRBRZ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://shop.app/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=19431581&shop_id=56183455901"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.payment-terms.en.esm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/storefront/standard-actions.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-1-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-2-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-3-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/s/javascripts/currencies.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-4-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-5-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-6-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-7-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-8-hyperx-clutch-gladiate-wired-xbox-gaming-controller.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://staticw2.yotpo.com//widget.js?lang=en"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/unstable/graphql.json"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://shop.app/[redacted]"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/shopify_pay/accelerated_checkout"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            }
+          ],
+          "resource_attempts": 152,
+          "script_xhr_fetch_requests": 35,
+          "stylesheet_requests": 38
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller"
+          }
+        ],
+        "session_id": "public_browser:798b63762a1a47e5a40700250fe9d388",
+        "sha256": "df045c7e7106cac92674345c1663a573c057abdcdeda6d868f110796f407d888",
+        "status_code": 200,
+        "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+        "visible": true
+      },
+      "event": "hyperx_fetch",
+      "final_url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller",
+      "http_status": 200,
+      "identity_relation": "not_checked",
+      "provider": "official_live_browser",
+      "reason": "ordinary visible persistent session; identity checked separately",
+      "region": "hyperx.com",
+      "source_type": "fresh_dom",
+      "timestamp": "2026-10-13T09:21:35+00:00",
+      "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller"
+    },
+    {
+      "accepted": true,
+      "configuration_identity": "exact_variant",
+      "event": "hyperx_identity",
+      "identity_relation": "exact_variant",
+      "model_identity": "model_confirmed",
+      "provider": "official_catalog_search",
+      "query": "6L366AA",
+      "reason": "exact SKU and declared options",
+      "region": "hyperx.com",
+      "source_type": "official_pdp",
+      "timestamp": "2026-10-13T09:21:37+00:00",
+      "url": "https://hyperx.com/products/hyperx-clutch-gladiate-wired-xbox-gaming-controller"
+    }
+  ]
+}

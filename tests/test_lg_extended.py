@@ -143,7 +143,9 @@ class PhotoAndExportTests(unittest.TestCase):
             candidate_rows=list(book["Фото-кандидаты"].iter_rows(values_only=True)); self.assertEqual(len(candidate_rows),2)
             self.assertEqual(candidate_rows[1][5],"Связь с артикулом не подтверждена")
             product_rows=list(book["Паровые шкафы"].iter_rows(values_only=True))
-            self.assertTrue(all(value is None for value in product_rows[1][5:]))
+            color_column=headers.index('Цвет')
+            self.assertEqual('не подтверждён',product_rows[1][color_column])
+            self.assertTrue(all(value is None for i,value in enumerate(product_rows[1]) if i>=5 and i!=color_column))
         finally: book.close()
 
 if __name__=="__main__": unittest.main()

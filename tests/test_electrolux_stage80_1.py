@@ -1,5 +1,6 @@
 """Deterministic timeout -> ordinary worker job -> fresh context/re-run."""
 import json,os,sys,sqlite3,tempfile,time,unittest
+from contextlib import closing
 from pathlib import Path
 from unittest.mock import patch
 from product_tool import jobs,worker,card_evidence,discovery_trace
@@ -20,7 +21,7 @@ class NoInventoryAdapter(ElectroluxAdapter):
 
 def database(root):
  db=root/'test.sqlite3';jobs.initialize(db);discovery_trace.initialize(db)
- with sqlite3.connect(db) as c:
+ with closing(sqlite3.connect(db)) as c,c:
   c.execute("INSERT INTO batches VALUES ('fault','offline.xlsx','Products','{}','2026-10-13')")
   for pid in (1,2):
    c.execute("INSERT INTO products (id,batch_id,row_number,name,brand,search_code,alternate_code,category,needs_confirmation,issues_json,original_values_json,identity_json) VALUES (?,'fault',?,'Electrolux EOF6P46X','Electrolux','EOF6P46X','','Духовые шкафы',0,'[]','{}','{}')",(pid,pid+1))

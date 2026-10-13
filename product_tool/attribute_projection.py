@@ -151,7 +151,7 @@ def project_final_rows(rows: list[dict[str, Any]], *, exact_ru: bool = False) ->
                   key=lambda row: row["display_name"].casefold())
 
 
-def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
+def _brand_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
     rows = jobs.comparison_rows(path, product_id)
     product = jobs.get_product(path, product_id)
     if product and product['brand'].strip().casefold()=='electrolux':
@@ -231,3 +231,29 @@ def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
                        and not source["error"] for source in sources)
         return project_final_rows(rows, exact_ru=exact_ru)
     return rows
+
+
+def final_attribute_rows(path: Path, product_id: int) -> list[dict[str, Any]]:
+    from .canonical_attributes import project
+    return project(merge_dimension_aliases(_brand_attribute_rows(path,product_id),jobs.get_source_pages(path,product_id)))
+
+def merge_dimension_aliases(rows,source_pages):
+    """Several published composite labels can derive the same scoped axis."""
+    from collections import defaultdict
+    from dataclasses import asdict
+    from .resolution import resolve_attributes
+    from .display import display_value,display_status,display_source
+    groups=defaultdict(list)
+    for row in rows:groups[row['normalized_name']].append(row)
+    result=[]
+    for name,members in groups.items():
+        if len(members)==1 or not all(r.get('derived_from') and re.search(r'_(?:w|h|d)_mm$',name) for r in members):
+            result.extend(members);continue
+        facts=[{**fact,'normalized_name':name} for row in members for fact in row['sources'].values()]
+        chosen=asdict(resolve_attributes(facts,source_pages)[0])
+        chosen.update(display_value=display_value(chosen['selected_value'],chosen['selected_unit']),display_status=display_status(chosen['status'],chosen['selected_source']),display_source=display_source(chosen['selected_source']))
+        sources={}
+        for row in members:
+            for key,fact in row['sources'].items():sources.setdefault(key,fact)
+        result.append({**members[0],'sources':sources,'raw_names':list(dict.fromkeys(n for r in members for n in r['raw_names'])),'derived_from_names':list(dict.fromkeys(r['derived_from'] for r in members)),'resolved':{**members[0]['resolved'],**chosen}})
+    return result

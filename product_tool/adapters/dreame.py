@@ -55,11 +55,11 @@ def manual_assessment(pages,tokens):
     return check,headings
 
 class DreameAdapter(XiaomiAdapter):
-    def __init__(self,*,clock=time.monotonic,fetch_log_path=Path('data/dreame_fetch_log.json'),session=None,trace_callback=None,capture_dir=None,search_provider=None,browser_session=None):
+    def __init__(self,*,clock=time.monotonic,fetch_log_path=Path('data/dreame_fetch_log.json'),session=None,trace_callback=None,capture_dir=None,search_provider=None,browser_session=None,manuals_enabled=True):
         self.browser_session=browser_session;self.access_issues=[];self.new_access_stop=False
         transport=browser_session.binary_transport(max_bytes=15_000_000) if browser_session else requests.Session()
         http=session or PolicyAwareSession(Path(fetch_log_path),allowed_hosts=MEDIA_HOSTS,underlying=BinarySafeSession(transport),max_bytes=15_000_000)
-        super().__init__(clock=clock,fetch_log_path=fetch_log_path,session=http,trace_callback=trace_callback,capture_dir=capture_dir or Path(fetch_log_path).parent/'dreame_captures',search_provider=search_provider)
+        super().__init__(clock=clock,fetch_log_path=fetch_log_path,session=http,trace_callback=trace_callback,capture_dir=capture_dir or Path(fetch_log_path).parent/'dreame_captures',search_provider=search_provider,manuals_enabled=manuals_enabled)
         self.support_inventory=[]
 
     def fetch(self,url,*,query='',provider='official',source_type='document',cache=False):
@@ -159,7 +159,8 @@ class DreameAdapter(XiaomiAdapter):
             if best:break
             if self.new_access_stop:break
         if not best and not self.new_access_stop:
-            for u in list(dict.fromkeys(self.support_inventory))[:1]:self.fetch(u,query=wanted,provider='official_support',source_type='manual_inventory',cache=True)
+            if self.manuals_enabled:
+                for u in list(dict.fromkeys(self.support_inventory))[:1]:self.fetch(u,query=wanted,provider='official_support',source_type='manual_inventory',cache=True)
             from .lg_browser_search import LGBrowserSearch
             hosts=tuple(urlsplit(u).hostname for u in ROOTS)
             search=self.search_provider or LGBrowserSearch(self.log,official_host=hosts[0],official_hosts=hosts,allowed_hosts=hosts+('www.google.com','google.com','gstatic.com','www.bing.com','bing.com','duckduckgo.com'),candidate_classifier=lambda u:'product' if official(u) and '/products/' in u else 'support' if official(u) and 'manual' in u else 'unknown')
