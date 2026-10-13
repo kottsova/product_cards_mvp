@@ -1,0 +1,35 @@
+{
+  "stage": "Stage 82",
+  "audit_qualification": "PASS",
+  "baseline_unsupported": 1643,
+  "classes": {
+    "A": 836,
+    "B": 415,
+    "D": 70,
+    "C": 105,
+    "E": 39,
+    "F": 49,
+    "H": 122,
+    "G": 7
+  },
+  "native_schema_categories": 38,
+  "canonical_UI_Excel_rows": 3610,
+  "duplicate_canonical_keys": 0,
+  "all_rows_have_decisions": true,
+  "mapped_rows_have_native_targets": true,
+  "gallery_evidence_unchanged": true,
+  "discovery_and_photo_manual_pipelines_unchanged": true,
+  "targeted_regression": "114 tests OK",
+  "prior_full_regression": "Two 1906-test complete runs OK; final source digest differs only for final presentation/scope guards, to be covered by release regression",
+  "release_gate": "Full release regression and diff check passed; authorized commit/push/synchronized clean tree verification follow.",
+  "release_regression": {
+    "exit_code": 0,
+    "source_tree_unchanged": true,
+    "elapsed_seconds": 850.53,
+    "result": [
+      "Ran 1907 tests in 846.594s",
+      "OK"
+    ],
+    "network": "offline test guard"
+  }
+}

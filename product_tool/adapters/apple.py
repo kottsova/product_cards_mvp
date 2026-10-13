@@ -108,6 +108,27 @@ def parse_page(html,url,article):
    # Preserve individual statements without merging different metrics into one fact.
    ev['configuration_candidates'].append(dict(section=sec,raw_label=sec,value=value,reason='model_feature_requires_canonical_mapping'));continue
   doc.attributes.append(RawAttribute(name,value,section=sec,value_cell=True))
+ # An exact order page and a qualified Tech Specs page publish the same
+ # semantic sections. Reuse their scope-aware mapper, retaining both origins.
+ # No SKU suffix is decoded and unresolved configurations remain candidates.
+ from ..apple_identity import identify,MODELS,append_qualified_sections
+ model_key=identify(title)
+ if model_key and groups:
+  grouped={}
+  for section,value in groups:grouped.setdefault(section,[]).append(value)
+  audit={'raw_specs':[],'admitted':[],'candidates':[]}
+  extra=SourceDocument('apple','Apple',url)
+  config={}
+  size=re.search(r'\b(\d{2})mm\b',title)
+  if size:config['case_size']=size[1]
+  for material in ('Aluminum','Titanium'):
+   if re.search(r'\b'+material+r'\b',title,re.I):config['material']=material
+  for connection in ('Wi-Fi + Cellular','GPS + Cellular','Wi-Fi','GPS'):
+   if connection in title:config['connectivity']=connection;break
+  append_qualified_sections(extra,audit,[(s,v,None) for s,v in grouped.items()],MODELS[model_key][2],config)
+  existing={(a.name,a.value,a.section) for a in doc.attributes}
+  doc.attributes.extend(a for a in extra.attributes if (a.name,a.value,a.section) not in existing)
+  ev['admitted']=audit['admitted'];ev['configuration_candidates'].extend(audit['candidates'])
  for x in data:
   if x.get('@type')!='ImageGallery' or not official(x.get('url','')):continue
   for im in x.get('associatedMedia',[]):

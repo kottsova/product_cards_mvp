@@ -50,6 +50,9 @@ def augment_page(doc, ev, soup, url, article, expected):
     for h in soup.select('h2,h3,h4'):
         label=clean_text(h.get_text(' ',strip=True)).casefold()
         if label in {'features','built-in microphone and headset jack','planar magnetic drivers','playstation link technology','bluetooth','ai-enhanced noise rejection','long battery life with quick charging','8-inch lcd screen','haptic feedback','adaptive triggers'}:
+            # The named capability heading owns its explanation; omitting it
+            # loses a feature when the following prose uses a synonym.
+            prose+=' '+clean_text(h.get_text(' ',strip=True))
             for n in h.next_elements:
                 if getattr(n,'name',None) in ('h1','h2','h3','h4'):break
                 if getattr(n,'name',None) in ('p','li'):prose+=' '+clean_text(n.get_text(' ',strip=True))
@@ -77,6 +80,7 @@ def augment_page(doc, ev, soup, url, article, expected):
     for label,value,raw in technical:
         ev['raw_specs'].append(dict(section='Own product features',raw_label=label,value=raw,scope='model'))
         if not any(a.name==label and a.value==value for a in doc.attributes):doc.attributes.append(RawAttribute(label,value,section='Возможности модели',value_cell=True))
+        ev.setdefault('accepted_specs',[]).append(dict(section='Own product features',raw_label=label,raw_value=raw,derived_fields=[dict(name=label,value=value)]))
     if exact_hw:
         ev['hardware_attributes']=[]
         for table in soup.select('table'):

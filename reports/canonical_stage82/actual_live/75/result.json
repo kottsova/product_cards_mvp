@@ -1,0 +1,2053 @@
+{
+  "input": {
+    "id": 75,
+    "brand": "HyperX",
+    "dispatch_brand": "HyperX",
+    "article": "872V1AA",
+    "model": "HyperX QuadCast 2",
+    "name": "HyperX QuadCast 2 [color=Black]",
+    "category": "Микрофоны",
+    "input_configuration": {},
+    "region": "",
+    "input_pnc": null,
+    "input_color": null,
+    "provenance": "reports/hyperx_stage73/frozen_inputs.json",
+    "original_input": {
+      "id": 8,
+      "article": "872V1AA",
+      "name": "HyperX QuadCast 2 [color=Black]",
+      "category": "Микрофоны"
+    }
+  },
+  "observed_at": "2026-10-13T17:59:41.438630+00:00",
+  "seconds": 16.98,
+  "job": {
+    "id": "07611a3a34404c92aaa77aed3e7461ee",
+    "product_id": 75,
+    "status": "done",
+    "current_stage": 3,
+    "message": "HyperX: exact_variant. Реальных конфликтов: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан.",
+    "created_at": "2026-10-13T17:59:24+00:00",
+    "updated_at": "2026-10-13T17:59:41+00:00",
+    "started_at": "2026-10-13T17:59:24+00:00",
+    "finished_at": "2026-10-13T17:59:41+00:00",
+    "stages": [
+      1,
+      3
+    ]
+  },
+  "sources": [
+    {
+      "id": 24,
+      "product_id": 75,
+      "source_key": "dns",
+      "site_name": "DNS",
+      "url": "",
+      "found_model": "",
+      "match_level": "not_needed",
+      "evidence": "Все запрошенные для этого задания поля уже получены из других источников; дилерский запрос не требуется.",
+      "fetched_at": "2026-10-13T17:59:41+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": 23,
+      "product_id": 75,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+      "found_model": "872V1AA",
+      "match_level": "exact_variant",
+      "evidence": "attribute_scope={\"model\": [\"Connection Type\", \"Element\", \"Frequency Response (microphone)\", \"Polar Pattern\", \"Recording Bit-Depth\", \"Recording Sample Rate\", \"SNR\", \"Self-noise (RMS)\", \"Sensitivity (microphone)\"], \"variant\": [\"Color\", \"SKU\"]}; model_relation=model_confirmed; configuration_relation=exact_variant",
+      "fetched_at": "2026-10-13T17:59:40+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 506,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Color",
+      "raw_value": "Black",
+      "section": "Variant configuration",
+      "value_cell": null,
+      "normalized_name": "color",
+      "normalized_value": "black",
+      "unit": ""
+    },
+    {
+      "id": 504,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Connection Type",
+      "raw_value": "USB-C, 3.5mm headphone output",
+      "section": "Connections and Features",
+      "value_cell": null,
+      "normalized_name": "connection_type",
+      "normalized_value": "usb-c, 3.5mm headphone output",
+      "unit": ""
+    },
+    {
+      "id": 498,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Element",
+      "raw_value": "Three 14mm electret condenser capsules",
+      "section": "Microphone Specifications",
+      "value_cell": null,
+      "normalized_name": "element",
+      "normalized_value": "three 14mm electret condenser capsules",
+      "unit": ""
+    },
+    {
+      "id": 500,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Frequency Response (microphone)",
+      "raw_value": "20Hz - 20kHz",
+      "section": "Microphone Specifications",
+      "value_cell": null,
+      "normalized_name": "frequency_response_microphone",
+      "normalized_value": "20hz - 20khz",
+      "unit": ""
+    },
+    {
+      "id": 499,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Polar Pattern",
+      "raw_value": "Cardioid, omnidirectional, stereo, bidirectional",
+      "section": "Microphone Specifications",
+      "value_cell": null,
+      "normalized_name": "polar_pattern",
+      "normalized_value": "cardioid, omnidirectional, stereo, bidirectional",
+      "unit": ""
+    },
+    {
+      "id": 507,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Recording Bit-Depth",
+      "raw_value": "24-bit",
+      "section": "Microphone recording",
+      "value_cell": null,
+      "normalized_name": "recording_bit_depth",
+      "normalized_value": "24-bit",
+      "unit": ""
+    },
+    {
+      "id": 508,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Recording Sample Rate",
+      "raw_value": "96 kHz",
+      "section": "Microphone recording",
+      "value_cell": null,
+      "normalized_name": "recording_sample_rate",
+      "normalized_value": "96 khz",
+      "unit": ""
+    },
+    {
+      "id": 502,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Self-noise (RMS)",
+      "raw_value": "≤-77dBV (A-weighted)",
+      "section": "Microphone Specifications",
+      "value_cell": null,
+      "normalized_name": "self_noise_rms",
+      "normalized_value": "≤-77dbv (a-weighted)",
+      "unit": ""
+    },
+    {
+      "id": 501,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "Sensitivity (microphone)",
+      "raw_value": "'-7.5dB (1V/Pa at 1kHz)",
+      "section": "Microphone Specifications",
+      "value_cell": null,
+      "normalized_name": "sensitivity_microphone",
+      "normalized_value": "'-7.5db (1v/pa at 1khz)",
+      "unit": ""
+    },
+    {
+      "id": 505,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "SKU",
+      "raw_value": "872V1AA",
+      "section": "Variant configuration",
+      "value_cell": null,
+      "normalized_name": "sku",
+      "normalized_value": "872v1aa",
+      "unit": ""
+    },
+    {
+      "id": 503,
+      "product_id": 75,
+      "source_page_id": 23,
+      "source_key": "hyperx",
+      "site_name": "HyperX",
+      "raw_name": "SNR",
+      "raw_value": "≥ 100dB (at 1kHz/0dBFS, A-weighted)",
+      "section": "Microphone Specifications",
+      "value_cell": null,
+      "normalized_name": "snr",
+      "normalized_value": "≥ 100db (at 1khz/0dbfs, a-weighted)",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 415,
+      "product_id": 75,
+      "normalized_name": "color",
+      "selected_value": "black",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 416,
+      "product_id": 75,
+      "normalized_name": "connection_type",
+      "selected_value": "usb-c, 3.5mm headphone output",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 417,
+      "product_id": 75,
+      "normalized_name": "element",
+      "selected_value": "three 14mm electret condenser capsules",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 418,
+      "product_id": 75,
+      "normalized_name": "frequency_response_microphone",
+      "selected_value": "20hz - 20khz",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 419,
+      "product_id": 75,
+      "normalized_name": "polar_pattern",
+      "selected_value": "cardioid, omnidirectional, stereo, bidirectional",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 420,
+      "product_id": 75,
+      "normalized_name": "recording_bit_depth",
+      "selected_value": "24-bit",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 421,
+      "product_id": 75,
+      "normalized_name": "recording_sample_rate",
+      "selected_value": "96 khz",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 422,
+      "product_id": 75,
+      "normalized_name": "self_noise_rms",
+      "selected_value": "≤-77dbv (a-weighted)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 423,
+      "product_id": 75,
+      "normalized_name": "sensitivity_microphone",
+      "selected_value": "'-7.5db (1v/pa at 1khz)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    },
+    {
+      "id": 424,
+      "product_id": 75,
+      "normalized_name": "sku",
+      "selected_value": "872v1aa",
+      "selected_unit": "",
+      "status": "full_sku_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 1
+    },
+    {
+      "id": 425,
+      "product_id": 75,
+      "normalized_name": "snr",
+      "selected_value": "≥ 100db (at 1khz/0dbfs, a-weighted)",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+      "selected_source": "hyperx",
+      "conflict": 0,
+      "updated_at": "2026-10-13T17:59:41+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "canonical_output": [
+    {
+      "normalized_name": "connection_type",
+      "sources": {
+        "hyperx": {
+          "id": 504,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Connection Type",
+          "raw_value": "USB-C, 3.5mm headphone output",
+          "section": "Connections and Features",
+          "value_cell": null,
+          "normalized_name": "connection_type",
+          "normalized_value": "usb-c, 3.5mm headphone output",
+          "unit": "",
+          "display_value": "usb-c, 3.5mm headphone output",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Connection Type"
+      ],
+      "display_name": "Тип подключения",
+      "resolved": {
+        "id": 416,
+        "product_id": 75,
+        "normalized_name": "connection_type",
+        "selected_value": "usb-c, 3.5mm headphone output",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "USB-C, 3.5мм headphone output",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Подключение и функции",
+      "category_attribute_key": "Подключение и функции / Тип подключения",
+      "canonical_role": "feature"
+    },
+    {
+      "normalized_name": "element",
+      "sources": {
+        "hyperx": {
+          "id": 498,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Element",
+          "raw_value": "Three 14mm electret condenser capsules",
+          "section": "Microphone Specifications",
+          "value_cell": null,
+          "normalized_name": "element",
+          "normalized_value": "three 14mm electret condenser capsules",
+          "unit": "",
+          "display_value": "three 14mm electret condenser capsules",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Element"
+      ],
+      "display_name": "Тип капсюля",
+      "resolved": {
+        "id": 417,
+        "product_id": 75,
+        "normalized_name": "element",
+        "selected_value": "three 14mm electret condenser capsules",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Three 14мм electret condenser capsules",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Микрофон",
+      "category_attribute_key": "Микрофон / Тип капсюля"
+    },
+    {
+      "normalized_name": "frequency_response_microphone",
+      "sources": {
+        "hyperx": {
+          "id": 500,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Frequency Response (microphone)",
+          "raw_value": "20Hz - 20kHz",
+          "section": "Microphone Specifications",
+          "value_cell": null,
+          "normalized_name": "frequency_response_microphone",
+          "normalized_value": "20hz - 20khz",
+          "unit": "",
+          "display_value": "20hz - 20khz",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Frequency Response (microphone)"
+      ],
+      "display_name": "Диапазон частот микрофона",
+      "resolved": {
+        "id": 418,
+        "product_id": 75,
+        "normalized_name": "frequency_response_microphone",
+        "selected_value": "20hz - 20khz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "20Гц - 20кГц",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Микрофон",
+      "category_attribute_key": "Микрофон / Диапазон частот микрофона"
+    },
+    {
+      "normalized_name": "polar_pattern",
+      "sources": {
+        "hyperx": {
+          "id": 499,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Polar Pattern",
+          "raw_value": "Cardioid, omnidirectional, stereo, bidirectional",
+          "section": "Microphone Specifications",
+          "value_cell": null,
+          "normalized_name": "polar_pattern",
+          "normalized_value": "cardioid, omnidirectional, stereo, bidirectional",
+          "unit": "",
+          "display_value": "cardioid, omnidirectional, stereo, bidirectional",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Polar Pattern"
+      ],
+      "display_name": "Диаграмма направленности",
+      "resolved": {
+        "id": 419,
+        "product_id": 75,
+        "normalized_name": "polar_pattern",
+        "selected_value": "cardioid, omnidirectional, stereo, bidirectional",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Cardioid, omnidirectional, stereo, bidirectional",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Микрофон",
+      "category_attribute_key": "Микрофон / Диаграмма направленности"
+    },
+    {
+      "normalized_name": "recording_bit_depth",
+      "sources": {
+        "hyperx": {
+          "id": 507,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Recording Bit-Depth",
+          "raw_value": "24-bit",
+          "section": "Microphone recording",
+          "value_cell": null,
+          "normalized_name": "recording_bit_depth",
+          "normalized_value": "24-bit",
+          "unit": "",
+          "display_value": "24-bit",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Recording Bit-Depth"
+      ],
+      "display_name": "Разрядность записи",
+      "resolved": {
+        "id": 420,
+        "product_id": 75,
+        "normalized_name": "recording_bit_depth",
+        "selected_value": "24-bit",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "24-bit",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Запись микрофона",
+      "category_attribute_key": "Запись микрофона / Разрядность записи"
+    },
+    {
+      "normalized_name": "recording_sample_rate",
+      "sources": {
+        "hyperx": {
+          "id": 508,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Recording Sample Rate",
+          "raw_value": "96 kHz",
+          "section": "Microphone recording",
+          "value_cell": null,
+          "normalized_name": "recording_sample_rate",
+          "normalized_value": "96 khz",
+          "unit": "",
+          "display_value": "96 khz",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Recording Sample Rate"
+      ],
+      "display_name": "Частота дискретизации записи",
+      "resolved": {
+        "id": 421,
+        "product_id": 75,
+        "normalized_name": "recording_sample_rate",
+        "selected_value": "96 khz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "96 кГц",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Запись микрофона",
+      "category_attribute_key": "Запись микрофона / Частота дискретизации записи"
+    },
+    {
+      "normalized_name": "sku",
+      "sources": {
+        "hyperx": {
+          "id": 505,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "SKU",
+          "raw_value": "872V1AA",
+          "section": "Variant configuration",
+          "value_cell": null,
+          "normalized_name": "sku",
+          "normalized_value": "872v1aa",
+          "unit": "",
+          "display_value": "872v1aa",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "SKU"
+      ],
+      "display_name": "Коммерческий SKU",
+      "resolved": {
+        "id": 424,
+        "product_id": 75,
+        "normalized_name": "sku",
+        "selected_value": "872v1aa",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "872V1AA",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Конфигурация",
+      "category_attribute_key": "Конфигурация / Коммерческий SKU"
+    },
+    {
+      "normalized_name": "snr",
+      "sources": {
+        "hyperx": {
+          "id": 503,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "SNR",
+          "raw_value": "≥ 100dB (at 1kHz/0dBFS, A-weighted)",
+          "section": "Microphone Specifications",
+          "value_cell": null,
+          "normalized_name": "snr",
+          "normalized_value": "≥ 100db (at 1khz/0dbfs, a-weighted)",
+          "unit": "",
+          "display_value": "≥ 100db (at 1khz/0dbfs, a-weighted)",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "SNR"
+      ],
+      "display_name": "Отношение сигнал/шум",
+      "resolved": {
+        "id": 425,
+        "product_id": 75,
+        "normalized_name": "snr",
+        "selected_value": "≥ 100db (at 1khz/0dbfs, a-weighted)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "≥ 100дБ (at 1кГц/0dBFS, A-weighted)",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Микрофон",
+      "category_attribute_key": "Микрофон / Отношение сигнал/шум"
+    },
+    {
+      "normalized_name": "self_noise_rms",
+      "sources": {
+        "hyperx": {
+          "id": 502,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Self-noise (RMS)",
+          "raw_value": "≤-77dBV (A-weighted)",
+          "section": "Microphone Specifications",
+          "value_cell": null,
+          "normalized_name": "self_noise_rms",
+          "normalized_value": "≤-77dbv (a-weighted)",
+          "unit": "",
+          "display_value": "≤-77dbv (a-weighted)",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Self-noise (RMS)"
+      ],
+      "display_name": "Собственный шум (RMS)",
+      "resolved": {
+        "id": 422,
+        "product_id": 75,
+        "normalized_name": "self_noise_rms",
+        "selected_value": "≤-77dbv (a-weighted)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "≤-77dBV (A-weighted)",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Микрофон",
+      "category_attribute_key": "Микрофон / Собственный шум (RMS)"
+    },
+    {
+      "normalized_name": "sensitivity_microphone",
+      "sources": {
+        "hyperx": {
+          "id": 501,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Sensitivity (microphone)",
+          "raw_value": "'-7.5dB (1V/Pa at 1kHz)",
+          "section": "Microphone Specifications",
+          "value_cell": null,
+          "normalized_name": "sensitivity_microphone",
+          "normalized_value": "'-7.5db (1v/pa at 1khz)",
+          "unit": "",
+          "display_value": "'-7.5db (1v/pa at 1khz)",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Sensitivity (microphone)"
+      ],
+      "display_name": "Чувствительность микрофона",
+      "resolved": {
+        "id": 423,
+        "product_id": 75,
+        "normalized_name": "sensitivity_microphone",
+        "selected_value": "'-7.5db (1v/pa at 1khz)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "'-7.5дБ (1V/Па at 1кГц)",
+        "display_status": "Model confirmed official",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Микрофон",
+      "category_attribute_key": "Микрофон / Чувствительность микрофона"
+    },
+    {
+      "normalized_name": "color",
+      "sources": {
+        "hyperx": {
+          "id": 506,
+          "product_id": 75,
+          "source_page_id": 23,
+          "source_key": "hyperx",
+          "site_name": "HyperX",
+          "raw_name": "Color",
+          "raw_value": "Black",
+          "section": "Variant configuration",
+          "value_cell": null,
+          "normalized_name": "color",
+          "normalized_value": "black",
+          "unit": "",
+          "display_value": "black",
+          "display_source": "HyperX"
+        }
+      },
+      "raw_names": [
+        "Color"
+      ],
+      "display_name": "Цвет",
+      "resolved": {
+        "id": 415,
+        "product_id": 75,
+        "normalized_name": "color",
+        "selected_value": "black",
+        "selected_unit": "",
+        "status": "full_sku_official",
+        "reason": "Официальный факт HyperX; модель и коммерческий вариант разделены.",
+        "selected_source": "hyperx",
+        "conflict": 0,
+        "updated_at": "2026-10-13T17:59:41+00:00",
+        "full_sku_confirmed": 1,
+        "display_value": "Black",
+        "display_status": "Полный артикул на официальной странице Samsung",
+        "display_source": "hyperx"
+      },
+      "hyperx_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Конфигурация",
+      "category_attribute_key": "Конфигурация / Цвет"
+    }
+  ],
+  "photos": [],
+  "all_official_gallery": [],
+  "photo_evidence": null,
+  "documents": [],
+  "evidence": {
+    "model_name": "HyperX QuadCast 2 – USB Microphone",
+    "input_code": "872V1AA",
+    "model_relation": "model_confirmed",
+    "configuration_relation": "exact_variant",
+    "requested_configuration": {
+      "color": "Black"
+    },
+    "configuration_gaps": [],
+    "reason": "exact SKU and declared options",
+    "identity_relations": [
+      {
+        "type": "storefront_product_id",
+        "value": "8397953892509",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805"
+      },
+      {
+        "type": "merchant_sku",
+        "value": "AN1D9AA",
+        "base": "AN1D9AA",
+        "regional_suffix": "",
+        "shopify_variant_id": "46573195821213",
+        "options": {
+          "Color": "Frost"
+        },
+        "accepted": false,
+        "relation": "family_option_candidate",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=46573195821213"
+      },
+      {
+        "type": "merchant_sku",
+        "value": "872V1AA",
+        "base": "872V1AA",
+        "regional_suffix": "",
+        "shopify_variant_id": "45776721051805",
+        "options": {
+          "Color": "Black"
+        },
+        "accepted": true,
+        "relation": "exact_variant",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805"
+      }
+    ],
+    "raw_specs": [
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Element",
+        "value": "Three 14mm electret condenser capsules"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Polar Pattern",
+        "value": "Cardioid, omnidirectional, stereo, bidirectional"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Frequency Response",
+        "value": "20Hz - 20kHz"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Sensitivity",
+        "value": "'-7.5dB (1V/Pa at 1kHz)"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Self-noise (RMS)",
+        "value": "≤-77dBV (A-weighted)"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "SNR",
+        "value": "≥ 100dB (at 1kHz/0dBFS, A-weighted)"
+      },
+      {
+        "section": "Connections and Features",
+        "raw_label": "Connection Type",
+        "value": "USB-C, 3.5mm headphone output"
+      },
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Weight",
+        "value": "Weight (Microphone) 11.8 oz; (Shock mount and stand) 4.8 oz; (Microphone stand) 9.6 oz; Total Weight (with cable) 28.8 oz."
+      },
+      {
+        "section": "Microphone recording",
+        "raw_label": "Recording Bit-Depth",
+        "value": "24-bit",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "QuadCast 2 features upgraded 24-bit, 96kHz recording",
+        "scope": "model",
+        "claim_type": "official_explicit_audio_spec"
+      },
+      {
+        "section": "Microphone recording",
+        "raw_label": "Recording Sample Rate",
+        "value": "96 kHz",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "QuadCast 2 features upgraded 24-bit, 96kHz recording",
+        "scope": "model",
+        "claim_type": "official_explicit_audio_spec"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Element",
+        "value": "Three 14mm electret condenser capsules",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>Element</th><td>Three 14mm electret condenser capsules</td></tr></table>",
+        "accepted_label": "Element",
+        "accepted_section": "Microphone Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Polar Pattern",
+        "value": "Cardioid, omnidirectional, stereo, bidirectional",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>Polar Pattern</th><td>Cardioid, omnidirectional, stereo, bidirectional</td></tr></table>",
+        "accepted_label": "Polar Pattern",
+        "accepted_section": "Microphone Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Frequency Response",
+        "value": "20Hz - 20kHz",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>Frequency Response</th><td>20Hz - 20kHz</td></tr></table>",
+        "accepted_label": "Frequency Response (microphone)",
+        "accepted_section": "Microphone Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Sensitivity",
+        "value": "'-7.5dB (1V/Pa at 1kHz)",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>Sensitivity</th><td>'-7.5dB (1V/Pa at 1kHz)</td></tr></table>",
+        "accepted_label": "Sensitivity (microphone)",
+        "accepted_section": "Microphone Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "Self-noise (RMS)",
+        "value": "≤-77dBV (A-weighted)",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>Self-noise (RMS)</th><td>≤-77dBV (A-weighted)</td></tr></table>",
+        "accepted_label": "Self-noise (RMS)",
+        "accepted_section": "Microphone Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Microphone Specifications",
+        "raw_label": "SNR",
+        "value": "≥ 100dB (at 1kHz/0dBFS, A-weighted)",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>SNR</th><td>≥ 100dB (at 1kHz/0dBFS, A-weighted)</td></tr></table>",
+        "accepted_label": "SNR",
+        "accepted_section": "Microphone Specifications",
+        "scope": "model"
+      },
+      {
+        "section": "Connections and Features",
+        "raw_label": "Connection Type",
+        "value": "USB-C, 3.5mm headphone output",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>Connection Type</th><td>USB-C, 3.5mm headphone output</td></tr></table>",
+        "accepted_label": "Connection Type",
+        "accepted_section": "Connections and Features",
+        "scope": "model"
+      },
+      {
+        "section": "Microphone recording",
+        "raw_label": "Recording Bit-Depth",
+        "value": "24-bit",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "QuadCast 2 features upgraded 24-bit, 96kHz recording",
+        "scope": "model",
+        "claim_type": "official_explicit_audio_spec",
+        "accepted_label": "Recording Bit-Depth"
+      },
+      {
+        "section": "Microphone recording",
+        "raw_label": "Recording Sample Rate",
+        "value": "96 kHz",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "QuadCast 2 features upgraded 24-bit, 96kHz recording",
+        "scope": "model",
+        "claim_type": "official_explicit_audio_spec",
+        "accepted_label": "Recording Sample Rate"
+      }
+    ],
+    "rejected_specs": [
+      {
+        "section": "Physical Specifications",
+        "raw_label": "Weight",
+        "value": "Weight (Microphone) 11.8 oz; (Shock mount and stand) 4.8 oz; (Microphone stand) 9.6 oz; Total Weight (with cable) 28.8 oz.",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "<table><tr><th>Weight</th><td>Weight (Microphone) 11.8 oz; (Shock mount and stand) 4.8 oz; (Microphone stand) 9.6 oz; Total Weight (with cable) 28.8 oz.</td></tr></table>",
+        "reason": "selected_variant_not_requested"
+      }
+    ],
+    "runtime_modes": [],
+    "audio_specs": [
+      {
+        "section": "Microphone recording",
+        "raw_label": "Recording Bit-Depth",
+        "value": "24-bit",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "QuadCast 2 features upgraded 24-bit, 96kHz recording",
+        "scope": "model",
+        "claim_type": "official_explicit_audio_spec"
+      },
+      {
+        "section": "Microphone recording",
+        "raw_label": "Recording Sample Rate",
+        "value": "96 kHz",
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "evidence": "QuadCast 2 features upgraded 24-bit, 96kHz recording",
+        "scope": "model",
+        "claim_type": "official_explicit_audio_spec"
+      }
+    ],
+    "runtime_limitations": "Unqualified table runtime retains unspecified mode; no Bluetooth-only or RGB mode inferred.",
+    "exact_photo_assets": [
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_main_1.jpg?v=1787066305",
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_2.jpg?v=1787066305",
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_3_5010021e-78e5-432a-b288-24c118d70176.jpg?v=1787066305",
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_4.jpg?v=1787066308",
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_5.jpg?v=1787066305",
+      "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_6.jpg?v=1787066306"
+    ],
+    "photos": [
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_main_1.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_main_1.jpg?v=1787066305",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_1_hires_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_1_hires_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_2_tap_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_2_tap_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_4_mic_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_4_mic_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_3_multi_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_3_multi_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_6_stunning_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_6_stunning_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_5_removable_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_5_removable_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_7_four_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_7_four_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_8_customizable_en.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_annotated_8_customizable_en.jpg?v=1787066305",
+        "kind": "feature",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_2.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_2.jpg?v=1787066305",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_3_5010021e-78e5-432a-b288-24c118d70176.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_3_5010021e-78e5-432a-b288-24c118d70176.jpg?v=1787066305",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_4.jpg?v=1787066308",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_4.jpg?v=1787066308",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_5.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_5.jpg?v=1787066305",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_6.jpg?v=1787066306",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_872v1aa_angle_6.jpg?v=1787066306",
+        "kind": "product_gallery",
+        "width": null,
+        "height": null,
+        "excluded_reason": ""
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_main_1_7d7e9e04-38e7-486b-94c1-2917d98bff0f.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_main_1_7d7e9e04-38e7-486b-94c1-2917d98bff0f.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_2.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_2.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_3_019df62b-7a77-4c74-895b-5fec771e049f.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_3_019df62b-7a77-4c74-895b-5fec771e049f.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_4.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_4.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_5.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_5.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_6.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_6.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_7.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_7.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_8.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_8.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_9.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_9.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      },
+      {
+        "url": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_10.jpg?v=1787066305",
+        "asset_key": "https://hyperx.com/cdn/shop/files/hyperx_quadcast_2_gray_an1d9aa_angle_10.jpg?v=1787066305",
+        "kind": "excluded",
+        "width": null,
+        "height": null,
+        "excluded_reason": "other variant or shared media (Frost)"
+      }
+    ],
+    "manual_status": "Не проверена",
+    "manuals": [],
+    "dealer_fallback": {}
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "gaps": [
+      "gallery_missing",
+      "manual_unverified"
+    ],
+    "blocking_gaps": [
+      "gallery_missing"
+    ],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "confirmed_specs": 9,
+    "official_facts": 9,
+    "exact_identity": true,
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_variant"
+    },
+    "manual_status": "Не проверена",
+    "conflicts": 0,
+    "readiness_scope": "attributes_photos",
+    "manuals_required": false
+  },
+  "readiness_with_documents": {
+    "verdict": "not_ready",
+    "gaps": [
+      "gallery_missing"
+    ],
+    "blocking_gaps": [
+      "gallery_missing"
+    ],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "confirmed_specs": 9,
+    "official_facts": 9,
+    "exact_identity": true,
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "exact_variant"
+    },
+    "manual_status": "Не проверена",
+    "conflicts": 0
+  },
+  "trace": [
+    {
+      "accepted": true,
+      "browser": {
+        "captured_at": "2026-10-13T17:59:28+00:00",
+        "counts": {
+          "blocked_font_requests": 3,
+          "blocked_image_requests": 15,
+          "document_bytes": 513536,
+          "document_requests": 2,
+          "document_status": 200,
+          "javascript_errors": 6,
+          "navigations": 1,
+          "network_requests": 85,
+          "other_requests": 23,
+          "rejected_requests": [
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/storefront/standard-actions.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://use.typekit.net/nya1ybm.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://shop.app/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=19431581&shop_id=56183455901"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/s/javascripts/currencies.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P9TRBRZ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://staticw2.yotpo.com//widget.js?lang=en"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/unstable/graphql.json"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://shop.app/[redacted]"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/shopify_pay/accelerated_checkout"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk?shop=hyperx-us.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "ping",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            }
+          ],
+          "resource_attempts": 103,
+          "script_xhr_fetch_requests": 27,
+          "stylesheet_requests": 33
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://hyperx.com/"
+          }
+        ],
+        "session_id": "public_browser:079159df3eec4b50bec18e6d5040ea2f",
+        "sha256": "3cbb311eaeffafd0703558911ec97900578c7ccd75790bff9608522fc965e9a9",
+        "status_code": 200,
+        "url": "https://hyperx.com/",
+        "visible": true
+      },
+      "event": "hyperx_fetch",
+      "final_url": "https://hyperx.com/",
+      "http_status": 200,
+      "identity_relation": "not_checked",
+      "provider": "official_live_browser",
+      "reason": "ordinary visible persistent session; identity checked separately",
+      "region": "hyperx.com",
+      "source_type": "fresh_dom",
+      "timestamp": "2026-10-13T17:59:28+00:00",
+      "url": "https://hyperx.com/"
+    },
+    {
+      "accepted": false,
+      "event": "hyperx_query",
+      "identity_relation": "unverified",
+      "provider": "official_catalog_search",
+      "query": "872V1AA",
+      "reason": "discovery_only",
+      "region": "hyperx.com",
+      "source_type": "search",
+      "timestamp": "2026-10-13T17:59:29+00:00",
+      "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=872V1AA"
+    },
+    {
+      "accepted": true,
+      "browser": {
+        "captured_at": "2026-10-13T17:59:33+00:00",
+        "counts": {
+          "blocked_font_requests": 3,
+          "blocked_image_requests": 8,
+          "document_bytes": 417929,
+          "document_requests": 2,
+          "document_status": 200,
+          "javascript_errors": 6,
+          "navigations": 1,
+          "network_requests": 102,
+          "other_requests": 36,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://use.typekit.net/nya1ybm.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P9TRBRZ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://shop.app/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=19431581&shop_id=56183455901"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/storefront/standard-actions.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/s/javascripts/currencies.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://staticw2.yotpo.com//widget.js?lang=en"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/unstable/graphql.json"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://shop.app/[redacted]"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/shopify_pay/accelerated_checkout"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk?shop=hyperx-us.myshopify.com"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "ping",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            }
+          ],
+          "resource_attempts": 113,
+          "script_xhr_fetch_requests": 27,
+          "stylesheet_requests": 37
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=872V1AA"
+          }
+        ],
+        "session_id": "public_browser:079159df3eec4b50bec18e6d5040ea2f",
+        "sha256": "ef591021bd7bc14b9cbeccc7cd5fa9459f452c1f8fdfa1bd9d4f70a815844fb7",
+        "status_code": 200,
+        "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=872V1AA",
+        "visible": true
+      },
+      "event": "hyperx_fetch",
+      "final_url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=872V1AA",
+      "http_status": 200,
+      "identity_relation": "not_checked",
+      "provider": "official_live_browser",
+      "reason": "ordinary visible persistent session; identity checked separately",
+      "region": "hyperx.com",
+      "source_type": "fresh_dom",
+      "timestamp": "2026-10-13T17:59:33+00:00",
+      "url": "https://hyperx.com/search?options%5Bprefix%5D=last&type=product&q=872V1AA"
+    },
+    {
+      "accepted": true,
+      "browser": {
+        "captured_at": "2026-10-13T17:59:38+00:00",
+        "counts": {
+          "blocked_font_requests": 3,
+          "blocked_image_requests": 54,
+          "document_bytes": 851253,
+          "document_requests": 2,
+          "document_status": 200,
+          "javascript_errors": 9,
+          "navigations": 1,
+          "network_requests": 106,
+          "other_requests": 31,
+          "rejected_requests": [
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://use.typekit.net/nya1ybm.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn-widgetsrepository.yotpo.com/v1/loader/guBTinjrNiOG08XJdjBl36uwk8gO7gHUoPg4gDqk"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P9TRBRZ"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://shop.app/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=19431581&shop_id=56183455901"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.payment-terms.en.esm.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "stylesheet",
+              "url": "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/storefront/standard-actions.js"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-1-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-2-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-3-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-4-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://cdn.shopify.com/s/javascripts/currencies.js"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-5-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-6-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-7-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0561/8345/5901/files/kf-8-hyperx-quadcast-2-usb-microphone.jpg"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "script",
+              "url": "https://staticw2.yotpo.com//widget.js?lang=en"
+            },
+            {
+              "method": "GET",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://shop.app/[redacted]"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/unstable/graphql.json"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/api/collect"
+            },
+            {
+              "method": "POST",
+              "reason": "host_not_allowed",
+              "resource_type": "fetch",
+              "url": "https://otlp-http-production.shopifysvc.com/v1/metrics"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "fetch",
+              "url": "https://hyperx.com/shopify_pay/accelerated_checkout"
+            },
+            {
+              "method": "POST",
+              "reason": "method_or_account_flow",
+              "resource_type": "ping",
+              "url": "https://hyperx.com/.well-known/shopify/monorail/unstable/produce_batch"
+            }
+          ],
+          "resource_attempts": 163,
+          "script_xhr_fetch_requests": 35,
+          "stylesheet_requests": 38
+        },
+        "persistent": true,
+        "response_events": [
+          {
+            "main_document": true,
+            "status": 200,
+            "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805"
+          }
+        ],
+        "session_id": "public_browser:079159df3eec4b50bec18e6d5040ea2f",
+        "sha256": "885272504c6b797c5f61b55b553c7a0c1f576ac6ea23e8c82c63c8b1dbdf99c1",
+        "status_code": 200,
+        "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+        "visible": true
+      },
+      "event": "hyperx_fetch",
+      "final_url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805",
+      "http_status": 200,
+      "identity_relation": "not_checked",
+      "provider": "official_live_browser",
+      "reason": "ordinary visible persistent session; identity checked separately",
+      "region": "hyperx.com",
+      "source_type": "fresh_dom",
+      "timestamp": "2026-10-13T17:59:38+00:00",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805"
+    },
+    {
+      "accepted": true,
+      "configuration_identity": "exact_variant",
+      "event": "hyperx_identity",
+      "identity_relation": "exact_variant",
+      "model_identity": "model_confirmed",
+      "provider": "official_catalog_search",
+      "query": "872V1AA",
+      "reason": "exact SKU and declared options",
+      "region": "hyperx.com",
+      "source_type": "official_pdp",
+      "timestamp": "2026-10-13T17:59:41+00:00",
+      "url": "https://hyperx.com/products/hyperx-quadcast-2-usb-microphone?variant=45776721051805"
+    }
+  ]
+}

@@ -131,7 +131,7 @@ def parse_page(html,url,article,expected,region,*,name='',catalog_bindings=()):
         if not any(x.name==label and x.value==value for x in d.attributes):d.attributes.append(RawAttribute(label,value,section=section,value_cell=True))
         scope='retail' if label in {'Цвет','Комплектация','Название комплекта'} else 'hardware_configuration' if label in {'Встроенный накопитель','Оптический привод','Вес товара','Ширина товара','Высота товара','Глубина товара'} else 'model'
         ev['attribute_scopes'][label]=scope
-        ev['accepted_specs'].append(dict(section=section,raw_label=current_raw['raw_label'] if current_raw else 'Own variant / catalog / bundle',raw_value=current_raw['value'] if current_raw else value,label=label,value=value,scope=scope,source_url=url))
+        ev['accepted_specs'].append(dict(section=section,source_section=current_raw['section'] if current_raw else section,raw_label=current_raw['raw_label'] if current_raw else 'Own variant / catalog / bundle',raw_value=current_raw['value'] if current_raw else value,label=label,value=value,scope=scope,source_url=url))
     for r in ev['raw_specs']:
         current_raw=r
         l=r['raw_label'].lower().strip('.:');value=r['value'];mapped=LABELS.get(l);reason='Technical field lacks safe canonical mapping'

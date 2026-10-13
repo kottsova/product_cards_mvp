@@ -124,7 +124,7 @@ def parse_page(html, url, article, name, category=''):
             qualified=attr.name+' ('+attr.section+')' if attr.name in repeated and section!='База / станция' else attr.name
             derived=charging_fields(attr) if attr.name=='Battery & Charging' else []
             doc.attributes.extend(derived or [RawAttribute(qualified, attr.value, section)])
-            if derived:row['derived_fields']=[asdict(x) for x in derived]
+            row['derived_fields']=[asdict(x) for x in (derived or [RawAttribute(qualified,attr.value,section)])]
             ev['accepted_specs'].append({**row, 'section': section})
     ev['identity']['configuration_relation'] = 'configuration_confirmed' if ev['identity']['identifier_kind']=='marketing_model' and set(opts) <= {'region'} and region_matches(opts.get('region', ''), source_region) else 'partial'
     ev['identity']['readiness_scope']='model'

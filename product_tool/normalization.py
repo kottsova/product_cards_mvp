@@ -70,8 +70,8 @@ AXIS_MAP = {
     "b": "w", "t": "d",  # German Breite/Tiefe in explicit H x B x T labels.
 
 }
-TRUE_VALUES = {"да", "есть", "yes", "true", "имеется", "ja"}
-FALSE_VALUES = {"нет", "no", "false", "отсутствует", "nein"}
+TRUE_VALUES = {"да", "есть", "yes", "true", "имеется", "ja", "supported"}
+FALSE_VALUES = {"нет", "no", "false", "отсутствует", "nein", "not supported"}
 _PRESENT_MARKERS = frozenset({"●", "•", "O", "+"})
 _AMBIGUOUS_MARKERS = frozenset({"○"})
 _ABSENT_MARKERS = frozenset({"-", "–", "—", "−"})

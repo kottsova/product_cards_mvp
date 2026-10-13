@@ -62,6 +62,8 @@ LABELS={
  'Virtual Surround Encoding':'Кодирование виртуального объёмного звука','Volume Control':'Управление громкостью','Warranty':'Гарантия',
 }
 LABELS={k.casefold():v for k,v in LABELS.items()}
+LABELS.update({'oval ear cushions':'Овальные амбушюры','sensitivity (@1 khz)':'Чувствительность (1 кГц)','signal-to-noise ratio':'Отношение сигнал/шум'})
+LABELS.update({k.casefold():v for k,v in {'Noise level':'Уровень шума','Sound level':'Уровень шума','Operating noise':'Уровень шума','Operating temperature':'Рабочая температура','Operating Humidity':'Влажность при эксплуатации','Storage Temperature':'Температура хранения','Storage Humidity':'Влажность при хранении','Item Dimensions':'Габариты робота','Stand (Design)':'Конструкция подставки','Stand (Material)':'Материал подставки','Obstacle Crossing Height':'Высота преодолеваемых препятствий','CPU':'Процессор','GPU':'Графический процессор','Battery Life':'Время работы','Connectivity':'Подключение','Environmental Requirements':'Условия эксплуатации'}.items()})
 SECTIONS={
  'Audio Calling':'Аудиозвонки','Buttons and Connectors':'Кнопки и разъёмы','Controls':'Управление',
  'Health and Wellness':'Здоровье','Location':'Определение местоположения','Video Calling':'Видеозвонки',
@@ -112,6 +114,7 @@ def label_ru(label):
 def parent_group(section):
     text=' '.join(str(section or '').split())
     if re.match(r'Характеристики оборудования CFI-',text):text='Характеристики оборудования'
+    if re.match(r'Оптический привод CFI-',text):text='Оптический привод'
     text=text[:1].upper()+text[1:].lower() if text.isupper() else text
     translated=next((v for k,v in SECTIONS.items() if k.casefold()==text.casefold()),text)
     return GROUP_ALIASES.get(translated.casefold(),translated) or 'Другие характеристики'
@@ -161,10 +164,17 @@ def project(rows):
             from .hyperx_presentation import SECTIONS as known_sections
             section=known_sections.get(section,section)
         row['parent_group']=parent_group(section)
-        if row['parent_group']=='Микрофон' and row['display_name'] in {'Диапазон частот','Частотный диапазон','Чувствительность','Сопротивление'}:row['display_name']+=' микрофона'
-        elif row['parent_group']=='Наушники' and row['display_name'] in {'Диапазон частот','Частотный диапазон','Чувствительность','Сопротивление'}:row['display_name']+=' наушников'
+        component=re.match(r'^(Наушники|Микрофон):\s*(.+)$',row['display_name'])
+        if component:
+            row['parent_group']=component[1];row['display_name']=label_ru(component[2])
+        if row['display_name']=='Чувствительность наушников':row['parent_group']='Наушники'
+        component_quantity=bool(re.fullmatch(r'(?:Диапазон частот|Частотный диапазон|Чувствительность|Сопротивление)(?:\s*\([^)]*\))?',row['display_name']))
+        if row['parent_group']=='Микрофон' and component_quantity:row['display_name']+=' микрофона'
+        elif row['parent_group']=='Наушники' and component_quantity:row['display_name']+=' наушников'
         if re.search(r'^(?:ширина|высота|глубина|вес|масса|габарит|размеры\b)',row['display_name'],re.I):row['parent_group']='Габариты и вес'
         row['category_attribute_key']=row['parent_group']+' / '+row['display_name']
+        from .attribute_lineage import technical_role
+        if technical_role(row['display_name'],row['parent_group'])=='feature':row['canonical_role']='feature'
         resolved=row.get('resolved') or {}
         if resolved.get('selected_unit')=='' and resolved.get('status')!='manual' and source.get('raw_value') and not (row.get('refined_from') or row.get('derived_from')):
             shown=source['raw_value']

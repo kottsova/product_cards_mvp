@@ -2,7 +2,7 @@
 from __future__ import annotations
 from io import BytesIO
 from pathlib import Path
-import re
+import re,json
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, PatternFill
 from . import jbl_pipeline, lenovo_pipeline, lenovo_presentation, attribute_projection, bosch_presentation, bosch_readiness, card_evidence, jobs, lg_batch, lg_presentation, manual_status, photo_metadata, samsung_readiness, storage
@@ -467,6 +467,18 @@ def export_batch(database: Path,batch_id: str)->bytes:
             for column in sheet.columns:sheet.column_dimensions[column[0].column_letter].width=min(60,max(14,max(len(str(c.value or '')) for c in column)+2))
             for row in sheet:
                 for cell in row:cell.alignment=Alignment(wrap_text=True,vertical='top')
+    # Raw classification is technical evidence, never a source of product facts.
+    # Keeping it separate prevents excluded help/marketing rows re-entering
+    # product columns while preserving every audited input and its decision.
+    audited=[(p,card_evidence.load(database,p['id'],'canonical_mapping_audit') or {}) for p in batch['products']]
+    if any(a.get('rows') for p,a in audited):
+        raw_mapping=book.create_sheet(_title('Исходные поля и mapping',used))
+        _headers(raw_mapping,['Товар','Бренд','Категория','Source','Раздел','Подраздел','Исходное поле','Raw value','Регион','Компонент','Identity relation','Класс','Action','Причина','Canonical targets'])
+        for p,audit in audited:
+            for r in audit.get('rows',[]):
+                value=str(r['raw_value'])
+                if value.startswith('='):value="'"+value
+                raw_mapping.append([p['name'],p['brand'],p['category'],r.get('resolved_source',r['source']),r['section'],r['subsection'],r['raw_label'],value,r['region'],r['component_scope'],json.dumps(r['identity_relation'],ensure_ascii=False),r['class'],r['action'],r['decision_reason'],'; '.join(r['canonical_targets'])])
     if any(p['brand'].strip().casefold() in {'jbl','samsung','lg','apple','playstation','sony','xbox','razer','hyperx','xiaomi','redmi','poco','dreame','electrolux'} for p in batch['products']):
         from math import ceil
         for sheet in book:

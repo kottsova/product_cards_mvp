@@ -12,6 +12,7 @@ LABELS = {
     'Input/output': 'Разъёмы', 'Networking': 'Сетевые интерфейсы', 'AV output': 'Видеовыход',
     'Screen': 'Экран', 'Sound': 'Динамики', 'Charge time': 'Время зарядки',
     'Operating temperature': 'Рабочая температура',
+    'Optical drive (read-only)': 'Форматы чтения оптического привода',
 }
 DIM_LABELS = ('Ширина товара, мм', 'Высота товара, мм', 'Глубина товара, мм')
 
@@ -51,10 +52,23 @@ def parse_hardware_specs(text, url, code, *, linked_codes=(), drive_relation=Non
                               value=block[:6500], reason='Exact linked CFI and evidenced drive-row relation required')]
     lines = [clean_pdf(l) for l in block.splitlines()]
     pattern = re.compile(r'^(' + '|'.join(re.escape(k) for k in sorted(LABELS, key=len, reverse=True)) + r')(?:\*\d)?(?::|\s|$)\s*(.*)')
-    i = 0; dimension_context = ''; dim_rows = []
+    i = 0; dimension_context = ''; dim_rows = [];laser=False;medium=''
     while i < len(lines):
         line = lines[i]; i += 1
         if not line: continue
+        if line=='Laser':laser=True;continue
+        laser_field=re.match(r'^(Type|BD Wavelength|DVD Wavelength|Power):\s*(.+)$',line) if laser else None
+        if laser_field:
+            label,value=laser_field.groups()
+            if label in {'BD Wavelength','DVD Wavelength'}:medium=label.split()[0]
+            target='Тип лазера оптического привода' if label=='Type' else 'Длина волны лазера '+medium if 'Wavelength' in label else 'Мощность лазера '+medium if medium else ''
+            item=dict(section='Specifications',raw_label=label,value=value,hardware_code=code,component='optical_drive')
+            raw.append(item)
+            if target:
+                doc.attributes.append(RawAttribute(target,value,section='Оптический привод '+code,value_cell=True))
+                item['derived_fields']=[dict(name=target,value=value)]
+            else:candidates.append({**item,'reason':'Laser power lacks explicit Blu-ray/DVD component relation'})
+            continue
         m = pattern.match(line)
         if line.startswith('External dimensions'):
             dimension_context = line
@@ -66,10 +80,11 @@ def parse_hardware_specs(text, url, code, *, linked_codes=(), drive_relation=Non
                 dim_rows.append((d.groups(), line))
             continue
         if m:
+            laser=False;medium=''
             label, value = m.groups()
             # Continuations belong to the current row only, not the next table/footnotes.
-            while i < len(lines) and not pattern.match(lines[i]) and not re.match(r'External dimensions|^\*|^\d+$|^Console |^Main Processor', lines[i]):
-                if label not in {'GPU','Memory','Input/output','Networking','Electrical rating','Screen'}: break
+            while i < len(lines) and not pattern.match(lines[i]) and not re.match(r'External dimensions|^\*|^\d+$|^Console |^Main Processor|^Laser$', lines[i]):
+                if label not in {'GPU','Memory','Input/output','Networking','Electrical rating','Screen','Optical drive (read-only)'}: break
                 if lines[i]: value += ' ' + lines[i]
                 i += 1
             dimension_context = ''
@@ -81,7 +96,9 @@ def parse_hardware_specs(text, url, code, *, linked_codes=(), drive_relation=Non
                 if len(masses) != 2:
                     candidates.append({**item,'reason':'Ambiguous mass columns'}); continue
                 value = 'Approx. ' + masses[0 if drive_relation == 'with_disc' else 1] + ' kg'
-            if value: doc.attributes.append(RawAttribute(LABELS[label], value, section='Характеристики оборудования '+code, value_cell=True))
+            if value:
+                doc.attributes.append(RawAttribute(LABELS[label], value, section='Характеристики оборудования '+code, value_cell=True))
+                item['derived_fields']=[dict(name=LABELS[label],value=value)]
             continue
         item = dict(section='Specifications',raw_label='Unmapped specification line',value=line,hardware_code=code)
         raw.append(item); candidates.append({**item,'reason':'Unmapped qualifier or technical line'})

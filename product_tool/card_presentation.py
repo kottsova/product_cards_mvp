@@ -208,6 +208,7 @@ def present_card_rows(
         if row.get('electrolux_presentation') and chosen and not row.get('canonical_presentation'):
             row['display_name']=chosen.get('raw_name') or row['display_name']
         row["role"] = _role(category, row)
+        if row.get('canonical_role') in {'core','feature'}:row['role']=row['canonical_role']
         if row.get('hyperx_presentation') and (chosen or {}).get('raw_name') in {'Game Mode','Backlight','Light Effects','Audio Controls'}:
             row['role']='feature'
         row["compact_status"] = _compact_status(row)

@@ -54,11 +54,19 @@ def parse_model(html,url,key,configuration):
  if not official(url) or 'tech specs' not in plain(found) or identify(found)!=key:
   doc.error='Tech Specs model/generation mismatch';return doc,audit
  doc.match_level='model_confirmed';doc.evidence='Exact model/generation; configuration options excluded and size/connectivity scopes checked'
- def add(name,value,sec,scope='model-stable'):
-  doc.attributes.append(RawAttribute(name,value,section=sec,value_cell=True));audit['admitted'].append({'name':name,'value':value,'scope':scope,'section':sec})
- def candidate(sec,value,reason):audit['candidates'].append(dict(section=sec,raw_label=sec,value=value,reason=reason))
- for sec,values,node in groups:
-  for value in values:audit['raw_specs'].append(dict(section=sec,raw_label=sec,value=value))
+ return append_qualified_sections(doc,audit,groups,cat,configuration)
+
+def append_qualified_sections(doc,audit,groups,cat,configuration):
+ """Shared section semantics after caller has proven its own source identity."""
+ def add(name,value,sec,scope='model-stable',origin=None):
+  from .attribute_lineage import text_key
+  origins=[origin] if origin is not None else [v for v in values if text_key(v) in text_key(value)]
+  doc.attributes.append(RawAttribute(name,value,section=sec,value_cell=True));audit['admitted'].append({'name':name,'value':value,'scope':scope,'section':sec,'raw_rows':[dict(section=source_sec,raw_label=source_sec,raw_value=v) for v in origins]})
+ def candidate(sec,value,reason):audit['candidates'].append(dict(section=source_sec,raw_label=source_sec,value=value,reason=reason))
+ for source_sec,values,node in groups:
+  sec=source_sec.replace('\u2011','-').replace('\u2010','-')
+  sec={'External Buttons and Connectors':'Buttons and Connectors','Hardware and Buttons':'Buttons and Connectors','Environmental Requirements':'Operating Requirements','Mobile and Wireless':'Cellular and Wireless','Intelligent Assistant':'Siri','Splash, Water and Dust Resistant':'Splash, Water, and Dust Resistant'}.get(sec,sec)
+  for value in values:audit['raw_specs'].append(dict(section=source_sec,raw_label=source_sec,value=value))
   if sec in {'Finish','Capacity','Memory','Storage','In the Box','Configure to Order'}:
    for v in values:candidate(sec,v,'configuration-sensitive family option')
    continue
@@ -82,8 +90,10 @@ def parse_model(html,url,key,configuration):
      if metric:
       n=float(metric[1]);unit=metric[2];val=n*10 if unit=='cm' else n/1000 if unit=='grams' else n
       label={'height':'Высота товара, мм','width':'Ширина товара, мм','depth':'Глубина товара, мм','weight':'Вес товара, кг'}[m[1]]
-      add(label,str(val),sec,'configuration-sensitive' if cat in {'watch','ipad'} else 'model-stable')
+      add(label,str(val),sec,'configuration-sensitive' if cat in {'watch','ipad'} else 'model-stable',origin=v)
     elif cat=='watch' and 'pixels' in t:add('Разрешение экрана',v,sec,'configuration-sensitive')
+    elif cat=='watch' and re.search(r'\d+\s+sq\s+mm\s+display area',t):add('Площадь экрана, мм²',v,sec,'configuration-sensitive')
+    elif cat=='watch' and re.match(r'fits\s+\d',t):add('Обхват запястья, мм',v,sec,'configuration-sensitive')
    continue
   if sec in {'Power and Battery','Battery and Power','Power and Battery Life','Battery'}:
    battery_context=''
@@ -133,13 +143,13 @@ def parse_model(html,url,key,configuration):
     if 'configurable' in t:optional=True
     if optional or re.search(r'optional|sold separately|depending',t):candidate(sec,v,'Display configuration option; continuation scope retained');continue
     if t in {'color','refresh rates','xdr (extreme dynamic range)'}:candidate(sec,v,'Section/subsection heading, not a separate value');continue
-    if t.endswith('display'):technologies.append(v);continue
+    if t.endswith('display') or t in {'wide-angle oled','led backlit multi-touch display with ips technology'}:technologies.append(v);continue
     diagonal=re.search(r'(\d+(?:\.\d+)?)[ -]*inch',t)
-    resolution=re.search(r'(\d+)\s*-?by-?\s*(\d+)\s+(?:native |pixel )?resolution',t)
-    density=re.search(r'(\d+)\s+pixels per inch',t)
-    if diagonal:add('Диагональ экрана, дюймы',diagonal[1],sec)
-    if resolution:add('Нативное разрешение дисплея',resolution[1]+' x '+resolution[2]+' пикселей',sec)
-    if density:add('Плотность пикселей, ppi',density[1],sec)
+    resolution=re.search(r'(\d+)\s*-?by-?\s*(\d+)[ -]+(?:native |pixel )?resolution',t)
+    density=re.search(r'(\d+)\s+(?:pixels per inch|ppi)\b',t)
+    if diagonal:add('Диагональ экрана, дюймы',diagonal[1],sec,origin=v)
+    if resolution:add('Разрешение экрана',resolution[1]+' x '+resolution[2]+' пикселей',sec,origin=v)
+    if density:add('Плотность пикселей, ppi',density[1],sec,origin=v)
     if diagonal or resolution or density:continue
     if 'contrast ratio' in t:add('Контрастность',v,sec)
     elif 'brightness' in t:
@@ -147,18 +157,72 @@ def parse_model(html,url,key,configuration):
      limit=' (минимальная)' if re.search(r'\bminimum\b',t) else ' (максимальная)' if re.search(r'\bmaximum\b|\bmaximun\b|\bup to\b',t) else ''
      add('Яркость '+mode+limit,v,sec)
     elif 'colors' in t:add('Количество отображаемых цветов',v,sec)
-    elif 'wide color' in t:add('Цветовой охват',v,sec)
+    elif re.search(r'wide colou?r',t):add('Цветовой охват',v,sec)
     elif 'true tone' in t:add('True Tone',v,sec)
     elif 'promotion' in t:add('Адаптивная частота ProMotion (заявленная)',v,sec)
     elif 'fixed refresh rates' in t:add('Поддерживаемые фиксированные частоты обновления',v,sec)
+    elif t in {'dynamic island','haptic touch','fingerprint-resistant oleophobic coating','antireflective coating','fully laminated display','apple pencil hover'}:
+     label={'dynamic island':'Dynamic Island','haptic touch':'Haptic Touch','fingerprint-resistant oleophobic coating':'Олеофобное покрытие','antireflective coating':'Антибликовое покрытие','fully laminated display':'Полная ламинация дисплея','apple pencil hover':'Apple Pencil hover'}[t]
+     add(label,v,sec)
+    elif t.startswith('supports apple pencil'):add('Поддержка Apple Pencil',v,sec)
+    elif t.startswith('support for display of multiple languages'):add('Одновременное отображение нескольких языков',v,sec)
+    elif re.search(r'pair and charge',t):candidate(sec,v,'Support/setup instructions, not a standalone display specification')
+    elif re.search(r'aluminum cases|titanium cases',t):candidate(sec,v,'Glass material depends on exact case material configuration')
+    elif re.search(r'brighter when viewed at an angle',t):candidate(sec,v,'Promotional relative brightness without a stable measured mode')
     else:candidate(sec,v,'Display field not yet canonically mapped')
    if technologies:add('Технология экрана','; '.join(technologies),sec)
    continue
+  if sec=='Acoustic Performance':
+   # Noise table explicitly reports a tested configuration, not every order.
+   for v in values:candidate(sec,v,'Configuration-specific acoustic test table; exact tested CPU/GPU/RAM/SSD relation not qualified')
+   continue
+  if sec=='Durability':
+   for v in values:
+    if re.search(r'water resistance|dust resistance',plain(v)):add('Водостойкость' if 'water' in plain(v) else 'Защита от пыли',v,'Защита от воды и пыли')
+    else:candidate(sec,v,'Durability prose without an explicit technical protection claim')
+   continue
+  if sec=='Charging Case':
+   for v in values:
+    if plain(v).startswith('works with'):add('Зарядка кейса',v,'Кейс')
+    elif 'speaker' in plain(v):add('Динамик кейса для Find My',v,'Кейс')
+    else:candidate(sec,v,'Case component statement without a stable field meaning')
+   continue
+  if sec.endswith(' and the Environment'):
+   safe=[]
+   for v in values:
+    t=plain(v)
+    if re.match(r'see\b|learn more\b',t):candidate(sec,v,'support/help reference; no independent product attribute')
+    elif re.search(r'designed to|commitment|progress toward|business-as-usual|carbon neutral|environmental impact|zero waste program|manufacturing electricity|assembly sites',t):candidate(sec,v,'marketing/company process, not a device technical field')
+    elif not re.search(r'\d|free\b|exceeds|energy star|epeat',t):candidate(sec,v,'subsection heading; preserved in raw evidence')
+    else:safe.append(v)
+   if safe:add('Материалы и экологические характеристики','; '.join(safe),'Материалы и экологические характеристики')
+   continue
+  if sec in {'Material and Finish','SIM Card','Apple Pay'}:
+   for v in values:candidate(sec,v,'Color/material/SIM/payment regional or configuration relation not established')
+   continue
+  if sec=='Display Support, Video Support and Camera':
+   active='';safe=[]
+   for v in values:
+    if 'Thunderbolt 5' in v:active='other'
+    if 'Thunderbolt 4' in v or 'HDMI digital' in v:active='model'
+    if active=='other':candidate(sec,v,'Transport-specific subsection not qualified for exact model')
+    else:safe.append(v)
+   if safe:add('Подключение внешних дисплеев и видеокамера','; '.join(safe),'Подключение дисплеев')
+   continue
   labels={'Camera':'Основная камера','TrueDepth Camera':'Фронтальная камера','Front Camera':'Фронтальная камера','Sensors':'Датчики','Charging and Expansion':'Разъёмы и зарядка','MagSafe':'MagSafe','MagSafe and Wireless Charging':'MagSafe и беспроводная зарядка','Audio Technology':'Аудиотехнологии','Face ID':'Face ID','Touch ID':'Touch ID','Dust, Sweat, and Water Resistant':'Защита от пыли и воды','Splash, Water, and Dust Resistant':'Защита от пыли и воды','Water and Dust Resistance':'Защита от пыли и воды'}
   if sec in {'Wireless','Cellular and Wireless','Connectivity'}:
+   radio_model=''
    for v in values:
+    if re.match(r'^model\s+a\d+',plain(v)):radio_model=v
+    # Existing model-level Wi-Fi/Bluetooth policy is retained. A radio band
+    # subsection does not demonstrate a regional difference in these fields.
+    if re.search(r'wi.fi\s*\d',plain(v)):add('Wi-Fi',v,sec);continue
+    if re.search(r'^bluetooth\s*\d',plain(v)):add('Bluetooth',v,sec);continue
+    if radio_model:
+     candidate(sec,v,'Explicit radio hardware model subsection; requested hardware/region relation not established');continue
     if re.search(r'wi.fi\s*\d',plain(v)):add('Wi-Fi',v,sec)
     elif re.search(r'^bluetooth\s*\d',plain(v)):add('Bluetooth',v,sec)
+    elif plain(v)=='simultaneous dual band':add('Двухдиапазонный Wi-Fi',v,sec)
     else:candidate(sec,v,'regional/connectivity feature requires explicit scope')
   elif sec in labels:
    admitted=[]
@@ -167,11 +231,12 @@ def parse_model(html,url,key,configuration):
     else:admitted.append(v)
    if admitted:add(labels[sec],'; '.join(admitted),sec)
   else:
-   useful={'Video Playback':'Воспроизведение видео','Audio Playback':'Воспроизведение аудио','Keyboard and Trackpad':'Клавиатура и тачпад','Audio':'Аудиосистема','Operating Requirements':'Условия эксплуатации','Operating System':'Операционная система','Accessibility':'Специальные возможности','Built-in Apps':'Встроенные приложения','Apple Intelligence':'Apple Intelligence','Siri':'Siri','Controls':'Элементы управления','Buttons and Connectors':'Кнопки и разъёмы','Video Recording':'Видеосъёмка','Video Calling':'Видеозвонки','Audio Calling':'Аудиозвонки','TV and Video':'Вывод видео','Location':'Определение местоположения','Health and Wellness':'Функции здоровья'}
+   useful={'Video Playback':'Воспроизведение видео','Audio Playback':'Воспроизведение аудио','Keyboard and Trackpad':'Клавиатура и тачпад','Audio':'Аудиосистема','Operating Requirements':'Условия эксплуатации','Operating System':'Операционная система','Accessibility':'Специальные возможности','Built-in Apps':'Встроенные приложения','Apple Intelligence':'Apple Intelligence','Siri':'Siri','Controls':'Элементы управления','Buttons and Connectors':'Кнопки и разъёмы','Video Recording':'Видеосъёмка','Video Calling':'Видеозвонки','Audio Calling':'Аудиозвонки','TV and Video':'Вывод видео','Location':'Определение местоположения','Health and Wellness':'Функции здоровья','Features':'Особенности модели','Safety':'Функции безопасности','Peace of Mind':'Функции безопасности','Workouts and Activity':'Тренировки и активность','Languages':'Поддерживаемые языки и средства ввода','System Requirements':'Системные требования','Compatibility':'Совместимость','Mail Attachment Support':'Форматы вложений почты','Rating for Hearing Aids':'Совместимость со слуховыми аппаратами','Audio/Video Calling':'Аудио- и видеозвонки','Live Translation':'Live Translation'}
+   useful.update({'Speakers':'Динамики','Microphones':'Микрофон'})
    if sec in useful:
     admitted=[]
     for v in values:
-     if re.search(r'user guide|learn more|most advanced|most powerful|designed to|features include:|accessibility features help|optional|sold separately|depending|regional|not available in all',plain(v)):
+     if re.search(r'user guide|learn more|most advanced|most powerful|strongest privacy|designed to|features include:|accessibility features help|optional|sold separately|depending|regional|not available in all|u\.s\. only|national parks|\bcellular connectivity\b',plain(v)):
       candidate(sec,v,'Support/marketing or conditional statement; retained raw')
      elif sec=='Keyboard and Trackpad' and ('U.S.' in v or 'ISO' in v):candidate(sec,v,'Explicit layout variation; exact layout relation not qualified')
      else:admitted.append(v)

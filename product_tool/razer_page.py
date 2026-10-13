@@ -40,9 +40,16 @@ def parse_page(html,url,article,name,category='',*,model_evidence=None):
  # two frequency ranges never become conflicting values for one attribute.
  component_fields=[]
  for field in fields:
-  pair=re.match(r'^([^:]{1,80}):\s*(.+)$',field.value)
-  if field.name in {'Headphones','Microphone'} and pair:
-   field=replace(field,name=pair[1].strip(),value=pair[2].strip(),section=field.name)
+  if field.name in {'Headphones','Microphone'}:
+   # A single SSR cell may contain several <p>/<li> labelled values. Split
+   # only known explicit colon labels; keep each range in its component.
+   pattern=r'(Frequency response|Impedance|Sensitivity(?:\s*\(@1\s*kHz\))?|Drivers|Inner ear cup diameter|Oval ear cushions|Connection type|Cable length|Weight|Signal-to-noise ratio|Pick-\s*up pattern):\s*'
+   matches=list(re.finditer(pattern,field.value,re.I))
+   if matches and not field.value[:matches[0].start()].strip():
+    for index,match in enumerate(matches):
+     value=field.value[match.end():matches[index+1].start() if index+1<len(matches) else len(field.value)].strip()
+     if value:component_fields.append(replace(field,name=re.sub(r'Pick-\s*up','Pick-up',match[1],flags=re.I),value=value,section=field.name))
+    continue
   component_fields.append(field)
  fields=component_fields
  fields+=store['fields'];report['raw_specs']+= [{k:v for k,v in x.items() if k!='reason'} for x in store['rejected']];report['rejected_specs']+=store['rejected']
@@ -71,8 +78,10 @@ def parse_page(html,url,article,name,category='',*,model_evidence=None):
   elif re.search(r'available in|optional|options|depending|varies|black.*white|white.*black|quartz|RTX\s*\d+.*RTX\s*\d+',field.value,re.I):reason='family_options_or_variant_values'
   if reason:report['rejected_specs'].append({**raw,'reason':reason});continue
   label=next((v for k,v in LABELS.items() if k.casefold()==field.name.casefold()),field.name)
+  if field.name.casefold()=='sensitivity' and re.search(r'наушник|гарнитур|headset',category,re.I):label='Чувствительность наушников'
   if field.section in {'Headphones','Microphone'}:
    label=('Наушники: ' if field.section=='Headphones' else 'Микрофон: ')+label
+  start=len(doc.attributes)
   if re.search(r'approx.*dimension|^dimensions$|^size$',field.name,re.I) and (field.name.lower()!='size' or re.search(r'\b(?:Length|Width|Height):',field.value)):
    axes={k[0].upper():float(v) for k,v in re.findall(r'\b(Length|Width|Height|L|W|H):\s*(?:\d+(?:\.\d+)?\s*(?:in|inches|inch)\s*/\s*)?(\d+(?:\.\d+)?)\s*mm',field.value,re.I)}
    if len(axes)==3:
@@ -89,7 +98,7 @@ def parse_page(html,url,article,name,category='',*,model_evidence=None):
     mode=re.search(r'(?:\d[,.]?\d*\s*(?:Hz|GHz)|Bluetooth|RGB.*?(?:on|off)|ANC.*?(?:on|off)|playback|call)',value,re.I)
     doc.attributes.append(RawAttribute('Время работы ('+(mode[0] if mode else 'режим не указан')+')',value,'Автономность'))
   else:doc.attributes.append(RawAttribute(label,field.value,'Основные характеристики'))
-  report['accepted_specs'].append(raw)
+  report['accepted_specs'].append({**raw,'derived_fields':[{'name':a.name,'value':a.value,'section':a.section} for a in doc.attributes[start:]]})
  # A support model image does not prove color/layout. Keep every image a candidate.
  images=[(urljoin(url,x['src']),False) for x in (scope.select('img[src]') if scope else [])]
  support_intro=set()
