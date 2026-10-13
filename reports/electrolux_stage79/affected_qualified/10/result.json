@@ -1,0 +1,1940 @@
+{
+  "input": {
+    "id": 10,
+    "brand": "Electrolux",
+    "article": "94949957800",
+    "model": "EOD6C46K2",
+    "name": "Electrolux EOD6C46K2",
+    "category": "Духовые шкафы",
+    "region": "UK",
+    "input_pnc": "94949957800",
+    "input_color": null,
+    "provenance": "Official catalog/search model; published 9-digit PNC for row 9; row 10 explicit synthetic revision-00 request for conservative identity edge test, not a supplier assertion"
+  },
+  "observation": "actual live",
+  "seconds": 35.36,
+  "job": {
+    "id": "1230c2636023473a86504f3a21a84f5d",
+    "product_id": 10,
+    "status": "done",
+    "current_stage": null,
+    "message": "Electrolux: not_ready; PNC / revision / регион / отделка подтверждены частично; Недостаточно официальных характеристик; Нет byte-verified фото подходящего варианта; Инструкция не проверена (не блокирует готовность)",
+    "created_at": "2026-10-11T17:36:58+00:00",
+    "updated_at": "2026-10-11T17:37:33+00:00",
+    "started_at": "2026-10-11T17:36:58+00:00",
+    "finished_at": "2026-10-11T17:37:33+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "sources": [
+    {
+      "id": 3,
+      "product_id": 10,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+      "found_model": "EOD6C46K2",
+      "match_level": "model_confirmed",
+      "evidence": "{\"model\": \"EOD6C46K2\", \"model_relation\": \"model_confirmed\", \"requested_pnc\": \"94949957800\", \"requested_region\": \"UK\", \"found_model\": \"EOD6C46K2\", \"product_code\": \"949499578\", \"pnc_base\": \"949499578\", \"revision\": null, \"region\": \"UK\", \"ean\": \"7333394008912\", \"family\": \"500 SurroundCook with SteamBake Catalytic Built-in Oven\", \"product_code_relation\": \"base_pnc_partial\", \"configuration_confirmed\": false}",
+      "fetched_at": "2026-10-11T17:37:10+00:00",
+      "error": "",
+      "description": "The 500 SurroundCook Oven with SteamBake  lets you add a bit of steam for just the right colour and crust. Dishes are golden-crispy outside, tender and moist inside. And every dish is evenly cooked without having to turn or move the tray.",
+      "photos": [
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/8f908c48-172e-460c-897a-6de15fa11cf3/2023889108-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a6c6afa0-d1d8-473b-acdb-05fb2058212b/241220SP9F-pdf",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3912ca83-eabb-43d6-a496-daf2b659e58a/241220HEXT-pdf",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/78252c44-1f8c-43be-959e-54f327036a1c/241220AQ2T-pdf",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/6e00b5f8-ed23-4d14-a6fa-b0c232f167cf/2412201KQE-pdf",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/876a75b2-0b67-4023-af4a-4c7c929b7157/2018636683-tif",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/ccd3bf5d-d41d-466a-85e5-ce7251a7b212/2018636690-tif",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/1c83459b-5a83-43bd-b4c0-049956f9dca6/2021788394-eps",
+        "https://www.electrolux.co.uk/services/eml/transform/WS_PN/5cc9994f-4535-44c8-8cca-c1f7d9e64640/2018642194-eps"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": 51,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "site_name": "Electrolux official",
+      "raw_name": "Тип устройства",
+      "raw_value": "Built-in Electric Oven",
+      "section": "Прочие характеристики",
+      "value_cell": null,
+      "normalized_name": "тип_устройства",
+      "normalized_value": "built-in electric oven",
+      "unit": ""
+    }
+  ],
+  "resolved": [
+    {
+      "id": 49,
+      "product_id": 10,
+      "normalized_name": "тип_устройства",
+      "selected_value": "built-in electric oven",
+      "selected_unit": "",
+      "status": "model_confirmed_official",
+      "reason": "Official native PDP; PNC-sensitive fields filtered before storage.",
+      "selected_source": "electrolux",
+      "conflict": 0,
+      "updated_at": "2026-10-11T17:37:33+00:00",
+      "full_sku_confirmed": 0
+    }
+  ],
+  "photos": [
+    {
+      "id": 22,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/8f908c48-172e-460c-897a-6de15fa11cf3/2023889108-eps",
+      "asset_key": "f2580dc18da9f1cd4b49b1a7",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": 700,
+      "verified_height": 700,
+      "verified_bytes": 48789,
+      "verified_format": "JPG",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 23,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a6c6afa0-d1d8-473b-acdb-05fb2058212b/241220SP9F-pdf",
+      "asset_key": "a376fd6b31128ac0dc854ba7",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": 700,
+      "verified_height": 700,
+      "verified_bytes": 82251,
+      "verified_format": "JPG",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 24,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3912ca83-eabb-43d6-a496-daf2b659e58a/241220HEXT-pdf",
+      "asset_key": "7bb7a7af1fb4ecdd22ac42f9",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 25,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/78252c44-1f8c-43be-959e-54f327036a1c/241220AQ2T-pdf",
+      "asset_key": "7c168799c06ef812f57bf0a6",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 26,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/6e00b5f8-ed23-4d14-a6fa-b0c232f167cf/2412201KQE-pdf",
+      "asset_key": "1807c71ecbaa786ccc325624",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 27,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/876a75b2-0b67-4023-af4a-4c7c929b7157/2018636683-tif",
+      "asset_key": "1bdfe40a8769fbb9e5a2410f",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 28,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/ccd3bf5d-d41d-466a-85e5-ce7251a7b212/2018636690-tif",
+      "asset_key": "01dd759c8110a4c3559a0d42",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 29,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/1c83459b-5a83-43bd-b4c0-049956f9dca6/2021788394-eps",
+      "asset_key": "90c66863e7a1702ff5adeb76",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    },
+    {
+      "id": 30,
+      "product_id": 10,
+      "source_page_id": 3,
+      "source_key": "electrolux",
+      "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/5cc9994f-4535-44c8-8cca-c1f7d9e64640/2018642194-eps",
+      "asset_key": "57b8d2d18f59affc593db2cc",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-11T17:37:30+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "Electrolux official"
+    }
+  ],
+  "documents": [],
+  "evidence": {
+    "identity": {
+      "model": "EOD6C46K2",
+      "model_relation": "model_confirmed",
+      "requested_pnc": "94949957800",
+      "requested_region": "UK",
+      "found_model": "EOD6C46K2",
+      "product_code": "949499578",
+      "pnc_base": "949499578",
+      "revision": null,
+      "region": "UK",
+      "ean": "7333394008912",
+      "family": "500 SurroundCook with SteamBake Catalytic Built-in Oven",
+      "product_code_relation": "base_pnc_partial",
+      "configuration_confirmed": false,
+      "published_finish": "Black",
+      "revision_inventory_relation": "published_exact_revision"
+    },
+    "raw_facts": [
+      {
+        "section": "Specification",
+        "label": "Catalytic cleaning: ",
+        "value": "A special oven coating lets you burn away grease and fat by running the oven at a high temperature.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "SteamBake: Using a burst of steam to create humidity, to give the perfect rise, this oven is perfect for the bakers amongst us.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "Temperature probe",
+        "value": "Once the selected temperature has been reached the oven will automatically switch off, ensuring perfect cooking results.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "Cooling fan",
+        "value": "The cooling fan starts automatically when the oven is switched on. It cools the electronic components and the external parts of the oven.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "Fan controlled defrosting: Great for delicate items like cream cakes, by using room-temperature air to defrost food in half the time.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "LED digital display",
+        "value": "Clear information at a glance with the LED display.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "Isofront® plus triple glazed doors with a heat reflective coating.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "Retractable controls",
+        "value": "For a flush finish and easy cleaning.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "Child lock: Oven controls can be locked to prevent misuse, providing safety and peace of mind.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Specification",
+        "label": "Turbo grilling",
+        "value": "Achieve the ideal balance of a crispy exterior and juicy interior when roasting a meat joint.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Functions (Main Oven)",
+        "value": "Frozen foods, Bottom heat, Conventional/Traditional cooking, Grilling, Moist fan baking, Pizza setting, Steam bake, True fan cooking, Turbo grilling",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Connectivity",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Timer Type",
+        "value": "LUX",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Cavity Size (L)",
+        "value": "72",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Cleaning",
+        "value": "Catalytic",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Oven control type",
+        "value": "Pop in / Pop out flat",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Max Power Grill - Top Oven (W)",
+        "value": "2300",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Max power oven, W",
+        "value": "3490",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Temperature Range",
+        "value": "30°C - 300°C",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Largest Surface area",
+        "value": "1424",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "Noise (dB)",
+        "value": "45",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Performance",
+        "label": "N° of cavities",
+        "value": "1",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Installation",
+        "label": "Built-in Dimensions (mm) (HxWxD)",
+        "value": "590x560x550",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Installation",
+        "label": "Total Electricity Loading (W)",
+        "value": "3490",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Installation",
+        "label": "Dimensions (mm) (HxWxD)",
+        "value": "594x596x569",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Installation",
+        "label": "Gross weight (kg)",
+        "value": "32.3",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Installation",
+        "label": "Net weight (kg)",
+        "value": "31.3",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Installation",
+        "label": "Cord Length (m)",
+        "value": "N/A",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Installation",
+        "label": "Plug or Hardwired",
+        "value": "Hardwired connection only",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Energy",
+        "label": "Energy Rating",
+        "value": "A+",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Energy",
+        "label": "Energy efficiency index EEI Main Oven",
+        "value": "81.2",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Energy",
+        "label": "Main Oven Conventional Mode - Energy consumption per cycle (Kwh)",
+        "value": "0.93",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Energy",
+        "label": "Main Oven Fan Mode - Energy consumption per cycle (Kwh)",
+        "value": "0.69",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Energy",
+        "label": "Lamp power (W)",
+        "value": "40",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Energy",
+        "label": "Oven Energy Source",
+        "value": "Electrical",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Main Colour",
+        "value": "Black",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Steam Category",
+        "value": "Direct Steam",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Interior light",
+        "value": "1, Back&Side halogen",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Product Type",
+        "value": "Built-in Electric Oven",
+        "scope": "model",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Main Oven - Trays Included",
+        "value": "1 Dripping pan grey enamel",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Main Oven - Shelves Included",
+        "value": "1 Trivet chromed, 1 Wire shelf chromed",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Main Oven - Shelf Support",
+        "value": "Grid Runners;With Removable Catalytic Linings",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Cavity coating",
+        "value": "Catalytic Removable;Grey Enamel",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      },
+      {
+        "section": "Other",
+        "label": "Bar Code",
+        "value": "7333394008912",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK"
+      }
+    ],
+    "accepted_facts": [
+      {
+        "section": "Other",
+        "label": "Product Type",
+        "value": "Built-in Electric Oven",
+        "scope": "model",
+        "product_code": "949499578",
+        "region": "UK",
+        "canonical_fields": [
+          "Тип устройства"
+        ]
+      }
+    ],
+    "rejected_facts": [
+      {
+        "section": "Specification",
+        "label": "Catalytic cleaning: ",
+        "value": "A special oven coating lets you burn away grease and fat by running the oven at a high temperature.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "SteamBake: Using a burst of steam to create humidity, to give the perfect rise, this oven is perfect for the bakers amongst us.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Temperature probe",
+        "value": "Once the selected temperature has been reached the oven will automatically switch off, ensuring perfect cooking results.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Cooling fan",
+        "value": "The cooling fan starts automatically when the oven is switched on. It cools the electronic components and the external parts of the oven.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Fan controlled defrosting: Great for delicate items like cream cakes, by using room-temperature air to defrost food in half the time.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "LED digital display",
+        "value": "Clear information at a glance with the LED display.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Isofront® plus triple glazed doors with a heat reflective coating.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Retractable controls",
+        "value": "For a flush finish and easy cleaning.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Child lock: Oven controls can be locked to prevent misuse, providing safety and peace of mind.",
+        "value": "",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Specification",
+        "label": "Turbo grilling",
+        "value": "Achieve the ideal balance of a crispy exterior and juicy interior when roasting a meat joint.",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "Marketing/feature prose or malformed label, not a structured technical pair"
+      },
+      {
+        "section": "Performance",
+        "label": "Functions (Main Oven)",
+        "value": "Frozen foods, Bottom heat, Conventional/Traditional cooking, Grilling, Moist fan baking, Pizza setting, Steam bake, True fan cooking, Turbo grilling",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Connectivity",
+        "value": "No",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Timer Type",
+        "value": "LUX",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Cavity Size (L)",
+        "value": "72",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Cleaning",
+        "value": "Catalytic",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Oven control type",
+        "value": "Pop in / Pop out flat",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Max Power Grill - Top Oven (W)",
+        "value": "2300",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Max power oven, W",
+        "value": "3490",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Temperature Range",
+        "value": "30°C - 300°C",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Largest Surface area",
+        "value": "1424",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "Noise (dB)",
+        "value": "45",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Performance",
+        "label": "N° of cavities",
+        "value": "1",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Installation",
+        "label": "Built-in Dimensions (mm) (HxWxD)",
+        "value": "590x560x550",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Installation",
+        "label": "Total Electricity Loading (W)",
+        "value": "3490",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Installation",
+        "label": "Dimensions (mm) (HxWxD)",
+        "value": "594x596x569",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Installation",
+        "label": "Gross weight (kg)",
+        "value": "32.3",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Installation",
+        "label": "Net weight (kg)",
+        "value": "31.3",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Installation",
+        "label": "Cord Length (m)",
+        "value": "N/A",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Installation",
+        "label": "Plug or Hardwired",
+        "value": "Hardwired connection only",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Energy",
+        "label": "Energy Rating",
+        "value": "A+",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Energy",
+        "label": "Energy efficiency index EEI Main Oven",
+        "value": "81.2",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Energy",
+        "label": "Main Oven Conventional Mode - Energy consumption per cycle (Kwh)",
+        "value": "0.93",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Energy",
+        "label": "Main Oven Fan Mode - Energy consumption per cycle (Kwh)",
+        "value": "0.69",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Energy",
+        "label": "Lamp power (W)",
+        "value": "40",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Energy",
+        "label": "Oven Energy Source",
+        "value": "Electrical",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Main Colour",
+        "value": "Black",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Steam Category",
+        "value": "Direct Steam",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Interior light",
+        "value": "1, Back&Side halogen",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Main Oven - Trays Included",
+        "value": "1 Dripping pan grey enamel",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Main Oven - Shelves Included",
+        "value": "1 Trivet chromed, 1 Wire shelf chromed",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Main Oven - Shelf Support",
+        "value": "Grid Runners;With Removable Catalytic Linings",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Cavity coating",
+        "value": "Catalytic Removable;Grey Enamel",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      },
+      {
+        "section": "Other",
+        "label": "Bar Code",
+        "value": "7333394008912",
+        "scope": "product_code",
+        "product_code": "949499578",
+        "region": "UK",
+        "reason": "PNC/revision/region relation unproven"
+      }
+    ],
+    "document_inventory": [
+      {
+        "type": "Specification Sheet",
+        "title": "specification sheet",
+        "url": "https://productinformation.electrolux.com/SERVICES/PIServices/EdenService.svc/WEB/GetDatasheetPDF/productid=823D12B3-950C-4849-ACFF-D45CCAC5B6C0/projectid=7397D917-43EC-4639-A403-F020C8132B0C/languageid=6C86D7CB-D0E0-49F0-A308-768C3DBF5489",
+        "model": "EOD6C46K2",
+        "product_code": "949499578",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "identity_verified": false,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "Unspecified; no old/new scale inference",
+        "date": ""
+      },
+      {
+        "type": "User Manual",
+        "title": "user manual",
+        "url": "https://electrolux.bynder.com/asset/9bd11ab7-88fc-44a3-b434-51cfc8f461bb/c0ae2e7a-6954-49ca-bb71-4d71266aa5ec-pdf.pdf",
+        "model": "EOD6C46K2",
+        "product_code": "949499578",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "identity_verified": false,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "Unspecified; no old/new scale inference",
+        "date": "2024-07-11T14:24:13"
+      },
+      {
+        "type": "Energy Label",
+        "title": "energy label",
+        "url": "https://support.electroluxgroup.eu/external/compliance-documents/GBEnergyLabel/949499578/eLabel/latest/PDF",
+        "model": "EOD6C46K2",
+        "product_code": "949499578",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "identity_verified": false,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "GBEnergyLabel",
+        "date": ""
+      },
+      {
+        "type": "Product Fiche",
+        "title": "product information sheet",
+        "url": "https://support.electroluxgroup.eu/external/compliance-documents/GBEnergyLabel/949499578/Combined/latest/PDF/EN",
+        "model": "EOD6C46K2",
+        "product_code": "949499578",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "identity_verified": false,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "GBEnergyLabel",
+        "date": ""
+      },
+      {
+        "type": "Installation Drawing",
+        "title": "Installation chart",
+        "url": "https://www.electrolux.co.uk/services/eml/transform/PN/243e74eb-aa92-4eb2-8f83-eae2a7334ac8/2019669648-jpg",
+        "model": "EOD6C46K2",
+        "product_code": "949499578",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "identity_verified": false,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "Unspecified; no old/new scale inference",
+        "date": ""
+      },
+      {
+        "type": "Installation Drawing",
+        "title": "Installation chart",
+        "url": "https://www.electrolux.co.uk/services/eml/transform/PN/a78aa644-2d53-4a0d-8dde-e63501bc818c/2019669647-jpg",
+        "model": "EOD6C46K2",
+        "product_code": "949499578",
+        "region": "UK",
+        "relation_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "identity_verified": false,
+        "bytes_verified": false,
+        "language": "Не проверен",
+        "standard_context": "Unspecified; no old/new scale inference",
+        "date": ""
+      }
+    ],
+    "gallery_inventory": [
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/8f908c48-172e-460c-897a-6de15fa11cf3/2023889108-eps",
+        "asset_key": "f2580dc18da9f1cd4b49b1a7",
+        "kind": "product_gallery",
+        "alt": "Product",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a6c6afa0-d1d8-473b-acdb-05fb2058212b/241220SP9F-pdf",
+        "asset_key": "a376fd6b31128ac0dc854ba7",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/3912ca83-eabb-43d6-a496-daf2b659e58a/241220HEXT-pdf",
+        "asset_key": "7bb7a7af1fb4ecdd22ac42f9",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/78252c44-1f8c-43be-959e-54f327036a1c/241220AQ2T-pdf",
+        "asset_key": "7c168799c06ef812f57bf0a6",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/6e00b5f8-ed23-4d14-a6fa-b0c232f167cf/2412201KQE-pdf",
+        "asset_key": "1807c71ecbaa786ccc325624",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/876a75b2-0b67-4023-af4a-4c7c929b7157/2018636683-tif",
+        "asset_key": "1bdfe40a8769fbb9e5a2410f",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/ccd3bf5d-d41d-466a-85e5-ce7251a7b212/2018636690-tif",
+        "asset_key": "01dd759c8110a4c3559a0d42",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/1c83459b-5a83-43bd-b4c0-049956f9dca6/2021788394-eps",
+        "asset_key": "90c66863e7a1702ff5adeb76",
+        "kind": "product_gallery",
+        "alt": "Product Detail",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/5cc9994f-4535-44c8-8cca-c1f7d9e64640/2018642194-eps",
+        "asset_key": "57b8d2d18f59affc593db2cc",
+        "kind": "product_gallery",
+        "alt": "",
+        "color": "Black",
+        "eligible": false,
+        "product_code": "949499578",
+        "relation": "published exact-model/product gallery; no unprinted supplier color claim"
+      }
+    ],
+    "manual_status": "Не проверена",
+    "verified_documents": [],
+    "model_gallery_assets": [],
+    "source_field_collisions": [],
+    "pnc_inventory": {
+      "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+      "model": "EOD6C46K2",
+      "relations": [
+        {
+          "model": "EOD6C46K2",
+          "pnc": "94949957800",
+          "pnc_base": "949499578",
+          "revision": "00",
+          "source_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+          "scope": "published inventory existence; specs/docs/gallery equivalence unproven"
+        },
+        {
+          "model": "EOD6C46K2",
+          "pnc": "94949957801",
+          "pnc_base": "949499578",
+          "revision": "01",
+          "source_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+          "scope": "published inventory existence; specs/docs/gallery equivalence unproven"
+        }
+      ],
+      "requested_pnc": "94949957800",
+      "requested_relation": "published_exact_revision",
+      "technical_equivalence": false
+    },
+    "query_variants": [
+      "EOD6C46K2",
+      "94949957800"
+    ],
+    "captures": [
+      {
+        "url": "https://www.electrolux.co.uk/search/?q=EOD6C46K2&tab=Product",
+        "status_code": 200,
+        "session_id": "public_browser:06a42f2444214797805a94f19c8b5e02",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 90,
+          "network_requests": 61,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 13,
+          "blocked_image_requests": 25,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 47,
+          "document_status": 200,
+          "document_bytes": 666942
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/search/?q=EOD6C46K2",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T17:37:04+00:00",
+        "sha256": "0f578c629cb56d8a32b77b3761143962e78a0d8d2e2b86f827fca6ba74927d10",
+        "file": "f7334c8d403c09d07a4b088b60922f086059acbf728f0ac4634f466c4ab1d084.html",
+        "requested_url": "https://www.electrolux.co.uk/search/?q=EOD6C46K2",
+        "observation": "actual_live",
+        "original_response_sha256": "f7334c8d403c09d07a4b088b60922f086059acbf728f0ac4634f466c4ab1d084",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "status_code": 200,
+        "session_id": "public_browser:06a42f2444214797805a94f19c8b5e02",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "navigations": 1,
+          "resource_attempts": 159,
+          "network_requests": 97,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 25,
+          "blocked_image_requests": 58,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.paypal.com/sdk/js?client-id=Aegphy4qyExklqSm3nhg1EBbqQd10P8Tzv-uNQgEvYaHly7YRLGi0xWyyO2NcDnCyrQ7lduG-0iq0kbe&components=messages",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://js.klarna.com/web-sdk/v1/klarna.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 71,
+          "document_status": 200,
+          "document_bytes": 875705
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T17:37:10+00:00",
+        "sha256": "2760d44f96556973490744ae138d4f4a95ec0dead719cb78514bf6d3627adc31",
+        "file": "4a30b80a7d45c44da484a22330b971657ec632a25b59dd88ea700dd4146984d0.html",
+        "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+        "observation": "actual_live",
+        "original_response_sha256": "4a30b80a7d45c44da484a22330b971657ec632a25b59dd88ea700dd4146984d0",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/",
+        "status_code": 200,
+        "session_id": "public_browser:06a42f2444214797805a94f19c8b5e02",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 140,
+          "blocked_image_requests": 42,
+          "network_requests": 94,
+          "script_xhr_fetch_requests": 71,
+          "navigations": 1,
+          "document_requests": 1,
+          "stylesheet_requests": 22,
+          "blocked_font_requests": 4,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "document_status": 200,
+          "document_bytes": 901229
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T17:37:18+00:00",
+        "sha256": "ca5661028b087028b6c0feef285c96c91b8da6016babbed556bd9d6ce4fa23f4",
+        "file": "cb8f4a5ea50925187f7794118a5207982c1c7e46092f50cf4207e6b0f4556451.html",
+        "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/",
+        "observation": "actual_live",
+        "original_response_sha256": "cb8f4a5ea50925187f7794118a5207982c1c7e46092f50cf4207e6b0f4556451",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/",
+        "status_code": 200,
+        "session_id": "public_browser:06a42f2444214797805a94f19c8b5e02",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 148,
+          "blocked_image_requests": 55,
+          "navigations": 1,
+          "network_requests": 89,
+          "document_requests": 1,
+          "blocked_font_requests": 4,
+          "stylesheet_requests": 22,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://s.go-mpulse.net/boomerang/J9AJ4-286ZN-Y49FD-VPQK6-NFQXM",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "script_xhr_fetch_requests": 66,
+          "document_status": 200,
+          "document_bytes": 1023771
+        },
+        "response_events": [
+          {
+            "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T17:37:25+00:00",
+        "sha256": "25ae78a8b5f5444fcaf3a287ad55200b77abe7a08985a3caec7acb6273dff3b0",
+        "file": "4136b431c463390c2a017102adfe771521df0f3607d71902a0d49a81efe05361.html",
+        "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/",
+        "observation": "actual_live",
+        "original_response_sha256": "4136b431c463390c2a017102adfe771521df0f3607d71902a0d49a81efe05361",
+        "redactions": [
+          "cookie",
+          "clientIpAddress"
+        ]
+      },
+      {
+        "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+        "status_code": 200,
+        "session_id": "public_browser:06a42f2444214797805a94f19c8b5e02",
+        "visible": true,
+        "persistent": true,
+        "counts": {
+          "resource_attempts": 83,
+          "blocked_image_requests": 44,
+          "navigations": 1,
+          "network_requests": 35,
+          "document_requests": 1,
+          "stylesheet_requests": 1,
+          "script_xhr_fetch_requests": 33,
+          "rejected_requests": [
+            {
+              "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/93ad4bf6c3654dcb82eee1b40b96b14400b9e489-234x182.jpg?q=85&auto=format&fit=max&w=640",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/1919fe61e89e2351d4c1953e5b4987d299c2f701-220x77.svg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/93ad4bf6c3654dcb82eee1b40b96b14400b9e489-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/15ed41ea493a2ad7f67a0a6d87df60da4b47993c-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/8a3cb7f91fa4c9fa636f35b32207064a08edbd22-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/8c7af95ab6582a190e47911b4a38b78b1b36cc0e-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/f57fff50686adb0e440f0264484382dc02565b92-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/7abcdc1f415c8c3ea0d86f25a0f8721ac56a49cc-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/97aadcaf8798ab85d1b594691a3bcd10c3dc2248-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/5cbaa4e8bb5a292fec19c902c9e716515e2ed3b0-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/fae16c9e41018293540a06bccfa0be9915131584-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/08ec42994fbc7f3acb7e5faf5f7716904126c4b2-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/90ab077589a06f21bd8a6a1181d451db3d723930-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/a5a2ccc5e528d5f620817f0ca2d8c6a554e5c057-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://cdn.sanity.io/images/a6kmdovk/production/cd6232bd3f57e201f9526a222a7b6118d2cfc906-234x182.jpg?q=85&auto=format",
+              "method": "GET",
+              "resource_type": "image",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+              "method": "POST",
+              "resource_type": "fetch",
+              "reason": "method_or_account_flow"
+            },
+            {
+              "url": "https://www.google.com/ccm/geo",
+              "method": "GET",
+              "resource_type": "fetch",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://www.google.com/recaptcha/api.js?render=explicit",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://identity.electrolux.cloud/js/gigya.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://t.contentsquare.net/uxa/5795779ac0542.js",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            },
+            {
+              "url": "https://zn9axvourwm2p6hxx-electrolux.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_9AXvOurwM2P6HxX",
+              "method": "GET",
+              "resource_type": "script",
+              "reason": "host_not_allowed"
+            }
+          ],
+          "blocked_font_requests": 4,
+          "javascript_errors": 1,
+          "document_status": 200,
+          "document_bytes": 661321
+        },
+        "response_events": [
+          {
+            "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+            "status": 200,
+            "main_document": true
+          }
+        ],
+        "captured_at": "2026-10-11T17:37:30+00:00",
+        "sha256": "326dab12182c5e2096f17161d032b46289428ee47cb282954e3a15d17f9e2917",
+        "file": "326dab12182c5e2096f17161d032b46289428ee47cb282954e3a15d17f9e2917.html",
+        "requested_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+        "observation": "actual_live"
+      }
+    ],
+    "live_success": true,
+    "access_error": "",
+    "image_measurements": [
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/8f908c48-172e-460c-897a-6de15fa11cf3/2023889108-eps",
+        "accepted": true,
+        "identity_confirmed": false,
+        "selection": "candidate; identity remains partial",
+        "width": 700,
+        "height": 700,
+        "size_bytes": 48789,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "1a3c87c5249ba99c233839d0ae335e0615269e88bb3523775deb692028152699"
+      },
+      {
+        "url": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/a6c6afa0-d1d8-473b-acdb-05fb2058212b/241220SP9F-pdf",
+        "accepted": true,
+        "identity_confirmed": false,
+        "selection": "candidate; identity remains partial",
+        "width": 700,
+        "height": 700,
+        "size_bytes": 82251,
+        "format": "JPG",
+        "content_type": "image/jpeg",
+        "effective_content_type": "image/jpeg",
+        "sha256": "12beefb1d298cd09ff88a1d3d22490729acdc3798f7726f6d7cb7adee488f216"
+      }
+    ]
+  },
+  "readiness": {
+    "verdict": "not_ready",
+    "blocking_gaps": [
+      "product_relation_partial",
+      "specifications_missing",
+      "gallery_missing"
+    ],
+    "advisory_gaps": [
+      "manual_unverified"
+    ],
+    "gaps": [
+      "product_relation_partial",
+      "specifications_missing",
+      "gallery_missing",
+      "manual_unverified"
+    ],
+    "identity": {
+      "model": "EOD6C46K2",
+      "model_relation": "model_confirmed",
+      "requested_pnc": "94949957800",
+      "requested_region": "UK",
+      "found_model": "EOD6C46K2",
+      "product_code": "949499578",
+      "pnc_base": "949499578",
+      "revision": null,
+      "region": "UK",
+      "ean": "7333394008912",
+      "family": "500 SurroundCook with SteamBake Catalytic Built-in Oven",
+      "product_code_relation": "base_pnc_partial",
+      "configuration_confirmed": false,
+      "published_finish": "Black",
+      "revision_inventory_relation": "published_exact_revision"
+    },
+    "confirmed_specs": 1,
+    "manual_status": "Не проверена",
+    "conflicts": 0,
+    "exact_identity": true,
+    "readiness_scope": "published regional product / exact supplied PNC when present"
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "input",
+      "provider": "normalization",
+      "query": "94949957800",
+      "reason": "Model and PNC are separate queries; revision never padded",
+      "source_type": "query_variants",
+      "timestamp": "2026-10-11T17:36:58+00:00",
+      "url": "",
+      "variants": [
+        "EOD6C46K2",
+        "94949957800"
+      ]
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_official",
+      "query": "EOD6C46K2",
+      "reason": "same-session live catalog cache; not fresh PDP success",
+      "source_type": "catalog_root",
+      "timestamp": "2026-10-11T17:36:58+00:00",
+      "url": "https://www.electrolux.co.uk/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_exact",
+      "query": "EOD6C46K2",
+      "reason": "same-session live catalog cache; not fresh PDP success",
+      "source_type": "official_search",
+      "timestamp": "2026-10-11T17:36:58+00:00",
+      "url": "https://www.electrolux.co.uk/search/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_exact",
+      "query": "EOD6C46K2",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/search/?q=EOD6C46K2",
+      "source_type": "official_search",
+      "timestamp": "2026-10-11T17:37:04+00:00",
+      "url": "https://www.electrolux.co.uk/search/?q=EOD6C46K2&tab=Product"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_exact",
+      "query": "EOD6C46K2",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+      "source_type": "PDP",
+      "timestamp": "2026-10-11T17:37:10+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/"
+    },
+    {
+      "accepted": true,
+      "candidate_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/",
+      "catalog_product_code": "",
+      "discovery_reason": "published official link",
+      "event": "electrolux_discovery",
+      "identity_relation": {
+        "configuration_confirmed": false,
+        "ean": "7333394008912",
+        "family": "500 SurroundCook with SteamBake Catalytic Built-in Oven",
+        "found_model": "EOD6C46K2",
+        "model": "EOD6C46K2",
+        "model_relation": "model_confirmed",
+        "pnc_base": "949499578",
+        "product_code": "949499578",
+        "product_code_relation": "base_pnc_partial",
+        "published_finish": "Black",
+        "region": "UK",
+        "requested_pnc": "94949957800",
+        "requested_region": "UK",
+        "revision": null
+      },
+      "provider": "regional_exact",
+      "query": "EOD6C46K2",
+      "reason": "{\"model\": \"EOD6C46K2\", \"model_relation\": \"model_confirmed\", \"requested_pnc\": \"94949957800\", \"requested_region\": \"UK\", \"found_model\": \"EOD6C46K2\", \"product_code\": \"949499578\", \"pnc_base\": \"949499578\", \"revision\": null, \"region\": \"UK\", \"ean\": \"7333394008912\", \"family\": \"500 SurroundCook with SteamBake Catalytic Built-in Oven\", \"product_code_relation\": \"base_pnc_partial\", \"configuration_confirmed\": false}",
+      "source_type": "PDP",
+      "timestamp": "2026-10-11T17:37:10+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/eod6c46k2/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EOD6C46K2",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T17:37:18+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EOD6C46K2",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T17:37:25+00:00",
+      "url": "https://www.electrolux.co.uk/kitchen/cooking/ovens/oven/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_inventory",
+      "query": "EOD6C46K2",
+      "reason": "Actual live response; identity checked separately",
+      "region": "shop.electrolux.co.uk",
+      "requested_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+      "source_type": "model_pnc_inventory",
+      "timestamp": "2026-10-11T17:37:30+00:00",
+      "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2"
+    },
+    {
+      "accepted": true,
+      "event": "electrolux_discovery",
+      "identity_relation": {
+        "model": "EOD6C46K2",
+        "relations": [
+          {
+            "model": "EOD6C46K2",
+            "pnc": "94949957800",
+            "pnc_base": "949499578",
+            "revision": "00",
+            "scope": "published inventory existence; specs/docs/gallery equivalence unproven",
+            "source_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2"
+          },
+          {
+            "model": "EOD6C46K2",
+            "pnc": "94949957801",
+            "pnc_base": "949499578",
+            "revision": "01",
+            "scope": "published inventory existence; specs/docs/gallery equivalence unproven",
+            "source_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2"
+          }
+        ],
+        "requested_pnc": "94949957800",
+        "requested_relation": "published_exact_revision",
+        "technical_equivalence": false,
+        "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2"
+      },
+      "provider": "official_inventory",
+      "query": "EOD6C46K2",
+      "reason": "Published model/PNC existence only; technical equivalence not inferred",
+      "source_type": "model_pnc_inventory",
+      "timestamp": "2026-10-11T17:37:30+00:00",
+      "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "collisions": [
+    {
+      "source_url": "https://www.electrolux.ie/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/",
+      "native_shape": "Both entries are label/infoText pairs in the same FullSpecification section. Native source publishes no different semantic key, parent or attribute ID. Summary repeats the first list only; do not rename the second by interpreting its words.",
+      "classification": "same_owner_duplicate_label_different_values",
+      "model": "EFI61141B",
+      "product_code": "914932044",
+      "revision": null,
+      "section": "Other",
+      "label": "Push Button Functions",
+      "rows": [
+        {
+          "section": "Other",
+          "label": "Push Button Functions",
+          "value": "DELAY, ON/OFF, Prewash, SPIN SELECTION, Start/Pause, TEMP SELECTION, TIME MANAGER",
+          "scope": "product_code",
+          "product_code": "914932044",
+          "region": "IE",
+          "structured_path": "$.props.pageProps.pageData.components[1].components[2].components[2].props.attributes[3].items[1]",
+          "parent_context": {
+            "component": "FullSpecification",
+            "section_index": 3,
+            "section_label": "Other",
+            "section_metadata": {
+              "productCode": "914 932 044",
+              "label": "Other"
+            }
+          },
+          "evidence_relation": "exact_pnc",
+          "row_index": 18,
+          "source_url": "https://www.electrolux.ie/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/"
+        },
+        {
+          "section": "Other",
+          "label": "Push Button Functions",
+          "value": "Delay, Extra rinse, Prewash, RINSE HOLD, Silent, Start/Pause, Time manager",
+          "scope": "product_code",
+          "product_code": "914932044",
+          "region": "IE",
+          "structured_path": "$.props.pageProps.pageData.components[1].components[2].components[2].props.attributes[3].items[7]",
+          "parent_context": {
+            "component": "FullSpecification",
+            "section_index": 3,
+            "section_label": "Other",
+            "section_metadata": {
+              "productCode": "914 932 044",
+              "label": "Other"
+            }
+          },
+          "evidence_relation": "exact_pnc",
+          "row_index": 24,
+          "source_url": "https://www.electrolux.ie/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/"
+        }
+      ],
+      "resolution": "Retained; no union, renaming, first-value selection or revision inference"
+    },
+    {
+      "source_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/built-in-washing-machine/ef7742obi/",
+      "native_shape": "Both entries are label/infoText pairs in the same FullSpecification section. Native source publishes no different semantic key, parent or attribute ID. Summary repeats the first list only; do not rename the second by interpreting its words.",
+      "classification": "same_owner_duplicate_label_different_values",
+      "model": "EF7742OBI",
+      "product_code": "914580516",
+      "revision": null,
+      "section": "Other",
+      "label": "Push Button Functions",
+      "rows": [
+        {
+          "section": "Other",
+          "label": "Push Button Functions",
+          "value": "Delayed Start, ON/OFF, Plus Steam, Prewash, Soft Plus, SPIN SELECTION, Start/Pause, TEMP SELECTION, TIME MANAGER",
+          "scope": "product_code",
+          "product_code": "914580516",
+          "region": "UK",
+          "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[4].items[1]",
+          "parent_context": {
+            "component": "FullSpecification",
+            "section_index": 4,
+            "section_label": "Other",
+            "section_metadata": {
+              "productCode": "914 580 516",
+              "label": "Other"
+            }
+          },
+          "evidence_relation": "exact_pnc",
+          "row_index": 29,
+          "source_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/built-in-washing-machine/ef7742obi/"
+        },
+        {
+          "section": "Other",
+          "label": "Push Button Functions",
+          "value": "Cold, Night, NO SPIN, Plus Steam, Prewash, RINSE HOLD, Soft plus, SPEED3, Start/Pause, Temperature 5",
+          "scope": "product_code",
+          "product_code": "914580516",
+          "region": "UK",
+          "structured_path": "$.props.pageProps.pageData.components[1].components[3].components[3].props.attributes[4].items[6]",
+          "parent_context": {
+            "component": "FullSpecification",
+            "section_index": 4,
+            "section_label": "Other",
+            "section_metadata": {
+              "productCode": "914 580 516",
+              "label": "Other"
+            }
+          },
+          "evidence_relation": "exact_pnc",
+          "row_index": 34,
+          "source_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/built-in-washing-machine/ef7742obi/"
+        }
+      ],
+      "resolution": "Retained; no union, renaming, first-value selection or revision inference"
+    }
+  ],
+  "classification": "Unresolved native duplicate label with unequal lists in identical parent context, not parser/context bug. Real source ambiguity retained as conflict; semantic split not evidenced."
+}

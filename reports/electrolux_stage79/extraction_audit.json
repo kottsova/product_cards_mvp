@@ -1,0 +1,81 @@
+{
+  "origin": "offline parser diagnostic on actual live EOD PDP; base-PNC counterfactual is not frozen-input live success",
+  "frozen": {
+    "raw": 44,
+    "accepted_raw": 1,
+    "rejected_raw": 43,
+    "confirmed_specs": 1,
+    "confirmed_photos": 1,
+    "revision_identity_confirmed": true
+  },
+  "published_base_counterfactual": {
+    "raw": 44,
+    "accepted_raw": 34,
+    "rejected_raw": 10,
+    "mapped_fields": 38,
+    "gallery_items": 9
+  },
+  "inventory": {
+    "url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+    "model": "EOD6C46K2",
+    "relations": [
+      {
+        "model": "EOD6C46K2",
+        "pnc": "94949957800",
+        "pnc_base": "949499578",
+        "revision": "00",
+        "source_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+        "scope": "published inventory existence; specs/docs/gallery equivalence unproven"
+      },
+      {
+        "model": "EOD6C46K2",
+        "pnc": "94949957801",
+        "pnc_base": "949499578",
+        "revision": "01",
+        "source_url": "https://shop.electrolux.co.uk/model/m/EOD6C46K2",
+        "scope": "published inventory existence; specs/docs/gallery equivalence unproven"
+      }
+    ],
+    "requested_pnc": "94949957800",
+    "requested_relation": "published_exact_revision",
+    "technical_equivalence": false
+  },
+  "revision_owner": {
+    "url": "https://shop.electrolux.co.uk/search?pnc=94949957800",
+    "model": "EOD6C46K2",
+    "pnc": "94949957800",
+    "confirmed": true,
+    "technical_equivalence": false,
+    "gallery": [
+      {
+        "url": "https://electrolux.bynder.com/transform/WS_PV/8f908c48-172e-460c-897a-6de15fa11cf3/2023889108-eps",
+        "asset_key": "478fc2db33d5f0a697f8241d",
+        "kind": "product_gallery",
+        "alt": "EOD6C46K2 official exact revision appliance image",
+        "product_code": "94949957800",
+        "color": "",
+        "relation_url": "https://shop.electrolux.co.uk/search?pnc=94949957800",
+        "relation": "native appliance.image for exact model and 11-digit PNC; finish not inferred",
+        "eligible": true
+      }
+    ],
+    "pnc_base": "949499578",
+    "revision": "00",
+    "service_name": "Oven Catalytic",
+    "relation": "native exact appliance owner; no subordinate-part specs/docs accepted",
+    "shared_gallery_assets": [
+      {
+        "owner_image": "https://electrolux.bynder.com/transform/WS_PV/8f908c48-172e-460c-897a-6de15fa11cf3/2023889108-eps",
+        "published_derivative": "https://www.electrolux.co.uk/services/eml/transform/WS_PN/8f908c48-172e-460c-897a-6de15fa11cf3/2023889108-eps",
+        "asset_identity": [
+          "8f908c48-172e-460c-897a-6de15fa11cf3",
+          "2023889108-eps"
+        ]
+      }
+    ]
+  },
+  "rejection_reasons": {
+    "Marketing/feature prose or malformed label, not a structured technical pair": 10,
+    "PNC/revision/region relation unproven": 33
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "injected_timeout": {
+    "origin": "synthetic failure, not live success",
+    "seconds": 1.3540671999799088,
+    "event": {
+      "browser_events": [],
+      "challenge": "",
+      "dom_state": "unknown",
+      "elapsed": 1.216,
+      "event": "browser_timing",
+      "exception": "driver_wall_timeout",
+      "final_url": "",
+      "network_idle_wait": false,
+      "phase": "public_goto",
+      "retries": 0,
+      "state": "end",
+      "timeout": true,
+      "timestamp": "2026-10-13T05:22:11+00:00",
+      "url": "https://www.electrolux.co.uk/"
+    },
+    "context_discarded": true,
+    "owned_process_tree": [
+      {
+        "ProcessId": 36228,
+        "ParentProcessId": 8124,
+        "Name": "python.exe"
+      },
+      {
+        "ProcessId": 8152,
+        "ParentProcessId": 36228,
+        "Name": "conhost.exe"
+      },
+      {
+        "ProcessId": 28180,
+        "ParentProcessId": 36228,
+        "Name": "python.exe"
+      },
+      {
+        "ProcessId": 8336,
+        "ParentProcessId": 28180,
+        "Name": "node.exe"
+      },
+      {
+        "ProcessId": 7176,
+        "ParentProcessId": 8336,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 7480,
+        "ParentProcessId": 7176,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 32280,
+        "ParentProcessId": 7176,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 32528,
+        "ParentProcessId": 7176,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 26520,
+        "ParentProcessId": 7176,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 21816,
+        "ParentProcessId": 7176,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 29372,
+        "ParentProcessId": 7176,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 31516,
+        "ParentProcessId": 7176,
+        "Name": "chrome.exe"
+      }
+    ],
+    "remaining_owned_processes": [],
+    "job": {
+      "id": "b56ba5231b364645b942c5ad4be8f4e2",
+      "product_id": 1,
+      "status": "needs_review",
+      "current_stage": null,
+      "message": "Electrolux: not_ready; Точная модель не подтверждена; PNC / revision / регион / отделка подтверждены частично; Недостаточно официальных характеристик; Нет byte-verified фото подходящего варианта; Инструкция не проверена (не блокирует готовность); driver_wall_timeout_or_disconnect; context discarded; evidence availability unknown",
+      "created_at": "2026-10-13T05:22:10+00:00",
+      "updated_at": "2026-10-13T05:22:11+00:00",
+      "started_at": "2026-10-13T05:22:10+00:00",
+      "finished_at": "2026-10-13T05:22:11+00:00",
+      "stages": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  "recovered_job": {
+    "origin": "actual live official data",
+    "model": "EDHI618WD",
+    "seconds": 93.21003780001774,
+    "readiness": {
+      "verdict": "export_ready",
+      "blocking_gaps": [],
+      "advisory_gaps": [],
+      "gaps": [],
+      "identity": {
+        "model": "EDHI618WD",
+        "model_relation": "model_confirmed",
+        "requested_pnc": "",
+        "requested_region": "UK",
+        "found_model": "EDHI618WD",
+        "product_code": "916099992",
+        "pnc_base": "916099992",
+        "revision": null,
+        "region": "UK",
+        "ean": "7333394059853",
+        "family": "600 GentleCare Heat pump 8 kg Tumble Dryer",
+        "product_code_relation": "published_product_confirmed",
+        "configuration_confirmed": true,
+        "published_finish": "White",
+        "revision_inventory_relation": "model_inventory_confirmed"
+      },
+      "confirmed_specs": 29,
+      "manual_status": "Проверена",
+      "conflicts": 0,
+      "exact_identity": true,
+      "readiness_scope": "published regional product / exact supplied PNC when present"
+    },
+    "new_session": "public_browser:5f833d0dc46343029d7b7e6018c25076",
+    "old_session": "public_browser:a9f75e88aa6641a7981d8786ef67a504",
+    "recoveries": 1
+  },
+  "context_closed": true
+}

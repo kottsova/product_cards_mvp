@@ -1,0 +1,144 @@
+{
+  "injected_timeout": {
+    "origin": "synthetic failure, not live success",
+    "seconds": 1.3728050999925472,
+    "event": {
+      "browser_events": [],
+      "challenge": "",
+      "dom_state": "unknown",
+      "elapsed": 1.2365,
+      "event": "browser_timing",
+      "exception": "driver_wall_timeout",
+      "final_url": "",
+      "job_id": "878a9210334249b5893c5f4c60df5dbc",
+      "network_idle_wait": false,
+      "phase": "public_goto",
+      "product_id": 1,
+      "retries": 0,
+      "session_id": "public_browser:387e7a9f5b914989bb5f14f7b572784b",
+      "state": "end",
+      "timeout": true,
+      "timestamp": "2026-10-13T05:41:58+00:00",
+      "url": "https://www.electrolux.co.uk/"
+    },
+    "context_discarded": true,
+    "owned_process_tree": [
+      {
+        "ProcessId": 32428,
+        "ParentProcessId": 16288,
+        "Name": "python.exe"
+      },
+      {
+        "ProcessId": 20364,
+        "ParentProcessId": 32428,
+        "Name": "conhost.exe"
+      },
+      {
+        "ProcessId": 35780,
+        "ParentProcessId": 32428,
+        "Name": "python.exe"
+      },
+      {
+        "ProcessId": 11580,
+        "ParentProcessId": 35780,
+        "Name": "node.exe"
+      },
+      {
+        "ProcessId": 26752,
+        "ParentProcessId": 11580,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 4324,
+        "ParentProcessId": 26752,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 25068,
+        "ParentProcessId": 26752,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 21820,
+        "ParentProcessId": 26752,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 1604,
+        "ParentProcessId": 26752,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 20588,
+        "ParentProcessId": 26752,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 5648,
+        "ParentProcessId": 26752,
+        "Name": "chrome.exe"
+      },
+      {
+        "ProcessId": 32048,
+        "ParentProcessId": 26752,
+        "Name": "chrome.exe"
+      }
+    ],
+    "remaining_owned_processes": [],
+    "job": {
+      "id": "878a9210334249b5893c5f4c60df5dbc",
+      "product_id": 1,
+      "status": "needs_review",
+      "current_stage": null,
+      "message": "Electrolux: not_ready; Точная модель не подтверждена; PNC / revision / регион / отделка подтверждены частично; Недостаточно официальных характеристик; Нет byte-verified фото подходящего варианта; Инструкция не проверена (не блокирует готовность); driver_wall_timeout_or_disconnect; context discarded; evidence availability unknown",
+      "created_at": "2026-10-13T05:41:57+00:00",
+      "updated_at": "2026-10-13T05:41:58+00:00",
+      "started_at": "2026-10-13T05:41:57+00:00",
+      "finished_at": "2026-10-13T05:41:58+00:00",
+      "stages": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  "recovered_job": {
+    "origin": "actual live official data",
+    "model": "EDHI618WD",
+    "seconds": 83.37044869997771,
+    "readiness": {
+      "verdict": "export_ready",
+      "blocking_gaps": [],
+      "advisory_gaps": [],
+      "gaps": [],
+      "identity": {
+        "model": "EDHI618WD",
+        "model_relation": "model_confirmed",
+        "requested_pnc": "",
+        "requested_region": "UK",
+        "found_model": "EDHI618WD",
+        "product_code": "916099992",
+        "pnc_base": "916099992",
+        "revision": null,
+        "region": "UK",
+        "ean": "7333394059853",
+        "family": "600 GentleCare Heat pump 8 kg Tumble Dryer",
+        "product_code_relation": "published_product_confirmed",
+        "configuration_confirmed": true,
+        "published_finish": "White",
+        "revision_inventory_relation": "model_inventory_confirmed"
+      },
+      "confirmed_specs": 29,
+      "manual_status": "Проверена",
+      "conflicts": 0,
+      "exact_identity": true,
+      "readiness_scope": "published regional product / exact supplied PNC when present"
+    },
+    "new_session": "public_browser:34bfdd9328d04c7d8dcb6dfc674d6627",
+    "old_session": "public_browser:387e7a9f5b914989bb5f14f7b572784b",
+    "recoveries": 1
+  },
+  "context_closed": true
+}

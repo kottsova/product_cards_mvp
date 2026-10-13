@@ -5,7 +5,7 @@ dealer fallback (available for any brand/category, per explicit user
 authorization -- Stage 11.3/11.4)."""
 from __future__ import annotations
 import argparse, json, logging, os, re, time
-from contextlib import contextmanager
+from contextlib import contextmanager,ExitStack
 from pathlib import Path
 from typing import Callable
 from urllib.parse import urlsplit
@@ -710,14 +710,20 @@ def single_worker(directory: Path):
 
 def main():
     parser=argparse.ArgumentParser(description="Worker сравнения источников LG")
-    parser.add_argument("--data-dir",type=Path); parser.add_argument("--poll-interval",type=float,default=3.0); parser.add_argument("--once",action="store_true"); args=parser.parse_args()
+    parser.add_argument("--data-dir",type=Path); parser.add_argument("--poll-interval",type=float,default=3.0); parser.add_argument("--once",action="store_true")
+    parser.add_argument("--electrolux-browser-profile",type=Path,help="Opt-in controlled Electrolux flow: visible persistent Chrome, bounded driver and permanent telemetry")
+    args=parser.parse_args()
     root=(args.data_dir or Path(os.environ.get("PRODUCT_CARDS_DATA_DIR") or PROJECT_DIR/"data")).resolve(); database=root/"batches.sqlite3"
     jobs.initialize(database); logging.basicConfig(level=logging.INFO,format="%(levelname)s %(message)s")
-    with single_worker(root):
+    with single_worker(root),ExitStack() as controlled:
         jobs.recover_interrupted(database)
+        browser=electrolux_adapter=None
         try:
+            if args.electrolux_browser_profile:
+                from .adapters.electrolux import controlled_browser_adapter
+                electrolux_adapter=controlled.enter_context(controlled_browser_adapter(root,args.electrolux_browser_profile.resolve()))
             while True:
-                processed=run_once(database)
+                processed=run_once(database,**({'electrolux_adapter_factory':lambda:electrolux_adapter} if electrolux_adapter else {}))
                 if args.once: break
                 if not processed: time.sleep(args.poll_interval)
         except KeyboardInterrupt: LOGGER.info("Worker остановлен.")

@@ -1,0 +1,28 @@
+{
+  "historical_root_cause": "unobservable due to missing trace",
+  "known": {
+    "total_seconds": 337.109513,
+    "completed_trace_seconds": 23.0,
+    "unobserved_interval_seconds": 314.109513,
+    "last_completed_trace": {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T17:42:01+00:00",
+      "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/"
+    }
+  },
+  "not_provable": [
+    "which exact synchronous/navigation/DOM call consumed the interval",
+    "internal cause of the original stalled driver/session"
+  ],
+  "found_systemic_risk": "Synchronous driver call had no external caller wall-clock bound",
+  "current_mitigation": "Owned-process wall timeout, fresh context recovery, persistent stage/URL/job telemetry and pre-timeout stack; 403/429 persisted before DOM waits",
+  "qualification_rule": "Unknown historical event is retained honestly and is not a readiness blocker when current safeguards/live/stability/regression pass."
+}

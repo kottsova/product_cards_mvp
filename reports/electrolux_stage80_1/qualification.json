@@ -1,0 +1,71 @@
+{
+  "stage": "80.1",
+  "stage_pass": true,
+  "qualification_rule": "Current bounded safeguards and live stability; historical unknown cause explicitly permitted by user",
+  "verdict": "Electrolux adapter production-ready for controlled use",
+  "scope": "Opt-in visible persistent Chrome binding in ordinary worker; same context per run, bounded recovery and access guards. Default HTTP is not claimed as the qualified transport.",
+  "historical_root_cause": "unobservable due to missing trace",
+  "known_limits": [
+    "EFI61141B native source ambiguity",
+    "EF7742OBI native source ambiguity",
+    "EOD6C46K2 insufficient exact-revision technical evidence"
+  ],
+  "dataset_sha256": "92cc16f718f98b20aafed5a6cc247b72c57fe4b034592078cf0ec58527d69176",
+  "actual_live_models": 10,
+  "usable_for_controlled_review": 9,
+  "ready_cards": 7,
+  "confirmed_specs": 283,
+  "confirmed_photos": 19,
+  "stability_models": 6,
+  "stability_pass": true,
+  "regression": {
+    "exit_code": 0,
+    "result": [
+      "Ran 1879 tests in 641.548s",
+      "OK"
+    ],
+    "source_tree_unchanged": true
+  },
+  "timing": [
+    {
+      "phase": "release_live",
+      "max_navigation_seconds": 9.9982,
+      "navigation_calls": 46,
+      "unexplained_stalls": 0,
+      "permanent_stages": [
+        "candidate",
+        "discovery",
+        "document_fetch",
+        "documents",
+        "extraction",
+        "image",
+        "job_finish",
+        "job_start",
+        "persistence",
+        "photos"
+      ]
+    },
+    {
+      "phase": "release_stability",
+      "max_navigation_seconds": 8.7624,
+      "navigation_calls": 34,
+      "unexplained_stalls": 0,
+      "permanent_stages": [
+        "candidate",
+        "discovery",
+        "document_fetch",
+        "documents",
+        "extraction",
+        "image",
+        "job_finish",
+        "job_start",
+        "persistence",
+        "photos"
+      ]
+    }
+  ],
+  "injected_real_timeout_seconds": 1.3728050999925472,
+  "remaining_owned_processes": 0,
+  "recovered_actual_live_model": "EDHI618WD",
+  "false_revision_facts": 0
+}

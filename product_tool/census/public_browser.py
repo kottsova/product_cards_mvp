@@ -95,6 +95,9 @@ class PublicBrowserSession:
    self.signal='rate_limited';self.counts['rate_limit_url']=r.url
   elif main and r.status in {401,403}:
    self.signal='http_denied';self.counts['http_denied_url']=r.url
+  if r.status==429 or main and r.status in {401,403}:
+   # Persist the observed denial before any DOM/driver wait can time out.
+   policy_fetch.append_log_entry(self.log,{'url':r.url,'final_url':r.url,'observed_document_url':self.page.url,'status_code':r.status,'checked_at':utc_now(),'access_status':'rate_limited' if r.status==429 else 'http_denied','protection_status':'ordinary_page','source_session':self.session_id})
   # A failed ancillary request is evidence, not a denial of the document host.
   if main or r.status in {401,403,429}:self.events.append({'url':r.url,'status':r.status,'main_document':main})
  def snapshot(self, *, after_manual=False):
@@ -139,6 +142,16 @@ class PublicBrowserSession:
   if self.context:self.context.close();self.context=None
   if self.browser:self.browser.close();self.browser=None
   if self.cm:self.cm.__exit__(None,None,None);self.cm=None
+
+ def select_revision(self,pnc):
+  """Read-only published menu selection with the existing snapshot guards."""
+  if not re.fullmatch(r'\d{11}',pnc):raise BrowserFailure('interaction_blocked')
+  self.snapshot()
+  menu=self.page.locator('div[role="combobox"]').filter(has=self.page.locator(f'button[role="menuitem"][aria-label="{pnc}"]'))
+  menu.locator('input[aria-hidden="false"]').click(timeout=5000)
+  self.page.locator(f'button[role="menuitem"][aria-label="{pnc}"]').click(timeout=5000)
+  self.page.wait_for_timeout(1200)
+  return self.page.url
 
  def binary_transport(self,max_bytes=8000000):
   """Requests-compatible public GET facade sharing this context's cookies.
@@ -186,4 +199,91 @@ class PublicBrowserSession:
      raise requests.ConnectionError(str(exc)) from exc
     finally:
      if 'result' in locals():result.dispose()
+  return Transport()
+
+
+class IsolatedPublicBrowserSession:
+ """Existing public session and worker protocol with an outer wall-clock bound.
+
+ All browser work stays in one worker/context. A stalled driver cannot hold the
+ caller indefinitely; killing that owned worker does not clear access stops.
+ """
+ def __init__(self, *, trace_path=None, worker_factory=None, **options):
+  from .browser_runtime import PlaywrightBrowser,BrowserRuntime
+  import sys
+  self.options=options;self.budget=options.get('budget') or BrowserBudget()
+  self.options['budget']=self.budget
+  self.trace_path=Path(trace_path or Path(options['fetch_log_path']).with_name('electrolux_browser_timing.jsonl'));self.trace_path.parent.mkdir(parents=True,exist_ok=True)
+  self.worker_factory=worker_factory or (lambda:PlaywrightBrowser(BrowserRuntime(True,sys.executable),self.budget,options['allowed_hosts']))
+  self.worker=self.worker_factory();self.worker.terminate_tree=True
+  self.clock=time.monotonic;self.deadline=float('inf');self.context=None;self.status=None;self.signal='';self.total_navigations=0;self.session_id='';self.url='';self.cookies_count=0;self.trace_callback=None;self.failed=False;self.recoveries=0;self.job_context={}
+ def event(self,**value):
+  value={'event':'browser_timing','timestamp':utc_now(),'session_id':self.session_id,**self.job_context,**value}
+  with self.trace_path.open('a',encoding='utf8') as f:f.write(json.dumps(value,ensure_ascii=False)+'\n')
+  if self.trace_callback:self.trace_callback(value)
+ def invoke(self,command,limit,**args):
+  left=self.deadline-self.clock()
+  if self.failed:raise BrowserFailure('session_unavailable_after_wall_timeout')
+  if left<=0:raise BrowserFailure('product_budget_exhausted')
+  limit=min(limit,left);start=self.clock();reason='';result={};requested_url=args.get('url',self.url)
+  self.event(phase=command,state='start',url=requested_url,wall_timeout=limit,retries=0)
+  try:
+   result=self.worker.call(command,wall_timeout=limit,diagnostic_wall_timeout=limit,diagnostic_context=self.job_context,**args)
+   self.status=result.get('status_code',self.status);self.signal=result.get('signal','');self.url=result.get('url',self.url);self.total_navigations=result.get('total_navigations',self.total_navigations);self.cookies_count=result.get('cookie_count',self.cookies_count);self.session_id=result.get('session_id',self.session_id)
+   return result
+  except BrowserFailure as exc:
+   reason=str(exc)
+   self.status=exc.counts.get('document_status',self.status);self.signal=exc.counts.get('signal','')
+   if reason in {'driver_wall_timeout','driver_disconnected'} or self.worker.process and self.worker.process.poll() is not None:
+    self.worker.terminate();self.failed=True;self.context=None;self.status=None;self.url='';self.cookies_count=0
+   raise BrowserFailure(reason) from exc
+  finally:self.event(phase=command,state='end',url=requested_url,final_url=result.get('url',self.url),elapsed=round(self.clock()-start,4),exception=reason,timeout='timeout' in reason.lower(),retries=0,challenge=result.get('signal',self.signal),browser_events=result.get('timing_events',[]),dom_state=result.get('dom_state','unknown'),network_idle_wait=False)
+ def start(self):
+  if self.context:return
+  options={k:str(v) if isinstance(v,Path) else asdict(v) if k=='budget' else v for k,v in self.options.items()}
+  options['timing_path']=str(self.trace_path)
+  start=self.clock();self.event(phase='public_start',state='start',wall_timeout=18,retries=0)
+  reason=''
+  try:
+   result=self.worker.start('public_start',wall_timeout=18,diagnostic_wall_timeout=18,options=options);self.context=True
+   self.session_id=result['session_id'];self.cookies_count=result['cookie_count'];self.url=result['url']
+  except BrowserFailure as exc:
+   reason=str(exc);self.worker.terminate();self.failed=True;self.context=None;raise
+  finally:self.event(phase='public_start',state='end',elapsed=round(self.clock()-start,4),session_id=self.session_id,exception=reason,timeout='timeout' in reason.lower())
+ def call(self,command,**args):
+  if command=='goto':return self.invoke('public_goto',18,**args)
+  if command=='document_snapshot':return self.snapshot(**args)
+  raise BrowserFailure('interaction_blocked')
+ def snapshot(self,**kwargs):return self.invoke('public_snapshot',6,after_manual=bool(kwargs.get('after_manual')))
+ def select_revision(self,pnc):return self.invoke('public_revision',16,pnc=pnc)['url']
+ def cookie_count(self):return self.cookies_count
+ def recover_for_next_product(self):
+  """One technical recovery, same profile/log; no URL retry or stop clearing."""
+  if not self.failed:return
+  if self.recoveries>=1:raise BrowserFailure('session_recovery_budget_exhausted')
+  self.worker.close();self.worker=self.worker_factory();self.worker.terminate_tree=True
+  self.context=None;self.status=None;self.signal='';self.url='';self.cookies_count=0;self.failed=False;self.recoveries+=1
+  self.event(phase='session_recovery',state='start',retries=self.recoveries,reason='owned worker wall timeout; next product only; host stops retained')
+  reason=''
+  try:self.start()
+  except BrowserFailure as exc:reason=str(exc);raise
+  finally:self.event(phase='session_recovery',state='end',retries=self.recoveries,exception=reason,session_id=self.session_id)
+ def close(self):
+  old=self.deadline;self.deadline=float('inf') # Cleanup has its own bound even after product expiry.
+  if not self.failed and self.context:
+   try:self.invoke('public_close',6)
+   except BrowserFailure:pass
+  self.worker.close();self.context=None;self.deadline=old
+ def binary_transport(self,max_bytes=8000000):
+  owner=self
+  class Transport:
+   headers={}
+   def get(self,url,timeout=10,**kwargs):
+    import base64,requests
+    try:r=owner.invoke('public_binary',min(timeout+3,13),url=url,timeout=timeout,max_bytes=max_bytes,allow_redirects=kwargs.get('allow_redirects',True))
+    except BrowserFailure as exc:raise requests.ConnectionError(str(exc)) from exc
+    response=requests.Response();response.status_code=r['status_code'];response.url=r['url'];response.headers.update(r['headers']);response._content=base64.b64decode(r['body']);response._content_consumed=True;response.encoding='utf8';response.history=[]
+    for x in r.get('history',[]):
+     prior=requests.Response();prior.url=x['url'];prior.status_code=x['status_code'];prior.headers.update(x['headers']);prior._content=b'';response.history.append(prior)
+    return response
   return Transport()

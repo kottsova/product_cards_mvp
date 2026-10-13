@@ -1,0 +1,28 @@
+{
+  "verify_tls": true,
+  "proxy_environment_keys": [],
+  "requests_ca_bundle_present": false,
+  "results": [
+    {
+      "url": "https://www.electrolux.co.uk/",
+      "origin": "actual default verified HTTP diagnostic; not browser/replay",
+      "error_type": "ReadTimeout",
+      "error": "HTTPSConnectionPool(host='www.electrolux.co.uk', port=443): Read timed out. (read timeout=8)",
+      "seconds": 8.41
+    },
+    {
+      "url": "https://www.electrolux.ie/",
+      "origin": "actual default verified HTTP diagnostic; not browser/replay",
+      "error_type": "ReadTimeout",
+      "error": "HTTPSConnectionPool(host='www.electrolux.ie', port=443): Read timed out. (read timeout=8)",
+      "seconds": 8.5
+    },
+    {
+      "url": "https://shop.electrolux.co.uk/",
+      "origin": "actual default verified HTTP diagnostic; not browser/replay",
+      "error_type": "ReadTimeout",
+      "error": "HTTPSConnectionPool(host='shop.electrolux.co.uk', port=443): Read timed out. (read timeout=8)",
+      "seconds": 8.47
+    }
+  ]
+}

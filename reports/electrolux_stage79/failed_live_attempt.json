@@ -1,0 +1,150 @@
+{
+  "origin": "actual live diagnostic attempt, incomplete; not replay",
+  "job_id": "fd13fe935f9647c0a0ba4069b4332dac",
+  "product_id": 1,
+  "started_at": "2026-10-11T17:41:38+00:00",
+  "stopped_at": "2026-10-11T17:47:15.109513+00:00",
+  "seconds": 337.109513,
+  "last_completed_trace": {
+    "accepted": false,
+    "event": "electrolux_discovery",
+    "identity_relation": "discovery_only",
+    "provider": "official_catalog",
+    "query": "EFI61141B",
+    "reason": "Actual live response; identity checked separately",
+    "region": "www.electrolux.co.uk",
+    "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+    "source_type": "category",
+    "timestamp": "2026-10-11T17:42:01+00:00",
+    "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/"
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "input",
+      "provider": "normalization",
+      "query": "EFI61141B",
+      "reason": "Model and PNC are separate queries; revision never padded",
+      "source_type": "query_variants",
+      "timestamp": "2026-10-11T17:41:38+00:00",
+      "url": "",
+      "variants": [
+        "EFI61141B",
+        ""
+      ]
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_official",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/",
+      "source_type": "catalog_root",
+      "timestamp": "2026-10-11T17:41:44+00:00",
+      "url": "https://www.electrolux.co.uk/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_exact",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/search/",
+      "source_type": "official_search",
+      "timestamp": "2026-10-11T17:41:50+00:00",
+      "url": "https://www.electrolux.co.uk/search/"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "regional_exact",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/search/?q=EFI61141B",
+      "source_type": "official_search",
+      "timestamp": "2026-10-11T17:41:55+00:00",
+      "url": "https://www.electrolux.co.uk/search/?q=EFI61141B&tab=All"
+    },
+    {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T17:42:01+00:00",
+      "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/"
+    }
+  ],
+  "cause": "unqualified driver/session stall after UK catalog, before next successful PDP capture",
+  "confirmed_denial_or_challenge": false,
+  "outcome": "not successful; one fresh actual session retry",
+  "task_processes": [
+    {
+      "ProcessId": 30124,
+      "ParentProcessId": 30588,
+      "Name": "python.exe"
+    },
+    {
+      "ProcessId": 23668,
+      "ParentProcessId": 30124,
+      "Name": "python.exe"
+    },
+    {
+      "ProcessId": 31180,
+      "ParentProcessId": 23668,
+      "Name": "node.exe"
+    },
+    {
+      "ProcessId": 24368,
+      "ParentProcessId": 31180,
+      "Name": "chrome.exe"
+    },
+    {
+      "ProcessId": 16288,
+      "ParentProcessId": 24368,
+      "Name": "chrome.exe"
+    },
+    {
+      "ProcessId": 1932,
+      "ParentProcessId": 24368,
+      "Name": "chrome.exe"
+    },
+    {
+      "ProcessId": 27716,
+      "ParentProcessId": 24368,
+      "Name": "chrome.exe"
+    },
+    {
+      "ProcessId": 7800,
+      "ParentProcessId": 24368,
+      "Name": "chrome.exe"
+    },
+    {
+      "ProcessId": 30296,
+      "ParentProcessId": 24368,
+      "Name": "chrome.exe"
+    },
+    {
+      "ProcessId": 28020,
+      "ParentProcessId": 24368,
+      "Name": "chrome.exe"
+    },
+    {
+      "ProcessId": 29844,
+      "ParentProcessId": 24368,
+      "Name": "chrome.exe"
+    }
+  ]
+}

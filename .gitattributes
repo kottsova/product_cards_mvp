@@ -105,3 +105,22 @@ tests/test_electrolux_stage78.py text eol=lf
 product_tool/electrolux_page.py text eol=lf
 product_tool/electrolux_pipeline.py text eol=lf
 product_tool/adapters/electrolux.py text eol=lf
+
+# Stage 79: public live evidence retains bytes; new fixture tests retain LF.
+reports/electrolux_stage79/** -text
+reports/electrolux_stage79/**/*.html -diff
+reports/electrolux_stage79/**/*.xml -diff
+tests/test_electrolux_stage79.py text eol=lf
+
+# Stage 80 bounded live evidence and tests.
+reports/electrolux_stage80/** -text
+reports/electrolux_stage80/**/*.html -diff
+reports/electrolux_stage80/**/*.xml -diff
+tests/test_electrolux_stage80.py text eol=lf
+
+# Stage 80.1 controlled-flow evidence.
+reports/electrolux_stage80_1/** -text
+reports/electrolux_stage80_1/**/*.html -diff
+reports/electrolux_stage80_1/**/*.xml -diff
+tests/test_electrolux_stage80_1.py text eol=lf
+tests/fixtures/electrolux_stall_worker.py text eol=lf

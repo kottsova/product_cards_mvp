@@ -14,7 +14,7 @@ from .adapters.policy_session import PolicyAwareSession, RequestBudget, request_
 MAX_IMAGE_BYTES = 8_000_000
 ALLOWED_BY_SOURCE = {
     'dreame_model': ('dreametech.com','dreame.tech','cdn.shopify.com'),
-    'electrolux': ('electrolux.co.uk','electrolux.se','electrolux.de','electrolux.pl'),
+    'electrolux': ('electrolux.co.uk','electrolux.ie','electrolux.se','electrolux.de','electrolux.pl','electrolux.bynder.com'),
     'xiaomi_model': ('appmifile.com',),
     'hyperx': ('hyperx.com',),
     'razer_model': ('razer.com','razerzone.com'),

@@ -6,6 +6,7 @@ import queue
 import subprocess
 import sys
 import threading
+import os,signal
 
 @dataclass(frozen=True)
 class BrowserRuntime:
@@ -40,26 +41,43 @@ class BrowserFailure(Exception):
 
 
 class PlaywrightBrowser:
-    def __init__(self,runtime,budget,allowed_hosts):
+    def __init__(self,runtime,budget,allowed_hosts,*,worker_script=None):
         self.runtime=runtime;self.budget=budget;self.hosts=allowed_hosts;self.process=None;self.messages=queue.Queue();self.counts={};self.closed=False
+        self.worker_script=worker_script;self.owns_process_group=False
     def _reader(self):
-        for line in self.process.stdout:
-            try:self.messages.put(json.loads(line))
-            except ValueError:pass
-    def start(self):
-        worker=Path(__file__).with_name('browser_worker.py')
-        self.process=subprocess.Popen([self.runtime.python,str(worker)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True,encoding='utf-8',creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+        try:
+            for line in self.process.stdout:
+                try:self.messages.put(json.loads(line))
+                except ValueError:pass
+        except (OSError,ValueError):pass
+        finally:self.messages.put({'ok':False,'error':'driver_disconnected','counts':self.counts})
+    def start(self,command='start',**args):
+        worker=self.worker_script or Path(__file__).with_name('browser_worker.py')
+        self.process=subprocess.Popen([self.runtime.python,str(worker)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True,encoding='utf-8',creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0),start_new_session=sys.platform!='win32')
+        self.owns_process_group=sys.platform!='win32'
         threading.Thread(target=self._reader,daemon=True).start()
-        return self.call('start',policy={**asdict(self.budget),'allowed_hosts':self.hosts})
-    def call(self,command,**args):
+        return self.call(command,**(args or {'policy':{**asdict(self.budget),'allowed_hosts':self.hosts}}))
+    def terminate(self):
+        """Only the process tree created by this worker, never another session."""
+        if not self.process:return
+        if getattr(self,'terminate_tree',False) and self.process.poll() is None:
+            if sys.platform=='win32':
+                try:subprocess.run(['taskkill','/PID',str(self.process.pid),'/T','/F'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=5)
+                except (OSError,subprocess.TimeoutExpired):pass
+            elif self.owns_process_group:
+                try:os.killpg(self.process.pid,signal.SIGKILL)
+                except ProcessLookupError:pass
+        if self.process.poll() is None:self.process.kill()
+        self.process.wait(timeout=3)
+    def call(self,command,*,wall_timeout=None,**args):
         if self.closed:raise BrowserFailure('interaction_blocked')
         try:
             self.process.stdin.write(json.dumps({'command':command,**args})+'\n');self.process.stdin.flush()
         except OSError:raise BrowserFailure('browser_javascript_error',self.counts)
-        try:message=self.messages.get(timeout=self.budget.operation_timeout_seconds+2)
+        try:message=self.messages.get(timeout=wall_timeout or self.budget.operation_timeout_seconds+2)
         except queue.Empty:
-            self.process.kill();self.process.wait(timeout=3)
-            raise BrowserFailure('browser_javascript_error',self.counts)
+            self.terminate()
+            raise BrowserFailure('driver_wall_timeout' if wall_timeout is not None else 'browser_javascript_error',self.counts)
         self.counts=message.get('counts',message.get('result',{}).get('counts',self.counts))
         if not message['ok']:raise BrowserFailure(message['error'],self.counts)
         return message['result']
@@ -71,7 +89,7 @@ class PlaywrightBrowser:
         finally:
             self.closed=True
             if self.process:
-                if self.process.poll() is None:self.process.kill()
+                if self.process.poll() is None:self.terminate()
                 self.process.wait(timeout=3)
                 for stream in (self.process.stdin,self.process.stdout):
                     if stream:stream.close()

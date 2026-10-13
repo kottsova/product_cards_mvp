@@ -1,0 +1,165 @@
+{
+  "runs": [
+    {
+      "phase": "control_qualified",
+      "browser_calls": 77,
+      "navigation_calls": 22,
+      "navigation_max_seconds": 5.1939,
+      "browser_call_max_seconds": 5.1939,
+      "navigation_exceptions": [],
+      "all_exceptions": [],
+      "network_idle_waits": 0,
+      "wall_timeout_events": [],
+      "browser_events": {
+        "main_response": 23,
+        "dom_ready": 22,
+        "load": 22,
+        "page_closed": 1
+      }
+    },
+    {
+      "phase": "release_live",
+      "browser_calls": 173,
+      "navigation_calls": 46,
+      "navigation_max_seconds": 7.9259,
+      "browser_call_max_seconds": 7.9259,
+      "navigation_exceptions": [],
+      "all_exceptions": [
+        {
+          "event": "browser_timing",
+          "timestamp": "2026-10-11T19:22:51+00:00",
+          "phase": "public_binary",
+          "state": "end",
+          "url": "https://electrolux.bynder.com/asset/c26ccca5-c6c6-46eb-91ea-ac67deff9ea1/250913IWQA-pdf.pdf",
+          "final_url": "https://productinformation.electrolux.com/SERVICES/PIServices/EdenService.svc/WEB/GetDatasheetPDF/productid=FEC807D1-D4D0-418B-8627-70DECE51624C/projectid=E64AC14C-991A-441E-9D81-231B81AC192D/languageid=7F56315E-D2CD-4DC7-A111-2FEAAD616F06",
+          "elapsed": 4.649,
+          "exception": "binary declared size exceeds budget",
+          "timeout": false,
+          "retries": 0,
+          "challenge": "",
+          "browser_events": [],
+          "dom_state": "unknown",
+          "network_idle_wait": false
+        }
+      ],
+      "network_idle_waits": 0,
+      "wall_timeout_events": [],
+      "browser_events": {
+        "main_response": 47,
+        "dom_ready": 46,
+        "load": 45,
+        "page_closed": 1
+      }
+    },
+    {
+      "phase": "release_stability",
+      "browser_calls": 125,
+      "navigation_calls": 34,
+      "navigation_max_seconds": 5.9411,
+      "browser_call_max_seconds": 5.9411,
+      "navigation_exceptions": [],
+      "all_exceptions": [
+        {
+          "event": "browser_timing",
+          "timestamp": "2026-10-11T19:28:43+00:00",
+          "phase": "public_binary",
+          "state": "end",
+          "url": "https://electrolux.bynder.com/asset/c26ccca5-c6c6-46eb-91ea-ac67deff9ea1/250913IWQA-pdf.pdf",
+          "final_url": "https://productinformation.electrolux.com/SERVICES/PIServices/EdenService.svc/WEB/GetDatasheetPDF/productid=FEC807D1-D4D0-418B-8627-70DECE51624C/projectid=E64AC14C-991A-441E-9D81-231B81AC192D/languageid=7F56315E-D2CD-4DC7-A111-2FEAAD616F06",
+          "elapsed": 4.4133,
+          "exception": "binary declared size exceeds budget",
+          "timeout": false,
+          "retries": 0,
+          "challenge": "",
+          "browser_events": [],
+          "dom_state": "unknown",
+          "network_idle_wait": false
+        }
+      ],
+      "network_idle_waits": 0,
+      "wall_timeout_events": [],
+      "browser_events": {
+        "main_response": 35,
+        "dom_ready": 34,
+        "load": 33,
+        "page_closed": 1
+      }
+    }
+  ],
+  "budgets": {
+    "navigation_native_seconds": 10,
+    "navigation_driver_wall_seconds": 18,
+    "snapshot_driver_wall_seconds": 6,
+    "candidate_seconds": 24,
+    "discovery_seconds": 100,
+    "product_seconds": 150,
+    "document_fetch_seconds": 12,
+    "document_batch_seconds": 35,
+    "image_batch_seconds": 24
+  },
+  "budget_semantics": "Driver calls have an outer process wall bound. Stage/product deadlines are cooperative between bounded operations; native parse/decode/persistence additionally constrained by byte/page/DOM caps. No hard preemption of arbitrary Python CPU work is claimed.",
+  "historical_gap": {
+    "original_attempt_seconds": 337.109513,
+    "completed_trace_seconds": 23.0,
+    "unobserved_interval_seconds": 314.109513,
+    "last_completed_trace": {
+      "accepted": false,
+      "event": "electrolux_discovery",
+      "identity_relation": "discovery_only",
+      "provider": "official_catalog",
+      "query": "EFI61141B",
+      "reason": "Actual live response; identity checked separately",
+      "region": "www.electrolux.co.uk",
+      "requested_url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/",
+      "source_type": "category",
+      "timestamp": "2026-10-11T17:42:01+00:00",
+      "url": "https://www.electrolux.co.uk/laundry/laundry/washing-machines/"
+    },
+    "historical_substage": "unqualified: original did not record navigation start, DOM call start or driver stack",
+    "proven_implementation_defect": "Direct synchronous public session has no caller wall-clock bound around driver/DOM snapshot; goto timeout alone does not bound the entire operation",
+    "counterfactual_parser_check": [
+      {
+        "file": "reports\\electrolux_stage79\\full_live\\1\\captures\\05f1a6adfae05a84f4bbe2a151d8d37b4342eabd93a12f8c379cea3449fdc854.html",
+        "sha256": "231932c049c7a2e1f0129944da8cb8f9235cba6a686a89668682c8890360a2c0",
+        "catalog_parse_seconds": 0.03449229999387171,
+        "protection_parse_seconds": 0.028494499987573363,
+        "candidates": [],
+        "challenge": false
+      },
+      {
+        "file": "reports\\electrolux_stage79\\full_live\\1\\captures\\73678db17c4becdb9674e0b82c5dddec33f4dc573b761223c44ba86e27c5afff.html",
+        "sha256": "a452542a4a54cf7bb48e2af7f639ebf25da67f0c7a38a501b1f94b8b4fe19746",
+        "catalog_parse_seconds": 0.05913340000552125,
+        "protection_parse_seconds": 0.04505080000672024,
+        "candidates": [
+          [
+            "https://www.electrolux.co.uk/laundry/laundry/washing-machines/front-loader-washing-machine/efi61141b/",
+            "914932044",
+            "native official catalog productData"
+          ]
+        ],
+        "challenge": false
+      },
+      {
+        "file": "reports\\electrolux_stage79\\full_live\\1\\captures\\8483fc16d75d6521a1998fae6108ecfe89da406d2af276c108106ce2f314fa9e.html",
+        "sha256": "0834ddeb4042213126529e2f2ece47e11f736dc865eceeef6668fbc4ea1c778c",
+        "catalog_parse_seconds": 0.047185300005367026,
+        "protection_parse_seconds": 0.03705330000957474,
+        "candidates": [],
+        "challenge": false
+      },
+      {
+        "file": "reports\\electrolux_stage79\\full_live\\1\\captures\\e36054f64261b8d4da34635dbf12c90e159b4fcd6d483475f24c4f230ef9fb06.html",
+        "sha256": "d3dc7c3954725572e411068196d788d7784dbdd168e323e90a1b189c0c6025d5",
+        "catalog_parse_seconds": 0.05852810000942554,
+        "protection_parse_seconds": 0.05433880000782665,
+        "candidates": [],
+        "challenge": false
+      }
+    ],
+    "queue_documents_images": "Already claimed job and discovery trace; documents/photos not reached in last recorded evidence; no evidence to attribute 314s to these stages",
+    "fix": "Existing isolated worker protocol reused for public persistent session; bounded caller wait terminates only the owned worker tree, host stops preserved; no networkidle waits/retry loop",
+    "historical_cause_established": false,
+    "stage80_pass_condition": "Original precise substage cannot be proven from retained evidence; do not substitute fault injection or later success for original root cause"
+  }
+}

@@ -1,4 +1,4 @@
-"""Isolated Playwright worker. JSON lines protocol; never uses a persistent profile."""
+"""Isolated Playwright worker. JSON lines protocol; opt-in guarded public session."""
 import json
 import re
 import sys
@@ -10,6 +10,9 @@ from browser_resources import admit_resource
 PROJECTION_SCRIPT=Path(__file__).with_name("browser_projection.js").read_text(encoding="utf-8-sig")
 
 p=browser=context=page=None
+public_session=None
+public_stack_path=None
+diagnostic_context={}
 policy={};deadline=0;signal='';counts={'contexts':0,'navigations':0,'network_requests':0,'blocked_requests':0};pending=[];last_url='about:blank';js_errors=0
 
 def allowed(url):
@@ -99,6 +102,7 @@ def state():
 def command(cmd):
     global p,browser,context,page,deadline,policy,js_errors
     kind=cmd['command']
+    if kind.startswith('public_'):return public_command(cmd)
     if kind=='start':
         policy=cmd['policy'];deadline=time.monotonic()+policy['deadline_seconds']
         p=sync_playwright().start();browser=p.chromium.launch(headless=True,timeout=timeout())
@@ -165,12 +169,67 @@ def command(cmd):
         return state()
     raise RuntimeError('interaction_blocked')
 
+def public_command(cmd):
+    """Same guarded persistent public transport, reused in this worker."""
+    global public_session
+    import base64
+    sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+    from product_tool.census.public_browser import PublicBrowserSession
+    from product_tool.census.browser_contracts import BrowserBudget
+    kind=cmd['command'];timings=[]
+    if kind=='public_start':
+        # The regular isolated search session is closed before opening the
+        # explicitly requested public context: never two active contexts.
+        if context:context.close()
+        if browser:browser.close()
+        if p:p.stop()
+        options=dict(cmd['options']);timing_path=Path(options.pop('timing_path'))
+        options['budget']=BrowserBudget(**options['budget'])
+        public_session=PublicBrowserSession(**options);public_session.start()
+        def event(name,**value):
+            record={'event':'browser_event','phase':name,'timestamp':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),'session_id':public_session.session_id,**diagnostic_context,**value}
+            with timing_path.open('a',encoding='utf8') as f:f.write(json.dumps(record)+'\n')
+        public_session.page.on('domcontentloaded',lambda:event('dom_ready',url=public_session.page.url))
+        public_session.page.on('load',lambda:event('load',url=public_session.page.url))
+        public_session.page.on('response',lambda r:event('main_response',url=r.url,status=r.status) if r.request.is_navigation_request() and r.request.frame==public_session.page.main_frame else None)
+        public_session.page.on('requestfailed',lambda req:event('request_failed',url=req.url,error=req.failure) if req.is_navigation_request() else None)
+        public_session.page.on('close',lambda:event('page_closed'))
+    elif kind=='public_goto':public_session.call('goto',url=cmd['url'])
+    elif kind=='public_snapshot':
+        result=public_session.snapshot(after_manual=bool(cmd.get('after_manual')));result.update(total_navigations=public_session.total_navigations,dom_state='captured_after_domcontentloaded',signal=public_session.signal);return result
+    elif kind=='public_revision':
+        url=public_session.select_revision(cmd['pnc']);return {'url':url,'total_navigations':public_session.total_navigations}
+    elif kind=='public_binary':
+        response=public_session.binary_transport(cmd['max_bytes']).get(cmd['url'],timeout=cmd['timeout'],allow_redirects=cmd['allow_redirects'])
+        return {'url':response.url,'status_code':response.status_code,'headers':dict(response.headers),'body':base64.b64encode(response.content).decode(),'history':[{'url':x.url,'status_code':x.status_code,'headers':dict(x.headers)} for x in response.history]}
+    elif kind=='public_close':public_session.close();return {'closed':True}
+    else:raise RuntimeError('interaction_blocked')
+    return {'url':public_session.page.url,'status_code':public_session.status,'total_navigations':public_session.total_navigations,'session_id':public_session.session_id,'signal':public_session.signal,'cookie_count':len(public_session.context.cookies()),'timing_events':list(public_session.events),'dom_state':'domcontentloaded' if public_session.status==200 else 'unknown'}
+
 for line in sys.stdin:
+    stack_file=None
     try:
-        request=json.loads(line);result=command(request)
+        request=json.loads(line)
+        if request.get('command','').startswith('public_'):
+            import faulthandler
+            if request['command']=='public_start':public_stack_path=Path(request['options']['timing_path']).with_suffix('.stack.log')
+            diagnostic_context.clear();diagnostic_context.update(request.get('diagnostic_context',{}))
+            if public_stack_path:
+                stack_file=public_stack_path.open('a',encoding='utf8')
+                stack_file.write(json.dumps({'stage':request['command'],'url':request.get('url',''),'job':diagnostic_context})+'\n');stack_file.flush()
+                faulthandler.dump_traceback_later(max(.01,float(request.get('diagnostic_wall_timeout',10))-.2),file=stack_file)
+        result=command(request)
         print(json.dumps({'ok':True,'result':result}),flush=True)
-        if request['command']=='close':break
+        if request['command'] in {'close','public_close'}:break
     except Exception as exc:
+        if request.get('command','').startswith('public_'):
+            detail=dict(public_session.counts) if public_session else {}
+            detail.update(document_status=public_session.status if public_session else None,signal=public_session.signal if public_session else '')
+            print(json.dumps({'ok':False,'error':str(exc),'counts':detail}),flush=True)
+            continue
         known={'challenge_detected','rate_limited','foreign_redirect','budget_exhausted','deadline_exhausted','interaction_blocked','browser_search_ui_unsafe','projection_budget_exhausted','network_budget_exhausted'}
         code=signal or (str(exc) if str(exc) in known else 'browser_javascript_error')
         print(json.dumps({'ok':False,'error':code,'counts':dict(counts)}),flush=True)
+    finally:
+        if stack_file:
+            faulthandler.cancel_dump_traceback_later();stack_file.close()

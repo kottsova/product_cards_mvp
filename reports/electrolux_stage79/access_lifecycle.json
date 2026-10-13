@@ -1,0 +1,36 @@
+{
+  "ttl_minutes": {
+    "challenge": 30,
+    "rate_limit": 60,
+    "http_access_denied": 360
+  },
+  "host_scope": "exact response host; no domain-wide inherited stop",
+  "manual_fatal": "not automatically cleared",
+  "contexts": "one visible persistent context per batch; reused for every product; no cookie values exported",
+  "snapshot": {
+    "electrolux_stage78/live_fetch_log.json": {
+      "entries": 100,
+      "active_stops": {},
+      "status_counts": {
+        "200": 86,
+        "301": 13,
+        "302": 0,
+        "403": 0,
+        "429": 0
+      },
+      "stop_events": 0
+    },
+    "electrolux_stage79/live_fetch_log.json": {
+      "entries": 93,
+      "active_stops": {},
+      "status_counts": {
+        "200": 93,
+        "301": 0,
+        "302": 0,
+        "403": 0,
+        "429": 0
+      },
+      "stop_events": 0
+    }
+  }
+}
