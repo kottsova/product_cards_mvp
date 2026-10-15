@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import {Workbook,SpreadsheetFile} from '@oai/artifact-tool';
+const data=JSON.parse(await fs.readFile('reports/acceptance_stage83/cross_inputs.json','utf8'));
+const book=Workbook.create();const sheet=book.worksheets.add('Товары');
+sheet.getRange('A1:F7').values=[data.headers,...data.rows];
+sheet.getRange('A1:F7').format.font={name:'Arial',size:10};
+sheet.getRange('A1:F7').format.wrapText=true;
+sheet.getRange('A1:F1').format={fill:'#20364D',font:{name:'Arial',size:10,bold:true,color:'#FFFFFF'},rowHeight:32};
+for(const [column,width] of [['A',26],['B',14],['C',46],['D',40],['E',22],['F',18]])sheet.getRange(`${column}1:${column}7`).format.columnWidth=width;
+sheet.getRange('A2:F7').format.rowHeight=48;sheet.showGridLines=false;sheet.freezePanes.freezeRows(1);
+book.recalculate();
+await (await SpreadsheetFile.exportXlsx(book)).save('reports/acceptance_stage83/CrossBrand_Input.xlsx');
+const preview=await book.render({sheetName:'Товары',range:'A1:F7',scale:1,format:'png'});
+await fs.writeFile('reports/acceptance_stage83/qa/input.png',new Uint8Array(await preview.arrayBuffer()));
+console.log('Six unchanged known-good inputs exported for actual UI import');

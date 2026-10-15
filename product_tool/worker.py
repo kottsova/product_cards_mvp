@@ -165,6 +165,17 @@ def run_once(
         product=jobs.get_product(database,product_id)
         if not product:
             jobs.finish(database,job_id,"error","Подтверждённый товар не найден."); return True
+        discovery_trace.initialize(database)
+        def runtime_trace(event, **fields):
+            from datetime import datetime, timezone
+            discovery_trace.record(database,job_id,product_id,dict(timestamp=datetime.now(timezone.utc).isoformat(),event=event,**fields))
+        from .runtime_diagnostics import runtime_identity
+        runtime_trace('production_dispatch',runtime=runtime_identity(),brand=product.get('brand',''),name=product.get('name',''),
+                      input_article=product.get('input_search_code',product.get('search_code','')),
+                      effective_article=product.get('search_code',''),fallback=product.get('alternate_code',''),stages=job['stages'])
+        if product.get('input_resolution'):
+            runtime_trace('input_search_resolution',**product['input_resolution'])
+            jobs.progress(database,job_id,1,'Поиск: '+product['input_resolution']['reason']+' → '+product['search_code'])
         from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
         if product['brand'].strip().casefold() == 'electrolux':
             from . import electrolux_pipeline
@@ -244,16 +255,25 @@ def run_once(
                 discovery_trace.initialize(database)
                 lg_browser_search.trace_callback = lambda event: discovery_trace.record(
                     database, job_id, product_id, event)
+            runtime_trace('lg_adapter_selected',effective_article=full,base_model=base,name_models=name_models,
+                          adapters=[type(x).__name__ for x in (lg_kz,lg_ru) if x is not None],
+                          injected_factory=bool(adapter_factory))
             google_support_urls = ()
             official_deadline=min(total_deadline,start+OFFICIAL_BUDGET_SECONDS)
             for adapter in (lg_kz,lg_ru):
                 if adapter is None: continue
+                if isinstance(adapter,(LGAdapter,LGRUAdapter)):
+                    adapter.trace_callback=lambda event:runtime_trace(event['event'],**{k:v for k,v in event.items() if k!='event'})
+                runtime_trace('lg_discovery_start',provider=adapter.source_key,query=full,base_model=base)
                 if clock()>=official_deadline:
                     doc=SourceDocument(adapter.source_key,adapter.site_name,"",error="Регион не проверен: исчерпан общий 20-секундный бюджет официального поиска.")
                 elif isinstance(adapter,(LGAdapter,LGRUAdapter)):
                     doc=adapter.find_source(full,deadline=official_deadline,fallback_models=name_models, support_search=False)
                 else: doc=adapter.find_source(full,deadline=official_deadline)
                 official_docs.append(doc); _save(database,product_id,doc,stages)
+                runtime_trace('lg_discovery_end',provider=adapter.source_key,query=full,url=doc.url,
+                              identity=doc.match_level,reason=doc.error or doc.evidence,specs=len(doc.attributes),photos=len(doc.photo_candidates),
+                              accepted=not doc.error and doc.match_level in {'full_sku','base_model'})
                 jobs.progress(database,job_id,1,f"{doc.site_name}: {doc.match_level}. {doc.error or doc.evidence}",level="warning" if doc.error or doc.match_level not in {"full_sku","base_model"} else "info",source_url=doc.url)
             # A validated KZ/RU page short-circuits every fallback. Otherwise
             # use LG's own advertised sitemaps before public web search.
@@ -265,6 +285,9 @@ def run_once(
                               and page["url"] and not page["error"]
                               for page in jobs.get_source_pages(database, product_id))
             can_fallback = not (exact_current or exact_saved) and clock() < official_deadline
+            runtime_trace('lg_fallback_gate',accepted=can_fallback,exact_current=exact_current,exact_saved=exact_saved,
+                          reason='Exact official PDP already verified' if exact_current or exact_saved else 'Official miss; remaining budget checked',
+                          remaining_seconds=max(0,official_deadline-clock()))
             if can_fallback:
                 global_adapter = ((lg_global_adapter_factory or
                                    (lambda: LGGlobalAdapter(lg_kz.http, clock=clock)))()
@@ -622,6 +645,7 @@ def run_once(
             confirmed=any(x["source_key"] in SUPPLIERS and x["match_level"]=="full_sku" for x in sources)  # an official BASE-model page confirmed by a supplier's full article stays sufficient, as before
             summary=f" Реальных конфликтов: {counts['conflicts']}; только базовая модель LG: {counts['official_base_only']}; подтверждено поставщиком: {counts['supplier_confirmed']}."
             card=card_readiness(database,product_id); card_text=" "+readiness_text(card)
+            runtime_trace('production_readiness',verdict=card['verdict'],gaps=card.get('gaps',[]),identity=identity)
             jobs.progress(database,job_id,max(stages),card_text.strip(),level="info" if card["verdict"]=="export_ready" else "warning")
             if sources and all(x["error"] for x in sources): jobs.finish(database,job_id,"error","Все источники недоступны. "+identity+summary+dns_summary+card_text)
             elif counts["conflicts"] or not (official_exact or confirmed): jobs.finish(database,job_id,"needs_review",identity+"."+summary+dns_summary+card_text)

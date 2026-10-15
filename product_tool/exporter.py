@@ -93,6 +93,20 @@ def export_batch(database: Path,batch_id: str)->bytes:
             if r.get("conflict") and label == "Дополнительная характеристика" and row["raw_names"]:
                 label = row["raw_names"][0]
             check.append([(p["name"] or p["search_code"]),p["search_code"],label,*([s.get("lg_kz",{}).get("raw_value",""),s.get("lg_ru",{}).get("raw_value","")] if has_lg else []),*([s.get("sulpak",{}).get("raw_value","")] if has_sulpak_facts else []),*([s.get("lg_global",{}).get("raw_value","")] if has_lg_global else []),*([s.get("samsung",{}).get("raw_value","")] if has_samsung else []),*([s.get("bosch_home",{}).get("raw_value","")] if has_bosch else []),r.get("display_value",""),r.get("reason",""),r.get("display_status",""),detail, "; ".join(dict.fromkeys(row["raw_names"]))])
+    semantic_rows=[]
+    for p in batch['products']:
+        semantic=card_evidence.load(database,p['id'],'semantic_decomposition') or {}
+        for source,source_evidence in semantic.get('sources',{}).items():
+            for block in source_evidence.get('decomposed',[]):
+                for child in block['children']:
+                    semantic_rows.append([p['name'] or p['search_code'],source_evidence.get('url') or source,block['section'],block['raw_name'],block['raw_value'],child['key'],child['label'],child['value'],child['unit'],block['rule']])
+    if semantic_rows:
+        raw_sheet=book.create_sheet(_title('Семантика и исходные значения',used))
+        _headers(raw_sheet,['Товар','Источник','Раздел','Исходное поле','Полное исходное значение','Canonical key','Характеристика','Нормализованное значение','Единица','Правило'])
+        for row in semantic_rows:raw_sheet.append(row)
+        raw_sheet.column_dimensions['E'].width=80
+        for row in raw_sheet:
+            for cell in row:cell.alignment=Alignment(wrap_text=True,vertical='top')
     source_sheet=book.create_sheet(_title("Источники",used)); _headers(source_sheet,["Товар","Полный артикул","Сайт","Найденная модель","Уровень совпадения","Доказательство","Дата","Ошибка","URL"])
     attributes_sheet=book.create_sheet(_title('Атрибуты',used));_headers(attributes_sheet,['Товар','Категория','Группа','Основные / особенности','Характеристика','Значение','Статус','Источник'])
     schema_sheet=book.create_sheet(_title('Схема категорий',used));_headers(schema_sheet,['Категория','Группа','Характеристика','Основные / особенности','Бренды'])

@@ -13,6 +13,22 @@
   <div class="success" role="status">Партия подтверждена и сохранена на этом компьютере. Она останется доступной после перезапуска приложения.</div>
 
   {% if batch_message %}<div class="success" role="status">{{ batch_message }}</div>{% endif %}
+  <section class="section" id="product-batch">
+    <h2>Проверка товаров партии</h2>
+    <p>Выберите товары и этапы. Каждый товар обрабатывается тем же worker, что и отдельная карточка.</p>
+    <form action="/batches/{{ batch.id }}/search" method="post" id="product-batch-form">
+      <div class="stage-grid">{% for number,label in stages.items() %}<label class="stage-option"><input type="checkbox" name="stages" value="{{ number }}" checked><span>{{ label }}</span></label>{% endfor %}</div>
+      <div class="table-wrap"><table><thead><tr><th>Выбор</th><th>Бренд и товар</th><th>Артикул поиска</th><th>Задание</th><th>Готовность</th></tr></thead><tbody>
+      {% for product in batch.products %}{% set state=batch_states[product.id] %}<tr>
+      <td><input type="checkbox" name="product_ids" value="{{ product.id }}" {% if product.id in batch_selected %}checked{% endif %} aria-label="Проверить {{ product.search_code }}"></td>
+      <td>{{ product.brand }} <a href="/products/{{ product.id }}">{{ product.name or product.search_code }}</a></td>
+      <td>{{ product.search_code }}{% if product.input_resolution %}<br><small>Основная входная ячейка: {{ product.input_search_code }}. Для поиска используется запасной код.</small>{% endif %}</td>
+      <td>{{ state.job.status if state.job else 'Не запускалось' }}</td><td>{% if state.readiness %}{{ state.readiness.verdict }}{% elif state.job %}Выполняется{% else %}Не проверялась{% endif %}</td>
+      </tr>{% endfor %}</tbody></table></div>
+      <button class="button primary" type="submit">Поставить выбранные товары в очередь</button>
+    </form>
+    <p><a href="/batches/{{ batch.id }}#product-batch">Обновить прогресс</a></p>
+  </section>
   {% if lg_products %}
   <section class="section" id="lg-batch">
     <div class="section-heading"><h2>Проверка LG одной кнопкой</h2></div>

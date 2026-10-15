@@ -111,7 +111,10 @@ class LgBatchTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn("Проверка LG одной кнопкой", response.text)
         self.assertEqual(lg_batch.default_ids(batch["products"]), {ids["XL7S"], ids["MS2032GAS"], ids["CK43"]})
-        self.assertEqual(response.text.count('name="stages"'), 5)
+        from bs4 import BeautifulSoup
+        forms=BeautifulSoup(response.text,'html.parser')
+        self.assertEqual(len(forms.select('#lg-batch-form input[name="stages"]')),5)
+        self.assertEqual(len(forms.select('#product-batch-form input[name="stages"]')),5)
         selected = [ids["XL7S"], ids["MS2032GAS"]]
         form = {"product_ids": [str(pid) for pid in selected], "stages": [str(n) for n in lg_batch.DEFAULT_STAGES]}
         response = self.client.post(f"/batches/{batch['id']}/lg-search", data=form, follow_redirects=False)

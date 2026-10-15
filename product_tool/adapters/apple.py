@@ -170,9 +170,11 @@ class AppleAdapter:
  def emit(self,**event):
   if self.trace_callback:self.trace_callback(dict(timestamp=utc_now(),**event))
  def find_source(self,article,*,name='',category='',deadline=None):
-  deadline=deadline or self.clock()+45;sku=article.upper();
+  deadline=deadline or self.clock()+45;sku=article.strip().upper();
+  self.emit(event='discovery_started',query=name or sku,reason='Apple adapter entered; model and commercial identity are separate',accepted=True)
   if not re.fullmatch(r'[A-Z0-9]{5,8}[A-Z]{2}/A',sku):
-   self.reports[sku]={'identity':{'model':'unproven','configuration':'unproven','variant':'unproven'},'manual_status':'Не проверена'};return SourceDocument('apple','Apple','',error='Commercial part number required; hardware/family token is insufficient')
+   from ..apple_model_discovery import find_model_source
+   return find_model_source(self,sku,name,deadline)
   suffix=sku.split('/')[0][-2:];region={'CL':'ca','ZD':'uk'}.get(suffix,'');regions=list(dict.fromkeys([region,'','uk','ca']));best=SourceDocument('apple','Apple','',error='No exact official order page');queries=[sku,name,f'site:apple.com "{sku}"']
   for region in regions:
    if self.clock()>=deadline:break
@@ -197,7 +199,8 @@ class AppleAdapter:
   if best.match_level!='full_sku' and self.clock()<deadline:
    from .lg_browser_search import LGBrowserSearch
    from ..census.browser_contracts import BrowserBudget
-   remaining=max(1,deadline-self.clock());hosts=('www.apple.com','apple.com','support.apple.com');search=LGBrowserSearch(self.log.with_name('apple_browser_search_log.json'),official_host='www.apple.com',official_hosts=hosts,allowed_hosts=hosts+('www.google.com','google.com','gstatic.com'),clock=self.clock,budget=BrowserBudget(deadline_seconds=min(20,remaining),operation_timeout_seconds=min(10,remaining)))
+   from ..apple_model_discovery import apple_candidate_type
+   remaining=max(1,deadline-self.clock());hosts=('www.apple.com','apple.com','support.apple.com');search=LGBrowserSearch(self.log.with_name('apple_browser_search_log.json'),official_host='www.apple.com',official_hosts=hosts,allowed_hosts=hosts+('www.google.com','google.com','gstatic.com'),clock=self.clock,candidate_classifier=apple_candidate_type,budget=BrowserBudget(deadline_seconds=min(20,remaining),operation_timeout_seconds=min(10,remaining)))
    try:
     q=f'site:apple.com "{sku}"';result=search.search_provider('google',q)
     self.emit(event='apple_external_search',query=q,provider='shared_google',url='',region='global',source_type='search',accepted=False,reason=result.outcome,identity_relation='discovery_only')
@@ -217,6 +220,9 @@ class AppleAdapter:
    if catalog:best,report=catalog;self.reports[sku]=report
   ev=self.reports.setdefault(sku,{});ev['query_variants']=queries
   self.enrich_model(best,ev,sku,deadline)
+  if not getattr(self,'model_document',None) and best.match_level!='full_sku' and self.clock()<deadline:
+   from ..apple_model_discovery import find_model_source,iphone_model
+   if iphone_model(name):return find_model_source(self,sku,name,deadline)
   return best
 
  def enrich_model(self,doc,ev,sku,deadline):

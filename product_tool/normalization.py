@@ -364,6 +364,11 @@ def normalize_facts(facts: Iterable[RawAttribute]) -> list[NormalizedFact]:
     for fact in facts:
         if not clean_text(fact.name) or (not clean_text(fact.value) and fact.value_cell is not True):
             continue
+        from .semantic_decomposition import decompose
+        components=decompose(fact)
+        if components:
+            result.extend(NormalizedFact(fact.name,fact.value,c.key,c.value.casefold() if not c.unit else c.value,c.unit,fact.section,fact.value_cell) for c in components)
+            continue
         normalized = normalize_fact(fact)
         # An empty LG value cell is observed but unknown. Keep its raw row;
         # resolution ignores unknown rather than treating it as absence.

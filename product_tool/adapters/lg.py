@@ -406,6 +406,11 @@ def extract_lg_photos(soup: BeautifulSoup, page_url: str) -> list[str]:
     return [x.url for x in extract_lg_photo_candidates(soup, page_url, region="kz") if x.kind == "product_gallery"]
 
 
+def _discovery_trace(adapter,event,**fields):
+    callback=getattr(adapter,'trace_callback',None)
+    if callback:callback(dict(event=event,provider=adapter.source_key,**fields))
+
+
 class LGAdapter:
     source_key, site_name = "lg_kz", "LG Казахстан"
     def __init__(self, http=None, *, clock: Callable[[], float] = time.monotonic, browser_search=None):
@@ -436,11 +441,15 @@ class LGAdapter:
         official_deadline=min(deadline,self.clock()+OFFICIAL_BUDGET_SECONDS); full=normalize_lg_sku(full_sku); base=lg_base_model(full)
         try:
             urls=self.sitemap_product_urls(official_deadline)
+            _discovery_trace(self,'lg_catalog_received',query=full,url=LG_KZ_SITEMAP,products=len(urls))
             doc=None
             for model in dict.fromkeys((full,base,*fallback_models)):
                 key=lg_article_key(model)
+                _discovery_trace(self,'lg_query_candidates',query=model,candidates=[u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES],reason='Published sitemap slug; identity still requires PDP')
                 for url in [u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES]:
+                    _discovery_trace(self,'lg_candidate_open',query=model,url=url)
                     doc=self._document(self.fetch_page(url,official_deadline),full,base if model in (full,base) else model)
+                    _discovery_trace(self,'lg_candidate_identity',query=model,url=doc.url,identity=doc.match_level,accepted=doc.match_level in {'full_sku','base_model'},reason=doc.evidence)
                     if doc.match_level in {"full_sku","base_model"}: break
                 if doc is not None and doc.match_level in {"full_sku","base_model"}: break
                 doc=None
@@ -481,11 +490,15 @@ class LGRUAdapter:
         full=normalize_lg_sku(full_sku); base=lg_base_model(full)
         try:
             urls=self.sitemap_product_urls(deadline)
+            _discovery_trace(self,'lg_catalog_received',query=full,url=LG_RU_SITEMAP,products=len(urls))
             doc=None
             for model in dict.fromkeys((full,base,*fallback_models)):
                 key=lg_article_key(model)
+                _discovery_trace(self,'lg_query_candidates',query=model,candidates=[u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES],reason='Published sitemap slug; identity still requires PDP')
                 for url in [u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES]:
+                    _discovery_trace(self,'lg_candidate_open',query=model,url=url)
                     doc=self._document_at(url,full,base if model in (full,base) else model,deadline)
+                    _discovery_trace(self,'lg_candidate_identity',query=model,url=doc.url,identity=doc.match_level,accepted=doc.match_level in {'full_sku','base_model'},reason=doc.evidence)
                     if doc.match_level in {"full_sku","base_model"}: break
                 if doc is not None and doc.match_level in {"full_sku","base_model"}: break
                 doc=None

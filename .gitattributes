@@ -183,3 +183,39 @@ product_tool/razer_page.py text eol=lf
 product_tool/xbox_page.py text eol=lf
 
 tests/test_canonical_stage82.py text eol=lf
+
+product_tool/apple_model_discovery.py text eol=lf
+
+product_tool/importer.py text eol=lf
+
+reports/acceptance_stage83/** -text
+
+reports/acceptance_stage83/**/*.html -diff
+
+reports/apple_production_recovery/** -text
+
+reports/apple_production_recovery/**/*.html -diff
+
+product_tool/adapters/lg.py text eol=crlf
+
+product_tool/batch_queue.py text eol=lf
+
+product_tool/jobs.py text eol=crlf
+
+product_tool/product_input.py text eol=lf
+
+product_tool/runtime_diagnostics.py text eol=lf
+
+product_tool/semantic_decomposition.py text eol=lf
+
+product_tool/storage.py text eol=crlf
+
+product_tool/templates/batch.html text eol=crlf
+
+product_tool/value_localization.py text eol=lf
+
+tests/test_acceptance_stage83.py text eol=lf
+
+tests/test_apple_production_discovery.py text eol=lf
+
+tests/test_stage37_lg_batch.py text eol=crlf

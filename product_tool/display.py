@@ -74,6 +74,9 @@ STATUS_NAMES = {
 
 
 def display_name_ru(key: str, raw_names: Iterable[str] = ()) -> str:
+    from .semantic_decomposition import field_spec
+    spec=field_spec(key)
+    if spec:return spec[0]
     if key in DISPLAY_NAME_RU:
         return DISPLAY_NAME_RU[key]
     if re.search(r"[а-яё]", key, re.I):

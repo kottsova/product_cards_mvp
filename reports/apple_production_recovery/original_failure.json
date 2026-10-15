@@ -1,0 +1,81 @@
+{
+  "product": {
+    "id": 84,
+    "batch_id": "70c329c089c2432fbe042651944c6acd",
+    "row_number": 2,
+    "name": "A3714",
+    "brand": "Apple",
+    "search_code": "A3714",
+    "alternate_code": "Apple",
+    "category": "смартфоны",
+    "needs_confirmation": 0,
+    "issues_json": "[]",
+    "original_values_json": "[\"смартфоны\", \"Apple\", \"A3714\", \"iPhone 18 Pro 256GB\", \"Серебристый\", null, null]",
+    "identity_json": "{\"brand_raw\": \"Apple\", \"brand_canonical\": \"apple\", \"category_raw\": \"смартфоны\", \"category_canonical\": \"smartphone\", \"seller_sku\": \"A3714\", \"wb_sku\": \"\", \"title_raw\": \"A3714\", \"model_candidates\": [\"A3714\", \"Apple\"], \"variant_attributes\": {}, \"market\": \"\", \"marketing_models\": [], \"identity_semantics_version\": \"legacy\", \"model_qualifiers\": []}",
+    "filename": "Создать_НМ_Apple_KVN.xlsx",
+    "sheet_name": "Лист1"
+  },
+  "jobs": [
+    {
+      "id": "e2bebc3420a14abe9c67ee0a5a234c4f",
+      "product_id": 84,
+      "status": "error",
+      "current_stage": null,
+      "message": "Apple: Не готова; model_identity_missing, configuration_fields_unresolved, specifications_missing, exact_variant_photo_missing",
+      "created_at": "2026-10-14T12:00:03+00:00",
+      "updated_at": "2026-10-14T12:00:04+00:00",
+      "started_at": "2026-10-14T12:00:04+00:00",
+      "finished_at": "2026-10-14T12:00:04+00:00",
+      "stages": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    }
+  ],
+  "trace": [
+    {
+      "accepted": false,
+      "event": "apple_dealer",
+      "identity_relation": "unproven",
+      "provider": "dns",
+      "query": "A3714",
+      "reason": "Нет проверенного дилерского URL для «Apple A3714» (артикул A3714). Не хватает: model_identity_missing, configuration_fields_unresolved, specifications_missing, exact_variant_photo_missing. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+      "region": "ru",
+      "source_type": "dealer",
+      "timestamp": "2026-10-14T12:00:04+00:00",
+      "url": ""
+    }
+  ],
+  "events": [
+    {
+      "id": 1745,
+      "job_id": "e2bebc3420a14abe9c67ee0a5a234c4f",
+      "stage": null,
+      "level": "info",
+      "message": "Задание добавлено в очередь.",
+      "source_url": "",
+      "created_at": "2026-10-14T12:00:03+00:00"
+    },
+    {
+      "id": 1746,
+      "job_id": "e2bebc3420a14abe9c67ee0a5a234c4f",
+      "stage": null,
+      "level": "info",
+      "message": "Worker начал обработку.",
+      "source_url": "",
+      "created_at": "2026-10-14T12:00:04+00:00"
+    },
+    {
+      "id": 1747,
+      "job_id": "e2bebc3420a14abe9c67ee0a5a234c4f",
+      "stage": null,
+      "level": "warning",
+      "message": "Apple: Не готова; model_identity_missing, configuration_fields_unresolved, specifications_missing, exact_variant_photo_missing",
+      "source_url": "",
+      "created_at": "2026-10-14T12:00:04+00:00"
+    }
+  ]
+}

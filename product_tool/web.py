@@ -101,6 +101,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
     """Create an app with its own data directory, including for isolated tests."""
     root = Path(data_dir or os.environ.get("PRODUCT_CARDS_DATA_DIR") or PROJECT_DIR / "data")
     root = root.resolve()
+    from .runtime_diagnostics import runtime_identity
+    runtime=runtime_identity()
     uploads = root / "uploads"
     uploads.mkdir(parents=True, exist_ok=True)
     database = root / "batches.sqlite3"
@@ -324,6 +326,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                 "needs_confirmation": item.needs_confirmation,
                 "issues": item.issues,
                 "original_values": item.original_values,
+                "variant_attributes": item.variant_attributes,
             })
         if errors:
             message = " ".join(errors[:5])
@@ -345,13 +348,32 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             category = product["category"] or "Категория не определена"
             groups.setdefault(category, []).append(product)
         selected = lg_batch.selected_ids(database, batch_id)
+        saved_selected=set(selected)
+        selected={p['id'] for p in batch['products'] if lg_batch.is_lg(p) and p['id'] in selected}
         if not selected:
             selected = lg_batch.default_ids(batch["products"])
         lg_rows, lg_counts = lg_batch.batch_rows(database, batch["products"], selected)
+        from . import batch_queue
         return render(request, "batch.html", batch=batch, groups=groups,
+                      batch_states=batch_queue.states(database,batch['products']),batch_selected=saved_selected or batch_queue.default_ids(batch['products']),
                       lg_rows=lg_rows, lg_selected=selected, lg_counts=lg_counts,
                       lg_products=[p for p in batch["products"] if lg_batch.is_lg(p)],
                       stages=jobs.STAGE_NAMES, batch_message=request.query_params.get("message", ""))
+
+    @app.get('/diagnostics/runtime')
+    def diagnostics_runtime():
+        return {**runtime,'data_dir':str(root),'worker_enabled':start_worker}
+
+    @app.post('/batches/{batch_id}/search',response_class=HTMLResponse)
+    async def start_product_batch(request:Request,batch_id:str):
+        from .batch_queue import enqueue_selected
+        if storage.get_batch(database,batch_id) is None:return error_page(request,'Партия не найдена.',404)
+        form=await request.form()
+        try:result=enqueue_selected(database,batch_id,[int(x) for x in form.getlist('product_ids')],[int(x) for x in form.getlist('stages')])
+        except (TypeError,ValueError) as exc:return error_page(request,str(exc),400)
+        from urllib.parse import quote
+        message=f"Выбрано {result['selected']}; новых заданий {result['new_jobs']}; уже выполняются {result['already_active']}."
+        return RedirectResponse(f'/batches/{batch_id}?message={quote(message)}',status_code=303)
 
     @app.post("/batches/{batch_id}/lg-search", response_class=HTMLResponse)
     async def start_lg_batch(request: Request, batch_id: str) -> HTMLResponse:
@@ -442,6 +464,10 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                 photo['identity_confirmed']=xiaomi_pipeline.photo_verified(photo,xiaomi_evidence)
                 photo['identity_note']='Фото официальной модели; цвет поставщика не подтверждается.' if photo['identity_confirmed'] else 'Кандидат: принадлежность к product gallery не подтверждена.'
             for document in documents:document['identity_confirmed']=xiaomi_pipeline.document_verified(document,xiaomi_evidence)
+        if apple_evidence is not None:
+            for photo in photos:
+                photo['identity_confirmed'] = photo['asset_key'] in apple_evidence.get('exact_photo_assets', [])
+                photo['identity_note'] = apple_evidence.get('photo_scope', 'Exact official model/color relation') if photo['identity_confirmed'] else 'Кандидат: модель/цвет не подтверждены.'
         events = []
         for event in jobs.list_events(database, latest["id"]) if latest else []:
             message = _display_access_stop(event["message"])

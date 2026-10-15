@@ -10,7 +10,7 @@ import argparse
 import json
 import re
 import sys
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import date, datetime
 from pathlib import Path
 from typing import Any
@@ -26,7 +26,7 @@ HEADER_ALIASES = {
     "brand": {"бренд", "марка", "производитель", "brand", "manufacturer"},
     "search_code": {"артикул продавца", "артикул", "код товара", "sku", "part number"},
     "fallback_code": {"модель", "код модели", "model", "model number"},
-    "name": {"наименование", "название", "название товара", "товар", "product name"},
+    "name": {"наименование", "наименование на сайте", "наименование товара", "название", "название товара", "товар", "product name"},
     "category": {"предмет", "категория", "тип товара", "category"},
 }
 
@@ -68,6 +68,7 @@ class ProductPreview:
     needs_confirmation: bool
     issues: tuple[str, ...]
     original_values: tuple[Any, ...]
+    variant_attributes: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -192,7 +193,7 @@ def category_from_name(name: str) -> str:
     return next((category for pattern, category in rules if re.search(pattern, lowered)), "")
 
 
-def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping) -> ProductPreview | None:
+def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping, *, configuration_columns: dict[str, int] | None = None) -> ProductPreview | None:
     explicit_name = value_at(raw, mapping.name)
     explicit_brand = value_at(raw, mapping.brand)
     explicit_code = value_at(raw, mapping.search_code)
@@ -209,6 +210,8 @@ def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping) -
         return None
 
     issues: list[str] = []
+    if mapping.brand and mapping.brand in {mapping.search_code,mapping.fallback_code,mapping.name}:
+        issues.append("Колонка бренда также назначена названию/артикулу/модели; проверьте соответствие колонок")
     if descriptive_model_column:
         issues.append("Колонка «Модель» содержит название товара; используем как название, не как запасной артикул")
     brand = explicit_brand or brand_from_name(explicit_name)
@@ -247,6 +250,7 @@ def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping) -
         needs_confirmation=needs_confirmation,
         issues=tuple(issues),
         original_values=raw,
+        variant_attributes={field:value_at(raw,column) for field,column in (configuration_columns or {}).items() if value_at(raw,column)},
     )
 
 
@@ -278,6 +282,13 @@ def preview_xlsx(
         if header_row is not None:
             settings["header_row"] = header_row
         mapping = ColumnMapping(**settings)
+        # Explicit supplier configuration is input evidence, never official facts.
+        # Preserve a uniquely headed color column without guessing from arbitrary cells.
+        configuration_columns = {}
+        if mapping.header_row:
+            header = next(sheet.iter_rows(min_row=mapping.header_row,max_row=mapping.header_row,values_only=True),())
+            color_columns=[i for i,v in enumerate(header[:MAX_COLUMNS],start=1) if header_key(v) in {'цвет','цвет товара','color','colour'}]
+            if len(color_columns)==1:configuration_columns['color']=color_columns[0]
         products: list[ProductPreview] = []
         for row_number, cells in enumerate(sheet.iter_rows(values_only=True), start=1):
             if row_number <= mapping.header_row:
@@ -285,7 +296,7 @@ def preview_xlsx(
             if row_number - mapping.header_row > MAX_ROWS + 10:
                 raise ValueError(f"Файл содержит больше {MAX_ROWS} строк для обработки")
             raw = tuple(original_cell(value) for value in cells[:MAX_COLUMNS])
-            item = preview_row(row_number, raw, mapping)
+            item = preview_row(row_number, raw, mapping, configuration_columns=configuration_columns)
             if item:
                 products.append(item)
         if not products:

@@ -1,0 +1,280 @@
+{
+  "product_id": 84,
+  "job_id": "a41d4d1686f343ac88c2b525e22e39d0",
+  "evidence_mode": "actual_live_production_worker_from_UI_POST; no fixture injection",
+  "job": {
+    "id": "a41d4d1686f343ac88c2b525e22e39d0",
+    "product_id": 84,
+    "status": "done",
+    "current_stage": 1,
+    "message": "Apple: Готова; ",
+    "created_at": "2026-10-14T12:33:09+00:00",
+    "updated_at": "2026-10-14T12:33:24+00:00",
+    "started_at": "2026-10-14T12:33:10+00:00",
+    "finished_at": "2026-10-14T12:33:24+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "blocking_gaps": [],
+    "advisory_gaps": [],
+    "identity": {
+      "model": "model_confirmed",
+      "configuration": "model_configuration_supported",
+      "variant": "exact_model_color",
+      "part_number": "",
+      "hardware_model_numbers": [],
+      "hardware": "published_store_key"
+    },
+    "manual_status": "Проверена",
+    "confirmed_specs": 50,
+    "model_specs": 50,
+    "configuration_fields": {
+      "storage": "256GB",
+      "color": "silver"
+    },
+    "discovery_status": "discovery_completed"
+  },
+  "chain": [
+    {
+      "timestamp": "2026-10-14T12:33:10+00:00",
+      "event": "apple_dispatch",
+      "reason": "worker selected Apple pipeline"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:10+00:00",
+      "event": "discovery_not_started",
+      "reason": "adapter constructed; calling discovery next"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:10+00:00",
+      "event": "discovery_started",
+      "query": "iPhone 18 Pro 256GB",
+      "accepted": true,
+      "reason": "Apple adapter entered; model and commercial identity are separate"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:10+00:00",
+      "event": "apple_model_normalization",
+      "query": "iPhone 18 Pro 256GB",
+      "accepted": true,
+      "reason": "Marketing model independent of commercial SKU"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:10+00:00",
+      "event": "apple_navigation_start",
+      "stage": "catalog",
+      "url": "https://www.apple.com/iphone/",
+      "query": "iPhone 18 Pro"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:12+00:00",
+      "event": "apple_navigation_end",
+      "stage": "catalog",
+      "url": "https://www.apple.com/iphone/",
+      "query": "iPhone 18 Pro",
+      "accepted": true,
+      "reason": "HTTP 200"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:12+00:00",
+      "event": "apple_model_candidate",
+      "url": "https://www.apple.com/iphone-18-pro/",
+      "query": "iPhone 18 Pro",
+      "accepted": true,
+      "reason": "Published exact family catalog link; model columns still require verification"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:12+00:00",
+      "event": "apple_navigation_start",
+      "stage": "model_pdp",
+      "url": "https://www.apple.com/iphone-18-pro/",
+      "query": "iPhone 18 Pro"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:13+00:00",
+      "event": "apple_navigation_end",
+      "stage": "model_pdp",
+      "url": "https://www.apple.com/iphone-18-pro/",
+      "query": "iPhone 18 Pro",
+      "accepted": true,
+      "reason": "HTTP 200"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:14+00:00",
+      "event": "apple_navigation_start",
+      "stage": "model_specs",
+      "url": "https://www.apple.com/iphone-18-pro/specs/",
+      "query": "iPhone 18 Pro"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:15+00:00",
+      "event": "apple_navigation_end",
+      "stage": "model_specs",
+      "url": "https://www.apple.com/iphone-18-pro/specs/",
+      "query": "iPhone 18 Pro",
+      "accepted": true,
+      "reason": "HTTP 200"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:16+00:00",
+      "event": "apple_model_specs",
+      "url": "https://www.apple.com/iphone-18-pro/specs/",
+      "query": "iPhone 18 Pro",
+      "accepted": true,
+      "reason": "Published exact-model columns and explicitly shared colspan cells; other model columns excluded"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:16+00:00",
+      "event": "apple_navigation_start",
+      "stage": "configuration_overlay",
+      "url": "https://www.apple.com/us/shop/goto/buy_iphone/iphone_18_pro",
+      "query": "iPhone 18 Pro"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:19+00:00",
+      "event": "apple_navigation_end",
+      "stage": "configuration_overlay",
+      "url": "https://www.apple.com/shop/buy-iphone/iphone-18-pro",
+      "query": "iPhone 18 Pro",
+      "accepted": true,
+      "reason": "HTTP 200"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:19+00:00",
+      "event": "apple_configuration_overlay",
+      "url": "https://www.apple.com/shop/buy-iphone/iphone-18-pro",
+      "accepted": true,
+      "reason": "Explicit same-model capacity/color records; commercial identity remains unproven"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:19+00:00",
+      "event": "apple_photos",
+      "url": "https://www.apple.com/shop/buy-iphone/iphone-18-pro",
+      "accepted": true,
+      "reason": "exact_model_color from explicit Store selection; no supplier retail identity claim"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:19+00:00",
+      "event": "apple_navigation_start",
+      "stage": "documents",
+      "url": "https://support.apple.com/ru-ru/guide/iphone/welcome/ios",
+      "query": "iPhone 18 Pro"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:22+00:00",
+      "event": "apple_navigation_end",
+      "stage": "documents",
+      "url": "https://support.apple.com/ru-ru/guide/iphone/welcome/ios",
+      "query": "iPhone 18 Pro",
+      "accepted": true,
+      "reason": "HTTP 200"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:22+00:00",
+      "event": "apple_adapter_return",
+      "url": "https://www.apple.com/iphone-18-pro/",
+      "accepted": true,
+      "reason": "Published catalog/PDP/model-scoped Tech Specs chain"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:22+00:00",
+      "event": "apple_extraction",
+      "url": "https://www.apple.com/iphone-18-pro/specs/",
+      "accepted": true,
+      "reason": "Extraction completed before readiness"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:22+00:00",
+      "event": "apple_persistence",
+      "reason": "Official source facts/photos and identity saved; unresolved input remains configuration"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:24+00:00",
+      "event": "apple_photo_verified",
+      "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-silver-202609?wid=940&hei=1112&fmt=png-alpha&.v=ODB3TEdtbk8ybkd3clM3dWVML3VCVGJOdEdsYjE3KzExOGFjT0NXdW5CRXlFVTNWQ2NHZnVQZ1ZHVERRSkREclQ5NVJ4OStiQklybHZqYkJwOUI0UWdxbzNTY3U5ODZDSkhYT1hNS1JHaWNmOVR5UGFsc2xtOXNhVml5ZmhaTkg",
+      "accepted": true,
+      "reason": "Actual image bytes decoded"
+    },
+    {
+      "timestamp": "2026-10-14T12:33:24+00:00",
+      "event": "readiness_passed",
+      "accepted": true,
+      "reason": "Specs, configuration and exact photo relations sufficient"
+    }
+  ],
+  "photos": [
+    {
+      "id": 5331,
+      "product_id": 84,
+      "source_page_id": 350,
+      "source_key": "apple",
+      "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-silver-202609?wid=940&hei=1112&fmt=png-alpha&.v=ODB3TEdtbk8ybkd3clM3dWVML3VCVGJOdEdsYjE3KzExOGFjT0NXdW5CRXlFVTNWQ2NHZnVQZ1ZHVERRSkREclQ5NVJ4OStiQklybHZqYkJwOUI0UWdxbzNTY3U5ODZDSkhYT1hNS1JHaWNmOVR5UGFsc2xtOXNhVml5ZmhaTkg",
+      "asset_key": "806c8d8e4031558d7329950d0f5618ae78304c905a9bb41d259abade2ef7e25f",
+      "kind": "product_gallery",
+      "width": 940,
+      "height": 1112,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-14T12:33:22+00:00",
+      "verified_width": 940,
+      "verified_height": 1112,
+      "verified_bytes": 589628,
+      "verified_format": "PNG",
+      "site_name": "Apple model PDP",
+      "normalized_asset": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-silver-202609?.v=ODB3TEdtbk8ybkd3clM3dWVML3VCVGJOdEdsYjE3KzExOGFjT0NXdW5CRXlFVTNWQ2NHZnVQZ1ZHVERRSkREclQ5NVJ4OStiQklybHZqYkJwOUI0UWdxbzNTY3U5ODZDSkhYT1hNS1JHaWNmOVR5UGFsc2xtOXNhVml5ZmhaTkg",
+      "role": "product_render",
+      "verified_at": "2026-10-14T12:33:24.919686+00:00",
+      "size_bytes": 589628,
+      "format": "PNG",
+      "content_type": "image/png",
+      "effective_content_type": "image/png",
+      "sha256": "8b93eb7a7debcee81a847d6dcf98c71022abc313641558db85819f61bec26118",
+      "saved_file": "A:\\work\\dev\\product_cards_mvp\\data\\official_images\\8b93eb7a7debcee81a847d6dcf98c71022abc313641558db85819f61bec26118.img",
+      "identity_confirmed": true,
+      "byte_verified": true,
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "exact_model_color from explicit Store selection; no supplier retail identity claim",
+      "official_color": "silver",
+      "source_url": "https://www.apple.com/iphone-18-pro/",
+      "aliases": []
+    }
+  ],
+  "raw_fields": 270,
+  "admitted_fields": 50,
+  "retail_candidates": [
+    "MJQ44LL/A"
+  ],
+  "source_ambiguity_handling": "Supplier part number unproven; Store candidates not promoted to supplier identity",
+  "regression": {
+    "exit_code": 1,
+    "seconds": 1031.702,
+    "production_tree_unchanged": true,
+    "log": "regression.log"
+  },
+  "environment_recheck": {
+    "evidence": "Observed exec result after official Playwright browser installation; tests unchanged",
+    "command": ".venv/Scripts/python.exe -X utf8 -m unittest tests.test_stage54_2_projection tests.test_stage67_search_projection -q",
+    "PLAYWRIGHT_BROWSERS_PATH": "A:/work/dev/product_cards_mvp/data/playwright_browsers",
+    "installed_browser": "chromium-headless-shell v1243, Chrome 153.0.8010.12",
+    "exit_code": 0,
+    "tests": 3,
+    "seconds": 1.542,
+    "verdict": "OK",
+    "full_suite_initial": {
+      "tests": 1916,
+      "passed": 1913,
+      "assertion_failures": 0,
+      "environment_errors": 3
+    },
+    "unresolved_regression_errors": 0,
+    "qualification": "Two-phase regression qualification; not a claim that initial full invocation exited zero"
+  }
+}

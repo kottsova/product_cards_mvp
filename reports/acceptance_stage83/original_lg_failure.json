@@ -1,0 +1,491 @@
+{
+  "observation": "Actual user DB captured before fixes; unrelated supplier rows/cells omitted",
+  "rows": [
+    {
+      "product": {
+        "id": 101,
+        "batch_id": "12ba4aacda4b41a98ed111c28e584d55",
+        "row_number": 3,
+        "brand": "LG",
+        "name": "Паровой шкаф LG Styler S3WER",
+        "search_code": "Паровой шкаф LG Styler S3WER",
+        "alternate_code": "S3WER.ALWPCOM",
+        "category": "Паровой шкаф"
+      },
+      "jobs": [
+        {
+          "id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "product_id": 101,
+          "status": "needs_review",
+          "current_stage": 6,
+          "message": "Источники не найдены за отведённое время. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+          "created_at": "2026-10-15T13:08:44+00:00",
+          "updated_at": "2026-10-15T13:09:25+00:00",
+          "started_at": "2026-10-15T13:08:45+00:00",
+          "finished_at": "2026-10-15T13:09:25+00:00",
+          "stages": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": 354,
+          "product_id": 101,
+          "source_key": "lg_kz",
+          "site_name": "LG Казахстан",
+          "url": "",
+          "found_model": "",
+          "match_level": "mismatch",
+          "evidence": "Страница артикула или базовой модели не найдена в LG sitemap. Для региона LG «kz» нет проверенного маршрута браузерного поиска.",
+          "fetched_at": "2026-10-15T13:08:46+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        },
+        {
+          "id": 355,
+          "product_id": 101,
+          "source_key": "lg_ru",
+          "site_name": "LG Россия",
+          "url": "",
+          "found_model": "",
+          "match_level": "mismatch",
+          "evidence": "Страница артикула или базовой модели не найдена в sitemap LG Россия. Поиск LG (ru) не нашёл результатов по артикулу и базовой модели.",
+          "fetched_at": "2026-10-15T13:08:50+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        },
+        {
+          "id": 356,
+          "product_id": 101,
+          "source_key": "sulpak",
+          "site_name": "Sulpak",
+          "url": "",
+          "found_model": "",
+          "match_level": "unknown",
+          "evidence": "Для полного артикула нет ограниченного кандидата Sulpak.",
+          "fetched_at": "2026-10-15T13:09:25+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        },
+        {
+          "id": 357,
+          "product_id": 101,
+          "source_key": "dns",
+          "site_name": "DNS",
+          "url": "",
+          "found_model": "",
+          "match_level": "dealer_url_needed",
+          "evidence": "Нет проверенного дилерского URL для «LG Паровой шкаф LG Styler S3WER» (артикул ПАРОВОЙШКАФLGSTYLERS3WER). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "fetched_at": "2026-10-15T13:09:25+00:00",
+          "error": "",
+          "description": "",
+          "photos": []
+        }
+      ],
+      "counts": {
+        "conflicts": 0,
+        "official_base_only": 0,
+        "supplier_confirmed": 0
+      },
+      "events": [
+        {
+          "id": 1874,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": null,
+          "level": "info",
+          "message": "Задание добавлено в очередь.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:08:44+00:00"
+        },
+        {
+          "id": 1875,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": null,
+          "level": "info",
+          "message": "Worker начал обработку.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:08:45+00:00"
+        },
+        {
+          "id": 1876,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 1,
+          "level": "info",
+          "message": "LG: Полный артикул ПАРОВОЙШКАФLGSTYLERS3WER; базовая модель ПАРОВОЙШКАФLGSTYLERS3WER.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:08:45+00:00"
+        },
+        {
+          "id": 1877,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Казахстан: mismatch. Страница артикула или базовой модели не найдена в LG sitemap.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:08:46+00:00"
+        },
+        {
+          "id": 1878,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 1,
+          "level": "warning",
+          "message": "LG Россия: mismatch. Страница артикула или базовой модели не найдена в sitemap LG Россия.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:08:50+00:00"
+        },
+        {
+          "id": 1879,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 1,
+          "level": "warning",
+          "message": "LG web search fallback stopped: runtime_unavailable",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:22+00:00"
+        },
+        {
+          "id": 1880,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 1,
+          "level": "warning",
+          "message": "Sulpak: unknown. Для полного артикула нет ограниченного кандидата Sulpak.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:25+00:00"
+        },
+        {
+          "id": 1881,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 1,
+          "level": "warning",
+          "message": "DNS (дилер, резервный источник): dealer_url_needed. Нет проверенного дилерского URL для «LG Паровой шкаф LG Styler S3WER» (артикул ПАРОВОЙШКАФLGSTYLERS3WER). Не хватает: характеристики, фото, инструкция. Нужна точная ссылка на карточку товара у дилера (DNS и/или Технопарк) -- не будет угадана и не будет запущен общий поиск.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:25+00:00"
+        },
+        {
+          "id": 1882,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 3,
+          "level": "info",
+          "message": "Нормализуем и сравниваем характеристики.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:25+00:00"
+        },
+        {
+          "id": 1883,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 6,
+          "level": "warning",
+          "message": "Инструкции не проверены: официальная страница LG Россия недоступна.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:25+00:00"
+        },
+        {
+          "id": 1884,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 6,
+          "level": "warning",
+          "message": "DNS (дилер): DNS document not checked: the product page's 'Код производителя' has not confirmed this exact catalog article.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:25+00:00"
+        },
+        {
+          "id": 1885,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": 6,
+          "level": "warning",
+          "message": "Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:25+00:00"
+        },
+        {
+          "id": 1886,
+          "job_id": "ce1b055b89a04e22b0ba7193ee069c2c",
+          "stage": null,
+          "level": "warning",
+          "message": "Источники не найдены за отведённое время. Реальных конфликтов: 0; только базовая модель LG: 0; подтверждено поставщиком: 0. DNS (дилер, резервный источник): кандидат не подтверждён или не задан. Готовность карточки к выгрузке: not_ready; пробелы: no_official_full_sku_page, no_official_specifications, no_official_gallery_photo, instruction_missing, dealer_cross_check_missing.",
+          "source_url": "",
+          "created_at": "2026-10-15T13:09:25+00:00"
+        }
+      ],
+      "trace": [
+        {
+          "event": "robots_fetch",
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "sitemap_refs": [
+            "https://www.lg.com/sitemap.xml"
+          ],
+          "timestamp": "2026-10-15T13:08:51.406239+00:00",
+          "url": "https://www.lg.com/robots.txt"
+        },
+        {
+          "bytes": 6994,
+          "event": "sitemap_fetch",
+          "kind": "sitemapindex",
+          "loc_count": 80,
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "timestamp": "2026-10-15T13:08:52.692952+00:00",
+          "url": "https://www.lg.com/sitemap.xml"
+        },
+        {
+          "bytes": 608,
+          "event": "sitemap_fetch",
+          "kind": "sitemapindex",
+          "loc_count": 6,
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "timestamp": "2026-10-15T13:08:54.182474+00:00",
+          "url": "https://www.lg.com/uk/uk-gpone-index.xml"
+        },
+        {
+          "bytes": 678801,
+          "event": "sitemap_fetch",
+          "kind": "urlset",
+          "loc_count": 8566,
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "timestamp": "2026-10-15T13:08:56.406504+00:00",
+          "url": "https://www.lg.com/uk/sitemap.xml"
+        },
+        {
+          "bytes": 188126,
+          "event": "sitemap_fetch",
+          "kind": "urlset",
+          "loc_count": 1724,
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "timestamp": "2026-10-15T13:08:58.862337+00:00",
+          "url": "https://www.lg.com/uk/business/sitemap.xml"
+        },
+        {
+          "bytes": 5483516,
+          "event": "sitemap_fetch",
+          "kind": "urlset",
+          "loc_count": 3165,
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "timestamp": "2026-10-15T13:09:04.646143+00:00",
+          "url": "https://www.lg.com/uk/uk-pdp-sitemap-hreflang.xml"
+        },
+        {
+          "bytes": 627,
+          "event": "sitemap_fetch",
+          "kind": "sitemapindex",
+          "loc_count": 6,
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "timestamp": "2026-10-15T13:09:05.798529+00:00",
+          "url": "https://www.lg.com/au/au-gpone-index.xml"
+        },
+        {
+          "bytes": 425557,
+          "event": "sitemap_fetch",
+          "kind": "urlset",
+          "loc_count": 4984,
+          "outcome": "parsed",
+          "provider": "lg_sitemap",
+          "timestamp": "2026-10-15T13:09:07.675531+00:00",
+          "url": "https://www.lg.com/au/sitemap.xml"
+        },
+        {
+          "event": "sitemap_skip",
+          "provider": "lg_sitemap",
+          "reason": "network_or_time_budget",
+          "timestamp": "2026-10-15T13:09:07.686775+00:00",
+          "url": "https://www.lg.com/au/business/sitemap.xml"
+        },
+        {
+          "event": "sitemap_skip",
+          "provider": "lg_sitemap",
+          "reason": "network_or_time_budget",
+          "timestamp": "2026-10-15T13:09:07.697669+00:00",
+          "url": "https://www.lg.com/au/au-pdp-sitemap-hreflang.xml"
+        },
+        {
+          "event": "sitemap_skip",
+          "provider": "lg_sitemap",
+          "reason": "network_or_time_budget",
+          "timestamp": "2026-10-15T13:09:07.703573+00:00",
+          "url": "https://www.lg.com/ca_en/ca_en-gpone-index.xml"
+        },
+        {
+          "event": "sitemap_skip",
+          "provider": "lg_sitemap",
+          "reason": "network_or_time_budget",
+          "timestamp": "2026-10-15T13:09:07.709845+00:00",
+          "url": "https://www.lg.com/ca_fr/ca_fr-gpone-index.xml"
+        },
+        {
+          "event": "sitemap_skip",
+          "provider": "lg_sitemap",
+          "reason": "network_or_time_budget",
+          "timestamp": "2026-10-15T13:09:07.715797+00:00",
+          "url": "https://www.lg.com/de/de-gpone-index.xml"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "runtime_unavailable",
+          "provider": "google_old_parser",
+          "query": "site:lg.com \"ПАРОВОЙШКАФLGSTYLERS3WER\"",
+          "reason": "Error",
+          "timestamp": "2026-10-15T13:09:09.127752+00:00",
+          "url": "https://www.google.com/search?q=site%3Alg.com+%22%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%22&hl=en"
+        },
+        {
+          "decision": "skip_provider_remainder",
+          "event": "decision",
+          "provider": "google_browser",
+          "query": "",
+          "reason": "runtime_unavailable",
+          "timestamp": "2026-10-15T13:09:09.131273+00:00"
+        },
+        {
+          "event": "query",
+          "mechanism": "browser_projection",
+          "old_parser_source": "",
+          "provider": "bing_browser",
+          "query": "site:lg.com \"ПАРОВОЙШКАФLGSTYLERS3WER\"",
+          "region": "global",
+          "timestamp": "2026-10-15T13:09:11.273908+00:00",
+          "url": "https://www.bing.com/search?q=site%3Alg.com%20%22%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%22"
+        },
+        {
+          "event": "query_outcome",
+          "final_url": "https://www.bing.com/search?q=site%3Alg.com%20%22%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%22",
+          "network_requests": 162,
+          "old_parser_called": false,
+          "old_parser_completed": false,
+          "old_parser_source": "",
+          "outcome": "no_candidates",
+          "provider": "bing_browser",
+          "query": "site:lg.com \"ПАРОВОЙШКАФLGSTYLERS3WER\"",
+          "region": "global",
+          "resource_capped": false,
+          "timestamp": "2026-10-15T13:09:15.972408+00:00",
+          "url": "https://www.bing.com/search?q=site%3Alg.com%20%22%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%22"
+        },
+        {
+          "event": "query",
+          "mechanism": "browser_projection",
+          "old_parser_source": "",
+          "provider": "bing_browser",
+          "query": "site:lg.com ПАРОВОЙШКАФLGSTYLERS3WER LG",
+          "region": "global",
+          "timestamp": "2026-10-15T13:09:16.803765+00:00",
+          "url": "https://www.bing.com/search?q=site%3Alg.com%20%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%20LG"
+        },
+        {
+          "event": "query_outcome",
+          "final_url": "https://www.bing.com/search?q=site%3Alg.com%20%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%20LG",
+          "network_requests": 171,
+          "old_parser_called": false,
+          "old_parser_completed": false,
+          "old_parser_source": "",
+          "outcome": "no_candidates",
+          "provider": "bing_browser",
+          "query": "site:lg.com ПАРОВОЙШКАФLGSTYLERS3WER LG",
+          "region": "global",
+          "resource_capped": false,
+          "timestamp": "2026-10-15T13:09:18.463679+00:00",
+          "url": "https://www.bing.com/search?q=site%3Alg.com%20%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%20LG"
+        },
+        {
+          "event": "query",
+          "mechanism": "browser_projection",
+          "old_parser_source": "",
+          "provider": "duckduckgo_browser",
+          "query": "site:lg.com \"ПАРОВОЙШКАФLGSTYLERS3WER\"",
+          "region": "global",
+          "timestamp": "2026-10-15T13:09:19.104921+00:00",
+          "url": "https://duckduckgo.com/?q=site%3Alg.com%20%22%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%22"
+        },
+        {
+          "event": "query_outcome",
+          "final_url": "https://duckduckgo.com/static-pages/home-error/418.html?bno=84f2&is_tor=0&is_ar=0&is_netp=0",
+          "network_requests": 18,
+          "old_parser_called": false,
+          "old_parser_completed": false,
+          "old_parser_source": "",
+          "outcome": "no_candidates",
+          "provider": "duckduckgo_browser",
+          "query": "site:lg.com \"ПАРОВОЙШКАФLGSTYLERS3WER\"",
+          "region": "global",
+          "resource_capped": false,
+          "timestamp": "2026-10-15T13:09:20.394917+00:00",
+          "url": "https://duckduckgo.com/?q=site%3Alg.com%20%22%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%22"
+        },
+        {
+          "event": "query",
+          "mechanism": "browser_projection",
+          "old_parser_source": "",
+          "provider": "duckduckgo_browser",
+          "query": "site:lg.com ПАРОВОЙШКАФLGSTYLERS3WER LG",
+          "region": "global",
+          "timestamp": "2026-10-15T13:09:21.043430+00:00",
+          "url": "https://duckduckgo.com/?q=site%3Alg.com%20%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%20LG"
+        },
+        {
+          "event": "query_outcome",
+          "final_url": "https://duckduckgo.com/static-pages/home-error/418.html?bno=84f2&is_tor=0&is_ar=0&is_netp=0",
+          "network_requests": 18,
+          "old_parser_called": false,
+          "old_parser_completed": false,
+          "old_parser_source": "",
+          "outcome": "no_candidates",
+          "provider": "duckduckgo_browser",
+          "query": "site:lg.com ПАРОВОЙШКАФLGSTYLERS3WER LG",
+          "region": "global",
+          "resource_capped": false,
+          "timestamp": "2026-10-15T13:09:22.354291+00:00",
+          "url": "https://duckduckgo.com/?q=site%3Alg.com%20%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER%20LG"
+        },
+        {
+          "event": "query",
+          "provider": "lg_regional",
+          "query": "ПАРОВОЙШКАФLGSTYLERS3WER",
+          "region": "ru",
+          "timestamp": "2026-10-15T13:09:23.083788+00:00",
+          "url": "https://www.lg.com/ru/search/search-support?search=%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        },
+        {
+          "event": "query_outcome",
+          "outcome": "no_candidates",
+          "provider": "lg_regional",
+          "query": "ПАРОВОЙШКАФLGSTYLERS3WER",
+          "region": "ru",
+          "timestamp": "2026-10-15T13:09:25.625461+00:00",
+          "url": "https://www.lg.com/ru/search/search-support?search=%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER&type=B2C&accessoryCategoryList=&stockOnlyFlag=N&b2clist=&productCount=0&promotionslist=&discoverlist=&keypromotionlist=&reqUrl=https%3A%2F%2Fwww.lg.com&skuCompare=&userId=&loginState=true&limitSaleUseFlag=N&reStockFuncFlag=N&obsLoginFlag=N&oldTerm=%D0%9F%D0%90%D0%A0%D0%9E%D0%92%D0%9E%D0%99%D0%A8%D0%9A%D0%90%D0%A4LGSTYLERS3WER&obsBuynowFlag=N&energyLabelFlag=N&energyLabelUpperTextUseFlag=N&localeCode=ru&mobileCheck=false&reviewType=SP&obsCalculatorUseFlag=N&obsInstallmentPromotionUseFlag=N&labelUseFlag=Y&repairabilityIndexFlag=N&obsInstallmentPriceDisableLink=N&obsSubscriptionCtaUseFlag=N&guestFlag=Y&guestPriceMessageUseFlag=N"
+        }
+      ]
+    },
+    {
+      "product": {
+        "id": 109,
+        "batch_id": "12ba4aacda4b41a98ed111c28e584d55",
+        "row_number": 11,
+        "brand": "LG",
+        "name": "Саундбар S40T",
+        "search_code": "Саундбар S40T",
+        "alternate_code": "S40T",
+        "category": "Саундбар"
+      },
+      "jobs": [],
+      "sources": [],
+      "counts": {
+        "conflicts": 0,
+        "official_base_only": 0,
+        "supplier_confirmed": 0
+      },
+      "events": [],
+      "trace": []
+    }
+  ]
+}

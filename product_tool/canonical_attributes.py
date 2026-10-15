@@ -164,6 +164,14 @@ def project(rows):
             from .hyperx_presentation import SECTIONS as known_sections
             section=known_sections.get(section,section)
         row['parent_group']=parent_group(section)
+        from .semantic_decomposition import field_spec
+        from .value_localization import content_classification,localize,semantic_display
+        semantic=field_spec(row['normalized_name'])
+        classification=content_classification(row['display_name'],section,source.get('raw_value',''))
+        if classification=='support_prose':continue
+        if classification=='compatibility':row['parent_group']='Совместимость и системные требования'
+        if semantic:
+            row['display_name']=semantic[0];row['parent_group']=semantic[1];row['canonical_role']=semantic[2];row['semantic_decomposition']=True
         component=re.match(r'^(Наушники|Микрофон):\s*(.+)$',row['display_name'])
         if component:
             row['parent_group']=component[1];row['display_name']=label_ru(component[2])
@@ -176,7 +184,16 @@ def project(rows):
         from .attribute_lineage import technical_role
         if technical_role(row['display_name'],row['parent_group'])=='feature':row['canonical_role']='feature'
         resolved=row.get('resolved') or {}
-        if resolved.get('selected_unit')=='' and resolved.get('status')!='manual' and source.get('raw_value') and not (row.get('refined_from') or row.get('derived_from')):
+        if semantic:
+            semantic_value=resolved.get('selected_value','')
+            if not resolved.get('selected_unit') and source:
+                from .semantic_decomposition import decompose
+                from .adapters.common import RawAttribute
+                children=decompose(RawAttribute(source.get('raw_name',''),source.get('raw_value',''),source.get('section','')))
+                original_child=next((c for c in children or [] if c.key==row['normalized_name'] and c.value.casefold()==semantic_value),None)
+                if original_child:semantic_value=original_child.value
+            row['resolved']={**resolved,'display_value':semantic_display(semantic_value,resolved.get('selected_unit','')) if semantic_value else resolved.get('display_value','')}
+        elif resolved.get('selected_unit')=='' and resolved.get('status')!='manual' and source.get('raw_value') and not (row.get('refined_from') or row.get('derived_from')):
             shown=source['raw_value']
             shown=re.sub(r'\bXBOX\b','Xbox',shown)
             shown=re.sub(r'\bup to\b','До',shown,flags=re.I)
@@ -184,7 +201,7 @@ def project(rows):
                 shown=re.sub(r'(?<![A-Za-z])'+unit+r'(?![A-Za-z])',replacement,shown,flags=re.I)
             # Single-letter units need an explicit number, so prose and model
             # names containing L/W/G are not rewritten.
-            shown=re.sub(r'(\d(?:[\d.,\s]*\d)?)\s*(g|W|L)\b',lambda m:m[1]+' '+{'g':'г','w':'Вт','l':'л'}[m[2].lower()],shown,flags=re.I)
-            row['resolved']={**resolved,'display_value':shown}
+            shown=re.sub(r'(\d(?:[\d.,\s]*\d)?)\s*(g|W|L)\b',lambda m:m[1]+' '+{'g':'г','W':'Вт','L':'л'}[m[2]],shown)
+            row['resolved']={**resolved,'display_value':localize(shown)}
         result.append(row)
     return result

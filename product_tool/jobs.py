@@ -165,7 +165,8 @@ def get_product(path: Path, product_id: int) -> dict[str, Any] | None:
             "FROM products JOIN batches ON batches.id = products.batch_id WHERE products.id = ?",
             (product_id,),
         ).fetchone()
-    return dict(row) if row else None
+    from .product_input import resolve_product_input
+    return resolve_product_input(dict(row)) if row else None
 
 
 def _decode_job(row: sqlite3.Row) -> dict[str, Any]:
@@ -306,6 +307,10 @@ def save_source_document(
     update_photos: bool = True,
 ) -> None:
     """Upsert source evidence while preserving results of unselected stages."""
+    from .runtime_diagnostics import record_active
+    record_active(path,product_id,'source_extraction_result',provider=document.source_key,url=document.url,
+                  identity=document.match_level,reason=document.error or document.evidence,
+                  raw_facts=len(document.attributes),photos=len(document.photo_candidates),accepted=not document.error)
     attempt_id = record_fetch_attempt(
         path, product_id, document.source_key,
         status="error" if document.error else "success",
@@ -326,6 +331,7 @@ def save_source_document(
     if (previous_evidence and previous_evidence["url"] and not previous_evidence["error"]
             and previous_evidence["match_level"] == "full_sku"
             and document.match_level != "full_sku"):
+        record_active(path,product_id,'source_evidence_retained',provider=document.source_key,url=previous_evidence['url'],reason='Weaker refresh cannot replace verified exact evidence; this is not live success')
         return
     if previous_evidence and previous_evidence["match_level"] == "full_sku" and not previous_evidence["error"]:
         # A same-identity refresh can update fields it actually extracted, but
@@ -365,6 +371,12 @@ def save_source_document(
             fetched_at=document.fetched_at,
         )
     normalized = normalize_facts(document.attributes) if update_attributes else []
+    if update_attributes:
+        from . import card_evidence
+        from .semantic_decomposition import evidence
+        semantic=card_evidence.load(path,product_id,'semantic_decomposition') or {'sources':{}}
+        semantic['sources'][document.source_key]={'url':document.url,'raw_facts':len(document.attributes),'decomposed':evidence(document.attributes)}
+        card_evidence.save(path,product_id,'semantic_decomposition',semantic)
     with storage._connection(path) as connection:
         previous = connection.execute(
             "SELECT description, photos_json FROM source_pages WHERE product_id=? AND source_key=?",
@@ -458,6 +470,8 @@ def resolve_product(path: Path, product_id: int) -> None:
     facts = get_facts(path, product_id)
     manual = get_manual_decisions(path, product_id)
     resolved = resolve_attributes(facts, sources, manual)
+    from .runtime_diagnostics import record_active
+    record_active(path,product_id,'resolution_completed',facts=len(facts),resolved=len(resolved),conflicts=sum(bool(r.conflict) for r in resolved))
     now = storage._now()
     with storage._connection(path) as connection:
         connection.execute("DELETE FROM resolved_attributes WHERE product_id=?", (product_id,))

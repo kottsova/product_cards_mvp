@@ -122,7 +122,7 @@ def append_qualified_sections(doc,audit,groups,cat,configuration):
    for v in values:
     t=plain(v)
     if 'configurable' in t or re.search(r'\d+-core gpu.*\d+-core gpu',t) or (cat=='mac' and 'gpu' in t):candidate(sec,v,'GPU configuration requires exact order override');continue
-    if re.search(r'(?:a\d+|m\d+|h\d+|s\d+)\s*(?:chip|sip)|apple\s*m\d+\s*chip',t):add('Процессор',v,sec)
+    if re.search(r'(?:a\d+|m\d+|h\d+|s\d+)\s*(?:(?:pro|max|ultra)\s+)?(?:chip|sip)|apple\s*m\d+\s*chip',t):add('Процессор',v,sec)
     elif 'cpu' in t:add('Ядра CPU',v,sec)
     elif 'gpu' in t:add('Ядра GPU',v,sec)
     elif 'neural' in t:add('Neural Engine',v,sec)
@@ -142,8 +142,13 @@ def append_qualified_sections(doc,audit,groups,cat,configuration):
     t=plain(v)
     if 'configurable' in t:optional=True
     if optional or re.search(r'optional|sold separately|depending',t):candidate(sec,v,'Display configuration option; continuation scope retained');continue
+    if re.search(r'rounded corners|actual viewable area|standard rectangle',t):candidate(sec,v,'Rounded-corner explanatory measurement; not a second nominal diagonal');continue
     if t in {'color','refresh rates','xdr (extreme dynamic range)'}:candidate(sec,v,'Section/subsection heading, not a separate value');continue
-    if t.endswith('display') or t in {'wide-angle oled','led backlit multi-touch display with ips technology'}:technologies.append(v);continue
+    if t.endswith('display') or t in {'wide-angle oled','led backlit multi-touch display with ips technology'}:
+     technologies.append(v)
+     nominal=re.search(r'(\d+(?:\.\d+)?)[ -]*inch',t)
+     if nominal:add('Диагональ экрана, дюймы',nominal[1],sec,origin=v)
+     continue
     diagonal=re.search(r'(\d+(?:\.\d+)?)[ -]*inch',t)
     resolution=re.search(r'(\d+)\s*-?by-?\s*(\d+)[ -]+(?:native |pixel )?resolution',t)
     density=re.search(r'(\d+)\s+(?:pixels per inch|ppi)\b',t)
@@ -171,6 +176,15 @@ def append_qualified_sections(doc,audit,groups,cat,configuration):
     elif re.search(r'brighter when viewed at an angle',t):candidate(sec,v,'Promotional relative brightness without a stable measured mode')
     else:candidate(sec,v,'Display field not yet canonically mapped')
    if technologies:add('Технология экрана','; '.join(technologies),sec)
+   continue
+  if sec=='Buttons and Connectors':
+   other=[]
+   for v in values:
+    t=plain(v)
+    if t.startswith('action button features:'):add('Функции кнопки Action',v,sec,origin=v)
+    elif t.startswith('camera controls:'):add('Функции Camera Control',v,sec,origin=v)
+    else:other.append(v)
+   if other:add('Кнопки и разъёмы','; '.join(other),sec)
    continue
   if sec=='Acoustic Performance':
    # Noise table explicitly reports a tested configuration, not every order.

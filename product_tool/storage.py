@@ -163,5 +163,6 @@ def get_batch(path: Path, batch_id: str) -> dict[str, Any] | None:
         ).fetchall()
     result = dict(batch)
     result["mapping"] = json.loads(result.pop("mapping_json"))
-    result["products"] = [dict(row) for row in rows]
+    from .product_input import resolve_product_input
+    result["products"] = [resolve_product_input(dict(row)) for row in rows]
     return result
