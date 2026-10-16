@@ -10,6 +10,7 @@ import requests
 
 from .adapters.lg_documents import BinarySafeSession
 from .adapters.policy_session import PolicyAwareSession, RequestBudget, request_budget
+from .job_progress import observed
 
 MAX_IMAGE_BYTES = 8_000_000
 ALLOWED_BY_SOURCE = {
@@ -95,6 +96,7 @@ def image_dimensions(data: bytes) -> tuple[int, int, str] | None:
     return None
 
 
+@observed('extraction_photos')
 def inspect_saved_photo(url: str, source_key: str, log_path: Path, *, underlying=None,
                         full_verification=False, save_dir: Path | None=None) -> dict[str, int | str]:
     """One bounded policy-aware GET of an already saved image; no discovery."""

@@ -5,17 +5,21 @@ from urllib.parse import urljoin, urlsplit, urlunsplit
 from bs4 import BeautifulSoup
 from .common import PhotoCandidate, RawAttribute, clean_text
 
+from ..job_progress import observed
+
 def visible_text(soup):
     clone=BeautifulSoup(str(soup),"html.parser")
     for tag in clone.select("script, style, template, noscript"): tag.decompose()
     return clean_text(clone.get_text(" ",strip=True))
 
+@observed('identity')
 def find_full_sku(text, full_sku):
     parts=[part.strip() for part in full_sku.split("+")]
     pattern=r"\s*\+\s*".join(re.escape(part) for part in parts)
     match=re.search(rf"(?<![A-Za-z0-9._/-]){pattern}(?![A-Za-z0-9._/-])",text,re.I)
     return (full_sku.upper(),clean_text(text[max(0,match.start()-90):match.end()+90])) if match else ("","")
 
+@observed('extraction_specs')
 def extract_table_attributes(soup):
     pairs=[]
     for row in soup.select("table tr, .characteristics tr, .specifications tr"):
@@ -37,6 +41,7 @@ def _sulpak_asset(url):
     parts=urlsplit(url); path=re.sub(r"_(160|320)(?=\.[^.]+$)","",parts.path,flags=re.I)
     return urlunsplit((parts.scheme.lower(),parts.netloc.lower(),path.lower(),"",""))
 
+@observed('extraction_photos')
 def extract_photo_candidates(soup, page_url, *, source_key):
     found=[]
     for image in soup.select("img, picture source"):

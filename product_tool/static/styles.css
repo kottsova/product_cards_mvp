@@ -130,3 +130,8 @@ td input { min-width: 130px; }
 .lightbox-toolbar, .lightbox-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .lightbox-image { display: block; width: 100%; max-height: 68vh; object-fit: contain; background: #f6f8f9; margin: 10px 0; }
 .lightbox-caption, .lightbox-metadata { margin: 8px 0; }
+
+.batch-summary{display:flex;gap:12px 24px;flex-wrap:wrap;margin:18px 0}.batch-progress{display:flex;align-items:center;gap:16px}.batch-progress progress{width:min(650px,80%);height:16px;accent-color:#16685c}.batch-reason{display:block;max-width:190px;color:#686d74;margin-top:5px}.batch-table table{min-width:1550px}.batch-table td{vertical-align:top}.batch-table tbody tr{cursor:pointer}.batch-table tbody tr:hover{background:#f3f7f6}.batch-table th{position:sticky;top:0;background:#f5f7fa}.batch-table td:nth-child(4){min-width:210px}.batch-table td:nth-child(7),.batch-table td:nth-child(8){min-width:135px}
+body:has(#product-batch) .shell{width:min(2000px,calc(100% - 48px))}
+#product-batch input[type=checkbox]{width:18px;height:18px;min-height:0;vertical-align:middle}
+.batch-table td:last-child,.batch-table th:last-child{position:sticky;right:0;background:#fff;min-width:105px;box-shadow:-3px 0 5px #e4e9ed}

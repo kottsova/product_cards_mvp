@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Предпросмотр Excel · Карточки товаров</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/">Карточки товаров <span>MVP</span></a>
+      <nav aria-label="Основная навигация"><a href="/">Партии и загрузка</a></nav>
+    </div>
+  </header>
+  <main class="shell">
+    
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Шаг 2 · Предпросмотр</p>
+      <h1>Проверьте импорт</h1>
+      <p class="lead"><strong>LG_12_original.xlsx</strong> · 12 товаров</p>
+    </div>
+    <a class="quiet-link" href="/">← К партиям</a>
+  </div>
+
+  
+
+  <section class="panel">
+    <div class="section-heading">
+      <div>
+        <h2>Соответствие колонок</h2>
+        <p>Номера начинаются с 1. Оставьте поле пустым, если такой колонки нет.</p>
+      </div>
+    </div>
+    <form action="/drafts/1a080cbb078f46448400ea0c813cec55/mapping" method="post">
+      <div class="mapping-grid">
+        <label>Лист Excel
+          <select name="sheet_name">
+            
+              <option value="Лист1" selected="">Лист1</option>
+            
+          </select>
+        </label>
+        <label>Строка заголовков
+          <input name="header_row" type="number" min="0" max="5000" value="1" required="" style="">
+        </label>
+        
+          <label>Категория
+            <input name="category" type="number" min="1" max="100" value="" style="">
+          </label>
+        
+          <label>Бренд
+            <input name="brand" type="number" min="1" max="100" value="3" style="">
+          </label>
+        
+          <label>Название
+            <input name="name" type="number" min="1" max="100" value="" style="">
+          </label>
+        
+          <label>Основной артикул
+            <input name="search_code" type="number" min="1" max="100" value="1" style="">
+          </label>
+        
+          <label>Запасная модель
+            <input name="fallback_code" type="number" min="1" max="100" value="2" style="">
+          </label>
+        
+      </div>
+      <div class="form-actions">
+        <button class="button secondary" type="submit">Обновить предпросмотр</button>
+        <span class="hint">Колонки определяются автоматически. Настройка нужна только при неверном сопоставлении.</span>
+      </div>
+    </form>
+  </section>
+
+  
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Товары перед подтверждением</h2>
+          <p>Бренд, артикул и название читаются из файла. Категория, модель и варианты определяются автоматически; исправляйте только то, что распознано неверно. Исходное название сохраняется.</p>
+        </div>
+      </div>
+      <form action="/drafts/1a080cbb078f46448400ea0c813cec55/confirm" method="post">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Строка</th>
+                <th scope="col">Название</th>
+                <th scope="col">Бренд</th>
+                <th scope="col">Основной артикул</th>
+                <th scope="col">Распознанная модель</th>
+                <th scope="col">Цвет / память / вариант</th>
+                <th scope="col">Категория</th>
+                <th scope="col">Проверка</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                
+                <tr>
+                  <td class="row-number">2</td>
+                  <td class="product-name">Кондиционер сплит-система P12ED</td>
+                  <td><input name="brand_2" aria-label="Бренд, строка 2" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_2" aria-label="Основной артикул, строка 2" value="P12ED.NSAR + P12ED.USAR" maxlength="500" style=""></td>
+                  <td data-model-row="2"><strong>P12ED</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_2" aria-label="Запасная модель, строка 2" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="2">—</td>
+                  <td><input name="category_2" aria-label="Категория, строка 2" value="Сплит-система" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">3</td>
+                  <td class="product-name">Паровой шкаф LG Styler S3WER</td>
+                  <td><input name="brand_3" aria-label="Бренд, строка 3" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_3" aria-label="Основной артикул, строка 3" value="S3WER.ALWPCOM" maxlength="500" style=""></td>
+                  <td data-model-row="3"><strong>S3WER</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_3" aria-label="Запасная модель, строка 3" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="3">—</td>
+                  <td><input name="category_3" aria-label="Категория, строка 3" value="Паровой шкаф" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">4</td>
+                  <td class="product-name">Микроволновая печь LG MS 2082 F</td>
+                  <td><input name="brand_4" aria-label="Бренд, строка 4" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_4" aria-label="Основной артикул, строка 4" value="MS2082F" maxlength="500" style=""></td>
+                  <td data-model-row="4"><strong>Неоднозначно</strong><br><small>product_name · missing</small><details><summary>Изменить модель</summary><input name="alternate_code_4" aria-label="Запасная модель, строка 4" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="4">—</td>
+                  <td><input name="category_4" aria-label="Категория, строка 4" value="Микроволновая печь" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    <small class="issue">Модель не извлечена однозначно; используются артикул и исходное название как fallback</small>
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">5</td>
+                  <td class="product-name">Стиральная машина 11 кг, TW4V7EB1W</td>
+                  <td><input name="brand_5" aria-label="Бренд, строка 5" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_5" aria-label="Основной артикул, строка 5" value="TW4V7EB1W" maxlength="500" style=""></td>
+                  <td data-model-row="5"><strong>TW4V7EB1W</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_5" aria-label="Запасная модель, строка 5" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="5">—</td>
+                  <td><input name="category_5" aria-label="Категория, строка 5" value="Стиральная машина" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">6</td>
+                  <td class="product-name">Холодильник двухкамерный 374 л, No Frost, GC-B459MLWM</td>
+                  <td><input name="brand_6" aria-label="Бренд, строка 6" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_6" aria-label="Основной артикул, строка 6" value="GC-B459MLWM.ADSQCIS" maxlength="500" style=""></td>
+                  <td data-model-row="6"><strong>GC-B459MLWM</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_6" aria-label="Запасная модель, строка 6" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="6">—</td>
+                  <td><input name="category_6" aria-label="Категория, строка 6" value="Холодильник" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">7</td>
+                  <td class="product-name">Пылесос VK89309H</td>
+                  <td><input name="brand_7" aria-label="Бренд, строка 7" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_7" aria-label="Основной артикул, строка 7" value="VK89309H" maxlength="500" style=""></td>
+                  <td data-model-row="7"><strong>VK89309H</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_7" aria-label="Запасная модель, строка 7" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="7">—</td>
+                  <td><input name="category_7" aria-label="Категория, строка 7" value="Пылесос" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">8</td>
+                  <td class="product-name">Стирально-сушильная машина 13/10 кг, W4W8LVPKZHM</td>
+                  <td><input name="brand_8" aria-label="Бренд, строка 8" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_8" aria-label="Основной артикул, строка 8" value="W4W8LVPKZHM.APBPCOM" maxlength="500" style=""></td>
+                  <td data-model-row="8"><strong>W4W8LVPKZHM</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_8" aria-label="Запасная модель, строка 8" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="8">—</td>
+                  <td><input name="category_8" aria-label="Категория, строка 8" value="Стирально-сушильная машина" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">9</td>
+                  <td class="product-name">Телевизор 86NANO81A6A 86''/4K UHD/Smart TV/Wi-Fi/BT</td>
+                  <td><input name="brand_9" aria-label="Бренд, строка 9" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_9" aria-label="Основной артикул, строка 9" value="86NANO81A6A" maxlength="500" style=""></td>
+                  <td data-model-row="9"><strong>86NANO81A6A</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_9" aria-label="Запасная модель, строка 9" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="9">—</td>
+                  <td><input name="category_9" aria-label="Категория, строка 9" value="Телевизор" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">10</td>
+                  <td class="product-name">Аудиосистема XBOOM RNC9</td>
+                  <td><input name="brand_10" aria-label="Бренд, строка 10" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_10" aria-label="Основной артикул, строка 10" value="RNC9.DRUSLLK" maxlength="500" style=""></td>
+                  <td data-model-row="10"><strong>RNC9</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_10" aria-label="Запасная модель, строка 10" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="10">—</td>
+                  <td><input name="category_10" aria-label="Категория, строка 10" value="Аудиосистема" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">11</td>
+                  <td class="product-name">Саундбар S40T</td>
+                  <td><input name="brand_11" aria-label="Бренд, строка 11" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_11" aria-label="Основной артикул, строка 11" value="S40T" maxlength="500" style=""></td>
+                  <td data-model-row="11"><strong>S40T</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_11" aria-label="Запасная модель, строка 11" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="11">—</td>
+                  <td><input name="category_11" aria-label="Категория, строка 11" value="Саундбар" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">12</td>
+                  <td class="product-name">Музыкальный центр ON66</td>
+                  <td><input name="brand_12" aria-label="Бренд, строка 12" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_12" aria-label="Основной артикул, строка 12" value="ON66" maxlength="500" style=""></td>
+                  <td data-model-row="12"><strong>ON66</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_12" aria-label="Запасная модель, строка 12" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="12">—</td>
+                  <td><input name="category_12" aria-label="Категория, строка 12" value="Музыкальный центр" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">13</td>
+                  <td class="product-name">Микросистема ON77DK</td>
+                  <td><input name="brand_13" aria-label="Бренд, строка 13" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_13" aria-label="Основной артикул, строка 13" value="ON77DKDRUSLLK" maxlength="500" style=""></td>
+                  <td data-model-row="13"><strong>ON77DK</strong><br><small>product_name · high</small><details><summary>Изменить модель</summary><input name="alternate_code_13" aria-label="Запасная модель, строка 13" value="" maxlength="500" style=""></details></td>
+                  <td data-configuration-row="13">—</td>
+                  <td><input name="category_13" aria-label="Категория, строка 13" value="Микросистема" maxlength="500" style=""><small>product_name · high</small></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Колонка «Модель» содержит название товара; используем как название, не как запасной артикул</small>
+                    
+                    
+                  </td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="form-actions confirm-actions">
+          <button class="button primary" type="submit">Подтвердить партию</button>
+          <span class="hint">Исходный Excel и его строки сохраняются для последующей проверки.</span>
+        </div>
+      </form>
+    </section>
+  
+
+  </main>
+  <footer class="shell footer">Локальная версия · данные хранятся на этом компьютере</footer>
+
+</body></html>

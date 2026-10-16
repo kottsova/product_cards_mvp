@@ -25,6 +25,15 @@ def initialize(path: Path) -> None:
 def record(path: Path, job_id: str, product_id: int, event: dict[str, Any]) -> None:
     if not event.get("event") or not event.get("timestamp"):
         raise ValueError("discovery trace requires event and timestamp")
+    # Explicit operation events only. A result does not imply its phase started
+    # earlier, and skipped phases are never manufactured for the progress bar.
+    phases={'discovery_started':'discovery','navigation_start':'discovery',
+            'identity_start':'identity','extraction_start':'extraction_specs',
+            'photo_start':'extraction_photos','normalization_start':'normalization'}
+    phase=phases.get(event['event'])
+    if phase:
+        from .job_progress import set_phase
+        set_phase(path,job_id,phase)
     with storage._connection(path) as connection:
         connection.execute(
             "INSERT INTO discovery_trace(job_id, product_id, event_json, created_at) VALUES (?, ?, ?, ?)",

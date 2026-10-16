@@ -1,145 +1,19 @@
 {% extends "base.html" %}
-{% block title %}Партия товаров · Карточки товаров{% endblock %}
+{% block title %}{{ batch.filename }} · Карточки товаров{% endblock %}
+{% block head %}<script src="/static/batch_progress.js" defer></script>{% endblock %}
 {% block content %}
-  <div class="page-heading">
-    <div>
-      <p class="eyebrow">Шаг 3 · Партия сохранена</p>
-      <h1>{{ batch.filename }}</h1>
-      <p class="lead">Лист «{{ batch.sheet_name }}» · {{ batch.products|length }} товаров · {{ batch.confirmed_at }}</p>
-    </div>
-    <a class="button" href="/batches/{{ batch.id }}/export.xlsx">Скачать Excel с результатами</a>
-    <a class="quiet-link" href="/">← К партиям</a>
-  </div>
-  <div class="success" role="status">Партия подтверждена и сохранена на этом компьютере. Она останется доступной после перезапуска приложения.</div>
-
-  {% if batch_message %}<div class="success" role="status">{{ batch_message }}</div>{% endif %}
-  <section class="section" id="product-batch">
-    <h2>Проверка товаров партии</h2>
-    <p>Выберите товары и этапы. Каждый товар обрабатывается тем же worker, что и отдельная карточка.</p>
-    <form action="/batches/{{ batch.id }}/search" method="post" id="product-batch-form">
-      <div class="stage-grid">{% for number,label in stages.items() %}<label class="stage-option"><input type="checkbox" name="stages" value="{{ number }}" checked><span>{{ label }}</span></label>{% endfor %}</div>
-      <div class="table-wrap"><table><thead><tr><th>Выбор</th><th>Бренд и товар</th><th>Артикул поиска</th><th>Задание</th><th>Готовность</th></tr></thead><tbody>
-      {% for product in batch.products %}{% set state=batch_states[product.id] %}<tr>
-      <td><input type="checkbox" name="product_ids" value="{{ product.id }}" {% if product.id in batch_selected %}checked{% endif %} aria-label="Проверить {{ product.search_code }}"></td>
-      <td>{{ product.brand }} <a href="/products/{{ product.id }}">{{ product.name or product.search_code }}</a></td>
-      <td>{{ product.search_code }}{% if product.input_resolution %}<br><small>Основная входная ячейка: {{ product.input_search_code }}. Для поиска используется запасной код.</small>{% endif %}</td>
-      <td>{{ state.job.status if state.job else 'Не запускалось' }}</td><td>{% if state.readiness %}{{ state.readiness.verdict }}{% elif state.job %}Выполняется{% else %}Не проверялась{% endif %}</td>
-      </tr>{% endfor %}</tbody></table></div>
-      <button class="button primary" type="submit">Поставить выбранные товары в очередь</button>
-    </form>
-    <p><a href="/batches/{{ batch.id }}#product-batch">Обновить прогресс</a></p>
-  </section>
-  {% if lg_products %}
-  <section class="section" id="lg-batch">
-    <div class="section-heading"><h2>Проверка LG одной кнопкой</h2></div>
-    <p>Товары выбраны из вашего файла: по одному LG-товару на каждую категорию, без списка разрешённых категорий. Выбор можно изменить. Для полного поиска включены описание, характеристики, фото и инструкции. Если загрузку PDF хотите отложить, снимите только «Инструкции» и выполните для них отдельный проход позже.</p>
-    <p><a href="/batches/{{ batch.id }}#lg-batch">Обновить прогресс</a></p>
-    <div class="stage-grid" aria-label="Состояние выбора LG" aria-live="polite">
-      <div class="status-card"><strong id="lg-selected-count">{{ lg_counts.selected }}</strong><br>Выбрано</div>
-      <div class="status-card"><strong id="lg-queued-count">{{ lg_counts.queued }}</strong><br>В очереди</div>
-      <div class="status-card"><strong id="lg-running-count">{{ lg_counts.running }}</strong><br>Выполняется</div>
-      <div class="status-card"><strong id="lg-completed-count">{{ lg_counts.completed }}</strong><br>Завершено</div>
-      <div class="status-card"><strong id="lg-review-count">{{ lg_counts.review }}</strong><br>Требует проверки</div>
-    </div>
-    <form action="/batches/{{ batch.id }}/lg-search" method="post" id="lg-batch-form">
-      <h3>Состав проверки</h3>
-      <div class="stage-grid">
-        {% for number, label in stages.items() %}
-        <label class="stage-option"><input type="checkbox" name="stages" value="{{ number }}" checked><span><strong>{{ label }}</strong></span></label>
-        {% endfor %}
-      </div>
-      <p class="hint">Снятый этап не считается проверенным. Инструкции могут требовать большой загрузки PDF; доступ к сайтам ограничивает действующая политика worker.</p>
-      <div class="table-wrap"><table>
-        <thead><tr><th>Выбор</th><th>Категория</th><th>Товар и артикул</th><th>Статус задания</th><th>Готовность карточки и причины</th></tr></thead>
-        <tbody>{% for product in lg_products %}
-          {% set state = lg_rows[product.id] %}
-          <tr>
-            <td><input type="checkbox" class="lg-product-select" name="product_ids" value="{{ product.id }}" {% if product.id in lg_selected %}checked{% endif %} aria-label="Выбрать {{ product.search_code }}"></td>
-            <td>{{ product.category }}</td>
-            <td><a href="/products/{{ product.id }}">{{ product.name or product.search_code }}</a><br><small>{{ product.search_code }}</small></td>
-            <td data-lg-job="{{ product.id }}">{% if state.job %}{{ state.job_label }} ({{ state.job.status }}){% else %}Не запускалось{% endif %}</td>
-            <td data-lg-card="{{ product.id }}">{% if state.job and state.job.status == 'queued' %}Ожидает обработки; итог карточки появится после проверки.{% elif state.job and state.job.status == 'running' %}Проверяется; итог карточки появится после завершения.{% else %}{{ state.card.label }} ({{ state.card.verdict }}){% if state.card.reasons %}<br><small>{{ state.card.reasons|join(' ') }}</small>{% endif %}{% endif %}</td>
-          </tr>
-        {% endfor %}</tbody>
-      </table></div>
-      <div class="form-actions"><button class="button primary" type="submit">Поставить выбранные LG в очередь</button><span class="hint">Уже ожидающие и выполняющиеся товары повторно не добавляются. Приложение обрабатывает задания по одному.</span></div>
-    </form>
-  </section>
-  <script>
-    document.querySelectorAll('.lg-product-select').forEach(function(box) {
-      box.addEventListener('change', function() {
-        document.getElementById('lg-selected-count').textContent = document.querySelectorAll('.lg-product-select:checked').length;
-      });
-    });
-    (function() {
-      var keys = ['queued', 'running', 'completed', 'review'];
-      function hasActiveJobs() {
-        return Number(document.getElementById('lg-queued-count').textContent) +
-          Number(document.getElementById('lg-running-count').textContent) > 0;
-      }
-      async function refreshProgress() {
-        try {
-          var response = await fetch(window.location.pathname, {cache: 'no-store'});
-          if (!response.ok) throw new Error('Progress request failed');
-          var page = new DOMParser().parseFromString(await response.text(), 'text/html');
-          keys.forEach(function(key) {
-            var source = page.getElementById('lg-' + key + '-count');
-            if (source) document.getElementById('lg-' + key + '-count').textContent = source.textContent;
-          });
-          ['job', 'card'].forEach(function(kind) {
-            document.querySelectorAll('[data-lg-' + kind + ']').forEach(function(cell) {
-              var source = page.querySelector('[data-lg-' + kind + '="' + cell.getAttribute('data-lg-' + kind) + '"]');
-              if (source) cell.innerHTML = source.innerHTML;
-            });
-          });
-        } catch (error) {
-          // The manual refresh link remains available if a local request fails.
-        }
-        if (hasActiveJobs()) window.setTimeout(refreshProgress, 5000);
-      }
-      if (hasActiveJobs()) window.setTimeout(refreshProgress, 5000);
-    })();
-  </script>
-  {% endif %}
-
-  {% for category, products in groups.items() %}
-    <section class="section">
-      <div class="section-heading">
-        <h2>{{ category }}</h2>
-        <span class="count">{{ products|length }}</span>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Строка</th>
-              <th scope="col">Название</th>
-              <th scope="col">Бренд</th>
-              <th scope="col">Основной артикул</th>
-              <th scope="col">Запасная модель</th>
-              <th scope="col">Проверка при импорте</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for product in products %}
-              <tr>
-                <td class="row-number">{{ product.row_number }}</td>
-                <td class="product-name"><a href="/products/{{ product.id }}">{{ product.name or product.search_code }}</a></td>
-                <td>{{ product.brand }}</td>
-                <td>{{ product.search_code }}</td>
-                <td>{{ product.alternate_code or '—' }}</td>
-                <td>
-                  {% if product.needs_confirmation %}
-                    <span class="badge warning">Требовало проверки</span>
-                  {% else %}
-                    <span class="badge ready">Определено</span>
-                  {% endif %}
-                </td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </section>
-  {% endfor %}
+<div class="page-heading"><div><p class="eyebrow">Партия подтверждена</p><h1>{{ batch.filename }}</h1></div><a class="button primary" href="/batches/{{ batch.id }}/export.xlsx">Скачать Excel</a></div>
+{% if batch_message %}<p class="notice success" role="status">{{ batch_message }}</p>{% endif %}
+<section class="section" id="product-batch" data-progress-url="/batches/{{ batch.id }}/progress">
+<h2 id="batch-heading">{{ 'Результаты обработки' if progress.summary.completed == progress.summary.total else 'Обработка товаров' }}</h2>
+<div class="batch-summary" aria-live="polite">
+{% for key,label in [('total','товаров'),('completed','обработано'),('running','выполняется'),('queued','в очереди'),('review','требуют проверки'),('error','ошибок')] %}<span><strong data-summary="{{ key }}">{{ progress.summary[key] }}</strong> {{ label }}</span>{% endfor %}
+</div><div class="batch-progress"><progress id="batch-progress" max="{{ progress.summary.total }}" value="{{ progress.summary.completed }}"></progress><span><b data-summary="completed">{{ progress.summary.completed }}</b> / <b data-summary="total">{{ progress.summary.total }}</b></span></div>
+<p class="muted" id="progress-notice" role="status">Прогресс обновляется автоматически каждые 3 секунды.</p>
+<form id="product-batch-form" method="post" action="/batches/{{ batch.id }}/search">
+<div class="form-actions"><button type="button" class="button" id="select-all">Выбрать все</button><button type="button" class="button" id="select-none">Снять все</button><button type="submit" class="button primary">Поставить выбранные в очередь</button><button type="submit" class="button">Повторить выбранные</button></div>
+<details><summary>Этапы проверки</summary><div class="form-actions">{% for key,label in stages.items() %}<label><input type="checkbox" name="stages" value="{{ key }}" checked> {{ label }}</label>{% endfor %}</div></details>
+<div class="table-wrap batch-table"><table><thead><tr><th>Выбор</th><th>Бренд</th><th>Категория</th><th>Товар</th><th>Модель</th><th>Артикул</th><th>Статус</th><th>Прогресс</th><th>Характеристики</th><th>Фото</th><th>Цвет</th><th>Готовность</th><th>Действия</th></tr></thead><tbody>
+{% for row in progress.rows %}<tr data-product-row="{{ row.id }}"><td><input type="checkbox" name="product_ids" value="{{ row.id }}" aria-label="Выбрать {{ row.name }}" {% if row.id in batch_selected %}checked{% endif %}></td><td>{{ row.brand }}</td><td>{{ row.category }}</td><td><a href="/products/{{ row.id }}">{{ row.name }}</a></td><td>{{ row.model or '—' }}</td><td>{{ row.article }}</td><td data-field="status_label">{{ row.status_label }}</td><td data-field="progress_label">{{ row.progress_label }}</td><td data-field="specs_count">{{ row.specs_count }}</td><td data-field="photos_count">{{ row.photos_count }}</td><td data-field="color">{{ row.color }}</td><td><strong data-field="readiness_label">{{ row.readiness_label }}</strong><small class="batch-reason" data-field="reason">{{ row.reason }}</small></td><td><a href="/products/{{ row.id }}">Подробнее</a><br><a href="/products/{{ row.id }}/photos">Выбрать фото</a></td></tr>{% endfor %}
+</tbody></table></div></form></section>
 {% endblock %}

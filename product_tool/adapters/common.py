@@ -76,23 +76,25 @@ class BudgetExceeded(SourceError):
     pass
 
 
-def fetch_with_retry(session, url: str, *, deadline: float, clock: Callable[[], float] = time.monotonic, timeout: float = REQUEST_TIMEOUT):
+def fetch_with_retry(session, url: str, *, deadline: float, clock: Callable[[], float] = time.monotonic, timeout: float = REQUEST_TIMEOUT, max_attempts: int = MAX_RETRIES + 1):
+    if type(max_attempts) is not int or not 1 <= max_attempts <= MAX_RETRIES + 1:
+        raise ValueError('Invalid bounded attempt count')
     last_error: Exception | None = None
-    for attempt in range(MAX_RETRIES + 1):
+    for attempt in range(max_attempts):
         remaining = deadline - clock()
         if remaining <= 0:
             raise BudgetExceeded("Исчерпан бюджет времени источника.")
         request_timeout = min(timeout, remaining, REQUEST_TIMEOUT)
         try:
             response = session.get(url, timeout=request_timeout)
-            if response.status_code in TRANSIENT_STATUS and attempt < MAX_RETRIES:
+            if response.status_code in TRANSIENT_STATUS and attempt < max_attempts - 1:
                 last_error = requests.HTTPError(f"HTTP {response.status_code}")
                 continue
             response.raise_for_status()
             return response
         except TRANSIENT as exc:
             last_error = exc
-            if attempt >= MAX_RETRIES:
+            if attempt >= max_attempts - 1:
                 break
         except requests.RequestException as exc:
             raise SourceError(f"HTTP-ошибка: {exc}") from exc

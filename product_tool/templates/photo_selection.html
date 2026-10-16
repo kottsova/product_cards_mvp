@@ -1,0 +1,21 @@
+<section class="section" id="photos"><div class="section-heading"><h2>Фотографии</h2><span class="count">{{ photos|length }}</span></div>
+{% if photos %}<p>Отметка выбора сохраняет фото для работы с карточкой. Она не подтверждает его связь с артикулом; кандидаты показаны отдельно.</p>
+<form action="/products/{{ product.id }}/photos" method="post"><input type="hidden" name="photo_view" value="{{ photo_view or 'card' }}">
+<button class="button" name="action" value="confirmed">Выбрать подтверждённые фото</button>
+<button class="button" type="submit" formaction="/products/{{ product.id }}/photos/inspect-all" formmethod="post">Проверить параметры всей галереи</button>
+<div class="form-actions"><button class="button" name="action" value="none">Снять выбор</button>{% if product.brand|upper == 'LG' %}<button class="button" name="action" value="official">Выбрать фото официальных страниц</button>{% for key,label in [('lg_kz','LG Казахстан'),('lg_ru','LG Россия'),('sulpak','Sulpak')] %}<button class="button" name="action" value="source:{{ key }}">Выбрать товарные фото {{ label }}</button>{% endfor %}{% endif %}</div>
+<h3>{{ 'Подтверждённые фото модели' if xiaomi_card else 'Фото с подтверждённой связью с товаром' }}</h3>
+<div class="photo-grid">{% for p in photos if p.kind != 'excluded' and p.identity_confirmed %}{% include "photo_tile.html" %}{% endfor %}</div>
+{% if photos|rejectattr('identity_confirmed')|list %}
+<h3>{{ 'Фото-кандидаты: product gallery не подтверждена' if xiaomi_card else 'Фото-кандидаты: вариант не подтверждён' }}</h3>
+<div class="photo-grid">{% for p in photos if p.kind != 'excluded' and not p.identity_confirmed %}{% include "photo_tile.html" %}{% endfor %}</div>
+{% endif %}
+<button class="button primary" name="action" value="exact">Сохранить выбор</button><details><summary>Исключённые изображения</summary><ul>{% for p in photos if p.kind == 'excluded' %}<li>{{ p.site_name }} — {{ p.excluded_reason }} — <a href="{{ p.url }}" target="_blank" rel="noopener">URL</a></li>{% endfor %}</ul></details></form>
+<dialog id="photo-lightbox" aria-label="Просмотр фотографии">
+  <div class="lightbox-toolbar"><button type="button" class="button lightbox-close" aria-label="Закрыть">Закрыть</button><span class="lightbox-counter"></span></div>
+  <img class="lightbox-image" alt="">
+  <p class="lightbox-caption"></p>
+  <p class="lightbox-metadata"></p>
+  <div class="lightbox-controls"><button type="button" class="button lightbox-prev">← Предыдущее</button><button type="button" class="button lightbox-next">Следующее →</button></div>
+</dialog>
+{% else %}<p class="empty">Кандидаты появятся после этапа 4.</p>{% endif %}</section>

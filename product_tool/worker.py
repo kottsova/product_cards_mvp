@@ -160,6 +160,8 @@ def run_once(
     job=jobs.claim_next(database)
     if job is None: return False
     job_id,product_id=job["id"],job["product_id"]
+    from .job_progress import CURRENT
+    CURRENT.set((database,job_id))
     lg_browser_search = None  # Stage 43: initialized before every early return so the closing finally below is always safe
     try:
         product=jobs.get_product(database,product_id)
@@ -531,6 +533,7 @@ def run_once(
             jobs.progress(database,job_id,3,"Нормализуем и сравниваем характеристики."); jobs.resolve_product(database,product_id)
 
         if 6 in stages:
+            jobs.progress(database,job_id,6,"Проверяем инструкции.")
             if is_lg:
                 ru=next((x for x in official_docs if x.source_key=="lg_ru"),None)
                 if ru and lg_ru and ru.url and not ru.error and clock()<total_deadline:
@@ -695,6 +698,8 @@ def run_once(
         LOGGER.exception("Unexpected source comparison failure for job %s",job_id)
         jobs.finish(database,job_id,"error","Ошибка сравнения источников. Подробности смотрите в консоли worker.")
     finally:
+        from .job_progress import CURRENT
+        CURRENT.set(None)
         # Stage 43: a real browser subprocess (if one was opened for the LG site-search fallback) gets a
         # bounded, one-product lifetime -- never a long-lived cross-call singleton.
         if lg_browser_search is not None:

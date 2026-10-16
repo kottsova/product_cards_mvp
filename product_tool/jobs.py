@@ -9,6 +9,7 @@ from typing import Any
 from uuid import uuid4
 
 from . import storage
+from .job_progress import observed
 from .adapters.common import PhotoCandidate, ProductDocument, SourceDocument
 from .display import display_name_ru, display_source, display_status, display_value
 from .fetch_history import latest_source_snapshot, record_fetch_attempt, save_source_snapshot
@@ -219,6 +220,7 @@ def enqueue(path: Path, product_id: int, stages: list[int]) -> str:
             "INSERT INTO job_events (job_id, level, message, created_at) VALUES (?, 'info', ?, ?)",
             (job_id, "Задание добавлено в очередь.", now),
         )
+        connection.execute("UPDATE search_jobs SET queued_at=?,stage_started_at=? WHERE id=?", (now,now,job_id))
     return job_id
 
 
@@ -228,9 +230,9 @@ def recover_interrupted(path: Path) -> int:
         rows = connection.execute("SELECT id FROM search_jobs WHERE status = 'running'").fetchall()
         for row in rows:
             connection.execute(
-                "UPDATE search_jobs SET status='queued', current_stage=NULL, message=?, updated_at=? "
+                "UPDATE search_jobs SET status='queued', current_stage=NULL, phase='queued', stage_started_at=?, message=?, updated_at=? "
                 "WHERE id=?",
-                ("Worker перезапущен; задание снова в очереди.", now, row["id"]),
+                (now, "Worker перезапущен; задание снова в очереди.", now, row["id"]),
             )
             connection.execute(
                 "INSERT INTO job_events (job_id, level, message, created_at) "
@@ -262,7 +264,10 @@ def claim_next(path: Path) -> dict[str, Any] | None:
         )
         result = _decode_job(row)
         result["status"] = "running"
-        return result
+        from .job_progress import set_phase
+        # The claim transaction must commit before the phase writer opens one.
+    set_phase(path,result['id'],'discovery')
+    return result
 
 
 def progress(
@@ -270,6 +275,9 @@ def progress(
     *, level: str = "info", source_url: str = "",
 ) -> None:
     now = storage._now()
+    if stage == 6:
+        from .job_progress import set_phase
+        set_phase(path,job_id,'discovery')
     with storage._connection(path) as connection:
         connection.execute(
             "UPDATE search_jobs SET current_stage=?, message=?, updated_at=? WHERE id=?",
@@ -286,6 +294,16 @@ def finish(path: Path, job_id: str, status: str, message: str) -> None:
     if status not in {"done", "needs_review", "not_found", "error"}:
         raise ValueError("Неизвестный конечный статус.")
     now = storage._now()
+    from .job_progress import snapshot, CURRENT
+    with storage._connection(path) as connection:
+        row = connection.execute('SELECT product_id FROM search_jobs WHERE id=?',(job_id,)).fetchone()
+    counters = None
+    if row:
+        try:
+            counters = snapshot(path,row['product_id'])
+        except Exception:
+            import logging
+            logging.getLogger(__name__).exception('Unable to persist final batch counters for %s',job_id)
     with storage._connection(path) as connection:
         connection.execute(
             "UPDATE search_jobs SET status=?, message=?, updated_at=?, finished_at=? WHERE id=?",
@@ -295,6 +313,12 @@ def finish(path: Path, job_id: str, status: str, message: str) -> None:
             "INSERT INTO job_events (job_id, level, message, created_at) VALUES (?, ?, ?, ?)",
             (job_id, "info" if status == "done" else "warning", message, now),
         )
+        connection.execute("UPDATE search_jobs SET phase='completed',stage_started_at=?,final_status=? WHERE id=?",(now,status,job_id))
+        connection.execute('INSERT INTO job_phase_events(job_id,phase,created_at) VALUES (?,?,?)',(job_id,'completed',now))
+        if counters:
+            connection.execute('UPDATE search_jobs SET readiness=?,specs_count=?,photos_count=?,color=? WHERE id=?',
+                               (counters['readiness'],counters['specs_count'],counters['photos_count'],counters['color'],job_id))
+    CURRENT.set(None)
 
 
 def save_source_document(
@@ -307,6 +331,8 @@ def save_source_document(
     update_photos: bool = True,
 ) -> None:
     """Upsert source evidence while preserving results of unselected stages."""
+    from .job_progress import active_phase
+    active_phase('persistence')
     from .runtime_diagnostics import record_active
     record_active(path,product_id,'source_extraction_result',provider=document.source_key,url=document.url,
                   identity=document.match_level,reason=document.error or document.evidence,
@@ -465,6 +491,7 @@ def get_manual_decisions(path: Path, product_id: int) -> dict[str, dict[str, Any
     return {row["normalized_name"]: dict(row) for row in rows}
 
 
+@observed("normalization")
 def resolve_product(path: Path, product_id: int) -> None:
     sources = get_source_pages(path, product_id)
     facts = get_facts(path, product_id)

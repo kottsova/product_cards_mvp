@@ -128,11 +128,24 @@ def _job_migration_4(connection: sqlite3.Connection) -> None:
             connection.execute(f"ALTER TABLE photo_candidates ADD COLUMN {name} {sql_type}")
 
 
+def _job_migration_5(connection: sqlite3.Connection) -> None:
+    for name, kind in (("queued_at", "TEXT"), ("phase", "TEXT NOT NULL DEFAULT 'queued'"),
+                       ("stage_started_at", "TEXT"), ("final_status", "TEXT"),
+                       ("readiness", "TEXT"), ("specs_count", "INTEGER NOT NULL DEFAULT 0"),
+                       ("photos_count", "INTEGER NOT NULL DEFAULT 0"), ("color", "TEXT NOT NULL DEFAULT ''")):
+        if name not in _columns(connection, "search_jobs"):
+            connection.execute(f"ALTER TABLE search_jobs ADD COLUMN {name} {kind}")
+    connection.execute("UPDATE search_jobs SET queued_at=created_at, stage_started_at=COALESCE(finished_at,started_at,created_at), phase=CASE WHEN status IN ('queued','running') THEN CASE WHEN status='queued' THEN 'queued' ELSE 'discovery' END ELSE 'completed' END, final_status=CASE WHEN status NOT IN ('queued','running') THEN status END")
+    connection.execute("CREATE TABLE IF NOT EXISTS job_phase_events (id INTEGER PRIMARY KEY, job_id TEXT NOT NULL REFERENCES search_jobs(id) ON DELETE CASCADE, phase TEXT NOT NULL, created_at TEXT NOT NULL)")
+    connection.execute("CREATE INDEX IF NOT EXISTS phase_events_by_job ON job_phase_events(job_id,id)")
+
+
 JOB_MIGRATIONS = (
     (_job_migration_1, "LG source-key compatibility and resolution confirmation"),
     (_job_migration_2, "Preserve source specification section before canonical mapping"),
     (_job_migration_3, "Record whether an attribute came from a specification value cell"),
     (_job_migration_4, "Store measured image pixels, file size and format separately from HTML hints"),
+    (_job_migration_5, "Persistent semantic job phases and final batch counters"),
 )
 
 

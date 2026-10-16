@@ -61,7 +61,8 @@ def looks_like_challenge(url: str, html: str, status: int | None = None) -> bool
     text = soup.get_text(" ", strip=True).casefold()
     marker = any(part in text for part in ("verify you are human", "checking your browser",
                                           "access denied", "unusual traffic"))
-    marker |= bool(soup.select_one('iframe[src*="captcha"],iframe[src*="challenge"],.g-recaptcha,.h-captcha,#challenge-form'))
+    from .protection_markup import access_widgets
+    marker |= access_widgets(soup)
     # A prior 403 does not remain a permanent challenge after manual navigation.
     return marker or (status in {401, 403, 429} and not any(
         part in html for part in ("support-product-area", "manualSoftwareList", "product-registration")))

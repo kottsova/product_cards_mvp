@@ -235,13 +235,16 @@ def classify_protection(
 
     strong_patterns = {
         "challenge_phrase": r"verify (?:that )?you are human|checking your browser|attention required|access denied|security check",
-        "challenge_widget": r"(?:g-recaptcha|h-captcha|cf-chl-widget|challenge-form|captcha-container)[\"'\s=>]",
         "waf_path": r"/cdn-cgi/challenge-platform/|/akam/[\w/-]*challenge|imperva|datadome",
     }
     for kind, pattern in strong_patterns.items():
         if re.search(pattern, text, re.I):
             strong_kinds.add(kind)
             evidence.append({"type": kind, "strength": "strong"})
+    from .protection_markup import access_widgets
+    if access_widgets(text):
+        strong_kinds.add('challenge_widget')
+        evidence.append({'type':'challenge_widget','strength':'strong'})
 
     normalized_headers = {str(key).casefold(): str(value) for key, value in (headers or {}).items()}
     if normalized_headers.get("cf-mitigated", "").casefold() == "challenge" or any(

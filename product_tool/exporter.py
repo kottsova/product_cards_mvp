@@ -190,6 +190,9 @@ def export_batch(database: Path,batch_id: str)->bytes:
         from . import photo_inventory
         priority=p['brand'].strip().casefold() in {'jbl','samsung','lg','apple','playstation','xbox','razer','hyperx','xiaomi','redmi','poco','dreame','electrolux'}
         gallery=photo_inventory.enriched_photos(database,p['id']) if priority else jobs.get_photo_candidates(database,p['id'],include_excluded=p['brand'].strip().upper() in ('BOSCH','SAMSUNG'))
+        # Enriched entries already contain byte metadata. Re-projecting the
+        # entire gallery for every image made large batch downloads quadratic.
+        rich_by_id={x['id']:x for x in (gallery if priority else photo_inventory.enriched_photos(database,p['id'],dedupe=False))}
         for item in gallery:
             tied = electrolux_pipeline.photo_verified(item,el_evidence) if el else xiaomi_pipeline.photo_verified(item,xm_evidence) if xm else razer_pipeline.photo_verified(item,rz_evidence) if rz else xbox_pipeline.photo_verified(item,xb_evidence) if xb else playstation_pipeline.photo_verified(item,ps_evidence) if ps else photo_tied_to_article(item, source_pages) if lg else samsung_readiness.photo_verified(item, source_pages, p["search_code"]) if samsung else lenovo_pipeline.photo_verified(item, lenovo_evidence) if lenovo else jbl_pipeline.photo_verified(item, jbl_evidence) if jbl else True
             if priority:tied=item['identity_confirmed']
@@ -207,7 +210,7 @@ def export_batch(database: Path,batch_id: str)->bytes:
                 continue
             if tied and item['kind']!='excluded':
                 from . import photo_inventory
-                rich=next((x for x in photo_inventory.enriched_photos(database,p['id'],dedupe=False) if x['id']==item['id']),item)
+                rich=rich_by_id.get(item['id'],item)
                 photos.append([(p["name"] or p["search_code"]),item["site_name"],kind,item["url"],"Фото модели; цвет поставщика не подтверждён" if xm else "Цвет подтверждён" if lenovo else "Подтверждён",*_photo_cells(item),rich.get('role_label','Не определена'),'Да' if item['selected'] else 'Нет',rich.get('sha256',''),'Проверены' if rich.get('byte_verified') else 'Не проверены',rich.get('source_url','')])
             elif item["selected"] and not tied:
                 if photo_candidates is None:

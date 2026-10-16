@@ -1,0 +1,45 @@
+{
+  "verdict": "PASS",
+  "checks": {
+    "unchanged_original_lg_input": true,
+    "unchanged_mixed_input": true,
+    "lg12_actual_ui_completed": true,
+    "mixed_actual_ui_completed": true,
+    "mixed_at_least_5_brands": true,
+    "no_page_errors": true,
+    "polling_without_reload": true,
+    "checkbox_selection_preserved": true,
+    "single_final_table": true,
+    "excel_downloads": true,
+    "two_verified_zip_downloads": true,
+    "zip_hashes_distinct": true,
+    "photo_selection_and_lightbox": true,
+    "actual_thumbnails_decoded": true,
+    "actual_lightbox_decoded": true,
+    "sulpak_actual_visible_persistent": true,
+    "sulpak_not_stopped_after_expiry": true,
+    "kit_not_confirmed_from_url": true,
+    "official_manual_evidence_preserved": true,
+    "stability_5_actual_brands": true,
+    "double_retry_no_duplicate_jobs": true,
+    "stability_readiness": true,
+    "stability_counts_preserved": true,
+    "stability_confirmed_sources_preserved": true,
+    "full_regression": true
+  },
+  "lg12_readiness": {
+    "Не готова": 1,
+    "Готова": 5,
+    "Готова с пробелами": 6
+  },
+  "mixed_readiness": {
+    "Готова": 6,
+    "Не готова": 2
+  },
+  "limitations": [
+    "P12ED kit relation is unproved; 41 raw specs and 29 raw photo candidates are not confirmed kit evidence",
+    "HyperX RU: actual official search and sitemap reached, exact candidate not found; this run does not prove 429",
+    "Ambiguous LG input retains candidate facts without confirmed photos"
+  ],
+  "tests": 1949
+}

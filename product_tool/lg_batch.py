@@ -77,9 +77,9 @@ def queue_selected(path: Path, batch_id: str, product_ids: list[int], stages: li
             job_id = uuid4().hex
             try:
                 connection.execute(
-                    "INSERT INTO search_jobs(id,product_id,stages_json,status,message,created_at,updated_at) "
-                    "VALUES (?,?,?,'queued',?,?,?)",
-                    (job_id, pid, json.dumps(sorted(set(stages))), "Ожидает worker.", now, now),
+                    "INSERT INTO search_jobs(id,product_id,stages_json,status,message,created_at,updated_at,queued_at,stage_started_at) "
+                    "VALUES (?,?,?,'queued',?,?,?,?,?)",
+                    (job_id, pid, json.dumps(sorted(set(stages))), "Ожидает worker.", now, now, now, now),
                 )
             except sqlite3.IntegrityError:
                 skipped += 1
@@ -154,7 +154,7 @@ def card_summary(path: Path, product_id: int, latest: dict | None | object = _UN
                 break
     for source in jobs.get_source_pages(path, product_id):
         if source["source_key"] == "sulpak" and "policy_host_stopped" in source["error"]:
-            reasons.append(source["evidence"] or "Доступ к Sulpak остановлен после страницы проверки для другого товара; кандидат не запрашивался.")
+            reasons.append("Sulpak временно недоступен")
     for source in jobs.get_source_pages(path, product_id):
         if source["source_key"] == "lg_ru" and "PDF проверен по содержимому" in source["evidence"] and "instruction_missing" in card["blocking_gaps"]:
             reasons = [reason for reason in reasons if reason != GAP_LABELS["instruction_missing"]]

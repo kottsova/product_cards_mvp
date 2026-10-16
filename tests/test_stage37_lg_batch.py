@@ -109,11 +109,12 @@ class LgBatchTests(unittest.TestCase):
         batch, ids = self.upload()
         response = self.client.get(f"/batches/{batch['id']}")
         self.assertEqual(response.status_code, 200)
-        self.assertIn("Проверка LG одной кнопкой", response.text)
+        self.assertIn("Обработка товаров", response.text)
+        self.assertNotIn("Проверка LG одной кнопкой", response.text)
         self.assertEqual(lg_batch.default_ids(batch["products"]), {ids["XL7S"], ids["MS2032GAS"], ids["CK43"]})
         from bs4 import BeautifulSoup
         forms=BeautifulSoup(response.text,'html.parser')
-        self.assertEqual(len(forms.select('#lg-batch-form input[name="stages"]')),5)
+        self.assertEqual(len(forms.select('#lg-batch-form input[name="stages"]')),0)
         self.assertEqual(len(forms.select('#product-batch-form input[name="stages"]')),5)
         selected = [ids["XL7S"], ids["MS2032GAS"]]
         form = {"product_ids": [str(pid) for pid in selected], "stages": [str(n) for n in lg_batch.DEFAULT_STAGES]}
@@ -171,16 +172,17 @@ class LgBatchTests(unittest.TestCase):
         lg_batch.queue_selected(self.database, batch["id"], selected, [1])
 
         def count(html, key):
-            match = re.search(r'<strong id="lg-' + key + r'-count">(\d+)</strong>', html)
+            match = re.search(r'<strong data-summary="' + key + r'">(\d+)</strong>', html)
             self.assertIsNotNone(match, key)
             return int(match.group(1))
 
         url = f"/batches/{batch['id']}"
         queued = self.client.get(url).text
         self.assertEqual((count(queued, "queued"), count(queued, "running")), (2, 0))
-        self.assertIn("fetch(window.location.pathname, {cache: 'no-store'})", queued)
-        self.assertIn(f'data-lg-job="{selected[0]}"', queued)
-        self.assertIn(f'data-lg-card="{selected[1]}"', queued)
+        self.assertIn('/static/batch_progress.js', queued)
+        self.assertEqual(self.client.get(url+'/progress').json()['summary']['queued'],2)
+        self.assertIn(f'data-product-row="{selected[0]}"', queued)
+        self.assertIn(f'data-product-row="{selected[1]}"', queued)
         self.assertEqual(len(jobs.list_jobs(self.database, selected[0])), 1)
         self.assertEqual(len(jobs.list_jobs(self.database, selected[1])), 1)
 

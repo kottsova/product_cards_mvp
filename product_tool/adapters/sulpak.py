@@ -22,6 +22,27 @@ KNOWN_LG_URLS = {
 }
 
 
+def structured_designation(soup, full_sku):
+    """Only coherent Product identity fields; canonical/URL/image slugs are leads."""
+    def products(node):
+        if isinstance(node,list):
+            for item in node:yield from products(item)
+        elif isinstance(node,dict):
+            if node.get('@type')=='Product' or 'Product' in (node.get('@type') or []):yield node
+            for key in ('@graph','mainEntity'):
+                yield from products(node.get(key))
+    for script in soup.select('script[type="application/ld+json"]'):
+        try:payload=json.loads(script.string or script.get_text())
+        except (ValueError,TypeError):continue
+        for node in products(payload):
+            for key in ('name','sku','mpn','model'):
+                value=node.get(key)
+                if isinstance(value,str):
+                    found,proof=find_full_sku(value,full_sku)
+                    if found:return found,'JSON-LD Product '+key+': '+proof
+    return '', ''
+
+
 def _stopped_host_evidence(http, candidate_url: str) -> str:
     """Explain a persisted host stop without claiming the candidate was fetched."""
     log_path = getattr(http, "log_path", None)
@@ -31,7 +52,8 @@ def _stopped_host_evidence(http, candidate_url: str) -> str:
         except (OSError, ValueError, TypeError):
             events = []
         host = urlsplit(candidate_url).hostname
-        for event in reversed(events):
+        from .access_stop import active_stops
+        for event in reversed(active_stops(events).get(host,[])):
             observed = event.get("url", "")
             if urlsplit(observed).hostname != host:
                 continue
@@ -43,7 +65,7 @@ def _stopped_host_evidence(http, candidate_url: str) -> str:
             response = f"HTTP {status} со страницей проверки" if status == 200 else f"HTTP {status}"
             source_name = next((sku for sku, known in KNOWN_LG_URLS.items() if known == observed), "")
             other = f"другая страница Sulpak ({source_name}) " if observed != candidate_url else "эта страница Sulpak "
-            return (f"{date}: {other}{observed} вернула {response}; после этого автоматические запросы к Sulpak остановлены. "
+            return (f"{date}: {other}{observed} вернула {response}; временный stop до {event.get('expires_at') or 'ручного решения'}. "
                     f"Запрос к кандидату {candidate_url} не отправлялся. Его адрес и текст поисковой выдачи не подтверждают состав товара.")
     return f"Запрос к кандидату {candidate_url} не отправлялся: Sulpak ранее остановлен политикой доступа. Адрес и текст выдачи не подтверждают состав товара."
 
@@ -73,28 +95,24 @@ class SulpakAdapter:
             )
         try:
             self.request_count += 1
-            response = fetch_with_retry(self.http, url, deadline=deadline, clock=self.clock)
-            soup = BeautifulSoup(response.text, "html.parser")
-            text = visible_text(soup)
-            found, evidence = find_full_sku(text, normalized)
-            # A two-unit kit may be named only in the URL while the page body
-            # says the shared model. The URL is a lead, not proof of the kit.
-            unconfirmed_kit = "+" in normalized and not found
-            level = "full_sku" if found else ("unknown" if unconfirmed_kit or not text else "mismatch")
-            photos = extract_photo_candidates(soup, response.url, source_key=self.source_key) if found else []
-            return SourceDocument(
-                self.source_key, self.site_name, response.url,
-                found_model=found, match_level=level,
-                evidence=evidence or ("Оба кода есть в адресе кандидата, но полный состав комплекта не подтверждён текстом страницы." if unconfirmed_kit else "Полный артикул не найден в видимом тексте страницы."),
-                attributes=extract_table_attributes(soup) if found else [],
-                description=meta_description(soup) if found else "",
-                photos=[item.url for item in photos if item.kind != "excluded"],
-                photo_candidates=photos,
-            )
+            response = fetch_with_retry(self.http, url, deadline=deadline, clock=self.clock,max_attempts=1)
+            return self.parse_page(normalized, response.url, response.text)
         except SourceError as exc:
             return SourceDocument(
                 self.source_key, self.site_name, url,
                 match_level="unknown", error="policy_host_stopped: candidate page not requested" if "policy_host_stopped" in str(exc) else str(exc),
                 evidence=_stopped_host_evidence(self.http, url) if "policy_host_stopped" in str(exc) else
-                         ("????? ????????? ?? ???????????? ?????? ?????? ??? ??????????? ????????." if "+" in normalized else ""),
+                         ("Sulpak временно недоступен; состав комплекта не проверен." if "+" in normalized else "Sulpak временно недоступен"),
             )
+
+    def parse_page(self, normalized, url, html):
+        soup=BeautifulSoup(html,'html.parser');text=visible_text(soup)
+        found,evidence=find_full_sku(text,normalized)
+        if not found:found,evidence=structured_designation(soup,normalized)
+        unconfirmed_kit='+' in normalized and not found
+        level='full_sku' if found else ('unknown' if unconfirmed_kit or not text else 'mismatch')
+        photos=extract_photo_candidates(soup,url,source_key=self.source_key) if found else []
+        return SourceDocument(self.source_key,self.site_name,url,found_model=found,match_level=level,
+            evidence=evidence or ('Кандидат Sulpak не подтверждён: состав комплекта не доказан содержимым страницы.' if unconfirmed_kit else 'Полный артикул не найден в содержимом страницы.'),
+            attributes=extract_table_attributes(soup) if found else [],description=meta_description(soup) if found else '',
+            photos=[p.url for p in photos if p.kind!='excluded'],photo_candidates=photos,html=html)

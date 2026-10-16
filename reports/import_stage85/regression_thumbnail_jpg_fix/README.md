@@ -1,0 +1,1 @@
+Interrupted during the thumbnail fix after observing the existing verifier's JPG format alias. Per-group JSON can include the preceding completed run because the runner replaces summaries only at group completion. These files do not establish a completed final run; use ../final_regression.json.

@@ -108,6 +108,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
     database = root / "batches.sqlite3"
     jobs.initialize(database)
     lg_batch.initialize(database)
+    from .job_progress import backfill_latest
+    backfill_latest(database)
     # Access stops are stored beside the SQLite database, in append-only fetch logs.
     # Annotate legacy timed responses before the background worker starts.
     for fetch_log in root.glob("*_fetch_log.json"):
@@ -346,22 +348,18 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         batch = storage.get_batch(database, batch_id)
         if batch is None:
             return error_page(request, "Партия не найдена.", 404)
-        groups: dict[str, list[dict[str, Any]]] = {}
-        for product in batch["products"]:
-            category = product["category"] or "Категория не определена"
-            groups.setdefault(category, []).append(product)
-        selected = lg_batch.selected_ids(database, batch_id)
-        saved_selected=set(selected)
-        selected={p['id'] for p in batch['products'] if lg_batch.is_lg(p) and p['id'] in selected}
-        if not selected:
-            selected = lg_batch.default_ids(batch["products"])
-        lg_rows, lg_counts = lg_batch.batch_rows(database, batch["products"], selected)
-        from . import batch_queue
-        return render(request, "batch.html", batch=batch, groups=groups,
-                      batch_states=batch_queue.states(database,batch['products']),batch_selected=saved_selected or batch_queue.default_ids(batch['products']),
-                      lg_rows=lg_rows, lg_selected=selected, lg_counts=lg_counts,
-                      lg_products=[p for p in batch["products"] if lg_batch.is_lg(p)],
+        from . import batch_progress
+        return render(request, "batch.html", batch=batch, progress=batch_progress.for_batch(database,batch_id),
+                      batch_selected=lg_batch.selected_ids(database,batch_id) or {p['id'] for p in batch['products']},
                       stages=jobs.STAGE_NAMES, batch_message=request.query_params.get("message", ""))
+
+    @app.get('/batches/{batch_id}/progress')
+    def batch_progress_json(batch_id: str):
+        from .batch_progress import for_batch
+        from fastapi.responses import JSONResponse
+        progress=for_batch(database,batch_id)
+        if progress is None:return Response('Партия не найдена.',status_code=404)
+        return JSONResponse(progress,headers={'Cache-Control':'no-store'})
 
     @app.get('/diagnostics/runtime')
     def diagnostics_runtime():
@@ -561,6 +559,39 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
     def show_product(request: Request, product_id: int) -> HTMLResponse:
         return product_page(request, product_id)
 
+    def photo_page(request,product_id,message='',status_code=200):
+        from . import photo_inventory
+        product=jobs.get_product(database,product_id)
+        if product is None:return error_page(request,'Товар не найден.',404)
+        photos=photo_inventory.enriched_photos(database,product_id)
+        for p in photos:
+            p['can_inspect']=p['source_key'] in photo_metadata.ALLOWED_BY_SOURCE
+            p['size_label']=photo_metadata.format_file_size(p.get('verified_bytes'))
+        return render(request,'photos.html',status_code,product=product,photos=photos,
+                      photo_view='selection',message=message,xiaomi_card=None)
+
+    @app.get('/products/{product_id}/photos',response_class=HTMLResponse)
+    def show_photos(request:Request,product_id:int):
+        return photo_page(request,product_id,request.query_params.get('message',''))
+
+    @app.get('/products/{product_id}/photos.zip')
+    def download_photos(request:Request,product_id:int):
+        from .photo_archive import archive
+        from urllib.parse import quote
+        if jobs.get_product(database,product_id) is None:return error_page(request,'Товар не найден.',404)
+        try:name,content=archive(database,product_id)
+        except (ValueError,OSError,requests.RequestException) as exc:
+            return photo_page(request,product_id,'Архив не сформирован: '+str(exc),status_code=422)
+        return Response(content,media_type='application/zip',headers={'Content-Disposition':f"attachment; filename=photos.zip; filename*=UTF-8''{quote(name)}"})
+
+    @app.get('/products/{product_id}/photos/{photo_id}/content')
+    def photo_content(product_id:int,photo_id:int):
+        if jobs.get_photo_candidate(database,product_id,photo_id) is None:return Response(status_code=404)
+        from .photo_content import content
+        try:data,content_type=content(database,product_id,photo_id)
+        except (ValueError,OSError,requests.RequestException):return Response(status_code=503,headers={'Retry-After':'5'})
+        return Response(data,media_type=content_type,headers={'X-Content-Type-Options':'nosniff','Cache-Control':'private, no-cache'})
+
     @app.post("/products/{product_id}/search", response_class=HTMLResponse)
     async def start_product_search(request: Request, product_id: int) -> HTMLResponse:
         if jobs.get_product(database, product_id) is None:
@@ -631,14 +662,14 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             size_bytes=int(measured["size_bytes"]), image_format=str(measured["format"]))
         from .photo_inventory import persist_measurement
         persist_measurement(database,product_id,photo,measured)
-        return RedirectResponse(f"/products/{product_id}#photos", status_code=303)
+        return RedirectResponse(f"/products/{product_id}/photos", status_code=303)
 
     @app.post('/products/{product_id}/photos/inspect-all')
     def inspect_all_photos(product_id: int):
         if jobs.get_product(database,product_id) is None:return Response('Товар не найден.',status_code=404)
         from .photo_inventory import complete
         complete(database,product_id,budget_seconds=180)
-        return RedirectResponse(f'/products/{product_id}#photos',status_code=303)
+        return RedirectResponse(f'/products/{product_id}/photos',status_code=303)
 
     @app.post("/products/{product_id}/photos", response_class=HTMLResponse)
     async def save_photo_selection(request: Request, product_id: int) -> HTMLResponse:
@@ -646,7 +677,10 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             return error_page(request, "Товар не найден.", 404)
         form = await request.form()
         action = str(form.get("action", "exact"))
-        if action == "official":
+        if action == 'confirmed':
+            from .photo_inventory import enriched_photos
+            jobs.set_photo_selection(database,product_id,[p['asset_key'] for p in enriched_photos(database,product_id) if p['identity_confirmed']])
+        elif action == "official":
             jobs.set_photo_selection(database, product_id, [], mode="official")
         elif action == "none":
             jobs.set_photo_selection(database, product_id, [], mode="none")
@@ -654,5 +688,5 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             jobs.set_photo_selection(database, product_id, [], mode="source", source_key=action.split(":", 1)[1])
         else:
             jobs.set_photo_selection(database, product_id, [str(x) for x in form.getlist("asset_keys")])
-        return RedirectResponse(f"/products/{product_id}#photos", status_code=303)
+        return RedirectResponse(f"/products/{product_id}/photos" if form.get('photo_view')=='selection' else f"/products/{product_id}#photos", status_code=303)
     return app

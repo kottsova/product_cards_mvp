@@ -41,6 +41,8 @@ class LookupResult:
     message: str
 
 
+from ..job_progress import observed
+
 def lg_session() -> requests.Session:
     http = requests.Session()
     http.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.7"})
@@ -122,6 +124,7 @@ def _designation(text: str, full_sku: str, base: str) -> tuple[str, str, str]:
         return base, "base_model", clean_text(text[max(0, match.start()-90):match.end()+90])
     return "", "unknown", "\u041e\u0431\u043e\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u043c\u043e\u0434\u0435\u043b\u0438 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0432 \u0432\u0438\u0434\u0438\u043c\u043e\u043c \u0442\u0435\u043a\u0441\u0442\u0435 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b."
 
+@observed('identity')
 def _product_designation(soup: BeautifulSoup, full_sku: str, base: str, *, region: str) -> tuple[str, str, str]:
     """Read the main PDP's own sales code, not a URL or a related-product tile."""
     values: list[tuple[str, str]] = []
@@ -256,6 +259,7 @@ def _augment_with_browser_search(doc: SourceDocument, adapter, full: str, base: 
                    fetched_at=doc.fetched_at) if notes else doc
 
 
+@observed('extraction_specs')
 def extract_lg_attributes(soup: BeautifulSoup) -> list[RawAttribute]:
     facts: list[RawAttribute] = []
     for table in soup.select("#pdp-specs-section .c-compare-selling--all .c-compare-selling__table"):
@@ -269,6 +273,7 @@ def extract_lg_attributes(soup: BeautifulSoup) -> list[RawAttribute]:
     return _dedupe_facts(facts)
 
 
+@observed('extraction_specs')
 def extract_lg_ru_attributes(soup: BeautifulSoup) -> list[RawAttribute]:
     facts: list[RawAttribute] = []
     for group in soup.select("#pdp_spec .tech-spacs"):
@@ -363,6 +368,7 @@ def _ru_image_variants(node, page_url: str) -> list[tuple[str, int]]:
     return values
 
 
+@observed('extraction_photos')
 def extract_lg_photo_candidates(soup: BeautifulSoup, page_url: str, *, region: str) -> list[PhotoCandidate]:
     kz_gallery = "#popSummaryGallery img, #popSummaryGallery source, .c-summary-gallery img, .c-summary-gallery source"
     other_gallery = "#desktop_summary_gallery img, #desktop_summary_gallery source, #mobile_summary_gallery img, #mobile_summary_gallery source, #pdpGallery img, #pdpGallery source, .product-gallery img, .product-gallery source"

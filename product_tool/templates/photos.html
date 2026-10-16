@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Выбор фото · {{ product.name }}{% endblock %}
+{% block head %}<script src="/static/photo_lightbox.js" defer></script>{% endblock %}
+{% block content %}
+<p><a href="/batches/{{ product.batch_id }}">← К партии</a> · <a href="/products/{{ product.id }}">Карточка товара</a></p>
+<h1>Выбор фотографий</h1><p>{{ product.brand }} · {{ product.name }} · {{ product.search_code }}</p>
+{% if message %}<p class="notice" role="status">{{ message }}</p>{% endif %}
+<p><a class="button primary" href="/products/{{ product.id }}/photos.zip">Скачать выбранные фото</a></p>
+{% include "photo_selection.html" %}
+{% endblock %}
