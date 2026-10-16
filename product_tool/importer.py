@@ -24,9 +24,9 @@ MAX_COLUMNS = 100
 
 HEADER_ALIASES = {
     "brand": {"бренд", "марка", "производитель", "brand", "manufacturer"},
-    "search_code": {"артикул продавца", "артикул", "код товара", "sku", "part number"},
+    "search_code": {"артикул продавца", "артикул", "код", "код товара", "sku", "part number", "supplier sku"},
     "fallback_code": {"модель", "код модели", "model", "model number"},
-    "name": {"наименование", "наименование на сайте", "наименование товара", "название", "название товара", "товар", "product name"},
+    "name": {"наименование", "наименование на сайте", "наименование товара", "название", "название товара", "товар", "product name", "name"},
     "category": {"предмет", "категория", "тип товара", "category"},
 }
 
@@ -69,6 +69,7 @@ class ProductPreview:
     issues: tuple[str, ...]
     original_values: tuple[Any, ...]
     variant_attributes: dict[str, str] = field(default_factory=dict)
+    interpretation: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -150,10 +151,8 @@ def value_at(row: tuple[Any, ...], column: int | None) -> str:
 
 
 def brand_from_name(name: str) -> str:
-    for brand in KNOWN_BRANDS:
-        if re.search(rf"(?<!\w){re.escape(brand)}(?!\w)", name, re.IGNORECASE):
-            return brand
-    return ""
+    from .input_interpretation import brand_in_name
+    return brand_in_name(name)
 
 
 def code_candidates(name: str) -> list[str]:
@@ -171,26 +170,8 @@ def code_candidates(name: str) -> list[str]:
 
 
 def category_from_name(name: str) -> str:
-    lowered = name.casefold()
-    rules = (
-        (r"стиральн\w*\s+машин\w*\s+с\s+сушк", "Стирально-сушильная машина"),
-        (r"стирально[-\s]сушильн\w*\s+машин", "Стирально-сушильная машина"),
-        (r"стиральн\w*\s+машин", "Стиральная машина"),
-        (r"паровой\s+шкаф", "Паровой шкаф"),
-        (r"сплит[-\s]систем|кондиционер", "Сплит-система"),
-        (r"микроволнов\w*\s+печ", "Микроволновая печь"),
-        (r"холодильник", "Холодильник"),
-        (r"пылесос", "Пылесос"),
-        (r"аудиосистем", "Аудиосистема"),
-        (r"саундбар", "Саундбар"),
-        (r"музыкальн\w*\s+центр", "Музыкальный центр"),
-        (r"микросистем", "Микросистема"),
-        (r"смартфон", "Смартфон"),
-        (r"ноутбук", "Ноутбук"),
-        (r"телевизор", "Телевизор"),
-        (r"наушник", "Наушники"),
-    )
-    return next((category for pattern, category in rules if re.search(pattern, lowered)), "")
+    from .input_interpretation import category_in_name
+    return category_in_name(name)
 
 
 def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping, *, configuration_columns: dict[str, int] | None = None) -> ProductPreview | None:
@@ -223,7 +204,10 @@ def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping, *
         "name" if search_code else "missing"
     )
     alternate_code = fallback_code if explicit_code and fallback_code != explicit_code else ""
-    category = explicit_category or category_from_name(explicit_name)
+    from .input_interpretation import interpret
+    explicit_configuration={field:value_at(raw,column) for field,column in (configuration_columns or {}).items() if value_at(raw,column)}
+    parsed=interpret(explicit_name,explicit_brand,explicit_code,category=explicit_category,explicit_model=fallback_code,configuration=explicit_configuration)
+    category = parsed['category']
     category_source = "column" if explicit_category else "name" if category else "missing"
 
     if not brand:
@@ -250,7 +234,8 @@ def preview_row(row_number: int, raw: tuple[Any, ...], mapping: ColumnMapping, *
         needs_confirmation=needs_confirmation,
         issues=tuple(issues),
         original_values=raw,
-        variant_attributes={field:value_at(raw,column) for field,column in (configuration_columns or {}).items() if value_at(raw,column)},
+        variant_attributes=parsed['configuration_hints'],
+        interpretation=parsed,
     )
 
 

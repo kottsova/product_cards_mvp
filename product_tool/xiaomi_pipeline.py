@@ -7,9 +7,10 @@ from .adapters.dns import DnsAdapter
 from .adapters.policy_session import RequestBudget, request_budget
 from .adapters.common import utc_now
 GAPS={'refresh_access_limited':'Свежая проверка ограничена доступом; сохранены предыдущие подтверждённые данные','official_access_limited':'Проверка официального источника остановлена техническим ограничением доступа; отсутствие товара или данных не установлено','model_missing':'Точная модель не подтверждена','specifications_missing':'Недостаточно официальных характеристик','gallery_missing':'Нет фото с подтверждённым внешним видом','configuration_missing':'Конфигурация подтверждена частично','conflicts':'Конфликт характеристик','manual_unverified':'Инструкция не проверена'}
+GAPS['input_model_ambiguous']='Входная модель неоднозначна; найденный источник относится к кандидату'
 
 def photo_verified(photo, ev):
-    return bool(ev and photo['asset_key'] in ev.get('model_gallery_assets',ev.get('exact_photo_assets',[])) and photo['kind']=='product_gallery')
+    return bool(ev and not ev.get('input_model_ambiguous') and photo['asset_key'] in ev.get('model_gallery_assets',ev.get('exact_photo_assets',[])) and photo['kind']=='product_gallery')
 
 def document_verified(doc, ev):
     return bool(ev and doc['direct_url'] in ev.get('verified_documents',[]))
@@ -22,6 +23,7 @@ def card_readiness(database, product_id, *, family='xiaomi'):
     if len(facts)<3:gaps.append('specifications_missing')
     if not any(p['selected'] and photo_verified(p,ev) for p in jobs.get_photo_candidates(database,product_id)):gaps.append('gallery_missing')
     if conflicts:gaps.append('conflicts')
+    if ev.get('input_model_ambiguous'):gaps.append('input_model_ambiguous')
     if ev.get('manual_status','Не проверена')=='Не проверена':gaps.append('manual_unverified')
     if family=='dreame' and ev.get('access_issues') and identity.get('model_relation')!='model_confirmed':
         gaps=[g for g in gaps if g not in {'model_missing','specifications_missing','gallery_missing'}]+['official_access_limited']
@@ -43,7 +45,7 @@ def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns
     if hasattr(adapter,'manuals_enabled'):adapter.manuals_enabled=6 in stages
     article=product['search_code'].strip().upper();budget=RequestBudget(max_per_row=24,max_total=24);budget.begin_row(str(product_id))
     with request_budget(budget):
-        doc=adapter.find_source(article,name=product.get('name',''),category=product.get('category',''),deadline=clock()+90)
+        doc=adapter.find_source(article,name=product.get('discovery_name') or product.get('name',''),category=product.get('category',''),deadline=clock()+90)
         attempt=adapter.reports.get(article,{})
         previous=card_evidence.load(database,product_id,family) or {}
         if family=='dreame' and attempt.get('access_issues') and attempt.get('identity',{}).get('model_relation')!='model_confirmed' and previous.get('identity',{}).get('model_relation')=='model_confirmed' and previous['identity'].get('model')==attempt.get('identity',{}).get('model'):
@@ -58,6 +60,8 @@ def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns
         for extra in adapter.extra_sources:jobs.save_source_document(database,product_id,extra,update_description=False,update_attributes=3 in stages,update_photos=False)
         if 6 in stages:jobs.save_documents(database,product_id,doc.source_key,adapter.find_documents(doc,article))
     ev=adapter.reports.get(article,{})
+    from .input_interpretation import attach_input_evidence
+    attach_input_evidence(ev,product)
     import json
     ev.setdefault('input_configuration',dict(ev.get('requested_configuration',{})))
     if ev.get('identity',{}).get('identifier_kind')=='opaque_code':ev['input_configuration']['supplier_part_number']=product['search_code']

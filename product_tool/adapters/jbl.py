@@ -35,7 +35,7 @@ def _objects(value):
   for v in value.values():yield from _objects(v)
  elif isinstance(value,list):
   for v in value:yield from _objects(v)
-def parse_pdp(html,url,article):
+def parse_pdp(html,url,article,*,input_model='',input_configuration=None):
  soup=BeautifulSoup(html,'html.parser');article=article_code(article);products=[]
  for tag in soup.select('script[type="application/ld+json"]'):
   try:products.extend(x for x in _objects(json.loads(tag.string or tag.get_text())) if x.get('@type')=='Product')
@@ -50,6 +50,18 @@ def parse_pdp(html,url,article):
  pid=article_code(root.get('data-pid','')) if root else ''
  name=clean_text(product.get('name') or micro('name'))
  identity=model_relation(article,sku,mpn,pid,context=root is not None,official=official(url),single=len(products)<=1)
+ if input_model:
+  normalized=lambda value:re.sub(r'[^A-Z0-9]','',value.upper()).removeprefix('JBL')
+  expected=normalized(input_model);returned=components(sku)
+  coherent=bool(official(url) and root is not None and len(products)<=1 and sku and sku==mpn and (not pid or pid==sku))
+  from ..input_interpretation import interpret
+  published_model=interpret(name,'JBL','')['model']
+  same=coherent and bool(published_model) and expected==normalized(published_model)
+  wanted=(input_configuration or {}).get('color','')
+  req={**identity['requested_components'],'model_code':returned['model_code'] if same else '', 'color':wanted}
+  identity.update(model_confirmed=bool(same),model_relation='exact_model' if same else 'unproven',requested_components=req,
+                  variant_relation='exact_sku' if identity['exact_sku'] else 'model_color_confirmed' if same and wanted.casefold()==returned['color'].casefold() and wanted else 'other_color' if same and wanted else 'model_only')
+  identity.update(input_model=input_model,published_model=published_model,supplier_article=article,model_source='official_product_name_and_coherent_sku_mpn',supplier_sku_confirmed=identity['exact_sku'])
  exact=identity['exact_sku'];model_exact=identity['model_confirmed']
  relation='exact_sku' if exact else 'other_variant' if sku else 'family_only' if name else 'unknown'
  report={'article':article,'query_variants':queries(article,name),'identity':{**identity,'relation':relation,'requested':article,'returned_sku':sku,'returned_mpn':mpn,'data_pid':pid,'model':name,'reason':'Returned SKU + MPN + product context' if exact else 'Official coherent SKU/MPN confirms same model; variant evidence separate' if model_exact else 'Base name / request URL does not establish model'},'raw_specs':[],'accepted_specs':[],'rejected_specs':[],'photos':[],'manuals':[],'verified_documents':[],'exact_photo_assets':[],'manual_status':'Не проверена','support_urls':[]}
@@ -133,6 +145,41 @@ class JBLAdapter:
   self.capture_dir=Path(capture_dir) if capture_dir else Path(fetch_log_path).parent/'jbl_captures';self.reports={};self.trace_callback=trace_callback;self.search_provider=search_provider;self.documents=[]
  def trace(self,**item):
   if self.trace_callback:self.trace_callback({'event':'jbl_discovery','timestamp':utc_now(),**item})
+ def _parse(self,html,url,article):
+  return parse_pdp(html,url,article,input_model=getattr(self,'input_model',''),input_configuration=getattr(self,'input_configuration',{}))
+ def _queries(self,article,name):
+  if getattr(self,'input_queries',None):return [f'site:jbl.com "{q["query"]}"' for q in self.input_queries]
+  if not getattr(self,'input_model',''):return queries(article,name)
+  return list(dict.fromkeys([f'site:jbl.com "{self.input_model}"',f'site:jbl.com "{re.sub(r"\s+", "", self.input_model)}"',f'site:jbl.com "{article}"']))
+ def published_variants(self,html,url,article,*,deadline):
+  """Follow the master page's published model/variant inventory, never guess a SKU."""
+  model=getattr(self,'input_model','');wanted=getattr(self,'input_configuration',{}).get('color','')
+  if not model or not official(url):return None
+  normalize=lambda value:re.sub(r'[^A-Z0-9]','',value.upper()).removeprefix('JBL')
+  from ..input_interpretation import interpret
+  for script in BeautifulSoup(html,'html.parser').select('script:not([src])'):
+   match=re.fullmatch(r'\s*var\s+utag_data_dynamic\s*=\s*(\{.*\})\s*;?\s*',script.get_text(),re.S)
+   if not match:continue
+   try:payload=json.loads(match[1])
+   except ValueError:continue
+   arrays=[payload.get(k) for k in ('product_sku','product_variant','product_name')]
+   if not all(isinstance(v,list) for v in arrays) or len({len(v) for v in arrays})!=1:continue
+   candidates=[]
+   for sku,variant,name in zip(*arrays):
+    if not all(isinstance(v,str) for v in (sku,variant,name)):continue
+    if normalize(interpret(name,'JBL','')['model'])!=normalize(model):continue
+    if wanted and variant.split('-',1)[0].casefold()!=wanted.casefold():continue
+    if re.fullmatch(r'[A-Z0-9-]{5,50}',sku) and sku not in candidates:candidates.append(sku)
+   for sku in candidates[:4]:
+    if self.clock()>=deadline:return None
+    target=urljoin(url,'/'+quote(sku)+'.html')
+    response=self.http.get(target,timeout=min(8,max(1,deadline-self.clock())))
+    if not response.ok:continue
+    doc,report=self._parse(response.text,response.url,article)
+    accepted=doc.match_level in {'full_sku','model_confirmed'} and (bool(report['exact_photo_assets']) or not wanted)
+    self.trace(provider='official_master_inventory',query=model,url=response.url,region=urlsplit(url).hostname,source_type='pdp',accepted=accepted,reason=report['identity']['reason'],published_sku=sku,inventory_url=url,supplier_article=article)
+    if accepted:return doc,report
+  return None
  def _capture(self,article):
   path=self.capture_dir/(article+'.manifest.json')
   try:manifest=json.loads(path.read_text(encoding='utf-8'))
@@ -149,8 +196,20 @@ class JBLAdapter:
   return None
  def find_source(self,article,*,name='',category='',deadline=None):
   article=article_code(article);deadline=deadline or self.clock()+60
-  if not re.fullmatch(r'[A-Z0-9-]{5,50}',article):return SourceDocument('jbl',self.site_name,'',error='Invalid full article')
-  saved=self._capture(article)
+  input_context=bool(getattr(self,'input_interpreted',False) or getattr(self,'input_model',''))
+  if getattr(self,'input_model',''):
+   self.trace(provider='normalization',query=self.input_model,url='',region='',source_type='query_plan',accepted=False,reason='Extracted model first; supplier article kept separate',supplier_article=article,input_configuration=self.input_configuration)
+   native=self.regional_search(article,self.input_model,deadline=min(deadline,self.clock()+22))
+   if native:
+    doc,report=native;self.reports[article]=report;return doc
+  elif input_context and name:
+   native=self.regional_search(article,name,deadline=min(deadline,self.clock()+22))
+   if native:
+    doc,report=native;self.reports[article]=report;return doc
+  if not input_context and not re.fullmatch(r'[A-Z0-9-]{5,50}',article):
+   self.reports[article]={'identity':{},'manuals':[],'verified_documents':[],'exact_photo_assets':[]}
+   return SourceDocument('jbl',self.site_name,'',error='No official model source found; supplier article is not a retail SKU')
+  saved=None if input_context else self._capture(article)
   if saved and (saved[1]['exact_photo_assets'] or not components(article)['color']):
    doc,report=saved;self.reports[article]=report;self.trace(provider='attended_capture',query=article,url=doc.url,region=urlsplit(doc.url).hostname.split('.')[0],source_type='pdp',accepted=True,reason='Verified capture bytes; model and variant checked separately',identity_relation=report['identity']['relation'],model_relation=report['identity']['model_relation'],variant_relation=report['identity']['variant_relation']);return doc
   best=saved;official_deadline=max(self.clock(),deadline-20)
@@ -164,16 +223,23 @@ class JBLAdapter:
      z=self.http.get(sitemap,timeout=min(8,max(1,official_deadline-self.clock())))
      self.trace(provider='official_sitemap',query=article,url=sitemap,region='us',source_type='sitemap',accepted=False,reason=z.marker or 'Index discovery; not identity',identity_relation='unknown')
    part=components(article);base=part['model_code'];region=part['region'];regionaless=article[:-len(region)] if region else article
-   candidates=list(dict.fromkeys((article,regionaless)))
+   model_token=re.sub(r'[^A-Z0-9]','',getattr(self,'input_model','').upper())
+   candidates=[code for code in dict.fromkeys((*([model_token] if model_token else []),article,regionaless)) if re.fullmatch(r'[A-Z0-9-]{5,50}',code)]
    for candidate_code in candidates:
     if self.clock()>=official_deadline:break
     url=f'https://{host}/'+quote(candidate_code)+'.html'
     try:z=self.http.get(url,timeout=min(8,max(1,official_deadline-self.clock())))
     except Exception as e:self.trace(provider='regional_exact',query=article,url=url,region=host.split('.')[0],source_type='pdp',accepted=False,reason=str(e),identity_relation='unknown');continue
     if not z.ok:self.trace(provider='regional_exact',query=article,url=url,region=host.split('.')[0],source_type='pdp',accepted=False,reason=z.marker or str(z.status_code),identity_relation='unknown');continue
-    doc,report=parse_pdp(z.text,z.url,article);accepted=doc.match_level in {'full_sku','model_confirmed'}
-    self.trace(provider='regional_exact',query=article,url=z.url,region=host.split('.')[0],source_type='pdp',accepted=accepted,reason=report['identity']['reason'],identity_relation=report['identity']['relation'],model_relation=report['identity']['model_relation'],variant_relation=report['identity']['variant_relation'])
-    if accepted and (report['exact_photo_assets'] or not part['color']):
+    doc,report=self._parse(z.text,z.url,article);accepted=doc.match_level in {'full_sku','model_confirmed'}
+    self.trace(provider='regional_exact',query=candidate_code,url=z.url,region=host.split('.')[0],source_type='pdp',accepted=accepted,reason=report['identity']['reason'],identity_relation=report['identity']['relation'],model_relation=report['identity']['model_relation'],variant_relation=report['identity']['variant_relation'])
+    wanted=getattr(self,'input_configuration',{}).get('color') or part['color']
+    recovered=self.published_variants(z.text,z.url,article,deadline=official_deadline) if not accepted or wanted and not report['exact_photo_assets'] else None
+    if recovered:
+     doc,report=recovered;self.reports[article]=report;return doc
+    if accepted and (report['exact_photo_assets'] or not wanted):
+     if input_context:
+      self.reports[article]=report;return doc
      self.reports[article]=report;self.capture_dir.mkdir(parents=True,exist_ok=True);file=article+'_http.html';data=z.text.encode('utf-8');(self.capture_dir/file).write_bytes(data);(self.capture_dir/(article+'.manifest.json')).write_text(json.dumps({'article':article,'records':[{'file':file,'sha256':hashlib.sha256(data).hexdigest(),'final_url':z.url,'status':200,'challenge':False,'provider':'policy_http'}]},indent=2),encoding='utf-8');return doc
     if best is None or accepted:best=(doc,report)
    # Verified Harman regional search endpoint; the official server resolves model names.
@@ -181,6 +247,7 @@ class JBLAdapter:
     native=self.regional_search(article,name,deadline=official_deadline)
     if native:
      doc,report=native;self.reports[article]=report
+     if input_context:return doc
      self.capture_dir.mkdir(parents=True,exist_ok=True);file=article+'_http.html';data=doc.html.encode('utf-8');(self.capture_dir/file).write_bytes(data)
      (self.capture_dir/(article+'.manifest.json')).write_text(json.dumps({'article':article,'records':[{'file':file,'sha256':hashlib.sha256(data).hexdigest(),'final_url':doc.url,'status':200,'challenge':False,'provider':'regional_official_search'}]},indent=2),encoding='utf-8');return doc
   if self.clock()<official_deadline:
@@ -192,14 +259,14 @@ class JBLAdapter:
   # Same shared injected search provider; no JBL search engine.
   if self.search_provider is None and self.clock()<deadline:self.search_provider=self.shared_search
   if self.search_provider and self.clock()<deadline:
-   for candidate in self.search_provider(queries(article,name),deadline=deadline):
+   for candidate in self.search_provider(self._queries(article,name),deadline=deadline):
     url=getattr(candidate,'url','')
     if not official(url):continue
     z=self.http.get(url,timeout=8)
     if not z.ok:continue
-    doc,report=parse_pdp(z.text,z.url,article)
+    doc,report=self._parse(z.text,z.url,article)
     accepted=doc.match_level in {'full_sku','model_confirmed'}
-    self.trace(provider='external_search',query=queries(article,name)[1],url=z.url,region=urlsplit(z.url).hostname,source_type='pdp',accepted=accepted,reason=report['identity']['reason'],model_relation=report['identity']['model_relation'],variant_relation=report['identity']['variant_relation'])
+    self.trace(provider='external_search',query=self._queries(article,name)[0],url=z.url,region=urlsplit(z.url).hostname,source_type='pdp',accepted=accepted,reason=report['identity']['reason'],model_relation=report['identity']['model_relation'],variant_relation=report['identity']['variant_relation'])
     if accepted:self.reports[article]=report;return doc
   else:self.trace(provider='external_search',query=queries(article,name)[0],url='',region='global',source_type='search',accepted=False,reason='External search deadline exhausted',identity_relation='unknown')
   if best:doc,report=best;self.reports[article]=report;return doc
@@ -209,16 +276,29 @@ class JBLAdapter:
   from ..jbl_identity import COLORS,REGIONS
   term=re.sub(r'\b(?:'+ '|'.join(map(re.escape,list(COLORS.values())+list(REGIONS)))+r')\b','',name,flags=re.I)
   term=re.sub(r'^\s*JBL\s*','',term,flags=re.I);term=' '.join(term.split()) or components(article)['model_code']
-  url='https://id.jbl.com/en/search?q='+quote(term)
+  # Discover the current native route from the public form. The historical
+  # /en/search endpoint can disappear while the official storefront remains live.
+  endpoint=getattr(self,'native_search_endpoint','')
+  if not endpoint and self.clock()<deadline:
+   try:
+    landing=self.http.get('https://id.jbl.com/',timeout=min(8,max(1,deadline-self.clock())))
+    if landing.ok:
+     root=BeautifulSoup(landing.text,'html.parser')
+     form=next((f for f in root.select('form[action]') if f.select_one('input[name="q"]') and 'search' in f['action'].lower()),None)
+     candidate=urljoin(landing.url,form['action']) if form else ''
+     if official(candidate) and urlsplit(candidate).hostname=='id.jbl.com':endpoint=candidate;self.native_search_endpoint=candidate
+    self.trace(provider='official_search_form',query=term,url=landing.url,region='id',source_type='catalog',accepted=False,reason=landing.marker or f'HTTP {getattr(landing,"status_code",200 if landing.ok else 0)}; published search form',search_endpoint=endpoint)
+   except Exception as exc:self.trace(provider='official_search_form',query=term,url='https://id.jbl.com/',region='id',source_type='catalog',accepted=False,reason=str(exc))
+  url=(endpoint or 'https://id.jbl.com/en/search')+'?q='+quote(term)
   try:response=self.http.get(url,timeout=min(8,max(1,deadline-self.clock())))
   except Exception as exc:
    self.trace(provider='regional_official_search',query=term,url=url,region='id',source_type='search',accepted=False,reason=str(exc),model_relation='unproven',variant_relation='unproven');return None
-  self.trace(provider='regional_official_search',query=term,url=response.url,region='id',source_type='search',accepted=False,reason=response.marker or 'Official server search/redirect is discovery only',model_relation='discovery_only',variant_relation='unproven')
+  self.trace(provider='regional_official_search',query=term,url=response.url,region='id',source_type='search',accepted=False,reason=response.marker or f'HTTP {getattr(response,"status_code",200 if response.ok else 0)}; official search is discovery only',model_relation='discovery_only',variant_relation='unproven')
   if not response.ok:return None
-  doc,report=parse_pdp(response.text,response.url,article)
-  if doc.match_level in {'full_sku','model_confirmed'} and report['exact_photo_assets']:
+  doc,report=self._parse(response.text,response.url,article)
+  if doc.match_level in {'full_sku','model_confirmed'} and (report['exact_photo_assets'] or getattr(self,'input_model','') and not self.input_configuration.get('color')):
    self.trace(provider='regional_official_search',query=term,url=doc.url,region='id',source_type='pdp',accepted=True,reason=report['identity']['reason'],model_relation=report['identity']['model_relation'],variant_relation=report['identity']['variant_relation']);return doc,report
-  soup=BeautifulSoup(response.text,'html.parser');wanted=components(article)['color'];links=[]
+  soup=BeautifulSoup(response.text,'html.parser');wanted=getattr(self,'input_configuration',{}).get('color') or components(article)['color'];links=[]
   for tag in soup.select('.product-tile .product-swatches a[title], .product-tile a.thumb-link'):
    if tag.find_parent(class_='product-swatches') and tag.get('title','').casefold()!=wanted.casefold():continue
    target=urljoin(response.url,tag.get('href',''))
@@ -227,7 +307,7 @@ class JBLAdapter:
    if self.clock()>=deadline:break
    z=self.http.get(target,timeout=min(8,max(1,deadline-self.clock())))
    if not z.ok:continue
-   doc,report=parse_pdp(z.text,z.url,article);accepted=doc.match_level in {'full_sku','model_confirmed'} and bool(report['exact_photo_assets'])
+   doc,report=self._parse(z.text,z.url,article);accepted=doc.match_level in {'full_sku','model_confirmed'} and (bool(report['exact_photo_assets']) or getattr(self,'input_model','') and not wanted)
    self.trace(provider='regional_official_search',query=term,url=z.url,region='id',source_type='pdp',accepted=accepted,reason=report['identity']['reason'],model_relation=report['identity']['model_relation'],variant_relation=report['identity']['variant_relation'])
    if accepted:return doc,report
   return None
@@ -235,21 +315,23 @@ class JBLAdapter:
   from .lg_browser_search import LGBrowserSearch
   from ..census.browser_contracts import BrowserBudget
   hosts=tuple(dict.fromkeys(HOSTS+('www.jbl.com','ca.jbl.com','kh.jbl.com','th.jbl.com','ch.jbl.com','pl.jbl.com','dk.jbl.com','in.jbl.com')))
-  search=LGBrowserSearch(self.http.log_path.with_name('jbl_browser_search_log.json'),official_host='www.jbl.com',official_hosts=hosts,allowed_hosts=hosts+('www.google.com','google.com','gstatic.com','www.bing.com','bing.com','duckduckgo.com'),clock=self.clock,budget=BrowserBudget(deadline_seconds=min(60,max(1,deadline-self.clock())),operation_timeout_seconds=min(10,max(1,deadline-self.clock()))))
+  search=LGBrowserSearch(self.http.log_path.with_name('jbl_browser_search_log.json'),official_host='www.jbl.com',official_hosts=hosts,allowed_hosts=hosts+('www.google.com','google.com','gstatic.com','www.bing.com','bing.com','duckduckgo.com'),clock=self.clock,budget=BrowserBudget(deadline_seconds=min(60,max(1,deadline-self.clock())),operation_timeout_seconds=min(10,max(1,deadline-self.clock()))),candidate_classifier=lambda u:'product' if official(u) and urlsplit(u).path.lower().endswith('.html') and not urlsplit(u).hostname.startswith('support.') else 'support' if official(u) and urlsplit(u).hostname.startswith('support.') else 'unknown')
   search.trace_callback=self.trace_callback
   try:
-   for query in query_plan[:3]:
-    if self.clock()>=deadline:break
-    result=search.search_provider('google',query)
-    self.trace(provider='external_search',query=query,url='',region='global',source_type='search',accepted=bool(result.candidates),reason=result.outcome,model_relation='discovery_only',variant_relation='unproven')
-    yield from result.candidates
-    if result.outcome in {'runtime_unavailable','challenge_detected','rate_limited','http_denied','host_stopped'}:break
+   for provider in ('google','bing'):
+    for query in query_plan[:3]:
+     if self.clock()>=deadline:break
+     result=search.search_provider(provider,query)
+     self.trace(provider='external_search',query=query,url='',region='global',source_type='search',accepted=bool(result.candidates),reason=result.outcome,search_provider=provider,model_relation='discovery_only',variant_relation='unproven')
+     yield from result.candidates
+     if result.outcome in {'runtime_unavailable','challenge_detected','rate_limited','http_denied','host_stopped'}:break
   finally:search.close()
  def find_documents(self,document,article):
   from io import BytesIO
   from pypdf import PdfReader
   report=self.reports[article];documents=[];checked=True
-  cache_path=self.capture_dir/(article+'.documents.json')
+  cache_key=article if re.fullmatch(r'[A-Z0-9-]{5,50}',article) else 'supplier_'+hashlib.sha256(article.encode()).hexdigest()
+  cache_path=self.capture_dir/(cache_key+'.documents.json')
   try:cache=json.loads(cache_path.read_text(encoding='utf-8'))
   except (OSError,ValueError):cache={}
   for item in report.get('manuals',[]):

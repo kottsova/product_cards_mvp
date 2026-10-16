@@ -1,0 +1,3860 @@
+{
+  "observation": "actual_UI_default_factories_no_provider_injection",
+  "runtime": {
+    "pid": 13080,
+    "executable": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe",
+    "argv": [
+      "A:\\work\\dev\\product_cards_mvp\\.venv\\Lib\\site-packages\\uvicorn\\__main__.py",
+      "product_tool.web:create_app",
+      "--factory",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8765"
+    ],
+    "started_at": "2026-10-16T12:06:58.663678+00:00",
+    "commit": "79f2af9117bf8e865fe9415cffb4c2bbe90a0fe1",
+    "production_dirty": true,
+    "source_fingerprint": "2db9901b64e1f2f69e647b64e85ba4fb218adaee3aa2a1435817aba8713f63cd",
+    "source_files": {
+      "product_tool/__init__.py": "43bbb8da71943c07f55441689eecd933ea520497e770817fbdf6eae0e9e300b2",
+      "product_tool/adapters/__init__.py": "0fd743632bd08a92b5bd2286abc0440a34b822677179ffa835ff1d21df789ce6",
+      "product_tool/adapters/access_stop.py": "358969de417c4a176e3c188c12b4d3806a75030316b585e001fe8d4b3694edb9",
+      "product_tool/adapters/apple.py": "20b86b853de4f993a03cd11238de61514056b3af4770c57268ee4f673ad222b1",
+      "product_tool/adapters/bosch_home.py": "7a41a7823c656509e37b2720bca6b338d372c41b29807b4cd7d845be5f06e941",
+      "product_tool/adapters/bosch_official.py": "cab4569ec3288f6d472d084dd92c7d86cc230d5a35ebbac88d5c60e1af475112",
+      "product_tool/adapters/common.py": "46d7bbbf5171646bc6574928f751df54ae8ffb5fea459de7bc46c876610a0068",
+      "product_tool/adapters/dns.py": "c729ca1f98fa4d304ce4b59e18561178e78ac24a71d22e8d810aa45906dcfe36",
+      "product_tool/adapters/document_verification.py": "55a15767a71627af5887d92b41f64e8becf4ba893ba92f82e5efc4bdcb26a396",
+      "product_tool/adapters/dreame.py": "c0395ee8426c81751463787461a36ce62e51da43a50a119f76973bf23b9d3695",
+      "product_tool/adapters/electrolux.py": "bc86c673f169d108368bf87811b59cd857ef8023d25e6b5da729148988f35485",
+      "product_tool/adapters/hyperx.py": "396ffcdb15b52a757cb352bd222242fe690765c173ae0bc010c07427e9f50eee",
+      "product_tool/adapters/hyperx_discovery.py": "fcf571d10101cd4cae6e46c9a01e10a4e95e3662d48f5d3873192d9aba1d577b",
+      "product_tool/adapters/hyperx_support.py": "7cbf87b6c97b4442da7a89525c68daf7d3058b43e79e9a4b05b65fdfef9a24ba",
+      "product_tool/adapters/jbl.py": "2aff5ebb62d47b38b7baf79d2f478e4ff796527dbbe61c077dd3f0a0f2b4f0dc",
+      "product_tool/adapters/jbl_documents.py": "50d8093ce6b15cd9b852fbfedf984a671e090298d866a873f1352b170b522660",
+      "product_tool/adapters/lenovo.py": "fd974acfee89128f06c3ffb18848f16c0f4d2409e2b8b43518f2ed9932a1e29a",
+      "product_tool/adapters/lenovo_documents.py": "4fbd43f8c5c16273f50bfa687fbb81fbff2312a75874674f7d4c8b38412f1019",
+      "product_tool/adapters/lenovo_psref.py": "33836a316c67f1a92ecbd2116556068960edb1b56e27413de8e18726ad2906e7",
+      "product_tool/adapters/lg.py": "52aefa5919d1bcaab424f9ef56f0da3354f02553001d982151a278527b3d4d23",
+      "product_tool/adapters/lg_browser_search.py": "13d49b2187684f052e7c2c96934be6f4dad91920ccd96be80f95ab66f01dfc3a",
+      "product_tool/adapters/lg_documents.py": "3ecf054dc4325cd50f0deae45f4a88d2fcb8e6bc9ecdaea27fb284cb9698b4da",
+      "product_tool/adapters/lg_documents_adapter.py": "995fe1f97a04577f4883d07ea265431b05862894295b72fb310c712efca30941",
+      "product_tool/adapters/lg_global.py": "4b0894b1a927c606c75f8b9aba91493fe0a3adfcd85836b3f537c77ea3ae8e06",
+      "product_tool/adapters/lg_policy.py": "f42f44ed933c8c60825cf53ae01d7c301eed5f94dbad56ec4319ec65cd6c0cbf",
+      "product_tool/adapters/lg_support.py": "042b2ede2ab809e7e4d53b4d1dadda6d51345527af6e3dd4917b7f29c56837be",
+      "product_tool/adapters/playstation.py": "98dd5fa99a2da72ba24c93ac5127b4cb9196485d2ecd63ee745badd3a988768d",
+      "product_tool/adapters/policy_fetch.py": "57d053d284d47190a042e3fcfe95621e4677082a1b2677aaf4e537abd29586ee",
+      "product_tool/adapters/policy_session.py": "3fdfba9fa09524d855d6c94d0990e4c88a35412bda1ce5c239704976950cceb8",
+      "product_tool/adapters/published_page.py": "15075096f82d8a83dc124d8da63d80886672228a2faab99fe972c25466aa09a0",
+      "product_tool/adapters/razer.py": "499932846e6ff69d66378ffb64b4990bdb1b0d190e71dd2a01312b9f4f9c7f32",
+      "product_tool/adapters/samsung.py": "bb106acdc06369700a5cd9b9067208e82799c171032dcf4c53c9f21a1ec80341",
+      "product_tool/adapters/samsung_source.py": "131cbe8cfb7e344899b207a93ce3c0e60d5c7dc924dd10a3d68bda89826145fa",
+      "product_tool/adapters/sitemap_urls.py": "3e70e2e017b4a16c0314eb442d686bd4e1cdf9fb4cd86d789b5ea75c9c105e53",
+      "product_tool/adapters/structured_page.py": "d36c885328b27adbadb0e4dedc3052763dced64f40edaf7b2d56551c39e33410",
+      "product_tool/adapters/sulpak.py": "a6f4332a2180d657836572ffe8abfa030c12330482c4dcccd151d80f76e397bf",
+      "product_tool/adapters/supplier.py": "583f3d2bea283a3d1b5e1efcfddb3ea5f77125afbe6471616b2e4b0abcdcee7a",
+      "product_tool/adapters/xbox.py": "f95ab1c01ba2b525b400ff058e7dafcb6a59c0f6838e08ee189cf1ae30964b1f",
+      "product_tool/adapters/xiaomi.py": "ae4d1df234c5ddd534ce788648885262171661a51c587fbaa5a4d300623e65bc",
+      "product_tool/apple_catalog.py": "957e137a307f35cefe8a79c5df65ebbcbb1edcad6a1cd3359dc282dac94b51d8",
+      "product_tool/apple_identity.py": "b0c870af9c04703b4b95fcb9a6092725845989b7d086f2b09329b98a12f116fe",
+      "product_tool/apple_model_discovery.py": "bde76b4c957fd06a20bccbe6994646be53e69db0fda5a1fd0fa0bf03af16c281",
+      "product_tool/apple_pipeline.py": "076cc0eba88d1b03ce98ef3fa8dc9f4670a26996d85c19583a14ffb83bc33c0c",
+      "product_tool/attribute_lineage.py": "48be0539b259bcc72490decd7b5da87caae26c698d486721d1927d05d2f36210",
+      "product_tool/attribute_projection.py": "c0a2269839920af3cff3a4b19c672dc7d631000607057c8f6e3967a49f60f03d",
+      "product_tool/batch_queue.py": "0a0933b952b739a31fdcce3b76f9eaab2d96a422f84cf5bc14dffaf76217b0bf",
+      "product_tool/bosch_pipeline.py": "d652b38950123c1f3bda9ba1fcbb27ce34f400ae7f71bcfbcaf1230aba3d0d59",
+      "product_tool/bosch_presentation.py": "156eb59e65e26cc509e92d42067dcd1b30426385c856c832ffb455928c4f83a6",
+      "product_tool/bosch_readiness.py": "6024b86d30d371b58f7e284d8bc99b92e1c5ab1fc94e00d2ceacd7399affd921",
+      "product_tool/canonical_attributes.py": "ac500b0c4a255ed0959c855807fec86cc35291cc1606956449b39136acf84fd7",
+      "product_tool/card_evidence.py": "efbc15dd03c75bf43b6312e3209d9b57756f8aecb02dc21f7ed4672071d009fc",
+      "product_tool/card_presentation.py": "ff6eac05f9eed9ad56ed4e4872ee0658c67b087c227352fd5d0e9a33a0de9cd6",
+      "product_tool/census/__init__.py": "7515a593c165cd467f5b4355a3e4da33430eeb6e0a9ecdf76b8d52181796abd8",
+      "product_tool/census/attended_google.py": "d6935c7c379975b86189377e7cdc0ec9a1a571ff9565a77562daad7109a1d02e",
+      "product_tool/census/attended_jbl.py": "3ef1b63d23e8b1c63fc6688feae04a4e0c3361659ad8040a5a7ff2b0c7268ee9",
+      "product_tool/census/attended_psref.py": "cb06bf3351ac4ce8ed95e83119e0596f279aa79af2a483ba5a72277a0b0450ac",
+      "product_tool/census/attended_replay.py": "3b3805c103f2b8a0079c083332451a100aa1b283c1543a6fc06cf1e2af4db2d2",
+      "product_tool/census/attended_support.py": "97dca879cce07f9baf4e4472b7a301dd0975c624635f7b2269f29ebf8f3a0dd7",
+      "product_tool/census/brands.py": "35b69643777475f7918433e3b8002d099d82e6050301030fd84a562ca7d1ac5c",
+      "product_tool/census/browser_contracts.py": "47980ba292b2733f5b4394ed4c8efa44b830c820fc56068dd59e3880cbcaa478",
+      "product_tool/census/browser_projection.js": "7774218b8cf06819116078a790fd38232bf2cbec6d6608052b6c3b1e9b443199",
+      "product_tool/census/browser_projection.py": "187c594d5c25bc3c2f324a35715399f86610b4f77350e85aaf15fb8b62c7ad81",
+      "product_tool/census/browser_resources.py": "332858674d9d3befa68af7c0c35c9f5b85552fe931fb085b4e9e5675fc9d32e2",
+      "product_tool/census/browser_runtime.py": "e811060082f2e762b3832ebc952ce8edcfc81815bfbe54366487cc63e63c8fe0",
+      "product_tool/census/browser_snapshots.py": "3c0b16676b500a3d35ba874e82f05b42a283104f20cbd990072e6ee236de7d42",
+      "product_tool/census/browser_strategy.py": "7779b2f8478d0f560cff445613889bbdea24554c2b3866980bd9fc0b32ebe9fd",
+      "product_tool/census/browser_worker.py": "1c9696df49784f04d4c45503be0d268a377e741986387672d5ddbcbfb6e6842c",
+      "product_tool/census/candidates.py": "0f167564d888139340d47f99c8b590864941331df75fc559ee7d15eda82d534d",
+      "product_tool/census/catalog.py": "0f6d83c588ce01b3cfcbb4a765e76eead3583dd865d959ea9a9612f21d7d95d2",
+      "product_tool/census/catalog_identity.py": "b6fc6796da0c87bf873d3f19dd646f123efbe179eee029ab73d2776cf47a633d",
+      "product_tool/census/discovery.py": "ebc0b52030f836853f8f2c08af2fc1d39a54ca8910395a756a9c9b8edd6164cf",
+      "product_tool/census/endpoint_probe.py": "6c9dd046fd5f583cefdcce1e0a75295bed224c188d39ca9ea163059520e284ee",
+      "product_tool/census/finalize_v7.py": "2a6d4c09efe38ac2f82895f86ae8a22a3927670afcfe3c773b031fcdb99ef0d7",
+      "product_tool/census/fingerprint.py": "53a4b4146a6a46ad10e2eb7c70ef93400bd8c101eb8868f146de3dc471c090c5",
+      "product_tool/census/http_domain_discovery.py": "9038155be6261c2a31d2d798d4352876e3503830a2c0c1e713de0c77f0cc9fa0",
+      "product_tool/census/internal_search_strategy.py": "8913e9731755281407a444aa3cb4f5d71fccd43facd8a228866af37b196c5e66",
+      "product_tool/census/models.py": "d2492eb63f714dd59b4863ec4baa299823ccc8b4a8ab78f744ebc40bd568889f",
+      "product_tool/census/multi_domain.py": "d7189cd52234c9f449f94f3c9d8a19b43174246b799422ffc91ce664725a7514",
+      "product_tool/census/multi_source_fields.py": "cae23b1982c673e32582f745776caa4e6481262b13d88c3e42f3bdf25376f041",
+      "product_tool/census/official_domains.py": "aee4f5f6424ef1dc374180dbcedeee0ea80a14ef2e2df0d78289697801074c00",
+      "product_tool/census/old_parser_google.py": "9da1b970f7d27c4c4fb255fb42e93b53c63f1a030e66c41da703f45e1a94846d",
+      "product_tool/census/probe.py": "7e5ce446e5ac05ab8ed5dfb2b8c2f768ba594c3539d22a5cdb07814512e126a3",
+      "product_tool/census/public_browser.py": "217e68c06b640aa36e04e0318510d203cc89789e3b64e77c7ace833da88cfc6a",
+      "product_tool/census/registry.py": "b4f2917a9dd249a0cfa0df23092b8c328dd51cde2d45606d581dc725b97189fb",
+      "product_tool/census/report_v5_1.py": "1bcb346c04b8b3e6f1336beb6e6fcd6604f3fe5719a4c96ddc188fcb78527fbc",
+      "product_tool/census/report_v6.py": "d5c4b4464a96a6a577504e5b0c393d836082f4f9edfe6c76a1e200c322bfe24a",
+      "product_tool/census/report_v7.py": "fedd5b88b658d1e757081ae8a48b7e0bd061abb032e3d70e6e27bb32a3380b7e",
+      "product_tool/census/report_v71.py": "ae3a739b9bfc1c6385c3a9682781919d14c137521fae593d56c170fb5d35072a",
+      "product_tool/census/reprocess_v61.py": "9f7d36f1c360ca7c355d96f920de7dd51f975c022b9404dbe74c27919c9cccd1",
+      "product_tool/census/research.py": "b1c963313ffc4a9f093d33e20eb893259deca25775890737ed1d8decbcd59ea1",
+      "product_tool/census/runner.py": "cda9197ea67ebc42387fe67e7e7849f3ea9990df1aed008fedce7ff3ca7b30c7",
+      "product_tool/census/runner_v2.py": "49b1368cc6dfde60669229229a60579046f0b6beef4ca63ecec545757ecac743",
+      "product_tool/census/runner_v3.py": "7fe38c9a273da5bfdc00bb4f9395f78bd2071213df5578aa596ae9e6712a1858",
+      "product_tool/census/runner_v4.py": "53518406df3a5a9efda5159a9135c442a341385b674bf71b11fbbdc1fbcd259f",
+      "product_tool/census/runner_v5.py": "d032d7391f1343327f0a086fb829a659d66c7d8086dbe5ec0c0cb73c07d25e52",
+      "product_tool/census/runner_v5_1.py": "b19ea7cbbe4978535c6eecd2cb1641b44a1fb3dd91fef9821f99778ce7580b0b",
+      "product_tool/census/runner_v6.py": "df1b5065c7e6e4589cbf17907131e0d4bcf1baae7ab9a29ca24603b6aa9aa5d2",
+      "product_tool/census/runner_v61.py": "2e30784ff6c70a43f7eb254c9e6c6e8dbbc971524184d6c13f3afc3868fbb7be",
+      "product_tool/census/runner_v7.py": "99bb2710812e0afbc790ffd51b018350d1cb56bc6326d97b08223c04e5b90121",
+      "product_tool/census/runner_v71.py": "44c7328ad96debace038824e1b6e9bf95086f40054a1be426b4b37a76e682b3c",
+      "product_tool/census/scoped_access.py": "7b174824d9bfd23e18cee28388fa5ce66ec53eb3da76ac1f838d1620e28a0ad5",
+      "product_tool/census/search_results.py": "a872264be30dccb9c7f6e04c64c8714a8628173a3b78c6f156cf1a5af348fb3f",
+      "product_tool/census/search_routes.py": "a0de22354617d10f46ed564bf134dff875be881b48fbad76a4571aacd5c20bac",
+      "product_tool/census/search_snapshots.py": "a801d03c9b454bfc1523af1dbf2d8eae4444700abf964bfd363481a45ef85464",
+      "product_tool/census/sitemap_strategy.py": "b437743a1401c0a48168516ced530e63cb9a1db35e23380ea9e3597d346611fd",
+      "product_tool/census/source_fingerprint.py": "5a407e66a9d9630955a36c9a4801b912364473b4338f0f80d78dad65757c853e",
+      "product_tool/census/structural_contracts_v8.py": "857e085d407b211fafd31137fb27c0649461bc2a4b75daac8f426d43196ad21b",
+      "product_tool/census/structural_inventory_v8.py": "b29520424b9e97b81cb677cd4b401cc20d8f1143b5282b243e7b7692bfb7254d",
+      "product_tool/census/structural_report_v8.py": "9d4357d08cac3cf51ebf8d355b348ffed465f269f07644389713e52fdb027873",
+      "product_tool/census/structural_runner_v8.py": "78d4e1a20e076c57b510467411564389a6453e51205e35a9d78a5833e1fa8f4c",
+      "product_tool/census/structural_schema_v8.py": "f00432f0bd540dacbd6b846f606146cf0ace53f6c458e00b699b3d15c6578e24",
+      "product_tool/census/structured_identity_v71.py": "89cb9a64e9c7d966094a0b8a340fc16c8f3f1f50841470befd7da028516acbd2",
+      "product_tool/coverage/__init__.py": "8a5e9feb58f005ba7e648a4c28a67b59dd1eef84c157237892bc9ab82b4bf0e5",
+      "product_tool/coverage/__main__.py": "6fe69f1c941e818e98a1b3857ed51b8f54626158ec893121c5c919f6babfa150",
+      "product_tool/coverage/catalog_units.py": "66af248b9c8770985acb5a4b3711285b702e1764458786f659d2a2bab69d825a",
+      "product_tool/coverage/classify.py": "4b8f057dceeeb6a79a4023266fab89c73310f45af100cc52e70618d659adc2e9",
+      "product_tool/coverage/executor.py": "b978399ec5d06bb87a0b6d3aba245fa3507bbe5cd25a2e32d926d189f76d3f97",
+      "product_tool/coverage/facts.py": "116f7d911e628b96d7eabbecbad6926021e06ce733f82566ed7d288fdc248921",
+      "product_tool/coverage/planner.py": "4b52a8437160ff358e1e861925a21eb96f8571f45d2f865d0bb1484e260bda8a",
+      "product_tool/dealer_fallback.py": "384b40767acb01172345ed8dab46a0688bb2ba1d2f8a291716070c5eded335d2",
+      "product_tool/discovery_trace.py": "1a649f830d2a23ded108dcd9053206de6da7aa4c06ad3c0c8d12394e816bf38e",
+      "product_tool/display.py": "a63555ac8888ed75bfc38c49d49ceb2c79a3aa4ff71ed2d84e5ce5b1f1b32b5f",
+      "product_tool/dreame_page.py": "4e80924d3b933e53b930a008056938bd0acaf532bd41231fc03a3c649ef0e442",
+      "product_tool/dreame_presentation.py": "079dff446c1f582ef3002479da9066ea4e687774b70fbb14b9045bb43188cd99",
+      "product_tool/electrolux_page.py": "b223cd191150a60daa2ee9d523a56c297bb5f769ccd283058455998765475894",
+      "product_tool/electrolux_pipeline.py": "7e7ee9396efd8c977e908c4176b825b9b34a385529cc9913619bec527fa64316",
+      "product_tool/exporter.py": "ec6d015cfcc04d77a5087adeb35e9410393f9c9477900340c6b10c95dc36f268",
+      "product_tool/fetch_history.py": "ac56f7b7ac480c718a42cd74a8b33d0faa8d5226bd21aeb3f579011192c28827",
+      "product_tool/hyperx_audit.py": "0184a7ddaff4e203778e32fd228c11abda6fdec7b8ca1ba9b268f36eee197733",
+      "product_tool/hyperx_page.py": "c6740984c9786a95abdac8e1c63e6dcda4c04ef90dbe02d82b058de5ca646047",
+      "product_tool/hyperx_presentation.py": "520971733fb916d195248f90beb125d6d11584e7dc5d26210508f4e44c09d8fb",
+      "product_tool/identity.py": "a9ba9711c5a6881d0999aa5c46d3307a1f0006eaf13f2c942bfface6ab1add33",
+      "product_tool/importer.py": "a80ecf8b54e4b8b5696e78d89d4daaf314fab45c856392ef3d9f728c483e88c2",
+      "product_tool/input_interpretation.py": "d0e0fdb73befd34fa86a46de760daf728ff1324b6a3b40d876c03af7cc01ab1f",
+      "product_tool/jbl_identity.py": "3442c7cfdf41d0094ffd03eeb5708ac10bfa3db03124b9eb105804921d07b8b0",
+      "product_tool/jbl_pipeline.py": "abf23a94a42970d22443609fef70dac645e9bdf543f31190040a69bfd50b2dd2",
+      "product_tool/jbl_presentation.py": "e8a3090a258da7ed154141d3da93c7d87f153b2754194f24e83c031e9cf77ecb",
+      "product_tool/jobs.py": "e2198f3d1a0f5cffbc7235c88ec6e98ddb393ecfdec3bc97bed9f093c5dc2932",
+      "product_tool/lenovo_pipeline.py": "ab02e1e1f5fc89cc79504b79f51ab46ec53d76262fc4b51c31385dd765db3c3c",
+      "product_tool/lenovo_presentation.py": "caed92a005c86bb84fa896dc4f38d8e183874598ec3e21415fd9f717de7cb5fc",
+      "product_tool/lg_batch.py": "692c1349b7a57956ca0ace495f4e085c59dd3b8a63084ed9c8350e7274753c4b",
+      "product_tool/lg_discovery_pipeline.py": "d627ad3b28ec58c9bed58f96e1913f2a6990211119a1b80deb369ceae01691c7",
+      "product_tool/lg_identity.py": "71caac332c61563907d77bd7dff79fe50e80623859503181db6a67d7d96b2db2",
+      "product_tool/lg_presentation.py": "288450abcac4e26254363cba0007f016e16853ba9894f6e6c7dc006985413061",
+      "product_tool/lg_sitemap_discovery.py": "cd03086d2f4f3d3912754b106f850287a3e9f72400fad54190e3e6a96363cfee",
+      "product_tool/manual_status.py": "cd40353696c7906ba0d851e988a1878ea12daa83202aa1bd9fd166160d3009af",
+      "product_tool/migrations.py": "16f97dbe341a03bf28b52f365225ca275f473aa169ef7c4bd930615f3ab54f8f",
+      "product_tool/normalization.py": "4755a2f4b50475a670181192aebe50820802c73c14412cfea01473c97a031b4d",
+      "product_tool/offline_guard.py": "81877a703b2c4fd52759959271e2984faa9deffbef996e568b3b31336d45f24d",
+      "product_tool/photo_inventory.py": "2f52c20ed00b016725f350dcf544b5b70d83d6b298c4d166bb2a1f789c8ee38f",
+      "product_tool/photo_metadata.py": "8e8dbc08cbde509e2ada29dbeea9c29cabb37ade863bed1d4c976278e31eb7d1",
+      "product_tool/playstation_discovery.py": "637ebe0d296fcda0db14ae986c2e8e7504bd137c5ccd35db4220ac29213e91bc",
+      "product_tool/playstation_identity.py": "3bd0086aea1b5b3ca683e8d016170715d3ba64e932a4249584dfab3962d79e8f",
+      "product_tool/playstation_lookup.py": "1d578a231816e2a72cfc4e6046176791b29010ffcf7cf3b49f6e4be0aeab453d",
+      "product_tool/playstation_page.py": "1e4e55af5b910d1aade76d8328dd907c56e92001f85da18b9769919609de2952",
+      "product_tool/playstation_pipeline.py": "7b9e0e5c866891569e7f0db98a7a99b9c91cf0834baeaa3f36e58d5b793a4d83",
+      "product_tool/playstation_specs.py": "deac88c68a841c119013e0f79cf92717bf6b0d5e508fc7f554e6f98a430b2fa9",
+      "product_tool/policy.py": "ec4473f7ef85049d482b3d972773c4e30749e30f2b44ccfab38c9c27f154ff57",
+      "product_tool/product_description.py": "6ac4f9dc4a8dbb66f02bfe32dce27e32a1017c00b8b92565ad4a2bc5e277d7b1",
+      "product_tool/product_input.py": "0e373bb6941addf1e41a19e787b48457ab697aec0a920b7580ee07452cab1178",
+      "product_tool/razer_identity.py": "948b0c77c3cf4d69478e33a212368ff3747f15d937a6f791ad6703e04da0c3d1",
+      "product_tool/razer_page.py": "77804fd7b581c79bae4fddb66968faa3c7e9e95731fdba4a60b512ce6b03a3c6",
+      "product_tool/razer_pipeline.py": "1ae4b8366739e8d5bf303ffb055011213fcfa4569c9a75d9b652aad2d8d07ead",
+      "product_tool/razer_presentation.py": "2e6574eba63d40d5f317ceda6aea2ea75774fe7cfc18bfeeb4a7b0d120becb03",
+      "product_tool/razer_store.py": "fe6f61074a4120c0434575a29b4cf6ea2101530918345cd63b5d196cb29d358a",
+      "product_tool/readiness.py": "ee6e75bab10a8aaa3ac679677318993fa9c578e9c8da16130bb3144668bedf6a",
+      "product_tool/resolution.py": "19aa3e8130ab955483d071dd545b7ff986d612b34375e6f44927c18349e29d27",
+      "product_tool/runtime_diagnostics.py": "35b09f15d21cfbae38c10cfc912a05dd88e1c2327f64e982cd311976ea0726ba",
+      "product_tool/samsung_pipeline.py": "50249cfe8255ea312bd49f94e5f09f6435d9d1a4871768a3595080a1814b2d62",
+      "product_tool/samsung_readiness.py": "320d8dcd2bde904af2d36da9bac7c5274f7b44acfadf658fb4fb52a0a196c219",
+      "product_tool/semantic_decomposition.py": "2c3132b6450c4aa2de60860be462fb86991c1477230045ceb1f6cbec8b92b8d6",
+      "product_tool/source_types.py": "80bf58f2f815ce4f43fa217ad2e5b5269b2aaec11ac99c8f1433a784486cdd21",
+      "product_tool/sources.py": "8b496ee3e16dfe5afca6ba443b2d12330f52ba03949fa6218bac063650b37b74",
+      "product_tool/static/attribute_filter.js": "28887bbad17bba3e96db580f7530768e41c6ed63caa426e9f471214e380b41d9",
+      "product_tool/static/photo_lightbox.js": "d844a9168c236866626c5f609e952d8dd33c39700f192b0c1ee41d55dc79d72f",
+      "product_tool/static/styles.css": "31f731b76d5f1044ccce68bdca1f4b3d95f250283a4eb0441b9c8f1937248d3a",
+      "product_tool/storage.py": "4a38309ccbc5fe4b6d7a42509f9f593a52db72381ba484fe04b2686846038f58",
+      "product_tool/templates/base.html": "5fdc72bb1ba6c21b4ae45fd05d56b386ee56f7fc3a0334d0be5fd008d6b758c0",
+      "product_tool/templates/batch.html": "a5a41f38178dff2c75a6c3988b75f80665100a46e8119b20e248acdfa5427b63",
+      "product_tool/templates/card_attributes.html": "97dc3967320ed899ccd6a288aaa8c705799801392e693fe7e39f622ceec796e0",
+      "product_tool/templates/error.html": "b6365864f4e8a4ce664dd3222865f17dab6d4cb368ae819c1a10c1a73532dd93",
+      "product_tool/templates/index.html": "3e99fe6c750bdc3e68360378d01158dd62efb9be7dfd611f9785bd123d33e990",
+      "product_tool/templates/photo_tile.html": "f248813459a991669128614ca7181ef676fee41b0b88eff5f88a5685c393284d",
+      "product_tool/templates/preview.html": "e04791dea060f7dfd18c8a80c8971d728d88fa66244b393e7118ef1bb494d725",
+      "product_tool/templates/product.html": "5f57b77fdb724d404c61ef33bfaa89c7aca7666d5e6d57b2ad9d51e62093d4c4",
+      "product_tool/value_localization.py": "78ddcf662addfb6b3c8659e231e6b769c3e87e1000fc50b4ab54439e3ff504c0",
+      "product_tool/web.py": "b6eea83c16f5804acc2c832df1b1752a1ec0e5a99adcdd3f479f014054122432",
+      "product_tool/worker.py": "5d7f58656755053b7f0fb5a110b2d840dc44f5898fe612c4a20db74a5260a07e",
+      "product_tool/xbox_documents.py": "2f43eec2b31108d30c27e059d0444b5c2852ff1bec510c16eb807516c11f8ddd",
+      "product_tool/xbox_identity.py": "3fb6ed23682d51084fb3836a76b1a9db3965134618db17f7cacabcd29bb9a101",
+      "product_tool/xbox_page.py": "cfa2b8fa1de61f462c00136de5f53ad48f6109263e92cc3b75c40bc0750af8a7",
+      "product_tool/xbox_pipeline.py": "ba50ef4df46a749bd7a7b1ce22a8c00bead92a284e04a600201c1c86edef49e1",
+      "product_tool/xiaomi_identity.py": "8d7249119ddae992674c9db508defda0122d64cb370feef55520502f48f631b5",
+      "product_tool/xiaomi_page.py": "94db0e71375159ed2ee9689e160ebf57254de41fa96457d8b5b6be3b677bb498",
+      "product_tool/xiaomi_pipeline.py": "4f1c62215c827895ca296c493eb7f6ab3f563e430e14032ce0e05393a2089cce",
+      "product_tool/xiaomi_presentation.py": "f5ce2875fe805d66aa7e392d794a075a6e14f343aa10db944d0173bfd06aa4d3"
+    },
+    "data_dir": "A:\\work\\dev\\product_cards_mvp\\data",
+    "worker_enabled": true
+  },
+  "product": {
+    "id": 152,
+    "batch_id": "c7495e27722f4bcd951d09fe1ef8e493",
+    "row_number": 6,
+    "name": "Наушники Tune 520BT White",
+    "brand": "JBL",
+    "search_code": "SUP-TUNE520-WH",
+    "alternate_code": "",
+    "category": "Наушники",
+    "needs_confirmation": 1,
+    "issues_json": "[]",
+    "original_values_json": "[\"Наушники Tune 520BT White\", \"SUP-TUNE520-WH\", \"JBL\"]",
+    "identity_json": "{\"brand_raw\": \"JBL\", \"brand_canonical\": \"jbl\", \"category_raw\": \"Наушники\", \"category_canonical\": \"generic\", \"seller_sku\": \"SUP-TUNE520-WH\", \"wb_sku\": \"\", \"title_raw\": \"Наушники Tune 520BT White\", \"model_candidates\": [\"SUP-TUNE520-WH\", \"520BT\", \"White\"], \"variant_attributes\": {\"color\": \"White\"}, \"market\": \"\", \"marketing_models\": [], \"identity_semantics_version\": \"legacy\", \"model_qualifiers\": [], \"input_interpretation\": {\"version\": \"title_v1\", \"original_name\": \"Наушники Tune 520BT White\", \"supplier_article\": \"SUP-TUNE520-WH\", \"brand\": \"JBL\", \"fields\": {\"brand\": {\"value\": \"JBL\", \"source\": \"brand_column\", \"confidence\": \"high\", \"raw\": \"JBL\"}, \"category\": {\"value\": \"Наушники\", \"source\": \"product_name\", \"confidence\": \"high\", \"raw\": \"Наушники\"}, \"model\": {\"value\": \"Tune 520BT\", \"source\": \"product_name\", \"confidence\": \"high\", \"raw\": \"Tune 520BT\"}, \"supplier_article\": {\"value\": \"SUP-TUNE520-WH\", \"source\": \"article_column\", \"confidence\": \"high\", \"raw\": \"SUP-TUNE520-WH\"}}, \"configuration\": {\"color\": {\"value\": \"White\", \"source\": \"product_name\", \"confidence\": \"high\", \"raw\": \"White\"}}, \"model\": \"Tune 520BT\", \"model_candidates\": [\"Tune 520BT\"], \"warnings\": [], \"category\": \"Наушники\", \"configuration_hints\": {\"color\": \"White\"}, \"search_queries\": [{\"query\": \"Tune 520BT\", \"purpose\": \"model\", \"source\": \"product_name\"}, {\"query\": \"SUP-TUNE520-WH\", \"purpose\": \"article\", \"source\": \"article_column\"}, {\"query\": \"Tune520BT\", \"purpose\": \"normalized_model\", \"source\": \"product_name\"}, {\"query\": \"Наушники Tune 520BT White\", \"purpose\": \"original_name\", \"source\": \"product_name\"}]}}",
+    "filename": "Ordinary_3_columns.xlsx",
+    "sheet_name": "Товары",
+    "model": "Tune 520BT",
+    "supplier_article": "SUP-TUNE520-WH",
+    "configuration_hints": {
+      "color": "White"
+    },
+    "input_interpretation": {
+      "version": "title_v1",
+      "original_name": "Наушники Tune 520BT White",
+      "supplier_article": "SUP-TUNE520-WH",
+      "brand": "JBL",
+      "fields": {
+        "brand": {
+          "value": "JBL",
+          "source": "brand_column",
+          "confidence": "high",
+          "raw": "JBL"
+        },
+        "category": {
+          "value": "Наушники",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Наушники"
+        },
+        "model": {
+          "value": "Tune 520BT",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Tune 520BT"
+        },
+        "supplier_article": {
+          "value": "SUP-TUNE520-WH",
+          "source": "article_column",
+          "confidence": "high",
+          "raw": "SUP-TUNE520-WH"
+        }
+      },
+      "configuration": {
+        "color": {
+          "value": "White",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "White"
+        }
+      },
+      "model": "Tune 520BT",
+      "model_candidates": [
+        "Tune 520BT"
+      ],
+      "warnings": [],
+      "category": "Наушники",
+      "configuration_hints": {
+        "color": "White"
+      },
+      "search_queries": [
+        {
+          "query": "Tune 520BT",
+          "purpose": "model",
+          "source": "product_name"
+        },
+        {
+          "query": "SUP-TUNE520-WH",
+          "purpose": "article",
+          "source": "article_column"
+        },
+        {
+          "query": "Tune520BT",
+          "purpose": "normalized_model",
+          "source": "product_name"
+        },
+        {
+          "query": "Наушники Tune 520BT White",
+          "purpose": "original_name",
+          "source": "product_name"
+        }
+      ]
+    },
+    "search_queries": [
+      {
+        "query": "Tune 520BT",
+        "purpose": "model",
+        "source": "product_name"
+      },
+      {
+        "query": "SUP-TUNE520-WH",
+        "purpose": "article",
+        "source": "article_column"
+      },
+      {
+        "query": "Tune520BT",
+        "purpose": "normalized_model",
+        "source": "product_name"
+      },
+      {
+        "query": "Наушники Tune 520BT White",
+        "purpose": "original_name",
+        "source": "product_name"
+      }
+    ],
+    "discovery_name": "Tune 520BT [color=White]"
+  },
+  "job": {
+    "id": "ddf295019549472693a7841858ead47d",
+    "product_id": 152,
+    "status": "done",
+    "current_stage": 1,
+    "message": "JBL: Готова. ",
+    "created_at": "2026-10-16T12:07:26+00:00",
+    "updated_at": "2026-10-16T12:09:52+00:00",
+    "started_at": "2026-10-16T12:09:32+00:00",
+    "finished_at": "2026-10-16T12:09:52+00:00",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "trace": [
+    {
+      "brand": "JBL",
+      "effective_article": "SUP-TUNE520-WH",
+      "event": "production_dispatch",
+      "fallback": "",
+      "input_article": "SUP-TUNE520-WH",
+      "name": "Наушники Tune 520BT White",
+      "runtime": {
+        "argv": [
+          "A:\\work\\dev\\product_cards_mvp\\.venv\\Lib\\site-packages\\uvicorn\\__main__.py",
+          "product_tool.web:create_app",
+          "--factory",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "8765"
+        ],
+        "commit": "79f2af9117bf8e865fe9415cffb4c2bbe90a0fe1",
+        "executable": "A:\\work\\dev\\product_cards_mvp\\.venv\\Scripts\\python.exe",
+        "pid": 13080,
+        "production_dirty": true,
+        "source_files": {
+          "product_tool/__init__.py": "43bbb8da71943c07f55441689eecd933ea520497e770817fbdf6eae0e9e300b2",
+          "product_tool/adapters/__init__.py": "0fd743632bd08a92b5bd2286abc0440a34b822677179ffa835ff1d21df789ce6",
+          "product_tool/adapters/access_stop.py": "358969de417c4a176e3c188c12b4d3806a75030316b585e001fe8d4b3694edb9",
+          "product_tool/adapters/apple.py": "20b86b853de4f993a03cd11238de61514056b3af4770c57268ee4f673ad222b1",
+          "product_tool/adapters/bosch_home.py": "7a41a7823c656509e37b2720bca6b338d372c41b29807b4cd7d845be5f06e941",
+          "product_tool/adapters/bosch_official.py": "cab4569ec3288f6d472d084dd92c7d86cc230d5a35ebbac88d5c60e1af475112",
+          "product_tool/adapters/common.py": "46d7bbbf5171646bc6574928f751df54ae8ffb5fea459de7bc46c876610a0068",
+          "product_tool/adapters/dns.py": "c729ca1f98fa4d304ce4b59e18561178e78ac24a71d22e8d810aa45906dcfe36",
+          "product_tool/adapters/document_verification.py": "55a15767a71627af5887d92b41f64e8becf4ba893ba92f82e5efc4bdcb26a396",
+          "product_tool/adapters/dreame.py": "c0395ee8426c81751463787461a36ce62e51da43a50a119f76973bf23b9d3695",
+          "product_tool/adapters/electrolux.py": "bc86c673f169d108368bf87811b59cd857ef8023d25e6b5da729148988f35485",
+          "product_tool/adapters/hyperx.py": "396ffcdb15b52a757cb352bd222242fe690765c173ae0bc010c07427e9f50eee",
+          "product_tool/adapters/hyperx_discovery.py": "fcf571d10101cd4cae6e46c9a01e10a4e95e3662d48f5d3873192d9aba1d577b",
+          "product_tool/adapters/hyperx_support.py": "7cbf87b6c97b4442da7a89525c68daf7d3058b43e79e9a4b05b65fdfef9a24ba",
+          "product_tool/adapters/jbl.py": "2aff5ebb62d47b38b7baf79d2f478e4ff796527dbbe61c077dd3f0a0f2b4f0dc",
+          "product_tool/adapters/jbl_documents.py": "50d8093ce6b15cd9b852fbfedf984a671e090298d866a873f1352b170b522660",
+          "product_tool/adapters/lenovo.py": "fd974acfee89128f06c3ffb18848f16c0f4d2409e2b8b43518f2ed9932a1e29a",
+          "product_tool/adapters/lenovo_documents.py": "4fbd43f8c5c16273f50bfa687fbb81fbff2312a75874674f7d4c8b38412f1019",
+          "product_tool/adapters/lenovo_psref.py": "33836a316c67f1a92ecbd2116556068960edb1b56e27413de8e18726ad2906e7",
+          "product_tool/adapters/lg.py": "52aefa5919d1bcaab424f9ef56f0da3354f02553001d982151a278527b3d4d23",
+          "product_tool/adapters/lg_browser_search.py": "13d49b2187684f052e7c2c96934be6f4dad91920ccd96be80f95ab66f01dfc3a",
+          "product_tool/adapters/lg_documents.py": "3ecf054dc4325cd50f0deae45f4a88d2fcb8e6bc9ecdaea27fb284cb9698b4da",
+          "product_tool/adapters/lg_documents_adapter.py": "995fe1f97a04577f4883d07ea265431b05862894295b72fb310c712efca30941",
+          "product_tool/adapters/lg_global.py": "4b0894b1a927c606c75f8b9aba91493fe0a3adfcd85836b3f537c77ea3ae8e06",
+          "product_tool/adapters/lg_policy.py": "f42f44ed933c8c60825cf53ae01d7c301eed5f94dbad56ec4319ec65cd6c0cbf",
+          "product_tool/adapters/lg_support.py": "042b2ede2ab809e7e4d53b4d1dadda6d51345527af6e3dd4917b7f29c56837be",
+          "product_tool/adapters/playstation.py": "98dd5fa99a2da72ba24c93ac5127b4cb9196485d2ecd63ee745badd3a988768d",
+          "product_tool/adapters/policy_fetch.py": "57d053d284d47190a042e3fcfe95621e4677082a1b2677aaf4e537abd29586ee",
+          "product_tool/adapters/policy_session.py": "3fdfba9fa09524d855d6c94d0990e4c88a35412bda1ce5c239704976950cceb8",
+          "product_tool/adapters/published_page.py": "15075096f82d8a83dc124d8da63d80886672228a2faab99fe972c25466aa09a0",
+          "product_tool/adapters/razer.py": "499932846e6ff69d66378ffb64b4990bdb1b0d190e71dd2a01312b9f4f9c7f32",
+          "product_tool/adapters/samsung.py": "bb106acdc06369700a5cd9b9067208e82799c171032dcf4c53c9f21a1ec80341",
+          "product_tool/adapters/samsung_source.py": "131cbe8cfb7e344899b207a93ce3c0e60d5c7dc924dd10a3d68bda89826145fa",
+          "product_tool/adapters/sitemap_urls.py": "3e70e2e017b4a16c0314eb442d686bd4e1cdf9fb4cd86d789b5ea75c9c105e53",
+          "product_tool/adapters/structured_page.py": "d36c885328b27adbadb0e4dedc3052763dced64f40edaf7b2d56551c39e33410",
+          "product_tool/adapters/sulpak.py": "a6f4332a2180d657836572ffe8abfa030c12330482c4dcccd151d80f76e397bf",
+          "product_tool/adapters/supplier.py": "583f3d2bea283a3d1b5e1efcfddb3ea5f77125afbe6471616b2e4b0abcdcee7a",
+          "product_tool/adapters/xbox.py": "f95ab1c01ba2b525b400ff058e7dafcb6a59c0f6838e08ee189cf1ae30964b1f",
+          "product_tool/adapters/xiaomi.py": "ae4d1df234c5ddd534ce788648885262171661a51c587fbaa5a4d300623e65bc",
+          "product_tool/apple_catalog.py": "957e137a307f35cefe8a79c5df65ebbcbb1edcad6a1cd3359dc282dac94b51d8",
+          "product_tool/apple_identity.py": "b0c870af9c04703b4b95fcb9a6092725845989b7d086f2b09329b98a12f116fe",
+          "product_tool/apple_model_discovery.py": "bde76b4c957fd06a20bccbe6994646be53e69db0fda5a1fd0fa0bf03af16c281",
+          "product_tool/apple_pipeline.py": "076cc0eba88d1b03ce98ef3fa8dc9f4670a26996d85c19583a14ffb83bc33c0c",
+          "product_tool/attribute_lineage.py": "48be0539b259bcc72490decd7b5da87caae26c698d486721d1927d05d2f36210",
+          "product_tool/attribute_projection.py": "c0a2269839920af3cff3a4b19c672dc7d631000607057c8f6e3967a49f60f03d",
+          "product_tool/batch_queue.py": "0a0933b952b739a31fdcce3b76f9eaab2d96a422f84cf5bc14dffaf76217b0bf",
+          "product_tool/bosch_pipeline.py": "d652b38950123c1f3bda9ba1fcbb27ce34f400ae7f71bcfbcaf1230aba3d0d59",
+          "product_tool/bosch_presentation.py": "156eb59e65e26cc509e92d42067dcd1b30426385c856c832ffb455928c4f83a6",
+          "product_tool/bosch_readiness.py": "6024b86d30d371b58f7e284d8bc99b92e1c5ab1fc94e00d2ceacd7399affd921",
+          "product_tool/canonical_attributes.py": "ac500b0c4a255ed0959c855807fec86cc35291cc1606956449b39136acf84fd7",
+          "product_tool/card_evidence.py": "efbc15dd03c75bf43b6312e3209d9b57756f8aecb02dc21f7ed4672071d009fc",
+          "product_tool/card_presentation.py": "ff6eac05f9eed9ad56ed4e4872ee0658c67b087c227352fd5d0e9a33a0de9cd6",
+          "product_tool/census/__init__.py": "7515a593c165cd467f5b4355a3e4da33430eeb6e0a9ecdf76b8d52181796abd8",
+          "product_tool/census/attended_google.py": "d6935c7c379975b86189377e7cdc0ec9a1a571ff9565a77562daad7109a1d02e",
+          "product_tool/census/attended_jbl.py": "3ef1b63d23e8b1c63fc6688feae04a4e0c3361659ad8040a5a7ff2b0c7268ee9",
+          "product_tool/census/attended_psref.py": "cb06bf3351ac4ce8ed95e83119e0596f279aa79af2a483ba5a72277a0b0450ac",
+          "product_tool/census/attended_replay.py": "3b3805c103f2b8a0079c083332451a100aa1b283c1543a6fc06cf1e2af4db2d2",
+          "product_tool/census/attended_support.py": "97dca879cce07f9baf4e4472b7a301dd0975c624635f7b2269f29ebf8f3a0dd7",
+          "product_tool/census/brands.py": "35b69643777475f7918433e3b8002d099d82e6050301030fd84a562ca7d1ac5c",
+          "product_tool/census/browser_contracts.py": "47980ba292b2733f5b4394ed4c8efa44b830c820fc56068dd59e3880cbcaa478",
+          "product_tool/census/browser_projection.js": "7774218b8cf06819116078a790fd38232bf2cbec6d6608052b6c3b1e9b443199",
+          "product_tool/census/browser_projection.py": "187c594d5c25bc3c2f324a35715399f86610b4f77350e85aaf15fb8b62c7ad81",
+          "product_tool/census/browser_resources.py": "332858674d9d3befa68af7c0c35c9f5b85552fe931fb085b4e9e5675fc9d32e2",
+          "product_tool/census/browser_runtime.py": "e811060082f2e762b3832ebc952ce8edcfc81815bfbe54366487cc63e63c8fe0",
+          "product_tool/census/browser_snapshots.py": "3c0b16676b500a3d35ba874e82f05b42a283104f20cbd990072e6ee236de7d42",
+          "product_tool/census/browser_strategy.py": "7779b2f8478d0f560cff445613889bbdea24554c2b3866980bd9fc0b32ebe9fd",
+          "product_tool/census/browser_worker.py": "1c9696df49784f04d4c45503be0d268a377e741986387672d5ddbcbfb6e6842c",
+          "product_tool/census/candidates.py": "0f167564d888139340d47f99c8b590864941331df75fc559ee7d15eda82d534d",
+          "product_tool/census/catalog.py": "0f6d83c588ce01b3cfcbb4a765e76eead3583dd865d959ea9a9612f21d7d95d2",
+          "product_tool/census/catalog_identity.py": "b6fc6796da0c87bf873d3f19dd646f123efbe179eee029ab73d2776cf47a633d",
+          "product_tool/census/discovery.py": "ebc0b52030f836853f8f2c08af2fc1d39a54ca8910395a756a9c9b8edd6164cf",
+          "product_tool/census/endpoint_probe.py": "6c9dd046fd5f583cefdcce1e0a75295bed224c188d39ca9ea163059520e284ee",
+          "product_tool/census/finalize_v7.py": "2a6d4c09efe38ac2f82895f86ae8a22a3927670afcfe3c773b031fcdb99ef0d7",
+          "product_tool/census/fingerprint.py": "53a4b4146a6a46ad10e2eb7c70ef93400bd8c101eb8868f146de3dc471c090c5",
+          "product_tool/census/http_domain_discovery.py": "9038155be6261c2a31d2d798d4352876e3503830a2c0c1e713de0c77f0cc9fa0",
+          "product_tool/census/internal_search_strategy.py": "8913e9731755281407a444aa3cb4f5d71fccd43facd8a228866af37b196c5e66",
+          "product_tool/census/models.py": "d2492eb63f714dd59b4863ec4baa299823ccc8b4a8ab78f744ebc40bd568889f",
+          "product_tool/census/multi_domain.py": "d7189cd52234c9f449f94f3c9d8a19b43174246b799422ffc91ce664725a7514",
+          "product_tool/census/multi_source_fields.py": "cae23b1982c673e32582f745776caa4e6481262b13d88c3e42f3bdf25376f041",
+          "product_tool/census/official_domains.py": "aee4f5f6424ef1dc374180dbcedeee0ea80a14ef2e2df0d78289697801074c00",
+          "product_tool/census/old_parser_google.py": "9da1b970f7d27c4c4fb255fb42e93b53c63f1a030e66c41da703f45e1a94846d",
+          "product_tool/census/probe.py": "7e5ce446e5ac05ab8ed5dfb2b8c2f768ba594c3539d22a5cdb07814512e126a3",
+          "product_tool/census/public_browser.py": "217e68c06b640aa36e04e0318510d203cc89789e3b64e77c7ace833da88cfc6a",
+          "product_tool/census/registry.py": "b4f2917a9dd249a0cfa0df23092b8c328dd51cde2d45606d581dc725b97189fb",
+          "product_tool/census/report_v5_1.py": "1bcb346c04b8b3e6f1336beb6e6fcd6604f3fe5719a4c96ddc188fcb78527fbc",
+          "product_tool/census/report_v6.py": "d5c4b4464a96a6a577504e5b0c393d836082f4f9edfe6c76a1e200c322bfe24a",
+          "product_tool/census/report_v7.py": "fedd5b88b658d1e757081ae8a48b7e0bd061abb032e3d70e6e27bb32a3380b7e",
+          "product_tool/census/report_v71.py": "ae3a739b9bfc1c6385c3a9682781919d14c137521fae593d56c170fb5d35072a",
+          "product_tool/census/reprocess_v61.py": "9f7d36f1c360ca7c355d96f920de7dd51f975c022b9404dbe74c27919c9cccd1",
+          "product_tool/census/research.py": "b1c963313ffc4a9f093d33e20eb893259deca25775890737ed1d8decbcd59ea1",
+          "product_tool/census/runner.py": "cda9197ea67ebc42387fe67e7e7849f3ea9990df1aed008fedce7ff3ca7b30c7",
+          "product_tool/census/runner_v2.py": "49b1368cc6dfde60669229229a60579046f0b6beef4ca63ecec545757ecac743",
+          "product_tool/census/runner_v3.py": "7fe38c9a273da5bfdc00bb4f9395f78bd2071213df5578aa596ae9e6712a1858",
+          "product_tool/census/runner_v4.py": "53518406df3a5a9efda5159a9135c442a341385b674bf71b11fbbdc1fbcd259f",
+          "product_tool/census/runner_v5.py": "d032d7391f1343327f0a086fb829a659d66c7d8086dbe5ec0c0cb73c07d25e52",
+          "product_tool/census/runner_v5_1.py": "b19ea7cbbe4978535c6eecd2cb1641b44a1fb3dd91fef9821f99778ce7580b0b",
+          "product_tool/census/runner_v6.py": "df1b5065c7e6e4589cbf17907131e0d4bcf1baae7ab9a29ca24603b6aa9aa5d2",
+          "product_tool/census/runner_v61.py": "2e30784ff6c70a43f7eb254c9e6c6e8dbbc971524184d6c13f3afc3868fbb7be",
+          "product_tool/census/runner_v7.py": "99bb2710812e0afbc790ffd51b018350d1cb56bc6326d97b08223c04e5b90121",
+          "product_tool/census/runner_v71.py": "44c7328ad96debace038824e1b6e9bf95086f40054a1be426b4b37a76e682b3c",
+          "product_tool/census/scoped_access.py": "7b174824d9bfd23e18cee28388fa5ce66ec53eb3da76ac1f838d1620e28a0ad5",
+          "product_tool/census/search_results.py": "a872264be30dccb9c7f6e04c64c8714a8628173a3b78c6f156cf1a5af348fb3f",
+          "product_tool/census/search_routes.py": "a0de22354617d10f46ed564bf134dff875be881b48fbad76a4571aacd5c20bac",
+          "product_tool/census/search_snapshots.py": "a801d03c9b454bfc1523af1dbf2d8eae4444700abf964bfd363481a45ef85464",
+          "product_tool/census/sitemap_strategy.py": "b437743a1401c0a48168516ced530e63cb9a1db35e23380ea9e3597d346611fd",
+          "product_tool/census/source_fingerprint.py": "5a407e66a9d9630955a36c9a4801b912364473b4338f0f80d78dad65757c853e",
+          "product_tool/census/structural_contracts_v8.py": "857e085d407b211fafd31137fb27c0649461bc2a4b75daac8f426d43196ad21b",
+          "product_tool/census/structural_inventory_v8.py": "b29520424b9e97b81cb677cd4b401cc20d8f1143b5282b243e7b7692bfb7254d",
+          "product_tool/census/structural_report_v8.py": "9d4357d08cac3cf51ebf8d355b348ffed465f269f07644389713e52fdb027873",
+          "product_tool/census/structural_runner_v8.py": "78d4e1a20e076c57b510467411564389a6453e51205e35a9d78a5833e1fa8f4c",
+          "product_tool/census/structural_schema_v8.py": "f00432f0bd540dacbd6b846f606146cf0ace53f6c458e00b699b3d15c6578e24",
+          "product_tool/census/structured_identity_v71.py": "89cb9a64e9c7d966094a0b8a340fc16c8f3f1f50841470befd7da028516acbd2",
+          "product_tool/coverage/__init__.py": "8a5e9feb58f005ba7e648a4c28a67b59dd1eef84c157237892bc9ab82b4bf0e5",
+          "product_tool/coverage/__main__.py": "6fe69f1c941e818e98a1b3857ed51b8f54626158ec893121c5c919f6babfa150",
+          "product_tool/coverage/catalog_units.py": "66af248b9c8770985acb5a4b3711285b702e1764458786f659d2a2bab69d825a",
+          "product_tool/coverage/classify.py": "4b8f057dceeeb6a79a4023266fab89c73310f45af100cc52e70618d659adc2e9",
+          "product_tool/coverage/executor.py": "b978399ec5d06bb87a0b6d3aba245fa3507bbe5cd25a2e32d926d189f76d3f97",
+          "product_tool/coverage/facts.py": "116f7d911e628b96d7eabbecbad6926021e06ce733f82566ed7d288fdc248921",
+          "product_tool/coverage/planner.py": "4b52a8437160ff358e1e861925a21eb96f8571f45d2f865d0bb1484e260bda8a",
+          "product_tool/dealer_fallback.py": "384b40767acb01172345ed8dab46a0688bb2ba1d2f8a291716070c5eded335d2",
+          "product_tool/discovery_trace.py": "1a649f830d2a23ded108dcd9053206de6da7aa4c06ad3c0c8d12394e816bf38e",
+          "product_tool/display.py": "a63555ac8888ed75bfc38c49d49ceb2c79a3aa4ff71ed2d84e5ce5b1f1b32b5f",
+          "product_tool/dreame_page.py": "4e80924d3b933e53b930a008056938bd0acaf532bd41231fc03a3c649ef0e442",
+          "product_tool/dreame_presentation.py": "079dff446c1f582ef3002479da9066ea4e687774b70fbb14b9045bb43188cd99",
+          "product_tool/electrolux_page.py": "b223cd191150a60daa2ee9d523a56c297bb5f769ccd283058455998765475894",
+          "product_tool/electrolux_pipeline.py": "7e7ee9396efd8c977e908c4176b825b9b34a385529cc9913619bec527fa64316",
+          "product_tool/exporter.py": "ec6d015cfcc04d77a5087adeb35e9410393f9c9477900340c6b10c95dc36f268",
+          "product_tool/fetch_history.py": "ac56f7b7ac480c718a42cd74a8b33d0faa8d5226bd21aeb3f579011192c28827",
+          "product_tool/hyperx_audit.py": "0184a7ddaff4e203778e32fd228c11abda6fdec7b8ca1ba9b268f36eee197733",
+          "product_tool/hyperx_page.py": "c6740984c9786a95abdac8e1c63e6dcda4c04ef90dbe02d82b058de5ca646047",
+          "product_tool/hyperx_presentation.py": "520971733fb916d195248f90beb125d6d11584e7dc5d26210508f4e44c09d8fb",
+          "product_tool/identity.py": "a9ba9711c5a6881d0999aa5c46d3307a1f0006eaf13f2c942bfface6ab1add33",
+          "product_tool/importer.py": "a80ecf8b54e4b8b5696e78d89d4daaf314fab45c856392ef3d9f728c483e88c2",
+          "product_tool/input_interpretation.py": "d0e0fdb73befd34fa86a46de760daf728ff1324b6a3b40d876c03af7cc01ab1f",
+          "product_tool/jbl_identity.py": "3442c7cfdf41d0094ffd03eeb5708ac10bfa3db03124b9eb105804921d07b8b0",
+          "product_tool/jbl_pipeline.py": "abf23a94a42970d22443609fef70dac645e9bdf543f31190040a69bfd50b2dd2",
+          "product_tool/jbl_presentation.py": "e8a3090a258da7ed154141d3da93c7d87f153b2754194f24e83c031e9cf77ecb",
+          "product_tool/jobs.py": "e2198f3d1a0f5cffbc7235c88ec6e98ddb393ecfdec3bc97bed9f093c5dc2932",
+          "product_tool/lenovo_pipeline.py": "ab02e1e1f5fc89cc79504b79f51ab46ec53d76262fc4b51c31385dd765db3c3c",
+          "product_tool/lenovo_presentation.py": "caed92a005c86bb84fa896dc4f38d8e183874598ec3e21415fd9f717de7cb5fc",
+          "product_tool/lg_batch.py": "692c1349b7a57956ca0ace495f4e085c59dd3b8a63084ed9c8350e7274753c4b",
+          "product_tool/lg_discovery_pipeline.py": "d627ad3b28ec58c9bed58f96e1913f2a6990211119a1b80deb369ceae01691c7",
+          "product_tool/lg_identity.py": "71caac332c61563907d77bd7dff79fe50e80623859503181db6a67d7d96b2db2",
+          "product_tool/lg_presentation.py": "288450abcac4e26254363cba0007f016e16853ba9894f6e6c7dc006985413061",
+          "product_tool/lg_sitemap_discovery.py": "cd03086d2f4f3d3912754b106f850287a3e9f72400fad54190e3e6a96363cfee",
+          "product_tool/manual_status.py": "cd40353696c7906ba0d851e988a1878ea12daa83202aa1bd9fd166160d3009af",
+          "product_tool/migrations.py": "16f97dbe341a03bf28b52f365225ca275f473aa169ef7c4bd930615f3ab54f8f",
+          "product_tool/normalization.py": "4755a2f4b50475a670181192aebe50820802c73c14412cfea01473c97a031b4d",
+          "product_tool/offline_guard.py": "81877a703b2c4fd52759959271e2984faa9deffbef996e568b3b31336d45f24d",
+          "product_tool/photo_inventory.py": "2f52c20ed00b016725f350dcf544b5b70d83d6b298c4d166bb2a1f789c8ee38f",
+          "product_tool/photo_metadata.py": "8e8dbc08cbde509e2ada29dbeea9c29cabb37ade863bed1d4c976278e31eb7d1",
+          "product_tool/playstation_discovery.py": "637ebe0d296fcda0db14ae986c2e8e7504bd137c5ccd35db4220ac29213e91bc",
+          "product_tool/playstation_identity.py": "3bd0086aea1b5b3ca683e8d016170715d3ba64e932a4249584dfab3962d79e8f",
+          "product_tool/playstation_lookup.py": "1d578a231816e2a72cfc4e6046176791b29010ffcf7cf3b49f6e4be0aeab453d",
+          "product_tool/playstation_page.py": "1e4e55af5b910d1aade76d8328dd907c56e92001f85da18b9769919609de2952",
+          "product_tool/playstation_pipeline.py": "7b9e0e5c866891569e7f0db98a7a99b9c91cf0834baeaa3f36e58d5b793a4d83",
+          "product_tool/playstation_specs.py": "deac88c68a841c119013e0f79cf92717bf6b0d5e508fc7f554e6f98a430b2fa9",
+          "product_tool/policy.py": "ec4473f7ef85049d482b3d972773c4e30749e30f2b44ccfab38c9c27f154ff57",
+          "product_tool/product_description.py": "6ac4f9dc4a8dbb66f02bfe32dce27e32a1017c00b8b92565ad4a2bc5e277d7b1",
+          "product_tool/product_input.py": "0e373bb6941addf1e41a19e787b48457ab697aec0a920b7580ee07452cab1178",
+          "product_tool/razer_identity.py": "948b0c77c3cf4d69478e33a212368ff3747f15d937a6f791ad6703e04da0c3d1",
+          "product_tool/razer_page.py": "77804fd7b581c79bae4fddb66968faa3c7e9e95731fdba4a60b512ce6b03a3c6",
+          "product_tool/razer_pipeline.py": "1ae4b8366739e8d5bf303ffb055011213fcfa4569c9a75d9b652aad2d8d07ead",
+          "product_tool/razer_presentation.py": "2e6574eba63d40d5f317ceda6aea2ea75774fe7cfc18bfeeb4a7b0d120becb03",
+          "product_tool/razer_store.py": "fe6f61074a4120c0434575a29b4cf6ea2101530918345cd63b5d196cb29d358a",
+          "product_tool/readiness.py": "ee6e75bab10a8aaa3ac679677318993fa9c578e9c8da16130bb3144668bedf6a",
+          "product_tool/resolution.py": "19aa3e8130ab955483d071dd545b7ff986d612b34375e6f44927c18349e29d27",
+          "product_tool/runtime_diagnostics.py": "35b09f15d21cfbae38c10cfc912a05dd88e1c2327f64e982cd311976ea0726ba",
+          "product_tool/samsung_pipeline.py": "50249cfe8255ea312bd49f94e5f09f6435d9d1a4871768a3595080a1814b2d62",
+          "product_tool/samsung_readiness.py": "320d8dcd2bde904af2d36da9bac7c5274f7b44acfadf658fb4fb52a0a196c219",
+          "product_tool/semantic_decomposition.py": "2c3132b6450c4aa2de60860be462fb86991c1477230045ceb1f6cbec8b92b8d6",
+          "product_tool/source_types.py": "80bf58f2f815ce4f43fa217ad2e5b5269b2aaec11ac99c8f1433a784486cdd21",
+          "product_tool/sources.py": "8b496ee3e16dfe5afca6ba443b2d12330f52ba03949fa6218bac063650b37b74",
+          "product_tool/static/attribute_filter.js": "28887bbad17bba3e96db580f7530768e41c6ed63caa426e9f471214e380b41d9",
+          "product_tool/static/photo_lightbox.js": "d844a9168c236866626c5f609e952d8dd33c39700f192b0c1ee41d55dc79d72f",
+          "product_tool/static/styles.css": "31f731b76d5f1044ccce68bdca1f4b3d95f250283a4eb0441b9c8f1937248d3a",
+          "product_tool/storage.py": "4a38309ccbc5fe4b6d7a42509f9f593a52db72381ba484fe04b2686846038f58",
+          "product_tool/templates/base.html": "5fdc72bb1ba6c21b4ae45fd05d56b386ee56f7fc3a0334d0be5fd008d6b758c0",
+          "product_tool/templates/batch.html": "a5a41f38178dff2c75a6c3988b75f80665100a46e8119b20e248acdfa5427b63",
+          "product_tool/templates/card_attributes.html": "97dc3967320ed899ccd6a288aaa8c705799801392e693fe7e39f622ceec796e0",
+          "product_tool/templates/error.html": "b6365864f4e8a4ce664dd3222865f17dab6d4cb368ae819c1a10c1a73532dd93",
+          "product_tool/templates/index.html": "3e99fe6c750bdc3e68360378d01158dd62efb9be7dfd611f9785bd123d33e990",
+          "product_tool/templates/photo_tile.html": "f248813459a991669128614ca7181ef676fee41b0b88eff5f88a5685c393284d",
+          "product_tool/templates/preview.html": "e04791dea060f7dfd18c8a80c8971d728d88fa66244b393e7118ef1bb494d725",
+          "product_tool/templates/product.html": "5f57b77fdb724d404c61ef33bfaa89c7aca7666d5e6d57b2ad9d51e62093d4c4",
+          "product_tool/value_localization.py": "78ddcf662addfb6b3c8659e231e6b769c3e87e1000fc50b4ab54439e3ff504c0",
+          "product_tool/web.py": "b6eea83c16f5804acc2c832df1b1752a1ec0e5a99adcdd3f479f014054122432",
+          "product_tool/worker.py": "5d7f58656755053b7f0fb5a110b2d840dc44f5898fe612c4a20db74a5260a07e",
+          "product_tool/xbox_documents.py": "2f43eec2b31108d30c27e059d0444b5c2852ff1bec510c16eb807516c11f8ddd",
+          "product_tool/xbox_identity.py": "3fb6ed23682d51084fb3836a76b1a9db3965134618db17f7cacabcd29bb9a101",
+          "product_tool/xbox_page.py": "cfa2b8fa1de61f462c00136de5f53ad48f6109263e92cc3b75c40bc0750af8a7",
+          "product_tool/xbox_pipeline.py": "ba50ef4df46a749bd7a7b1ce22a8c00bead92a284e04a600201c1c86edef49e1",
+          "product_tool/xiaomi_identity.py": "8d7249119ddae992674c9db508defda0122d64cb370feef55520502f48f631b5",
+          "product_tool/xiaomi_page.py": "94db0e71375159ed2ee9689e160ebf57254de41fa96457d8b5b6be3b677bb498",
+          "product_tool/xiaomi_pipeline.py": "4f1c62215c827895ca296c493eb7f6ab3f563e430e14032ce0e05393a2089cce",
+          "product_tool/xiaomi_presentation.py": "f5ce2875fe805d66aa7e392d794a075a6e14f343aa10db944d0173bfd06aa4d3"
+        },
+        "source_fingerprint": "2db9901b64e1f2f69e647b64e85ba4fb218adaee3aa2a1435817aba8713f63cd",
+        "started_at": "2026-10-16T12:06:58.663678+00:00"
+      },
+      "stages": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "timestamp": "2026-10-16T12:09:32.089250+00:00"
+    },
+    {
+      "discovery_name": "Tune 520BT [color=White]",
+      "event": "input_interpretation",
+      "interpretation": {
+        "brand": "JBL",
+        "category": "Наушники",
+        "configuration": {
+          "color": {
+            "confidence": "high",
+            "raw": "White",
+            "source": "product_name",
+            "value": "White"
+          }
+        },
+        "configuration_hints": {
+          "color": "White"
+        },
+        "fields": {
+          "brand": {
+            "confidence": "high",
+            "raw": "JBL",
+            "source": "brand_column",
+            "value": "JBL"
+          },
+          "category": {
+            "confidence": "high",
+            "raw": "Наушники",
+            "source": "product_name",
+            "value": "Наушники"
+          },
+          "model": {
+            "confidence": "high",
+            "raw": "Tune 520BT",
+            "source": "product_name",
+            "value": "Tune 520BT"
+          },
+          "supplier_article": {
+            "confidence": "high",
+            "raw": "SUP-TUNE520-WH",
+            "source": "article_column",
+            "value": "SUP-TUNE520-WH"
+          }
+        },
+        "model": "Tune 520BT",
+        "model_candidates": [
+          "Tune 520BT"
+        ],
+        "original_name": "Наушники Tune 520BT White",
+        "search_queries": [
+          {
+            "purpose": "model",
+            "query": "Tune 520BT",
+            "source": "product_name"
+          },
+          {
+            "purpose": "article",
+            "query": "SUP-TUNE520-WH",
+            "source": "article_column"
+          },
+          {
+            "purpose": "normalized_model",
+            "query": "Tune520BT",
+            "source": "product_name"
+          },
+          {
+            "purpose": "original_name",
+            "query": "Наушники Tune 520BT White",
+            "source": "product_name"
+          }
+        ],
+        "supplier_article": "SUP-TUNE520-WH",
+        "version": "title_v1",
+        "warnings": []
+      },
+      "queries": [
+        {
+          "purpose": "model",
+          "query": "Tune 520BT",
+          "source": "product_name"
+        },
+        {
+          "purpose": "article",
+          "query": "SUP-TUNE520-WH",
+          "source": "article_column"
+        },
+        {
+          "purpose": "normalized_model",
+          "query": "Tune520BT",
+          "source": "product_name"
+        },
+        {
+          "purpose": "original_name",
+          "query": "Наушники Tune 520BT White",
+          "source": "product_name"
+        }
+      ],
+      "supplier_article": "SUP-TUNE520-WH",
+      "timestamp": "2026-10-16T12:09:32.094565+00:00"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "input_configuration": {
+        "color": "White"
+      },
+      "provider": "normalization",
+      "query": "Tune 520BT",
+      "reason": "Extracted model first; supplier article kept separate",
+      "region": "",
+      "source_type": "query_plan",
+      "supplier_article": "SUP-TUNE520-WH",
+      "timestamp": "2026-10-16T12:09:32+00:00",
+      "url": ""
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "provider": "official_search_form",
+      "query": "Tune 520BT",
+      "reason": "HTTP 200; published search form",
+      "region": "id",
+      "search_endpoint": "https://id.jbl.com/search",
+      "source_type": "catalog",
+      "timestamp": "2026-10-16T12:09:34+00:00",
+      "url": "https://id.jbl.com/"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "model_relation": "discovery_only",
+      "provider": "regional_official_search",
+      "query": "Tune 520BT",
+      "reason": "HTTP 404; official search is discovery only",
+      "region": "id",
+      "source_type": "search",
+      "timestamp": "2026-10-16T12:09:35+00:00",
+      "url": "https://id.jbl.com/search?q=Tune%20520BT",
+      "variant_relation": "unproven"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "reason": "Network request failed",
+      "region": "ru",
+      "source_type": "pdp",
+      "timestamp": "2026-10-16T12:09:36+00:00",
+      "url": "https://ru.jbl.com/TUNE520BT.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "reason": "Network request failed",
+      "region": "ru",
+      "source_type": "pdp",
+      "timestamp": "2026-10-16T12:09:37+00:00",
+      "url": "https://ru.jbl.com/SUP-TUNE520-WH.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "official_sitemap",
+      "query": "SUP-TUNE520-WH",
+      "reason": "[policy_host_stopped]",
+      "region": "us",
+      "source_type": "sitemap",
+      "timestamp": "2026-10-16T12:09:40+00:00",
+      "url": "https://www.jbl.com/sitemap_index.xml"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "reason": "[policy_host_stopped]",
+      "region": "uk",
+      "source_type": "pdp",
+      "timestamp": "2026-10-16T12:09:41+00:00",
+      "url": "https://uk.jbl.com/TUNE520BT.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "reason": "[policy_host_stopped]",
+      "region": "uk",
+      "source_type": "pdp",
+      "timestamp": "2026-10-16T12:09:41+00:00",
+      "url": "https://uk.jbl.com/SUP-TUNE520-WH.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "reason": "[policy_host_stopped]",
+      "region": "de",
+      "source_type": "pdp",
+      "timestamp": "2026-10-16T12:09:43+00:00",
+      "url": "https://de.jbl.com/TUNE520BT.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "reason": "[policy_host_stopped]",
+      "region": "de",
+      "source_type": "pdp",
+      "timestamp": "2026-10-16T12:09:43+00:00",
+      "url": "https://de.jbl.com/SUP-TUNE520-WH.html"
+    },
+    {
+      "accepted": false,
+      "event": "jbl_discovery",
+      "identity_relation": "unknown",
+      "model_relation": "unproven",
+      "provider": "regional_exact",
+      "query": "TUNE520BT",
+      "reason": "Base name / request URL does not establish model",
+      "region": "id",
+      "source_type": "pdp",
+      "timestamp": "2026-10-16T12:09:45+00:00",
+      "url": "https://id.jbl.com/over-ear-headphones/TUNE520BT.html",
+      "variant_relation": "model_only"
+    },
+    {
+      "accepted": true,
+      "event": "jbl_discovery",
+      "inventory_url": "https://id.jbl.com/over-ear-headphones/TUNE520BT.html",
+      "provider": "official_master_inventory",
+      "published_sku": "JBLT520BTWHT",
+      "query": "Tune 520BT",
+      "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+      "region": "id.jbl.com",
+      "source_type": "pdp",
+      "supplier_article": "SUP-TUNE520-WH",
+      "timestamp": "2026-10-16T12:09:48+00:00",
+      "url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html"
+    },
+    {
+      "accepted": true,
+      "event": "source_extraction_result",
+      "identity": "model_confirmed",
+      "photos": 12,
+      "provider": "jbl",
+      "raw_facts": 36,
+      "reason": "{\"model_relation\": \"exact_model\", \"variant_relation\": \"model_color_confirmed\", \"requested_components\": {\"model_code\": \"JBLT520BT\", \"color\": \"White\", \"region\": \"\", \"full_code\": \"SUP-TUNE520-WH\"}, \"returned_components\": {\"model_code\": \"JBLT520BT\", \"color\": \"White\", \"region\": \"\", \"full_code\": \"JBLT520BTWHT\"}, \"exact_sku\": false, \"model_confirmed\": true, \"input_model\": \"Tune 520BT\", \"published_model\": \"Tune 520BT\", \"supplier_article\": \"SUP-TUNE520-WH\", \"model_source\": \"official_product_name_and_coherent_sku_mpn\", \"supplier_sku_confirmed\": false, \"relation\": \"other_variant\", \"requested\": \"SUP-TUNE520-WH\", \"returned_sku\": \"JBLT520BTWHT\", \"returned_mpn\": \"JBLT520BTWHT\", \"data_pid\": \"\", \"model\": \"JBL Tune 520BT\", \"reason\": \"Official coherent SKU/MPN confirms same model; variant evidence separate\"}",
+      "timestamp": "2026-10-16T12:09:48.678924+00:00",
+      "url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html"
+    },
+    {
+      "conflicts": 0,
+      "event": "resolution_completed",
+      "facts": 36,
+      "resolved": 36,
+      "timestamp": "2026-10-16T12:09:52.835527+00:00"
+    }
+  ],
+  "events": [
+    {
+      "id": 2368,
+      "job_id": "ddf295019549472693a7841858ead47d",
+      "stage": null,
+      "level": "info",
+      "message": "Задание добавлено в очередь.",
+      "source_url": "",
+      "created_at": "2026-10-16T12:07:26+00:00"
+    },
+    {
+      "id": 2409,
+      "job_id": "ddf295019549472693a7841858ead47d",
+      "stage": null,
+      "level": "info",
+      "message": "Worker начал обработку.",
+      "source_url": "",
+      "created_at": "2026-10-16T12:09:32+00:00"
+    },
+    {
+      "id": 2410,
+      "job_id": "ddf295019549472693a7841858ead47d",
+      "stage": 1,
+      "level": "info",
+      "message": "{\"model_relation\": \"exact_model\", \"variant_relation\": \"model_color_confirmed\", \"requested_components\": {\"model_code\": \"JBLT520BT\", \"color\": \"White\", \"region\": \"\", \"full_code\": \"SUP-TUNE520-WH\"}, \"returned_components\": {\"model_code\": \"JBLT520BT\", \"color\": \"White\", \"region\": \"\", \"full_code\": \"JBLT520BTWHT\"}, \"exact_sku\": false, \"model_confirmed\": true, \"input_model\": \"Tune 520BT\", \"published_model\": \"Tune 520BT\", \"supplier_article\": \"SUP-TUNE520-WH\", \"model_source\": \"official_product_name_and_coherent_sku_mpn\", \"supplier_sku_confirmed\": false, \"relation\": \"other_variant\", \"requested\": \"SUP-TUNE520-WH\", \"returned_sku\": \"JBLT520BTWHT\", \"returned_mpn\": \"JBLT520BTWHT\", \"data_pid\": \"\", \"model\": \"JBL Tune 520BT\", \"reason\": \"Official coherent SKU/MPN confirms same model; variant evidence separate\"}",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "created_at": "2026-10-16T12:09:52+00:00"
+    },
+    {
+      "id": 2411,
+      "job_id": "ddf295019549472693a7841858ead47d",
+      "stage": null,
+      "level": "info",
+      "message": "JBL: Готова. ",
+      "source_url": "",
+      "created_at": "2026-10-16T12:09:52+00:00"
+    }
+  ],
+  "sources": [
+    {
+      "id": 445,
+      "product_id": 152,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "found_model": "JBLT520BTWHT",
+      "match_level": "model_confirmed",
+      "evidence": "{\"model_relation\": \"exact_model\", \"variant_relation\": \"model_color_confirmed\", \"requested_components\": {\"model_code\": \"JBLT520BT\", \"color\": \"White\", \"region\": \"\", \"full_code\": \"SUP-TUNE520-WH\"}, \"returned_components\": {\"model_code\": \"JBLT520BT\", \"color\": \"White\", \"region\": \"\", \"full_code\": \"JBLT520BTWHT\"}, \"exact_sku\": false, \"model_confirmed\": true, \"input_model\": \"Tune 520BT\", \"published_model\": \"Tune 520BT\", \"supplier_article\": \"SUP-TUNE520-WH\", \"model_source\": \"official_product_name_and_coherent_sku_mpn\", \"supplier_sku_confirmed\": false, \"relation\": \"other_variant\", \"requested\": \"SUP-TUNE520-WH\", \"returned_sku\": \"JBLT520BTWHT\", \"returned_mpn\": \"JBLT520BTWHT\", \"data_pid\": \"\", \"model\": \"JBL Tune 520BT\", \"reason\": \"Official coherent SKU/MPN confirms same model; variant evidence separate\"}",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "error": "",
+      "description": "",
+      "photos": []
+    }
+  ],
+  "facts": [
+    {
+      "id": 13709,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth",
+      "raw_value": "Yes",
+      "normalized_name": "bluetooth",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13692,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth frequency",
+      "raw_value": "2.4 GHz – 2.4835 GHz",
+      "normalized_name": "bluetooth_frequency",
+      "normalized_value": "2.4 ghz – 2.4835 ghz",
+      "unit": "",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null
+    },
+    {
+      "id": 13693,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth profiles",
+      "raw_value": "HFP 1.7.2, AVRCP 1.6.2, A2DP 1.3.2",
+      "normalized_name": "bluetooth_profiles",
+      "normalized_value": "hfp 1.7.2, avrcp 1.6.2, a2dp 1.3.2",
+      "unit": "",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null
+    },
+    {
+      "id": 13694,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth transmitted modulation",
+      "raw_value": "GFSK, π/4-DQPSK, 8-DPSK",
+      "normalized_name": "bluetooth_transmitted_modulation",
+      "normalized_value": "gfsk, π/4-dqpsk, 8-dpsk",
+      "unit": "",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null
+    },
+    {
+      "id": 13695,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth transmitter power",
+      "raw_value": "6 dBm (E.I.R.P)",
+      "normalized_name": "bluetooth_transmitter_power",
+      "normalized_value": "6 dbm (e.i.r.p)",
+      "unit": "",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null
+    },
+    {
+      "id": 13691,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Bluetooth version",
+      "raw_value": "5.3",
+      "normalized_name": "bluetooth_version",
+      "normalized_value": "5.3",
+      "unit": "",
+      "section": "Spesifikasi Kontrol dan Koneksi",
+      "value_cell": null
+    },
+    {
+      "id": 13699,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Built-in Microphone",
+      "raw_value": "Yes",
+      "normalized_name": "built_in_microphone",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13696,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Charging time (hours from empty)",
+      "raw_value": "2",
+      "normalized_name": "charging_time_hours_from_empty",
+      "normalized_value": "2",
+      "unit": "",
+      "section": "Baterai",
+      "value_cell": null
+    },
+    {
+      "id": 13676,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Driver sensitivity at 1kHz/1mW (dB)",
+      "raw_value": "102",
+      "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+      "normalized_value": "102",
+      "unit": "",
+      "section": "Spesifikasi Audio",
+      "value_cell": null
+    },
+    {
+      "id": 13674,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Driver size (mm)",
+      "raw_value": "33",
+      "normalized_name": "driver_size_mm",
+      "normalized_value": "33",
+      "unit": "",
+      "section": "Spesifikasi General",
+      "value_cell": null
+    },
+    {
+      "id": 13678,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Dynamic frequency response range (Hz)",
+      "raw_value": "20 Hz - 20 kHz",
+      "normalized_name": "dynamic_frequency_response_range_hz",
+      "normalized_value": "20 hz - 20 khz",
+      "unit": "",
+      "section": "Spesifikasi Audio",
+      "value_cell": null
+    },
+    {
+      "id": 13700,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Foldable",
+      "raw_value": "Yes",
+      "normalized_name": "foldable",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13701,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Hands Free Call",
+      "raw_value": "Yes",
+      "normalized_name": "hands_free_call",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13677,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Impedance (ohms)",
+      "raw_value": "30",
+      "normalized_name": "impedance_ohms",
+      "normalized_value": "30",
+      "unit": "",
+      "section": "Spesifikasi Audio",
+      "value_cell": null
+    },
+    {
+      "id": 13707,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "JBL Headphone App",
+      "raw_value": "Yes",
+      "normalized_name": "jbl_headphone_app",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13702,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "JBL Pure Bass Sound",
+      "raw_value": "Yes",
+      "normalized_name": "jbl_pure_bass_sound",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13689,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Kedalaman (cm)",
+      "raw_value": "1.7",
+      "normalized_name": "kedalaman_cm",
+      "normalized_value": "1.7",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13684,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Kedalaman (in)",
+      "raw_value": "0.7",
+      "normalized_name": "kedalaman_in",
+      "normalized_value": "0.7",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13686,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Lebar (cm)",
+      "raw_value": "7.3",
+      "normalized_name": "lebar_cm",
+      "normalized_value": "7.3",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13681,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Lebar (in)",
+      "raw_value": "2.9",
+      "normalized_name": "lebar_in",
+      "normalized_value": "2.9",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13687,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Lebar Internal (cm)",
+      "raw_value": "3.2",
+      "normalized_name": "lebar_internal_cm",
+      "normalized_value": "3.2",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13682,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Lebar Internal (in)",
+      "raw_value": "1.3",
+      "normalized_name": "lebar_internal_in",
+      "normalized_value": "1.3",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13703,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Multi-Point Connection",
+      "raw_value": "Yes",
+      "normalized_name": "multi_point_connection",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13675,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Number of Microphones",
+      "raw_value": "1",
+      "normalized_name": "number_of_microphones",
+      "normalized_value": "1",
+      "unit": "",
+      "section": "Spesifikasi General",
+      "value_cell": null
+    },
+    {
+      "id": 13704,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "On-ear",
+      "raw_value": "Yes",
+      "normalized_name": "on_ear",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13708,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Rechargable battery",
+      "raw_value": "Yes",
+      "normalized_name": "rechargable_battery",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13705,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Speed charge",
+      "raw_value": "Yes",
+      "normalized_name": "speed_charge",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13685,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Tinggi (cm)",
+      "raw_value": "3.2",
+      "normalized_name": "tinggi_cm",
+      "normalized_value": "3.2",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13680,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Tinggi (in)",
+      "raw_value": "1.3",
+      "normalized_name": "tinggi_in",
+      "normalized_value": "1.3",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13688,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Tinggi Internal (cm)",
+      "raw_value": "3.2",
+      "normalized_name": "tinggi_internal_cm",
+      "normalized_value": "3.2",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13683,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Tinggi Internal (in)",
+      "raw_value": "1.3",
+      "normalized_name": "tinggi_internal_in",
+      "normalized_value": "1.3",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13698,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Voice Aware",
+      "raw_value": "Yes",
+      "normalized_name": "voice_aware",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    },
+    {
+      "id": 13697,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Waktu putar maksimum (jam)",
+      "raw_value": "57",
+      "normalized_name": "waktu_putar_maksimum_jam",
+      "normalized_value": "57",
+      "unit": "",
+      "section": "Baterai",
+      "value_cell": null
+    },
+    {
+      "id": 13690,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Weight (g)",
+      "raw_value": "157",
+      "normalized_name": "weight_g",
+      "normalized_value": "157",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13679,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Weight (oz)",
+      "raw_value": "5.54",
+      "normalized_name": "weight_oz",
+      "normalized_value": "5.54",
+      "unit": "",
+      "section": "Ukuran",
+      "value_cell": null
+    },
+    {
+      "id": 13706,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "site_name": "JBL Official",
+      "raw_name": "Wireless",
+      "raw_value": "Yes",
+      "normalized_name": "wireless",
+      "normalized_value": "true",
+      "unit": "bool",
+      "section": "Fitur",
+      "value_cell": null
+    }
+  ],
+  "canonical": [
+    {
+      "normalized_name": "bluetooth",
+      "sources": {
+        "jbl": {
+          "id": 13709,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth",
+          "raw_value": "Yes",
+          "normalized_name": "bluetooth",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth"
+      ],
+      "display_name": "Bluetooth",
+      "resolved": {
+        "id": 11762,
+        "product_id": 152,
+        "normalized_name": "bluetooth",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Bluetooth"
+    },
+    {
+      "normalized_name": "bluetooth_frequency",
+      "sources": {
+        "jbl": {
+          "id": 13692,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth frequency",
+          "raw_value": "2.4 GHz – 2.4835 GHz",
+          "normalized_name": "bluetooth_frequency",
+          "normalized_value": "2.4 ghz – 2.4835 ghz",
+          "unit": "",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "display_value": "2.4 ghz – 2.4835 ghz",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth frequency"
+      ],
+      "display_name": "Частотный диапазон Bluetooth",
+      "resolved": {
+        "id": 11763,
+        "product_id": 152,
+        "normalized_name": "bluetooth_frequency",
+        "selected_value": "2.4 ghz – 2.4835 ghz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "2.4 ГГц – 2.4835 ГГц",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Частотный диапазон Bluetooth"
+    },
+    {
+      "normalized_name": "bluetooth_profiles",
+      "sources": {
+        "jbl": {
+          "id": 13693,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth profiles",
+          "raw_value": "HFP 1.7.2, AVRCP 1.6.2, A2DP 1.3.2",
+          "normalized_name": "bluetooth_profiles",
+          "normalized_value": "hfp 1.7.2, avrcp 1.6.2, a2dp 1.3.2",
+          "unit": "",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "display_value": "hfp 1.7.2, avrcp 1.6.2, a2dp 1.3.2",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth profiles"
+      ],
+      "display_name": "Профили Bluetooth",
+      "resolved": {
+        "id": 11764,
+        "product_id": 152,
+        "normalized_name": "bluetooth_profiles",
+        "selected_value": "hfp 1.7.2, avrcp 1.6.2, a2dp 1.3.2",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "HFP 1.7.2, AVRCP 1.6.2, A2DP 1.3.2",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Профили Bluetooth"
+    },
+    {
+      "normalized_name": "bluetooth_transmitted_modulation",
+      "sources": {
+        "jbl": {
+          "id": 13694,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth transmitted modulation",
+          "raw_value": "GFSK, π/4-DQPSK, 8-DPSK",
+          "normalized_name": "bluetooth_transmitted_modulation",
+          "normalized_value": "gfsk, π/4-dqpsk, 8-dpsk",
+          "unit": "",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "display_value": "gfsk, π/4-dqpsk, 8-dpsk",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth transmitted modulation"
+      ],
+      "display_name": "Модуляция Bluetooth",
+      "resolved": {
+        "id": 11765,
+        "product_id": 152,
+        "normalized_name": "bluetooth_transmitted_modulation",
+        "selected_value": "gfsk, π/4-dqpsk, 8-dpsk",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "GFSK, π/4-DQPSK, 8-DPSK",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Модуляция Bluetooth"
+    },
+    {
+      "normalized_name": "bluetooth_transmitter_power",
+      "sources": {
+        "jbl": {
+          "id": 13695,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth transmitter power",
+          "raw_value": "6 dBm (E.I.R.P)",
+          "normalized_name": "bluetooth_transmitter_power",
+          "normalized_value": "6 dbm (e.i.r.p)",
+          "unit": "",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "display_value": "6 dbm (e.i.r.p)",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth transmitter power"
+      ],
+      "display_name": "Мощность передатчика Bluetooth",
+      "resolved": {
+        "id": 11766,
+        "product_id": 152,
+        "normalized_name": "bluetooth_transmitter_power",
+        "selected_value": "6 dbm (e.i.r.p)",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "6 dBm (E.I.R.P)",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Мощность передатчика Bluetooth"
+    },
+    {
+      "normalized_name": "built_in_microphone",
+      "sources": {
+        "jbl": {
+          "id": 13699,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Built-in Microphone",
+          "raw_value": "Yes",
+          "normalized_name": "built_in_microphone",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Built-in Microphone"
+      ],
+      "display_name": "Встроенный микрофон",
+      "resolved": {
+        "id": 11768,
+        "product_id": 152,
+        "normalized_name": "built_in_microphone",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Встроенный микрофон"
+    },
+    {
+      "normalized_name": "charging_time_hours_from_empty",
+      "sources": {
+        "jbl": {
+          "id": 13696,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Charging time (hours from empty)",
+          "raw_value": "2",
+          "normalized_name": "charging_time_hours_from_empty",
+          "normalized_value": "2",
+          "unit": "",
+          "section": "Baterai",
+          "value_cell": null,
+          "display_value": "2",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Charging time (hours from empty)"
+      ],
+      "display_name": "Время полной зарядки, ч",
+      "resolved": {
+        "id": 11769,
+        "product_id": 152,
+        "normalized_name": "charging_time_hours_from_empty",
+        "selected_value": "2",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "2",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Аккумулятор и время работы",
+      "category_attribute_key": "Аккумулятор и время работы / Время полной зарядки, ч"
+    },
+    {
+      "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+      "sources": {
+        "jbl": {
+          "id": 13676,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Driver sensitivity at 1kHz/1mW (dB)",
+          "raw_value": "102",
+          "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+          "normalized_value": "102",
+          "unit": "",
+          "section": "Spesifikasi Audio",
+          "value_cell": null,
+          "display_value": "102",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Driver sensitivity at 1kHz/1mW (dB)"
+      ],
+      "display_name": "Чувствительность динамика, дБ",
+      "resolved": {
+        "id": 11770,
+        "product_id": 152,
+        "normalized_name": "driver_sensitivity_at_1khz_1mw_db",
+        "selected_value": "102",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "102",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Аудио",
+      "category_attribute_key": "Аудио / Чувствительность динамика, дБ"
+    },
+    {
+      "normalized_name": "driver_size_mm",
+      "sources": {
+        "jbl": {
+          "id": 13674,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Driver size (mm)",
+          "raw_value": "33",
+          "normalized_name": "driver_size_mm",
+          "normalized_value": "33",
+          "unit": "",
+          "section": "Spesifikasi General",
+          "value_cell": null,
+          "display_value": "33",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Driver size (mm)"
+      ],
+      "display_name": "Диаметр динамика, мм",
+      "resolved": {
+        "id": 11771,
+        "product_id": 152,
+        "normalized_name": "driver_size_mm",
+        "selected_value": "33",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "33",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Диаметр динамика, мм"
+    },
+    {
+      "normalized_name": "dynamic_frequency_response_range_hz",
+      "sources": {
+        "jbl": {
+          "id": 13678,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Dynamic frequency response range (Hz)",
+          "raw_value": "20 Hz - 20 kHz",
+          "normalized_name": "dynamic_frequency_response_range_hz",
+          "normalized_value": "20 hz - 20 khz",
+          "unit": "",
+          "section": "Spesifikasi Audio",
+          "value_cell": null,
+          "display_value": "20 hz - 20 khz",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Dynamic frequency response range (Hz)"
+      ],
+      "display_name": "Диапазон частот, Гц",
+      "resolved": {
+        "id": 11772,
+        "product_id": 152,
+        "normalized_name": "dynamic_frequency_response_range_hz",
+        "selected_value": "20 hz - 20 khz",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "20 Гц - 20 кГц",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Аудио",
+      "category_attribute_key": "Аудио / Диапазон частот, Гц"
+    },
+    {
+      "normalized_name": "foldable",
+      "sources": {
+        "jbl": {
+          "id": 13700,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Foldable",
+          "raw_value": "Yes",
+          "normalized_name": "foldable",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Foldable"
+      ],
+      "display_name": "Складная конструкция",
+      "resolved": {
+        "id": 11773,
+        "product_id": 152,
+        "normalized_name": "foldable",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Складная конструкция"
+    },
+    {
+      "normalized_name": "hands_free_call",
+      "sources": {
+        "jbl": {
+          "id": 13701,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Hands Free Call",
+          "raw_value": "Yes",
+          "normalized_name": "hands_free_call",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Hands Free Call"
+      ],
+      "display_name": "Звонки без помощи рук",
+      "resolved": {
+        "id": 11774,
+        "product_id": 152,
+        "normalized_name": "hands_free_call",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Звонки без помощи рук"
+    },
+    {
+      "normalized_name": "impedance_ohms",
+      "sources": {
+        "jbl": {
+          "id": 13677,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Impedance (ohms)",
+          "raw_value": "30",
+          "normalized_name": "impedance_ohms",
+          "normalized_value": "30",
+          "unit": "",
+          "section": "Spesifikasi Audio",
+          "value_cell": null,
+          "display_value": "30",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Impedance (ohms)"
+      ],
+      "display_name": "Импеданс, Ом",
+      "resolved": {
+        "id": 11775,
+        "product_id": 152,
+        "normalized_name": "impedance_ohms",
+        "selected_value": "30",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "30",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Аудио",
+      "category_attribute_key": "Аудио / Импеданс, Ом"
+    },
+    {
+      "normalized_name": "jbl_headphone_app",
+      "sources": {
+        "jbl": {
+          "id": 13707,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "JBL Headphone App",
+          "raw_value": "Yes",
+          "normalized_name": "jbl_headphone_app",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "JBL Headphone App"
+      ],
+      "display_name": "Приложение JBL Headphones",
+      "resolved": {
+        "id": 11776,
+        "product_id": 152,
+        "normalized_name": "jbl_headphone_app",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Приложение JBL Headphones"
+    },
+    {
+      "normalized_name": "jbl_pure_bass_sound",
+      "sources": {
+        "jbl": {
+          "id": 13702,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "JBL Pure Bass Sound",
+          "raw_value": "Yes",
+          "normalized_name": "jbl_pure_bass_sound",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "JBL Pure Bass Sound"
+      ],
+      "display_name": "JBL Pure Bass Sound",
+      "resolved": {
+        "id": 11777,
+        "product_id": 152,
+        "normalized_name": "jbl_pure_bass_sound",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / JBL Pure Bass Sound"
+    },
+    {
+      "normalized_name": "kedalaman_cm",
+      "sources": {
+        "jbl": {
+          "id": 13689,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Kedalaman (cm)",
+          "raw_value": "1.7",
+          "normalized_name": "kedalaman_cm",
+          "normalized_value": "1.7",
+          "unit": "",
+          "section": "Ukuran",
+          "value_cell": null,
+          "display_value": "1.7",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Kedalaman (cm)"
+      ],
+      "display_name": "Глубина, см",
+      "resolved": {
+        "id": 11778,
+        "product_id": 152,
+        "normalized_name": "kedalaman_cm",
+        "selected_value": "1.7",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "1.7",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Глубина, см"
+    },
+    {
+      "normalized_name": "lebar_cm",
+      "sources": {
+        "jbl": {
+          "id": 13686,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Lebar (cm)",
+          "raw_value": "7.3",
+          "normalized_name": "lebar_cm",
+          "normalized_value": "7.3",
+          "unit": "",
+          "section": "Ukuran",
+          "value_cell": null,
+          "display_value": "7.3",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Lebar (cm)"
+      ],
+      "display_name": "Ширина, см",
+      "resolved": {
+        "id": 11780,
+        "product_id": 152,
+        "normalized_name": "lebar_cm",
+        "selected_value": "7.3",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "7.3",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Ширина, см"
+    },
+    {
+      "normalized_name": "lebar_internal_cm",
+      "sources": {
+        "jbl": {
+          "id": 13687,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Lebar Internal (cm)",
+          "raw_value": "3.2",
+          "normalized_name": "lebar_internal_cm",
+          "normalized_value": "3.2",
+          "unit": "",
+          "section": "Ukuran",
+          "value_cell": null,
+          "display_value": "3.2",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Lebar Internal (cm)"
+      ],
+      "display_name": "Внутренняя ширина, см",
+      "resolved": {
+        "id": 11782,
+        "product_id": 152,
+        "normalized_name": "lebar_internal_cm",
+        "selected_value": "3.2",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "3.2",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Внутренняя ширина, см"
+    },
+    {
+      "normalized_name": "multi_point_connection",
+      "sources": {
+        "jbl": {
+          "id": 13703,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Multi-Point Connection",
+          "raw_value": "Yes",
+          "normalized_name": "multi_point_connection",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Multi-Point Connection"
+      ],
+      "display_name": "Подключение к нескольким устройствам",
+      "resolved": {
+        "id": 11784,
+        "product_id": 152,
+        "normalized_name": "multi_point_connection",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Подключение к нескольким устройствам"
+    },
+    {
+      "normalized_name": "number_of_microphones",
+      "sources": {
+        "jbl": {
+          "id": 13675,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Number of Microphones",
+          "raw_value": "1",
+          "normalized_name": "number_of_microphones",
+          "normalized_value": "1",
+          "unit": "",
+          "section": "Spesifikasi General",
+          "value_cell": null,
+          "display_value": "1",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Number of Microphones"
+      ],
+      "display_name": "Количество микрофонов",
+      "resolved": {
+        "id": 11785,
+        "product_id": 152,
+        "normalized_name": "number_of_microphones",
+        "selected_value": "1",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "1",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Основные характеристики",
+      "category_attribute_key": "Основные характеристики / Количество микрофонов"
+    },
+    {
+      "normalized_name": "on_ear",
+      "sources": {
+        "jbl": {
+          "id": 13704,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "On-ear",
+          "raw_value": "Yes",
+          "normalized_name": "on_ear",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "On-ear"
+      ],
+      "display_name": "Накладные наушники",
+      "resolved": {
+        "id": 11786,
+        "product_id": 152,
+        "normalized_name": "on_ear",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Накладные наушники"
+    },
+    {
+      "normalized_name": "rechargable_battery",
+      "sources": {
+        "jbl": {
+          "id": 13708,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Rechargable battery",
+          "raw_value": "Yes",
+          "normalized_name": "rechargable_battery",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Rechargable battery"
+      ],
+      "display_name": "Перезаряжаемый аккумулятор",
+      "resolved": {
+        "id": 11787,
+        "product_id": 152,
+        "normalized_name": "rechargable_battery",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Перезаряжаемый аккумулятор"
+    },
+    {
+      "normalized_name": "speed_charge",
+      "sources": {
+        "jbl": {
+          "id": 13705,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Speed charge",
+          "raw_value": "Yes",
+          "normalized_name": "speed_charge",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Speed charge"
+      ],
+      "display_name": "Быстрая зарядка",
+      "resolved": {
+        "id": 11788,
+        "product_id": 152,
+        "normalized_name": "speed_charge",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Быстрая зарядка"
+    },
+    {
+      "normalized_name": "tinggi_cm",
+      "sources": {
+        "jbl": {
+          "id": 13685,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Tinggi (cm)",
+          "raw_value": "3.2",
+          "normalized_name": "tinggi_cm",
+          "normalized_value": "3.2",
+          "unit": "",
+          "section": "Ukuran",
+          "value_cell": null,
+          "display_value": "3.2",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Tinggi (cm)"
+      ],
+      "display_name": "Высота, см",
+      "resolved": {
+        "id": 11789,
+        "product_id": 152,
+        "normalized_name": "tinggi_cm",
+        "selected_value": "3.2",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "3.2",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Высота, см"
+    },
+    {
+      "normalized_name": "tinggi_internal_cm",
+      "sources": {
+        "jbl": {
+          "id": 13688,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Tinggi Internal (cm)",
+          "raw_value": "3.2",
+          "normalized_name": "tinggi_internal_cm",
+          "normalized_value": "3.2",
+          "unit": "",
+          "section": "Ukuran",
+          "value_cell": null,
+          "display_value": "3.2",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Tinggi Internal (cm)"
+      ],
+      "display_name": "Внутренняя высота, см",
+      "resolved": {
+        "id": 11791,
+        "product_id": 152,
+        "normalized_name": "tinggi_internal_cm",
+        "selected_value": "3.2",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "3.2",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Внутренняя высота, см"
+    },
+    {
+      "normalized_name": "voice_aware",
+      "sources": {
+        "jbl": {
+          "id": 13698,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Voice Aware",
+          "raw_value": "Yes",
+          "normalized_name": "voice_aware",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Voice Aware"
+      ],
+      "display_name": "Voice Aware",
+      "resolved": {
+        "id": 11793,
+        "product_id": 152,
+        "normalized_name": "voice_aware",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Voice Aware"
+    },
+    {
+      "normalized_name": "waktu_putar_maksimum_jam",
+      "sources": {
+        "jbl": {
+          "id": 13697,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Waktu putar maksimum (jam)",
+          "raw_value": "57",
+          "normalized_name": "waktu_putar_maksimum_jam",
+          "normalized_value": "57",
+          "unit": "",
+          "section": "Baterai",
+          "value_cell": null,
+          "display_value": "57",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Waktu putar maksimum (jam)"
+      ],
+      "display_name": "Максимальное время воспроизведения, ч",
+      "resolved": {
+        "id": 11794,
+        "product_id": 152,
+        "normalized_name": "waktu_putar_maksimum_jam",
+        "selected_value": "57",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "57",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Аккумулятор и время работы",
+      "category_attribute_key": "Аккумулятор и время работы / Максимальное время воспроизведения, ч"
+    },
+    {
+      "normalized_name": "weight_g",
+      "sources": {
+        "jbl": {
+          "id": 13690,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Weight (g)",
+          "raw_value": "157",
+          "normalized_name": "weight_g",
+          "normalized_value": "157",
+          "unit": "",
+          "section": "Ukuran",
+          "value_cell": null,
+          "display_value": "157",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Weight (g)"
+      ],
+      "display_name": "Вес товара, кг",
+      "resolved": {
+        "id": 11795,
+        "product_id": 152,
+        "normalized_name": "weight_g",
+        "selected_value": "0.157",
+        "selected_unit": "kg",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "0.157",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Габариты и вес",
+      "category_attribute_key": "Габариты и вес / Вес товара, кг"
+    },
+    {
+      "normalized_name": "wireless",
+      "sources": {
+        "jbl": {
+          "id": 13706,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Wireless",
+          "raw_value": "Yes",
+          "normalized_name": "wireless",
+          "normalized_value": "true",
+          "unit": "bool",
+          "section": "Fitur",
+          "value_cell": null,
+          "display_value": "Да",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Wireless"
+      ],
+      "display_name": "Беспроводное подключение",
+      "resolved": {
+        "id": 11797,
+        "product_id": 152,
+        "normalized_name": "wireless",
+        "selected_value": "true",
+        "selected_unit": "bool",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "Да",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Особенности модели",
+      "category_attribute_key": "Особенности модели / Беспроводное подключение"
+    },
+    {
+      "normalized_name": "bluetooth_version",
+      "sources": {
+        "jbl": {
+          "id": 13691,
+          "product_id": 152,
+          "source_page_id": 445,
+          "source_key": "jbl",
+          "site_name": "JBL Official",
+          "raw_name": "Bluetooth version",
+          "raw_value": "5.3",
+          "normalized_name": "bluetooth_version",
+          "normalized_value": "5.3",
+          "unit": "",
+          "section": "Spesifikasi Kontrol dan Koneksi",
+          "value_cell": null,
+          "display_value": "5.3",
+          "display_source": "JBL Official"
+        }
+      },
+      "raw_names": [
+        "Bluetooth version"
+      ],
+      "display_name": "Версия Bluetooth",
+      "resolved": {
+        "id": 11767,
+        "product_id": 152,
+        "normalized_name": "bluetooth_version",
+        "selected_value": "5.3",
+        "selected_unit": "",
+        "status": "model_confirmed_official",
+        "reason": "Факт точной модели из официальной страницы JBL; цвет и комплект проверяются отдельно.",
+        "selected_source": "jbl",
+        "conflict": 0,
+        "updated_at": "2026-10-16T12:09:52+00:00",
+        "full_sku_confirmed": 0,
+        "display_value": "5.3",
+        "display_status": "Характеристика точной модели JBL; вариант проверяется отдельно",
+        "display_source": "jbl"
+      },
+      "jbl_presentation": true,
+      "canonical_presentation": true,
+      "parent_group": "Подключение",
+      "category_attribute_key": "Подключение / Версия Bluetooth"
+    }
+  ],
+  "photos": [
+    {
+      "id": 7877,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/Sites-JB-APAC-NCOM-Site/-/default/dw7a01eae8/icon-3D.svg",
+      "asset_key": "595a831ec41dcb5d77e4309177491f34139313a4e8a93e6164aa066e859342e3",
+      "kind": "excluded",
+      "width": null,
+      "height": null,
+      "selected": 0,
+      "excluded_reason": "Gallery UI icon, not a product photo",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": false,
+      "byte_verified": false,
+      "role": "unclassified_official_visual",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/Sites-JB-APAC-NCOM-Site/-/default/dw7a01eae8/icon-3D.svg",
+      "role_label": "Официальное изображение; роль не определена",
+      "model_relation": "unproven",
+      "variant_relation": "unproven",
+      "official_color": "",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7878,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4903f9e9/01.JBL_Tune_520BT_ProductImage_Hero_White.png",
+      "asset_key": "a986a6e47bd5bc0244df73b0e83720274c70d17594d33fb94fb49d38d4b113c5",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "hero",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4903f9e9/01.JBL_Tune_520BT_ProductImage_Hero_White.png",
+      "role_label": "Главное фото",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7879,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c5623ed/02.JBL_Tune 520BT_Product Image_Front_White.png",
+      "asset_key": "7ec8261b19b3eee750ba9b31cbffa9c703e3025d1d12e403998443602f7467cb",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "front",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c5623ed/02.JBL_Tune 520BT_Product Image_Front_White.png",
+      "role_label": "Вид спереди",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7880,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf9ce16d9/03.JBL_Tune 520BT_Product Image_Back_White.png",
+      "asset_key": "1453e907a5c440a1e98470f280eab3d9aa48b5764b70e6fb1364b45c8d85f55b",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "back",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf9ce16d9/03.JBL_Tune 520BT_Product Image_Back_White.png",
+      "role_label": "Вид сзади",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7881,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb1749ab9/04.JBL_Tune 520BT_Product Image_Left_White.png",
+      "asset_key": "61d7627f8e8dbbf5805a5cabc079f54240777b6c4f3958c54bea691ce2f4cd4e",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "side",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb1749ab9/04.JBL_Tune 520BT_Product Image_Left_White.png",
+      "role_label": "Вид сбоку",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7882,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwe643571d/05.JBL_Tune 520BT_Product Image_Right_White.png",
+      "asset_key": "fb3ae4811826c8d6a497111ecb3895bda2037b2a8b88eb43f2e3d689e042efcc",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "side",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwe643571d/05.JBL_Tune 520BT_Product Image_Right_White.png",
+      "role_label": "Вид сбоку",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7883,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw140221e8/06.JBL_Tune 520BT_Product Image_Fold_White.png",
+      "asset_key": "c3338f512040524019701d17c90c2683d7b70305ad482988e3322c5e5e590d09",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "product_render",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw140221e8/06.JBL_Tune 520BT_Product Image_Fold_White.png",
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7884,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw386de787/07.JBL_Tune 520BT_Product Image_Button_White.png",
+      "asset_key": "6e043550c0dc4de6905fafafd47324abcf68586f6080adea45e58a8ba936965d",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "product_render",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw386de787/07.JBL_Tune 520BT_Product Image_Button_White.png",
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7885,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw8f99517d/08.JBL_Tune 520BT_Product Image_Detail_White.png",
+      "asset_key": "b4b3a41e5669a73361e0503bfd91c2deaa25a48d50337cb5fde0445326e7046e",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "detail",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw8f99517d/08.JBL_Tune 520BT_Product Image_Detail_White.png",
+      "role_label": "Деталь",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7886,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc40e59f9/JBL_Tune 520BT_Product Image_Earcup_White.png",
+      "asset_key": "7e6cab0f6df8c5a42e7cc27ba4396e52632a2ebba612a3d15ad1f5bb2adc4f8a",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "product_render",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc40e59f9/JBL_Tune 520BT_Product Image_Earcup_White.png",
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7887,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dweb6f757e/JBL_TUNE_520BT_FOLD_REGULAR_WHITE_41014_x2.png",
+      "asset_key": "ee4526074d5365a97cd325845ef4d652f8ac25ff34d7df6c5328c0afabdbbd52",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "product_render",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dweb6f757e/JBL_TUNE_520BT_FOLD_REGULAR_WHITE_41014_x2.png",
+      "role_label": "Рендер товара",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    },
+    {
+      "id": 7888,
+      "product_id": 152,
+      "source_page_id": 445,
+      "source_key": "jbl",
+      "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw7d140c67/JBL_TUNE_520BT_Box_Image_Side_view_White_SKU_1605x1605.png",
+      "asset_key": "5eabc22fbc1a2ec4dd896407bda58c91888e604cd24d96304e36d63cf7ac5e49",
+      "kind": "product_gallery",
+      "width": null,
+      "height": null,
+      "selected": 1,
+      "excluded_reason": "",
+      "fetched_at": "2026-10-16T12:09:48+00:00",
+      "verified_width": null,
+      "verified_height": null,
+      "verified_bytes": null,
+      "verified_format": "",
+      "site_name": "JBL Official",
+      "identity_confirmed": true,
+      "byte_verified": false,
+      "role": "packaging",
+      "normalized_asset": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw7d140c67/JBL_TUNE_520BT_Box_Image_Side_view_White_SKU_1605x1605.png",
+      "role_label": "Упаковка",
+      "model_relation": "confirmed",
+      "variant_relation": "model_color_gallery",
+      "official_color": "White",
+      "source_url": "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html",
+      "aliases": []
+    }
+  ],
+  "evidence": {
+    "article": "SUP-TUNE520-WH",
+    "query_variants": [
+      "site:jbl.com \"SUP-TUNE520-WH\"",
+      "site:jbl.com \"SUP-TUNE520-WH\"",
+      "site:jbl.com JBL Tune 520BT"
+    ],
+    "identity": {
+      "model_relation": "exact_model",
+      "variant_relation": "model_color_confirmed",
+      "requested_components": {
+        "model_code": "JBLT520BT",
+        "color": "White",
+        "region": "",
+        "full_code": "SUP-TUNE520-WH"
+      },
+      "returned_components": {
+        "model_code": "JBLT520BT",
+        "color": "White",
+        "region": "",
+        "full_code": "JBLT520BTWHT"
+      },
+      "exact_sku": false,
+      "model_confirmed": true,
+      "input_model": "Tune 520BT",
+      "published_model": "Tune 520BT",
+      "supplier_article": "SUP-TUNE520-WH",
+      "model_source": "official_product_name_and_coherent_sku_mpn",
+      "supplier_sku_confirmed": false,
+      "relation": "other_variant",
+      "requested": "SUP-TUNE520-WH",
+      "returned_sku": "JBLT520BTWHT",
+      "returned_mpn": "JBLT520BTWHT",
+      "data_pid": "",
+      "model": "JBL Tune 520BT",
+      "reason": "Official coherent SKU/MPN confirms same model; variant evidence separate",
+      "color": "White"
+    },
+    "raw_specs": [
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Driver size (mm)",
+        "value": "33"
+      },
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Number of Microphones",
+        "value": "1"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Driver sensitivity at 1kHz/1mW (dB)",
+        "value": "102"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Impedance (ohms)",
+        "value": "30"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Dynamic frequency response range (Hz)",
+        "value": "20 Hz - 20 kHz"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Audio Cable Length (ft)",
+        "value": "0.7"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Audio Cable Length (m)",
+        "value": "0.2"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Weight (oz)",
+        "value": "5.54"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi (in)",
+        "value": "1.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar (in)",
+        "value": "2.9"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar Internal (in)",
+        "value": "1.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi Internal (in)",
+        "value": "1.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Kedalaman (in)",
+        "value": "0.7"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi (cm)",
+        "value": "3.2"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar (cm)",
+        "value": "7.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar Internal (cm)",
+        "value": "3.2"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi Internal (cm)",
+        "value": "3.2"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Kedalaman (cm)",
+        "value": "1.7"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Weight (g)",
+        "value": "157"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth version",
+        "value": "5.3"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth frequency",
+        "value": "2.4 GHz – 2.4835 GHz"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth profiles",
+        "value": "HFP 1.7.2, AVRCP 1.6.2, A2DP 1.3.2"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitted modulation",
+        "value": "GFSK, π/4-DQPSK, 8-DPSK"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitter power",
+        "value": "6 dBm (E.I.R.P)"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Charging time (hours from empty)",
+        "value": "2"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Waktu putar maksimum (jam)",
+        "value": "57"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Voice Aware",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Built-in Microphone",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Foldable",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Hands Free Call",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Pure Bass Sound",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Multi-Point Connection",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "On-ear",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Speed charge",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Wireless",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Headphone App",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Charging cable",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Rechargable battery",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Bluetooth",
+        "value": "Yes"
+      }
+    ],
+    "accepted_specs": [
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Driver size (mm)",
+        "value": "33"
+      },
+      {
+        "section": "Spesifikasi General",
+        "raw_label": "Number of Microphones",
+        "value": "1"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Driver sensitivity at 1kHz/1mW (dB)",
+        "value": "102"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Impedance (ohms)",
+        "value": "30"
+      },
+      {
+        "section": "Spesifikasi Audio",
+        "raw_label": "Dynamic frequency response range (Hz)",
+        "value": "20 Hz - 20 kHz"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Weight (oz)",
+        "value": "5.54"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi (in)",
+        "value": "1.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar (in)",
+        "value": "2.9"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar Internal (in)",
+        "value": "1.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi Internal (in)",
+        "value": "1.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Kedalaman (in)",
+        "value": "0.7"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi (cm)",
+        "value": "3.2"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar (cm)",
+        "value": "7.3"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Lebar Internal (cm)",
+        "value": "3.2"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Tinggi Internal (cm)",
+        "value": "3.2"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Kedalaman (cm)",
+        "value": "1.7"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Weight (g)",
+        "value": "157"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth version",
+        "value": "5.3"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth frequency",
+        "value": "2.4 GHz – 2.4835 GHz"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth profiles",
+        "value": "HFP 1.7.2, AVRCP 1.6.2, A2DP 1.3.2"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitted modulation",
+        "value": "GFSK, π/4-DQPSK, 8-DPSK"
+      },
+      {
+        "section": "Spesifikasi Kontrol dan Koneksi",
+        "raw_label": "Bluetooth transmitter power",
+        "value": "6 dBm (E.I.R.P)"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Charging time (hours from empty)",
+        "value": "2"
+      },
+      {
+        "section": "Baterai",
+        "raw_label": "Waktu putar maksimum (jam)",
+        "value": "57"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Voice Aware",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Built-in Microphone",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Foldable",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Hands Free Call",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Pure Bass Sound",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Multi-Point Connection",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "On-ear",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Speed charge",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Wireless",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "JBL Headphone App",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Rechargable battery",
+        "value": "Yes"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Bluetooth",
+        "value": "Yes"
+      }
+    ],
+    "rejected_specs": [
+      {
+        "section": "Ukuran",
+        "raw_label": "Audio Cable Length (ft)",
+        "value": "0.7",
+        "reason": "variant_specific_field"
+      },
+      {
+        "section": "Ukuran",
+        "raw_label": "Audio Cable Length (m)",
+        "value": "0.2",
+        "reason": "variant_specific_field"
+      },
+      {
+        "section": "Fitur",
+        "raw_label": "Charging cable",
+        "value": "Yes",
+        "reason": "variant_specific_field"
+      },
+      {
+        "section": "Комплектация",
+        "raw_label": "Комплектация",
+        "value": "1 x Headphone JBL Tune 520BT 1 x Kabel Pengisi Daya USB-C 1 x Garansi/Peringatan 1 x QSG",
+        "reason": "variant_specific_field"
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://id.jbl.com/on/demandware.static/Sites-JB-APAC-NCOM-Site/-/default/dw7a01eae8/icon-3D.svg",
+        "asset_key": "595a831ec41dcb5d77e4309177491f34139313a4e8a93e6164aa066e859342e3",
+        "role": "service_icon",
+        "verified": false,
+        "reason": "Gallery UI icon, not a product photo"
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4903f9e9/01.JBL_Tune_520BT_ProductImage_Hero_White.png",
+        "asset_key": "a986a6e47bd5bc0244df73b0e83720274c70d17594d33fb94fb49d38d4b113c5",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6c5623ed/02.JBL_Tune 520BT_Product Image_Front_White.png",
+        "asset_key": "7ec8261b19b3eee750ba9b31cbffa9c703e3025d1d12e403998443602f7467cb",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf9ce16d9/03.JBL_Tune 520BT_Product Image_Back_White.png",
+        "asset_key": "1453e907a5c440a1e98470f280eab3d9aa48b5764b70e6fb1364b45c8d85f55b",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb1749ab9/04.JBL_Tune 520BT_Product Image_Left_White.png",
+        "asset_key": "61d7627f8e8dbbf5805a5cabc079f54240777b6c4f3958c54bea691ce2f4cd4e",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwe643571d/05.JBL_Tune 520BT_Product Image_Right_White.png",
+        "asset_key": "fb3ae4811826c8d6a497111ecb3895bda2037b2a8b88eb43f2e3d689e042efcc",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw140221e8/06.JBL_Tune 520BT_Product Image_Fold_White.png",
+        "asset_key": "c3338f512040524019701d17c90c2683d7b70305ad482988e3322c5e5e590d09",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw386de787/07.JBL_Tune 520BT_Product Image_Button_White.png",
+        "asset_key": "6e043550c0dc4de6905fafafd47324abcf68586f6080adea45e58a8ba936965d",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw8f99517d/08.JBL_Tune 520BT_Product Image_Detail_White.png",
+        "asset_key": "b4b3a41e5669a73361e0503bfd91c2deaa25a48d50337cb5fde0445326e7046e",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc40e59f9/JBL_Tune 520BT_Product Image_Earcup_White.png",
+        "asset_key": "7e6cab0f6df8c5a42e7cc27ba4396e52632a2ebba612a3d15ad1f5bb2adc4f8a",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dweb6f757e/JBL_TUNE_520BT_FOLD_REGULAR_WHITE_41014_x2.png",
+        "asset_key": "ee4526074d5365a97cd325845ef4d652f8ac25ff34d7df6c5328c0afabdbbd52",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      },
+      {
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw7d140c67/JBL_TUNE_520BT_Box_Image_Side_view_White_SKU_1605x1605.png",
+        "asset_key": "5eabc22fbc1a2ec4dd896407bda58c91888e604cd24d96304e36d63cf7ac5e49",
+        "relation": "model_color_gallery",
+        "color": "White",
+        "role": "product_gallery",
+        "verified": true
+      }
+    ],
+    "manuals": [
+      {
+        "type": "Regulatory/Other",
+        "title": "Declaration of Conformity 435 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw257a39d0/pdfs/JBL TUNE520BT- EU_UK DOC_V7.0.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Regulatory/Other",
+        "title": "PPWR DoC 368 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5693a236/pdfs/JBL-TUNE520BT-EU_DOC_PPWR.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Quick Start Guide",
+        "title": "Quick Start Guide (Multilingual) 3 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw9cf14fce/pdfs/JBL_Tune 520BT_QSG.pdf",
+        "language": "Русский",
+        "relation": "family_model",
+        "verified": true,
+        "pdp_exact": true,
+        "model_relation_verified": true,
+        "content_title_verified": true,
+        "language_assessment": {
+          "pages": 2,
+          "letters_by_language": {
+            "en": 2639,
+            "ru": 968
+          },
+          "present": [
+            "en",
+            "ru"
+          ],
+          "russian_present": true,
+          "russian_instruction_markers": 0,
+          "russian_instruction": false
+        },
+        "quick_guide_ru_operations": [
+          "включ",
+          "заряд",
+          "подключ",
+          "сопряж",
+          "воспроизвед",
+          "управлен"
+        ],
+        "acceptance_basis": "typed_short_RU_operations",
+        "reason": "",
+        "pages": 2,
+        "proof_sha256": "ca2f4766b679d13c56dd8e16f739aedb9eea1c82e5a8dd0ef29527503e1abce5",
+        "proof_file": "ca2f4766b679d13c56dd8e16f739aedb9eea1c82e5a8dd0ef29527503e1abce5.pdf"
+      },
+      {
+        "type": "Warranty",
+        "title": "JBL Global Warranty Card 9 MB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3b22fc9b/pdfs/TR04082_JBL_Global_Warranty_card_F_V9_HD.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Spec Sheet",
+        "title": "Spec Sheet (English) 492 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw9a29c6fc/pdfs/JBL Tune 520BT_ Specsheet_EN.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      },
+      {
+        "type": "Regulatory/Other",
+        "title": "PSTI Declaration of Conformity (English) 171 KB",
+        "url": "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw95b71b7f/pdfs/JBL_TUNE_520BT.pdf",
+        "language": "unknown",
+        "relation": "family_model",
+        "verified": false,
+        "pdp_exact": true
+      }
+    ],
+    "verified_documents": [
+      "https://id.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw9cf14fce/pdfs/JBL_Tune 520BT_QSG.pdf"
+    ],
+    "exact_photo_assets": [
+      "a986a6e47bd5bc0244df73b0e83720274c70d17594d33fb94fb49d38d4b113c5",
+      "7ec8261b19b3eee750ba9b31cbffa9c703e3025d1d12e403998443602f7467cb",
+      "1453e907a5c440a1e98470f280eab3d9aa48b5764b70e6fb1364b45c8d85f55b",
+      "61d7627f8e8dbbf5805a5cabc079f54240777b6c4f3958c54bea691ce2f4cd4e",
+      "fb3ae4811826c8d6a497111ecb3895bda2037b2a8b88eb43f2e3d689e042efcc",
+      "c3338f512040524019701d17c90c2683d7b70305ad482988e3322c5e5e590d09",
+      "6e043550c0dc4de6905fafafd47324abcf68586f6080adea45e58a8ba936965d",
+      "b4b3a41e5669a73361e0503bfd91c2deaa25a48d50337cb5fde0445326e7046e",
+      "7e6cab0f6df8c5a42e7cc27ba4396e52632a2ebba612a3d15ad1f5bb2adc4f8a",
+      "ee4526074d5365a97cd325845ef4d652f8ac25ff34d7df6c5328c0afabdbbd52",
+      "5eabc22fbc1a2ec4dd896407bda58c91888e604cd24d96304e36d63cf7ac5e49"
+    ],
+    "manual_status": "Проверена",
+    "support_urls": [],
+    "all_official_photo_assets": [
+      "a986a6e47bd5bc0244df73b0e83720274c70d17594d33fb94fb49d38d4b113c5",
+      "7ec8261b19b3eee750ba9b31cbffa9c703e3025d1d12e403998443602f7467cb",
+      "1453e907a5c440a1e98470f280eab3d9aa48b5764b70e6fb1364b45c8d85f55b",
+      "61d7627f8e8dbbf5805a5cabc079f54240777b6c4f3958c54bea691ce2f4cd4e",
+      "fb3ae4811826c8d6a497111ecb3895bda2037b2a8b88eb43f2e3d689e042efcc",
+      "c3338f512040524019701d17c90c2683d7b70305ad482988e3322c5e5e590d09",
+      "6e043550c0dc4de6905fafafd47324abcf68586f6080adea45e58a8ba936965d",
+      "b4b3a41e5669a73361e0503bfd91c2deaa25a48d50337cb5fde0445326e7046e",
+      "7e6cab0f6df8c5a42e7cc27ba4396e52632a2ebba612a3d15ad1f5bb2adc4f8a",
+      "ee4526074d5365a97cd325845ef4d652f8ac25ff34d7df6c5328c0afabdbbd52",
+      "5eabc22fbc1a2ec4dd896407bda58c91888e604cd24d96304e36d63cf7ac5e49"
+    ],
+    "input_interpretation": {
+      "version": "title_v1",
+      "original_name": "Наушники Tune 520BT White",
+      "supplier_article": "SUP-TUNE520-WH",
+      "brand": "JBL",
+      "fields": {
+        "brand": {
+          "value": "JBL",
+          "source": "brand_column",
+          "confidence": "high",
+          "raw": "JBL"
+        },
+        "category": {
+          "value": "Наушники",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Наушники"
+        },
+        "model": {
+          "value": "Tune 520BT",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Tune 520BT"
+        },
+        "supplier_article": {
+          "value": "SUP-TUNE520-WH",
+          "source": "article_column",
+          "confidence": "high",
+          "raw": "SUP-TUNE520-WH"
+        }
+      },
+      "configuration": {
+        "color": {
+          "value": "White",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "White"
+        }
+      },
+      "model": "Tune 520BT",
+      "model_candidates": [
+        "Tune 520BT"
+      ],
+      "warnings": [],
+      "category": "Наушники",
+      "configuration_hints": {
+        "color": "White"
+      },
+      "search_queries": [
+        {
+          "query": "Tune 520BT",
+          "purpose": "model",
+          "source": "product_name"
+        },
+        {
+          "query": "SUP-TUNE520-WH",
+          "purpose": "article",
+          "source": "article_column"
+        },
+        {
+          "query": "Tune520BT",
+          "purpose": "normalized_model",
+          "source": "product_name"
+        },
+        {
+          "query": "Наушники Tune 520BT White",
+          "purpose": "original_name",
+          "source": "product_name"
+        }
+      ]
+    },
+    "input_model_ambiguous": false,
+    "manual_check_complete": true
+  },
+  "readiness": {
+    "verdict": "export_ready",
+    "gaps": [],
+    "blocking_gaps": [],
+    "advisory_gaps": [],
+    "exact_sku_identity": false,
+    "model_identity": "exact_model",
+    "variant_identity": "model_color_confirmed",
+    "exact_identity": true,
+    "confirmed_specs": 36,
+    "conflicts": 0,
+    "manual_status": "Проверена"
+  }
+}

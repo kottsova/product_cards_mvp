@@ -31,6 +31,16 @@ ADVISORY = ("dealer_cross_check_missing",)
 
 def _card_readiness(database: Path, product_id: int) -> dict[str, Any]:
     product = jobs.get_product(database, product_id) or {}
+    result=_resolved_card_readiness(database,product_id,product)
+    if product.get('input_interpretation',{}).get('fields',{}).get('model',{}).get('confidence')=='ambiguous':
+        result=dict(result)
+        result['blocking_gaps']=list(dict.fromkeys(result.get('blocking_gaps',[])+['input_model_ambiguous']))
+        result['gaps']=list(dict.fromkeys(result.get('gaps',[])+['input_model_ambiguous']))
+        result['verdict']='not_ready'
+    return result
+
+
+def _resolved_card_readiness(database: Path, product_id: int, product: dict) -> dict[str, Any]:
     if product.get('brand','').strip().casefold()=='jbl':
         from .jbl_pipeline import card_readiness as brand_readiness
         return brand_readiness(database,product_id)

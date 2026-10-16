@@ -311,7 +311,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
         for item in preview.products:
             row = item.row_number
             values = {
-                field: str(form.get(f"{field}_{row}", "")).strip()
+                field: str(form.get(f"{field}_{row}", getattr(item,field))).strip()
                 for field in ("brand", "search_code", "alternate_code", "category")
             }
             edits[row] = values
@@ -319,6 +319,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                 errors.append(f"Строка {row}: заполните бренд и основной артикул.")
             if any(len(value) > 500 for value in values.values()):
                 errors.append(f"Строка {row}: значение длиннее 500 символов.")
+            from .input_interpretation import interpret
+            parsed=interpret(item.name,values['brand'] if item.brand_source=='column' or values['brand']!=item.brand else '',values['search_code'],category=values['category'] if values['category']!=item.category else (item.category if item.category_source=='column' else ''),explicit_model=values['alternate_code'],configuration={k:v for k,v in item.variant_attributes.items() if item.interpretation.get('configuration',{}).get(k,{}).get('source')=='configuration_column'})
             products.append({
                 "row_number": row,
                 "name": item.name,
@@ -326,7 +328,8 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
                 "needs_confirmation": item.needs_confirmation,
                 "issues": item.issues,
                 "original_values": item.original_values,
-                "variant_attributes": item.variant_attributes,
+                "variant_attributes": parsed['configuration_hints'],
+                "interpretation": parsed,
             })
         if errors:
             message = " ".join(errors[:5])
@@ -466,7 +469,7 @@ def create_app(data_dir: str | Path | None = None, *, start_worker: bool | None 
             for document in documents:document['identity_confirmed']=xiaomi_pipeline.document_verified(document,xiaomi_evidence)
         if apple_evidence is not None:
             for photo in photos:
-                photo['identity_confirmed'] = photo['asset_key'] in apple_evidence.get('exact_photo_assets', [])
+                photo['identity_confirmed'] = not apple_evidence.get('input_model_ambiguous') and photo['asset_key'] in apple_evidence.get('exact_photo_assets', [])
                 photo['identity_note'] = apple_evidence.get('photo_scope', 'Exact official model/color relation') if photo['identity_confirmed'] else 'Кандидат: модель/цвет не подтверждены.'
         events = []
         for event in jobs.list_events(database, latest["id"]) if latest else []:

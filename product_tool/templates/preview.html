@@ -39,7 +39,7 @@
       </div>
       <div class="form-actions">
         <button class="button secondary" type="submit">Обновить предпросмотр</button>
-        <span class="hint">Сначала настройте колонки, затем исправьте строки ниже.</span>
+        <span class="hint">Колонки определяются автоматически. Настройка нужна только при неверном сопоставлении.</span>
       </div>
     </form>
   </section>
@@ -49,7 +49,7 @@
       <div class="section-heading">
         <div>
           <h2>Товары перед подтверждением</h2>
-          <p>Бренд и основной артикул обязательны. Исправления сохранятся после подтверждения партии.</p>
+          <p>Бренд, артикул и название читаются из файла. Категория, модель и варианты определяются автоматически; исправляйте только то, что распознано неверно. Исходное название сохраняется.</p>
         </div>
       </div>
       <form action="/drafts/{{ draft.id }}/confirm" method="post">
@@ -61,7 +61,8 @@
                 <th scope="col">Название</th>
                 <th scope="col">Бренд</th>
                 <th scope="col">Основной артикул</th>
-                <th scope="col">Запасная модель</th>
+                <th scope="col">Распознанная модель</th>
+                <th scope="col">Цвет / память / вариант</th>
                 <th scope="col">Категория</th>
                 <th scope="col">Проверка</th>
               </tr>
@@ -74,8 +75,9 @@
                   <td class="product-name">{{ product.name or '—' }}</td>
                   <td><input name="brand_{{ product.row_number }}" aria-label="Бренд, строка {{ product.row_number }}" value="{{ edit.get('brand', product.brand) }}" maxlength="500"></td>
                   <td><input name="search_code_{{ product.row_number }}" aria-label="Основной артикул, строка {{ product.row_number }}" value="{{ edit.get('search_code', product.search_code) }}" maxlength="500"></td>
-                  <td><input name="alternate_code_{{ product.row_number }}" aria-label="Запасная модель, строка {{ product.row_number }}" value="{{ edit.get('alternate_code', product.alternate_code) }}" maxlength="500"></td>
-                  <td><input name="category_{{ product.row_number }}" aria-label="Категория, строка {{ product.row_number }}" value="{{ edit.get('category', product.category) }}" maxlength="500"></td>
+                  <td data-model-row="{{ product.row_number }}"><strong>{{ product.interpretation.model or 'Неоднозначно' }}</strong><br><small>{{ product.interpretation.fields.model.source }} · {{ product.interpretation.fields.model.confidence }}</small>{% if product.interpretation.model_candidates|length > 1 %}<br>Кандидаты: {{ product.interpretation.model_candidates|join('; ') }}{% endif %}<details><summary>Изменить модель</summary><input name="alternate_code_{{ product.row_number }}" aria-label="Запасная модель, строка {{ product.row_number }}" value="{{ edit.get('alternate_code', product.alternate_code) }}" maxlength="500"></details></td>
+                  <td data-configuration-row="{{ product.row_number }}">{% for key,hint in product.interpretation.configuration.items() %}<div><strong>{{ {'color':'Цвет','storage':'Накопитель','ram':'Оперативная память','layout':'Раскладка','switch':'Переключатели','region':'Регион','size':'Размер','screen_size':'Диагональ','generation':'Поколение','station':'Станция','bundle':'Комплект','edition':'Издание','connectivity':'Подключение'}.get(key,key) }}:</strong> {{ hint.value or hint.candidates|join(' / ') }}<br><small>{{ hint.source }} · {{ hint.confidence }}</small></div>{% else %}—{% endfor %}</td>
+                  <td><input name="category_{{ product.row_number }}" aria-label="Категория, строка {{ product.row_number }}" value="{{ edit.get('category', product.category) }}" maxlength="500"><small>{{ product.interpretation.fields.category.source }} · {{ product.interpretation.fields.category.confidence }}</small></td>
                   <td>
                     {% if product.needs_confirmation %}
                       <span class="badge warning">Нужно проверить</span>
@@ -83,6 +85,7 @@
                     {% else %}
                       <span class="badge ready">Определено</span>
                     {% endif %}
+                    {% if product.interpretation.warnings %}<small class="issue">{{ product.interpretation.warnings|join('; ') }}</small>{% endif %}
                   </td>
                 </tr>
               {% endfor %}

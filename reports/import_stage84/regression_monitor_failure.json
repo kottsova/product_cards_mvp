@@ -1,0 +1,61 @@
+{
+  "exit_code": 1,
+  "seconds": 418.073,
+  "production_tree_unchanged": true,
+  "execution": "all standard-discovery modules in four independent processes",
+  "tests": 1968,
+  "expected_tests": 1937,
+  "modules": 119,
+  "no_modules_omitted_or_duplicated": true,
+  "groups": [
+    {
+      "group": 1,
+      "exit_code": 0,
+      "seconds": 344.657,
+      "tests": 493,
+      "expected_tests": 485,
+      "summary": [
+        "Ran 493 tests in 342.036s",
+        "OK"
+      ]
+    },
+    {
+      "group": 2,
+      "exit_code": 0,
+      "seconds": 119.354,
+      "tests": 492,
+      "expected_tests": 484,
+      "summary": [
+        "Ran 492 tests in 117.245s",
+        "OK"
+      ]
+    },
+    {
+      "group": 3,
+      "exit_code": 0,
+      "seconds": 296.915,
+      "tests": 499,
+      "expected_tests": 484,
+      "summary": [
+        "Ran 499 tests in 294.343s",
+        "OK"
+      ]
+    },
+    {
+      "group": 4,
+      "exit_code": 1,
+      "seconds": 416.509,
+      "tests": 484,
+      "expected_tests": 484,
+      "summary": [
+        "FAIL: test_export_carries_the_levels_photos_and_documents (tests.test_stage26_samsung_worker.OrdinaryWorkerPath.test_export_carries_the_levels_photos_and_documents)",
+        "Ran 484 tests in 414.435s",
+        "FAILED (failures=1)"
+      ]
+    }
+  ],
+  "summary": [
+    "Ran 1968 tests",
+    "FAILED"
+  ]
+}

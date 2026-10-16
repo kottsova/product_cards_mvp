@@ -1,0 +1,185 @@
+{
+  "url": "",
+  "match_level": "unknown",
+  "specs": 0,
+  "photos": 0,
+  "evidence": {
+    "article": "SUP-TUNE520-WH",
+    "query_variants": [
+      "site:jbl.com \"SUP-TUNE520-WH\"",
+      "site:jbl.com \"SUP-TUNE520-WH\"",
+      "site:jbl.com Tune 520BT"
+    ],
+    "identity": {
+      "relation": "unknown"
+    },
+    "manuals": [],
+    "manual_status": "Не проверена",
+    "exact_photo_assets": [],
+    "verified_documents": [],
+    "raw_specs": [],
+    "accepted_specs": [],
+    "rejected_specs": []
+  },
+  "trace": [
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:09+00:00",
+      "provider": "normalization",
+      "query": "Tune 520BT",
+      "url": "",
+      "region": "",
+      "source_type": "query_plan",
+      "accepted": false,
+      "reason": "Extracted model first; supplier article kept separate",
+      "supplier_article": "SUP-TUNE520-WH",
+      "input_configuration": {
+        "color": "White"
+      }
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:09+00:00",
+      "provider": "official_search_form",
+      "query": "Tune 520BT",
+      "url": "https://id.jbl.com/",
+      "region": "id",
+      "source_type": "catalog",
+      "accepted": false,
+      "reason": "HTTP 200; published search form",
+      "search_endpoint": "https://id.jbl.com/search"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:11+00:00",
+      "provider": "regional_official_search",
+      "query": "Tune 520BT",
+      "url": "https://id.jbl.com/search?q=Tune%20520BT",
+      "region": "id",
+      "source_type": "search",
+      "accepted": false,
+      "reason": "HTTP 404; official search is discovery only",
+      "model_relation": "discovery_only",
+      "variant_relation": "unproven"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:12+00:00",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "url": "https://ru.jbl.com/SUP-TUNE520-WH.html",
+      "region": "ru",
+      "source_type": "pdp",
+      "accepted": false,
+      "reason": "Network request failed",
+      "identity_relation": "unknown"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:12+00:00",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "url": "https://uk.jbl.com/SUP-TUNE520-WH.html",
+      "region": "uk",
+      "source_type": "pdp",
+      "accepted": false,
+      "reason": "[policy_host_stopped]",
+      "identity_relation": "unknown"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:12+00:00",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "url": "https://de.jbl.com/SUP-TUNE520-WH.html",
+      "region": "de",
+      "source_type": "pdp",
+      "accepted": false,
+      "reason": "[policy_host_stopped]",
+      "identity_relation": "unknown"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:14+00:00",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "url": "https://id.jbl.com/SUP-TUNE520-WH.html",
+      "region": "id",
+      "source_type": "pdp",
+      "accepted": false,
+      "reason": "404",
+      "identity_relation": "unknown"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:15+00:00",
+      "provider": "regional_official_search",
+      "query": "Tune 520BT",
+      "url": "https://id.jbl.com/search?q=Tune%20520BT",
+      "region": "id",
+      "source_type": "search",
+      "accepted": false,
+      "reason": "HTTP 404; official search is discovery only",
+      "model_relation": "discovery_only",
+      "variant_relation": "unproven"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:15+00:00",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "url": "https://global.jbl.com/SUP-TUNE520-WH.html",
+      "region": "global",
+      "source_type": "pdp",
+      "accepted": false,
+      "reason": "[policy_host_stopped]",
+      "identity_relation": "unknown"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:15+00:00",
+      "provider": "regional_exact",
+      "query": "SUP-TUNE520-WH",
+      "url": "https://www.jbl.com/SUP-TUNE520-WH.html",
+      "region": "www",
+      "source_type": "pdp",
+      "accepted": false,
+      "reason": "[policy_host_stopped]",
+      "identity_relation": "unknown"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:15+00:00",
+      "provider": "support",
+      "query": "SUP-TUNE520-WH",
+      "url": "https://support.jbl.com/gb/en/",
+      "region": "gb",
+      "source_type": "support",
+      "accepted": false,
+      "reason": "[policy_host_stopped]",
+      "identity_relation": "family_only"
+    },
+    {
+      "timestamp": "2026-10-16T11:31:17.213398+00:00",
+      "event": "query_outcome",
+      "provider": "google_old_parser",
+      "query": "site:jbl.com \"SUP-TUNE520-WH\"",
+      "url": "https://www.google.com/search?q=site%3Ajbl.com+%22SUP-TUNE520-WH%22&hl=en",
+      "outcome": "runtime_unavailable",
+      "reason": "Error"
+    },
+    {
+      "event": "jbl_discovery",
+      "timestamp": "2026-10-16T11:31:17+00:00",
+      "provider": "external_search",
+      "query": "site:jbl.com \"SUP-TUNE520-WH\"",
+      "url": "",
+      "region": "global",
+      "source_type": "search",
+      "accepted": false,
+      "reason": "runtime_unavailable",
+      "model_relation": "discovery_only",
+      "variant_relation": "unproven"
+    }
+  ]
+}

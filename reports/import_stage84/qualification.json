@@ -1,0 +1,477 @@
+{
+  "stage": 84,
+  "verdict": "PASS",
+  "scope": "three-column import and real production dispatch; card readiness reported separately",
+  "checks": {
+    "exactly_three_input_columns": true,
+    "all_eight_preview_rows_imported": true,
+    "no_user_field_edits": true,
+    "original_workbook_unchanged": true,
+    "five_default_production_jobs": true,
+    "actual_official_data_for_all_five": true,
+    "models_and_articles_separate": true,
+    "all_five_cards_ready": true,
+    "model_first_LG": true,
+    "raw_cells_LG": true,
+    "actual_run_LG": true,
+    "model_first_Apple": true,
+    "raw_cells_Apple": true,
+    "actual_run_Apple": true,
+    "Apple_actual_store_overlay_completed": true,
+    "model_first_Xiaomi": true,
+    "raw_cells_Xiaomi": true,
+    "actual_run_Xiaomi": true,
+    "model_first_Dreame": true,
+    "raw_cells_Dreame": true,
+    "actual_run_Dreame": true,
+    "model_first_JBL": true,
+    "raw_cells_JBL": true,
+    "actual_run_JBL": true,
+    "opaque_JBL_article_not_official_sku": true,
+    "JBL_published_inventory_revalidated": true,
+    "single_production_source_fingerprint": true,
+    "ambiguity_not_guessed": true,
+    "full_regression": true
+  },
+  "input_sha256": "04bdc61c16bdab276e97fd84d2c8c1689d1c6cf447b58e6caa806739f32835f2",
+  "batch_id": "d126a07c15ea47b1a416430ed65cb89a",
+  "source_fingerprint": "186ff8753fffb091a43a973bbf31a615023ff681a1ddaf3e767268b8971971c4",
+  "live_official_data": "5/5",
+  "live_ready": "5/5",
+  "known_external_limitation": "Earlier Apple Store HTTP 503 observations remain preserved; final fresh Store request succeeded and configuration/photo evidence is confirmed. Precise remote cause of historical 503 is unknown.",
+  "initial": [
+    {
+      "id": 124,
+      "brand": "LG",
+      "name": "Паровой шкаф LG Styler S3WER",
+      "model": "S3WER",
+      "supplier_article": "S3WER.ALWPCOM",
+      "discovery_name": "S3WER",
+      "status": "done",
+      "started_at": "2026-10-16T11:26:37+00:00",
+      "finished_at": "2026-10-16T11:27:34+00:00",
+      "specs": 54,
+      "photos": 20,
+      "readiness": "export_ready",
+      "sources": [
+        "https://www.lg.com/kz/laundry/styler/s3wer/",
+        "https://www.lg.com/ru/laundry/lg-S3WER",
+        "https://www.lg.com/kz/support/product-support/cs-S3WER.ALWPCOM",
+        "https://www.lg.com/ru/support/product/lg-S3RERB"
+      ]
+    },
+    {
+      "id": 125,
+      "brand": "Apple",
+      "name": "Apple iPhone 18 Pro 256GB Silver",
+      "model": "iPhone 18 Pro",
+      "supplier_article": "A3714",
+      "discovery_name": "iPhone 18 Pro [storage=256GB;color=Silver]",
+      "status": "needs_review",
+      "started_at": "2026-10-16T11:27:34+00:00",
+      "finished_at": "2026-10-16T11:27:44+00:00",
+      "specs": 80,
+      "photos": 0,
+      "readiness": "not_ready",
+      "sources": [
+        "https://www.apple.com/iphone-18-pro/",
+        "https://www.apple.com/iphone-18-pro/specs/"
+      ]
+    },
+    {
+      "id": 126,
+      "brand": "Xiaomi",
+      "name": "Смартфон Xiaomi 15 12/256GB Black Global",
+      "model": "Xiaomi 15",
+      "supplier_article": "SUP-XM-15",
+      "discovery_name": "Xiaomi 15 [RAM=12GB;storage=256GB;color=Black;region=Global]",
+      "status": "done",
+      "started_at": "2026-10-16T11:27:44+00:00",
+      "finished_at": "2026-10-16T11:28:26+00:00",
+      "specs": 23,
+      "photos": 142,
+      "readiness": "export_ready",
+      "sources": [
+        "https://www.mi.com/global/product/xiaomi-15/specs/"
+      ]
+    },
+    {
+      "id": 127,
+      "brand": "Dreame",
+      "name": "Пылесос Z30 Cordless Stick Vacuum Black",
+      "model": "Z30",
+      "supplier_article": "SUP-Z30",
+      "discovery_name": "Z30 [color=Black]",
+      "status": "done",
+      "started_at": "2026-10-16T11:28:26+00:00",
+      "finished_at": "2026-10-16T11:28:48+00:00",
+      "specs": 8,
+      "photos": 69,
+      "readiness": "export_ready",
+      "sources": [
+        "https://www.dreametech.com/products/z30-cordless-stick-vacuum"
+      ]
+    },
+    {
+      "id": 128,
+      "brand": "JBL",
+      "name": "Наушники Tune 520BT White",
+      "model": "Tune 520BT",
+      "supplier_article": "SUP-TUNE520-WH",
+      "discovery_name": "Tune 520BT [color=White]",
+      "status": "needs_review",
+      "started_at": "2026-10-16T11:28:48+00:00",
+      "finished_at": "2026-10-16T11:29:03+00:00",
+      "specs": 0,
+      "photos": 0,
+      "readiness": "not_ready",
+      "sources": []
+    }
+  ],
+  "final": [
+    {
+      "id": 164,
+      "brand": "LG",
+      "name": "Паровой шкаф LG Styler S3WER",
+      "model": "S3WER",
+      "supplier_article": "S3WER.ALWPCOM",
+      "discovery_name": "S3WER",
+      "status": "done",
+      "started_at": "2026-10-16T12:38:56+00:00",
+      "finished_at": "2026-10-16T12:39:45+00:00",
+      "specs": 54,
+      "photos": 20,
+      "readiness": "export_ready",
+      "sources": [
+        "https://www.lg.com/kz/laundry/styler/s3wer/",
+        "https://www.lg.com/ru/laundry/lg-S3WER",
+        "https://www.lg.com/kz/support/product-support/cs-S3WER.ALWPCOM",
+        "https://www.lg.com/ru/support/product/lg-S3RERB"
+      ]
+    },
+    {
+      "id": 165,
+      "brand": "Apple",
+      "name": "Apple iPhone 18 Pro 256GB Silver",
+      "model": "iPhone 18 Pro",
+      "supplier_article": "A3714",
+      "discovery_name": "iPhone 18 Pro [storage=256GB;color=Silver]",
+      "status": "done",
+      "started_at": "2026-10-16T12:39:45+00:00",
+      "finished_at": "2026-10-16T12:39:58+00:00",
+      "specs": 82,
+      "photos": 1,
+      "readiness": "export_ready",
+      "sources": [
+        "https://www.apple.com/iphone-18-pro/",
+        "https://www.apple.com/iphone-18-pro/specs/"
+      ]
+    },
+    {
+      "id": 166,
+      "brand": "Xiaomi",
+      "name": "Смартфон Xiaomi 15 12/256GB Black Global",
+      "model": "Xiaomi 15",
+      "supplier_article": "SUP-XM-15",
+      "discovery_name": "Xiaomi 15 [RAM=12GB;storage=256GB;color=Black;region=Global]",
+      "status": "done",
+      "started_at": "2026-10-16T12:39:58+00:00",
+      "finished_at": "2026-10-16T12:40:27+00:00",
+      "specs": 23,
+      "photos": 142,
+      "readiness": "export_ready",
+      "sources": [
+        "https://www.mi.com/global/product/xiaomi-15/specs/"
+      ]
+    },
+    {
+      "id": 167,
+      "brand": "Dreame",
+      "name": "Пылесос Z30 Cordless Stick Vacuum Black",
+      "model": "Z30",
+      "supplier_article": "SUP-Z30",
+      "discovery_name": "Z30 [color=Black]",
+      "status": "done",
+      "started_at": "2026-10-16T12:40:27+00:00",
+      "finished_at": "2026-10-16T12:40:59+00:00",
+      "specs": 8,
+      "photos": 69,
+      "readiness": "export_ready",
+      "sources": [
+        "https://www.dreametech.com/products/z30-cordless-stick-vacuum"
+      ]
+    },
+    {
+      "id": 168,
+      "brand": "JBL",
+      "name": "Наушники Tune 520BT White",
+      "model": "Tune 520BT",
+      "supplier_article": "SUP-TUNE520-WH",
+      "discovery_name": "Tune 520BT [color=White]",
+      "status": "done",
+      "started_at": "2026-10-16T12:40:59+00:00",
+      "finished_at": "2026-10-16T12:41:19+00:00",
+      "specs": 30,
+      "photos": 11,
+      "readiness": "export_ready",
+      "sources": [
+        "https://id.jbl.com/over-ear-headphones/JBLT520BTWHT.html"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "brand": "LG",
+      "name": "Паровой шкаф LG Styler S3WER",
+      "model": "S3WER",
+      "category": "Паровой шкаф",
+      "supplier_article": "S3WER.ALWPCOM",
+      "configuration": {},
+      "search_queries": [
+        {
+          "query": "S3WER",
+          "purpose": "model",
+          "source": "product_name"
+        },
+        {
+          "query": "S3WER.ALWPCOM",
+          "purpose": "article",
+          "source": "article_column"
+        },
+        {
+          "query": "Паровой шкаф LG Styler S3WER",
+          "purpose": "original_name",
+          "source": "product_name"
+        }
+      ]
+    },
+    {
+      "brand": "Apple",
+      "name": "Apple iPhone 18 Pro 256GB Silver",
+      "model": "iPhone 18 Pro",
+      "category": "Смартфон",
+      "supplier_article": "A3714",
+      "configuration": {
+        "storage": {
+          "value": "256GB",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "256GB"
+        },
+        "color": {
+          "value": "Silver",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Silver"
+        }
+      },
+      "search_queries": [
+        {
+          "query": "iPhone 18 Pro",
+          "purpose": "model",
+          "source": "product_name"
+        },
+        {
+          "query": "A3714",
+          "purpose": "article",
+          "source": "article_column"
+        },
+        {
+          "query": "iPhone18Pro",
+          "purpose": "normalized_model",
+          "source": "product_name"
+        },
+        {
+          "query": "Apple iPhone 18 Pro 256GB Silver",
+          "purpose": "original_name",
+          "source": "product_name"
+        }
+      ]
+    },
+    {
+      "brand": "Xiaomi",
+      "name": "Смартфон Xiaomi 15 12/256GB Black Global",
+      "model": "Xiaomi 15",
+      "category": "Смартфон",
+      "supplier_article": "SUP-XM-15",
+      "configuration": {
+        "ram": {
+          "value": "12GB",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "12/256GB"
+        },
+        "storage": {
+          "value": "256GB",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "12/256GB"
+        },
+        "color": {
+          "value": "Black",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Black"
+        },
+        "region": {
+          "value": "Global",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Global"
+        }
+      },
+      "search_queries": [
+        {
+          "query": "Xiaomi 15",
+          "purpose": "model",
+          "source": "product_name"
+        },
+        {
+          "query": "SUP-XM-15",
+          "purpose": "article",
+          "source": "article_column"
+        },
+        {
+          "query": "Xiaomi15",
+          "purpose": "normalized_model",
+          "source": "product_name"
+        },
+        {
+          "query": "Смартфон Xiaomi 15 12/256GB Black Global",
+          "purpose": "original_name",
+          "source": "product_name"
+        }
+      ]
+    },
+    {
+      "brand": "Dreame",
+      "name": "Пылесос Z30 Cordless Stick Vacuum Black",
+      "model": "Z30",
+      "category": "Вертикальный пылесос",
+      "supplier_article": "SUP-Z30",
+      "configuration": {
+        "color": {
+          "value": "Black",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "Black"
+        }
+      },
+      "search_queries": [
+        {
+          "query": "Z30",
+          "purpose": "model",
+          "source": "product_name"
+        },
+        {
+          "query": "SUP-Z30",
+          "purpose": "article",
+          "source": "article_column"
+        },
+        {
+          "query": "Пылесос Z30 Cordless Stick Vacuum Black",
+          "purpose": "original_name",
+          "source": "product_name"
+        }
+      ]
+    },
+    {
+      "brand": "JBL",
+      "name": "Наушники Tune 520BT White",
+      "model": "Tune 520BT",
+      "category": "Наушники",
+      "supplier_article": "SUP-TUNE520-WH",
+      "configuration": {
+        "color": {
+          "value": "White",
+          "source": "product_name",
+          "confidence": "high",
+          "raw": "White"
+        }
+      },
+      "search_queries": [
+        {
+          "query": "Tune 520BT",
+          "purpose": "model",
+          "source": "product_name"
+        },
+        {
+          "query": "SUP-TUNE520-WH",
+          "purpose": "article",
+          "source": "article_column"
+        },
+        {
+          "query": "Tune520BT",
+          "purpose": "normalized_model",
+          "source": "product_name"
+        },
+        {
+          "query": "Наушники Tune 520BT White",
+          "purpose": "original_name",
+          "source": "product_name"
+        }
+      ]
+    }
+  ],
+  "regression": {
+    "exit_code": 0,
+    "seconds": 403.461,
+    "production_tree_unchanged": true,
+    "execution": "all standard-discovery modules in four independent processes",
+    "tests": 1938,
+    "expected_tests": 1938,
+    "modules": 118,
+    "no_modules_omitted_or_duplicated": true,
+    "groups": [
+      {
+        "group": 1,
+        "exit_code": 0,
+        "seconds": 286.084,
+        "tests": 485,
+        "expected_tests": 485,
+        "summary": [
+          "Ran 485 tests in 283.844s",
+          "OK"
+        ]
+      },
+      {
+        "group": 2,
+        "exit_code": 0,
+        "seconds": 283.425,
+        "tests": 484,
+        "expected_tests": 484,
+        "summary": [
+          "Ran 484 tests in 280.848s",
+          "OK"
+        ]
+      },
+      {
+        "group": 3,
+        "exit_code": 0,
+        "seconds": 261.972,
+        "tests": 485,
+        "expected_tests": 485,
+        "summary": [
+          "Ran 485 tests in 259.366s",
+          "OK"
+        ]
+      },
+      {
+        "group": 4,
+        "exit_code": 0,
+        "seconds": 401.477,
+        "tests": 484,
+        "expected_tests": 484,
+        "summary": [
+          "Ran 484 tests in 399.257s",
+          "OK"
+        ]
+      }
+    ],
+    "summary": [
+      "Ran 1938 tests",
+      "OK"
+    ]
+  },
+  "offline_tests_are_not_live_evidence": true
+}

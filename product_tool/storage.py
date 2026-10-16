@@ -135,7 +135,8 @@ def confirm_draft(
                     int(product["needs_confirmation"]),
                     _json(product["issues"]),
                     _json(product["original_values"]),
-                    _json(ProductIdentity.from_product(product).to_dict()),
+                    _json({**ProductIdentity.from_product(product).to_dict(),
+                           **({'input_interpretation':product['interpretation']} if product.get('interpretation') else {})}),
                 )
                 for product in products
             ],

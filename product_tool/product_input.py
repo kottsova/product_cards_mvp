@@ -1,5 +1,5 @@
 """Resolve search input roles without changing supplier cells or claiming identity."""
-import re
+import re,json
 
 
 def structured_code(value):
@@ -17,6 +17,14 @@ def resolve_product_input(product):
     Valid primary codes and explicit kits retain their original priority.
     """
     result=dict(product)
+    identity=result.get('identity_json') or {}
+    if isinstance(identity,str):identity=json.loads(identity)
+    parsed=identity.get('input_interpretation')
+    if parsed:
+        from .input_interpretation import adapter_name
+        result.update(model=parsed['model'],supplier_article=parsed['supplier_article'],
+                      configuration_hints=parsed['configuration_hints'],input_interpretation=parsed,
+                      search_queries=parsed['search_queries'],discovery_name=adapter_name(parsed))
     primary=str(result.get('search_code') or '').strip()
     fallback=str(result.get('alternate_code') or '').strip()
     description=bool(re.search(r'\s',primary) and len(primary.split())>1)

@@ -80,7 +80,7 @@ def _model_tokens_from_name(name: str) -> list[str]:
 
 def _effective_product_name(product: dict) -> str:
     """Older imports sometimes put a descriptive name in 'alternate_code'."""
-    name = (product.get("name") or "").strip()
+    name = (product.get("discovery_name") or product.get("name") or "").strip()
     alternate = (product.get("alternate_code") or "").strip()
     if name:
         return name
@@ -176,6 +176,9 @@ def run_once(
         if product.get('input_resolution'):
             runtime_trace('input_search_resolution',**product['input_resolution'])
             jobs.progress(database,job_id,1,'Поиск: '+product['input_resolution']['reason']+' → '+product['search_code'])
+        if product.get('input_interpretation'):
+            runtime_trace('input_interpretation',interpretation=product['input_interpretation'],queries=product['search_queries'],
+                          discovery_name=product['discovery_name'],supplier_article=product['supplier_article'])
         from .xiaomi_identity import BRANDS as XIAOMI_BRANDS
         if product['brand'].strip().casefold() == 'electrolux':
             from . import electrolux_pipeline
@@ -241,6 +244,8 @@ def run_once(
             full=normalize_lg_sku(product["search_code"]); base=lg_base_model(full)
             components=lg_article_components(full)
             name_models=_lg_model_candidates_from_name(effective_name,full)
+            if product.get('input_interpretation'):
+                name_models=tuple(dict.fromkeys((*product['input_interpretation']['model_candidates'],*name_models)))
             detail=(f"Комплект из {', '.join(components)}; общая модель {base}. Страница одной модели не подтверждает весь комплект."
                     if len(components)>1 else f"Полный артикул {full}; базовая модель {base}.")
             jobs.progress(database,job_id,1,f"LG: {detail}")
@@ -264,6 +269,7 @@ def run_once(
                 if adapter is None: continue
                 if isinstance(adapter,(LGAdapter,LGRUAdapter)):
                     adapter.trace_callback=lambda event:runtime_trace(event['event'],**{k:v for k,v in event.items() if k!='event'})
+                    if product.get('model'):adapter.input_model=product['model']
                 runtime_trace('lg_discovery_start',provider=adapter.source_key,query=full,base_model=base)
                 if clock()>=official_deadline:
                     doc=SourceDocument(adapter.source_key,adapter.site_name,"",error="Регион не проверен: исчерпан общий 20-секундный бюджет официального поиска.")

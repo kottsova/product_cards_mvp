@@ -18,6 +18,7 @@ def card_readiness(database,product_id):
  if len(confirmed)<5:gaps.append('specifications_missing')
  if not any(x['selected'] and x['asset_key'] in ev.get('exact_photo_assets',[]) for x in jobs.get_photo_candidates(database,product_id)):gaps.append('exact_variant_photo_missing')
  if jobs.result_counts(database,product_id)['conflicts']:gaps.append('conflicts')
+ if ev.get('input_model_ambiguous'):gaps.append('input_model_ambiguous')
  return {'verdict':'not_ready' if gaps else 'export_ready','blocking_gaps':gaps,'advisory_gaps':['manual_unverified'] if ev.get('manual_status')!='Проверена' else [],'identity':ev.get('identity',{}),'manual_status':ev.get('manual_status','Не проверена'),'confirmed_specs':len(confirmed),'model_specs':sum(x['status']=='model_confirmed_official' for x in confirmed),'configuration_fields':ev.get('configuration_fields',{}),'discovery_status':ev.get('discovery_status','discovery_not_started')}
 
 def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns_adapter_factory=None,clock=time.monotonic):
@@ -36,12 +37,14 @@ def run_job(database,job_id,product_id,product,*,stages,adapter_factory=None,dns
  adapter.input_configuration=identity.get('variant_attributes',{})
  article=product['search_code']
  trace(dict(timestamp=utc_now(),event='discovery_not_started',reason='adapter constructed; calling discovery next'))
- doc=adapter.find_source(article,name=product.get('name',''),category=product.get('category',''),deadline=clock()+90)
+ doc=adapter.find_source(article,name=product.get('discovery_name') or product.get('name',''),category=product.get('category',''),deadline=clock()+90)
  trace(dict(timestamp=utc_now(),event='apple_adapter_return',url=doc.url,reason=doc.error or doc.evidence,accepted=not doc.error,match_level=doc.match_level))
  jobs.save_source_document(database,product_id,doc,update_description=2 in stages,update_attributes=3 in stages,update_photos=4 in stages)
  model=getattr(adapter,'model_document',None)
  if model:jobs.save_source_document(database,product_id,model,update_description=False,update_attributes=3 in stages,update_photos=4 in stages)
  ev=adapter.reports.get(article.strip().upper(),{})
+ from .input_interpretation import attach_input_evidence
+ attach_input_evidence(ev,product)
  if 'discovery_status' not in ev:ev['discovery_status']='discovery_completed' if model and model.attributes else 'extraction_empty' if doc.url and not doc.error else 'official_source_not_found'
  trace(dict(timestamp=utc_now(),event='apple_extraction',url=model.url if model else doc.url,reason='Extraction completed before readiness',model_specs=len(model.attributes) if model else 0,order_specs=len(doc.attributes),accepted=bool((model and model.attributes) or doc.attributes)))
  trace(dict(timestamp=utc_now(),event='apple_persistence',reason='Official source facts/photos and identity saved; unresolved input remains configuration',source_url=doc.url))

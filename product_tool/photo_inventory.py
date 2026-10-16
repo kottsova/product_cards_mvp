@@ -50,6 +50,7 @@ def evidence_kind(product):
     return 'xiaomi' if b in {'xiaomi','redmi','poco'} else b if b!='samsung' else 'samsung_page'
 
 def identity_confirmed(photo,product,sources,ev):
+    if ev.get('input_model_ambiguous') or product.get('input_interpretation',{}).get('fields',{}).get('model',{}).get('confidence')=='ambiguous':return False
     b=product['brand'].strip().casefold()
     if b in {'xiaomi','redmi','poco','dreame'}:
         eligible={x['asset_key'] for x in ev.get('model_gallery_candidates',[]) if x.get('model_relation')=='model_confirmed'}

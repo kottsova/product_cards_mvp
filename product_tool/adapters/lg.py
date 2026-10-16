@@ -443,7 +443,7 @@ class LGAdapter:
             urls=self.sitemap_product_urls(official_deadline)
             _discovery_trace(self,'lg_catalog_received',query=full,url=LG_KZ_SITEMAP,products=len(urls))
             doc=None
-            for model in dict.fromkeys((full,base,*fallback_models)):
+            for model in dict.fromkeys((*([self.input_model] if getattr(self,'input_model','') else []),full,base,*fallback_models)):
                 key=lg_article_key(model)
                 _discovery_trace(self,'lg_query_candidates',query=model,candidates=[u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES],reason='Published sitemap slug; identity still requires PDP')
                 for url in [u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES]:
@@ -492,7 +492,7 @@ class LGRUAdapter:
             urls=self.sitemap_product_urls(deadline)
             _discovery_trace(self,'lg_catalog_received',query=full,url=LG_RU_SITEMAP,products=len(urls))
             doc=None
-            for model in dict.fromkeys((full,base,*fallback_models)):
+            for model in dict.fromkeys((*([self.input_model] if getattr(self,'input_model','') else []),full,base,*fallback_models)):
                 key=lg_article_key(model)
                 _discovery_trace(self,'lg_query_candidates',query=model,candidates=[u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES],reason='Published sitemap slug; identity still requires PDP')
                 for url in [u for u in urls if _slug_key(u)==key][:MAX_CANDIDATES]:

@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import {Workbook,SpreadsheetFile} from '@oai/artifact-tool';
+const root='reports/import_stage84';const data=JSON.parse(await fs.readFile(`${root}/input.json`,'utf8'));
+const book=Workbook.create();const sheet=book.worksheets.add('Товары');
+sheet.getRange('A1:C9').values=[data.headers,...data.rows];
+sheet.getRange('A1:C9').format.font={name:'Arial',size:10};sheet.getRange('A1:C9').format.wrapText=true;
+sheet.getRange('A1:C1').format={fill:'#243B53',font:{name:'Arial',size:10,bold:true,color:'#FFFFFF'},rowHeight:30};
+for(const [column,width] of [['A',74],['B',25],['C',16]])sheet.getRange(`${column}1:${column}9`).format.columnWidth=width;
+sheet.getRange('A2:C9').format.rowHeight=42;sheet.showGridLines=false;sheet.freezePanes.freezeRows(1);book.recalculate();
+await (await SpreadsheetFile.exportXlsx(book)).save(`${root}/Ordinary_3_columns.xlsx`);
+const preview=await book.render({sheetName:'Товары',range:'A1:C9',scale:1,format:'png'});
+await fs.writeFile(`${root}/qa/input.png`,new Uint8Array(await preview.arrayBuffer()));
+console.log('Three-column workbook and preview written');

@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Предпросмотр Excel · Карточки товаров</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/">Карточки товаров <span>MVP</span></a>
+      <nav aria-label="Основная навигация"><a href="/">Партии и загрузка</a></nav>
+    </div>
+  </header>
+  <main class="shell">
+    
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Шаг 2 · Предпросмотр</p>
+      <h1>Проверьте импорт</h1>
+      <p class="lead"><strong>Ordinary_3_columns.xlsx</strong> · 8 товаров</p>
+    </div>
+    <a class="quiet-link" href="/">← К партиям</a>
+  </div>
+
+  
+
+  <section class="panel">
+    <div class="section-heading">
+      <div>
+        <h2>Соответствие колонок</h2>
+        <p>Номера начинаются с 1. Оставьте поле пустым, если такой колонки нет.</p>
+      </div>
+    </div>
+    <form action="/drafts/4a2cc23f378d492892059eefa4de50ea/mapping" method="post">
+      <div class="mapping-grid">
+        <label>Лист Excel
+          <select name="sheet_name">
+            
+              <option value="Товары" selected="">Товары</option>
+            
+          </select>
+        </label>
+        <label>Строка заголовков
+          <input name="header_row" type="number" min="0" max="5000" value="1" required="" style="">
+        </label>
+        
+          <label>Категория
+            <input name="category" type="number" min="1" max="100" value="" style="">
+          </label>
+        
+          <label>Бренд
+            <input name="brand" type="number" min="1" max="100" value="3" style="">
+          </label>
+        
+          <label>Название
+            <input name="name" type="number" min="1" max="100" value="1" style="">
+          </label>
+        
+          <label>Основной артикул
+            <input name="search_code" type="number" min="1" max="100" value="2" style="">
+          </label>
+        
+          <label>Запасная модель
+            <input name="fallback_code" type="number" min="1" max="100" value="" style="">
+          </label>
+        
+      </div>
+      <div class="form-actions">
+        <button class="button secondary" type="submit">Обновить предпросмотр</button>
+        <span class="hint">Сначала настройте колонки, затем исправьте строки ниже.</span>
+      </div>
+    </form>
+  </section>
+
+  
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Товары перед подтверждением</h2>
+          <p>Бренд и основной артикул обязательны. Исправления сохранятся после подтверждения партии.</p>
+        </div>
+      </div>
+      <form action="/drafts/4a2cc23f378d492892059eefa4de50ea/confirm" method="post">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Строка</th>
+                <th scope="col">Название</th>
+                <th scope="col">Бренд</th>
+                <th scope="col">Основной артикул</th>
+                <th scope="col">Запасная модель</th>
+                <th scope="col">Категория</th>
+                <th scope="col">Проверка</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                
+                <tr>
+                  <td class="row-number">2</td>
+                  <td class="product-name">Паровой шкаф LG Styler S3WER</td>
+                  <td><input name="brand_2" aria-label="Бренд, строка 2" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_2" aria-label="Основной артикул, строка 2" value="S3WER.ALWPCOM" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_2" aria-label="Запасная модель, строка 2" value="" maxlength="500" style=""></td>
+                  <td><input name="category_2" aria-label="Категория, строка 2" value="Паровой шкаф" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">3</td>
+                  <td class="product-name">Apple iPhone 18 Pro 256GB Silver</td>
+                  <td><input name="brand_3" aria-label="Бренд, строка 3" value="Apple" maxlength="500" style=""></td>
+                  <td><input name="search_code_3" aria-label="Основной артикул, строка 3" value="A3714" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_3" aria-label="Запасная модель, строка 3" value="" maxlength="500" style=""></td>
+                  <td><input name="category_3" aria-label="Категория, строка 3" value="" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Не определена категория</small>
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">4</td>
+                  <td class="product-name">Смартфон Xiaomi 15 12/256GB Black Global</td>
+                  <td><input name="brand_4" aria-label="Бренд, строка 4" value="Xiaomi" maxlength="500" style=""></td>
+                  <td><input name="search_code_4" aria-label="Основной артикул, строка 4" value="SUP-XM-15" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_4" aria-label="Запасная модель, строка 4" value="" maxlength="500" style=""></td>
+                  <td><input name="category_4" aria-label="Категория, строка 4" value="Смартфон" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">5</td>
+                  <td class="product-name">Пылесос Z30 Cordless Stick Vacuum Black</td>
+                  <td><input name="brand_5" aria-label="Бренд, строка 5" value="Dreame" maxlength="500" style=""></td>
+                  <td><input name="search_code_5" aria-label="Основной артикул, строка 5" value="SUP-Z30" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_5" aria-label="Запасная модель, строка 5" value="" maxlength="500" style=""></td>
+                  <td><input name="category_5" aria-label="Категория, строка 5" value="Пылесос" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">6</td>
+                  <td class="product-name">Наушники Tune 520BT White</td>
+                  <td><input name="brand_6" aria-label="Бренд, строка 6" value="JBL" maxlength="500" style=""></td>
+                  <td><input name="search_code_6" aria-label="Основной артикул, строка 6" value="SUP-TUNE520-WH" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_6" aria-label="Запасная модель, строка 6" value="" maxlength="500" style=""></td>
+                  <td><input name="category_6" aria-label="Категория, строка 6" value="Наушники" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">7</td>
+                  <td class="product-name">Робот-пылесос Dreame X50 Ultra Complete with auto-empty station</td>
+                  <td><input name="brand_7" aria-label="Бренд, строка 7" value="Dreame" maxlength="500" style=""></td>
+                  <td><input name="search_code_7" aria-label="Основной артикул, строка 7" value="SUP-X50" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_7" aria-label="Запасная модель, строка 7" value="" maxlength="500" style=""></td>
+                  <td><input name="category_7" aria-label="Категория, строка 7" value="Пылесос" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">8</td>
+                  <td class="product-name">HyperX Alloy Origins 65 Black RU Red</td>
+                  <td><input name="brand_8" aria-label="Бренд, строка 8" value="HyperX" maxlength="500" style=""></td>
+                  <td><input name="search_code_8" aria-label="Основной артикул, строка 8" value="4P5D6AX#ACB" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_8" aria-label="Запасная модель, строка 8" value="" maxlength="500" style=""></td>
+                  <td><input name="category_8" aria-label="Категория, строка 8" value="" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      <small class="issue">Не определена категория</small>
+                    
+                  </td>
+                </tr>
+              
+                
+                <tr>
+                  <td class="row-number">9</td>
+                  <td class="product-name">Паровой шкаф LG S3WER / S5BB Black White</td>
+                  <td><input name="brand_9" aria-label="Бренд, строка 9" value="LG" maxlength="500" style=""></td>
+                  <td><input name="search_code_9" aria-label="Основной артикул, строка 9" value="SUP-AMBIG" maxlength="500" style=""></td>
+                  <td><input name="alternate_code_9" aria-label="Запасная модель, строка 9" value="" maxlength="500" style=""></td>
+                  <td><input name="category_9" aria-label="Категория, строка 9" value="Паровой шкаф" maxlength="500" style=""></td>
+                  <td>
+                    
+                      <span class="badge warning">Нужно проверить</span>
+                      
+                    
+                  </td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="form-actions confirm-actions">
+          <button class="button primary" type="submit">Подтвердить партию</button>
+          <span class="hint">Исходный Excel и его строки сохраняются для последующей проверки.</span>
+        </div>
+      </form>
+    </section>
+  
+
+  </main>
+  <footer class="shell footer">Локальная версия · данные хранятся на этом компьютере</footer>
+
+</body></html>
